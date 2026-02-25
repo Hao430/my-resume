@@ -1,6 +1,4 @@
-import type { ResumeData } from '../types/resume'
-
-export const resumeData: ResumeData = {
+{
   "personalInfo": {
     "name": "张豪",
     "ethnicity": "汉族",
@@ -19,82 +17,25 @@ export const resumeData: ResumeData = {
     "outstanding": "素养突出：责任心强、执行扎实，拥有团队管理与多任务统筹经验，能适应快节奏协作，持续为产品注入用户价值与增长动力。"
   },
   "skills": [
-    {
-      "name": "用户调研",
-      "category": "professional"
-    },
-    {
-      "name": "需求分析",
-      "category": "professional"
-    },
-    {
-      "name": "产品文档撰写",
-      "category": "professional"
-    },
-    {
-      "name": "项目管理",
-      "category": "professional"
-    },
-    {
-      "name": "数据可视化",
-      "category": "technical"
-    },
-    {
-      "name": "SQL查询",
-      "category": "technical"
-    },
-    {
-      "name": "Next.js",
-      "category": "technical"
-    },
-    {
-      "name": "TypeScript",
-      "category": "technical"
-    },
-    {
-      "name": "Vue.js",
-      "category": "technical"
-    },
-    {
-      "name": "JavaScript",
-      "category": "technical"
-    },
-    {
-      "name": "浏览器扩展开发",
-      "category": "technical"
-    },
-    {
-      "name": "Python",
-      "category": "technical"
-    },
-    {
-      "name": "Express",
-      "category": "technical"
-    },
-    {
-      "name": "MySQL",
-      "category": "technical"
-    },
-    {
-      "name": "云平台管理",
-      "category": "technical"
-    },
-    {
-      "name": "Git协作",
-      "category": "tools"
-    },
-    {
-      "name": "Excel",
-      "category": "tools"
-    },
-    {
-      "name": "FineBI",
-      "category": "tools"
-    },
-    {
-      "name": "AI协作工具",
-      "category": "tools"
-    }
+    {"name": "用户调研", "category": "professional"},
+    {"name": "需求分析", "category": "professional"},
+    {"name": "产品文档撰写", "category": "professional"},
+    {"name": "项目管理", "category": "professional"},
+    {"name": "数据可视化", "category": "technical"},
+    {"name": "SQL查询", "category": "technical"},
+    {"name": "Next.js", "category": "technical"},
+    {"name": "TypeScript", "category": "technical"},
+    {"name": "Vue.js", "category": "technical"},
+    {"name": "JavaScript", "category": "technical"},
+    {"name": "浏览器扩展开发", "category": "technical"},
+    {"name": "Python", "category": "technical"},
+    {"name": "Express", "category": "technical"},
+    {"name": "MySQL", "category": "technical"},
+    {"name": "云平台管理", "category": "technical"},
+    {"name": "Git协作", "category": "tools"},
+    {"name": "Excel", "category": "tools"},
+    {"name": "FineBI", "category": "tools"},
+    {"name": "AI协作工具", "category": "tools"}
   ],
   "projectExperiences": [
     {
@@ -184,25 +125,10 @@ export const resumeData: ResumeData = {
     }
   ],
   "honors": [
-    {
-      "name": "电子商务\"三创赛\"省一等奖",
-      "level": "省级"
-    },
-    {
-      "name": "\"互联网+\"省金奖",
-      "level": "省级"
-    },
-    {
-      "name": "数学建模省二等奖",
-      "level": "省级"
-    },
-    {
-      "name": "挑战杯省三等奖",
-      "level": "省级"
-    },
-    {
-      "name": "励志奖学金",
-      "level": "校级"
-    }
+    {"name": "电子商务\"三创赛\"省一等奖", "level": "省级"},
+    {"name": "\"互联网+\"省金奖", "level": "省级"},
+    {"name": "数学建模省二等奖", "level": "省级"},
+    {"name": "挑战杯省三等奖", "level": "省级"},
+    {"name": "励志奖学金", "level": "校级"}
   ]
 }

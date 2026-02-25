@@ -11,7 +11,8 @@
     "type-check": "vue-tsc --build",
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
-    "lint:eslint": "eslint . --fix --cache"
+    "lint:eslint": "eslint . --fix --cache",
+    "sync-resume": "node scripts/sync-resume.js"
   },
   "dependencies": {
     "pinia": "^3.0.4",
