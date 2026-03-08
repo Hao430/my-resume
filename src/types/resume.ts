@@ -32,6 +32,7 @@ export interface ProjectExperience {
   projectName: string
   role: string
   descriptions: string[]
+  url?: string
 }
 
 export interface Honor {

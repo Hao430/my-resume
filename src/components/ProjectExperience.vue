@@ -4,6 +4,14 @@ import type { ProjectExperience } from '../types/resume'
 defineProps<{
   projects: ProjectExperience[]
 }>()
+
+// 处理项目链接的工具函数
+const getProjectUrl = (url: string) => {
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url
+  }
+  return `https://${url}`
+}
 </script>
 
 <template>
@@ -33,6 +41,12 @@ defineProps<{
               {{ desc }}
             </li>
           </ul>
+          <!-- 添加项目链接 -->
+          <div v-if="project.url" class="project-card__link">
+            <a :href="getProjectUrl(project.url)" target="_blank" rel="noopener noreferrer">
+              查看项目 →
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -43,6 +57,23 @@ defineProps<{
 .projects {
   padding: var(--spacing-3xl) 0;
   background-color: var(--bg-secondary);
+}
+
+.project-card__link {
+  margin-top: var(--spacing-lg);
+}
+
+.project-card__link a {
+  color: var(--primary-color);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.project-card__link a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
 }
 
 .section-title {
