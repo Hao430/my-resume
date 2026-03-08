@@ -1,4 +1,9 @@
 {
-  "assetsDirectory": "dist",
-  "functionJsPath": ""
+  "name": "hao430",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "assets": {
+    "directory": "./dist",
+    "notFoundStrategy": "singlePageApplication"
+  }
 }
