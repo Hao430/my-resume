@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新发展理念的个人视角</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700;900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink-black: #0f0f0f;
+            --paper-dark: #121212;
+            --rice-paper: #1a1a1a;
+            --cinnabar: #b91c1c;
+            --cinnabar-light: #ef4444;
+            --gold: #d4af37;
+            --jade-green: #166534;
+            --jade-light: #22c55e;
+            --ceramic: #e7e5e4;
+            --ink-gray: #27272a;
+            --text-primary: #f5f5f4;
+            --text-secondary: #a8a29e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--ink-black);
+            color: var(--text-primary);
+            font-family: 'Noto Serif SC', serif;
+            background-image:
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 0.8s ease forwards;
+            animation-timeline: view();
+            animation-range: entry 10% cover 30%;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slides-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* 进度指示器 */
+        .progress-indicator {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .progress-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--ink-gray);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .progress-dot.active {
+            background-color: var(--cinnabar);
+            transform: scale(1.5);
+        }
+
+        .mini-card {
+            background-color: rgba(30, 30, 30, 0.8);
+            border: 1px solid var(--ink-gray);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mini-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(180deg, var(--cinnabar), var(--gold));
+            transition: height 0.4s ease;
+        }
+
+        .mini-card:hover {
+            border-color: var(--cinnabar);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(185, 28, 28, 0.15);
+            background-color: rgba(35, 35, 35, 0.95);
+        }
+
+        .mini-card:hover::before {
+            height: 100%;
+        }
+
+        .quote-block {
+            background-color: rgba(20, 20, 20, 0.8);
+            border-left: 3px solid var(--cinnabar);
+            padding: 2rem;
+            border-radius: 0.25rem;
+            color: var(--text-secondary);
+            line-height: 2;
+            position: relative;
+        }
+
+        .quote-block::after {
+            content: '';
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cinnabar));
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--ink-black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--ink-gray);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--cinnabar);
+        }
+
+        .main-title {
+            font-family: 'ZCOOL XiaoWei', serif;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .concept-title {
+            font-family: 'ZCOOL XiaoWei', serif;
+            position: relative;
+            display: inline-block;
+        }
+
+        .concept-title::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--cinnabar), transparent);
+        }
+
+        .concept-badge {
+            display: inline-block;
+            padding: 0.25rem 1rem;
+            border: 1px solid var(--cinnabar);
+            color: var(--cinnabar-light);
+            font-size: 0.875rem;
+            letter-spacing: 0.2em;
+            margin-left: 1rem;
+            border-radius: 999px;
+            opacity: 0.8;
+        }
+
+        .slide-divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cinnabar), transparent);
+            margin: 1.5rem auto;
+        }
+
+        .ink-stain {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(185, 28, 28, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .seal {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(185, 28, 28, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'ZCOOL XiaoWei', serif;
+            font-size: 0.75rem;
+            color: rgba(185, 28, 28, 0.6);
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        .five-concepts {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .five-concepts span {
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .five-concepts span::after {
+            content: '·';
+            position: absolute;
+            right: -1.25rem;
+            color: var(--cinnabar);
+        }
+
+        .five-concepts span:last-child::after {
+            display: none;
+        }
+
+        .final-quote {
+            position: relative;
+            text-align: center;
+            line-height: 2.2;
+        }
+
+        .final-quote::before {
+            content: '“';
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+            font-size: 4rem;
+            color: rgba(185, 28, 28, 0.2);
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+
+        .final-quote::after {
+            content: '”';
+            position: absolute;
+            bottom: -4rem;
+            right: -1rem;
+            font-size: 4rem;
+            color: rgba(185, 28, 28, 0.2);
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+
+        @media (max-width: 768px) {
+            .progress-indicator {
+                display: none;
+            }
+            .slide {
+                padding: 1rem;
+            }
+            .seal {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slides-container" id="slideContainer">
+        <!-- 进度指示器 -->
+        <div class="progress-indicator" id="progressIndicator">
+            <div class="progress-dot active" data-slide="0" onclick="scrollToSlide(0)"></div>
+            <div class="progress-dot" data-slide="1" onclick="scrollToSlide(1)"></div>
+            <div class="progress-dot" data-slide="2" onclick="scrollToSlide(2)"></div>
+            <div class="progress-dot" data-slide="3" onclick="scrollToSlide(3)"></div>
+            <div class="progress-dot" data-slide="4" onclick="scrollToSlide(4)"></div>
+            <div class="progress-dot" data-slide="5" onclick="scrollToSlide(5)"></div>
+            <div class="progress-dot" data-slide="6" onclick="scrollToSlide(6)"></div>
+            <div class="progress-dot" data-slide="7" onclick="scrollToSlide(7)"></div>
+        </div>
+
+        <!-- 墨迹装饰 -->
+        <div class="ink-stain" style="top: 10%; left: 5%;"></div>
+        <div class="ink-stain" style="bottom: 20%; right: 8%;"></div>
+
+        <!-- 封面 -->
+        <section class="slide" data-index="0">
+            <div class="content-wrapper text-center">
+                <h1 class="main-title text-5xl md:text-7xl font-bold mb-6">新发展理念</h1>
+                <h2 class="text-xl md:text-2xl text-gray-400 mb-10 font-light">个人视角下的成长践行</h2>
+                <div class="slide-divider"></div>
+                <div class="five-concepts text-lg text-gray-300 mt-8">
+                    <span>创新</span>
+                    <span>协调</span>
+                    <span>绿色</span>
+                    <span>开放</span>
+                    <span>共享</span>
+                </div>
+                <p class="text-gray-500 mt-16 text-sm animate-pulse">↓ 滚轮向下翻阅</p>
+                <div class="seal">知行合一</div>
+            </div>
+        </section>
+
+        <!-- 概述 -->
+        <section class="slide" data-index="1">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-4xl font-semibold mb-8 text-center">
+                    <span class="concept-title">理念概述</span>
+                </h2>
+                <div class="quote-block">
+                    <p class="mb-4">新发展理念即<strong class="text-red-500 font-semibold">创新、协调、绿色、开放、共享</strong>的发展理念，是习近平于2015年10月在党的十八届五中全会上提出。</p>
+                    <p class="mb-4">创新发展注重的是解决发展动力问题，协调发展注重的是解决发展不平衡问题，绿色发展注重的是解决人与自然和谐问题，开放发展注重的是解决发展内外联动问题，共享发展注重的是解决社会公平正义问题，强调坚持新发展理念是关系我国发展全局的一场深刻变革。</p>
+                    <p>新发展理念就是指挥棒、红绿灯。全党要把思想和行动统一到新发展理念上来，努力提高统筹贯彻新发展理念的能力和水平，对不适应、不适合甚至违背新发展理念的认识要立即调整，对不适应、不适合甚至违背新发展理念的行为要坚决纠正，对不适应、不适合甚至违背新发展理念的做法要彻底摒弃。</p>
+                </div>
+                <p class="text-gray-500 mt-6 text-sm text-center tracking-widest">ZHANG HAO · PERSONAL PERSPECTIVE</p>
+            </div>
+        </section>
+
+        <!-- 创新 -->
+        <section class="slide" data-index="2">
+            <div class="content-wrapper max-w-6xl w-full">
+                <h2 class="text-4xl font-semibold mb-3">
+                    <span class="concept-title">创新</span>
+                    <span class="concept-badge">INNOVATION</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-8 text-center font-light">以主动改变，实现自我迭代</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-red-500 mb-3">国家层面</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">科技突破、产业升级、模式革新，是推动社会进步的核心动力</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-red-500 mb-3">个人创新</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">持续向好、向上的自我改变与状态升级，而非高深发明</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-red-500 mb-3">独立思考</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">不做被动服从、墨守成规的个体，保有独立思考意识</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-red-500 mb-3">创新根基</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">长期认知积累、知识沉淀与阅历打磨，厚积才能薄发</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-red-500 mb-3">打破常规</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">敢于打破固有习惯、固化思维，走出舒适区拥抱变化</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-red-500 mb-3">处处可为</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">优化方法、调整思路、转变心态都是个人层面的创新</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 协调 -->
+        <section class="slide" data-index="3">
+            <div class="content-wrapper max-w-6xl w-full">
+                <h2 class="text-4xl font-semibold mb-3">
+                    <span class="concept-title">协调</span>
+                    <span class="concept-badge">COORDINATION</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-8 text-center font-light">统筹内外资源，平衡成长节奏</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="mini-card">
+                        <h3 class="text-4xl font-semibold text-red-500 mb-6 text-center">内部协调</h3>
+                        <ul class="text-gray-400 space-y-3 pl-4">
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">•</span>
+                                <span>管好精力、体力、情绪与时间</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">•</span>
+                                <span>合理分配作息、工作、学习与休息</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">•</span>
+                                <span>不盲目透支精力，不偏执单一目标</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">•</span>
+                                <span>做到身心同步、能力均衡发展</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-4xl font-semibold text-red-500 mb-6 text-center">外部协调</h3>
+                        <ul class="text-gray-400 space-y-3 pl-4">
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">•</span>
+                                <span>整合人脉、亲友、师长、圈层资源</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">•</span>
+                                <span>遇事懂得借力求助、借鉴经验</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">•</span>
+                                <span>不闭门造车、不孤军奋战</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">•</span>
+                                <span>善于借助外部力量成就自我</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mini-card">
+                    <p class="text-gray-300 text-center text-lg leading-relaxed">
+                        <strong class="text-red-500">协调本质：</strong>懂得取舍、学会平衡。平衡欲望与能力，平衡独处沉淀与人情往来，平衡当下任务与长远规划，让内部状态稳、外部助力足，做事事半功倍、成长稳步推进。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 绿色 -->
+        <section class="slide" data-index="4">
+            <div class="content-wrapper max-w-6xl w-full">
+                <h2 class="text-4xl font-semibold mb-3">
+                    <span class="concept-title">绿色</span>
+                    <span class="concept-badge">SUSTAINABILITY</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-8 text-center font-light">坚守长期主义，守住可持续底线</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-green-600 mb-4">拒绝短期透支</h3>
+                        <p class="text-gray-400 leading-relaxed">不贪眼前快利、不图一时安逸、不走捷径歪路。赚钱谋生，不能以透支健康、损耗身心为代价。</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-green-600 mb-4">立足长远发展</h3>
+                        <p class="text-gray-400 leading-relaxed">追逐目标，不能只顾当下收益，放弃长远能力积淀与口碑积累。</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-green-600 mb-4">经营个人生态</h3>
+                        <p class="text-gray-400 leading-relaxed">规律作息、养护身心，减少精神内耗、无效攀比、消极情绪，保持内心平和。</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-green-600 mb-4">拒绝速成浮躁</h3>
+                        <p class="text-gray-400 leading-relaxed">深耕能力、沉淀底蕴，拒绝浮躁短视的"速成式成长"，相信时间的力量。</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center text-gray-300 text-xl italic font-light">
+                    <span class="text-green-500">❝</span> 人生是一场长跑，唯有爱惜身体、稳住心态、立足长远，才能行稳致远、长久立身。 <span class="text-green-500">❞</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 开放 -->
+        <section class="slide" data-index="5">
+            <div class="content-wrapper max-w-6xl w-full">
+                <h2 class="text-4xl font-semibold mb-3">
+                    <span class="concept-title">开放</span>
+                    <span class="concept-badge">OPENNESS</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-8 text-center font-light">打破认知壁垒，主动接纳新生</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-blue-500 mb-3">思想开放</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">不固执己见、不经验主义，听得进不同意见，容得下多元观点</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-blue-500 mb-3">视野开放</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">不困在小圈子，主动接触新领域、学习新知识、尝试新事物</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-blue-500 mb-3">行动开放</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">遇事不钻牛角尖，善于借鉴优势，主动链接外部机会</p>
+                    </div>
+                </div>
+                <div class="mt-8 px-8">
+                    <div class="mini-card">
+                        <p class="text-gray-300 text-center text-lg leading-relaxed">
+                            国家对外开放是联通世界、吸纳精华、破除封闭隔阂；<br>
+                            个人开放是打破思维局限、跳出舒适圈层、拓宽成长边界。<br>
+                            <span class="block mt-4 text-red-500 font-medium">唯有放下偏见、打开格局，才能拓宽眼界、丰富思路，抓住更多成长机遇。</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 共享 -->
+        <section class="slide" data-index="6">
+            <div class="content-wrapper max-w-6xl w-full">
+                <h2 class="text-4xl font-semibold mb-3">
+                    <span class="concept-title">共享</span>
+                    <span class="concept-badge">SHARING</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-8 text-center font-light">践行利他共赢，推动价值流动</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-yellow-500 mb-3">分享价值</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">主动传递知识、经验、技能、心得，乐于助人、乐于帮带</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-yellow-500 mb-3">互利共赢</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">不自私自利、不损人利己，换位思考、懂得让利成全</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-3xl font-semibold text-yellow-500 mb-3">承接善意</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">懂得感恩时代红利、平台支撑、他人帮助，在互助中前行</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <div class="mini-card">
+                        <p class="text-gray-300 text-lg text-center leading-relaxed">
+                            国家共享发展，是普惠民生、成果共有、共同富裕。<br>
+                            个人的共享，是心怀善意、利他而行、彼此成就。<br>
+                            <span class="block mt-4 text-yellow-500 font-medium">以共享之心待人，以共赢之道做事，方能积攒人脉、沉淀口碑，实现双向奔赴、长久发展。</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 总结 -->
+        <section class="slide" data-index="7">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-4xl font-semibold mb-10 text-center">
+                    <span class="concept-title">总结</span>
+                    <span class="text-gray-400 text-lg ml-3 font-light">立足个人践行新发展理念</span>
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-10">
+                    <div class="mini-card text-center">
+                        <h3 class="text-2xl font-semibold text-red-500 mb-2">创新</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">日日精进<br>主动改变</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <h3 class="text-2xl font-semibold text-red-500 mb-2">协调</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">统筹内外<br>平衡身心</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <h3 class="text-2xl font-semibold text-green-600 mb-2">绿色</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">长期深耕<br>拒绝透支</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <h3 class="text-2xl font-semibold text-blue-500 mb-2">开放</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">打破局限<br>拓宽眼界</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <h3 class="text-2xl font-semibold text-yellow-500 mb-2">共享</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">利他共赢<br>向阳而行</p>
+                    </div>
+                </div>
+                <div class="quote-block final-quote">
+                    <p class="text-center text-lg text-gray-200 leading-relaxed">
+                        把国家发展大局的理念，融入个人成长一言一行、一举一动，<br>
+                        找准自身站位，夯实成长根基，<br>
+                        实现个人进步与时代发展同频同向。
+                    </p>
+                </div>
+                <div class="mt-12 text-center">
+                    <p class="text-gray-400 text-2xl">—— 完 ——</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 滚动时更新进度指示器
+        const container = document.getElementById('slideContainer');
+        const dots = document.querySelectorAll('.progress-dot');
+        const slides = document.querySelectorAll('.slide');
+
+        container.addEventListener('scroll', () => {
+            const containerTop = container.scrollTop;
+            const slideHeight = window.innerHeight;
+            const currentIndex = Math.round(containerTop / slideHeight);
+
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+
+        function scrollToSlide(index) {
+            const container = document.getElementById('slideContainer');
+            container.scrollTo({
+                top: index * window.innerHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        // 键盘导航
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+                const currentIndex = Math.round(container.scrollTop / window.innerHeight);
+                if (currentIndex < slides.length - 1) {
+                    scrollToSlide(currentIndex + 1);
+                }
+            }
+            if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                const currentIndex = Math.round(container.scrollTop / window.innerHeight);
+                if (currentIndex > 0) {
+                    scrollToSlide(currentIndex - 1);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
