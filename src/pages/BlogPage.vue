@@ -11,6 +11,7 @@ const posts = computed(() =>
     title: post.title,
     excerpt: post.description,
     type: post.externalUrl ? 'slides' : 'article',
+    externalUrl: post.externalUrl || null,
     date: post.date,
     tags: post.tags,
     readingTime: '5分钟'
@@ -99,7 +100,7 @@ const getTypeBadgeClass = (type: string) => {
               <span class="post-card__reading-time">{{ post.readingTime }}</span>
             </div>
             <router-link
-              :to="post.externalUrl"
+              :to="post.externalUrl || `/blog/${post.slug}`"
               class="post-card__link"
             >
               <span>阅读</span>
