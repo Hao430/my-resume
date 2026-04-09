@@ -1,6 +1,25 @@
 /* 设计系统 - 墨砚风格 CSS变量定义 */
 /* 理念：墨韵 · 文化思考 + 技术精准 */
 
+/* ==================== 兼容性别名 ==================== */
+/* 旧组件兼容：PersonalInfo, WorkExperience, Honors, Skills */
+/* 建议后续统一迁移到新命名系统 */
+:root {
+  /* 背景色别名 */
+  --bg-primary: var(--color-ink);
+  --bg-secondary: var(--color-ink-light);
+  --bg-tertiary: var(--color-ink-muted);
+
+  /* 间距别名 - 旧命名系统 */
+  --spacing-xs: var(--space-1);
+  --spacing-sm: var(--space-2);
+  --spacing-md: var(--space-3);
+  --spacing-lg: var(--space-4);
+  --spacing-xl: var(--space-5);
+  --spacing-2xl: var(--space-6);
+  --spacing-3xl: var(--space-8);
+}
+
 /* ==================== 色彩系统 ==================== */
 :root {
   /* 主色调 - 墨砚色系 */

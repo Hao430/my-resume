@@ -1,36 +1,21 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useBlogStore } from '@/stores/blog'
 
-// 示例博客数据（后续可扩展为从 MD 文件加载）
-const posts = ref([
-  {
-    slug: 'xin-fazhan-linian',
-    title: '新发展理念的个人视角',
-    excerpt: '以创新、协调、绿色、开放、共享五大理念为框架，探讨个人成长与时代发展的同频共振。',
-    type: 'slides',
-    date: '2026-04-09',
-    tags: ['思考', '成长'],
-    readingTime: '8分钟'
-  },
-  {
-    slug: 'bilibili-transcript',
-    title: 'B站视频文稿助手开发手记',
-    excerpt: '从需求分析到技术实现，详细记录这款浏览器扩展的开发全过程。',
-    type: 'article',
-    date: '2025-12-15',
-    tags: ['开发', 'AI'],
-    readingTime: '12分钟'
-  },
-  {
-    slug: 'nanfeng-ai',
-    title: '南风AI：从0到1构建智能对话应用',
-    excerpt: '基于 Next.js 14 和 DeepSeek R1 的边缘函数部署实践。',
-    type: 'article',
-    date: '2025-11-20',
-    tags: ['AI', '全栈'],
-    readingTime: '15分钟'
-  }
-])
+const blogStore = useBlogStore()
+
+// 将 store 数据转换为页面所需格式（添加 type 字段用于区分）
+const posts = computed(() =>
+  blogStore.posts.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.description,
+    type: post.externalUrl ? 'slides' : 'article',
+    date: post.date,
+    tags: post.tags,
+    readingTime: '5分钟'
+  }))
+)
 
 const activeFilter = ref('all')
 

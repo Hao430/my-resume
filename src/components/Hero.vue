@@ -4,14 +4,13 @@ import { ref, onMounted } from 'vue'
 // 打字机效果
 const displayText = ref('')
 const fullText = '以墨载道，以技行事'
-
-let charIndex = 0
+const charIndex = ref(0)
 
 onMounted(() => {
   const typeInterval = setInterval(() => {
-    if (charIndex < fullText.length) {
-      displayText.value += fullText[charIndex]
-      charIndex++
+    if (charIndex.value < fullText.length) {
+      displayText.value += fullText[charIndex.value]
+      charIndex.value++
     } else {
       clearInterval(typeInterval)
     }

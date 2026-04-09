@@ -169,7 +169,7 @@ const scrollToSection = (id: string) => {
                 v-if="project.url"
                 :href="project.url"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="timeline-item__link"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
