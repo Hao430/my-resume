@@ -20,4 +20,12 @@ export default defineConfigWithVueTs(
   vueTsConfigs.recommended,
 
   ...pluginOxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
+
+  // 关闭多单词组件名规则（项目使用简洁的单单词组件名）
+  {
+    name: 'app/custom-rules',
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  },
 )

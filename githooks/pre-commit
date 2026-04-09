@@ -13,10 +13,10 @@ else
 fi
 
 # 运行 lint（仅检查，不自动修复，保持提交内容纯净）
-$PKG_MGR run lint:oxlint -- --fix=false 2>&1
+$PKG_MGR run lint:oxlint 2>&1
 OXLINT_EXIT=$?
 
-$PKG_MGR run lint:eslint -- --fix=false 2>&1
+$PKG_MGR run lint:eslint 2>&1
 ESLINT_EXIT=$?
 
 if [ $OXLINT_EXIT -ne 0 ] || [ $ESLINT_EXIT -ne 0 ]; then
