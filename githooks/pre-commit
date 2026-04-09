@@ -1,0 +1,30 @@
+#!/bin/sh
+# pre-commit hook
+# 在每次 git commit 前自动运行 lint 检查
+# 如需跳过（紧急情况）：git commit --no-verify
+
+echo "🔍 [pre-commit] 运行代码检查..."
+
+# 检查 pnpm 是否可用，否则使用 npm
+if command -v pnpm > /dev/null 2>&1; then
+  PKG_MGR="pnpm"
+else
+  PKG_MGR="npm"
+fi
+
+# 运行 lint（仅检查，不自动修复，保持提交内容纯净）
+$PKG_MGR run lint:oxlint -- --fix=false 2>&1
+OXLINT_EXIT=$?
+
+$PKG_MGR run lint:eslint -- --no-fix 2>&1
+ESLINT_EXIT=$?
+
+if [ $OXLINT_EXIT -ne 0 ] || [ $ESLINT_EXIT -ne 0 ]; then
+  echo ""
+  echo "❌ [pre-commit] Lint 检查失败，请修复后再提交"
+  echo "   提示：运行 pnpm run lint 自动修复"
+  exit 1
+fi
+
+echo "✅ [pre-commit] 代码检查通过"
+exit 0

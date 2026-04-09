@@ -1,0 +1,49 @@
+#!/bin/sh
+# pre-push hook
+# 在每次 git push 前运行 type-check 和构建验证
+# 确保推送的代码能正确编译，防止破坏线上部署
+# 如需跳过（紧急情况）：git push --no-verify
+
+echo "🚀 [pre-push] 推送前检查..."
+echo "   （ESA 将在推送后自动触发生产部署，请确保代码可构建）"
+echo ""
+
+# 检查 pnpm 是否可用，否则使用 npm
+if command -v pnpm > /dev/null 2>&1; then
+  PKG_MGR="pnpm"
+else
+  PKG_MGR="npm"
+fi
+
+# Step 1: TypeScript 类型检查
+echo "📘 [1/2] TypeScript 类型检查..."
+$PKG_MGR run type-check 2>&1
+TYPECHECK_EXIT=$?
+
+if [ $TYPECHECK_EXIT -ne 0 ]; then
+  echo ""
+  echo "❌ [pre-push] TypeScript 类型检查失败，推送已阻止"
+  echo "   修复类型错误后再推送"
+  exit 1
+fi
+
+echo "✅ TypeScript 检查通过"
+echo ""
+
+# Step 2: 生产构建验证
+echo "📦 [2/2] 生产构建验证..."
+$PKG_MGR run build-only 2>&1
+BUILD_EXIT=$?
+
+if [ $BUILD_EXIT -ne 0 ]; then
+  echo ""
+  echo "❌ [pre-push] 构建失败，推送已阻止"
+  echo "   本地构建失败说明 ESA 部署也会失败，请修复后再推送"
+  exit 1
+fi
+
+echo "✅ 构建验证通过"
+echo ""
+echo "🎉 [pre-push] 所有检查通过，正在推送..."
+echo "   推送后 ESA 将自动部署到 hao430.cn"
+exit 0

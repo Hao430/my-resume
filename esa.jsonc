@@ -1,10 +1,13 @@
 {
+  // 阿里云 ESA Pages 构建配置
+  // 文档：https://help.aliyun.com/zh/edge-security-acceleration/esa/user-guide/connect-pages-to-github
   "name": "hao430",
   "entry": "",
-  "installCommand": "npm install",
-  "buildCommand": "npm run build",
+  "installCommand": "npm install -g pnpm && pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm run build",
   "assets": {
     "directory": "./dist",
+    // SPA 模式：任意路径刷新都返回 index.html，支持 Vue Router history 模式
     "notFoundStrategy": "singlePageApplication"
   }
 }
