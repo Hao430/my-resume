@@ -29,22 +29,8 @@ const slug = route.params.slug as string
   padding-top: var(--header-height);
 }
 
-.page-header {
-  padding: var(--space-12) 0;
-}
-
-.page-header__title {
-  font-family: var(--font-display);
-  font-size: var(--text-4xl);
-  font-weight: var(--font-bold);
-  margin-bottom: var(--space-4);
-}
-
-.page-header__subtitle {
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  color: var(--color-text-secondary);
-}
+/* Page Header - 使用 global.css 公共样式 */
+/* BlogPostPage 布局特殊，不需要 header 偏移 */
 
 .back-btn {
   display: inline-flex;

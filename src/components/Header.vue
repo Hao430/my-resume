@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
 
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
+const headerRef = ref<HTMLElement | null>(null)
 
 // 路由链接
 const navItems = [
@@ -16,12 +17,39 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
 }
 
+// 点击外部关闭菜单
+const handleClickOutside = (event: MouseEvent) => {
+  if (isMobileMenuOpen.value && headerRef.value && !headerRef.value.contains(event.target as Node)) {
+    closeMobileMenu()
+  }
+}
+
+// ESC 键关闭菜单
+const handleEscape = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && isMobileMenuOpen.value) {
+    closeMobileMenu()
+  }
+}
+
+// 监听菜单状态，动态添加/移除外部点击监听
+watch(isMobileMenuOpen, (isOpen) => {
+  if (isOpen) {
+    document.addEventListener('click', handleClickOutside, true)
+    document.addEventListener('keydown', handleEscape)
+  } else {
+    document.removeEventListener('click', handleClickOutside, true)
+    document.removeEventListener('keydown', handleEscape)
+  }
+})
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  document.removeEventListener('click', handleClickOutside, true)
+  document.removeEventListener('keydown', handleEscape)
 })
 
 const toggleMobileMenu = () => {
@@ -34,7 +62,7 @@ const closeMobileMenu = () => {
 </script>
 
 <template>
-  <header :class="['header', { 'header--scrolled': isScrolled }]">
+  <header ref="headerRef" :class="['header', { 'header--scrolled': isScrolled }]">
     <div class="container header__container">
       <!-- Logo -->
       <router-link to="/" class="header__logo" @click="closeMobileMenu">

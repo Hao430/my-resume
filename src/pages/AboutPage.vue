@@ -245,34 +245,21 @@ const scrollToSection = (id: string) => {
 </template>
 
 <style scoped>
-/* Page Header */
+/* Page Header - 使用 global.css 公共样式 */
+/* 保留 AboutPage 特定的 padding-bottom */
 .page-header {
-  padding: calc(var(--header-height) + var(--space-12)) 0 var(--space-12);
-  text-align: center;
+  padding-bottom: var(--space-12);
 }
 
-.page-header__title {
-  font-family: var(--font-display);
-  font-size: var(--text-4xl);
-  font-weight: var(--font-bold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-4);
-}
+@media (max-width: 768px) {
+  .page-header {
+    padding-top: calc(var(--header-height) + var(--space-8));
+    padding-bottom: var(--space-8);
+  }
 
-.page-header__accent {
-  color: var(--color-vermilion);
-  font-size: var(--text-5xl);
-  line-height: 1;
-}
-
-.page-header__subtitle {
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  color: var(--color-text-secondary);
-  margin: 0;
+  .page-header__title {
+    font-size: var(--text-3xl);
+  }
 }
 
 /* Navigation Tabs */
@@ -309,30 +296,16 @@ const scrollToSection = (id: string) => {
 }
 
 .nav-tabs__item:hover {
-  color: var(--color-text);
-  background-color: var(--color-ink-light);
-}
-
-.nav-tabs__item:hover {
   color: var(--color-vermilion);
   background-color: var(--color-ink-light);
 }
 
-/* Section Title */
-.section-title {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: var(--font-semibold);
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-8);
-}
-
-.section-title__accent {
-  color: var(--color-vermilion);
-  font-size: var(--text-3xl);
-  line-height: 1;
+/* Section Title - 使用 global.css 公共样式 */
+/* 保留响应式调整 */
+@media (max-width: 768px) {
+  .section-title__accent {
+    font-size: var(--text-2xl);
+  }
 }
 
 /* Summary Cards */

@@ -78,34 +78,20 @@ const slidesStore = useSlidesStore()
 </template>
 
 <style scoped>
-/* Page Header */
-.page-header {
-  padding: calc(var(--header-height) + var(--space-12)) 0 var(--space-8);
-  text-align: center;
-}
+/* Page Header - 使用 global.css 公共样式 */
 
-.page-header__title {
-  font-family: var(--font-display);
-  font-size: var(--text-4xl);
-  font-weight: var(--font-bold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-4);
-}
+@media (max-width: 768px) {
+  .page-header {
+    padding-top: calc(var(--header-height) + var(--space-8));
+  }
 
-.page-header__accent {
-  color: var(--color-vermilion);
-  font-size: var(--text-5xl);
-  line-height: 1;
-}
+  .page-header__title {
+    font-size: var(--text-3xl);
+  }
 
-.page-header__subtitle {
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  color: var(--color-text-secondary);
-  margin: 0;
+  .slides-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Slides Grid */
@@ -266,18 +252,4 @@ const slidesStore = useSlidesStore()
   margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .page-header {
-    padding-top: calc(var(--header-height) + var(--space-8));
-  }
-
-  .page-header__title {
-    font-size: var(--text-3xl);
-  }
-
-  .slides-grid {
-    grid-template-columns: 1fr;
-  }
-}
 </style>
