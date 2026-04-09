@@ -1,43 +1,95 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const isScrolled = ref(false)
+const isMobileMenuOpen = ref(false)
+
+// 路由链接
+const navItems = [
+  { path: '/', label: '首页' },
+  { path: '/about', label: '关于' },
+  { path: '/blog', label: '博客' },
+  { path: '/slides', label: '演示' }
+]
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50
+}
 
 onMounted(() => {
-  window.addEventListener('scroll', () => {
-    isScrolled.value = window.scrollY > 50
-  })
+  window.addEventListener('scroll', handleScroll, { passive: true })
 })
 
-const scrollToSection = (id: string) => {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value
+}
+
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false
 }
 </script>
 
 <template>
   <header :class="['header', { 'header--scrolled': isScrolled }]">
     <div class="container header__container">
-      <div class="header__logo">
-        <h1>张豪</h1>
-      </div>
+      <!-- Logo -->
+      <router-link to="/" class="header__logo" @click="closeMobileMenu">
+        <span class="header__logo-text">墨</span>
+        <span class="header__logo-separator">·</span>
+        <span class="header__logo-name">张豪</span>
+      </router-link>
+
+      <!-- Desktop Navigation -->
       <nav class="header__nav">
-        <button
-          v-for="item in [
-            { id: 'about', label: '关于我' },
-            { id: 'skills', label: '技能' },
-            { id: 'projects', label: '项目经验' },
-            { id: 'experience', label: '工作经历' },
-            { id: 'honors', label: '荣誉证书' }
-          ]"
-          :key="item.id"
+        <router-link
+          v-for="item in navItems"
+          :key="item.path"
+          :to="item.path"
           class="header__nav-item"
-          @click="scrollToSection(item.id)"
+          :class="{ 'header__nav-item--active': $route.path === item.path }"
         >
           {{ item.label }}
-        </button>
+        </router-link>
+      </nav>
+
+      <!-- Contact Button -->
+      <a href="mailto:fervent430@163.com" class="header__contact btn btn--outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <span>联系我</span>
+      </a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="header__mobile-toggle" @click="toggleMobileMenu" aria-label="菜单">
+        <span :class="['header__hamburger', { 'header__hamburger--open': isMobileMenuOpen }]">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div :class="['header__mobile-menu', { 'header__mobile-menu--open': isMobileMenuOpen }]">
+      <nav class="header__mobile-nav">
+        <router-link
+          v-for="item in navItems"
+          :key="item.path"
+          :to="item.path"
+          class="header__mobile-nav-item"
+          @click="closeMobileMenu"
+        >
+          {{ item.label }}
+        </router-link>
+        <a href="mailto:fervent430@163.com" class="header__mobile-nav-item" @click="closeMobileMenu">
+          联系我
+        </a>
       </nav>
     </div>
   </header>
@@ -49,56 +101,215 @@ const scrollToSection = (id: string) => {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: var(--z-header);
   background-color: transparent;
-  transition: all var(--transition-base);
-  padding: var(--spacing-lg) 0;
+  transition:
+    background-color var(--transition-base),
+    box-shadow var(--transition-base),
+    padding var(--transition-base);
+  padding: var(--space-5) 0;
 }
 
 .header--scrolled {
-  background-color: var(--bg-primary);
-  box-shadow: var(--shadow-md);
-  padding: var(--spacing-md) 0;
+  background-color: rgba(10, 10, 11, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--color-ink-border);
+  padding: var(--space-4) 0;
 }
 
 .header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
 }
 
-.header__logo h1 {
-  font-size: var(--text-xl);
+/* Logo */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.header__logo:hover {
+  color: var(--color-vermilion);
+}
+
+.header__logo-text {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
   font-weight: var(--font-bold);
-  color: var(--primary-color);
-  margin: 0;
+  color: var(--color-vermilion);
 }
 
+.header__logo-separator {
+  color: var(--color-ink-border);
+  font-size: var(--text-lg);
+}
+
+.header__logo-name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Navigation */
 .header__nav {
   display: flex;
-  gap: var(--spacing-lg);
+  align-items: center;
+  gap: var(--space-1);
 }
 
 .header__nav-item {
-  background: none;
-  border: none;
-  color: var(--text-primary);
+  position: relative;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-display);
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
-  cursor: pointer;
-  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text-secondary);
+  text-decoration: none;
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
 }
 
-.header__nav-item:hover {
-  background-color: var(--primary-light);
-  color: var(--primary-color);
+.header__nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-vermilion);
+  transition: all var(--transition-fast);
+  transform: translateX(-50%);
 }
 
+.header__nav-item:hover {
+  color: var(--color-text);
+}
+
+.header__nav-item:hover::after {
+  width: 60%;
+}
+
+.header__nav-item--active {
+  color: var(--color-vermilion);
+}
+
+.header__nav-item--active::after {
+  width: 60%;
+}
+
+/* Contact Button */
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-4);
+}
+
+/* Mobile Toggle */
+.header__mobile-toggle {
+  display: none;
+  padding: var(--space-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  gap: 5px;
+}
+
+.header__hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 1px;
+  transition: all var(--transition-fast);
+}
+
+.header__hamburger--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header__hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburger--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.header__mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(10, 10, 11, 0.98);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--color-ink-border);
+  padding: var(--space-4) 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all var(--transition-base);
+}
+
+.header__mobile-menu--open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.header__mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--space-4);
+}
+
+.header__mobile-nav-item {
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.header__mobile-nav-item:hover {
+  color: var(--color-text);
+  background-color: var(--color-ink-light);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .header__nav {
+  .header__nav,
+  .header__contact {
     display: none;
+  }
+
+  .header__mobile-toggle {
+    display: block;
+  }
+
+  .header__mobile-menu {
+    display: block;
   }
 }
 </style>

@@ -13,7 +13,7 @@
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
     "sync-resume": "node scripts/sync-resume.js",
-    "prepare": "git config core.hooksPath githooks && chmod +x githooks/*"
+    "prepare": "git config core.hooksPath githooks"
   },
   "dependencies": {
     "pinia": "^3.0.4",
