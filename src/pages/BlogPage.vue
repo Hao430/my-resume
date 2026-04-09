@@ -99,7 +99,7 @@ const getTypeBadgeClass = (type: string) => {
               <span class="post-card__reading-time">{{ post.readingTime }}</span>
             </div>
             <router-link
-              :to="post.type === 'slides' ? `/slides?ref=${post.slug}` : `/blog/${post.slug}`"
+              :to="post.externalUrl"
               class="post-card__link"
             >
               <span>阅读</span>
