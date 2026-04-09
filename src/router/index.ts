@@ -32,6 +32,11 @@ const router = createRouter({
       path: '/slides/:id',
       name: 'slide-viewer',
       component: () => import('../pages/SlideViewerPage.vue')
+    },
+    {
+      path: '/read',
+      name: 'blog-reader',
+      component: () => import('../pages/BlogReaderPage.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

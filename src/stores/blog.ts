@@ -18,7 +18,7 @@ export const useBlogStore = defineStore('blog', () => {
       description: '以创新、协调、绿色、开放、共享五大理念为框架，探讨个人成长与时代发展的同频共振。',
       date: '2026-04-09',
       tags: ['思想', '发展'],
-      externalUrl: '/新发展理念的个人视角.html'
+      externalUrl: '/read?file=新发展理念的个人视角.html'
     },
     {
       slug: 'harness-gong-ju-tuijian',
@@ -26,7 +26,7 @@ export const useBlogStore = defineStore('blog', () => {
       description: '分享我在日常开发中使用的效率工具，从AI助手到部署平台，构建个人工具链。',
       date: '2026-04-09',
       tags: ['工具', '效率', 'AI'],
-      externalUrl: '/Harness开发范式的工具推荐.html'
+      externalUrl: '/read?file=Harness开发范式的工具推荐.html'
     },
     {
       slug: 'workbuddy-esa-jianshan',
@@ -34,7 +34,7 @@ export const useBlogStore = defineStore('blog', () => {
       description: '从需求分析到自动部署，完整记录AI辅助开发简历网站的全过程。',
       date: '2026-04-09',
       tags: ['开发', 'AI', 'WorkBuddy'],
-      externalUrl: '/WorkBuddy结合ESA开发网站实战.html'
+      externalUrl: '/read?file=WorkBuddy结合ESA开发网站实战.html'
     },
     {
       slug: 'faxian-shenghuo-xuqiu',
@@ -42,7 +42,7 @@ export const useBlogStore = defineStore('blog', () => {
       description: '分享4种需求发现方法：痛点驱动、角色代入、数据挖掘、跨界借鉴。',
       date: '2026-04-09',
       tags: ['产品', '思考', '方法论'],
-      externalUrl: '/如何发现生活中的需求.html'
+      externalUrl: '/read?file=如何发现生活中的需求.html'
     }
   ])
 
