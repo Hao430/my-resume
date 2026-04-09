@@ -55,6 +55,16 @@ const socialLinks = [
         <p class="footer__copyright">
           © {{ currentYear }} 张豪 · 用心沉淀，随缘分享
         </p>
+        <p class="footer__icp">
+          <a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer__icp-link"
+          >
+            湘ICP备2025125191号-2
+          </a>
+        </p>
       </div>
     </div>
 
@@ -171,6 +181,22 @@ const socialLinks = [
   font-size: var(--text-sm);
   color: var(--color-text-tertiary);
   margin: 0;
+}
+
+.footer__icp {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+
+.footer__icp-link {
+  color: var(--color-text-tertiary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer__icp-link:hover {
+  color: var(--color-vermilion);
 }
 
 /* Decorative Seal */
