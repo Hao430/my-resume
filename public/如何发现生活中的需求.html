@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何发现生活中的需求</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700;900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink-black: #0f0f0f;
+            --cinnabar: #b91c1c;
+            --gold: #d4af37;
+            --jade: #166534;
+            --ink-gray: #27272a;
+            --text-primary: #f5f5f4;
+            --text-secondary: #a8a29e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--ink-black);
+            color: var(--text-primary);
+            font-family: 'Noto Serif SC', serif;
+            line-height: 1.8;
+        }
+        .slide {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+            scroll-snap-align: start;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 0.8s ease forwards;
+            animation-timeline: view();
+            animation-range: entry 10% cover 30%;
+        }
+        @keyframes slideIn { to { opacity: 1; transform: translateY(0); } }
+        .slides-container { scroll-snap-type: y mandatory; overflow-y: scroll; height: 100vh; }
+        .progress-indicator {
+            position: fixed; right: 2rem; top: 50%; transform: translateY(-50%);
+            z-index: 100; display: flex; flex-direction: column; gap: 0.75rem;
+        }
+        .progress-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background-color: var(--ink-gray); transition: all 0.3s ease; cursor: pointer;
+        }
+        .progress-dot.active { background-color: #22c55e; transform: scale(1.8); }
+        .mini-card {
+            background-color: rgba(30, 30, 30, 0.9); border: 1px solid var(--ink-gray);
+            border-radius: 0.5rem; padding: 1.5rem; transition: all 0.3s ease;
+        }
+        .mini-card:hover { border-color: #22c55e; transform: translateY(-2px); }
+        .concept-title {
+            font-family: 'ZCOOL XiaoWei', serif;
+            position: relative; display: inline-block;
+        }
+        .concept-title::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 60%; height: 3px; background: linear-gradient(90deg, #22c55e, transparent);
+        }
+        .quote-block {
+            background-color: rgba(20, 20, 20, 0.8); border-left: 3px solid #22c55e;
+            padding: 1.5rem 2rem; border-radius: 0.25rem; color: var(--text-secondary);
+        }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--ink-black); }
+        ::-webkit-scrollbar-thumb { background: var(--ink-gray); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #22c55e; }
+        .main-title {
+            font-family: 'ZCOOL XiaoWei', serif;
+            background: linear-gradient(135deg, var(--text-primary) 0%, #22c55e 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .seal {
+            position: absolute; bottom: 2rem; right: 2rem; width: 60px; height: 60px;
+            border: 2px solid rgba(34, 197, 94, 0.6); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'ZCOOL XiaoWei', serif; font-size: 0.75rem;
+            color: rgba(34, 197, 94, 0.6); writing-mode: vertical-rl;
+        }
+        .content-wrapper { position: relative; z-index: 1; }
+        .insight-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(30, 30, 30, 0.9) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        .method-number {
+            width: 2.5rem; height: 2.5rem; border-radius: 50%;
+            background-color: #22c55e; color: black;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; flex-shrink: 0;
+        }
+        @media (max-width: 768px) { .progress-indicator, .seal { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="slides-container" id="slideContainer">
+        <div class="progress-indicator" id="progressIndicator"></div>
+
+        <!-- 封面 -->
+        <section class="slide" data-index="0">
+            <div class="content-wrapper text-center max-w-4xl">
+                <h1 class="main-title text-4xl md:text-6xl font-bold mb-6">发现需求的艺术</h1>
+                <h2 class="text-xl md:text-2xl text-gray-400 mb-8 font-light">从观察生活到创造价值</h2>
+                <div class="quote-block max-w-2xl mx-auto mb-8">
+                    <p>"需求不是被发明的，而是被发现的。真正有价值的需求，往往藏在日常生活的痛点里。"</p>
+                </div>
+                <div class="seal">格物致知</div>
+                <p class="text-gray-500 mt-16 text-sm animate-pulse">↓ 向下翻阅</p>
+            </div>
+        </section>
+
+        <!-- 什么是需求 -->
+        <section class="slide" data-index="1">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center"><span class="concept-title">什么是需求</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="mini-card">
+                        <h3 class="text-lg font-semibold text-green-400 mb-4">❌ 不是需求</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• "用户说想要一匹更快的马"</li>
+                            <li>• "客户要求加更多功能"</li>
+                            <li>• "竞品有这个我们也加上"</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card insight-card">
+                        <h3 class="text-lg font-semibold text-green-400 mb-4">✓ 真正的需求</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• "用户想去更远的地方，更快"</li>
+                            <li>• "客户需要提高效率、节省时间"</li>
+                            <li>• "用户需要更好的出行体验"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mini-card text-center">
+                    <p class="text-gray-300"><strong class="text-green-400">关键洞察：</strong>需求是<strong class="text-green-400">问题背后的问题</strong>，是<strong class="text-green-400">目标而非手段</strong>。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 需求发现框架 -->
+        <section class="slide" data-index="2">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center"><span class="concept-title">需求发现框架</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="mini-card text-center">
+                        <div class="text-4xl mb-4">🔍</div>
+                        <h3 class="text-lg font-semibold mb-3">观察</h3>
+                        <p class="text-sm text-gray-400">深入一线，观察用户真实行为而非口头表述</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-4xl mb-4">❓</div>
+                        <h3 class="text-lg font-semibold mb-3">追问</h3>
+                        <p class="text-sm text-gray-400">5个为什么，连续追问挖掘根本原因</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-4xl mb-4">💡</div>
+                        <h3 class="text-lg font-semibold mb-3">验证</h3>
+                        <p class="text-sm text-gray-400">小规模测试，快速迭代验证假设</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方法一：痛点驱动 -->
+        <section class="slide" data-index="3">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+                    <span class="method-number">1</span>
+                    <span class="ml-4"><span class="concept-title">痛点驱动法</span></span>
+                </h2>
+                <div class="mini-card mb-6">
+                    <p class="text-gray-300 mb-4"><strong class="text-green-400">核心思想：</strong>当一个人反复抱怨某件事，这背后往往藏着一个未被满足的需求。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div class="text-sm text-gray-400">
+                            <p class="font-semibold text-green-400 mb-2">观察信号：</p>
+                            <p>• "总是忘记..." "经常搞错..."</p>
+                            <p>• "太麻烦了..." "又要重新..."</p>
+                            <p>• "能不能有个..." "要是能..."</p>
+                        </div>
+                        <div class="text-sm text-gray-400">
+                            <p class="font-semibold text-green-400 mb-2">行动指南：</p>
+                            <p>• 记录高频抱怨点</p>
+                            <p>• 分析抱怨背后的诉求</p>
+                            <p>• 设计最小解决方案</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p><strong class="text-green-400">福特说：</strong>"如果我问用户想要什么，他们会说一匹更快的马。" 但如果你观察他们，你会发现他们需要的是<strong class="text-green-400">更快的到达</strong>。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方法二：角色代入 -->
+        <section class="slide" data-index="4">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+                    <span class="method-number">2</span>
+                    <span class="ml-4"><span class="concept-title">角色代入法</span></span>
+                </h2>
+                <div class="mini-card mb-6">
+                    <p class="text-gray-300 mb-4"><strong class="text-green-400">核心思想：</strong>把自己代入用户的角色，体验他们的工作流程，发现那些"习以为常"的不便。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <p class="text-sm font-semibold text-green-400 mb-2">Step 1: 拆解任务</p>
+                            <p class="text-xs text-gray-500">把用户任务分解为最小步骤</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-green-400 mb-2">Step 2: 亲身体验</p>
+                            <p class="text-xs text-gray-500">实际走一遍完整流程</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-green-400 mb-2">Step 3: 记录卡点</p>
+                            <p class="text-xs text-gray-500">标注每个不顺畅的环节</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-card insight-card">
+                    <p class="text-sm text-gray-300"><strong class="text-green-400">💡 洞察：</strong>用户往往习惯了现有的工作方式，不会主动抱怨。但作为旁观者，你能发现那些"房间里的大象"。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方法三：数据挖掘 -->
+        <section class="slide" data-index="5">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+                    <span class="method-number">3</span>
+                    <span class="ml-4"><span class="concept-title">数据挖掘法</span></span>
+                </h2>
+                <div class="mini-card mb-6">
+                    <p class="text-gray-300 mb-4"><strong class="text-green-400">核心思想：</strong>数据不会说谎。通过分析用户行为数据，发现隐性需求。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm font-semibold text-green-400 mb-2">定量分析</p>
+                            <ul class="text-xs text-gray-500 space-y-1">
+                                <li>• 用户停留在哪些页面最久？</li>
+                                <li>• 哪些功能使用率最低？</li>
+                                <li>• 用户的平均操作路径是什么？</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-green-400 mb-2">定性洞察</p>
+                            <ul class="text-xs text-gray-500 space-y-1">
+                                <li>• 用户为什么放弃？</li>
+                                <li>• 搜索但未找到的内容是什么？</li>
+                                <li>• 高频反馈集中在哪些方面？</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p>"数据的价值不在于数字本身，而在于它揭示的行为模式。"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方法四：跨界借鉴 -->
+        <section class="slide" data-index="6">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+                    <span class="method-number">4</span>
+                    <span class="ml-4"><span class="concept-title">跨界借鉴法</span></span>
+                </h2>
+                <div class="mini-card mb-6">
+                    <p class="text-gray-300 mb-4"><strong class="text-green-400">核心思想：</strong>很多行业的解决方案可以迁移到其他领域。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="mini-card">
+                            <p class="text-sm font-semibold text-green-400 mb-2">航空业 → 软件</p>
+                            <p class="text-xs text-gray-400">航空业的安全检查清单，被 DevOps 借鉴为检查清单文化</p>
+                        </div>
+                        <div class="mini-card">
+                            <p class="text-sm font-semibold text-green-400 mb-2">餐饮业 → SaaS</p>
+                            <p class="text-xs text-gray-400">餐饮的"翻台率"思维，启发订阅服务的用户留存设计</p>
+                        </div>
+                        <div class="mini-card">
+                            <p class="text-sm font-semibold text-green-400 mb-2">游戏 → 教育</p>
+                            <p class="text-xs text-gray-400">游戏化设计（积分、徽章、排行榜）提升学习动力</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-card text-center">
+                    <p class="text-gray-300"><strong class="text-green-400">思维练习：</strong>当你遇到一个问题时，问自己："<strong class="text-green-400">其他领域是怎么解决类似问题的？</strong>"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 实践清单 -->
+        <section class="slide" data-index="7">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center"><span class="concept-title">实践清单</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-green-400 mb-3">📅 日常习惯</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>☐ 每天记录 3 个"不方便"的瞬间</li>
+                            <li>☐ 每周选择一个场景进行角色代入</li>
+                            <li>☐ 每月分析一次用户反馈数据</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-green-400 mb-3">🧠 思维训练</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>☐ 遇到问题时，连问 5 个为什么</li>
+                            <li>☐ 看到一个产品，想象它的目标用户</li>
+                            <li>☐ 定期阅读不同行业的解决方案</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 总结 -->
+        <section class="slide" data-index="8">
+            <div class="content-wrapper max-w-4xl w-full text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8"><span class="concept-title">总结</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-green-400 mb-2">🔍 观察者心态</h3>
+                        <p class="text-sm text-gray-400">保持好奇，练习从细节中发现机会</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-green-400 mb-2">❓ 追问勇气</h3>
+                        <p class="text-sm text-gray-400">不满足于表面，深入挖掘根本需求</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-green-400 mb-2">🔄 迭代验证</h3>
+                        <p class="text-sm text-gray-400">小步快跑，用实践检验假设</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-green-400 mb-2">📚 跨界思维</h3>
+                        <p class="text-sm text-gray-400">开放心态，借鉴其他领域的智慧</p>
+                    </div>
+                </div>
+                <div class="quote-block mb-8">
+                    <p>"需求发现是一种可以练习的能力。观察得越多，问得越深，机会就越清晰。"</p>
+                </div>
+                <div class="text-gray-400 text-lg italic">
+                    "世事洞明皆学问，人情练达即文章。"<br>
+                    <span class="text-sm text-gray-500">—— 曹雪芹《红楼梦》</span>
+                </div>
+                <div class="mt-12 text-gray-500"><p>—— 完 ——</p></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const container = document.getElementById('slideContainer');
+        const dotsContainer = document.getElementById('progressIndicator');
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = 'progress-dot' + (i === 0 ? ' active' : '');
+            dot.onclick = () => scrollToSlide(i);
+            dotsContainer.appendChild(dot);
+        });
+        const dots = document.querySelectorAll('.progress-dot');
+        container.addEventListener('scroll', () => {
+            const currentIndex = Math.round(container.scrollTop / window.innerHeight);
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+        });
+        function scrollToSlide(index) { container.scrollTo({ top: index * window.innerHeight, behavior: 'smooth' }); }
+        document.addEventListener('keydown', (e) => {
+            const currentIndex = Math.round(container.scrollTop / window.innerHeight);
+            if (e.key === 'ArrowDown' || e.key === 'PageDown') { if (currentIndex < slides.length - 1) scrollToSlide(currentIndex + 1); }
+            if (e.key === 'ArrowUp' || e.key === 'PageUp') { if (currentIndex > 0) scrollToSlide(currentIndex - 1); }
+        });
+    </script>
+</body>
+</html>

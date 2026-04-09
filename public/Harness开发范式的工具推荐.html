@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harness开发范式的工具推荐</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700;900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink-black: #0f0f0f;
+            --paper-dark: #121212;
+            --rice-paper: #1a1a1a;
+            --cinnabar: #b91c1c;
+            --cinnabar-light: #ef4444;
+            --gold: #d4af37;
+            --jade-green: #166534;
+            --jade-light: #22c55e;
+            --ceramic: #e7e5e4;
+            --ink-gray: #27272a;
+            --text-primary: #f5f5f4;
+            --text-secondary: #a8a29e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--ink-black);
+            color: var(--text-primary);
+            font-family: 'Noto Serif SC', serif;
+            line-height: 1.8;
+        }
+
+        .slide {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+            scroll-snap-align: start;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 0.8s ease forwards;
+            animation-timeline: view();
+            animation-range: entry 10% cover 30%;
+        }
+
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slides-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        .progress-indicator {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .progress-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--ink-gray);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .progress-dot.active {
+            background-color: var(--cinnabar);
+            transform: scale(1.8);
+        }
+
+        .mini-card {
+            background-color: rgba(30, 30, 30, 0.9);
+            border: 1px solid var(--ink-gray);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .mini-card:hover {
+            border-color: var(--cinnabar);
+            transform: translateY(-2px);
+        }
+
+        .tool-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--cinnabar);
+            color: white;
+            font-size: 0.75rem;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+        }
+
+        .quote-block {
+            background-color: rgba(20, 20, 20, 0.8);
+            border-left: 3px solid var(--gold);
+            padding: 1.5rem 2rem;
+            border-radius: 0.25rem;
+            color: var(--text-secondary);
+        }
+
+        .concept-title {
+            font-family: 'ZCOOL XiaoWei', serif;
+            position: relative;
+            display: inline-block;
+        }
+
+        .concept-title::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--cinnabar), transparent);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--ink-black); }
+        ::-webkit-scrollbar-thumb { background: var(--ink-gray); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--cinnabar); }
+
+        .main-title {
+            font-family: 'ZCOOL XiaoWei', serif;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .seal {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(212, 175, 55, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'ZCOOL XiaoWei', serif;
+            font-size: 0.75rem;
+            color: rgba(212, 175, 55, 0.6);
+            writing-mode: vertical-rl;
+        }
+
+        .content-wrapper { position: relative; z-index: 1; }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        @media (max-width: 768px) {
+            .progress-indicator { display: none; }
+            .slide { padding: 2rem 1rem; }
+            .seal { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="slides-container" id="slideContainer">
+        <div class="progress-indicator" id="progressIndicator"></div>
+
+        <!-- 封面 -->
+        <section class="slide" data-index="0">
+            <div class="content-wrapper text-center max-w-4xl">
+                <h1 class="main-title text-4xl md:text-6xl font-bold mb-6">Harness 开发范式</h1>
+                <h2 class="text-xl md:text-2xl text-gray-400 mb-8 font-light">工具推荐与实践指南</h2>
+                <div class="text-gray-500 text-sm mt-8">ZHANG HAO · TOOLSHED</div>
+                <div class="seal">工善其事</div>
+                <p class="text-gray-500 mt-16 text-sm animate-pulse">↓ 向下翻阅</p>
+            </div>
+        </section>
+
+        <!-- 什么是 Harness -->
+        <section class="slide" data-index="1">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">
+                    <span class="concept-title">什么是 Harness</span>
+                </h2>
+                <div class="quote-block mb-8">
+                    <p class="mb-4">Harness（挽具/驾驭）是一种 <strong class="text-red-400">「借助工具放大个人能力」</strong> 的开发思维方式。</p>
+                    <p>不是重复造轮子，而是善用现有工具链，让开发效率指数级提升。</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="mini-card text-center">
+                        <div class="text-3xl mb-3">⚡</div>
+                        <h3 class="text-lg font-semibold text-red-400 mb-2">效率倍增</h3>
+                        <p class="text-sm text-gray-400">自动化重复任务，聚焦核心价值</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-3xl mb-3">🔗</div>
+                        <h3 class="text-lg font-semibold text-red-400 mb-2">串联工作流</h3>
+                        <p class="text-sm text-gray-400">工具间无缝衔接，减少上下文切换</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-3xl mb-3">🧠</div>
+                        <h3 class="text-lg font-semibold text-red-400 mb-2">认知卸载</h3>
+                        <p class="text-sm text-gray-400">把记忆交给工具，大脑专注思考</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI 助手类 -->
+        <section class="slide" data-index="2">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+                    <span class="concept-title">AI 助手</span>
+                    <span class="ml-3 text-lg text-gray-500 font-light">Coding Copilot</span>
+                </h2>
+                <div class="tool-grid">
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">必装</span>
+                            <h3 class="text-lg font-semibold">WorkBuddy</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">我的主力 AI 助手，支持多技能、工作记忆、任务管理。深度集成开发工作流。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ 多Agent协作</li>
+                            <li>✓ 跨会话记忆</li>
+                            <li>✓ 自动化任务</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">代码</span>
+                            <h3 class="text-lg font-semibold">GitHub Copilot</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">IDE 内实时代码补全，理解上下文，预测下一步。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ 实时补全</li>
+                            <li>✓ 多语言支持</li>
+                            <li>✓ 函数生成</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">搜索</span>
+                            <h3 class="text-lg font-semibold">Perplexity</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">AI 驱动的搜索引擎，带来源追溯和深度解读。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ 实时信息</li>
+                            <li>✓ 引用来源</li>
+                            <li>✓ 追问扩展</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 开发工具类 -->
+        <section class="slide" data-index="3">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+                    <span class="concept-title">开发工具</span>
+                    <span class="ml-3 text-lg text-gray-500 font-light">Dev Toolkit</span>
+                </h2>
+                <div class="tool-grid">
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">IDE</span>
+                            <h3 class="text-lg font-semibold">VS Code</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">最流行的代码编辑器，插件生态丰富。</p>
+                        <div class="text-xs text-gray-500">
+                            <p class="mb-1">必备插件：</p>
+                            <code class="text-red-400">Volar</code>
+                            <code class="text-red-400 ml-2">ESLint</code>
+                            <code class="text-red-400 ml-2">Prettier</code>
+                        </div>
+                    </div>
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">终端</span>
+                            <h3 class="text-lg font-semibold">Windows Terminal</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">现代化的 Windows 终端，支持多标签、主题配置。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ GPU 加速渲染</li>
+                            <li>✓ SSH 集成</li>
+                            <li>✓ 自定义主题</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">API</span>
+                            <h3 class="text-lg font-semibold">Postman</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">API 开发与测试的一站式平台。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ 环境变量</li>
+                            <li>✓ 集合管理</li>
+                            <li>✓ 团队协作</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">Git</span>
+                            <h3 class="text-lg font-semibold">GitHub Desktop</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">可视化的 Git 操作，降低命令行门槛。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ 可视化 Diff</li>
+                            <li>✓ 快速切换分支</li>
+                            <li>✓ PR 整合</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 部署工具类 -->
+        <section class="slide" data-index="4">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+                    <span class="concept-title">部署与托管</span>
+                    <span class="ml-3 text-lg text-gray-500 font-light">Deployment</span>
+                </h2>
+                <div class="tool-grid">
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">CDN</span>
+                            <h3 class="text-lg font-semibold">阿里云 ESA</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">边缘安全加速，全球节点覆盖，自动 HTTPS。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ GitHub 自动部署</li>
+                            <li>✓ 边缘计算</li>
+                            <li>✓ 免费 SSL</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">Vercel</span>
+                            <h3 class="text-lg font-semibold">Vercel</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">前端部署专家，Next.js 官方支持。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ Serverless Functions</li>
+                            <li>✓ 预览部署</li>
+                            <li>✓ 自定义域名</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">容器</span>
+                            <h3 class="text-lg font-semibold">Docker</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">容器化部署，环境一致性保障。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ 镜像管理</li>
+                            <li>✓ Docker Compose</li>
+                            <li>✓ 快速扩容</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 效率工具类 -->
+        <section class="slide" data-index="5">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+                    <span class="concept-title">效率工具</span>
+                    <span class="ml-3 text-lg text-gray-500 font-light">Productivity</span>
+                </h2>
+                <div class="tool-grid">
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">笔记</span>
+                            <h3 class="text-lg font-semibold">腾讯 IMA</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">知识库管理，资料归集，智能检索。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ 多格式支持</li>
+                            <li>✓ AI 知识检索</li>
+                            <li>✓ 团队共享</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">文档</span>
+                            <h3 class="text-lg font-semibold">Notion</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">全能型笔记与协作平台。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ 数据库视图</li>
+                            <li>✓ 模板系统</li>
+                            <li>✓ API 集成</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <div class="flex items-center mb-3">
+                            <span class="tool-badge">剪藏</span>
+                            <h3 class="text-lg font-semibold">Cubox</h3>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">碎片化信息收集与深度阅读。</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>✓ 自动摘要</li>
+                            <li>✓ 高亮批注</li>
+                            <li>✓ 多端同步</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 我的工具链 -->
+        <section class="slide" data-index="6">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">
+                    <span class="concept-title">我的工具链</span>
+                </h2>
+                <div class="mini-card max-w-3xl mx-auto">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-24 text-right text-sm text-gray-500">思考层</div>
+                            <div class="flex-1 flex gap-2 flex-wrap">
+                                <span class="px-3 py-1 bg-red-900/30 text-red-400 rounded-full text-sm">WorkBuddy</span>
+                                <span class="px-3 py-1 bg-red-900/30 text-red-400 rounded-full text-sm">Notion</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-24 text-right text-sm text-gray-500">开发层</div>
+                            <div class="flex-1 flex gap-2 flex-wrap">
+                                <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-sm">VS Code</span>
+                                <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-sm">GitHub</span>
+                                <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-sm">ESA</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-24 text-right text-sm text-gray-500">沉淀层</div>
+                            <div class="flex-1 flex gap-2 flex-wrap">
+                                <span class="px-3 py-1 bg-yellow-900/30 text-yellow-400 rounded-full text-sm">IMA</span>
+                                <span class="px-3 py-1 bg-yellow-900/30 text-yellow-400 rounded-full text-sm">Cubox</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quote-block mt-8 max-w-3xl mx-auto text-center">
+                    <p class="text-gray-300">工具不在多，在于「<strong class="text-red-400">用得精、用得深</strong>」。找到适合自己工作流的组合，持续打磨，形成合力。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 总结 -->
+        <section class="slide" data-index="7">
+            <div class="content-wrapper max-w-4xl w-full text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8">
+                    <span class="concept-title">总结</span>
+                </h2>
+                <div class="quote-block text-left mb-8">
+                    <p class="mb-4 text-lg text-gray-200">Harness 的核心是：</p>
+                    <p class="text-gray-300 mb-2"><strong class="text-red-400">1.</strong> 选择合适的工具</p>
+                    <p class="text-gray-300 mb-2"><strong class="text-red-400">2.</strong> 深度整合到工作流</p>
+                    <p class="text-gray-300"><strong class="text-red-400">3.</strong> 持续迭代优化</p>
+                </div>
+                <div class="text-gray-400 text-lg italic">
+                    "君子性非异也，善假于物也。"<br>
+                    <span class="text-sm text-gray-500">——《荀子·劝学》</span>
+                </div>
+                <div class="mt-12 text-gray-500">
+                    <p>—— 完 ——</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const container = document.getElementById('slideContainer');
+        const dotsContainer = document.getElementById('progressIndicator');
+        const slides = document.querySelectorAll('.slide');
+
+        // 生成进度点
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = 'progress-dot' + (i === 0 ? ' active' : '');
+            dot.onclick = () => scrollToSlide(i);
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.progress-dot');
+
+        container.addEventListener('scroll', () => {
+            const currentIndex = Math.round(container.scrollTop / window.innerHeight);
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        });
+
+        function scrollToSlide(index) {
+            container.scrollTo({
+                top: index * window.innerHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const currentIndex = Math.round(container.scrollTop / window.innerHeight);
+            if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+                if (currentIndex < slides.length - 1) scrollToSlide(currentIndex + 1);
+            }
+            if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                if (currentIndex > 0) scrollToSlide(currentIndex - 1);
+            }
+        });
+    </script>
+</body>
+</html>

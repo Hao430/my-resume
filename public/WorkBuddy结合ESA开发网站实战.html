@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我是如何用 WorkBuddy 结合 ESA 开发本网站的</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700;900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink-black: #0f0f0f;
+            --cinnabar: #b91c1c;
+            --gold: #d4af37;
+            --ink-gray: #27272a;
+            --text-primary: #f5f5f4;
+            --text-secondary: #a8a29e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--ink-black);
+            color: var(--text-primary);
+            font-family: 'Noto Serif SC', serif;
+            line-height: 1.8;
+        }
+        .slide {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+            scroll-snap-align: start;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 0.8s ease forwards;
+            animation-timeline: view();
+            animation-range: entry 10% cover 30%;
+        }
+        @keyframes slideIn { to { opacity: 1; transform: translateY(0); } }
+        .slides-container { scroll-snap-type: y mandatory; overflow-y: scroll; height: 100vh; }
+        .progress-indicator {
+            position: fixed; right: 2rem; top: 50%; transform: translateY(-50%);
+            z-index: 100; display: flex; flex-direction: column; gap: 0.75rem;
+        }
+        .progress-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background-color: var(--ink-gray); transition: all 0.3s ease; cursor: pointer;
+        }
+        .progress-dot.active { background-color: var(--gold); transform: scale(1.8); }
+        .mini-card {
+            background-color: rgba(30, 30, 30, 0.9); border: 1px solid var(--ink-gray);
+            border-radius: 0.5rem; padding: 1.5rem; transition: all 0.3s ease;
+        }
+        .mini-card:hover { border-color: var(--gold); }
+        .code-block {
+            background-color: rgba(0, 0, 0, 0.5); border: 1px solid var(--ink-gray);
+            border-radius: 0.5rem; padding: 1rem 1.5rem;
+            font-family: 'Monaco', 'Menlo', monospace; font-size: 0.85rem; color: #10b981; overflow-x: auto;
+        }
+        .code-block .comment { color: #6b7280; }
+        .code-block .keyword { color: #f59e0b; }
+        .code-block .string { color: #10b981; }
+        .concept-title {
+            font-family: 'ZCOOL XiaoWei', serif;
+            position: relative; display: inline-block;
+        }
+        .concept-title::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 60%; height: 3px; background: linear-gradient(90deg, var(--gold), transparent);
+        }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--ink-black); }
+        ::-webkit-scrollbar-thumb { background: var(--ink-gray); border-radius: 3px; }
+        .main-title {
+            font-family: 'ZCOOL XiaoWei', serif;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--gold) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .seal {
+            position: absolute; bottom: 2rem; right: 2rem; width: 60px; height: 60px;
+            border: 2px solid rgba(212, 175, 55, 0.6); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'ZCOOL XiaoWei', serif; font-size: 0.75rem;
+            color: rgba(212, 175, 55, 0.6); writing-mode: vertical-rl;
+        }
+        .content-wrapper { position: relative; z-index: 1; }
+        @media (max-width: 768px) { .progress-indicator, .seal { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="slides-container" id="slideContainer">
+        <div class="progress-indicator" id="progressIndicator"></div>
+
+        <!-- 封面 -->
+        <section class="slide" data-index="0">
+            <div class="content-wrapper text-center max-w-4xl">
+                <h1 class="main-title text-3xl md:text-5xl font-bold mb-6">WorkBuddy + ESA</h1>
+                <h2 class="text-xl md:text-2xl text-gray-400 mb-8 font-light">AI 辅助开发简历网站实战</h2>
+                <div class="grid grid-cols-2 gap-4 max-w-md mx-auto mt-8">
+                    <div class="mini-card text-center">
+                        <div class="text-2xl mb-2">🤖</div>
+                        <p class="text-sm text-gray-400">WorkBuddy</p>
+                        <p class="text-xs text-gray-500">AI 助手</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-2xl mb-2">☁️</div>
+                        <p class="text-sm text-gray-400">ESA</p>
+                        <p class="text-xs text-gray-500">边缘部署</p>
+                    </div>
+                </div>
+                <div class="seal">知行合一</div>
+                <p class="text-gray-500 mt-16 text-sm animate-pulse">↓ 向下翻阅</p>
+            </div>
+        </section>
+
+        <!-- 项目背景 -->
+        <section class="slide" data-index="1">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center"><span class="concept-title">项目背景</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="mini-card">
+                        <h3 class="text-lg font-semibold text-yellow-400 mb-4">🎯 目标</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• 打造个人品牌入口</li>
+                            <li>• 展示技术实力和项目经验</li>
+                            <li>• 沉淀技术思考和成长记录</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-lg font-semibold text-yellow-400 mb-4">⚡ 约束</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• 零成本维护</li>
+                            <li>• 快速迭代更新</li>
+                            <li>• 极简技术栈</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mini-card mt-6 text-center">
+                    <p class="text-gray-300"><strong class="text-yellow-400">核心理念：</strong>以墨载道，以技行事。用代码书写个人品牌。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术选型 -->
+        <section class="slide" data-index="2">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center"><span class="concept-title">技术选型</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="mini-card text-center">
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h3 class="text-lg font-semibold mb-2">Vue 3 + TS</h3>
+                        <p class="text-sm text-gray-400">现代前端框架，类型安全，开发体验优秀</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h3 class="text-lg font-semibold mb-2">Vite</h3>
+                        <p class="text-sm text-gray-400">极速构建工具，热更新爽快</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-4xl mb-4">☁️</div>
+                        <h3 class="text-lg font-semibold mb-2">ESA</h3>
+                        <p class="text-sm text-gray-400">阿里云边缘加速，GitHub 触发自动部署</p>
+                    </div>
+                </div>
+                <div class="mini-card mt-6 text-center">
+                    <p class="text-gray-300"><strong class="text-yellow-400">选型原则：</strong>成熟稳定 + 社区活跃 + 学习曲线平缓</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工作流架构 -->
+        <section class="slide" data-index="3">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center"><span class="concept-title">AI + 人 工作流</span></h2>
+                <div class="space-y-4 max-w-2xl mx-auto">
+                    <div class="mini-card flex items-start gap-4">
+                        <div class="text-2xl">💭</div>
+                        <div><h3 class="font-semibold text-yellow-400">1. 需求分析</h3><p class="text-sm text-gray-400">WorkBuddy 帮助拆解需求，形成开发计划</p></div>
+                    </div>
+                    <div class="mini-card flex items-start gap-4">
+                        <div class="text-2xl">🎨</div>
+                        <div><h3 class="font-semibold text-yellow-400">2. 设计评审</h3><p class="text-sm text-gray-400">AI 生成方案，人做最终决策</p></div>
+                    </div>
+                    <div class="mini-card flex items-start gap-4">
+                        <div class="text-2xl">⌨️</div>
+                        <div><h3 class="font-semibold text-yellow-400">3. 协同开发</h3><p class="text-sm text-gray-400">AI 生成代码，人 review 和优化</p></div>
+                    </div>
+                    <div class="mini-card flex items-start gap-4">
+                        <div class="text-2xl">🔍</div>
+                        <div><h3 class="font-semibold text-yellow-400">4. 代码审查</h3><p class="text-sm text-gray-400">AI 自动审查，发现潜在问题</p></div>
+                    </div>
+                    <div class="mini-card flex items-start gap-4">
+                        <div class="text-2xl">🚀</div>
+                        <div><h3 class="font-semibold text-yellow-400">5. 自动部署</h3><p class="text-sm text-gray-400">GitHub push → ESA 自动构建部署</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESA 配置 -->
+        <section class="slide" data-index="4">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center"><span class="concept-title">ESA 配置</span></h2>
+                <div class="code-block mb-6">
+<span class="comment">// esa.jsonc</span>
+{
+  <span class="string">"installCommand"</span>: <span class="string">"npm install"</span>,
+  <span class="string">"buildCommand"</span>: <span class="string">"npm run build"</span>,
+  <span class="string">"assets"</span>: { <span class="string">"directory"</span>: <span class="string">"./dist"</span> },
+  <span class="string">"notFoundStrategy"</span>: <span class="string">"singlePageApplication"</span>
+}
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-yellow-400 mb-2">🏗️ 构建流程</h3>
+                        <p class="text-xs text-gray-400">ESA 接收 push → npm install → npm run build → 部署 dist/</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-yellow-400 mb-2">🔄 SPA 路由</h3>
+                        <p class="text-xs text-gray-400">notFoundStrategy: singlePageApplication 确保前端路由正常工作</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WorkBuddy 辅助 -->
+        <section class="slide" data-index="5">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center"><span class="concept-title">WorkBuddy 辅助开发</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-yellow-400 mb-3">📋 需求挖掘与分析</h3>
+                        <p class="text-xs text-gray-400 mb-3">用 AI 分析用户需求，挖掘痛点，形成产品思路</p>
+                        <div class="text-xs text-gray-500 bg-black/30 p-2 rounded">例：分析职业教育行业的用户需求</div>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-yellow-400 mb-3">🔧 代码生成与优化</h3>
+                        <p class="text-xs text-gray-400 mb-3">AI 快速生成代码，人做架构决策和代码审查</p>
+                        <div class="text-xs text-gray-500 bg-black/30 p-2 rounded">例：生成组件、工具函数、样式系统</div>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-yellow-400 mb-3">📝 内容创作</h3>
+                        <p class="text-xs text-gray-400 mb-3">AI 辅助写作博客、演示文稿，保持内容更新</p>
+                        <div class="text-xs text-gray-500 bg-black/30 p-2 rounded">例：生成技术文章、项目复盘</div>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="text-sm font-semibold text-yellow-400 mb-3">🔍 代码审查</h3>
+                        <p class="text-xs text-gray-400 mb-3">自动扫描代码问题，给出优化建议</p>
+                        <div class="text-xs text-gray-500 bg-black/30 p-2 rounded">例：发现 6 个阻塞问题、5 个建议问题</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 效率提升 -->
+        <section class="slide" data-index="6">
+            <div class="content-wrapper max-w-5xl w-full">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center"><span class="concept-title">效率提升数据</span></h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="mini-card text-center">
+                        <div class="text-3xl font-bold text-yellow-400 mb-2">70%</div>
+                        <p class="text-xs text-gray-400">代码生成节省</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-3xl font-bold text-yellow-400 mb-2">3x</div>
+                        <p class="text-xs text-gray-400">迭代速度提升</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-3xl font-bold text-yellow-400 mb-2">0</div>
+                        <p class="text-xs text-gray-400">运维成本</p>
+                    </div>
+                    <div class="mini-card text-center">
+                        <div class="text-3xl font-bold text-yellow-400 mb-2">∞</div>
+                        <p class="text-xs text-gray-400">可持续迭代</p>
+                    </div>
+                </div>
+                <div class="mini-card max-w-2xl mx-auto text-center">
+                    <p class="text-gray-300"><strong class="text-yellow-400">关键洞察：</strong>AI 不是替代人，而是放大人的能力。核心价值在于<strong class="text-yellow-400">处理重复任务</strong>，让人专注<strong class="text-yellow-400">创造性工作</strong>。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 总结 -->
+        <section class="slide" data-index="7">
+            <div class="content-wrapper max-w-4xl w-full text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8"><span class="concept-title">总结</span></h2>
+                <div class="space-y-4 text-left mb-8">
+                    <div class="mini-card">
+                        <h3 class="font-semibold text-yellow-400 mb-2">🎯 AI 辅助开发的最佳实践</h3>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li>• 明确需求再动手，让 AI 做执行</li>
+                            <li>• 保持批判性思维，AI 建议需验证</li>
+                            <li>• 持续学习新工具，跟上技术迭代</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <h3 class="font-semibold text-yellow-400 mb-2">💡 未来展望</h3>
+                        <p class="text-sm text-gray-400">探索更多 AI + 开发的结合场景：自动化测试、智能部署监控、用户行为分析...</p>
+                    </div>
+                </div>
+                <div class="text-gray-400 text-lg italic">
+                    "善用工具者，事半功倍。"<br>
+                    <span class="text-sm text-gray-500">用 AI 驾驭复杂性，用技术创造价值</span>
+                </div>
+                <div class="mt-12 text-gray-500"><p>—— 完 ——</p></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const container = document.getElementById('slideContainer');
+        const dotsContainer = document.getElementById('progressIndicator');
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = 'progress-dot' + (i === 0 ? ' active' : '');
+            dot.onclick = () => scrollToSlide(i);
+            dotsContainer.appendChild(dot);
+        });
+        const dots = document.querySelectorAll('.progress-dot');
+        container.addEventListener('scroll', () => {
+            const currentIndex = Math.round(container.scrollTop / window.innerHeight);
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+        });
+        function scrollToSlide(index) { container.scrollTo({ top: index * window.innerHeight, behavior: 'smooth' }); }
+        document.addEventListener('keydown', (e) => {
+            const currentIndex = Math.round(container.scrollTop / window.innerHeight);
+            if (e.key === 'ArrowDown' || e.key === 'PageDown') { if (currentIndex < slides.length - 1) scrollToSlide(currentIndex + 1); }
+            if (e.key === 'ArrowUp' || e.key === 'PageUp') { if (currentIndex > 0) scrollToSlide(currentIndex - 1); }
+        });
+    </script>
+</body>
+</html>
