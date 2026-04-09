@@ -1,16 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useSlidesStore } from '@/stores/slides'
 
-// 示例演示文稿数据
-const slides = ref([
-  {
-    id: 'xin-fazhan-linian',
-    title: '新发展理念的个人视角',
-    description: '以创新、协调、绿色、开放、共享五大理念为框架，探讨个人成长与时代发展的同频共振。',
-    slides: 8,
-    date: '2026-04-09'
-  }
-])
+const slidesStore = useSlidesStore()
 </script>
 
 <template>
@@ -31,9 +22,9 @@ const slides = ref([
     <!-- Slides Grid -->
     <section class="section">
       <div class="container">
-        <div v-if="slides.length > 0" class="slides-grid">
+        <div v-if="slidesStore.slides.length > 0" class="slides-grid">
           <article
-            v-for="(slide, index) in slides"
+            v-for="(slide, index) in slidesStore.slides"
             :key="slide.id"
             class="slide-card card card--glow animate-fadeInUp"
             :class="`delay-${(index % 3) * 100}`"

@@ -27,6 +27,11 @@ const router = createRouter({
       path: '/slides',
       name: 'slides',
       component: () => import('../pages/SlidesPage.vue')
+    },
+    {
+      path: '/slides/:id',
+      name: 'slide-viewer',
+      component: () => import('../pages/SlideViewerPage.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
