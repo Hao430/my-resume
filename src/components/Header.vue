@@ -66,6 +66,7 @@ const closeMobileMenu = () => {
     <div class="container header__container">
       <!-- Logo -->
       <router-link to="/" class="header__logo" @click="closeMobileMenu">
+        <img src="/logo.svg" alt="Logo" class="header__logo-icon" width="28" height="28" />
         <span class="header__logo-text">墨</span>
         <span class="header__logo-separator">·</span>
         <span class="header__logo-name">张豪</span>
@@ -164,6 +165,15 @@ const closeMobileMenu = () => {
 
 .header__logo:hover {
   color: var(--color-vermilion);
+}
+
+.header__logo-icon {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.header__logo:hover .header__logo-icon {
+  transform: scale(1.05);
 }
 
 .header__logo-text {

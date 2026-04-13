@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="v" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#b33939"/>
+      <stop offset="100%" stop-color="#9e2a2b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" fill="none"/>
+
+  <g transform="translate(100,102)">
+    <!-- Ink drop (teardrop) -->
+    <path d="
+      M 0 -80
+      C 8 -70, 54 -18, 54 16
+      C 54 50, 32 72, 0 80
+      C -32 72, -54 50, -54 16
+      C -54 -18, -8 -70, 0 -80
+      Z
+    " fill="url(#v)"/>
+
+    <!-- H cutout in white -->
+    <g fill="#ffffff">
+      <rect x="-36" y="-26" width="10" height="48" rx="3"/>
+      <rect x="26" y="-26" width="10" height="48" rx="3"/>
+      <rect x="-36" y="-2" width="72" height="8" rx="3"/>
+    </g>
+
+    <!-- Ink splash dots -->
+    <circle cx="58" cy="56" r="4" fill="#9e2a2b" opacity="0.3"/>
+    <circle cx="64" cy="62" r="2" fill="#9e2a2b" opacity="0.15"/>
+  </g>
+</svg>
