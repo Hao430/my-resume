@@ -5,14 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
+    "build": "npm run sync-daily-briefs && run-p type-check \"build-only {@}\" --",
     "build-only": "vite build",
+    "preview": "vite preview",
     "type-check": "vue-tsc --build",
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
     "sync-resume": "node scripts/sync-resume.js",
+    "sync-daily-briefs": "node scripts/sync-daily-briefs.cjs",
     "prepare": "git config core.hooksPath githooks"
   },
   "dependencies": {

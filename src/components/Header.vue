@@ -5,11 +5,12 @@ const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 const headerRef = ref<HTMLElement | null>(null)
 
-// 路由链接（演示入口已移除，内容整合到博客的"演示"筛选中）
+// 路由链接
 const navItems = [
   { path: '/', label: '首页' },
   { path: '/about', label: '关于' },
-  { path: '/blog', label: '博客' }
+  { path: '/blog', label: '博客' },
+  { path: '/daily-brief', label: '早参' }
 ]
 
 const handleScroll = () => {

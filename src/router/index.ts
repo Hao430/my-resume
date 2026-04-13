@@ -37,6 +37,11 @@ const router = createRouter({
       path: '/read',
       name: 'blog-reader',
       component: () => import('../pages/BlogReaderPage.vue')
+    },
+    {
+      path: '/daily-brief',
+      name: 'daily-brief',
+      component: () => import('../pages/DailyBriefPage.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
