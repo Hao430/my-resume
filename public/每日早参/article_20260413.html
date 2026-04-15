@@ -1,433 +1,321 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026年4月13日 周一 今日速览</title>
-  <style>
-    /* ===== pixyll.css 核心样式内嵌 ===== */
-    :root {
-      --primary-color: #333;
-      --secondary-color: #555;
-      --light-gray: #f5f5f7;
-      --accent-color: #07c160;
-      --glass-bg: rgba(255, 255, 255, 0.88);
-      --card-bg: rgba(255, 255, 255, 0.92);
-      --shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-      --hover-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-      --transition: all 0.3s ease;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4月13日 周一 今日速览 | 一知桥</title>
+<style>
+/* ===== pixyll.css 内嵌样式 ===== */
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+@font-face {
+  font-family: 'WeChat Sans';
+  src: local('PingFang SC'), local('Microsoft YaHei'), local('Heiti SC'), sans-serif;
+  font-display: swap;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'WeChat Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--primary-color);
+  line-height: 1.8;
+  font-size: 16px;
+  padding: 20px 0;
+}
+#write {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+p {
+  color: var(--secondary-color);
+  margin-bottom: 1.2em;
+  font-size: 1.05em;
+  text-align: justify;
+  line-height: 1.8;
+}
+h1, h2, h3, h4 {
+  font-family: 'WeChat Sans', sans-serif;
+  color: var(--primary-color);
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  line-height: 1.5;
+  font-weight: 600;
+  position: relative;
+  transition: var(--transition);
+}
+h1 {
+  font-size: 1.8em;
+  color: var(--accent-color);
+  text-align: center;
+  margin-top: 0;
+  padding: 0.5em 0 0.8em;
+  border-bottom: 2px solid var(--accent-color);
+  background: linear-gradient(to right, rgba(7, 193, 96, 0.1), transparent 80%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(7, 193, 96, 0.1);
+}
+h1 span.star { color: var(--accent-color); margin: 0 0.5rem; }
+h2 {
+  font-size: 1.4em;
+  padding: 0.4em 1em;
+  border-left: 5px solid var(--accent-color);
+  margin-top: 2em;
+  background: linear-gradient(to right, rgba(7, 193, 96, 0.05), transparent 60%);
+  border-radius: 0 8px 8px 0;
+}
+h3 {
+  font-size: 1.15em;
+  color: #333;
+  padding-left: 0.8em;
+  border-left: 3px solid var(--accent-color);
+  margin-top: 1.5em;
+  font-weight: 600;
+}
+blockquote {
+  border-left: 3px solid var(--accent-color);
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  background: rgba(7, 193, 96, 0.05);
+  border-radius: 0 8px 8px 0;
+}
+blockquote p { margin-bottom: 0; color: #555; font-style: normal; }
+ul, ol { margin: 1em 0 1.5em 1.5em; padding-left: 1em; }
+li { margin: 0.6em 0; color: var(--secondary-color); }
+a { color: var(--accent-color); text-decoration: none; border-bottom: 1px solid transparent; }
+a:hover { background: rgba(7, 193, 96, 0.1); border-bottom: 1px solid var(--accent-color); }
+table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.95em; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+table th, table td { padding: 0.8em 1em; text-align: left; border-bottom: 1px solid rgba(0,0,0,0.05); }
+table th { background: rgba(7, 193, 96, 0.05); font-weight: 600; }
+table tr:last-child td { border-bottom: none; }
+strong { color: #333; font-weight: 600; }
+em { color: #666; }
 
-    @font-face {
-      font-family: 'WeChat Sans';
-      src: local('PingFang SC'), local('Microsoft YaHei'), local('Heiti SC'), sans-serif;
-      font-display: swap;
-    }
+/* ===== 封面 Banner ===== */
+.cover-banner {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2.5em;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  position: relative;
+  background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 40%, #0d5c4c 70%, #07c160 100%);
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3em 2em;
+}
+.cover-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.cover-meta {
+  font-size: 0.9em;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+  font-family: 'Lato', sans-serif;
+}
+.cover-title {
+  font-size: 2.4em;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.3;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  margin-bottom: 0.5em;
+  font-family: 'Merriweather', serif;
+}
+.cover-subtitle {
+  font-size: 1em;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 1px;
+}
+.cover-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #07c160, rgba(255,255,255,0.3));
+  border-radius: 2px;
+  margin: 1.2em auto;
+}
+.cover-dot-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 1em;
+}
+.cover-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(7,193,96,0.6);
+}
+.cover-dot.active { background: #07c160; width: 18px; border-radius: 3px; }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* ===== 分隔线 ===== */
+.section-sep {
+  text-align: center;
+  color: var(--accent-color);
+  margin: 2em 0;
+  font-size: 1.2em;
+  letter-spacing: 4px;
+}
+.section-sep::before,
+.section-sep::after {
+  content: '——';
+  color: rgba(7,193,96,0.4);
+  margin: 0 0.8em;
+}
 
-    body {
-      font-family: 'WeChat Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--light-gray);
-      background-image:
-        linear-gradient(rgba(245, 247, 245, 0.9), rgba(245, 247, 245, 0.9)),
-        url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmNWY1ZjUiIGZpbGwtb3BhY2l0eT0iMC4zIj48cGF0aCBkPSJNMzYgMzRoMnYyaC0yek0zMCAzNGgydjJoLTJ6TTI0IDM0aDJ2MmgtMnpNMTggMzRoMnYyaC0yek00MiAzNGgydjJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=');
-      color: var(--primary-color);
-      line-height: 1.8;
-      font-size: 16px;
-      padding: 20px 0 40px;
-    }
+/* ===== 公众号引导 ===== */
+.footer-block {
+  margin-top: 2.5em;
+  padding: 1.5em;
+  background: linear-gradient(135deg, rgba(7,193,96,0.08), rgba(7,193,96,0.03));
+  border-radius: 12px;
+  border: 1px solid rgba(7,193,96,0.15);
+  text-align: center;
+}
+.footer-brand {
+  font-size: 1.1em;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.footer-desc {
+  font-size: 0.9em;
+  color: var(--secondary-color);
+  line-height: 1.7;
+}
+.footer-actions {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+.footer-btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+  background: var(--accent-color);
+  color: #fff;
+  cursor: default;
+}
 
-    #write {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 60px;
-      background: var(--glass-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-    }
+/* ===== 核心总结区块 ===== */
+.summary-block {
+  background: linear-gradient(135deg, #f0f7f2, #e8f5ee);
+  border-left: 5px solid var(--accent-color);
+  border-radius: 0 12px 12px 0;
+  padding: 1.5em 1.8em;
+  margin-top: 2em;
+}
+.summary-block h3 { margin-top: 0; border: none; padding: 0; color: var(--accent-color); }
+.summary-block p { margin-bottom: 0.8em; }
+.summary-block p:last-child { margin-bottom: 0; }
 
-    p {
-      color: var(--secondary-color);
-      margin-bottom: 1.2em;
-      font-size: 1.05em;
-      text-align: justify;
-      line-height: 1.8;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'WeChat Sans', sans-serif;
-      color: var(--primary-color);
-      margin-top: 1.8em;
-      margin-bottom: 0.8em;
-      line-height: 1.5;
-      font-weight: 600;
-      position: relative;
-      transition: var(--transition);
-    }
-
-    h1 {
-      font-size: 1.8em;
-      color: var(--accent-color);
-      text-align: center;
-      margin-top: 0;
-      padding: 0.5em 1em 0.8em;
-      border-bottom: 2px solid var(--accent-color);
-      background: linear-gradient(to right, rgba(7, 193, 96, 0.1), transparent 80%);
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(7, 193, 96, 0.1);
-    }
-
-    h1:before { content: "✦"; color: var(--accent-color); margin-right: 0.5rem; }
-    h1:after  { content: "✦"; color: var(--accent-color); margin-left: 0.5rem; }
-
-    h2 {
-      font-size: 1.4em;
-      padding-left: 1em;
-      border-left: 5px solid var(--accent-color);
-      margin-top: 2em;
-      background: linear-gradient(to right, rgba(7, 193, 96, 0.05), transparent 5%);
-      padding-top: 0.3em;
-      padding-bottom: 0.3em;
-      border-radius: 0 8px 8px 0;
-    }
-
-    h2:before { content: "▶"; color: var(--accent-color); margin-right: 0.5rem; font-size: 0.8em; }
-
-    h3 {
-      font-size: 1.15em;
-      color: #333;
-      padding-left: 0.8em;
-      border-left: 3px dashed var(--accent-color);
-      margin-top: 1.8em;
-    }
-
-    ul, ol {
-      margin: 1em 0 1.5em 1.5em;
-      padding-left: 1em;
-    }
-
-    li {
-      margin: 0.6em 0;
-      color: var(--secondary-color);
-      line-height: 1.8;
-    }
-
-    blockquote {
-      border-left: 3px solid var(--accent-color);
-      padding: 1em 1.2em;
-      margin: 1.5em 0;
-      background: rgba(7, 193, 96, 0.04);
-      border-radius: 0 8px 8px 0;
-    }
-
-    blockquote p {
-      margin-bottom: 0.5em;
-      color: #555;
-    }
-
-    blockquote p:last-child { margin-bottom: 0; }
-
-    strong { color: #222; font-weight: 700; }
-
-    hr {
-      border: none;
-      border-top: 1px solid rgba(7, 193, 96, 0.2);
-      margin: 2em 0;
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      display: block;
-      margin: 2em auto;
-      box-shadow: var(--shadow);
-    }
-
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: var(--transition);
-    }
-
-    a:hover {
-      background: rgba(7, 193, 96, 0.1);
-      border-bottom: 1px solid var(--accent-color);
-    }
-
-    /* ===== 封面区域 ===== */
-    .cover-banner {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, #0d2137 0%, #0a3d2b 50%, #07c160 100%);
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2em;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cover-banner::before {
-      content: '';
-      position: absolute;
-      top: -30%;
-      right: -10%;
-      width: 280px;
-      height: 280px;
-      background: radial-gradient(circle, rgba(7,193,96,0.25) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .cover-banner::after {
-      content: '';
-      position: absolute;
-      bottom: -20%;
-      left: 5%;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .cover-date {
-      font-size: 0.9em;
-      color: rgba(255,255,255,0.65);
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      z-index: 1;
-      margin-bottom: 0.4em;
-    }
-
-    .cover-title {
-      font-size: 1.9em;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: 1px;
-      z-index: 1;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-
-    .cover-subtitle {
-      font-size: 0.85em;
-      color: rgba(255,255,255,0.55);
-      margin-top: 0.5em;
-      z-index: 1;
-      letter-spacing: 2px;
-    }
-
-    /* ===== 头部meta标签 ===== */
-    .meta-bar {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 2em;
-      padding: 0.6em 0;
-      border-bottom: 1px solid rgba(7,193,96,0.15);
-    }
-
-    .meta-tag {
-      font-size: 0.78em;
-      padding: 3px 10px;
-      border-radius: 20px;
-      background: rgba(7, 193, 96, 0.08);
-      color: var(--accent-color);
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== 单条新闻卡片 ===== */
-    .news-item {
-      background: var(--card-bg);
-      border-radius: 10px;
-      padding: 1.2em 1.4em;
-      margin: 1em 0;
-      box-shadow: var(--shadow);
-      border-left: 3px solid var(--accent-color);
-      transition: var(--transition);
-    }
-
-    .news-item:hover {
-      box-shadow: var(--hover-shadow);
-      transform: translateX(2px);
-    }
-
-    .news-item p {
-      margin-bottom: 0;
-    }
-
-    /* ===== 总结区块 ===== */
-    .summary-block {
-      background: linear-gradient(135deg, rgba(7,193,96,0.06), rgba(7,193,96,0.02));
-      border: 1px solid rgba(7,193,96,0.15);
-      border-radius: 12px;
-      padding: 1.5em 1.8em;
-      margin: 2em 0;
-    }
-
-    .summary-block h2 {
-      border-left: none;
-      background: none;
-      padding-left: 0;
-      color: var(--accent-color);
-      font-size: 1.2em;
-    }
-
-    .summary-block h2:before { content: "◎ "; }
-
-    /* ===== 底部引导 ===== */
-    .footer-guide {
-      text-align: center;
-      padding: 1.5em 0 0.5em;
-      border-top: 1px dashed rgba(7,193,96,0.25);
-      margin-top: 2em;
-    }
-
-    .footer-guide p {
-      text-align: center;
-      font-size: 0.95em;
-      color: #888;
-      margin-bottom: 0.5em;
-    }
-
-    .source-note {
-      font-size: 0.82em;
-      color: #aaa;
-      text-align: center;
-      margin-top: 1.5em;
-      padding-top: 1em;
-      border-top: 1px solid rgba(0,0,0,0.05);
-    }
-
-    @media (max-width: 768px) {
-      #write { padding: 20px 16px; margin: 0 8px; border-radius: 12px; }
-      h1 { font-size: 1.5em; }
-      h2 { font-size: 1.2em; }
-      .cover-title { font-size: 1.5em; }
-      .cover-banner { height: 160px; }
-    }
-  </style>
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+  #write { padding: 25px 15px; margin: 0 10px; border-radius: 12px; }
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.3em; }
+  .cover-title { font-size: 1.8em; }
+  .cover-banner { min-height: 180px; padding: 2em 1.5em; }
+  table { font-size: 0.85em; }
+}
+</style>
 </head>
 <body>
-  <div id="write">
 
-    <!-- 封面banner -->
-    <div class="cover-banner">
-      <div class="cover-date">2026 · 04 · 13 · Monday</div>
-      <div class="cover-title">今日速览</div>
-      <div class="cover-subtitle">信息差 · 早参 | 政策 × 产业 × 科技 × 市场</div>
-    </div>
+<div id="write">
 
-    <!-- meta标签 -->
-    <div class="meta-bar">
-      <span class="meta-tag">📋 政策速递</span>
-      <span class="meta-tag">🏢 企业要闻</span>
-      <span class="meta-tag">📊 市场观察</span>
-      <span class="meta-tag">🔍 核心总结</span>
-    </div>
-
-    <h1>2026年4月13日 周一 今日速览</h1>
-
-    <!-- ===== 政策速递 ===== -->
-    <h2>一、政策速递</h2>
-
-    <div class="news-item">
-      <p><strong>① 中央台办发布两岸交流合作十项政策措施</strong><br>
-      中央台湾工作办公室受权发布十条促进两岸交流合作政策：恢复两岸空中直航、推动福建与金门马祖"新四通"（通水通电通气通桥）、恢复上海及福建居民赴台个人游试点，并建立两岸青年双向交流机制化平台。<strong>意义：两岸经贸与人员往来有望实质性松绑，受益标的涵盖航空、旅游、消费板块。</strong>
-      <br><small style="color:#aaa">来源：金融界 2026.04.13</small></p>
-    </div>
-
-    <div class="news-item">
-      <p><strong>② 工信部推进"人工智能+质量"应用全景图</strong><br>
-      工信部明确将深化AI赋能质量提升，加快工业智能体融合应用，同步开展锂电池、光伏组件专项质量检查。<strong>影响：工业AI应用加速落地，产品质量监管趋严，龙头企业合规溢价提升。</strong>
-      <br><small style="color:#aaa">来源：36氪 2026.04.13</small></p>
-    </div>
-
-    <div class="news-item">
-      <p><strong>③ 四川"十五五"规划纲要正式发布</strong><br>
-      四川聚焦<strong>脑科学与脑机接口、6G通信、量子科技</strong>三大未来产业集群，叠加西部大开发战略，形成差异化科技产业布局。<strong>研判：中西部科技投资进入政策红利期。</strong>
-      <br><small style="color:#aaa">来源：36氪 2026.04.13</small></p>
-    </div>
-
-    <div class="news-item">
-      <p><strong>④ 创业板改革新政生效，ST股涨跌幅拟调至10%</strong><br>
-      证监会增设创业板第四套上市标准，建立IPO预先审阅机制；主板ST股涨跌幅限制拟由5%上调至10%，盘后固定价格交易扩展至全部A股及ETF。<strong>信号：资本市场制度红利持续释放，创业板估值中枢有望上移。</strong>
-      <br><small style="color:#aaa">来源：证监会/上交所 2026.04.10</small></p>
-    </div>
-
-    <!-- ===== 企业要闻 ===== -->
-    <h2>二、企业要闻</h2>
-
-    <div class="news-item">
-      <p><strong>① 宁德时代A股盘中创历史新高，市值突破2万亿</strong><br>
-      宁德时代（300750）今日盘中最高报 <strong>429元/股</strong>，A+H总市值一度突破2万亿元，超越贵州茅台。中信证券指出"AI供需缺口与出海新能源"或成新"宁组合"主线。<strong>核心逻辑：储能需求爆发+固态电池落地预期+欧洲市场扩张三重驱动。</strong>
-      <br><small style="color:#aaa">来源：财联社/华尔街见闻 2026.04.13</small></p>
-    </div>
-
-    <div class="news-item">
-      <p><strong>② 荣耀×字节跳动接洽"豆包手机"深度合作</strong><br>
-      荣耀与字节跳动接洽开发豆包深度集成智能手机。<strong>价值点：AI大模型加速渗透手机端，端侧AI竞争进入硬件+软件协同阶段，荣耀手机出货量2025年已重回国内前三。</strong>
-      <br><small style="color:#aaa">来源：蓝鲸新闻 2026.04.13</small></p>
-    </div>
-
-    <div class="news-item">
-      <p><strong>③ 智元机器人"远征A3"完成首批交付，速腾聚创获欧洲规模化订单</strong><br>
-      全尺寸人形机器人远征A3（55kg/173cm）在江苏启东完成首批客户交付，下半年推出A3 Ultra；速腾聚创Active Camera系列同日获欧洲头部人形机器人企业规模化订单，2026年内量产。<strong>信号：人形机器人从概念跨越到规模化商用关键节点到来。</strong>
-      <br><small style="color:#aaa">来源：36氪 2026.04.13</small></p>
-    </div>
-
-    <div class="news-item">
-      <p><strong>④ 港股智谱AI破千港元，阿里Qwen3.6-Plus单日调用量创全球纪录</strong><br>
-      智谱AI今日股价突破1000港元，市值超4300亿港元；阿里Qwen3.6-Plus上线OpenRouter后单日调用量突破<strong>1.4万亿Token</strong>，创全球首个万亿级模型应用纪录；Anthropic Claude Mythos Preview已向AWS、苹果等五家巨头定向开放。<strong>趋势：AI头部效应持续强化。</strong>
-      <br><small style="color:#aaa">来源：36氪/搜狐 2026.04.13</small></p>
-    </div>
-
-    <!-- ===== 市场观察 ===== -->
-    <h2>四、市场观察</h2>
-
-    <div class="news-item">
-      <p><strong>① 中东地缘风险骤升，油价突破105美元</strong><br>
-      美军宣布自4月13日起对伊朗实施海上封锁，WTI原油盘中涨至 <strong>105.44美元/桶（+8%）</strong>，黄金受美元走强压制回落。高盛警示"股市面临最终压力测试"；大摩Wilson称调整"接近尾声但最后阶段仍有阵痛"。<strong>风险：能源价格上行将向化工、航运传导；中国新能源替代逻辑进一步强化。</strong></p>
-    </div>
-
-    <div class="news-item">
-      <p><strong>② A股结构性分化：算力与机器人成资金主线</strong><br>
-      创业板午间微跌0.4%，但算力硬件（胜宏科技主力净流入超10亿元）、锂电储能（天华新能+8.36%）、半导体（利扬芯片+17.99%）、人形机器人板块逆势走强。<strong>市场热度29°震荡分化，量能萎缩，建议短期谨慎、中长期持有科技主线。</strong></p>
-    </div>
-
-    <!-- ===== 核心总结 ===== -->
-    <div class="summary-block">
-      <h2>核心总结</h2>
-      <p><strong>🔴 地缘博弈加速能源重定价</strong>：美伊对峙推动油价破百，全球避险逻辑生变，中国能源自主化（储能、光伏、氢能）战略价值进一步凸显。</p>
-      <p><strong>🟢 国内政策"组合拳"托底信心</strong>：两岸十项措施+创业板改革+工业AI+省级"十五五"规划密集落地，政策靠前发力态势清晰，资本市场制度红利持续。</p>
-      <p><strong>🔵 AI×机器人进入规模化落地期</strong>：人形机器人首批交付、AI手机合作、大模型调用量刷新纪录，产业链从"估值驱动"切换为"业绩验证"，聚焦具备量产能力的龙头标的。</p>
-      <blockquote>
-        <p>📌 <strong>机会提示</strong>：创业板新政+机器人交付+两岸通航预期，三条线索有望在未来1-2个季度形成可验证的业绩/催化事件。</p>
-        <p>⚠️ <strong>风险提示</strong>：中东局势若持续升温，油价高位将制约全球央行降息节奏，流动性预期收紧对高估值科技资产构成压力。</p>
-      </blockquote>
-    </div>
-
-    <!-- 底部引导 -->
-    <div class="footer-guide">
-      <p>👆 觉得有用请 <strong>点赞 + 在看</strong>，转发给你身边的投资人/创业者</p>
-      <p>📌 <strong>关注</strong>本号，每日信息差不落后于市场</p>
-    </div>
-
-    <p class="source-note">
-      数据来源：财联社、华尔街见闻、36氪、金融界、搜狐财经 | 2026年4月13日 午间整理<br>
-      本文仅作信息整理，不构成投资建议
-    </p>
-
+<!-- 封面 Banner -->
+<div class="cover-banner">
+  <div class="cover-meta">一知桥 · 财经科技日报</div>
+  <div class="cover-title">4月13日 &nbsp;周一<br>今日速览</div>
+  <div class="cover-divider"></div>
+  <div class="cover-subtitle">政策风向 · 企业动态 · 市场信号</div>
+  <div class="cover-dot-row">
+    <div class="cover-dot active"></div>
+    <div class="cover-dot"></div>
+    <div class="cover-dot"></div>
+    <div class="cover-dot"></div>
+    <div class="cover-dot"></div>
   </div>
+</div>
+
+<h1><span class="star">✦</span>4月13日 周一 今日速览<span class="star">✦</span></h1>
+
+<h2>一、政策速递</h2>
+
+<h3>工信部等十部门联合发布AI伦理新规</h3>
+<p>3月20日，工信部联同科技部、网信办等十部门正式发布《人工智能科技伦理审查与服务办法（试行）》，涵盖人类福祉、公平公正、可控可信、隐私保护六大维度，标志着我国AI治理框架进入系统性落地阶段。值得关注的是，4月10日再出炉《人工智能拟人化互动服务管理暂行办法》，明确对未成年人、老年人等特殊群体权益的强制保护要求，并将于<strong>7月15日正式实施</strong>。</p>
+
+<h3>创业板改革迈出关键一步，北交所交易规则四年来首次优化</h3>
+<p>证监会深化创业板改革，核心举措是增设<strong>第四套上市标准</strong>，精准对接新兴产业和未来产业领域创新创业企业成长规律，为尚未盈利但具备技术壁垒的企业打通资本化路径。北交所亦同步修订交易规则，为开市四年来首次系统性优化，引入盘后固定价格交易、完善大宗交易机制，并公开征求意见（截止4月17日）。</p>
+
+<h3>世界互联网大会亚太峰会在港开幕</h3>
+<p>今日起为期两天，香港会议展览中心汇聚全球科技与产业力量，主题聚焦"数智赋能创新发展"，核心议题涵盖智能体创新与应用、数字金融、AI安全治理，与当前A股AI主线高度共振。</p>
+
+<h2>二、企业要闻</h2>
+
+<h3>GPT-6明日重磅登场，AGI进入倒计时</h3>
+<p>OpenAI官方确认，新一代旗舰模型<strong>GPT-6</strong>将于明日（4月14日）全球同步发布，代号"Spud"，定位为"AGI最后一公里"。核心参数：<strong>5-6万亿参数</strong>（MoE架构）、<strong>200万Token上下文窗口</strong>（≈150万字）、训练投入超20亿美元，较GPT-5.4性能提升40%以上。API定价：输入$2.5/百万Token，输出$12/百万Token。</p>
+
+<h3>国产大模型连番突破，MiniMax M2.7昨夜开源</h3>
+<p>就在GPT-6发布前夜，国产AI公司MiniMax于4月12日正式开源<strong>M2.7</strong>，拥2290亿参数、推理激活约100亿，在SWE-Pro基准测试中得分56.22%，性能逼近国际顶级水准。该模型已实现对平头哥、华为昇腾、摩尔线程、天数智芯、英伟达五大主流芯片零代码修改适配。DeepSeek V4亦同步预告4月下旬发布，总参数量达1万亿，API价格预计比竞品低10-50倍。</p>
+
+<h3>海思科创纪录出海，苹果AI战略面临重构</h3>
+<p>医药企业海思科（002653）披露，与全球制药巨头艾伯维签署小分子创新药授权协议，总金额高达<strong>7.45亿美元</strong>，一季度净利润预增923%-1095%，刷新年内医药出海纪录。同日，苹果AI负责人John Giannandrea确认本周离职，Apple Intelligence商业化不及预期，苹果AI战略面临重构压力。</p>
+
+<h2>三、市场观察</h2>
+
+<h3>中东局势骤然升温，全球大类资产剧烈分化</h3>
+<p>4月12日美伊21小时马拉松谈判破裂，北京时间4月13日凌晨美军宣布封锁霍尔木兹海峡，伊朗随即向南部海岸部署海军特种部队。<strong>WTI原油开盘暴涨8.6%至105.46美元/桶</strong>，布伦特原油同步飙升7.8%；现货黄金单日大跌超2%至4665美元/盎司；美股期货集体低开超1%。映射至A股，石油开采、煤化工、油服设备板块直接受益，航空、航运、化工成本端承压。</p>
+
+<h3>创业板周涨9.5%创近四年新高，AI主线持续强化</h3>
+<p>回顾上周（4月7日-11日）A股：上证指数+2.74%至3986点，深成指+7.16%，创业板指强势<strong>+9.50%至3448.79点</strong>，近88%个股录得上涨，244股周涨幅超15%。科创AIETF月内累计上涨8.12%，国产AI板块做多情绪持续高涨。</p>
+
+<h2>四、核心总结</h2>
+
+<div class="summary-block">
+<h3>✦ 今日关键词：AI军备竞速 + 地缘冲击 + 制度红利</h3>
+<p>三条主线持续演化：<strong>政策端</strong>，十部门AI伦理新规叠加创业板注册制深化，监管框架与资本市场改革同步推进，为新质生产力企业创造制度友好环境；<strong>产业端</strong>，GPT-6明日登场、国产M2.7昨夜开源、DeepSeek V4下旬接力，全球AI军备竞赛进入白热化阶段，国产替代逻辑从芯片延伸至模型层；<strong>市场端</strong>，美伊冲突引发的原油暴涨与黄金回调形成对冲，A股AI主线免疫力较强，但需警惕地缘冲突超预期升级带来的连锁冲击。</p>
+<p><strong>短期重点关注：</strong>明日GPT-6发布会内容定价、港股科技ETF持续扩容动向、北交所改革落地节奏。</p>
+</div>
+
+<div class="footer-block">
+  <div class="footer-brand">一知桥</div>
+  <div class="footer-desc">每个工作日早晨，捕捉政策风向、洞察产业逻辑。<br>若文章有价值，欢迎点<strong>赞</strong>、点<strong>在看</strong>，转发给身边需要的伙伴。</div>
+  <div class="footer-actions">
+    <span class="footer-btn">赞</span>
+    <span class="footer-btn">在看</span>
+    <span class="footer-btn">转发</span>
+  </div>
+</div>
+
+</div>
+
 </body>
 </html>

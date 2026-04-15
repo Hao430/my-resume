@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年4月14日 周二 今日速览 | 一知桥</title>
+<style>
+/* ============ RESET & BASE ============ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --brand-blue: #0d3b6e;
+  --brand-teal: #0a5f55;
+  --glass-bg: rgba(255,255,255,0.88);
+  --card-bg: rgba(255,255,255,0.95);
+  --shadow: 0 2px 15px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 24px rgba(0,0,0,0.10);
+  --transition: all 0.3s ease;
+  --border-radius: 12px;
+}
+body {
+  font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', BlinkMacSystemFont, sans-serif;
+  background-color: #eef0ec;
+  background-image:
+    linear-gradient(rgba(238,240,236,0.92), rgba(238,240,236,0.92)),
+    url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNjY2NjY2MiIGZpbGwtb3BhY2l0eT0iMC4xNSI+PHBhdGggZD0iTTM2IDM0aDJ2MmgtMnpNMzAgMzRoMnYyaC0yek0yNCAzNGgydjJoLTJ6TTE4IDM0aDJ2MmgtMnpNNDIgMzRoMnYyaC0yeiIvPjwvZz48L2c+PC9zdmc+');
+  color: var(--primary-color);
+  line-height: 1.85;
+  font-size: 15px;
+  padding: 24px 0 40px;
+}
+
+/* ============ MAIN WRAPPER ============ */
+#write {
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+/* ============ COVER BANNER ============ */
+.cover-banner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #0d1b3e 0%, #0d3b6e 40%, #0a5f55 75%, #0d4a3a 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 40px 24px;
+}
+
+/* 网格背景 */
+.cover-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+}
+
+/* 数据流装饰 */
+.cover-banner::after {
+  content: '0 1 1 0 · DATA · 1 0 · INFO · 0 1 · SIGNAL · 1';
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.18);
+  font-family: 'Courier New', monospace;
+  pointer-events: none;
+}
+
+.banner-tag {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+.banner-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.banner-date {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.banner-divider {
+  width: 160px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(7,193,96,0.9), rgba(255,255,255,0.6), rgba(7,193,96,0.9), transparent);
+  margin: 0 auto 10px;
+  border-radius: 2px;
+}
+
+.banner-dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.banner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+}
+
+.banner-dot:nth-child(2) { background: rgba(7,193,96,0.85); width: 18px; border-radius: 3px; }
+
+/* ============ ARTICLE META ============ */
+.article-meta {
+  padding: 16px 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #888;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding-bottom: 14px;
+}
+
+.meta-brand {
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+}
+
+.meta-right { color: #aaa; }
+
+/* ============ ARTICLE BODY ============ */
+.article-body {
+  padding: 28px 50px 10px;
+}
+
+/* ============ SECTION HEADING ============ */
+h2 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(90deg, #0d3b6e, #0a5f55);
+  padding: 8px 18px;
+  border-radius: 8px;
+  margin: 32px 0 16px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent-color);
+  border-radius: 8px 0 0 8px;
+}
+
+/* ============ PARAGRAPHS & BOLD ============ */
+p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #3a3a3a;
+  margin-bottom: 6px;
+}
+
+strong {
+  color: #0d3b6e;
+  font-weight: 700;
+}
+
+/* ============ POLICY / NEWS ITEMS ============ */
+.news-item {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  border-left: 4px solid var(--accent-color);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.news-item:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  transform: translateY(-1px);
+}
+
+.news-item-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.news-item-title .num {
+  display: inline-block;
+  background: linear-gradient(135deg, #0d3b6e, #0a5f55);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-right: 6px;
+  letter-spacing: 0.5px;
+}
+
+.news-item p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #444;
+  margin: 0;
+}
+
+/* ============ DATA TAGS ============ */
+.data-tag {
+  display: inline-block;
+  background: rgba(7,193,96,0.12);
+  color: #047a40;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(7,193,96,0.25);
+  margin: 0 2px;
+}
+
+.data-tag.red {
+  background: rgba(220,53,69,0.10);
+  color: #c0392b;
+  border-color: rgba(220,53,69,0.22);
+}
+
+.data-tag.blue {
+  background: rgba(13,59,110,0.10);
+  color: #0d3b6e;
+  border-color: rgba(13,59,110,0.20);
+}
+
+/* ============ SUMMARY BOX ============ */
+.summary-box {
+  margin: 32px 0 16px;
+  background: linear-gradient(135deg, #0d1b3e 0%, #0d3b6e 50%, #0a5f55 100%);
+  border-radius: 14px;
+  padding: 24px 26px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.summary-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.summary-title::before {
+  content: '✦';
+  color: var(--accent-color);
+  font-size: 14px;
+}
+
+.summary-line {
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 8px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.summary-line::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+.summary-line strong {
+  color: #7fffd4;
+  font-weight: 700;
+}
+
+.risk-box {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+  border-left: 3px solid #f0a500;
+  font-size: 13px;
+  color: rgba(255,255,255,0.80);
+  line-height: 1.7;
+}
+
+.risk-box strong { color: #f0c060; }
+
+/* ============ FOOTER ============ */
+.article-footer {
+  margin: 28px 0 0;
+  padding: 20px 18px;
+  background: rgba(7,193,96,0.06);
+  border-radius: 10px;
+  border: 1px solid rgba(7,193,96,0.15);
+  text-align: center;
+}
+
+.article-footer p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.article-footer strong {
+  color: var(--accent-color);
+}
+
+/* ============ MARKET DATA TABLE ============ */
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13.5px;
+}
+
+.market-table th {
+  background: rgba(13,59,110,0.08);
+  color: #0d3b6e;
+  font-weight: 700;
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 2px solid rgba(13,59,110,0.15);
+}
+
+.market-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  color: #444;
+}
+
+.market-table tr:last-child td { border-bottom: none; }
+.market-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+
+.up { color: #c0392b; font-weight: 600; }
+.down { color: #27ae60; font-weight: 600; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 600px) {
+  body { padding: 0; }
+  #write { border-radius: 0; }
+  .article-body, .article-meta { padding-left: 20px; padding-right: 20px; }
+  .cover-banner { height: 180px; padding: 20px 20px 16px; }
+  .banner-title { font-size: 20px; }
+}
+</style>
+</head>
+<body>
+<div id="write">
+
+  <!-- ===== COVER BANNER ===== -->
+  <div class="cover-banner">
+    <div class="banner-tag">一知桥 · 每日速览</div>
+    <div class="banner-title">2026年4月14日 周二<br>今日速览</div>
+    <div class="banner-date">政策 · 企业 · 市场 · 信息差</div>
+    <div class="banner-divider"></div>
+    <div class="banner-dots">
+      <div class="banner-dot"></div>
+      <div class="banner-dot"></div>
+      <div class="banner-dot"></div>
+      <div class="banner-dot"></div>
+      <div class="banner-dot"></div>
+    </div>
+  </div>
+
+  <!-- ===== META ===== -->
+  <div class="article-meta">
+    <span class="meta-brand">一知桥</span>
+    <span class="meta-right">2026.04.14 &nbsp;|&nbsp; 每日信息差精读</span>
+  </div>
+
+  <!-- ===== BODY ===== -->
+  <div class="article-body">
+
+    <!-- 政策速递 -->
+    <h2>一、政策速递</h2>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">01</span>工信部部署2026年工业信息化质量工作</div>
+      <p>工信部办公厅印发通知，明确六大重点任务，重点部署<strong>组织编制重点行业"AI+质量"应用全景图和转型路线图</strong>，将AI能力深度嵌入制造业质量管理全链条，推动制造业从"人工检测"向"智能质控"转型升级，是工业AI落地政策支撑的重要一环。</p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">02</span>十部门联合印发《AI科技伦理审查办法》</div>
+      <p>工信部等十部门联合印发人工智能科技伦理审查办法，自<strong>2026年7月15日</strong>起施行，对AI伦理审查的适用范围、申请受理、专家复核及应急程序等作出系统性规定。标志着中国AI治理从倡导走向<strong>制度化、法治化</strong>，为企业AI合规落地划定清晰红线。</p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">03</span>16家科技社团联合发布全球AI治理倡议</div>
+      <p>中国自动化学会、中国电子学会、中国计算机学会等16家科技社团联合发布《全球人工智能治理科技社团倡议》，倡导"以人为本、智能向善"，明确<strong>反对技术霸权和排他性"小圈子"</strong>，呼吁AI全球治理走向多边共治，中国在全球AI规则制定中的话语权进一步提升。</p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">04</span>3月金融数据：社融5.23万亿，信贷重质轻量</div>
+      <p>中国人民银行公布：3月新增社融 <span class="data-tag">5.23万亿元</span>，一季度社融增量近 <span class="data-tag">15万亿</span>，M2同比增 <span class="data-tag">8.5%</span>；新增人民币贷款<strong>2.99万亿元</strong>，低于预期3.4万亿，创2021年来同期最低，反映信贷结构趋于审慎，货币政策重点转向"精准滴灌"而非总量扩张。</p>
+    </div>
+
+    <!-- 企业要闻 -->
+    <h2>二、企业要闻</h2>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">01</span>GPT-6今日全球发布，AGI进程再提速</div>
+      <p>OpenAI正式发布代号"Spud（土豆）"的GPT-6：<strong>5-6万亿参数</strong>、<strong>200万Token上下文</strong>，性能较GPT-5.4提升约 <span class="data-tag">40%</span>，ChatGPT×Codex×Atlas三合一全模态架构，代码与推理能力全面跃升。GPT-6被定位为"AGI最后一公里关键节点"，全球AI商业化竞争进入新高地。</p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">02</span>DeepSeek V4月底发布，首发适配华为昇腾</div>
+      <p>DeepSeek V4将于4月底正式发布，<strong>万亿参数+百万级上下文</strong>，并<strong>首次实现与华为昇腾等国产AI芯片深度适配</strong>——"去CUDA化"迈出关键一步。与此同时，英伟达中国高端芯片市场份额从95%骤降至接近0%，阿里/字节/腾讯已预订数十万片新一代国产AI算力芯片，价格上涨约 <span class="data-tag blue">20%</span>。</p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">03</span>宇树科技科创板IPO获受理，拟募资42亿</div>
+      <p>人形机器人独角兽宇树科技科创板IPO申请已获上交所正式受理，<strong>拟募资42.02亿元</strong>，有望成为A股"人形机器人第一股"。宇树机器人奔跑速度超5米/秒，可完成后空翻等高难度动作，TrendForce预测其将占国内市场约40%出货量；配套的A股科创50指数本周电子板块涨幅高达<span class="data-tag">10.87%</span>。</p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">04</span>星海图完成20亿元B+轮融资，具身智能估值创新高</div>
+      <p>具身智能企业星海图宣布完成<strong>20亿元B+轮融资</strong>，估值突破<strong>200亿元</strong>，创国内具身智能企业估值纪录。智元机器人3个月量产规模从5000台翻倍至1万台；优必选上调2026年Walker S系列出货目标至5000台；具身智能赛道资本收割期正式开启。</p>
+    </div>
+
+    <!-- 市场观察 -->
+    <h2>四、市场观察</h2>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">热点①</span>美伊局势降温，全球风险偏好快速回升</div>
+      <p>特朗普表示美伊达成"协议希望"，第二轮谈判预计16日在伊斯兰堡举行。昨日WTI原油盘中一度涨超9%站上100美元，后回吐至 <span class="data-tag">99.08美元/桶</span>（+2.6%）；黄金小幅回调至 <span class="data-tag blue">4767美元/盎司</span>；纳指<strong>九连涨</strong>，芯片指数连续四日创历史新高；<strong>离岸人民币三年来首次盘中破6.82</strong>，美元指数六连跌。</p>
+    </div>
+
+    <div class="news-item">
+      <div class="news-item-title"><span class="num">热点②</span>A股多头信号强化，创业板5年新高</div>
+      <p>A股今日延续强势，创业板指 <span class="data-tag">涨2.36%</span> 至3476点，再创近5年阶段新高；沪指重返4000点上方。算力、机器人、消费电子板块领涨，多晶硅期货涨停。同日，<strong>中国3月进出口数据与IMF《世界经济展望》同步发布</strong>，为市场后续走向提供关键宏观锚点。</p>
+    </div>
+
+    <!-- 核心总结 -->
+    <div class="summary-box">
+      <div class="summary-title">核心总结</div>
+      <div class="summary-line"><strong>政策主线：</strong>AI治理制度化加速（十部门伦理审查办法7月落地），"AI+质量"全景图绑定工业升级，中国AI监管框架成形，合规落地进入制度保障期。</div>
+      <div class="summary-line"><strong>技术主线：</strong>GPT-6今日发布（200万Token+40%性能提升），DeepSeek V4月底袭来首发适配昇腾，"去CUDA化"进入实质阶段——国产AI芯片战略价值全面重估。</div>
+      <div class="summary-line"><strong>资本主线：</strong>宇树IPO+星海图20亿融资标志具身智能进入资本收割期；A股创业板创5年新高，美伊缓和推动全球风险偏好回升，短期多头格局仍占主导。</div>
+      <div class="summary-line"><strong>机会提示：</strong>重点关注国产算力（华为昇腾/智算产业链）、人形机器人（宇树/智元）、AI工业应用三条主线。</div>
+      <div class="risk-box"><strong>风险提示：</strong>美伊4月22日停火协议到期为下一个关键节点，原油波动率高企；3月信贷低于预期，需关注后续货币政策窗口能否打开。</div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="article-footer">
+      <p>📍 <strong>一知桥</strong> · 每日信息差速览</p>
+      <p style="margin-top:6px;">🔔 <strong>关注、点赞、在看</strong>，让信息差成为你的优势</p>
+      <p style="margin-top:4px; font-size:12px; color:#aaa;">数据来源：华尔街见闻、新华财经、工信部官网、CSDN AI早报 &nbsp;|&nbsp; 2026.04.14</p>
+    </div>
+
+  </div><!-- end article-body -->
+</div><!-- end #write -->
+</body>
+</html>
