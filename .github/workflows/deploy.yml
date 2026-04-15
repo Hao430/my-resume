@@ -3,9 +3,6 @@ name: Auto Deploy
 on:
   push:
     branches: [main]
-  # 监听 public/每日早参/ 目录变化，每小时自动检查并部署最新文件
-  schedule:
-    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
