@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年4月15日 周三 今日速览 | 一知桥</title>
+<style>
+/* ============ RESET & BASE ============ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --brand-blue: #0d3b6e;
+  --brand-teal: #0a5f55;
+  --glass-bg: rgba(255,255,255,0.88);
+  --card-bg: rgba(255,255,255,0.95);
+  --shadow: 0 2px 15px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 24px rgba(0,0,0,0.10);
+  --transition: all 0.3s ease;
+  --border-radius: 12px;
+}
+body {
+  font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', BlinkMacSystemFont, sans-serif;
+  background-color: #eef0ec;
+  background-image:
+    linear-gradient(rgba(238,240,236,0.92), rgba(238,240,236,0.92)),
+    url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNjY2NjY2MiIGZpbGwtb3BhY2l0eT0iMC4xNSI+PHBhdGggZD0iTTM2IDM0aDJ2MmgtMnpNMzAgMzRoMnYyaC0yek0yNCAzNGgydjJoLTJ6TTE4IDM0aDJ2MmgtMnpNNDIgMzRoMnYyaC0yeiIvPjwvZz48L2c+PC9zdmc+');
+  color: var(--primary-color);
+  line-height: 1.85;
+  font-size: 15px;
+  padding: 24px 0 40px;
+}
+
+/* ============ MAIN WRAPPER ============ */
+#write {
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+/* ============ COVER BANNER ============ */
+.cover-banner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #0d1b3e 0%, #0d3b6e 40%, #0a5f55 75%, #0d4a3a 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 40px 24px;
+}
+
+/* 网格背景 */
+.cover-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+}
+
+/* 数据流装饰 */
+.cover-banner::after {
+  content: '0 1 1 0 · DATA · 1 0 · INFO · 0 1 · SIGNAL · 1';
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.18);
+  font-family: 'Courier New', monospace;
+  pointer-events: none;
+}
+
+.banner-tag {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+.banner-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.banner-date {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.banner-divider {
+  width: 160px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(7,193,96,0.9), rgba(255,255,255,0.6), rgba(7,193,96,0.9), transparent);
+  margin: 0 auto 10px;
+  border-radius: 2px;
+}
+
+.banner-dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.banner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+}
+
+.banner-dot:nth-child(2) { background: rgba(7,193,96,0.85); width: 18px; border-radius: 3px; }
+
+/* ============ ARTICLE META ============ */
+.article-meta {
+  padding: 16px 50px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #888;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.meta-brand {
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+}
+
+.meta-right { color: #aaa; }
+
+/* ============ CONTENT AREA ============ */
+.content {
+  padding: 24px 50px 10px;
+}
+
+p {
+  color: var(--secondary-color);
+  margin-bottom: 1.1em;
+  font-size: 1.02em;
+  line-height: 1.9;
+}
+
+/* ============ SECTION HEADINGS ============ */
+h2 {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal));
+  padding: 9px 18px;
+  border-radius: 8px;
+  margin: 28px 0 16px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--accent-color);
+  border-radius: 4px 0 0 4px;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin: 18px 0 8px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent-color);
+}
+
+/* ============ POLICY / ITEM BLOCKS ============ */
+.item-block {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.item-block:hover { box-shadow: var(--shadow-md); }
+
+.item-title {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 0.97em;
+  margin-bottom: 6px;
+}
+
+.item-body {
+  color: #666;
+  font-size: 0.93em;
+  line-height: 1.8;
+}
+
+.item-body strong {
+  color: var(--brand-blue);
+}
+
+/* ============ SUMMARY BOX ============ */
+.summary-box {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f5e9 100%);
+  border: 1px solid rgba(7,193,96,0.2);
+  border-left: 4px solid var(--accent-color);
+  border-radius: var(--border-radius);
+  padding: 20px 22px;
+  margin: 28px 0 20px;
+}
+
+.summary-title {
+  font-weight: 700;
+  color: var(--brand-blue);
+  font-size: 1em;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 0.93em;
+  color: #555;
+  line-height: 1.75;
+}
+
+.summary-dot {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  margin-top: 1px;
+}
+
+.dot-blue { background: #dbeafe; color: var(--brand-blue); }
+.dot-green { background: #d1fae5; color: #065f46; }
+.dot-yellow { background: #fef9c3; color: #92400e; }
+
+/* ============ FOOTER ============ */
+.footer {
+  text-align: center;
+  padding: 20px 40px 0;
+  font-size: 12px;
+  color: #aaa;
+  border-top: 1px dashed rgba(0,0,0,0.08);
+  margin-top: 10px;
+}
+
+.footer-cta {
+  font-size: 13px;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+strong { color: var(--primary-color); font-weight: 700; }
+em { font-style: normal; color: var(--accent-color); font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="write">
+
+  <!-- ===== COVER BANNER ===== -->
+  <div class="cover-banner">
+    <div class="banner-tag">YIZHIQIAO · DAILY BRIEF</div>
+    <div class="banner-title">2026年4月15日 周三<br>今日速览</div>
+    <div class="banner-date">政策 · 企业 · 市场 · 一知桥</div>
+    <div class="banner-divider"></div>
+    <div class="banner-dots">
+      <div class="banner-dot"></div>
+      <div class="banner-dot"></div>
+      <div class="banner-dot"></div>
+    </div>
+  </div>
+
+  <!-- ===== META ===== -->
+  <div class="article-meta">
+    <span class="meta-brand">一知桥</span>
+    <span class="meta-right">2026.04.15 · 深财经科技自媒体</span>
+  </div>
+
+  <div class="content">
+
+    <!-- ===== 一、政策速递 ===== -->
+    <h2>一、政策速递</h2>
+
+    <div class="item-block">
+      <div class="item-title">① 国新办定档4月16日发布一季度GDP数据</div>
+      <div class="item-body">
+        国务院新闻办公室宣布，将于<strong>4月16日（周四）上午10时</strong>举行发布会，由国家统计局介绍2026年一季度国民经济运行情况。结合前期高频数据，市场普遍预期一季度<strong>GDP增速约5.4%</strong>，投资、消费、外贸协同发力，为"十五五"开局奠定坚实基础。
+      </div>
+    </div>
+
+    <div class="item-block">
+      <div class="item-title">② 工信部部署"AI+质量"融合应用全景图</div>
+      <div class="item-body">
+        工信部印发《关于做好2026年工业和信息化质量工作的通知》，核心举措为编制重点行业<strong>"人工智能+质量"应用全景图和转型路线图</strong>，推动优质质量大模型、工业智能体深度融合落地，加速制造业数字化质量升级。
+      </div>
+    </div>
+
+    <div class="item-block">
+      <div class="item-title">③ 斯坦福《2026 AI指数报告》：中国AI调用量连续五周全球第一</div>
+      <div class="item-body">
+        斯坦福大学发布最新报告：中国AI大模型周调用量达<strong>12.96万亿Token</strong>，连续五周超越美国（3.03万亿），环比增长+31.48%；2010—2025年间全球AI论文增长超<strong>30倍</strong>。中国AI应用正在全速突破规模天花板。
+      </div>
+    </div>
+
+    <div class="item-block">
+      <div class="item-title">④ 上海、青岛出台AI专项行动方案</div>
+      <div class="item-body">
+        上海静安区发布<strong>《AI创新应用示范区三年行动方案（2026—2028）》</strong>，目标到2028年底形成50个以上AI示范应用项目，每年培育10个以上智能体/垂类模型标杆项目。青岛同步推出"AI+元宇宙"融合发展实施细则征求意见。
+      </div>
+    </div>
+
+    <!-- ===== 二、企业要闻 ===== -->
+    <h2>二、企业要闻</h2>
+
+    <div class="item-block">
+      <div class="item-title">① Anthropic Claude Mythos震动全球安全圈</div>
+      <div class="item-body">
+        Anthropic发布新旗舰模型<strong>Claude Mythos</strong>，仅与40余家机构合作，不向公众开放API。官方定性"强到不敢公开"——零日漏洞挖掘准确率<strong>97.6%</strong>，具备自主入侵系统能力。此消息导致<strong>美股网络安全板块单日蒸发超1000亿美元</strong>，英美监管机构紧急介入。Anthropic同日宣布<strong>4亿美元收购Coefficient Bio</strong>，首次高调进军AI+药物发现领域。
+      </div>
+    </div>
+
+    <div class="item-block">
+      <div class="item-title">② 智谱AI GLM-5.1开源登顶编程基准，纯国产芯片训练</div>
+      <div class="item-body">
+        智谱AI开源模型<strong>GLM-5.1</strong>以<strong>58.4分</strong>登顶SWE-Bench Pro编程基准，首次击败所有闭源模型。该模型<strong>完全基于华为昇腾910B芯片训练</strong>，未使用任何英伟达硬件，成为"国产AI+国产芯片"双突破的标志性节点。
+      </div>
+    </div>
+
+    <div class="item-block">
+      <div class="item-title">③ DeepSeek V4月底发布，推理速度较V3提升35倍</div>
+      <div class="item-body">
+        DeepSeek V4确认<strong>4月下旬正式发布</strong>，完全适配华为昇腾950PR芯片，推理速度较V3<strong>提升35倍</strong>，能效比提升3倍，显存占用降低40%。在美国芯片出口管制持续深化的背景下，此举标志中国顶级大模型实现<strong>硬件完全自主可控</strong>。
+      </div>
+    </div>
+
+    <div class="item-block">
+      <div class="item-title">④ 宁德时代一季度净利润207亿，同比暴增48.5%</div>
+      <div class="item-body">
+        宁德时代披露<strong>2026年一季度净利润207.38亿元</strong>，同比增长48.52%，超市场预期。储能业务高速增长与欧洲市场扩张提速构成双引擎，宁德持续巩固全球动力电池龙头地位。
+      </div>
+    </div>
+
+    <!-- ===== 四、市场观察 ===== -->
+    <h2>四、市场观察</h2>
+
+    <div class="item-block">
+      <div class="item-title">A股震荡分化，科创50创历史新高</div>
+      <div class="item-body">
+        4月15日午盘：<strong>沪指+0.37%报4041点</strong>，创业板指-0.23%报3550点，<strong>科创50逆势涨1.4%至1424点创历史新高</strong>。量子科技、超导概念、商业航天、医药板块轮番走强；锂电池、化工板块承压下行。半日成交额1.58万亿，市场保持高景气态势。美伊局势阶段性缓和，特朗普宣布"战争结束"，WTI原油自105美元高位回落，全球风险偏好温和修复。
+      </div>
+    </div>
+
+    <!-- ===== 核心总结 ===== -->
+    <div class="summary-box">
+      <div class="summary-title">📌 今日核心总结</div>
+
+      <div class="summary-item">
+        <div class="summary-dot dot-blue">策</div>
+        <div><strong>政策端</strong>：一季度GDP明日官宣，增速5.4%预期坚实；"AI+质量""AI+地方示范区"系列落地，政策红利向产业执行层加速传导。</div>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-dot dot-green">技</div>
+        <div><strong>技术端</strong>：中国AI实现"量"（Token调用全球第一）与"质"（GLM-5.1登顶、DeepSeek V4自主芯片）双突破，正在构建独立于英伟达体系的新生态。</div>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-dot dot-yellow">险</div>
+        <div><strong>风险提示</strong>：Anthropic Claude Mythos的漏洞挖掘能力触发全球监管警觉，AI安全合规成本或快速上升；A股天量后需关注量能持续性，防范高位震荡风险。</div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer">
+      <div class="footer-cta">觉得有用？点个「在看」让更多人看到 👀</div>
+      <div>欢迎关注「一知桥」· 每日为你筛选最值得看的信息差</div>
+      <div style="margin-top:6px;">数据截至 2026年4月15日 · 仅供信息参考，不构成投资建议</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
