@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年4月17日 周四 今日速览 · 一知桥</title>
+<style>
+/* ===== pixyll.css 核心样式 ===== */
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --glass-bg: rgba(255,255,255,0.88);
+  --card-bg: rgba(255,255,255,0.92);
+  --shadow: 0 2px 15px rgba(0,0,0,0.05);
+  --hover-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: #eef2f0;
+  background-image: linear-gradient(135deg, #eef2f0 0%, #e8f0ec 100%);
+  color: var(--primary-color);
+  line-height: 1.8;
+  font-size: 16px;
+  padding: 24px 0 40px;
+}
+
+#write {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 0 48px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* ===== 封面 Banner ===== */
+.cover-banner {
+  width: 100%;
+  background: linear-gradient(135deg, #0a1628 0%, #0d2137 30%, #0b3040 60%, #0a4040 100%);
+  padding: 52px 48px 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(7,193,96,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7,193,96,0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.cover-banner::after {
+  content: "";
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, rgba(7,193,96,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cover-label {
+  display: inline-block;
+  background: rgba(7,193,96,0.15);
+  border: 1px solid rgba(7,193,96,0.4);
+  color: #07c160;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.cover-title {
+  font-size: 2.1em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.cover-subtitle {
+  font-size: 1em;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+}
+
+.cover-divider {
+  height: 2px;
+  background: linear-gradient(90deg, #07c160, rgba(7,193,96,0.2), transparent);
+  margin-bottom: 20px;
+}
+
+.cover-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cover-dot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+
+.cover-dot::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: #07c160;
+  border-radius: 50%;
+}
+
+/* ===== 正文区域 ===== */
+.article-body {
+  padding: 40px 52px 0;
+}
+
+/* 导语 */
+.lead-quote {
+  background: rgba(7,193,96,0.06);
+  border-left: 4px solid #07c160;
+  padding: 14px 20px;
+  margin-bottom: 36px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95em;
+  color: #666;
+}
+
+/* h2 节标题 */
+h2 {
+  font-size: 1.25em;
+  color: #1a1a1a;
+  padding: 10px 16px 10px 18px;
+  border-left: 5px solid #07c160;
+  background: linear-gradient(to right, rgba(7,193,96,0.06), transparent 60%);
+  border-radius: 0 8px 8px 0;
+  margin: 36px 0 20px;
+}
+
+/* 条目标题 */
+h4 {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 24px 0 8px;
+  padding-left: 12px;
+  position: relative;
+}
+
+h4::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 4px; height: 16px;
+  background: #07c160;
+  border-radius: 2px;
+}
+
+p {
+  color: var(--secondary-color);
+  margin-bottom: 1.2em;
+  font-size: 1em;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+strong {
+  color: #222;
+  font-weight: 600;
+}
+
+/* 分隔线 */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(7,193,96,0.3), transparent);
+  margin: 32px 0;
+}
+
+/* 核心总结模块 */
+.summary-box {
+  background: linear-gradient(135deg, #f0faf5 0%, #eaf6f0 100%);
+  border: 1px solid rgba(7,193,96,0.25);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 36px 0;
+}
+
+.summary-box h2 {
+  background: none;
+  border: none;
+  padding: 0 0 12px;
+  margin: 0 0 16px;
+  font-size: 1.15em;
+  color: #0a7a40;
+  border-bottom: 1px dashed rgba(7,193,96,0.3);
+}
+
+.summary-box p, .summary-box li {
+  font-size: 0.96em;
+  color: #444;
+}
+
+.summary-box ol {
+  padding-left: 1.4em;
+  margin: 12px 0;
+}
+
+.summary-box li {
+  margin: 10px 0;
+  line-height: 1.7;
+}
+
+.summary-box blockquote {
+  background: rgba(7,193,96,0.06);
+  border-left: 3px solid #07c160;
+  padding: 10px 16px;
+  border-radius: 0 6px 6px 0;
+  margin: 14px 0 0;
+}
+
+.summary-box blockquote p {
+  margin-bottom: 6px;
+  font-size: 0.92em;
+}
+
+/* 结尾引导 */
+.footer-cta {
+  text-align: center;
+  padding: 28px 20px 0;
+  font-size: 0.92em;
+  color: #888;
+  border-top: 1px solid #eee;
+  margin-top: 8px;
+}
+
+.footer-cta span {
+  color: #07c160;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+<div id="write">
+
+  <!-- 封面 Banner -->
+  <div class="cover-banner">
+    <div class="cover-label">一知桥 · 信息差早参</div>
+    <div class="cover-title">2026年4月17日 周四<br>今日速览</div>
+    <div class="cover-subtitle">政策 · 企业 · 市场 · 每日精华</div>
+    <div class="cover-divider"></div>
+    <div class="cover-meta">
+      <span class="cover-dot">发改委十五五内需战略</span>
+      <span class="cover-dot">智元机器人4款新品发布</span>
+      <span class="cover-dot">创业板续刷11年新高</span>
+      <span class="cover-dot">斯坦福AI指数：中美差距消弭</span>
+    </div>
+  </div>
+
+  <!-- 正文 -->
+  <div class="article-body">
+
+    <div class="lead-quote">
+      一知桥 | 信息差·早参 | 2026.04.17 · 每个工作日为你过滤信噪比
+    </div>
+
+    <h2>一、政策速递</h2>
+
+    <h4>① 发改委官宣"十五五"扩大内需战略（4月17日）</h4>
+    <p>国新办举行"开局起步'十五五'"首场发布会，国家发改委副主任王昌林宣布将制定 <strong>2026—2030年扩大内需战略实施方案</strong>，重点推进五大任务：宏观政策组合拳、重大工程项目开工、深入实施 <strong>人工智能+行动</strong>、城乡居民增收计划、保供稳价与新能源体系建设。这是"十五五"规划落地的关键政策信号，直接牵引未来五年政府与资本投向。</p>
+
+    <h4>② 国办发〔2026〕13号：深化投资审批制度改革</h4>
+    <p>国务院办公厅发布投资审批改革意见，核心举措：对 <strong>无序竞争突出产业</strong>，经国务院同意可暂停核准备案；同步推进"一网通办"和全流程在线化，强化项目全生命周期监管。政策意图明确：优胜劣汰，疏导低质量扩张，引导资本流向高端制造与新质生产力。</p>
+
+    <h4>③ 茅台2025年业绩：营收下滑，分红350亿</h4>
+    <p>贵州茅台披露2025年全年营收 <strong>1688亿元</strong>（同比-1.21%），净利润 <strong>823亿元</strong>（同比-4.53%），拟每股派现27.99元，合计派现 <strong>350亿元</strong>，并宣布启动2026年中期分红机制。消费顶奢遭遇周期压力，但现金流充沛、股东回报意愿强烈，信号复杂。</p>
+
+    <hr>
+
+    <h2>二、企业要闻</h2>
+
+    <h4>① 智元机器人发布4款新品+4大AI模型（上海，4月17日）</h4>
+    <p>智元机器人2026合作伙伴大会召开，来自34个国家2500位伙伴参会。大会围绕 <strong>"一体三智"全栈架构</strong> 重磅发布：4款覆盖工业/商业/家庭的机器人本体新品、4个具身智能大模型、7大行业解决方案，并开放具身智能数据集。精灵G2系列已在多工厂 <strong>规模量产</strong>，公司正式冲击 <strong>百亿营收</strong> 目标。这是国内具身智能从"样品展示"进入"商业爆发"的标志性节点。</p>
+
+    <h4>② 斯坦福《2026 AI指数报告》：中美顶级模型差距基本消弭</h4>
+    <p>斯坦福大学发布年度AI指数报告显示，中国AI模型能力已与美国顶级模型 <strong>基本持平</strong>；全球AI编程工具已全面进入 <strong>Agent自主时代</strong>；阿里千问登顶全球调用榜，中国AI算力调用量持续领跑。报告将深刻影响中美科技资产估值逻辑与全球AI投资格局。</p>
+
+    <h4>③ Claude Opus 4.7 曝光，Anthropic加速全栈转型</h4>
+    <p>据The Information报道，Anthropic内部正准备 <strong>Claude Opus 4.7</strong> 及一款全新AI设计工具。Anthropic已与谷歌、博通签署 <strong>3.5 GW算力长期协议</strong>，自研芯片传闻持续发酵，年化收入300亿美元的Anthropic正从"安全实验室"加速转型为全栈AI基础设施公司。</p>
+
+    <hr>
+
+    <h2>四、市场观察</h2>
+
+    <h4>创业板续刷11年新高，油价重回上行通道</h4>
+    <p>4月17日早盘，A股指数集体走强，创业板50指数再刷11年高点，<strong>宁德时代</strong>领衔CPO+新能源赛道全面拉升，AI算力、机器人板块联动走强。外围方面，美股纳指连续12个交易日上涨续创新高，AMD单日涨超7%。<strong>WTI原油</strong>收涨至94.69美元/桶（+3.72%），布伦特逼近99美元；现货白银突破79美元/盎司，能源与贵金属同步走强，通胀预期升温值得关注。</p>
+
+    <!-- 核心总结 -->
+    <div class="summary-box">
+      <h2>核心总结</h2>
+      <p><strong>今日三条主线：</strong></p>
+      <ol>
+        <li><strong>政策主线</strong>：发改委"十五五"内需战略落地，AI+行动被明确列为核心抓手，国家意志背书AI基础设施投资；投资审批改革对无序竞争行业踩刹车，新能源等产能过剩赛道需警惕政策窗口期收窄。</li>
+        <li><strong>技术主线</strong>：智元机器人量产+大会发布标志具身智能商业化拐点到来；斯坦福报告确认中美AI能力差距收窄，国产大模型估值重构逻辑进一步夯实。</li>
+        <li><strong>市场信号</strong>：创业板与美股科技双强共振，但油价重回上行通道，需关注通胀预期对流动性宽松预期的对冲压力。</li>
+      </ol>
+      <blockquote>
+        <p><strong>机会提示</strong>：关注具身智能产业链（机器人本体/算力/数据）与"十五五"内需战略受益标的（重大工程/消费基础设施）。</p>
+        <p><strong>风险提示</strong>：原油持续走高叠加汇率波动，警惕全球流动性再次收紧。</p>
+      </blockquote>
+    </div>
+
+    <div class="footer-cta">
+      欢迎关注 <span>「一知桥」</span>，点个<span>在看</span>+<span>点赞</span>，让信息差为你所用。
+    </div>
+
+  </div><!-- /article-body -->
+</div><!-- /#write -->
+</body>
+</html>
