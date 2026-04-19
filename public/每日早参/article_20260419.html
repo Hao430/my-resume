@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年4月19日 周日 今日速览 · 一知桥</title>
+<style>
+/* ===== pixyll.css 核心样式 ===== */
+::root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --glass-bg: rgba(255,255,255,0.88);
+  --card-bg: rgba(255,255,255,0.92);
+  --shadow: 0 2px 15px rgba(0,0,0,0.05);
+  --hover-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: #eef2f0;
+  background-image: linear-gradient(135deg, #eef2f0 0%, #e8f0ec 100%);
+  color: var(--primary-color);
+  line-height: 1.8;
+  font-size: 16px;
+  padding: 24px 0 40px;
+}
+
+#write {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 0 48px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* ===== 封面 Banner ===== */
+.cover-banner {
+  width: 100%;
+  background: linear-gradient(135deg, #0a1628 0%, #0d2137 30%, #0b3040 60%, #0a4040 100%);
+  padding: 52px 48px 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(7,193,96,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7,193,96,0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.cover-banner::after {
+  content: "";
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, rgba(7,193,96,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cover-label {
+  display: inline-block;
+  background: rgba(7,193,96,0.15);
+  border: 1px solid rgba(7,193,96,0.4);
+  color: #07c160;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.cover-title {
+  font-size: 2.1em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.cover-subtitle {
+  font-size: 1em;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+}
+
+.cover-divider {
+  height: 2px;
+  background: linear-gradient(90deg, #07c160, rgba(7,193,96,0.2), transparent);
+  margin-bottom: 20px;
+}
+
+.cover-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cover-dot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+
+.cover-dot::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: #07c160;
+  border-radius: 50%;
+}
+
+/* ===== 正文区域 ===== */
+.article-body {
+  padding: 40px 52px 0;
+}
+
+.lead-quote {
+  background: rgba(7,193,96,0.06);
+  border-left: 4px solid #07c160;
+  padding: 14px 20px;
+  margin-bottom: 36px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95em;
+  color: #666;
+}
+
+h2 {
+  font-size: 1.25em;
+  color: #1a1a1a;
+  padding: 10px 16px 10px 18px;
+  border-left: 5px solid #07c160;
+  background: linear-gradient(to right, rgba(7,193,96,0.06), transparent 60%);
+  border-radius: 0 8px 8px 0;
+  margin: 36px 0 20px;
+}
+
+h4 {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 24px 0 8px;
+  padding-left: 12px;
+  position: relative;
+}
+
+h4::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 4px; height: 16px;
+  background: #07c160;
+  border-radius: 2px;
+}
+
+p {
+  color: var(--secondary-color);
+  margin-bottom: 1.2em;
+  font-size: 1em;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+strong {
+  color: #222;
+  font-weight: 600;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(7,193,96,0.3), transparent);
+  margin: 32px 0;
+}
+
+.summary-box {
+  background: linear-gradient(135deg, #f0faf5 0%, #eaf6f0 100%);
+  border: 1px solid rgba(7,193,96,0.25);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 36px 0;
+}
+
+.summary-box h2 {
+  background: none;
+  border: none;
+  padding: 0 0 12px;
+  margin: 0 0 16px;
+  font-size: 1.15em;
+  color: #0a7a40;
+  border-bottom: 1px dashed rgba(7,193,96,0.3);
+}
+
+.summary-box p, .summary-box li {
+  font-size: 0.96em;
+  color: #444;
+}
+
+.summary-box ol {
+  padding-left: 1.4em;
+  margin: 12px 0;
+}
+
+.summary-box li {
+  margin: 10px 0;
+  line-height: 1.7;
+}
+
+.summary-box blockquote {
+  background: rgba(7,193,96,0.06);
+  border-left: 3px solid #07c160;
+  padding: 10px 16px;
+  border-radius: 0 6px 6px 0;
+  margin: 14px 0 0;
+}
+
+.summary-box blockquote p {
+  margin-bottom: 6px;
+  font-size: 0.92em;
+}
+
+.footer-cta {
+  text-align: center;
+  padding: 28px 20px 0;
+  font-size: 0.92em;
+  color: #888;
+  border-top: 1px solid #eee;
+  margin-top: 8px;
+}
+
+.footer-cta span {
+  color: #07c160;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+<div id="write">
+
+  <!-- 封面 Banner -->
+  <div class="cover-banner">
+    <div class="cover-label">一知桥 · 信息差早参</div>
+    <div class="cover-title">2026年4月19日 周日<br>今日速览</div>
+    <div class="cover-subtitle">政策 · 企业 · 市场 · 每日精华</div>
+    <div class="cover-divider"></div>
+    <div class="cover-meta">
+      <span class="cover-dot">国常会部署自贸区提升战略</span>
+      <span class="cover-dot">DeepSeek首轮融资100亿美元估值</span>
+      <span class="cover-dot">OpenAI+Cerebras 200亿美元合作</span>
+      <span class="cover-dot">WTI原油暴跌12%</span>
+    </div>
+  </div>
+
+  <!-- 正文 -->
+  <div class="article-body">
+
+    <div class="lead-quote">
+      一知桥 | 信息差·早参 | 2026.04.19 · 每日为你过滤信噪比
+    </div>
+
+    <h2>一、政策速递</h2>
+
+    <h4>① 国常会部署自贸区提升战略：一区一策、制度型开放</h4>
+    <p>4月17日，李强总理主持召开国常会，听取自贸试验区建设情况汇报，要求深入实施提升战略，<strong>"一区一策"制定方案</strong>。支持上海等自贸区主动对接国际高标准经贸规则，稳步扩大规则、规制、管理、标准等制度型开放。同步审议通过《行政复议法实施条例（修订草案）》。信号明确：自贸区从"试验田"向"制度高地"升级。</p>
+
+    <h4>② 发改委明确"十五五"扩大内需路线：制定2026-2030实施方案</h4>
+    <p>4月17日国新办"十五五"主题发布会，发改委表示将制定<strong>2026-2030年扩大内需战略实施方案</strong>，推动重大工程项目落地。打好宏观政策组合拳，提前储备综合性政策措施。扩内需成为"十五五"开局核心抓手。</p>
+
+    <h4>③ 八部门联合部署打击涉税违法犯罪</h4>
+    <p>4月16日，税务总局、公安部、最高法、最高检、央行、海关总署、市场监管总局、外汇局<strong>八部门</strong>联合召开会议，部署2026年常态化打击涉税违法犯罪，信号指向税收监管趋严，企业合规成本上升。</p>
+
+    <h4>④ 3月一线城市房价环比上涨，楼市企稳信号增强</h4>
+    <p>国家统计局数据显示，3月份一线城市商品住宅销售价格<strong>环比上涨</strong>，为近期首次转正。房地产止跌回稳政策效果逐步显现，但二三线城市分化格局仍在延续。</p>
+
+    <hr>
+
+    <h2>二、企业要闻</h2>
+
+    <h4>① DeepSeek启动首轮融资：目标估值超100亿美元，资本化转型启动</h4>
+    <p>据The Information报道，DeepSeek正与投资人接触，寻求以不低于<strong>100亿美元</strong>估值融资至少3亿美元。这是该公司长期"自我供血"模式首次转向，标志中国AI大模型进入全面资本化竞争阶段。</p>
+
+    <h4>② 群核科技挂牌港交所："杭州六小龙第一股"诞生</h4>
+    <p>4月17日，群核科技（Manycore Tech）正式登陆港交所，获香港公开发售<strong>1590倍</strong>超额认购，成为"杭州六小龙"首家IPO企业，也是"全球空间智能第一股"。</p>
+
+    <h4>③ OpenAI与Cerebras签署超200亿美元芯片合作：算力自主化提速</h4>
+    <p>OpenAI与Cerebras达成三年超<strong>200亿美元</strong>战略合作，采购芯片服务器并获得认股权证，旨在降低对英伟达芯片的依赖。AI算力供应链"去单点化"加速。</p>
+
+    <h4>④ 英伟达发布Lyra 2.0：单张照片生成90米虚拟环境</h4>
+    <p>英伟达发布Lyra 2.0系统，基于单张照片可生成<strong>90米范围</strong>高连贯性虚拟环境（像素连贯性98%），较前代30米提升200%。该技术可使自动驾驶训练数据获取效率提升80%。</p>
+
+    <hr>
+
+    <h2>三、市场观察</h2>
+
+    <h4>纳指十三连阳创历史新高，WTI原油暴跌12%</h4>
+    <p>4月17日，纳指涨1.52%报24468点，标普500涨1.2%报7126点，双双历史新高。伊朗宣布有条件重开霍尔木兹海峡，WTI原油<strong>单日暴跌近12%</strong>，"风险溢价"快速出清。美联储理事沃勒警告：若中东局势导致滞胀，利率可能维持不变。美伊下一轮面对面谈判最快4月20日恢复，周末消息面仍存变数。A股周四创业板指涨1.43%报3678点续创11年新高，算力产业链十余股涨停。</p>
+
+    <hr>
+
+    <!-- 核心总结 -->
+    <div class="summary-box">
+      <h2>核心总结</h2>
+      <p><strong>今日三条主线：</strong></p>
+      <ol>
+        <li><strong>政策主线</strong>：国常会定调自贸区"制度型开放"+"一区一策"，发改委明确"十五五"扩内需路线，八部门联合打击涉税违法——政策组合拳指向"高质量开放+内需驱动+监管趋严"三线并行。</li>
+        <li><strong>企业主线</strong>：DeepSeek首轮融资标志中国大模型全面进入资本化赛道；OpenAI+Cerebras 200亿美元合作加速算力供应链重构；群核科技IPO验证空间智能赛道商业化可行性。</li>
+        <li><strong>市场信号</strong>：伊朗开放海峡引发油价闪崩12%，全球避险情绪急剧降温，但谈判脆弱性仍高；纳指十三连阳+创业板11年新高共振，科技股估值逻辑持续强化。</li>
+      </ol>
+      <blockquote>
+        <p><strong>机会提示</strong>：自贸区制度型开放受益标的（跨境支付/贸易数字化）、AI算力供应链多元化（Cerebras产业链/国产替代）、人形机器人半马催化（4月19日开赛）。</p>
+        <p><strong>风险提示</strong>：美伊4月20日谈判若破裂，油价可能报复性反弹；纳指十三连阳后短期回调压力积累。</p>
+      </blockquote>
+    </div>
+
+    <div class="footer-cta">
+      欢迎关注「<span>一知桥</span>」，点赞+在看，让信息差为你所用。
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
