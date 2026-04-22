@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026.04.22 周三 今日速览 - 一知桥</title>
+    <style>
+@include-when-export url(https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext);
+
+/* ===== 全局变量 ===== */
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  --hover-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --cover-gradient-start: #0a1628;
+  --cover-gradient-mid: #0d3a4a;
+  --cover-gradient-end: #07c160;
+}
+
+/* ===== 全局重置 ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: var(--light-gray);
+  background-image:
+    linear-gradient(rgba(245,247,245,0.92), rgba(245,247,245,0.92)),
+    url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmNWY1ZjUiIGZpbGwtb3BhY2l0eT0iMC4yOCI+PHBhdGGggZD0iTTM2IDM0aDJ2MmgtMnpNMzAgMzRoMnYyaC0yek0yNCAzNGgydjJoLTJ6TTE4IDM0aDJ2MmgtMnpNNDIgMzR6djJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=');
+  color: var(--primary-color);
+  line-height: 1.8;
+  font-size: 16px;
+  padding: 0;
+}
+
+/* ===== 封面 Banner ===== */
+.cover-banner {
+  background: linear-gradient(135deg, var(--cover-gradient-start) 0%, var(--cover-gradient-mid) 50%, #0a4a3a 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 50px 30px 45px;
+  text-align: center;
+  color: #fff;
+}
+.cover-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(7,193,96,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(0,180,220,0.08) 0%, transparent 40%);
+  pointer-events: none;
+}
+.cover-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(7,193,96,0.5), transparent);
+}
+.cover-grid {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+.cover-banner * { position: relative; z-index: 1; }
+.cover-tag {
+  display: inline-block;
+  padding: 3px 14px;
+  border: 1px solid rgba(7,193,96,0.4);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(4px);
+}
+.cover-title {
+  font-size: 1.7em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.cover-date {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+.cover-subtitle {
+  font-size: 0.82rem;
+  color: rgba(7,193,96,0.8);
+  margin-top: 14px;
+  letter-spacing: 1px;
+}
+.cover-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 22px;
+}
+.cover-dots span {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+}
+.cover-dots span.active { background: var(--accent-color); }
+
+/* ===== 主容器 ===== */
+#write {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 55px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== 段落 ===== */
+p { color: var(--secondary-color); margin-bottom: 1.2em; font-size: 1.05em; text-align: justify; line-height: 1.8; }
+strong { color: #222; font-weight: 600; }
+
+/* ===== 标题 ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  line-height: 1.5;
+  font-weight: 600;
+  transition: var(--transition);
+}
+h1 {
+  font-size: 1.75em;
+  color: var(--accent-color);
+  text-align: center;
+  margin-top: 0.3em;
+  padding: 0.5em 0 0.7em;
+  border-bottom: 2px solid var(--accent-color);
+  background: linear-gradient(to right, rgba(7,193,96,0.08), transparent 82%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(7,193,96,0.08);
+}
+h1:before { content: '\2708'; color: var(--accent-color); margin-right: 0.5rem; }
+h1:after { content: '\2708'; color: var(--accent-color); margin-left: 0.5rem; }
+h2 {
+  font-size: 1.52em;
+  padding-left: 1em;
+  border-left: 5px solid var(--accent-color);
+  margin-top: 2em;
+  background: linear-gradient(to right, rgba(7,193,96,0.05), transparent 5%);
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  border-radius: 0 8px 8px 0;
+}
+h2:before { content: '\25B6'; color: var(--accent-color); margin-right: 0.5rem; font-size: 0.8em; }
+h3 { font-size: 1.35em; padding-left: 0.8em; border-left: 3px dashed var(--accent-color); margin-top: 1.6em; }
+h3:before { content: '\25CF'; color: var(--accent-color); margin-right: 0.5rem; font-size: 0.7em; }
+
+h1:hover, h2:hover, h3:hover { transform: translateX(3px); }
+
+hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, rgba(7,193,96,0.3), transparent); margin: 2.5em 0; }
+
+/* ===== 列表 ===== */
+ul, ol { margin: 1em 0 1.5em 1.5em; padding-left: 1em; }
+li { margin: 0.6em 0; color: var(--secondary-color); }
+
+/* ===== 引用（核心总结卡片）===== */
+blockquote {
+  border-left: 4px solid var(--accent-color);
+  padding: 1.3em 1.4em;
+  margin: 1.8em 0;
+  background: linear-gradient(135deg, rgba(7,193,96,0.06), rgba(0,150,136,0.04));
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 2px 12px rgba(7,193,96,0.08);
+  position: relative;
+}
+blockquote p { color: #444; margin-bottom: 0.8em; }
+blockquote p:last-child { margin-bottom: 0; }
+blockquote strong { color: #1a6b4a; }
+
+/* ===== 表格 ===== */
+table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.93em; background: var(--card-bg); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); }
+th { background: linear-gradient(135deg, #07c160, #06a550); color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+td { padding: 9px 14px; border-bottom: 1px solid #eee; color: var(--secondary-color); }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(7,193,96,0.03); }
+
+/* ===== 链接 ===== */
+a { color: var(--accent-color); text-decoration: none; padding: 0 2px; border-bottom: 1px solid transparent; transition: var(--transition); }
+a:hover { background: rgba(7,193,96,0.1); border-bottom: 1px solid var(--accent-color); }
+
+/* ===== 图片 ===== */
+img { max-width: 100%; border-radius: 8px; display: block; margin: 2em auto; box-shadow: var(--shadow); }
+
+/* ===== 页脚 ===== */
+.footer {
+  text-align: center;
+  padding: 28px 0 20px;
+  color: #999;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(7,193,96,0.15);
+  margin-top: 2.5em;
+}
+.footer p { color: #aaa; font-size: 0.85rem; }
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+  #write { padding: 25px 20px; margin-top: 0; border-radius: 12px 12px 0 0; }
+  .cover-banner { padding: 35px 18px 32px; }
+  .cover-title { font-size: 1.4em; letter-spacing: 1px; }
+  h2 { font-size: 1.3em; }
+  body { font-size: 15px; }
+}
+    </style>
+</head>
+<body>
+
+<!-- 封面 Banner -->
+<div class="cover-banner">
+  <div class="cover-grid"></div>
+  <div class="cover-tag">INFO BRIDGE DAILY</div>
+  <div class="cover-title">2026.04.22 周三 今日速览</div>
+  <div class="cover-date">一知桥 · 深度财经科技自媒体</div>
+  <div class="cover-subtitle">政策风向 / 企业要闻 / 市场信号 / 核心判断</div>
+  <div class="cover-dots">
+    <span class="active"></span><span></span><span></span><span></span><span></span>
+  </div>
+</div>
+
+<!-- 主内容 -->
+<div id="write">
+
+<h2 id="policy">一、政策速递</h2>
+
+<p><strong>国务院印发服务业扩能提质意见，2030年目标100万亿规模</strong><br>
+国务院发布国发〔2026〕7号文件，提出到2030年服务业总规模迈上<strong>100万亿元</strong>台阶。《意见》明确深入实施"人工智能+"行动，支持采购大模型和智能体服务；加强6G技术研发、适度超前建设移动物联网、推动5G-A网络发展。同时要求加快工业软件创新突破、建设重点行业工业软件适配示范中心。这是"十五五"开局之年服务业领域的顶层设计级文件。</p>
+
+<p><strong>工信部召开制造业企业座谈会，超前布局未来产业</strong><br>
+工信部第十九次制造业企业座谈会强调抢抓"十五五"关键期，要求健全技术预见机制、有序推进未来产业先导区建设、系统布局原创性引领性技术攻关。同日工信部公布万兆光网试点情况：已在小区/工厂/园区实现部署，培育出云电脑、云游戏、AI+超高清视频监控等应用场景。</p>
+
+<p><strong>油价大幅下调，国内汽柴油每吨降555/530元</strong><br>
+4月21日24时起国内成品油价格下调，92号汽油每升约降0.44元。此次调价幅度较大，将直接降低物流运输成本和居民出行成本。</p>
+
+<p><strong>农业农村部完善生猪调控政策，推动去产能促出栏</strong><br>
+受养殖端挺价和政策收储推动，多地猪价重回10元/公斤上方，生猪期货主力合约连涨5日。行业有望在震荡中出清低效产能，重回良性轨道。</p>
+
+<h2 id="enterprise">二、企业要闻</h2>
+
+<p><strong>宁德时代双线重磅突破</strong><br>
+宁德时代超级科技日连放两大招：一是发布<strong>第三代神行超充电池</strong>，等效10C/峰值15C超充，10%-80%仅需3分44秒；二是首席科学家吴凯宣布<strong>钠离子电池已解决制造核心问题，年内大规模量产</strong>。钠电一旦量产，将显著降低储能和低端电动车成本。</p>
+
+<p><strong>苹果CEO库克9月1日卸任，转任执行董事长</strong><br>
+苹果官方宣布蒂姆·库克将于今年9月1日起卸任CEO，转任执行董事长。消息公布后苹果股价收跌2.52%。这是苹果自2011年以来首次CEO更替，市场关注继任者战略方向。</p>
+
+<p><strong>中国电信Pre6G试验网南京运行，能力达5G十倍</strong><br>
+中国电信在江苏南京建成国内首个Pre6G试验网，相关能力可达5G的10倍，已在低空巡检、具身智能、全息通信等领域开展系统性验证。6G产业化进程加速推进。</p>
+
+<p><strong>紫金矿业Q1净利暴增97.5%，量价齐升驱动</strong><br>
+紫金矿业一季度归母净利润200.79亿元（同比+97.5%），营收985亿元（同比+24.8%），主因矿产金和碳酸锂产量增加及主营金属价格上涨。</p>
+
+<p><strong>Kimi K2.6开源发布，月之暗面抛出PrfaaS架构</strong><br>
+月之暗面发布Kimi K2.6模型并开源，Agent模式复杂任务性能提升20%，上下文256k tokens。同步推出PrfaaS架构——普通以太网即可跑万亿参数模型，1T模型首字延迟降64%。亚马逊向Anthropic追加投资至累计最高330亿美元（约2249亿元）。</p>
+
+<h2 id="market">三、市场观察</h2>
+
+<p><strong>美股三大指数全线收跌，中概股承压</strong><br>
+隔夜道指跌0.59%、纳指跌0.59%、标普跌0.63%。科技股普跌：苹果-2.52%、奈飞-2.37%、特斯拉-1.55%。纳斯达克金龙中国指数跌2.60%，爱奇艺和哔哩哔哩均跌超6%。布伦特原油逼近100美元/桶关口，地缘溢价持续。A股今日预计震荡分化，创业板指昨日探底回升绿电概念活跃，券商普遍认为中长期仍有望上行。</p>
+
+<p><strong>电子特气断供催化国产替代机会</strong><br>
+受对日出口管制影响，日本近30%六氟化钨产能面临断供风险，中信证券指出三氟化氮等材料出现供应缺口，国内相关供应商有望迎来量价齐升机遇。</p>
+
+<hr/>
+
+<blockquote>
+<p><strong>核心总结</strong></p>
+<p>今日信号密集且指向明确：<strong>政策面</strong>，国务院服务业100万亿目标文件是"十五五"顶层设计，AI+、6G、工业软件三条主线清晰；<strong>产业面</strong>，宁德时代超充电池+钠电量产双重突破意味新能源产业链进入技术兑现期，Pre6G试验网标志通信基建加速；<strong>国际面</strong>，苹果CEO更迭叠加美股调整，短期风险偏好承压。</p>
+<p><strong>机会提示：</strong>① 服务业扩能提质政策直接利好AI应用、工业软件、6G通信三大方向，关注相关标的业绩落地；② 电子特气断供加速半导体材料国产替代，供需缺口带来量价齐升窗口。<strong>风险提示：</strong>美股调整传导至港股和中概股的联动效应，以及布伦特原油逼近100美元带来的输入性通胀压力。</p>
+</blockquote>
+
+<div class="footer">
+  <p>— 感谢阅读 一知桥 —</p>
+  <p>深耕信息差 | 每日早参 | 欢迎 关注 · 点赞 · 在看</p>
+</div>
+
+</div>
+
+</body>
+</html>
