@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0427 周一 今日速览 | 一知桥</title>
+<style>
+/* pixyll.css 内嵌样式 - 公众号文章版 */
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #4a4a6a;
+  --light-gray: #f0f2f8;
+  --accent-color: #07c160;
+  --accent2: #5765f2;
+  --glass-bg: rgba(255, 255, 255, 0.92);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow: 0 4px 24px rgba(26, 26, 46, 0.08);
+  --transition: all 0.3s ease;
+}
+
+@font-face {
+  font-family: 'WeChat Sans';
+  src: local('PingFang SC'), local('Microsoft YaHei'), local('Heiti SC'), sans-serif;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'WeChat Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--primary-color);
+  line-height: 1.85;
+  font-size: 16px;
+  padding: 0 0 60px 0;
+}
+
+/* ===== 封面 Banner ===== */
+.cover-banner {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 35%, #0d4f6e 70%, #0a6b5e 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 网格背景 */
+.cover-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* 装饰圆点 */
+.cover-banner::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(7, 193, 96, 0.15) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+}
+
+.cover-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.cover-date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.cover-title {
+  font-size: 2.8em;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 6px;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.cover-subtitle {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 2px;
+}
+
+.cover-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #07c160, transparent);
+  margin: 20px auto;
+}
+
+.cover-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.cover-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+}
+
+.cover-dots span:first-child {
+  background: #07c160;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ===== 主容器 ===== */
+.article-container {
+  max-width: 720px;
+  margin: -40px auto 0;
+  padding: 0 24px;
+  position: relative;
+  z-index: 3;
+}
+
+.article-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 48px 56px;
+}
+
+/* ===== 模块通用 ===== */
+.section {
+  margin-bottom: 36px;
+}
+
+.section-title {
+  font-size: 1.35em;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  border-left: 5px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title .icon {
+  font-size: 1.1em;
+}
+
+/* ===== 政策条目 ===== */
+.policy-item {
+  margin-bottom: 16px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(87, 101, 242, 0.06), rgba(7, 193, 96, 0.04));
+  border-radius: 10px;
+  border: 1px solid rgba(87, 101, 242, 0.1);
+}
+
+.policy-item strong {
+  color: #1a1a2e;
+  font-size: 1.05em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.policy-item p {
+  color: var(--secondary-color);
+  font-size: 0.95em;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===== 企业条目 ===== */
+.biz-item {
+  margin-bottom: 16px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(7, 193, 96, 0.05), rgba(87, 101, 242, 0.03));
+  border-radius: 10px;
+  border: 1px solid rgba(7, 193, 96, 0.1);
+}
+
+.biz-item strong {
+  color: #1a1a2e;
+  font-size: 1.05em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.biz-item p {
+  color: var(--secondary-color);
+  font-size: 0.95em;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===== 市场条目 ===== */
+.market-item {
+  margin-bottom: 14px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(240, 160, 50, 0.06), rgba(240, 100, 50, 0.04));
+  border-radius: 10px;
+  border: 1px solid rgba(240, 160, 50, 0.12);
+}
+
+.market-item strong {
+  color: #1a1a2e;
+  font-size: 1.02em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.market-item p {
+  color: var(--secondary-color);
+  font-size: 0.93em;
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ===== 核心总结 ===== */
+.summary-section {
+  background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 100%);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.summary-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #07c160;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 2px;
+}
+
+.summary-section p {
+  color: rgba(255,255,255,0.88);
+  font-size: 0.95em;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.summary-opportunity {
+  display: inline-block;
+  background: rgba(7, 193, 96, 0.18);
+  color: #6effb4;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.88em;
+}
+
+.summary-risk {
+  display: inline-block;
+  background: rgba(240, 100, 50, 0.18);
+  color: #ffb4a0;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.88em;
+}
+
+/* ===== 结尾 ===== */
+.article-footer {
+  text-align: center;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.article-footer p {
+  color: rgba(0,0,0,0.35);
+  font-size: 0.85em;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.article-footer .cta {
+  color: #07c160;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+/* ===== 分割线 ===== */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+  margin: 32px 0;
+}
+
+@media (max-width: 600px) {
+  .article-card { padding: 32px 24px; }
+  .cover-title { font-size: 2em; letter-spacing: 3px; }
+  .cover-banner { height: 220px; }
+  .section-title { font-size: 1.2em; }
+}
+</style>
+</head>
+<body>
+
+<!-- 封面 Banner -->
+<div class="cover-banner">
+  <div class="cover-inner">
+    <div class="cover-date">2026 &nbsp;·&nbsp; 04 &nbsp;·&nbsp; 27 &nbsp;·&nbsp; MONDAY</div>
+    <div class="cover-title">今日速览</div>
+    <div class="cover-divider"></div>
+    <div class="cover-subtitle">一知桥 · 财经科技信息差</div>
+    <div class="cover-dots">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+
+<!-- 主内容 -->
+<div class="article-container">
+  <div class="article-card">
+
+    <!-- 一、政策速递 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">📋</span>一、政策速递
+      </div>
+
+      <div class="policy-item">
+        <strong>中办国办出重拳，护航新就业群体</strong>
+        <p>两办联合印发《关于加强新就业群体服务管理的意见》，核心剑指平台算法治理——要求提高透明度，保障外卖骑手、网约车司机等群体对算法规则的知情权与选择权，同时完善社保覆盖与制度保障。此举直指"内卷式"竞争痼疾，平台经济野蛮生长阶段正式落幕，规范化发展已成主基调。</p>
+      </div>
+
+      <div class="policy-item">
+        <strong>国常会再定科技战略，强化企业创新主体地位</strong>
+        <p>会议明确支持有条件的企业深度参与国家重大科研项目，推动科技创新与产业创新深度融合。从"鼓励AI"到"买单AI"再到"深度融合AI"，政策层对科技创新的介入方式正在向纵深演进，企业端技术投入将获得更直接的制度支撑。</p>
+      </div>
+
+      <div class="policy-item">
+        <strong>证监会升级董秘监管，财务合规门槛再度抬高</strong>
+        <p>新版《上市公司董事会秘书监管规则》细化岗位职责、提高任职门槛、强化责任追究，推动董秘回归专岗专职。叠加已部署的2026年打击财务造假专项行动，监管高压态势已成A股市场常态，"壳资源"与粉饰报表空间持续收窄。</p>
+      </div>
+
+      <div class="policy-item">
+        <strong>央行MLF缩量续作，流动性管理悄然转向</strong>
+        <p>4月27日央行开展4000亿元MLF操作，6000亿到期，净回笼2000亿元——结束此前连续13个月加量续做态势。同期买断式逆回购亦净回笼4000亿元。货币宽松节奏微调信号值得高度关注，宽信用边际收敛窗口或已打开。</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 二、企业要闻 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">🏢</span>二、企业要闻
+      </div>
+
+      <div class="biz-item">
+        <strong>恒力石化大连炼化遭美SDN制裁，民营炼化出海警钟长鸣</strong>
+        <p>美国财政部将恒力石化（大连）炼化列入SDN清单，公司紧急回应称原油采购合规、已启动应对机制。这是继多家中国科技企业被列入实体清单后，首次大规模波及民营炼化领域。此事件对国内炼化出海战略、中伊能源合作的潜在外溢影响，值得持续跟踪。</p>
+      </div>
+
+      <div class="biz-item">
+        <strong>东方甄选四大主播集体出走，直播电商人效困局浮现</strong>
+        <p>明明、天权等四位核心主播因"管理层和理念变化"离职，俞敏洪公开承认公司"过度侧重制度管控、忽视人文关怀"。此次震荡折射出直播电商从流量红利向精细化运营转型期的深层矛盾——当达人经济撞上规范化管理，如何平衡效率与人文，是整个行业共同面临的命题。</p>
+      </div>
+
+      <div class="biz-item">
+        <strong>迅策科技市值破千亿港元，Token经济造富效应持续</strong>
+        <p>"Token第一股"迅策科技上市百余天市值突破1000亿港元，累涨超500%，腾讯等早期投资方浮盈超50亿港元。在大模型推理需求爆发背景下，Token计费模式已跑通商业闭环，算力基础设施层的投资逻辑持续得到市场验证。</p>
+      </div>
+
+      <div class="biz-item">
+        <strong>DeepSeek估值飙至440亿美元，国产大模型资本竞赛升级</strong>
+        <p>DeepSeek最新估值高达3000亿人民币（约440亿美元），融资目标已上调至超200亿美元，背后是资本市场对其技术落地能力的强烈看好。从1.6万亿参数、百万Token上下文的V4版本，到昇腾芯片全栈适配，DeepSeek正成为国产AI算力生态的一面旗帜。</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 三、市场观察 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">📊</span>三、市场观察
+      </div>
+
+      <div class="market-item">
+        <strong>美伊谈判破裂叠加地缘风险升温，原油暗盘直线拉升</strong>
+        <p>特朗普取消赴巴基斯坦与伊朗的和谈行程，美军继续封锁伊朗港口船只，中东局势骤然升温。原油暗盘价格直线拉升，比特币一度跳水。下周"超级央行周"与"超级财报周"接踵而至，五大央行预计按兵不动，但美股"科技七巨头"中五家将密集披露财报，业绩成色将直接决定当前涨势能否延续。</p>
+      </div>
+
+      <div class="market-item">
+        <strong>费城半导体指数18连阳，私募连续四周加仓布局成长</strong>
+        <p>费城半导体指数连续18个交易日上涨，成份股累计市值增加超2.4万亿美元，但"大空头"迈克尔·伯里已买入看跌期权做空，认为当前涨势缺乏基本面支撑。国内私募则持续乐观，股票仓位指数升至82%以上、满仓占比近67%，成长股被视为下一阶段较好布局标的。</p>
+      </div>
+    </div>
+
+    <!-- 核心总结 -->
+    <div class="summary-section">
+      <div class="summary-title">✦ 核心总结</div>
+      <p><strong style="color:#fff">政策端：</strong>监管常态化与科技创新双轨并进，流动性边际收敛信号初现，政策重心正从"宽货币"向"宽信用"边际转移。</p>
+      <p><strong style="color:#fff">产业端：</strong>AI资本竞赛白热化，DeepSeek估值飙升标志国产大模型进入"规模化落地"新阶段；实体清单扩大至炼化领域，地缘风险外溢需警惕。</p>
+      <p><strong style="color:#fff">市场端：</strong>外部地缘扰动与内部资金加仓并行，半导体板块持续强势背后暗藏回调风险。</p>
+      <p>
+        <span class="summary-opportunity">核心机会</span> AI算力基础设施（Token经济/光纤高景气）+ 政策受益方向（科技并购重组）
+      </p>
+      <p>
+        <span class="summary-risk">核心风险</span> 中东地缘风险尾部冲击 + 美股财报季业绩变脸 + MLF缩量后流动性预期收敛
+      </p>
+    </div>
+
+    <!-- 结尾 -->
+    <div class="article-footer">
+      <p>关注「一知桥」</p>
+      <p>每个工作日早8点 · 捕捉今日信息差</p>
+      <p class="cta">如果对你有帮助，欢迎点击"在看" 👇</p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
