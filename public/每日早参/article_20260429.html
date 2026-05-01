@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年4月29日 周三 今日速览 | 一知桥</title>
+<style>
+/* 微信公众号风格 CSS */
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #4a4a6a;
+  --light-gray: #f0f2f5;
+  --accent-color: #07c160;
+  --accent-blue: #4169e1;
+  --accent-orange: #ff6b35;
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+@font-face {
+  font-family: 'WeChat Sans';
+  src: local('PingFang SC'), local('Microsoft YaHei'), local('Heiti SC'), sans-serif;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'WeChat Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--primary-color);
+  line-height: 1.8;
+  font-size: 16px;
+  padding: 20px 0;
+}
+
+/* 封面Banner */
+.banner {
+  background: linear-gradient(135deg, #0f1629 0%, #1a3a5c 40%, #0d2137 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.banner-content { position: relative; z-index: 1; }
+
+.banner .date {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.banner h1 {
+  font-size: 1.9em;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: 2px;
+}
+
+.banner .subtitle {
+  font-size: 0.95em;
+  color: rgba(255,255,255,0.6);
+  margin-top: 8px;
+}
+
+.banner .tagline {
+  display: inline-block;
+  background: rgba(7, 193, 96, 0.2);
+  border: 1px solid rgba(7, 193, 96, 0.4);
+  color: #4eff9f;
+  font-size: 12px;
+  padding: 4px 16px;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+/* 主内容 */
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--glass-bg);
+  border-radius: 0 0 12px 12px;
+  box-shadow: var(--shadow);
+  padding: 30px 40px 40px;
+}
+
+/* 引言区 */
+.intro {
+  background: linear-gradient(135deg, #f8fffe, #f0f7f4);
+  border-left: 4px solid var(--accent-color);
+  padding: 16px 20px;
+  margin: 20px 0 30px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95em;
+  color: var(--secondary-color);
+}
+
+/* 板块标题 */
+.section-title {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 18px;
+  margin: 30px 0 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title.policy { background: linear-gradient(90deg, #e74c3c, #c0392b); }
+.section-title.enterprise { background: linear-gradient(90deg, #4169e1, #2850b8); }
+.section-title.market { background: linear-gradient(90deg, #f39c12, #e67e22); }
+.section-title.summary { background: linear-gradient(90deg, #1abc9c, #16a085); }
+
+/* 新闻条目 */
+.news-item {
+  margin-bottom: 22px;
+  padding: 16px 18px;
+  background: #fafbfc;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.news-item:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  border-color: #ddd;
+}
+
+.news-item h3 {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.news-item h3 .num {
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.news-item p {
+  font-size: 0.95em;
+  color: var(--secondary-color);
+  line-height: 1.75;
+  margin-bottom: 6px;
+}
+
+.news-item .significance {
+  background: linear-gradient(135deg, #fff9e6, #fff3cc);
+  border-left: 3px solid #f39c12;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9em;
+  color: #856404;
+  margin-top: 8px;
+}
+
+.news-item .significance strong { color: #d68910; }
+
+/* 核心总结 */
+.summary-box {
+  background: linear-gradient(135deg, #e8f8f5, #d1f2eb);
+  border: 1px solid #a3d9cc;
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 25px 0;
+}
+
+.summary-box h3 {
+  color: #1abc9c;
+  font-size: 1.05em;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.summary-box p {
+  font-size: 0.95em;
+  color: var(--secondary-color);
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.summary-box .risk {
+  background: #fff3cd;
+  border-left: 3px solid #ffc107;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9em;
+  color: #856404;
+  margin-top: 12px;
+}
+
+/* 风险提示 */
+.risk-box {
+  background: #fff5f5;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #721c24;
+}
+
+/* 结尾 */
+.footer {
+  text-align: center;
+  padding: 25px 0 15px;
+  border-top: 1px solid #eee;
+  margin-top: 30px;
+}
+
+.footer p {
+  color: #999;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.footer .wechat-info {
+  display: inline-block;
+  background: linear-gradient(135deg, #07c160, #06ad56);
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 25px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* 分割线 */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ddd, transparent);
+  margin: 25px 0;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .main-container { padding: 20px 20px 30px; }
+  .banner h1 { font-size: 1.5em; }
+  .section-title { font-size: 1em; padding: 8px 14px; }
+  .news-item { padding: 14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 封面Banner -->
+<div class="banner">
+  <div class="banner-content">
+    <div class="date">2026 · 04 · 29</div>
+    <h1>今日速览</h1>
+    <div class="subtitle">政策 · 企业 · 市场</div>
+    <div class="tagline">信息差创造价值</div>
+  </div>
+</div>
+
+<!-- 主内容 -->
+<div class="main-container">
+
+  <div class="intro">
+    信息差创造价值。一天十分钟，搞懂市场逻辑。
+  </div>
+
+  <!-- 政策速递 -->
+  <div class="section-title policy">一、政策速递</div>
+
+  <div class="news-item">
+    <h3><span class="num">1</span>中共中央政治局召开会议，定调下阶段经济工作</h3>
+    <p>4月28日，中共中央政治局召开会议，分析研究当前经济形势和经济工作。会议认为"我国经济起步有力，主要指标好于预期"，同时强调"经济持续稳中向好的基础还需进一步巩固"，要求"增强信心，以更大力度和更实举措抓好经济工作"。会议部署：深入挖掘内需潜力，扩大优质商品和服务供给；深入实施服务业扩能提质行动；加强水网、新型电网、算力网等"五网"规划建设。</p>
+    <div class="significance"><strong>意义：</strong>政策重心从"靠前发力"转向"更大力度"，稳增长信号明确，内需与基建为两大抓手。</div>
+  </div>
+
+  <div class="news-item">
+    <h3><span class="num">2</span>国务院力推服务业扩能提质，2030年剑指百万亿</h3>
+    <p>国务院印发《关于推进服务业扩能提质的意见》。发改委副主任沈竹林在吹风会上透露，"十五五"期间我国服务业规模还有20万亿元增长空间，2030年目标迈上100万亿元台阶。重点方向包括：消费服务（文旅、体育、养老）、生产性服务（金融、数据、知识产权）、公共服务（医疗、教育）。商务部、文化和旅游部、国家市场监管总局等五部门联合推进。</p>
+    <div class="significance"><strong>意义：</strong>服务业扩能首次升至国务院专项文件高度，消费升级与生产性服务业双重受益。</div>
+  </div>
+
+  <div class="news-item">
+    <h3><span class="num">3</span>工信部启动2026年"模数共振"行动</h3>
+    <p>工信部、国家数据局联合实施"模数共振"行动，推动AI大模型与数据资源协同互促，构建高质量训练数据集与模型开发联动机制。同日，广东人工智能应用对接大会在深圳举办，华为昇腾、腾讯智能体、晶泰科技等集中发布最新产品。</p>
+    <div class="significance"><strong>意义：</strong>数据要素与AI模型协同上升为国家战略，政务数据开放与行业数据集建设为重要方向。</div>
+  </div>
+
+  <div class="news-item">
+    <h3><span class="num">4</span>5月1日起对20个非洲建交国实施零关税</h3>
+    <p>国务院关税税则委员会宣布，5月1日起对20个非洲建交国实施零关税（特惠税率），涵盖部分能源矿产、农产品、纺织品等。这是深化中非合作论坛框架下贸易便利化的重要举措。</p>
+    <div class="significance"><strong>意义：</strong>扩大高水平对外开放，深化南南合作，同时保障关键资源进口多元化。</div>
+  </div>
+
+  <!-- 企业要闻 -->
+  <div class="section-title enterprise">二、企业要闻</div>
+
+  <div class="news-item">
+    <h3><span class="num">1</span>工业富联一季度净利润首破百亿，AI算力红利加速兑现</h3>
+    <p>工业富联披露一季报：营收2510.78亿元，同比大增56.52%；归母净利润105.95亿元，同比增长102.55%。这是公司连续第三个季度净利润超百亿，主要受益于AI服务器及算力网络需求爆发。英伟达GB200 NVL72机柜出货放量，中国CSP（云服务商）资本开支持续高增。</p>
+    <div class="significance"><strong>价值点：</strong>AI算力产业链业绩已从预期走向兑现，工业富联作为全球AI服务器代工龙头，一季报验证了赛道景气度。</div>
+  </div>
+
+  <div class="news-item">
+    <h3><span class="num">2</span>OpenAI未达业绩目标，AI概念股集体承压</h3>
+    <p>OpenAI内部业绩目标未能完成，引发市场对AI投资回报周期的担忧。受此影响，与OpenAI算力布局绑定的甲骨文（ORCL）股价大跌4.1%，CoreWeave跌5.8%，英伟达、AMD、博通跌幅在1.6%~4.4%之间，费城半导体指数下挫3.6%，纳指回调0.9%。</p>
+    <div class="significance"><strong>价值点：</strong>AI叙事正在从"技术信仰"向"业绩验证"切换，缺乏商业化闭环的项目将面临估值压力。</div>
+  </div>
+
+  <div class="news-item">
+    <h3><span class="num">3</span>DeepSeek外部融资进行中，估值剑指200亿美元</h3>
+    <p>DeepSeek正启动成立以来的首次外部股权融资，计划以不低于100亿美元估值募集至少3亿美元。阿里、腾讯等头部企业均在洽谈投资方之列。此前DeepSeek于4月24日发布V4开源模型，支持百万字超长上下文，成为国产开源大模型里程碑。</p>
+    <div class="significance"><strong>价值点：</strong>DeepSeek作为国产开源大模型标杆，其估值重塑将带动整个AI赛道定价逻辑。</div>
+  </div>
+
+  <div class="news-item">
+    <h3><span class="num">4</span>国产开源大模型密集迭代，4月成"模型发布月"</h3>
+    <p>4月国内AI大模型呈现"日更"节奏：DeepSeek V4（4月24日）、Kimi K2.6（零代码适配五大芯片）、腾讯混元3.0 Hy3 Preview（295B参数）等相继发布，覆盖推理性能、Agent能力、长上下文等核心指标。</p>
+    <div class="significance"><strong>价值点：</strong>开源大模型密集迭代正在压缩技术差距，下游应用层迎来成本下降红利期。</div>
+  </div>
+
+  <!-- 市场观察 -->
+  <div class="section-title market">三、市场观察</div>
+
+  <div class="news-item">
+    <h3>霍尔木兹海峡危机持续发酵，油价创月内新高</h3>
+    <p>WTI原油期货收涨3.69%至99.93美元/桶，布伦特原油收涨2.80%至111.26美元/桶。伊朗重申对霍尔木兹海峡的"绝对控制权"，要求过往船只缴纳通行费，美国随即宣布海上封锁与制裁措施。尽管有日本油轮成功通过的消息，但地缘紧张局势仍主导短期油价。</p>
+  </div>
+
+  <div class="news-item">
+    <h3>阿联酋退出OPEC+，中期油价供需格局生变</h3>
+    <p>阿联酋宣布5月1日起退出OPEC和OPEC+组织，终结60年成员史，旨在摆脱配额约束、逐步提高原油产能。华尔街随即发布中期油价下行风险预警。这一决定或重塑全球原油市场格局。</p>
+  </div>
+
+  <div class="news-item">
+    <h3>美联储本周议息，谷歌、Meta、亚马逊等科技巨头密集发布财报</h3>
+    <p>本周四美联储将公布利率决议，"新美联储通讯社"指出核心分歧在于降息是搁浅还是推迟。谷歌、Meta、亚马逊、微软等科技巨头本周将密集公布一季报。美银警告：若鲍威尔措辞偏鹰叠加巨头指引不及预期，纳指或面临"上涨式崩盘"风险。</p>
+  </div>
+
+  <!-- 核心总结 -->
+  <div class="section-title summary">核心总结</div>
+
+  <div class="summary-box">
+    <h3>今日三大核心信号</h3>
+    <p><strong>1. 国内政策重心转向"更大力度稳增长"</strong><br>
+    政治局会议定调积极，服务业扩能提质、基建"五网"建设、内需扩消费为三大政策抓手。服务业"十五五"新增20万亿空间，为消费与生产性服务赛道打开想象空间。</p>
+    <p><strong>2. AI投资逻辑从"技术信仰"向"业绩验证"切换</strong><br>
+    OpenAI业绩不及预期引发算力产业链集体回调，而工业富联一季报超预期则验证了AI算力代工的高景气。DeepSeek融资200亿估值、国产开源模型密集迭代，AI赛道"冰火两重天"，具备商业化闭环的企业将获得估值溢价。</p>
+    <p><strong>3. 地缘风险主导大宗商品定价</strong><br>
+    霍尔木兹海峡危机叠加阿联酋退出OPEC+，原油市场短期受地缘溢价支撑、中期面临供需格局重构。黄金跌破4600美元/盎司，美联储本周议息叠加科技股财报密集发布，全球风险资产短期波动加剧。</p>
+    <div class="risk">风险提示：美联储鹰派立场、巨头财报不及预期、地缘局势超预期缓和。油金波动加大，短期观望为宜。</div>
+  </div>
+
+  <!-- 结尾 -->
+  <div class="footer">
+    <p>关注「一知桥」，每天十分钟，带你读懂市场信号。</p>
+    <div class="wechat-info">点赞 · 在看 · 转发</div>
+  </div>
+
+</div>
+
+</body>
+</html>

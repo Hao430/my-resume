@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年5月1日 周五 今日速览 | 一知桥</title>
+<style>
+/* ===== 基础变量 ===== */
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #16213e;
+  --accent-color: #07c160;
+  --accent-blue: #0f3460;
+  --text-main: #2c3e50;
+  --text-sub: #546e7a;
+  --light-gray: #f4f6f8;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow: 0 2px 15px rgba(0,0,0,0.07);
+  --hover-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  --border-radius: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  background: var(--light-gray);
+  background-image:
+    linear-gradient(rgba(244,246,248,0.96), rgba(244,246,248,0.96)),
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c8d6e5' fill-opacity='0.35'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  color: var(--text-main);
+  line-height: 1.85;
+  font-size: 15px;
+  padding: 24px 16px 48px;
+}
+
+/* ===== 主容器 ===== */
+.article-wrap {
+  max-width: 740px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* ===== 封面Banner ===== */
+.cover-banner {
+  background: linear-gradient(135deg, #0d1b3e 0%, #0a3d62 40%, #0c5460 70%, #0e7c67 100%);
+  padding: 44px 40px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-banner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.cover-banner::after {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(7,193,96,0.18) 0%, transparent 70%);
+}
+
+.cover-tag {
+  display: inline-block;
+  background: rgba(7,193,96,0.2);
+  border: 1px solid rgba(7,193,96,0.5);
+  color: #a8f0c6;
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  position: relative; z-index: 1;
+}
+
+.cover-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  position: relative; z-index: 1;
+}
+
+.cover-subtitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 24px;
+  position: relative; z-index: 1;
+}
+
+.cover-divider {
+  height: 2px;
+  background: linear-gradient(90deg, #07c160, rgba(7,193,96,0.2), transparent);
+  margin-bottom: 18px;
+  position: relative; z-index: 1;
+}
+
+.cover-dots {
+  display: flex; gap: 6px;
+  position: relative; z-index: 1;
+}
+.cover-dots span {
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.cover-dots span:nth-child(1) { background: #07c160; }
+.cover-dots span:nth-child(2) { background: rgba(7,193,96,0.5); }
+.cover-dots span:nth-child(3) { background: rgba(7,193,96,0.25); }
+
+/* ===== 正文区 ===== */
+.article-body {
+  padding: 36px 40px 40px;
+}
+
+/* ===== 板块标题 ===== */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e8f5e9;
+}
+.section-icon {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, #07c160, #0e7c67);
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: #fff; font-weight: 700;
+  flex-shrink: 0;
+}
+.section-title h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+}
+
+/* ===== 条目卡片 ===== */
+.item-card {
+  background: var(--light-gray);
+  border-left: 3px solid #07c160;
+  border-radius: 0 8px 8px 0;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s;
+}
+.item-card:hover { box-shadow: var(--hover-shadow); }
+
+.item-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.item-title .num {
+  color: #07c160;
+  margin-right: 4px;
+}
+
+.item-body {
+  font-size: 13.5px;
+  color: var(--text-sub);
+  line-height: 1.8;
+}
+.item-body strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* ===== 市场观察特殊样式 ===== */
+.market-card {
+  border-left-color: #0a3d62;
+  background: #f0f4ff;
+}
+
+/* ===== 核心总结框 ===== */
+.summary-box {
+  margin-top: 32px;
+  background: linear-gradient(135deg, #f0fff4, #e8f5e9);
+  border: 1px solid #b2dfdb;
+  border-radius: var(--border-radius);
+  padding: 20px 22px;
+}
+.summary-box .summary-header {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0e7c67;
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.summary-box .summary-header::before {
+  content: '◆';
+  font-size: 12px;
+  color: #07c160;
+}
+.summary-item {
+  font-size: 13.5px;
+  color: var(--text-main);
+  line-height: 1.8;
+  margin-bottom: 8px;
+  padding-left: 14px;
+  position: relative;
+}
+.summary-item::before {
+  content: attr(data-num);
+  position: absolute; left: 0;
+  color: #07c160; font-weight: 700;
+}
+
+.risk-box {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 3px solid #ffc107;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: #7b5e08;
+  line-height: 1.75;
+}
+.risk-box strong { color: #5c4000; }
+
+/* ===== 来源 ===== */
+.source-line {
+  font-size: 11.5px;
+  color: #aab;
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 1px dashed #dde;
+  line-height: 1.7;
+}
+
+/* ===== 底部引导 ===== */
+.footer-guide {
+  margin-top: 28px;
+  background: linear-gradient(135deg, #0d1b3e, #0a3d62);
+  border-radius: var(--border-radius);
+  padding: 18px 22px;
+  text-align: center;
+  color: rgba(255,255,255,0.85);
+  font-size: 13.5px;
+  line-height: 1.9;
+}
+.footer-guide strong {
+  color: #a8f0c6;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 600px) {
+  .cover-banner { padding: 32px 20px 26px; }
+  .cover-title { font-size: 21px; }
+  .article-body { padding: 24px 18px 28px; }
+  .item-card { padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+<div class="article-wrap">
+
+  <!-- 封面 Banner -->
+  <div class="cover-banner">
+    <div class="cover-tag">一知桥 · 每日早参</div>
+    <div class="cover-title">2026年5月1日 周五<br>今日速览</div>
+    <div class="cover-subtitle">五一劳动节特刊 · 政策 / 科技 / 市场</div>
+    <div class="cover-divider"></div>
+    <div class="cover-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- 正文 -->
+  <div class="article-body">
+
+    <!-- 一、政策速递 -->
+    <div class="section-title">
+      <div class="section-icon">政</div>
+      <h2>一、政策速递</h2>
+    </div>
+
+    <div class="item-card">
+      <div class="item-title"><span class="num">①</span>中国对全部非洲建交国实施零关税（5月1日起）</div>
+      <div class="item-body">
+        国务院关税税则委员会公告，自<strong>2026年5月1日至2028年4月30日</strong>，对20个非最不发达非洲建交国实施零关税。至此，中国成为全球<strong>首个对所有非洲建交国全覆盖零关税</strong>的主要经济体，覆盖53国。意义：强化中非经贸纽带，巩固"全球南方"战略腹地。
+      </div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-title"><span class="num">②</span>工信部+国家数据局联发"模数共振"行动</div>
+      <div class="item-body">
+        工信厅联科函〔2026〕193号（4月28日）正式启动，目标2026年底形成<strong>"数据-模型-场景"良性循环</strong>，覆盖石化化工、医疗装备、医药等行业。实质推动AI模型与工业数据协同互促，加速"AI+制造"规模落地。
+      </div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-title"><span class="num">③</span>深圳五一楼市新政落地（4月30日起）</div>
+      <div class="item-body">
+        深圳4月30日起执行新一轮楼市调整：核心区增购房资格、<strong>社保缴纳1年即可购房</strong>、公积金贷款额度上调、多子女家庭政策倾斜，力度超市场预期，是一线城市3月房价环比转正后的政策跟进信号。
+      </div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-title"><span class="num">④</span>全国五一劳动奖表彰：3024个集体获奖</div>
+      <div class="item-body">
+        4月28日，中华全国总工会召开庆祝五一国际劳动节暨全国五一劳动奖表彰大会，共表彰<strong>3024个全国五一劳动奖</strong>，重点覆盖制造业、科技一线工作者群体。
+      </div>
+    </div>
+
+    <!-- 二、企业要闻 -->
+    <div class="section-title">
+      <div class="section-icon">企</div>
+      <h2>二、企业要闻</h2>
+    </div>
+
+    <div class="item-card">
+      <div class="item-title"><span class="num">①</span>寒武纪一季报爆发：营收+159%，净利润+185%</div>
+      <div class="item-body">
+        寒武纪（688256）2026年Q1：营收<strong>28.85亿元（+159.56%）</strong>，净利润<strong>10.13亿元（+185.0%）</strong>，双双创历史新高。AI算力国产替代逻辑持续兑现，4月30日股价重夺A股"股王"位置，市值突破新高。
+      </div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-title"><span class="num">②</span>中芯国际收购中芯北方49%股权，5月11日上会审议</div>
+      <div class="item-body">
+        中芯国际（688981）拟向国家大基金等发行股份，收购<strong>中芯北方集成电路制造（北京）49%股权</strong>，上交所并购重组委定于5月11日审议。国家大基金主导+垂直整合，中国半导体供应链自主化提速。
+      </div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-title"><span class="num">③</span>腾讯+阿里联合投资DeepSeek 18亿美元，估值200亿</div>
+      <div class="item-body">
+        据报道，腾讯与阿里巴巴洽谈联合投资深度求索（DeepSeek），预计共投资<strong>18亿美元</strong>，本轮估值约<strong>200亿美元</strong>。这是背靠幻方量化的DeepSeek首次引入外部资本，标志国内顶尖开源大模型商业化进程加速。
+      </div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-title"><span class="num">④</span>百度AI生态升级：创作者大会+组织双轮推进</div>
+      <div class="item-body">
+        百度4月22日至28日密集披露多项动态：4月24日在创作者大会发布AI生态升级方案，同步推进内部组织变革，强化<strong>文心大模型与搜索、内容生态深度融合</strong>，布局内容AI化商业变现。
+      </div>
+    </div>
+
+    <!-- 四、市场观察 -->
+    <div class="section-title">
+      <div class="section-icon">市</div>
+      <h2>四、市场观察</h2>
+    </div>
+
+    <div class="item-card market-card">
+      <div class="item-title"><span class="num">①</span>4月PMI 50.3%，连续两月站上荣枯线 | A股5月1日起休市5天</div>
+      <div class="item-body">
+        4月30日A股以上涨收官：沪指+1.33%。制造业PMI录得<strong>50.3%</strong>，连续两月扩张，新出口订单指数<strong>两年来首次扩张</strong>，外需边际改善；非制造业PMI降至49.4%，服务业再现疲态。五一假期A股休市5天（5月1日至5月5日）。
+      </div>
+    </div>
+
+    <div class="item-card market-card">
+      <div class="item-title"><span class="num">②</span>美联储分歧创34年最大，鲍威尔卸任后留任理事</div>
+      <div class="item-body">
+        美联储4月29日以<strong>8:4投票</strong>维持利率3.50%-3.75%不变，分歧为1992年以来最大。鲍威尔宣布卸任主席后<strong>留任理事</strong>，以捍卫美联储独立性。美股涨跌不一：道指-0.57%，纳指+0.04%，标普-0.04%，市场进入政策过渡期观望阶段。
+      </div>
+    </div>
+
+    <!-- 核心总结 -->
+    <div class="summary-box">
+      <div class="summary-header">核心总结</div>
+      <div class="summary-item" data-num="①">
+        <strong>零关税+模数共振</strong>——政策密集落地，"AI+制造"和对外开放双轮驱动，AI数据-模型-产业协同上升至国家级战略；
+      </div>
+      <div class="summary-item" data-num="②">
+        <strong>算力业绩兑现</strong>——寒武纪Q1爆发+中芯北方整合推进，半导体国产化从"故事"走向"业绩验证"阶段；
+      </div>
+      <div class="summary-item" data-num="③">
+        <strong>大模型资本化加速</strong>——DeepSeek引入腾讯阿里18亿美元，国产大模型从"技术竞赛"切换至"商业化收割"。
+      </div>
+
+      <div class="risk-box">
+        <strong>风险提示：</strong>美联储分歧创34年最大叠加鲍威尔离任，政策过渡期或加剧美债/美元波动；五一假期国际市场不休息，中东地缘风险持续，需密切关注节后A股首日动态。
+      </div>
+    </div>
+
+    <!-- 来源 -->
+    <div class="source-line">
+      数据来源：新华社、国务院关税税则委员会、工信部官网、新浪财经、东方财富、财新、华尔街见闻（截至2026年5月1日上午）
+    </div>
+
+    <!-- 底部引导 -->
+    <div class="footer-guide">
+      欢迎关注 <strong>「一知桥」</strong>，每日速递政策、科技、市场信息差。<br>
+      觉得有价值请 <strong>点赞</strong> · <strong>在看</strong> · <strong>转发</strong>，感谢支持！
+    </div>
+
+  </div><!-- /article-body -->
+</div><!-- /article-wrap -->
+</body>
+</html>
