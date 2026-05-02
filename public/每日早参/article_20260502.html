@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5月2日 周六 今日速览</title>
+<style>
+@include-when-export url(https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
+@font-face {
+  font-family: 'WeChat Sans';
+  src: local('PingFang SC'), local('Microsoft YaHei'), local('Heiti SC'), sans-serif;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'WeChat Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--light-gray);
+  background-image:
+    linear-gradient(rgba(245, 247, 245, 0.9), rgba(245, 247, 245, 0.9)),
+    url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmNWY1ZjUiIGZpbGwtb3BhY2l0eT0iMC4zIj48cGF0aCBkPSJNMzYgMzRoMnYyaC0yek0zMCAzNGgydjJoLTJ6TTI0IDM0aDJ2MmgtMnpNMTggMzRoMnYyaC0yek00MiAzNGgydjJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=');
+  color: var(--primary-color);
+  line-height: 1.8;
+  font-size: 16px;
+  padding: 20px 0;
+}
+
+#write {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* CSS 封面 Banner */
+.cover-banner {
+  background: linear-gradient(135deg, #0a2e3d 0%, #0d4f4f 30%, #1a6b5a 60%, #0a2e3d 100%);
+  border-radius: 12px;
+  padding: 40px 30px;
+  margin-bottom: 2em;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.cover-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+.cover-banner .banner-title {
+  font-size: 2em;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.cover-banner .banner-date {
+  font-size: 1.1em;
+  color: rgba(255,255,255,0.75);
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+.cover-banner .banner-subtitle {
+  font-size: 0.9em;
+  color: rgba(255,255,255,0.5);
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+}
+.cover-banner .banner-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #07c160, transparent);
+  margin: 15px auto;
+  position: relative;
+  z-index: 1;
+}
+.cover-banner .banner-dots {
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+.cover-banner .banner-dots span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  margin: 0 4px;
+}
+.cover-banner .banner-dots span.active {
+  background: #07c160;
+  width: 18px;
+  border-radius: 3px;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: var(--accent-color);
+  text-align: center;
+  margin-top: 0;
+  padding: 0.5em 0 0.8em;
+  border-bottom: 2px solid var(--accent-color);
+  background: linear-gradient(to right, rgba(7, 193, 96, 0.1), transparent 80%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(7, 193, 96, 0.1);
+  display: none;
+}
+
+h2 {
+  font-size: 1.5em;
+  padding-left: 1em;
+  border-left: 5px solid var(--accent-color);
+  margin-top: 2em;
+  background: linear-gradient(to right, rgba(7, 193, 96, 0.05), transparent 5%);
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  border-radius: 0 8px 8px 0;
+}
+
+h3 {
+  font-size: 1.15em;
+  color: var(--primary-color);
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+p {
+  color: var(--secondary-color);
+  margin-bottom: 1em;
+  font-size: 1em;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+blockquote {
+  border-left: 3px solid var(--accent-color);
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  background: rgba(7, 193, 96, 0.05);
+  border-radius: 0 8px 8px 0;
+}
+
+blockquote p {
+  margin-bottom: 0.5em;
+}
+
+.footer {
+  text-align: center;
+  color: #999;
+  font-size: 0.85em;
+  margin-top: 2em;
+  padding-top: 1.5em;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  line-height: 1.8;
+}
+
+.footer p {
+  text-align: center;
+  color: #999;
+  font-size: 0.85em;
+}
+
+@media (max-width: 768px) {
+  #write {
+    padding: 25px 15px;
+    margin: 0 10px;
+    border-radius: 12px;
+  }
+  h2 { font-size: 1.3em; }
+  .cover-banner .banner-title { font-size: 1.5em; }
+}
+</style>
+</head>
+<body>
+<div id="write">
+
+<!-- CSS 封面 Banner -->
+<div class="cover-banner">
+  <div class="banner-title">今日速览</div>
+  <div class="banner-divider"></div>
+  <div class="banner-date">2026年5月2日 星期六</div>
+  <div class="banner-subtitle">一知桥 | 每日精选信息差</div>
+  <div class="banner-dots">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<h1>5月2日 周六 今日速览</h1>
+
+<h2>一、政策速递</h2>
+
+<h3>① 中国对53个非洲建交国全面实施零关税</h3>
+<p>国务院关税税则委员会公告，自5月1日起对53个非洲建交国实施全覆盖零关税，实施期两年。中国成为全球首个对所有非洲建交国实现单方面零关税待遇的主要经济体，彰显高水平对外开放决心。</p>
+
+<h3>② 习近平强调"以更大力度加强基础研究"</h3>
+<p>习近平在加强基础研究座谈会上指出，基础研究是整个科学体系的源头、所有技术问题的总机关，要进一步提升原始创新能力，打牢科技强国建设根基。</p>
+
+<h3>③ 扩大科创与技改贷款投放</h3>
+<p>我国将扩大科技创新和技术改造贷款投放范围，为产业升级和"模数共振"行动提供更充裕的金融支持。</p>
+
+<h3>④ 深圳广州密集加码楼市新政</h3>
+<p>深圳4月29日晚发布优化政策，咨询量激增、部分项目连夜成交；广州4月30日跟进，公积金最高贷款额度提至360万元，"卖旧买新"补贴单套最高3万元。</p>
+
+<h2>二、企业要闻</h2>
+
+<h3>① 美股六巨头Q1资本支出合计突破7000亿美元</h3>
+<p>谷歌、微软、亚马逊、Meta、苹果、特斯拉2026年合计AI资本支出将突破7000亿美元。谷歌云营收暴增63%、积压订单4620亿美元；三星Q1利润暴增756%创史上最强季度；苹果大中华区收入增28%并批准1000亿美元回购。</p>
+
+<h3>② 甲骨文获五角大楼AI项目合同</h3>
+<p>甲骨文拿下美国国防部人工智能重大项目，股价飙升。与此同时，OpenAI增长不及预期引发市场对AI投入回报可持续性的分歧。</p>
+
+<h3>③ 三星存储业务销售额暴增292%</h3>
+<p>三星Q1营业利润57.2万亿韩元，存储业务利润率达66%。闪迪数据中心收入季增233%，毛利率从23%飙至78%，反映AI算力需求正加速向产业链下游传导。</p>
+
+<h3>④ 五粮液Q1净利大增82.57%</h3>
+<p>五粮液一季度营收228亿元、净利80.6亿元，同比分别增33.7%和82.6%，同步抛出最高百亿元回购计划。</p>
+
+<h2>三、市场观察</h2>
+
+<p><strong>国际油价刷新四年新高。</strong> 美以伊冲突进入第三个月，4月30日布伦特即期价格突破126美元/桶，OPEC+暗示6月或象征性增产。欧央行警告中东战事加剧滞胀风险，欧元区一季度GDP仅增0.1%，通胀飙升至3%。</p>
+
+<p><strong>纳指首破25000点。</strong> 美股5月1日纳指收于25114点创历史新高，4月标普大涨10%创2000年以来最佳单月。日本政府入市干预日元，日元单日飙升2.4%。</p>
+
+<h2>核心总结</h2>
+
+<p>今日三大信号值得关注：<strong>其一</strong>，AI军备竞赛进入"下半场"，六巨头超7000亿美元资本支出+三家企业自研芯片加速，意味着算力供给仍是核心瓶颈，自研芯片成为摆脱英伟达依赖的关键赛道；<strong>其二</strong>，全球滞胀风险正在从"警示"变为"现实"，美国PCE通胀创四年新高、欧央行暗示6月或加息，地缘冲突通过油价向全球制造业成本端传导；<strong>其三</strong>，国内政策持续加码——对非零关税落地、科创贷款扩围、楼市政策密集出台，稳增长信号明确。</p>
+
+<blockquote>
+<p><strong>机会方向</strong>：AI算力产业链（存储/自研芯片/数据中心）、国产替代提速、中东局势催化的能源板块。</p>
+<p><strong>风险提示</strong>：全球滞胀压缩央行宽松空间，美股AI估值分化加剧（谷歌+7% vs Meta-8%），地缘冲突升级可能冲击供应链。</p>
+</blockquote>
+
+<div class="footer">
+<p>数据来源：央视新闻联播、华尔街见闻、新浪财经芝麻AI速递、商务部、国务院关税税则委员会</p>
+<p>欢迎关注「一知桥」，每日精选政策、企业、市场核心信息差。点赞、在看，让更多人看到。</p>
+</div>
+
+</div>
+</body>
+</html>
