@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0503 周日 今日速览 | 一知桥</title>
+<style>
+/* pixyll.css 内嵌样式 - 公众号文章版 */
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #4a4a6a;
+  --light-gray: #f0f2f8;
+  --accent-color: #07c160;
+  --accent2: #5765f2;
+  --glass-bg: rgba(255, 255, 255, 0.92);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow: 0 4px 24px rgba(26, 26, 46, 0.08);
+  --transition: all 0.3s ease;
+}
+
+@font-face {
+  font-family: 'WeChat Sans';
+  src: local('PingFang SC'), local('Microsoft YaHei'), local('Heiti SC'), sans-serif;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'WeChat Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--primary-color);
+  line-height: 1.85;
+  font-size: 16px;
+  padding: 0 0 60px 0;
+}
+
+/* ===== 封面 Banner ===== */
+.cover-banner {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 35%, #0d4f6e 70%, #0a6b5e 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 网格背景 */
+.cover-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* 装饰圆点 */
+.cover-banner::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(7, 193, 96, 0.15) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+}
+
+.cover-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.cover-date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.cover-title {
+  font-size: 2.8em;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 6px;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.cover-subtitle {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 2px;
+}
+
+.cover-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #07c160, transparent);
+  margin: 20px auto;
+}
+
+.cover-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.cover-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+}
+
+.cover-dots span:first-child {
+  background: #07c160;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ===== 主容器 ===== */
+.article-container {
+  max-width: 720px;
+  margin: -40px auto 0;
+  padding: 0 24px;
+  position: relative;
+  z-index: 3;
+}
+
+.article-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 48px 56px;
+}
+
+/* ===== 模块通用 ===== */
+.section {
+  margin-bottom: 36px;
+}
+
+.section-title {
+  font-size: 1.35em;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  border-left: 5px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title .icon {
+  font-size: 1.1em;
+}
+
+/* ===== 政策条目 ===== */
+.policy-item {
+  margin-bottom: 16px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(87, 101, 242, 0.06), rgba(7, 193, 96, 0.04));
+  border-radius: 10px;
+  border: 1px solid rgba(87, 101, 242, 0.1);
+}
+
+.policy-item strong {
+  color: #1a1a2e;
+  font-size: 1.05em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.policy-item p {
+  color: var(--secondary-color);
+  font-size: 0.95em;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===== 企业条目 ===== */
+.biz-item {
+  margin-bottom: 16px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(7, 193, 96, 0.05), rgba(87, 101, 242, 0.03));
+  border-radius: 10px;
+  border: 1px solid rgba(7, 193, 96, 0.1);
+}
+
+.biz-item strong {
+  color: #1a1a2e;
+  font-size: 1.05em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.biz-item p {
+  color: var(--secondary-color);
+  font-size: 0.95em;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===== 市场条目 ===== */
+.market-item {
+  margin-bottom: 14px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(240, 160, 50, 0.06), rgba(240, 100, 50, 0.04));
+  border-radius: 10px;
+  border: 1px solid rgba(240, 160, 50, 0.12);
+}
+
+.market-item strong {
+  color: #1a1a2e;
+  font-size: 1.02em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.market-item p {
+  color: var(--secondary-color);
+  font-size: 0.93em;
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ===== 核心总结 ===== */
+.summary-section {
+  background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 100%);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.summary-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #07c160;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 2px;
+}
+
+.summary-section p {
+  color: rgba(255,255,255,0.88);
+  font-size: 0.95em;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.summary-opportunity {
+  display: inline-block;
+  background: rgba(7, 193, 96, 0.18);
+  color: #6effb4;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.88em;
+}
+
+.summary-risk {
+  display: inline-block;
+  background: rgba(240, 100, 50, 0.18);
+  color: #ffb4a0;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.88em;
+}
+
+/* ===== 结尾 ===== */
+.article-footer {
+  text-align: center;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.article-footer p {
+  color: rgba(0,0,0,0.35);
+  font-size: 0.85em;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.article-footer .cta {
+  color: #07c160;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+/* ===== 分割线 ===== */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+  margin: 32px 0;
+}
+
+@media (max-width: 600px) {
+  .article-card { padding: 32px 24px; }
+  .cover-title { font-size: 2em; letter-spacing: 3px; }
+  .cover-banner { height: 220px; }
+  .section-title { font-size: 1.2em; }
+}
+</style>
+</head>
+<body>
+
+<!-- 封面 Banner -->
+<div class="cover-banner">
+  <div class="cover-inner">
+    <div class="cover-date">2026 &nbsp;&middot;&nbsp; 05 &nbsp;&middot;&nbsp; 03 &nbsp;&middot;&nbsp; SUNDAY</div>
+    <div class="cover-title">今日速览</div>
+    <div class="cover-divider"></div>
+    <div class="cover-subtitle">一知桥 &middot; 财经科技信息差</div>
+    <div class="cover-dots">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+
+<!-- 主内容 -->
+<div class="article-container">
+  <div class="article-card">
+
+    <!-- 一、政策速递 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">&#128203;</span>一、政策速递
+      </div>
+
+      <div class="policy-item">
+        <strong>工信部+国家数据局启动"模数共振"行动（4月28日）</strong>
+        <p>面向制造业20个重点行业，确定一批重点城市，探索打造"智能体工厂"，推动AI大模型与制造业深度融合。这意味着工业AI从单点应用迈向系统性落地的标志性政策信号，智能制造软件赛道迎催化。</p>
+      </div>
+
+      <div class="policy-item">
+        <strong>A股年报收官：现金分红首破2.42万亿创历史新高</strong>
+        <p>2025年逾3700家公司推出现金分红方案，分红比例达44.87%，均创历史新高。银行、能源等"现金牛"仍是分红主力，460余家公司股息率超3%。监管引导"股东回报文化"持续深化，高股息策略仍是中长期主线。</p>
+      </div>
+
+      <div class="policy-item">
+        <strong>SEC半年报提案通过白宫审查，财报披露规则将迎重大调整</strong>
+        <p>允许上市公司财报披露频率从季度降至半年，苹果等科技巨头受影响。支持者认为此举降低信披成本、利于长期主义；批评者担忧透明度下降。目前接近正式落地，投资者需重新适应更长的信息真空期。</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 二、企业要闻 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">&#128188;</span>二、企业要闻
+      </div>
+
+      <div class="biz-item">
+        <strong>Meta收购机器人AI公司，具身智能战局再添重量级玩家</strong>
+        <p>Meta完成对机器人AI初创公司Assured Robot Intelligence的收购，团队将加入其超级智能实验室，加速布局人形机器人底层技术。继苹果、谷歌之后，Meta正式加入"具身智能"战局，2026年或成机器人AI商业化元年。</p>
+      </div>
+
+      <div class="biz-item">
+        <strong>五角大楼与7家AI公司签约，Anthropic遭排除并提起诉讼</strong>
+        <p>SpaceX、OpenAI、甲骨文等七家公司正式签约为五角大楼部署机密网络AI技术。Anthropic因拒绝将模型用于自主武器，遭排除并被封杀，目前提起诉讼。AI军事化与安全伦理的分歧正在撕裂行业格局。</p>
+      </div>
+
+      <div class="biz-item">
+        <strong>苹果iPhone 17或将首次采用自研Wi-Fi芯片</strong>
+        <p>苹果自研Wi-Fi芯片有望在新款iPhone上首次商用，摆脱对博通等供应商的依赖。这是苹果芯片自主化战略的又一里程碑，A股Wi-Fi芯片供应链企业面临替代压力。</p>
+      </div>
+
+      <div class="biz-item">
+        <strong>三星被英国法院判付中兴3.92亿美元专利费</strong>
+        <p>英国高等法院一审判决三星电子就使用中兴通讯移动通信专利支付3.92亿美元（尚未生效）。2021年专利交叉许可协议到期未续约，中兴在全球多法域展开反击。专利战背后是中国通信企业技术话语权的显著提升。</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 三、市场观察 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">&#128200;</span>三、市场观察
+      </div>
+
+      <div class="market-item">
+        <strong>纳指首破25000点创历史新高（5月2日收盘）</strong>
+        <p>美股三大指数涨跌分化，纳指首次收于25000点之上，本周累计涨1.12%连续走强。苹果、闪迪等科技股领涨，但金龙中国指数跌0.59%，中概股短期承压。</p>
+      </div>
+
+      <div class="market-item">
+        <strong>WTI原油跌回101美元，霍尔木兹危机进入第60天</strong>
+        <p>美伊谈判陷入僵局，特朗普称对谈判"不满意"，但表示更倾向于不扩大打击。WTI本周累计涨约8%，若冲突持续，高盛等机构预测油价超50%概率突破127美元。能源板块仍是当前最不确定的宏观变量。</p>
+      </div>
+    </div>
+
+    <!-- 核心总结 -->
+    <div class="summary-section">
+      <div class="summary-title">&#10022; 核心总结</div>
+      <p><strong style="color:#fff">政策端：</strong>"模数共振"标志工业AI进入系统性落地阶段；A股分红创历史新高，股东回报文化深化；SEC半年报新规重塑信披生态。</p>
+      <p><strong style="color:#fff">产业端：</strong>具身智能、AI军事化、芯片自主化三路并进；Anthropic被封杀折射AI伦理分化；中国通信企业专利话语权显著提升。</p>
+      <p><strong style="color:#fff">市场端：</strong>纳指新高但中概股分化；地缘风险与AI叙事并行，能源价格高度不确定。</p>
+      <p>
+        <span class="summary-opportunity">核心机会</span> 纳指科技股强势延续 + 工业AI（"模数共振"受益）+ 高股息防御板块
+      </p>
+      <p>
+        <span class="summary-risk">核心风险</span> 霍尔木兹冲突升级推动油价突破125美元 + 中概股短期外资流出压力
+      </p>
+    </div>
+
+    <!-- 结尾 -->
+    <div class="article-footer">
+      <p>关注「一知桥」</p>
+      <p>每个工作日早8点 &middot; 捕捉今日信息差</p>
+      <p class="cta">如果对你有帮助，欢迎点击"在看" &#128070;</p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
