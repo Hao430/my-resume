@@ -1,6 +1,12 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
+# 允许所有爬虫访问
+# Disallow: /api/          # 如有需要可限制
+# Disallow: /private/       # 如有需要可限制
+
 # Sitemap
 Sitemap: https://hao430.cn/sitemap.xml
+
+# 爬虫速率（建议值，可根据需要调整）
+Crawl-delay: 1
