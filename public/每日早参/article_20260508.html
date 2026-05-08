@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年5月8日 周五 今日速览 | 一知桥</title>
+<style>
+/* Pixyll CSS 内嵌 - 微信公众号风格 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: linear-gradient(135deg, #0a1628 0%, #1a2f4e 50%, #0d2137 100%);
+  min-height: 100vh;
+  color: #e8e8e8;
+  line-height: 1.8;
+}
+
+/* 封面Banner */
+.cover-banner {
+  position: relative;
+  background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 40%, #0d2845 100%);
+  padding: 60px 20px 50px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cover-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.cover-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 80%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(7,193,96,0.6), transparent);
+}
+
+.cover-date {
+  font-size: 0.85em;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.cover-title {
+  font-size: 2.4em;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 20px rgba(7,193,96,0.3);
+}
+
+.cover-subtitle {
+  font-size: 1em;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 6px;
+}
+
+.cover-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.cover-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(7,193,96,0.4);
+}
+
+.cover-dot.active {
+  background: #07c160;
+  box-shadow: 0 0 8px rgba(7,193,96,0.8);
+}
+
+/* 主容器 */
+.article-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+/* 板块标题 */
+.section-block {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.section-icon {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  flex-shrink: 0;
+}
+
+.icon-policy { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+.icon-enterprise { background: linear-gradient(135deg, #3498db, #2980b9); }
+.icon-market { background: linear-gradient(135deg, #f39c12, #e67e22); }
+.icon-summary { background: linear-gradient(135deg, #07c160, #05903e); }
+
+.section-title {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.section-label {
+  font-size: 0.75em;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* 内容条目 */
+.item {
+  margin-bottom: 20px;
+  padding: 16px 18px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  border-left: 3px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.item:last-child { margin-bottom: 0; }
+
+.item:hover {
+  background: rgba(255,255,255,0.06);
+  border-left-color: #07c160;
+}
+
+.item-title {
+  font-size: 1em;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.item-title strong {
+  color: #07c160;
+}
+
+.item-content {
+  font-size: 0.92em;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+}
+
+.item-meta {
+  margin-top: 8px;
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.35);
+}
+
+/* 总结板块 */
+.summary-block {
+  background: linear-gradient(135deg, rgba(7,193,96,0.12), rgba(5,144,62,0.08));
+  border: 1px solid rgba(7,193,96,0.25);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(7,193,96,0.2);
+}
+
+.summary-title {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #07c160;
+  letter-spacing: 1px;
+}
+
+.summary-item {
+  margin-bottom: 14px;
+  padding: 12px 16px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 6px;
+  font-size: 0.9em;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+}
+
+.summary-item:last-child { margin-bottom: 0; }
+
+.summary-label {
+  color: #f39c12;
+  font-weight: 600;
+}
+
+.summary-risk {
+  color: #e74c3c;
+}
+
+/* 底部引导 */
+.footer-cta {
+  text-align: center;
+  padding: 28px 20px;
+  margin-top: 10px;
+}
+
+.footer-brand {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.footer-desc {
+  font-size: 0.85em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.footer-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+  background: rgba(7,193,96,0.15);
+  border-color: rgba(7,193,96,0.4);
+  color: #07c160;
+}
+
+.footer-btn.primary {
+  background: rgba(7,193,96,0.2);
+  border-color: rgba(7,193,96,0.5);
+  color: #07c160;
+}
+
+.footer-divider {
+  width: 40px; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(7,193,96,0.4), transparent);
+  margin: 20px auto;
+}
+
+.footer-copy {
+  font-size: 0.75em;
+  color: rgba(255,255,255,0.25);
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* 数据表格 */
+.data-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.data-tag {
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.data-tag.up { color: #e74c3c; border-color: rgba(231,76,60,0.3); }
+.data-tag.down { color: #2ecc71; border-color: rgba(46,204,113,0.3); }
+.data-tag.alert { color: #f39c12; border-color: rgba(243,156,18,0.3); }
+
+/* 响应式 */
+@media (max-width: 480px) {
+  .cover-title { font-size: 1.8em; letter-spacing: 2px; }
+  .section-block { padding: 18px 16px; }
+  .item { padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 封面Banner -->
+<div class="cover-banner">
+  <div class="cover-date">Friday, May 8, 2026</div>
+  <div class="cover-title">一知桥 · 今日速览</div>
+  <div class="cover-subtitle">信息差 · 早知道</div>
+  <div class="cover-dots">
+    <div class="cover-dot active"></div>
+    <div class="cover-dot"></div>
+    <div class="cover-dot"></div>
+    <div class="cover-dot"></div>
+  </div>
+</div>
+
+<!-- 主内容 -->
+<div class="article-container">
+
+  <!-- 一、政策速递 -->
+  <div class="section-block">
+    <div class="section-header">
+      <div class="section-icon icon-policy">政</div>
+      <div>
+        <div class="section-title">一、政策速递</div>
+        <div class="section-label">POLICY BRIEFING</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>1. 中办国办：美丽中国建设成效考核办法出炉</strong></div>
+      <div class="item-content">
+        中共中央办公厅、国务院办公厅近日印发《美丽中国建设成效考核办法》，从责任落实、资金使用绩效、群众满意程度等五个维度建立考核体系，考核结果纳入领导干部政绩考核。《办法》释放明确信号：环保指标从"软约束"升级为"硬考核"，地方政府绿色转型压力进一步加码。
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>2. 第三轮第六批中央生态环保督察全面启动</strong></div>
+      <div class="item-content">
+        生态环境部5月7日宣布，7个督察组同步进驻辽宁、吉林、黑龙江、广东、广西、西藏、新疆及新疆兵团，进驻时间1个月。重点督察内容包括：中央八项规定落实情况、基层减负执行成效、生态保护修复责任落实等。
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>3. 八部门联合发文破解儿童用药难题</strong></div>
+      <div class="item-content">
+        国家卫健委等8部门发布《关于改革完善儿童用药供应保障机制的实施意见》，从研发创新、生产供应、临床使用三端同步发力，包括支持小品种药集中生产基地纳入儿童用药、扩大中央和地方两级储备品种范围。儿童药市场长期存在的"靠手掰"困境，有望系统性改善。
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>4. 2026国考补录1294人，应届生占七成</strong></div>
+      <div class="item-content">
+        国家公务员局5月8日启动2026年度国考补录，涵盖17个部门，报名窗口期仅3天（5月8日-10日）。900余个计划定向应届高校毕业生，占补录总规模的70%，就业导向鲜明。
+      </div>
+    </div>
+  </div>
+
+  <!-- 二、企业要闻 -->
+  <div class="section-block">
+    <div class="section-header">
+      <div class="section-icon icon-enterprise">企</div>
+      <div>
+        <div class="section-title">二、企业要闻</div>
+        <div class="section-label">ENTERPRISE WATCH</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>1. 字节跳动Doubao-Seed-2.0-lite：全模态统一理解破局</strong></div>
+      <div class="item-content">
+        火山引擎5月6日发布Doubao-Seed-2.0-lite，首次实现视频、图像、音频与文本的原生统一理解，并能精准定位长视频中的特定事件。最大亮点在于GUI一体化理解——从"读懂界面"到"端到端执行任务"的跨越，在电竞复盘等场景已验证可行性。
+      </div>
+      <div class="data-row">
+        <span class="data-tag">音画同步推理</span>
+        <span class="data-tag">19语种转写</span>
+        <span class="data-tag">GUI一体化</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>2. 腾讯混元Hy3-preview：两周Token调用量破纪录</strong></div>
+      <div class="item-content">
+        腾讯混元Hy3-preview发布仅两周，Token调用量已达上一代Hy2的10倍以上，内部应用总调用量增幅突破16.5倍。在OpenRouter周榜同时登顶"Token调用量"与"市场份额"双料第一，标志着国产大模型从对话能力向生产力工具的实质性跨越。
+      </div>
+      <div class="data-row">
+        <span class="data-tag up">Token ×10</span>
+        <span class="data-tag up">内调 +16.5倍</span>
+        <span class="data-tag">OpenRouter双冠</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>3. 谷歌Gemma 4：推理速度最高提升3倍</strong></div>
+      <div class="item-content">
+        谷歌5月5日发布Gemma 4，通过多Token预测（MTP）推测解码技术，在Apple Silicon（M5芯片）上实现推理速度最高3倍提升，发布后短时间下载量突破6000万次。普通消费级显卡运行复杂本地智能体成为现实。
+      </div>
+      <div class="data-row">
+        <span class="data-tag up">推理 ×3</span>
+        <span class="data-tag">6000万次下载</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>4. 月之暗面申请KimiClaw商标，估值剑指200亿美元</strong></div>
+      <div class="item-content">
+        天眼查显示，月之暗面近期申请"KimiClaw"商标，涵盖科学仪器、网站服务等类别。同期传出公司即将完成新一轮20亿美元融资，估值有望突破200亿美元，较上一轮翻倍。大模型长文本赛道资本热度仍在持续。
+      </div>
+      <div class="data-row">
+        <span class="data-tag up">估值 $200亿</span>
+        <span class="data-tag">新融资 $20亿</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 三、市场观察 -->
+  <div class="section-block">
+    <div class="section-header">
+      <div class="section-icon icon-market">市</div>
+      <div>
+        <div class="section-title">三、市场观察</div>
+        <div class="section-label">MARKET WATCH</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>WTI原油单日暴涨4%，霍尔木兹局势牵动能源市场</strong></div>
+      <div class="item-content">
+        美伊双方在霍尔木兹海峡交火，美中央司令部对伊朗军事设施实施定点打击。WTI原油应声反弹至98.62美元/桶，日涨4%；布伦特原油突破103美元/桶。沙特与科威特已解除美军使用军事基地及领空限制，能源供应扰动预期升温。同时，美国联邦法官裁定特朗普对大多数进口商品征收10%关税的行为违反法律，全球贸易秩序不确定性再度上升。
+      </div>
+      <div class="data-row">
+        <span class="data-tag up">WTI原油 +4%</span>
+        <span class="data-tag up">$98.62/桶</span>
+        <span class="data-tag alert">霍尔木兹交火</span>
+        <span class="data-tag alert">美10%关税违法</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title"><strong>美股分化，中概股承压</strong></div>
+      <div class="item-content">
+        道指跌0.63%报49596.97点，纳指微跌0.13%报25806.20点，标普500跌0.38%报7337.11点。纳斯达克中国金龙指数收跌1.33%，老虎证券跌7.29%、新氧跌7.06%、再鼎医药跌5.66%。现货黄金突破4700美元/盎司，再创历史新高。
+      </div>
+      <div class="data-row">
+        <span class="data-tag down">道指 -0.63%</span>
+        <span class="data-tag down">纳指 -0.13%</span>
+        <span class="data-tag down">中概金龙 -1.33%</span>
+        <span class="data-tag up">黄金 +0.28%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 核心总结 -->
+  <div class="summary-block">
+    <div class="summary-header">
+      <div class="section-icon icon-summary">总</div>
+      <div class="summary-title">核心总结</div>
+    </div>
+
+    <div class="summary-item">
+      <span class="summary-label">政策信号：</span>美丽中国考核从"软"转"硬"，环保督察持续高压，绿色产业具备长期政策支撑；儿童用药政策利好儿科药产业链完善。
+    </div>
+
+    <div class="summary-item">
+      <span class="summary-label">AI产业化：</span>国产大模型密集迭代（字节全模态理解、腾讯Hy3两周10倍增长），从"能对话"升级为"能执行"。推理效率成竞争新赛点，Mac端侧智能体生态加速成型。
+    </div>
+
+    <div class="summary-item">
+      <span class="summary-label">地缘风险：</span>霍尔木兹局势推动原油、黄金双双走高。若局势持续升级，能源板块及航运保险定价逻辑将全面重塑。
+    </div>
+
+    <div class="summary-item">
+      <span class="summary-risk">风险提示：</span>原油突破100美元/桶将向全球通胀传导，美股科技股估值压力不减，中概股短期承压。建议关注能源安全、黄金避险及国内大模型应用端机会。
+    </div>
+  </div>
+
+  <!-- 底部引导 -->
+  <div class="footer-cta">
+    <div class="footer-divider"></div>
+    <div class="footer-brand">一 知 桥</div>
+    <div class="footer-desc">聚焦信息差，助力决策者</div>
+    <div class="footer-btns">
+      <span class="footer-btn primary">关注我们</span>
+      <span class="footer-btn">赞</span>
+      <span class="footer-btn">在看</span>
+    </div>
+    <div class="footer-copy">
+      感谢阅读 · 欢迎转发 · 关注获取每日早参
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
