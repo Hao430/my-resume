@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5月11日 周一 今日速览 | 一知桥</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext');
+    @import url('https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext');
+
+    :root {
+      --primary-color: #1a1a2e;
+      --secondary-color: #4a4a6a;
+      --light-gray: #f0f2f5;
+      --accent-color: #07c160;
+      --accent-red: #e74c3c;
+      --accent-blue: #3498db;
+      --accent-orange: #e67e22;
+      --glass-bg: rgba(255, 255, 255, 0.92);
+      --card-bg: rgba(255, 255, 255, 0.95);
+      --shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+      --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.1);
+      --border-radius: 12px;
+      --transition: all 0.3s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--light-gray);
+      color: var(--primary-color);
+      line-height: 1.8;
+      font-size: 16px;
+      padding: 20px 0;
+    }
+
+    /* ===== COVER BANNER ===== */
+    .cover-banner {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 0;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f2027 0%, #203a43 40%, #2c5364 100%);
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cover-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+
+    .cover-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(7, 193, 96, 0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 30% 70%, rgba(52, 152, 219, 0.1) 0%, transparent 50%);
+    }
+
+    .cover-date {
+      position: relative;
+      z-index: 2;
+      font-size: 0.85em;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .cover-title {
+      position: relative;
+      z-index: 2;
+      font-size: 2em;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    .cover-subtitle {
+      position: relative;
+      z-index: 2;
+      font-size: 0.9em;
+      color: rgba(255,255,255,0.7);
+      margin-top: 8px;
+      letter-spacing: 1px;
+    }
+
+    .cover-divider {
+      position: relative;
+      z-index: 2;
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      margin: 14px auto;
+    }
+
+    .cover-dots {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .cover-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+    }
+
+    .cover-dot.active {
+      background: var(--accent-color);
+      width: 20px;
+      border-radius: 3px;
+    }
+
+    /* ===== MAIN CONTAINER ===== */
+    .main-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    #write {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 40px 40px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1 {
+      font-size: 1.6em;
+      color: var(--primary-color);
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--light-gray);
+      line-height: 1.4;
+    }
+
+    .section-intro {
+      text-align: center;
+      color: #888;
+      font-size: 0.95em;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    h2 {
+      font-size: 1.15em;
+      color: #fff;
+      background: linear-gradient(135deg, #27ae60, #2ecc71);
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin: 28px 0 16px;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(39, 174, 96, 0.25);
+      letter-spacing: 1px;
+    }
+
+    h2::before {
+      content: '01 ';
+      font-weight: 900;
+      opacity: 0.7;
+    }
+
+    h2.policy::before { content: '01 '; }
+    h2.company::before { content: '02 '; }
+    h2.market::before { content: '03 '; }
+
+    h2.company {
+      background: linear-gradient(135deg, #2980b9, #3498db);
+      box-shadow: 0 4px 15px rgba(41, 128, 185, 0.25);
+    }
+
+    h2.market {
+      background: linear-gradient(135deg, #e67e22, #f39c12);
+      box-shadow: 0 4px 15px rgba(230, 126, 34, 0.25);
+    }
+
+    h3 {
+      font-size: 1.05em;
+      color: var(--primary-color);
+      margin: 20px 0 8px;
+      padding-left: 14px;
+      border-left: 4px solid var(--accent-color);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    h3 .tag {
+      display: inline-block;
+      font-size: 0.75em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 8px;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
+    .tag-policy { background: rgba(39, 174, 96, 0.12); color: #27ae60; }
+    .tag-company { background: rgba(41, 128, 185, 0.12); color: #2980b9; }
+    .tag-market { background: rgba(230, 126, 34, 0.12); color: #e67e22; }
+
+    p {
+      color: var(--secondary-color);
+      margin-bottom: 0.9em;
+      font-size: 1em;
+      line-height: 1.85;
+    }
+
+    strong {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    em {
+      color: var(--accent-color);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 16px 20px;
+      margin: 14px 0;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .card-title {
+      font-size: 1em;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .card-content {
+      font-size: 0.95em;
+      color: var(--secondary-color);
+      line-height: 1.75;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.72em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    /* ===== SUMMARY BOX ===== */
+    .summary-box {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border-radius: var(--border-radius);
+      padding: 24px 28px;
+      margin: 28px 0 16px;
+      color: #fff;
+    }
+
+    .summary-box h3 {
+      color: #fff;
+      border-left-color: var(--accent-color);
+      margin-top: 0;
+      padding-left: 14px;
+    }
+
+    .summary-box p {
+      color: rgba(255,255,255,0.85);
+      line-height: 1.85;
+    }
+
+    .summary-item {
+      margin: 12px 0;
+      padding-left: 18px;
+      border-left: 3px solid var(--accent-color);
+    }
+
+    .summary-item-title {
+      font-weight: 700;
+      color: #4fc3f7;
+      font-size: 0.95em;
+      margin-bottom: 4px;
+    }
+
+    .summary-item-content {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95em;
+      line-height: 1.7;
+    }
+
+    .opportunity {
+      background: rgba(39, 174, 96, 0.12);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 12px 0;
+    }
+
+    .opportunity-title {
+      color: #2ecc71;
+      font-weight: 700;
+      font-size: 0.9em;
+      margin-bottom: 6px;
+    }
+
+    .opportunity-content {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9em;
+      line-height: 1.65;
+    }
+
+    .risk {
+      background: rgba(231, 76, 60, 0.12);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 10px 0;
+    }
+
+    .risk-title {
+      color: #e74c3c;
+      font-weight: 700;
+      font-size: 0.9em;
+      margin-bottom: 6px;
+    }
+
+    .risk-content {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9em;
+      line-height: 1.65;
+    }
+
+    /* ===== CTA ===== */
+    .cta-box {
+      background: linear-gradient(135deg, rgba(7, 193, 96, 0.08), rgba(7, 193, 96, 0.04));
+      border: 1px solid rgba(7, 193, 96, 0.2);
+      border-radius: var(--border-radius);
+      padding: 20px 24px;
+      text-align: center;
+      margin: 24px 0 8px;
+    }
+
+    .cta-box p {
+      color: var(--secondary-color);
+      font-size: 0.95em;
+      margin-bottom: 0;
+    }
+
+    .cta-box strong {
+      color: var(--accent-color);
+    }
+
+    /* ===== DIVIDER ===== */
+    .section-divider {
+      border: none;
+      border-top: 1px dashed rgba(0,0,0,0.08);
+      margin: 24px 0;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      #write { padding: 20px 18px; }
+      h1 { font-size: 1.35em; }
+      h2 { font-size: 1.05em; padding: 9px 14px; }
+      h3 { font-size: 1em; }
+      p, .card-content { font-size: 0.95em; }
+      .cover-banner { height: 180px; }
+      .cover-title { font-size: 1.6em; }
+    }
+
+    /* ===== WECHAT COMPATIBLE ===== */
+    strong { font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { padding: 10px 14px; border: 1px solid #eee; text-align: left; font-size: 0.9em; }
+    th { background: rgba(7, 193, 96, 0.06); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<!-- 封面 Banner -->
+<div class="main-container">
+<div class="cover-banner">
+  <div class="cover-date">2026.05.11 &nbsp;·&nbsp; 周一</div>
+  <div class="cover-title">今日速览</div>
+  <div class="cover-divider"></div>
+  <div class="cover-subtitle">一知桥 &nbsp;·&nbsp; 每条政策告诉你下一个机会在哪里</div>
+  <div class="cover-dots">
+    <div class="cover-dot"></div>
+    <div class="cover-dot active"></div>
+    <div class="cover-dot"></div>
+    <div class="cover-dot"></div>
+  </div>
+</div>
+
+<div id="write">
+
+<h1>5月11日 周一 今日速览</h1>
+<p class="section-intro">每一条政策、每一个信号，都在告诉你下一个机会在哪里。</p>
+
+---
+
+<h2 class="policy">政策速递</h2>
+
+<div class="card">
+  <div class="card-title"><span class="card-tag tag-policy">国常会</span>新型基础设施建设全面提速</div>
+  <div class="card-content">
+    李强总理5月9日主持召开国常会，要求加强<strong>水网、新型电网、算力网、新一代通信网、城市地下管网、物流网</strong>六大网络规划建设，增强地方自主偿债能力，坚决防范新增隐性债务。<br><br>
+    <em>意义：</em>新型基础设施正式上升为稳增长核心抓手，算力网与电网进入加速期，IDC、液冷、电力设备产业链直接受益。
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="card-tag tag-policy">AI治理</span>三部门联合印发智能体规范实施意见</div>
+  <div class="card-content">
+    工信部等三部门联合发文，首次系统规范AI智能体的应用边界与创新路径，明确合规运营标准与创新激励方向。<br><br>
+    <em>意义：</em>AI智能体从"野蛮生长"进入合规发展新阶段，合规智能体平台将获政策倾斜，不合规中小玩家加速出清。
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="card-tag tag-policy">绿电</span>四部门联合提升算力设施绿电占比</div>
+  <div class="card-content">
+    推动数据中心、算力枢纽绿色低碳转型，提高清洁能源使用比例，明确绿电算力设施建设标准与时间表。<br><br>
+    <em>意义：</em>算力+绿电双主线共振，液冷、光伏+储能等绿色算力产业链进入加速期。
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="card-tag tag-policy">外贸</span>前4月进出口同比增长14.9%</div>
+  <div class="card-content">
+    海关总署数据显示，前4月货物贸易进出口总值<strong>16.23万亿元</strong>，机电产品出口5.92万亿元（同比+17.6%），占比63.5%，出口结构加速向"新、绿、智"转型。<br><br>
+    <em>意义：</em>出口韧性持续验证，新兴产业出口成增长核心引擎，4月出口以美元计增14.1%、进口增25.3%，均超市场预期。
+  </div>
+</div>
+
+---
+
+<h2 class="company">企业要闻</h2>
+
+<div class="card">
+  <div class="card-title"><span class="card-tag tag-company">重磅</span>苹果×英特尔达成芯片代工协议</div>
+  <div class="card-content">
+    苹果公司与英特尔达成芯片制造初步协议，美国商务部长及特朗普均曾从中撮合。英特尔已与苹果、英伟达、SpaceX全部建立合作伙伴关系。受此提振，<strong>英特尔上周五股价暴涨14%</strong>，市值突破6278亿美元，4月以来累计涨幅达3倍。<br><br>
+    <em>价值点：</em>美国半导体"去台积电化"战略加速重构全球芯片格局，A股科创芯片ETF今日涨超4%，澜起科技涨15%、天岳先进涨9%。
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="card-tag tag-company">融资</span>DeepSeek首轮融资目标500亿元</div>
+  <div class="card-content">
+    知情人士透露，DeepSeek本轮融资目标约<strong>500亿元</strong>，估值有望突破3500亿元，将创中国AI企业史上最大单笔融资纪录。此前V4开源引爆A股半导体行情。<br><br>
+    <em>价值点：</em>国产大模型估值体系持续重构，头部玩家资本虹吸效应加剧，字节跳动已将2026年AI资本开支计划上调25%至逾2000亿元。
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="card-tag tag-company">私募</span>景林资产大调仓，AI投资入"深水区"</div>
+  <div class="card-content">
+    千亿私募景林2026年Q1美股持仓38.78亿美元，<strong>减持英伟达、Meta，增持英特尔</strong>，新进携程、亚马逊，中概股占前十大重仓五席。英伟达今年对外股权投资已超400亿美元打造AI生态闭环。<br><br>
+    <em>价值点：</em>AI投资逻辑正从"算力芯片"向"应用层、能源层"深度扩散，景林持仓变化为市场重要风向标。
+  </div>
+</div>
+
+---
+
+<h2 class="market">市场观察</h2>
+
+<div class="card">
+  <div class="card-title"><span class="card-tag tag-market">A股</span>两融余额创历史新高</div>
+  <div class="card-content">
+    截至5月7日，A股两融余额和融资余额均创历史新高，4月以来融资余额增加<strong>1758.68亿元</strong>，科技板块获最多加仓。创业板指上周涨3.24%，科创50涨4.42%，芯片股集体爆发。<br><br>
+    分析人士称：两融规模增加反映市场风险偏好回升，流动性环境宽松格局延续。
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="card-tag tag-market">美股</span>纳指标普连创历史新高</div>
+  <div class="card-content">
+    纳指上周涨4.51%至26247点，标普500涨2.33%，<strong>两大指数连涨六周</strong>，创一年半最长连涨周。芯片指数单周涨5.5%，美光涨15%。4月非农新增就业11.5万超预期，但消费者信心创历史新低（5月初值48.2）。
+  </div>
+</div>
+
+---
+
+<div class="summary-box">
+  <h3>核心总结</h3>
+  <p>今日三大信号值得关注：</p>
+
+  <div class="summary-item">
+    <div class="summary-item-title">政策信号</div>
+    <div class="summary-item-content">国常会明确"六网"建设方向，新型基础设施（算力网+电网）成为稳增长核心抓手，政策重心从"鼓励AI"升级为"买单AI+买单基建"。</div>
+  </div>
+
+  <div class="summary-item">
+    <div class="summary-item-title">企业信号</div>
+    <div class="summary-item-content">全球芯片格局重构加速（苹果+英特尔合作），DeepSeek融资规模刷新纪录，千亿私募景林调仓反映AI投资从"芯片层"向"应用层、能源层"扩散。</div>
+  </div>
+
+  <div class="summary-item">
+    <div class="summary-item-title">市场信号</div>
+    <div class="summary-item-content">A股两融余额创历史新高，风险偏好持续回升；美股连创新高、半导体领涨，DeepSeek行情持续向A股算力产业链传导。</div>
+  </div>
+
+  <div class="opportunity">
+    <div class="opportunity-title">核心机会</div>
+    <div class="opportunity-content">算力基础设施（IDC、液冷、电源）、绿色算力、半导体设备国产替代</div>
+  </div>
+
+  <div class="risk">
+    <div class="risk-title">风险提示</div>
+    <div class="risk-content">地缘风险持续（霍尔木兹局势僵持，原油维持95美元高位）；美联储降息预期持续降温，流动性边际收紧风险</div>
+  </div>
+</div>
+
+---
+
+<div class="cta-box">
+  <p>感谢阅读，欢迎关注「<strong>一知桥</strong>」，每日为你解读政策、企业与市场的真实信号。</p>
+  <p style="margin-top:10px; font-size:0.88em; color:#999;">点赞 + 在看 + 转发，是对原创最好的支持。</p>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
