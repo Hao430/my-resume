@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年5月13日 周三 今日速览 | 一知桥</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext');
+
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #16213e;
+  --accent-color: #0f3460;
+  --highlight: #e94560;
+  --gold: #f0a500;
+  --green: #07c160;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --glass-bg: rgba(255, 255, 255, 0.92);
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background-color: #0a0a1a;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(15, 52, 96, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(233, 69, 96, 0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 60% 80%, rgba(10, 100, 150, 0.2) 0%, transparent 45%),
+    linear-gradient(180deg, #0a0a1a 0%, #0d1525 100%);
+  min-height: 100vh;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+/* === 封面Banner === */
+.cover-banner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 40%, #0a0a2e 70%, #1a1a3e 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cover-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+.cover-banner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(233,69,96,0.06) 0%, transparent 40%);
+  animation: pulse 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.cover-date {
+  position: relative;
+  z-index: 2;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-family: 'Lato', sans-serif;
+}
+
+.cover-title {
+  position: relative;
+  z-index: 2;
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-family: 'Merriweather', serif;
+  text-shadow: 0 2px 20px rgba(233,69,96,0.3);
+  margin-bottom: 10px;
+}
+
+.cover-subtitle {
+  position: relative;
+  z-index: 2;
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 2px;
+}
+
+.cover-divider {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--highlight), transparent);
+  margin: 14px auto 0;
+}
+
+.cover-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.cover-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+}
+
+.cover-dots span.active {
+  background: var(--highlight);
+  box-shadow: 0 0 8px rgba(233,69,96,0.6);
+  width: 20px;
+  border-radius: 3px;
+}
+
+/* === 主内容容器 === */
+#write {
+  max-width: 680px;
+  margin: -30px auto 40px;
+  padding: 0 20px;
+}
+
+/* === 文章卡片 === */
+.article-card {
+  background: var(--glass-bg);
+  border-radius: 16px;
+  padding: 32px 36px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--highlight), var(--gold), var(--green));
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(15,52,96,0.1);
+  letter-spacing: 1px;
+}
+
+.section-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.icon-policy { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+.icon-enterprise { background: linear-gradient(135deg, #f093fb, #f5576c); color: white; }
+.icon-market { background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; }
+.icon-summary { background: linear-gradient(135deg, #fa709a, #fee140); color: white; }
+
+/* === 新闻条目 === */
+.news-item {
+  margin-bottom: 18px;
+  padding-left: 14px;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.news-item:last-child { margin-bottom: 0; }
+
+.news-item:hover {
+  border-left-color: var(--highlight);
+}
+
+.news-item:hover .news-title {
+  color: var(--highlight);
+}
+
+.news-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.news-content {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.9;
+}
+
+.news-content strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.highlight-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--highlight), #ff6b6b);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-right: 5px;
+  vertical-align: middle;
+  letter-spacing: 0.5px;
+}
+
+.tag-green {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.tag-blue {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+.tag-gold {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+/* === 核心总结 === */
+.summary-card {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 16px;
+  padding: 28px 32px;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.summary-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.summary-content {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 2;
+  position: relative;
+  z-index: 1;
+}
+
+.summary-content strong {
+  color: #fee140;
+  font-weight: 600;
+}
+
+.summary-content p {
+  margin-bottom: 10px;
+}
+
+.summary-content p:last-child { margin-bottom: 0; }
+
+.risk-box {
+  margin-top: 14px;
+  padding: 14px 18px;
+  background: rgba(233, 69, 96, 0.15);
+  border-left: 3px solid var(--highlight);
+  border-radius: 0 8px 8px 0;
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.9;
+}
+
+.risk-box strong {
+  color: #fee140;
+}
+
+/* === 底部引导 === */
+.footer-section {
+  text-align: center;
+  padding: 28px 20px;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.footer-brand {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+
+.footer-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 14px;
+  line-height: 1.8;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-share {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-like {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+.btn-watch {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  box-shadow: 0 4px 15px rgba(56, 239, 125, 0.4);
+}
+
+/* === 内文分隔线 === */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(15,52,96,0.15), transparent);
+  margin: 20px 0;
+}
+
+/* === 响应式 === */
+@media (max-width: 600px) {
+  .cover-title { font-size: 24px; }
+  #write { padding: 0 12px; }
+  .article-card { padding: 22px 20px; }
+  .summary-card { padding: 22px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 封面Banner -->
+<div class="cover-banner">
+  <div class="cover-date">YI ZHI QIAO</div>
+  <div class="cover-title">今日速览</div>
+  <div class="cover-subtitle">2026年5月13日 &nbsp;·&nbsp; 周三</div>
+  <div class="cover-divider"></div>
+  <div class="cover-dots">
+    <span></span><span></span><span class="active"></span><span></span><span></span>
+  </div>
+</div>
+
+<!-- 主内容 -->
+<div id="write">
+
+  <!-- 一、政策速递 -->
+  <div class="article-card">
+    <div class="section-title">
+      <div class="section-icon icon-policy">策</div>
+      政策速递
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">
+        <span class="highlight-tag">国资委</span>
+        央企十五五规划审议：推动产业整体跃升
+      </div>
+      <div class="news-content">
+        5月11日，国务院国资委党委召开专题会议，审议《中央企业"十五五"发展规划纲要》。会议聚焦"五个价值"完善指标体系，在<strong>产业链强基补短、能源资源保障、前瞻产业布局</strong>等方向梯次部署标志性工程，一体推进传统产业转型升级与新兴支柱产业培育，并强化原始创新与自主可控。
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">
+        <span class="highlight-tag tag-blue">央行</span>
+        Q1货币政策执行报告：适度宽松基调不变
+      </div>
+      <div class="news-content">
+        5月11日，央行发布《2026年第一季度中国货币政策执行报告》指出，一季度国民经济实现良好开局，宏观政策将继续实施<strong>适度宽松货币政策</strong>。与此同时，报告删去此前"降准降息"相关表述，透露货币政策节奏更为审慎稳健，对总量工具使用趋于克制。
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">
+        <span class="highlight-tag tag-gold">网信办</span>
+        规范短视频内容标注，强化平台治理
+      </div>
+      <div class="news-content">
+        中央网信办全面部署推进短视频内容标注规范工作，要求各平台强化内容治理责任，提升信息可信度与传播秩序，AI生成内容须明确标注来源与属性，违者将面临整改或下架处置。
+      </div>
+    </div>
+  </div>
+
+  <!-- 二、企业要闻 -->
+  <div class="article-card">
+    <div class="section-title">
+      <div class="section-icon icon-enterprise">企</div>
+      企业要闻
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">
+        <span class="highlight-tag">DeepSeek</span>
+        首轮500亿融资落地，估值达3500亿元创纪录
+      </div>
+      <div class="news-content">
+        国产AI头部公司DeepSeek正式完成首轮外部股权融资，计划募资<strong>500亿元</strong>：梁文锋本人出资200亿、阿里100亿、腾讯100亿、国家大基金100亿，公司投后估值达<strong>3500亿元（约515亿美元）</strong>，一举刷新中国AI企业单笔融资纪录。技术层面，KV缓存命中率高达98%，API费用较原价直降50至120倍，V4.1版本已定档6月发布。
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">
+        <span class="highlight-tag tag-green">恒瑞医药×BMS</span>
+        152亿美元全球战略合作，A股盘中涨停
+      </div>
+      <div class="news-content">
+        5月12日，恒瑞医药宣布与百时美施贵宝（BMS）达成全球战略合作，共同推进<strong>13款早期项目</strong>（恒瑞4个+BMS4个+联合5个），涵盖肿瘤、血液及免疫学领域。潜在总交易额<strong>152亿美元</strong>，首付款6亿美元。恒瑞A股当日盘中强势涨停，收涨4.84%报56.11元，市值达3724亿元，标志着中国创新药研发效率跻身全球核心竞争序列。
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">
+        <span class="highlight-tag tag-blue">嘉立创</span>
+        深交所IPO审议通过，2025年营收首破百亿
+      </div>
+      <div class="news-content">
+        5月12日，深交所上市审核委员会审议通过深圳嘉立创科技集团首发申请。2025年嘉立创营收<strong>102.32亿元</strong>，同比增长28.40%；累计服务全球180余个国家和地区，注册用户959万。继群核科技之后，嘉立创有望成为又一登录资本市场的硬科技独角兽。
+      </div>
+    </div>
+  </div>
+
+  <!-- 三、市场观察 -->
+  <div class="article-card">
+    <div class="section-title">
+      <div class="section-icon icon-market">市</div>
+      市场观察
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">
+        <span class="highlight-tag">A股</span>
+        高位震荡，沪指、创业板指齐创近11年新高
+      </div>
+      <div class="news-content">
+        5月11日至12日，A股强势上攻：沪指涨<strong>1.08%</strong>报4225.02点，创业板指大涨<strong>3.50%</strong>至3928.97点，科创50指数飙升<strong>4.65%</strong>至1716.69点，全市场成交额突破<strong>3.5万亿元</strong>创近四个月新高。然而连续急涨后，5月13日市场出现高位震荡回调，沪指小幅低开。本轮行情自3200点启动，7个交易日累计涨幅超30%，天量成交后市场存在内生休整需求。
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">
+        <span class="highlight-tag tag-gold">可转债</span>
+        加速退出规模逼近5000亿关口
+      </div>
+      <div class="news-content">
+        2026年内已有<strong>80只可转债</strong>正式退出或即将退出市场，退出规模接近780亿元，其中66只因触发强赎条款退出，占比达82.5%。当前全市场可转债剩余规模已接近5000亿元关口，较历史峰值大幅回落，机构预计年内规模或进一步压缩至4500亿附近，反映A股权益市场回暖背景下转债强赎加速的现实。
+      </div>
+    </div>
+  </div>
+
+  <!-- 四、核心总结 -->
+  <div class="summary-card">
+    <div class="summary-title">
+      <div class="section-icon icon-summary">★</div>
+      核心总结
+    </div>
+    <div class="summary-content">
+      <p><strong>三大信号，看清当下市场主线：</strong></p>
+      <p>• <strong>政策持续托底：</strong>央企十五五规划聚焦前瞻布局，货币政策宽松基调不变，科技创新与产业升级是政策主线核心方向。</p>
+      <p>• <strong>AI融资热潮持续：</strong>DeepSeek 500亿天价融资落地，标志着国产AI进入资本加速期，头部效应进一步强化，中间层创业公司融资难度陡增。</p>
+      <p>• <strong>创新药出海加速：</strong>恒瑞152亿美元BD交易，是中国医药研发能力获得全球认可的里程碑事件，可重点关注后续管线进展。</p>
+
+      <div class="risk-box">
+        <strong>风险提示：</strong>A股连续急涨后技术性回调压力犹存，可转债市场加速退出（年内逼近4500亿）亦需关注结构性影响。
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 底部引导 -->
+<div style="max-width:680px;margin:0 auto 40px;padding:0 20px;text-align:center;">
+  <div class="footer-section" style="background:rgba(255,255,255,0.05);border-radius:16px;padding:24px 20px;backdrop-filter:blur(10px);">
+    <div class="footer-brand">一知桥</div>
+    <div class="footer-desc">聚焦信息差，连接一知半解与真知笃行<br>感谢阅读，欢迎转发、点赞、在看</div>
+    <div class="footer-actions">
+      <span class="footer-btn btn-share">↗ 转发</span>
+      <span class="footer-btn btn-like">♥ 点赞</span>
+      <span class="footer-btn btn-watch">★ 在看</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
