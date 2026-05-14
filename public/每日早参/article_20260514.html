@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年5月14日 周四 今日速览 - 一知桥</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #555;
+            --light-gray: #f5f5f7;
+            --accent-color: #07c160;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            line-height: 1.8;
+            font-size: 16px;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 60px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        /* CSS封面Banner */
+        .cover-banner {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2d4a3e 50%, #1a3a2a 100%);
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cover-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(rgba(7,193,96,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(7,193,96,0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .cover-banner::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(7,193,96,0.08) 0%, transparent 60%);
+        }
+        .cover-banner .banner-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .cover-banner .banner-date {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .cover-banner .banner-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        .cover-banner .banner-sub {
+            font-size: 16px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 16px;
+            letter-spacing: 1px;
+        }
+        .cover-banner .divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), rgba(7,193,96,0.3));
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+        .cover-banner .dots {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .cover-banner .dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(7,193,96,0.4);
+        }
+        .cover-banner .dots span:nth-child(2) {
+            background: var(--accent-color);
+            width: 20px;
+            border-radius: 3px;
+        }
+        /* 内容样式 */
+        .section-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--primary-color);
+            padding-left: 1em;
+            border-left: 5px solid var(--accent-color);
+            margin-top: 2.2em;
+            margin-bottom: 1em;
+            background: linear-gradient(to right, rgba(7, 193, 96, 0.05), transparent 5%);
+            padding-top: 0.3em;
+            padding-bottom: 0.3em;
+            border-radius: 0 8px 8px 0;
+        }
+        .section-title::before {
+            content: "\25B6";
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+            font-size: 0.7em;
+        }
+        .news-item {
+            margin-bottom: 1.2em;
+            color: var(--secondary-color);
+            font-size: 1.05em;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .news-item strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .news-item .source {
+            font-size: 0.85em;
+            color: #999;
+        }
+        /* 核心总结卡片 */
+        .summary-card {
+            background: linear-gradient(135deg, rgba(7, 193, 96, 0.08), rgba(7, 193, 96, 0.02));
+            border: 1px solid rgba(7, 193, 96, 0.15);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 2em;
+        }
+        .summary-card .summary-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            padding-left: 0;
+            border-left: none;
+            background: none;
+        }
+        .summary-card .summary-title::before {
+            content: none;
+        }
+        .summary-card p {
+            margin-bottom: 1em;
+            color: var(--secondary-color);
+            font-size: 1.02em;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .summary-card p:last-child {
+            margin-bottom: 0;
+        }
+        /* 结尾引导 */
+        .footer-guide {
+            text-align: center;
+            margin-top: 3em;
+            padding-top: 1.5em;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            color: #999;
+            font-size: 0.95em;
+            line-height: 2;
+        }
+        .footer-guide .brand {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px 15px; margin: 0 10px; border-radius: 12px; }
+            .cover-banner { padding: 40px 20px; }
+            .cover-banner .banner-title { font-size: 24px; }
+            .section-title { font-size: 1.2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 封面Banner -->
+        <div class="cover-banner">
+            <div class="banner-content">
+                <div class="banner-date">2026 / 05 / 14</div>
+                <div class="banner-title">今日速览</div>
+                <div class="banner-sub">一知桥 | 每日财经科技信息差</div>
+                <div class="divider"></div>
+                <div class="dots">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 一、政策速递 -->
+        <h2 class="section-title">一、政策速递</h2>
+
+        <div class="news-item">
+            <strong>国务院发布2026年度立法工作计划。</strong>国办发〔2026〕14号文件明确年度立法重点，涵盖科技创新、数字经济、民生保障等领域，为十五五开局提供法治保障。<span class="source">（来源：中国政府网，5.11）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>市场监管总局启动全国统一大市场"清障"行动。</strong>5月至12月在全系统组织开展专项行动，破除妨碍统一市场和公平竞争的卡点堵点，以更大力度规范竞争秩序。<span class="source">（来源：市场监管总局，5.13）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>央行Q1货币政策报告聚焦利率市场化改革。</strong>报告以专栏形式讨论贷款利率定价基准多元化，3月末LPR减点贷款占比接近49%，利率市场化改革纵深推进。<span class="source">（来源：央行，5.13）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>2026世界数字教育大会在杭州召开。</strong>教育部部长怀进鹏作主旨演讲，强调AI+教育深度融合，推动教育数字化转型升级。<span class="source">（来源：教育部，5.11）</span>
+        </div>
+
+        <!-- 二、企业要闻 -->
+        <h2 class="section-title">二、企业要闻</h2>
+
+        <div class="news-item">
+            <strong>腾讯Q1营收1965亿元，AI战略全面提速。</strong>归母净利润581亿元（+21%），马化腾坦言"一年前以为上了AI的船结果发现漏水了"，元宝App官宣支持总结微信聊天记录。若剔除AI投入，经营利润实际增长17%。<span class="source">（来源：腾讯财报，5.13）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>阿里巴巴全年营收首破万亿，AI收入占比达30%。</strong>2026财年营收10237亿元（+3%），净利润1059亿元（-18%）。CEO吴泳铭明确AI基建投入远超3800亿元承诺，云和AI目标五年突破1000亿美元年收入。<span class="source">（来源：阿里巴巴财报，5.13）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>英伟达市值首破5.5万亿美元，连续六日上涨。</strong>美光市值突破9000亿美元创历史新高，数据中心需求驱动AI芯片持续涨价，黄仁勋称旧GPU"越陈越香"。<span class="source">（来源：新浪财经，5.14）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>中国科学家成功研制"九章四号"量子计算原型机。</strong>代表低损耗光量子处理器在规模和复杂度上的重大飞跃，进一步巩固我国在光量子计算领域的世界领先地位。<span class="source">（来源：IT之家，5.14）</span>
+        </div>
+
+        <!-- 四、市场观察 -->
+        <h2 class="section-title">四、市场观察</h2>
+
+        <div class="news-item">
+            <strong>美国4月PPI同比飙升6%创2022年以来最大涨幅。</strong>美联储主席提名凯文·沃什以54:45获参议院批准，30年期国债收益率首破5%至2007年以来高位，加息预期升温。<span class="source">（来源：新浪财经，5.14）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>A股电力设备板块受政策和招标共振走强。</strong>国家电网2026年首轮大额招标收官，订单总额超39亿元，一季度国网投资同比增37%。中概股集体反弹，金龙指数+3.87%，阿里+8.18%。<span class="source">（来源：上海证券报/新浪财经，5.14）</span>
+        </div>
+
+        <!-- 核心总结 -->
+        <div class="summary-card">
+            <h2 class="summary-title">核心总结</h2>
+            <p><strong>三条主线清晰：AI资本开支竞赛白热化、电力基建需求激增、全球通胀预期升温。</strong>腾讯和阿里财报共同印证——AI已从"技术信仰"进入"真金白银"投入阶段，阿里明确算力资产将达AI爆发前十倍以上。电力板块受益于AI算力爆发带来的电力需求激增，国网投资加速传导至设备端。海外方面，美国PPI超预期+美联储可能加息的组合值得警惕，但科技股盈利韧性支撑纳指续创新高。</p>
+            <p><strong>机会提示：</strong>AI算力产业链（芯片/电力设备/数据中心）和出海高增长企业值得关注。<strong>风险提示：</strong>全球通胀黏性超预期、美债收益率持续走高对风险资产的压制。</p>
+        </div>
+
+        <!-- 结尾引导 -->
+        <div class="footer-guide">
+            <span class="brand">一知桥</span> | 每日财经科技信息差<br>
+            欢迎关注、点赞、在看，获取每日最新资讯
+        </div>
+    </div>
+</body>
+</html>
