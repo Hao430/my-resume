@@ -10,8 +10,8 @@ const posts = computed(() =>
     slug: post.slug,
     title: post.title,
     excerpt: post.description,
-    type: post.externalUrl ? 'slides' : 'article',
-    externalUrl: post.externalUrl || null,
+    type: post.external_url ? 'slides' : 'article',
+    externalUrl: post.external_url || null,
     date: post.date,
     tags: post.tags,
     readingTime: '5分钟'
