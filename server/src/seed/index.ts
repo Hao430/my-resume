@@ -129,13 +129,6 @@ async function seedSlides() {
 // ---------------------------------------------------------------
 // 4. Daily briefs: scan public/每日早参/*.html
 // ---------------------------------------------------------------
-interface Brief {
-  date: string
-  title: string
-  contentHtml: string
-  displayDate: string
-}
-
 function parseDateFromFilename(filename: string): string | null {
   const match = filename.match(/article_(\d{4})(\d{2})(\d{2})\.html$/)
   return match ? `${match[1]}-${match[2]}-${match[3]}` : null

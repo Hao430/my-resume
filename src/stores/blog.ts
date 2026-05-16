@@ -25,7 +25,7 @@ export const useBlogStore = defineStore('blog', () => {
     return posts.value.find(p => p.slug === slug)
   }
 
-  async function addPost(post: { title: string; description: string; date: string; tags: string[] }) {
+  async function addPost(_post: { title: string; description: string; date: string; tags: string[] }) {
     // 写接口暂未开放
     throw new Error('Adding posts via API is not yet supported')
   }
