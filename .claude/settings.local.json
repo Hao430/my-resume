@@ -3,7 +3,28 @@
     "allow": [
       "Bash(npx tsc:*)",
       "Bash(npm run:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git mv *)",
+      "Bash(read f *)",
+      "Bash(npm install *)",
+      "Bash(docker compose up *)",
+      "Bash(sudo -n docker ps)",
+      "Bash(pg_isready)",
+      "Bash(pg_lsclusters)",
+      "Bash(sudo apt-get update -qq)",
+      "Bash(sudo apt-get install -y -qq postgresql postgresql-client)",
+      "Bash(apt list *)",
+      "Bash(find / -name \"pg_isready\")",
+      "Bash(find / -name \"psql\")",
+      "Bash(podman ps *)",
+      "Bash(npm remove *)",
+      "Bash(timeout 5 npx tsx src/index.ts)",
+      "Bash(npx tsx *)",
+      "Bash(kill %1)",
+      "Bash(npx vue-tsc *)",
+      "Bash(pnpm build-only *)",
+      "Bash(node *)",
+      "Bash(git add *)"
     ]
   }
 }

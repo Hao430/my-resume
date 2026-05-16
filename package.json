@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:server": "cd server && npm run dev",
+    "dev:all": "run-p dev dev:server",
     "build": "npm run sync-daily-briefs && run-p type-check \"build-only {@}\" --",
     "build-only": "vite build",
     "preview": "vite preview",

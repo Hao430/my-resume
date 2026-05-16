@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { resumeData } from '../data/resume'
+import { computed } from 'vue'
+import { useResumeStore } from '../stores/resume'
+
+const resumeStore = useResumeStore()
+const rd = computed(() => resumeStore.data)
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id)
@@ -19,7 +23,7 @@ const scrollToSection = (id: string) => {
           关于我
         </h1>
         <p class="page-header__subtitle animate-fadeInUp delay-200">
-          {{ resumeData.personalInfo.university }} · {{ resumeData.personalInfo.major }}
+          {{ rd?.personalInfo.university }} · {{ rd?.personalInfo.major }}
         </p>
       </div>
     </section>
@@ -62,7 +66,7 @@ const scrollToSection = (id: string) => {
               </svg>
             </div>
             <h3 class="summary-card__title">专业扎实</h3>
-            <p class="summary-card__text">{{ resumeData.professionalSummary.strong }}</p>
+            <p class="summary-card__text">{{ rd?.professionalSummary.strong }}</p>
           </div>
           <div class="summary-card card animate-fadeInUp delay-100">
             <div class="summary-card__icon">
@@ -73,7 +77,7 @@ const scrollToSection = (id: string) => {
               </svg>
             </div>
             <h3 class="summary-card__title">能力全面</h3>
-            <p class="summary-card__text">{{ resumeData.professionalSummary.comprehensive }}</p>
+            <p class="summary-card__text">{{ rd?.professionalSummary.comprehensive }}</p>
           </div>
           <div class="summary-card card animate-fadeInUp delay-200">
             <div class="summary-card__icon">
@@ -82,7 +86,7 @@ const scrollToSection = (id: string) => {
               </svg>
             </div>
             <h3 class="summary-card__title">素养突出</h3>
-            <p class="summary-card__text">{{ resumeData.professionalSummary.outstanding }}</p>
+            <p class="summary-card__text">{{ rd?.professionalSummary.outstanding }}</p>
           </div>
         </div>
       </div>
@@ -101,7 +105,7 @@ const scrollToSection = (id: string) => {
             <h3 class="skill-category__title">技术能力</h3>
             <div class="skill-tags">
               <span
-                v-for="skill in resumeData.skills.filter(s => s.category === 'technical')"
+                v-for="skill in rd?.skills.filter(s => s.category === 'technical')"
                 :key="skill.name"
                 class="skill-tag"
               >
@@ -114,7 +118,7 @@ const scrollToSection = (id: string) => {
             <h3 class="skill-category__title">专业能力</h3>
             <div class="skill-tags">
               <span
-                v-for="skill in resumeData.skills.filter(s => s.category === 'professional')"
+                v-for="skill in rd?.skills.filter(s => s.category === 'professional')"
                 :key="skill.name"
                 class="skill-tag skill-tag--vermilion"
               >
@@ -127,7 +131,7 @@ const scrollToSection = (id: string) => {
             <h3 class="skill-category__title">工具软件</h3>
             <div class="skill-tags">
               <span
-                v-for="skill in resumeData.skills.filter(s => s.category === 'tools')"
+                v-for="skill in rd?.skills.filter(s => s.category === 'tools')"
                 :key="skill.name"
                 class="skill-tag skill-tag--gold"
               >
@@ -148,7 +152,7 @@ const scrollToSection = (id: string) => {
         </h2>
         <div class="timeline">
           <div
-            v-for="(project, index) in resumeData.projectExperiences"
+            v-for="(project, index) in rd?.projectExperiences"
             :key="project.projectName"
             class="timeline-item animate-fadeInUp"
             :class="`delay-${(index % 3) * 100}`"
@@ -194,7 +198,7 @@ const scrollToSection = (id: string) => {
         </h2>
         <div class="timeline">
           <div
-            v-for="(exp, index) in resumeData.workExperiences"
+            v-for="(exp, index) in rd?.workExperiences"
             :key="exp.company + exp.period"
             class="timeline-item animate-fadeInUp"
             :class="`delay-${(index % 3) * 100}`"
@@ -226,7 +230,7 @@ const scrollToSection = (id: string) => {
         </h2>
         <div class="honors-list">
           <div
-            v-for="(honor, index) in resumeData.honors"
+            v-for="(honor, index) in rd?.honors"
             :key="honor.name"
             class="honor-item card animate-fadeInUp"
             :class="`delay-${(index % 4) * 100}`"

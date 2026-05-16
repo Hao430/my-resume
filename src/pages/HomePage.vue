@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import Hero from '../components/Hero.vue'
-import { resumeData } from '../data/resume'
+import { useResumeStore } from '../stores/resume'
+
+const resumeStore = useResumeStore()
+const rd = computed(() => resumeStore.data)
 
 // 最新项目（取前3个）
-const recentProjects = resumeData.projectExperiences.slice(0, 3)
+const recentProjects = computed(() => rd.value?.projectExperiences?.slice(0, 3) || [])
 
 // 最新荣誉（取前2个）
-const recentHonors = resumeData.honors.slice(0, 2)
+const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
 </script>
 
 <template>
@@ -75,10 +79,10 @@ const recentHonors = resumeData.honors.slice(0, 2)
               关于我
             </h2>
             <p class="about-preview__text">
-              {{ resumeData.professionalSummary.strong }}
+              {{ rd?.professionalSummary?.strong }}
             </p>
             <p class="about-preview__text">
-              {{ resumeData.professionalSummary.comprehensive }}
+              {{ rd?.professionalSummary?.comprehensive }}
             </p>
             <router-link to="/about" class="btn btn--primary mt-6">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -90,19 +94,19 @@ const recentHonors = resumeData.honors.slice(0, 2)
           </div>
           <div class="about-preview__stats">
             <div class="stat-item">
-              <span class="stat-item__value">{{ resumeData.projectExperiences.length }}</span>
+              <span class="stat-item__value">{{ rd?.projectExperiences?.length }}</span>
               <span class="stat-item__label">项目经验</span>
             </div>
             <div class="stat-item">
-              <span class="stat-item__value">{{ resumeData.workExperiences.length }}</span>
+              <span class="stat-item__value">{{ rd?.workExperiences?.length }}</span>
               <span class="stat-item__label">工作经历</span>
             </div>
             <div class="stat-item">
-              <span class="stat-item__value">{{ resumeData.honors.length }}</span>
+              <span class="stat-item__value">{{ rd?.honors?.length }}</span>
               <span class="stat-item__label">荣誉奖项</span>
             </div>
             <div class="stat-item">
-              <span class="stat-item__value">{{ resumeData.skills.length }}</span>
+              <span class="stat-item__value">{{ rd?.skills?.length }}</span>
               <span class="stat-item__label">技能标签</span>
             </div>
           </div>

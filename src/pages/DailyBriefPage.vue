@@ -1,14 +1,29 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { dailyBriefs } from '@/data/dailyBriefs'
+import { ref, computed, onMounted } from 'vue'
+import { api, type BriefListItem } from '../api'
 
 const currentFile = ref<string | null>(null)
+const briefs = ref<BriefListItem[]>([])
+const loading = ref(false)
 
-const latestBrief = computed(() => dailyBriefs.length > 0 ? dailyBriefs[0] : null)
+const latestBrief = computed(() => briefs.value.length > 0 ? briefs.value[0] : null)
 
-const openBrief = (file: string) => {
-  currentFile.value = file
+async function fetchBriefs() {
+  loading.value = true
+  try {
+    briefs.value = await api.getBriefs()
+  } catch {
+    // 静默处理，页面显示空状态
+  } finally {
+    loading.value = false
+  }
 }
+
+const openBrief = (date: string) => {
+  currentFile.value = `/每日早参/article_${date.replace(/-/g, '')}.html`
+}
+
+onMounted(fetchBriefs)
 </script>
 
 <template>
@@ -33,8 +48,8 @@ const openBrief = (file: string) => {
         <div v-if="latestBrief" class="latest-brief animate-fadeInUp">
           <div class="latest-brief__badge">今日</div>
           <h2 class="latest-brief__title">{{ latestBrief.title }}</h2>
-          <div class="latest-brief__meta">{{ latestBrief.displayDate }}</div>
-          <button class="btn btn--primary" @click="openBrief(latestBrief.file)">
+          <div class="latest-brief__meta">{{ latestBrief.display_date }}</div>
+          <button class="btn btn--primary" @click="openBrief(latestBrief.date)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
               <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
@@ -44,21 +59,21 @@ const openBrief = (file: string) => {
         </div>
 
         <!-- 历史早参 -->
-        <div v-if="dailyBriefs.length > 1" class="history-section">
+        <div v-if="briefs.length > 1" class="history-section">
           <h3 class="history-section__title">
             <span class="section-title__accent">·</span>
             历史早参
           </h3>
           <div class="briefs-list">
             <article
-              v-for="(brief, index) in dailyBriefs.slice(1)"
+              v-for="(brief, index) in briefs.slice(1)"
               :key="brief.date"
               class="brief-card card card--glow animate-fadeInUp"
               :class="`delay-${(index % 3) * 100}`"
             >
-              <div class="brief-card__date">{{ brief.displayDate }}</div>
+              <div class="brief-card__date">{{ brief.display_date }}</div>
               <h4 class="brief-card__title">{{ brief.title }}</h4>
-              <button class="brief-card__link" @click="openBrief(brief.file)">
+              <button class="brief-card__link" @click="openBrief(brief.date)">
                 阅读
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -69,7 +84,7 @@ const openBrief = (file: string) => {
         </div>
 
         <!-- 空状态 -->
-        <div v-if="dailyBriefs.length === 0" class="empty-state">
+        <div v-if="!loading && briefs.length === 0" class="empty-state">
           <svg class="empty-state__icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <circle cx="12" cy="12" r="10"/>
             <path d="M12 6v6l4 2"/>
