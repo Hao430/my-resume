@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年5月16日 周六 今日速览 - 一知桥</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #555;
+            --light-gray: #f5f5f7;
+            --accent-color: #07c160;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            line-height: 1.8;
+            font-size: 16px;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 60px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        /* CSS封面Banner */
+        .cover-banner {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2d4a3e 50%, #1a3a2a 100%);
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cover-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(rgba(7,193,96,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(7,193,96,0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .cover-banner::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(7,193,96,0.08) 0%, transparent 60%);
+        }
+        .cover-banner .banner-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .cover-banner .banner-date {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .cover-banner .banner-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        .cover-banner .banner-sub {
+            font-size: 16px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 16px;
+            letter-spacing: 1px;
+        }
+        .cover-banner .divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), rgba(7,193,96,0.3));
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+        .cover-banner .dots {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .cover-banner .dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(7,193,96,0.4);
+        }
+        .cover-banner .dots span:nth-child(2) {
+            background: var(--accent-color);
+            width: 20px;
+            border-radius: 3px;
+        }
+        /* 内容样式 */
+        .section-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--primary-color);
+            padding-left: 1em;
+            border-left: 5px solid var(--accent-color);
+            margin-top: 2.2em;
+            margin-bottom: 1em;
+            background: linear-gradient(to right, rgba(7, 193, 96, 0.05), transparent 5%);
+            padding-top: 0.3em;
+            padding-bottom: 0.3em;
+            border-radius: 0 8px 8px 0;
+        }
+        .section-title::before {
+            content: "\25B6";
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+            font-size: 0.7em;
+        }
+        .news-item {
+            margin-bottom: 1.2em;
+            color: var(--secondary-color);
+            font-size: 1.05em;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .news-item strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .news-item .source {
+            font-size: 0.85em;
+            color: #999;
+        }
+        /* 核心总结卡片 */
+        .summary-card {
+            background: linear-gradient(135deg, rgba(7, 193, 96, 0.08), rgba(7, 193, 96, 0.02));
+            border: 1px solid rgba(7, 193, 96, 0.15);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 2em;
+        }
+        .summary-card .summary-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            padding-left: 0;
+            border-left: none;
+            background: none;
+        }
+        .summary-card .summary-title::before {
+            content: none;
+        }
+        .summary-card p {
+            margin-bottom: 1em;
+            color: var(--secondary-color);
+            font-size: 1.02em;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .summary-card p:last-child {
+            margin-bottom: 0;
+        }
+        /* 结尾引导 */
+        .footer-guide {
+            text-align: center;
+            margin-top: 3em;
+            padding-top: 1.5em;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            color: #999;
+            font-size: 0.95em;
+            line-height: 2;
+        }
+        .footer-guide .brand {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px 15px; margin: 0 10px; border-radius: 12px; }
+            .cover-banner { padding: 40px 20px; }
+            .cover-banner .banner-title { font-size: 24px; }
+            .section-title { font-size: 1.2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 封面Banner -->
+        <div class="cover-banner">
+            <div class="banner-content">
+                <div class="banner-date">2026 / 05 / 16</div>
+                <div class="banner-title">今日速览</div>
+                <div class="banner-sub">一知桥 | 每日财经科技信息差</div>
+                <div class="divider"></div>
+                <div class="dots">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 一、政策速递 -->
+        <h2 class="section-title">一、政策速递</h2>
+
+        <div class="news-item">
+            <strong>国常会审议通过城市更新和农业农村现代化两个"十五五"规划。</strong>5月15日李强主持召开国常会，审议通过《城市更新"十五五"规划》和《加快农业农村现代化"十五五"规划》，并研究人口发展与基础教育改革。会议指出城市发展从增量扩张转向存量提质，要建设创新、宜居、韧性的现代化城市；同时加快构建生育友好型社会，大力发展银发经济，守牢粮食安全和不发生规模性返贫底线。<span class="source">（来源：中国政府网，5.15）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>商务部发布中美经贸磋商五方面成果。</strong>5月16日，商务部就中美元首会晤经贸成果答记者问：双方同意成立贸易理事会和投资理事会，在对等降税框架下推动扩大双向贸易，解决彼此农产品市场准入关切，继续落实前期磋商达成的所有共识。特朗普明确反对"台独"引起战争，习近平主席应邀将于今秋访美。<span class="source">（来源：商务部/财新网，5.16）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>证监会"十五五"将推深化包容性改革。</strong>证监会表示将在十五五时期推出更多深化资本市场包容性改革举措，支持服务和消费领域实体企业做大做强。同时发布《衍生品交易监督管理办法（试行）》，依法限制过度投机。<span class="source">（来源：证监会，5.15）</span>
+        </div>
+
+        <!-- 二、企业要闻 -->
+        <h2 class="section-title">二、企业要闻</h2>
+
+        <div class="news-item">
+            <strong>SpaceX秘密提交IPO申请，估值1.75万亿美元创历史之最。</strong>马斯克旗下SpaceX确定上市目标日期为6月12日，累计投入超150亿美元开发星舰火箭。中国商业航天同步加速资本化，国星宇航第三次递表港交所，微纳星空科创板IPO获受理，3家公司正进行IPO辅导。<span class="source">（来源：新浪财经，5.16）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>茅台再度提价，最高单品涨200元。</strong>5月16日零时起，茅台通过"i茅台"自营平台上调多款产品零售价，丙午马年生肖茅台每瓶上涨200元。今年3月茅台已进行过一次价格调整，调价后市场套利空间进一步缩小。<span class="source">（来源：同花顺，5.16）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>宇树科技发布全球首款量产版载人变形机甲GD01。</strong>起售价390万元，支持人形与四足双形态变形，载重后总重约500公斤，标志着国产具身智能从实验室走向商业化量产。<span class="source">（来源：爱合伙，5.16）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>伯克希尔后巴菲特时代首份13F持仓出炉。</strong>持仓从42只骤降至29只，清仓亚马逊、Visa等多只股票，斥资约26.5亿美元建仓达美航空并加码Alphabet，投资风格更趋集中。段永平同步调仓，将中国神华换成泡泡玛特。<span class="source">（来源：新浪财经，5.15）</span>
+        </div>
+
+        <!-- 四、市场观察 -->
+        <h2 class="section-title">四、市场观察</h2>
+
+        <div class="news-item">
+            <strong>全球风险资产集体回调。</strong>5月15日美股三大指数均跌超1%，纳指跌1.54%、标普跌1.24%、费城半导体跌4%，中概金龙指数跌2.8%，阿里跌6.2%。高盛风险偏好指数升至1.1创2021年来新高，美股动量Z分数突破3，半导体板块占标普500权重超15%——该组合自2000年以来从未再现。<span class="source">（来源：华尔街见闻/新浪财经，5.16）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>贵金属和大宗商品全线暴跌。</strong>现货黄金跌2.47%报4537美元，白银暴跌9.14%报78.88美元，COMEX铜跌5%至6.28美元（此前刷新历史高位6.71美元）。特朗普表示不赞成美伊停火并威胁摧毁伊朗基础设施，原油逆势上涨。<span class="source">（来源：新浪财经，5.16）</span>
+        </div>
+
+        <!-- 核心总结 -->
+        <div class="summary-card">
+            <h2 class="summary-title">核心总结</h2>
+            <p><strong>两大主线交汇：中美关系"建设性战略稳定"新定位释放合作红利，全球风险资产高位回调信号明确。</strong>国常会一日连过两个"十五五"规划，政策重心从短期刺激转向中长期结构性布局（城市更新+农业现代化+生育友好）。中美经贸磋商达成五方面成果，贸易/投资双理事会机制落地意味着双边经贸从"博弈模式"切入"制度化合作"阶段，农产品市场准入和对等降税框架直接利好外贸企业和消费端。</p>
+            <p><strong>机会提示：</strong>城市更新产业链（建材/智慧城市/旧改）、商业航天（SpaceX催化A股概念股）、中美农产品贸易相关标的值得关注。<strong>风险提示：</strong>高盛警示的风险偏好极端化组合自2000年后未见——科技股高位获利回吐+贵金属暴跌+美债收益率上行，全球risk-off可能才刚开始，短期控制仓位为宜。</p>
+        </div>
+
+        <!-- 结尾引导 -->
+        <div class="footer-guide">
+            <span class="brand">一知桥</span> | 每日财经科技信息差<br>
+            欢迎关注、点赞、在看，获取每日最新资讯
+        </div>
+    </div>
+</body>
+</html>
