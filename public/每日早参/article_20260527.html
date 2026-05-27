@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年5月27日 周三 今日速览 - 一知桥</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #555;
+            --light-gray: #f5f5f7;
+            --accent-color: #07c160;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            line-height: 1.8;
+            font-size: 16px;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 60px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        .cover-banner {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2d4a3e 50%, #1a3a2a 100%);
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cover-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(rgba(7,193,96,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(7,193,96,0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .cover-banner::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(7,193,96,0.08) 0%, transparent 60%);
+        }
+        .cover-banner .banner-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .cover-banner .banner-date {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .cover-banner .banner-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        .cover-banner .banner-sub {
+            font-size: 16px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 16px;
+            letter-spacing: 1px;
+        }
+        .cover-banner .divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), rgba(7,193,96,0.3));
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+        .cover-banner .dots {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .cover-banner .dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(7,193,96,0.4);
+        }
+        .cover-banner .dots span:nth-child(2) {
+            background: var(--accent-color);
+            width: 20px;
+            border-radius: 3px;
+        }
+        .section-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--primary-color);
+            padding-left: 1em;
+            border-left: 5px solid var(--accent-color);
+            margin-top: 2.2em;
+            margin-bottom: 1em;
+            background: linear-gradient(to right, rgba(7, 193, 96, 0.05), transparent 5%);
+            padding-top: 0.3em;
+            padding-bottom: 0.3em;
+            border-radius: 0 8px 8px 0;
+        }
+        .section-title::before {
+            content: "\25B6";
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+            font-size: 0.7em;
+        }
+        .news-item {
+            margin-bottom: 1.2em;
+            color: var(--secondary-color);
+            font-size: 1.05em;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .news-item strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .news-item .source {
+            font-size: 0.85em;
+            color: #999;
+        }
+        .summary-card {
+            background: linear-gradient(135deg, rgba(7, 193, 96, 0.08), rgba(7, 193, 96, 0.02));
+            border: 1px solid rgba(7, 193, 96, 0.15);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 2em;
+        }
+        .summary-card .summary-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            padding-left: 0;
+            border-left: none;
+            background: none;
+        }
+        .summary-card .summary-title::before {
+            content: none;
+        }
+        .summary-card p {
+            margin-bottom: 1em;
+            color: var(--secondary-color);
+            font-size: 1.02em;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .summary-card p:last-child {
+            margin-bottom: 0;
+        }
+        .footer-guide {
+            text-align: center;
+            margin-top: 3em;
+            padding-top: 1.5em;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            color: #999;
+            font-size: 0.95em;
+            line-height: 2;
+        }
+        .footer-guide .brand {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px 15px; margin: 0 10px; border-radius: 12px; }
+            .cover-banner { padding: 40px 20px; }
+            .cover-banner .banner-title { font-size: 24px; }
+            .section-title { font-size: 1.2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 封面Banner -->
+        <div class="cover-banner">
+            <div class="banner-content">
+                <div class="banner-date">2026 / 05 / 27</div>
+                <div class="banner-title">今日速览</div>
+                <div class="banner-sub">一知桥 | 每日财经科技信息差</div>
+                <div class="divider"></div>
+                <div class="dots">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 一、政策速递 -->
+        <h2 class="section-title">一、政策速递</h2>
+
+        <div class="news-item">
+            <strong>首批国产AI训练推理芯片通过国家安全可靠测评。</strong>中国信息安全测评中心发布2026年第2号公告，首次将AI训练推理芯片纳入评测，海思昇腾310/910、平头哥真武M530/M890、壁仞壁砺166、海光DCU-3G、摩尔线程PH100等9款芯片通过，国产AI算力底座自主可控再添里程碑。<span class="source">（来源：财联社，5.27）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>八部门联合整治非法跨境证券期货基金经营。</strong>证监会等八部门印发《综合整治非法跨境证券期货基金经营活动实施方案》，全面取缔境外机构非法跨境展业，持牌合规券商迎来业务增长新机遇。<span class="source">（来源：上海证券报，5.27）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>工信部发布两项光伏组件强制性国标。</strong>《光伏组件安全要求》和《光伏组件铭牌标识要求》5月25日正式发布，2027年6月1日实施，推动光伏行业从规模扩张转向标准化、高质量竞争。<span class="source">（来源：中国证券报，5.27）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>沪深北交易所优化再融资规则。</strong>未盈利科技上市公司再融资间隔期缩短至6个月，存在破发的公司可通过定增、可转债融资，科创企业资本补给通道进一步拓宽。<span class="source">（来源：四大证券报，5.27）</span>
+        </div>
+
+        <!-- 二、企业要闻 -->
+        <h2 class="section-title">二、企业要闻</h2>
+
+        <div class="news-item">
+            <strong>美光科技单日暴涨19%，市值首破1万亿美元。</strong>瑞银目标价上调至1625美元，SK海力士同日盘中涨超11%亦破万亿。全球存储芯片三巨头市值齐创新高，2026Q1全球DRAM收入970亿美元环比激增80%，国产存储替代窗口加速打开。<span class="source">（来源：新浪财经/金十数据，5.27）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>长鑫科技科创板IPO今日上会。</strong>国产DRAM龙头一季度营收同比增长719%，预计上半年净利润500-570亿元；长江存储5月完成IPO辅导备案，国产存储"双子星"资本市场之路同步推进。<span class="source">（来源：新浪财经/金融界，5.27）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>小米YU7标准版开启交付，YU7 GT同步发布。</strong>YU7标准版23.35万元起，GT版38.99万元起；小米17 Max正式发售，8000mAh电池+2亿像素徕卡主摄，国补到手价4299元。"人车家全生态"战略从概念走向规模交付。<span class="source">（来源：IT之家/新浪财经，5.27）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>面壁智能开源MiniCPM5-1B，阿里Qwen3.7-Max编程超Claude。</strong>MiniCPM5-1B在AA-Index上超越所有2B参数以下模型；阿里Qwen3.7-Max AI编程能力超越Claude Opus 4.6，国产大模型在代码生成赛道实现追赶反超。<span class="source">（来源：IT之家，5.27）</span>
+        </div>
+
+        <!-- 四、市场观察 -->
+        <h2 class="section-title">四、市场观察</h2>
+
+        <div class="news-item">
+            <strong>美股纳指涨1.19%再创历史新高，科技与芯片股领涨。</strong>纳指报26656点，标普500同步刷新纪录；美伊和谈预期推动风险偏好回升，但霍尔木兹海峡滞留船只超300艘，高盛预警下半年能源供应紧张风险犹存。<span class="source">（来源：华尔街见闻，5.27）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>存储芯片板块情绪共振，A股热点高低切换。</strong>美光万亿市值催化A股存储概念走强，但科创50一度跌超3%，资金从高位科技向有色、贵金属等价值板块轮动，百亿级私募已率先加仓。<span class="source">（来源：新浪财经，5.27）</span>
+        </div>
+
+        <!-- 核心总结 -->
+        <div class="summary-card">
+            <h2 class="summary-title">核心总结</h2>
+            <p><strong>国产算力认证+存储超级周期+AI模型密集迭代三线并行。</strong>政策端，首批AI训练推理芯片通过国家级安全测评+再融资规则松绑科技企业，自主可控从"可用"迈向"可信"；产业端，美光/SK海力士双破万亿市值验证存储超级周期，长鑫科技今日IPO上会，国产存储替代进入加速度；AI端，面壁/阿里代码模型反超海外标杆，大模型竞争从参数竞赛转向垂直场景落地。</p>
+            <p><strong>机会提示：</strong>存储芯片国产替代（长鑫/长江存储供应链）、AI推理芯片信创（通过测评的9家厂商）、再融资松绑受益的未盈利科创企业。<strong>风险提示：</strong>A股科技板块高位分化加剧，科创50单日振幅超8%需警惕短期回调；美光年内涨幅超860%，存储板块估值泡沫化风险值得关注。</p>
+        </div>
+
+        <!-- 结尾引导 -->
+        <div class="footer-guide">
+            <span class="brand">一知桥</span> | 每日财经科技信息差<br>
+            欢迎关注、点赞、在看，获取每日最新资讯
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年5月26日 周二 今日速览 - 一知桥</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #555;
+            --light-gray: #f5f5f7;
+            --accent-color: #07c160;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            line-height: 1.8;
+            font-size: 16px;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 60px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        .cover-banner {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2d4a3e 50%, #1a3a2a 100%);
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cover-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(rgba(7,193,96,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(7,193,96,0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .cover-banner::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(7,193,96,0.08) 0%, transparent 60%);
+        }
+        .cover-banner .banner-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .cover-banner .banner-date {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .cover-banner .banner-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        .cover-banner .banner-sub {
+            font-size: 16px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 16px;
+            letter-spacing: 1px;
+        }
+        .cover-banner .divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), rgba(7,193,96,0.3));
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+        .cover-banner .dots {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .cover-banner .dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(7,193,96,0.4);
+        }
+        .cover-banner .dots span:nth-child(2) {
+            background: var(--accent-color);
+            width: 20px;
+            border-radius: 3px;
+        }
+        .section-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--primary-color);
+            padding-left: 1em;
+            border-left: 5px solid var(--accent-color);
+            margin-top: 2.2em;
+            margin-bottom: 1em;
+            background: linear-gradient(to right, rgba(7, 193, 96, 0.05), transparent 5%);
+            padding-top: 0.3em;
+            padding-bottom: 0.3em;
+            border-radius: 0 8px 8px 0;
+        }
+        .section-title::before {
+            content: "\25B6";
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+            font-size: 0.7em;
+        }
+        .news-item {
+            margin-bottom: 1.2em;
+            color: var(--secondary-color);
+            font-size: 1.05em;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .news-item strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .news-item .source {
+            font-size: 0.85em;
+            color: #999;
+        }
+        .summary-card {
+            background: linear-gradient(135deg, rgba(7, 193, 96, 0.08), rgba(7, 193, 96, 0.02));
+            border: 1px solid rgba(7, 193, 96, 0.15);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 2em;
+        }
+        .summary-card .summary-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            padding-left: 0;
+            border-left: none;
+            background: none;
+        }
+        .summary-card .summary-title::before {
+            content: none;
+        }
+        .summary-card p {
+            margin-bottom: 1em;
+            color: var(--secondary-color);
+            font-size: 1.02em;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .summary-card p:last-child {
+            margin-bottom: 0;
+        }
+        .footer-guide {
+            text-align: center;
+            margin-top: 3em;
+            padding-top: 1.5em;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            color: #999;
+            font-size: 0.95em;
+            line-height: 2;
+        }
+        .footer-guide .brand {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px 15px; margin: 0 10px; border-radius: 12px; }
+            .cover-banner { padding: 40px 20px; }
+            .cover-banner .banner-title { font-size: 24px; }
+            .section-title { font-size: 1.2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 封面Banner -->
+        <div class="cover-banner">
+            <div class="banner-content">
+                <div class="banner-date">2026 / 05 / 26</div>
+                <div class="banner-title">今日速览</div>
+                <div class="banner-sub">一知桥 | 每日财经科技信息差</div>
+                <div class="divider"></div>
+                <div class="dots">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 一、政策速递 -->
+        <h2 class="section-title">一、政策速递</h2>
+
+        <div class="news-item">
+            <strong>国务院吹风会解读《常住地基本公共服务实施意见》。</strong>5月26日下午3时，国家发改委、教育部、民政部、人社部、住建部、国家医保局联合介绍该意见，推动公共服务从户籍地转向常住地供给，利好2亿+流动人口的医疗、教育、住房保障均等化，是户籍改革深化的重要一步。<span class="source">（来源：国新办，5.26）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>人社部等5部门发布《超龄劳动者基本权益保障暂行规定》。</strong>7月1日起施行，为首部专门针对超龄劳动者的规章，回应老龄化背景下"退而不休"群体的劳动保护缺口，对灵活就业和银发经济有直接制度支撑。<span class="source">（来源：人社部，5.26）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>广东设立首只永续经营省级政府投资基金。</strong>"广东战新引导基金"首期注册500亿元，目标1000亿元，聚焦战略性新兴产业，以"长钱长投"推动超万亿元基金集群，是目前国内最大省级战新基金之一。<span class="source">（来源：上海证券报，5.26）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>四部门联合印发AI与能源双向赋能行动方案。</strong>"算电协同"正式上升为国家级行动，首个大规模示范项目在宁夏中卫投运，验证"算随电走"可行性，"十五五"新型电网投资预计超5万亿元。<span class="source">（来源：中国证券报，5.26）</span>
+        </div>
+
+        <!-- 二、企业要闻 -->
+        <h2 class="section-title">二、企业要闻</h2>
+
+        <div class="news-item">
+            <strong>小米Q1总营收991亿元，研发投入90亿同比增33.4%。</strong>智能电动汽车收入190亿元，汽车业务经营亏损31亿元；Xiaomi MiMo-V2.5-Pro开源模型并列全球第一；未来三年AI投入超600亿元。从手机公司向"人车家全生态"转型持续深化。<span class="source">（来源：新浪财经，5.26）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>DeepSeek宣布V4-Pro API永久降价至原价1/4。</strong>每百万Tokens输入仅需2.5分钱，创全球大模型价格新低，API价格战白热化。同期月内三次宕机暴露服务稳定性短板，新一轮约100亿美元融资谈判中，估值剑指450亿美元。<span class="source">（来源：新浪财经/爱合伙，5.26）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>月之暗面完成约20亿美元融资，估值突破200亿美元。</strong>美团龙珠领投，国智投、中国移动等多家国资入局，为中国大模型圈迄今最大单笔融资，Kimi商业化进入加速期。<span class="source">（来源：科创板日报，5.26）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>华为发布"韬（τ）定律"，探索半导体新路径。</strong>在IEEE ISCAS 2026上，何庭波提出以"时间缩微"替代"几何缩微"，通过逻辑折叠等技术压缩信号时延，预计到2031年可达1.4纳米制程同等水平，为后摩尔时代芯片发展提供中国方案。<span class="source">（来源：上海证券报，5.26）</span>
+        </div>
+
+        <!-- 四、市场观察 -->
+        <h2 class="section-title">四、市场观察</h2>
+
+        <div class="news-item">
+            <strong>美伊和平协议接近达成，国际油价单日暴跌超7%。</strong>美伊就资产解冻达成谅解，霍尔木兹海峡将在和平协议达成30天后分阶段开放。布伦特原油跌破91美元/桶，WTI跌破88美元，地缘溢价快速消退。离岸人民币逼近6.78创三年新高，A股科创50涨5.88%，半导体板块爆发。<span class="source">（来源：金融界/华尔街见闻，5.26）</span>
+        </div>
+
+        <div class="news-item">
+            <strong>算电协同成为资本市场新主线。</strong>万得算力主题指数5月累计涨超19%，智能电网概念指数涨超6%，私募百亿级仓位回升至82%以上，资金明显抱团AI算力+高端制造。<span class="source">（来源：中国证券报，5.26）</span>
+        </div>
+
+        <!-- 核心总结 -->
+        <div class="summary-card">
+            <h2 class="summary-title">核心总结</h2>
+            <p><strong>政策、产业、地缘三重信号共振。</strong>政策端，常住地公共服务改革+超龄劳动者保障+广东战新千亿基金，传递"制度红利从户籍破局、从投资托底"的信号；产业端，DeepSeek降价75%引爆API价格战、华为韬定律开辟芯片新路径、小米三年600亿All in AI，科技资本开支竞赛白热化；地缘端，美伊和谈突破性进展令油价暴跌、人民币走强，全球risk-on情绪修复。</p>
+            <p><strong>机会提示：</strong>算电协同产业链（智能电网/算力基础设施）、半导体国产替代（韬定律催化）、人民币升值受益板块（航空/造纸）。<strong>风险提示：</strong>DeepSeek月内三次宕机暴露大模型基础设施不成熟，API价格战可能挤压中小模型厂商生存空间；油价暴跌虽利好通胀，但美伊协议细节尚未签署，反复风险仍在。</p>
+        </div>
+
+        <!-- 结尾引导 -->
+        <div class="footer-guide">
+            <span class="brand">一知桥</span> | 每日财经科技信息差<br>
+            欢迎关注、点赞、在看，获取每日最新资讯
+        </div>
+    </div>
+</body>
+</html>
