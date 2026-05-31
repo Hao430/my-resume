@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年5月30日 周六 今日速览 | 一知桥</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext');
+
+    :root {
+      --primary-color: #1a1a2e;
+      --secondary-color: #16213e;
+      --accent-green: #07c160;
+      --accent-blue: #1565c0;
+      --accent-gold: #f59e0b;
+      --accent-red: #ef4444;
+      --light-bg: #f5f7fa;
+      --card-bg: #ffffff;
+      --text-main: #2d3748;
+      --text-sub: #718096;
+      --border: #e2e8f0;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-main);
+      line-height: 1.8;
+      font-size: 15px;
+      padding: 20px 0 40px;
+    }
+
+    /* 封面Banner */
+    .cover-banner {
+      background: linear-gradient(135deg, #0a0f2e 0%, #0d2137 30%, #0a3d2e 60%, #0c1a0e 100%);
+      position: relative;
+      padding: 48px 40px 40px;
+      max-width: 800px;
+      margin: 0 auto 0;
+      overflow: hidden;
+    }
+
+    .cover-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(7,193,96,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(7,193,96,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .cover-banner::after {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(7,193,96,0.12) 0%, transparent 70%);
+    }
+
+    .cover-tag {
+      display: inline-block;
+      background: rgba(7,193,96,0.2);
+      border: 1px solid rgba(7,193,96,0.5);
+      color: #07c160;
+      font-size: 11px;
+      letter-spacing: 2px;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-title span {
+      color: #07c160;
+    }
+
+    .cover-subtitle {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 24px;
+    }
+
+    .cover-divider {
+      height: 1px;
+      background: linear-gradient(90deg, #07c160, rgba(7,193,96,0.1));
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+
+    .cover-dots {
+      display: flex; gap: 6px;
+      position: relative; z-index: 1;
+    }
+
+    .cover-dots span {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+    }
+
+    .cover-dots span:nth-child(1) { background: #07c160; }
+    .cover-dots span:nth-child(2) { background: rgba(255,255,255,0.4); }
+    .cover-dots span:nth-child(3) { background: rgba(255,255,255,0.2); }
+
+    /* 主内容容器 */
+    #write {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 36px 44px 40px;
+      box-shadow: var(--shadow);
+    }
+
+    /* 模块标题 */
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0d1f3c, #1a3a5c);
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin: 32px 0 16px;
+      border-left: 4px solid var(--accent-green);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: '▍';
+      color: var(--accent-green);
+      font-size: 14px;
+    }
+
+    /* 新闻条目 */
+    .news-item {
+      background: #fafbfd;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      border-left: 3px solid transparent;
+      transition: all 0.25s ease;
+    }
+
+    .news-item:hover {
+      border-left-color: var(--accent-green);
+      box-shadow: var(--shadow-hover);
+      background: #f0fdf7;
+    }
+
+    .news-item p {
+      font-size: 14.5px;
+      color: var(--text-main);
+      line-height: 1.85;
+    }
+
+    .news-item strong {
+      color: #0d2137;
+      font-weight: 700;
+    }
+
+    /* 总结模块 */
+    .summary-box {
+      background: linear-gradient(135deg, #0a0f2e, #0d2137);
+      border-radius: 12px;
+      padding: 24px 26px;
+      margin-top: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .summary-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(7,193,96,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(7,193,96,0.04) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+
+    .summary-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #07c160;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-title::before {
+      content: '◉';
+      font-size: 12px;
+    }
+
+    .summary-item {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 10px;
+    }
+
+    .summary-item p {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.8;
+    }
+
+    .summary-item strong {
+      color: #07c160;
+      font-weight: 600;
+    }
+
+    .risk-tag {
+      display: inline-block;
+      background: rgba(239,68,68,0.15);
+      border: 1px solid rgba(239,68,68,0.4);
+      color: #fca5a5;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 4px;
+    }
+
+    .opp-tag {
+      display: inline-block;
+      background: rgba(7,193,96,0.15);
+      border: 1px solid rgba(7,193,96,0.4);
+      color: #07c160;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 4px;
+    }
+
+    /* 结尾引导 */
+    .footer-cta {
+      text-align: center;
+      padding: 24px 20px 0;
+      color: var(--text-sub);
+      font-size: 13px;
+      border-top: 1px dashed var(--border);
+      margin-top: 28px;
+      line-height: 2;
+    }
+
+    .footer-cta .brand {
+      color: var(--accent-green);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 20px 0;
+    }
+
+    @media (max-width: 640px) {
+      .cover-banner { padding: 36px 20px 28px; }
+      #write { padding: 24px 20px 28px; }
+      .cover-title { font-size: 22px; }
+      h2 { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 封面Banner -->
+  <div class="cover-banner">
+    <div class="cover-tag">一知桥 · 每日速览</div>
+    <div class="cover-title">2026年5月30日 周六<br><span>今日速览</span></div>
+    <div class="cover-subtitle">政策 · 企业 · 市场 · AI · 信息差</div>
+    <div class="cover-divider"></div>
+    <div class="cover-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- 正文 -->
+  <div id="write">
+
+    <h2>一、政策速递</h2>
+
+    <div class="news-item">
+      <p><strong>【商务部离境退税新政】</strong> 商务部发布《关于加力优化离境退税措施扩大入境消费的通知》，进一步降低退税门槛、扩大适用品类范围，重点拉动外籍旅客在华消费，配合当前扩内需战略加速布局，对免税概念股、高端零售、旅游业具有直接提振意义。</p>
+    </div>
+
+    <div class="news-item">
+      <p><strong>【美国无人机产业获政府资金扶持】</strong> 据《华尔街日报》，特朗普政府正与美国无人机企业洽谈融资协议，目标扩大本土产能、压低成本，部分交易或使政府获取股权。五角大楼已将战略重心从"传统武器平台"向"无人机战争系统"全面转型，受此提振，美股UMAC单日暴涨<strong>57%</strong>创历史新高。</p>
+    </div>
+
+    <div class="news-item">
+      <p><strong>【美联储加息预期升温】</strong> 多位美联储官员表态：若中东冲突致通胀持续，未来可能加息。债券市场已定价年内或有25bp加息，12月加息概率升至<strong>36%</strong>。新任美联储主席凯文·沃什将取消前瞻性指引，全球资产定价中枢面临重新锚定。</p>
+    </div>
+
+    <div class="news-item">
+      <p><strong>【铝市场供应告急】</strong> 高盛测算显示，霍尔木兹海峡受阻导致铝供应严重短缺，LME铝现货升水达97美元/吨（<strong>2007年以来最高</strong>），三大交易所库存仅够全球不到五天需求，机构预测铝价将升至4000美元/吨。</p>
+    </div>
+
+    <h2>二、企业要闻</h2>
+
+    <div class="news-item">
+      <p><strong>【Anthropic完成650亿美元H轮，估值9650亿美元超越OpenAI】</strong> Anthropic宣布完成650亿美元H轮融资，投后估值达9650亿美元，90天内估值涨幅<strong>154%</strong>，正式超越OpenAI（8520亿）。同步发布Claude Opus 4.8，代码漏报率降至前代1/4，定价不变，快速模式价格降至前代1/3，定位为IPO前最后一轮。</p>
+    </div>
+
+    <div class="news-item">
+      <p><strong>【戴尔AI服务器季报爆发，单日涨32.76%】</strong> 戴尔Q1财报显示AI服务器营收同比暴涨<strong>757%</strong>（达161亿美元），同期获97亿美元五角大楼合同，2026年迄今累计涨幅<strong>234%</strong>。折射AI算力基础设施需求持续爆炸式增长，军工+AI双驱成新增长范式。</p>
+    </div>
+
+    <div class="news-item">
+      <p><strong>【小鹏集团Q1营收130亿，年内量产Robotaxi与人形机器人】</strong> 何小鹏宣布：5月18日首台L4级Robotaxi小鹏GX在广州正式下线（纯视觉+3000 TOPS自研算力）；人形机器人IRON三季度亮相、年底量产，明年进门店试商用。公司已更名"小鹏集团"，定位从车企向<strong>"物理AI公司"</strong>蜕变。</p>
+    </div>
+
+    <div class="news-item">
+      <p><strong>【零一万物三周年转型：对标Palantir，2026年订单超15亿元】</strong> 李开复公开三周年内部致辞：零一万物2025年实现5亿元订单，截至2026年5月订单超<strong>15亿元</strong>，明确定位"中国Palantir"，目标2027年交表上市，并宣布追加2000万期权激励，成AI 2.0产业化转型标志性案例。</p>
+    </div>
+
+    <div class="news-item">
+      <p><strong>【SpaceX计划6月12日上市，目标估值1.8万亿美元】</strong> SpaceX确认拟于6月12日登陆纳斯达克（代码SPCX），募资750亿美元，目标估值下调至至少1.8万亿美元（此前超2万亿）。2025年营收187亿美元，但净亏损49.4亿。部分机构对治理结构提出质疑。</p>
+    </div>
+
+    <h2>四、市场观察</h2>
+
+    <div class="news-item">
+      <p><strong>美股三大指数续创历史新高：</strong>道指首次站稳51000点（+0.72%），纳指5月累涨8.36%，有望创<strong>2004年以来最佳两月表现</strong>；AI服务器（戴尔+757%）、无人机政策催化、SpaceX上市预期为主要驱动。风险提示：剔除巨型科技股后，中位数股票较高点仍低约13%，"不良广度"隐忧值得警惕。</p>
+    </div>
+
+    <div class="news-item">
+      <p><strong>国内科技资本市场焦点：</strong>阿里达摩院发布GPU版"敏迭"（MindOpt）求解器，支持传统"不可解"亿级变量线性规划，工业软件核心能力再突破；MiniMax正式启动<strong>A股上市辅导</strong>，AI独角兽A股化进程加速，国内AI资本化浪潮持续涌现。</p>
+    </div>
+
+    <hr>
+
+    <!-- 核心总结 -->
+    <div class="summary-box">
+      <div class="summary-title">核心总结</div>
+      <div class="summary-item">
+        <p><strong>政策方向：</strong>美国全力推进无人机军民融合，美联储加息预期切换；国内离境退税扩内需提速，AI独角兽A股通道加速打通。</p>
+      </div>
+      <div class="summary-item">
+        <p><strong>企业趋势：</strong>AI算力硬件（戴尔+757%）、AI应用产业化（零一万物/小鹏物理AI）、AI大模型（Anthropic超OpenAI）三线并进，估值与业绩双重验证逻辑加速成型。</p>
+      </div>
+      <div class="summary-item">
+        <p><strong>市场信号：</strong>美股科技强势但内部高度分化；铝供应危机深化，大宗商品供应链韧性持续承压。</p>
+      </div>
+      <div class="summary-item">
+        <p>
+          <span class="opp-tag">机会</span>AI算力链（服务器/HBM/电力）· 无人机国产替代 · 商业航天（SpaceX联动）
+        </p>
+        <p style="margin-top:6px">
+          <span class="risk-tag">风险</span>美伊谈判反复叠加美联储政策转向，全球风险资产高位波动性上升
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-cta">
+      <p>欢迎关注 <span class="brand">「一知桥」</span></p>
+      <p>每日精选政策 · 企业 · 科技 · 市场最新动态</p>
+      <p>👍 点赞 &nbsp;｜&nbsp; 💬 留言 &nbsp;｜&nbsp; 👀 点「在看」</p>
+      <p style="margin-top:8px;font-size:12px;color:#bbb">让信息差成为你的竞争优势</p>
+    </div>
+
+  </div><!-- end #write -->
+
+</body>
+</html>
