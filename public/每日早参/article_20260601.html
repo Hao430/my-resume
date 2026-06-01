@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年6月1日 周一 今日速览 - 一知桥</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext');
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --glass-bg: rgba(255,255,255,0.92);
+  --card-bg: rgba(255,255,255,0.95);
+  --shadow: 0 2px 15px rgba(0,0,0,0.06);
+  --hover-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'WeChat Sans', 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', sans-serif;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f5f5f7 40%, #e3f2fd 100%);
+  background-attachment: fixed;
+  color: var(--primary-color);
+  line-height: 1.9;
+  font-size: 16px;
+  padding: 20px 0 40px;
+}
+#write {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 0 40px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+/* 封面 Banner */
+.cover-banner {
+  width: 100%;
+  padding: 48px 40px 36px;
+  background: linear-gradient(135deg, #0d1b2d 0%, #1a3a4a 30%, #0d2b1a 60%, #1a2a3a 100%);
+  background-size: 400% 400%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+.cover-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(rgba(7,193,96,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7,193,96,0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+.cover-banner::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(7,193,96,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+.banner-date {
+  font-size: 13px;
+  color: rgba(7,193,96,0.9);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+.banner-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.banner-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  position: relative;
+  z-index: 1;
+}
+.banner-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #07c160, transparent);
+  border-radius: 2px;
+  margin: 20px 0 0;
+  position: relative;
+  z-index: 1;
+}
+.dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+.dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+.dot.active { background: #07c160; }
+/* 正文区 */
+.content-inner {
+  padding: 36px 48px 20px;
+}
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 30px 0 14px;
+  padding-left: 14px;
+  border-left: 4px solid var(--accent-color);
+  line-height: 1.5;
+}
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 18px 0 8px;
+}
+p {
+  color: var(--secondary-color);
+  margin-bottom: 1.1em;
+  font-size: 15.5px;
+  line-height: 1.9;
+  text-align: justify;
+}
+strong { color: #1a1a2e; font-weight: 600; }
+.summary-box {
+  background: linear-gradient(135deg, rgba(7,193,96,0.06), rgba(7,193,96,0.02));
+  border-left: 4px solid var(--accent-color);
+  border-radius: 0 10px 10px 0;
+  padding: 20px 22px;
+  margin: 28px 0;
+}
+.summary-box h2 {
+  margin-top: 0;
+  border-left: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+.summary-box p {
+  margin-bottom: 0.6em;
+  font-size: 14.5px;
+}
+.risk-tag {
+  display: inline-block;
+  background: rgba(220,53,69,0.08);
+  color: #dc3545;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.opp-tag {
+  display: inline-block;
+  background: rgba(7,193,96,0.1);
+  color: #07c160;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.footer-cta {
+  text-align: center;
+  padding: 24px 48px 10px;
+  color: #999;
+  font-size: 14px;
+  line-height: 2;
+}
+.footer-cta strong { color: #07c160; }
+hr { border: none; border-top: 1px solid #eee; margin: 20px 48px; }
+@media (max-width: 640px) {
+  .content-inner { padding: 24px 20px 10px; }
+  .banner-title { font-size: 24px; }
+  .cover-banner { padding: 32px 24px 28px; }
+  .footer-cta { padding: 20px 20px 10px; }
+  hr { margin: 20px 20px; }
+}
+</style>
+</head>
+<body>
+<div id="write">
+  <!-- 封面 Banner -->
+  <div class="cover-banner">
+    <div class="banner-date">2026 · 06 · 01 &nbsp;|&nbsp; 周一 &nbsp;|&nbsp; 一知桥日报</div>
+    <div class="banner-title">今日速览</div>
+    <div class="banner-sub">政策 · 企业 · 市场 — 每日信息差</div>
+    <div class="banner-divider"></div>
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <div class="content-inner">
+
+    <h2>一、政策速递</h2>
+
+    <h3>▍6月新规密集落地，多领域进入严管新阶段</h3>
+    <p>今日，《网络餐饮服务经营者落实食品安全主体责任监督管理规定》正式施行，外卖平台须设食品安全总监，商户强制使用统一食安封签，平台未尽审查义务最高处罚10万元。同期，《机动车驾驶人疲劳驾驶认定规则》《商业秘密保护规定》《铁路旅客运输规程》等一批新规同步生效，首次将"<strong>数据</strong>""<strong>算法</strong>"纳入商业秘密保护范围。</p>
+
+    <h3>▍国资国企改革方案正式下发，未来四年路线图明确</h3>
+    <p>《关于进一步深化国资国企改革的方案（2026—2029年）》已于近期下发，山东、河南、湖北等省委常委会相继研究部署，中国电气装备集团等央企启动内部学习。方案聚焦<strong>主责主业强基补短、专业化整合、新质生产力培育</strong>三大方向，国有资本向战略性新兴产业的配置力度将持续加大。</p>
+
+    <h2>二、企业要闻</h2>
+
+    <h3>▍宇树科技科创板IPO今日上会，人形机器人第一股冲刺在即</h3>
+    <p>上交所上市审核委员会定于<strong>6月1日</strong>审议宇树科技首发事项。公司IPO申请于3月20日获受理，从受理到上会仅用时<strong>2个多月</strong>，拟募资42.02亿元，用于智能机器人模型研发、本体研发及制造基地建设。若顺利过会，宇树科技将成为A股"人形机器人第一股"，带动产业链价值重估。</p>
+
+    <h3>▍华为nova 16系列今日发布，十周年旗舰亮相</h3>
+    <p>华为今日14:30举行"nova 16系列及全场景新品发布会"，恰逢nova系列诞生<strong>十周年</strong>。此次共推出nova 16、nova 16z、nova 16 Pro、nova 16 Ultra四款机型，在影像系统、AI交互、续航及鸿蒙生态协同方面实现全方位升级，中高端市场布局进一步完善。</p>
+
+    <h3>▍COMPUTEX 2026今日开幕，芯片三巨头齐聚台北</h3>
+    <p>亚洲最大科技展会COMPUTEX 2026于6月1日至5日在台北举行，主题为"<strong>AI Together</strong>"。英伟达GTC Taipei 2026今日率先登场，黄仁勋发表主题演讲，揭晓下一代AI计算平台前沿技术；AMD CEO苏姿丰、英特尔CEO陈立武将相继亮相，<strong>芯片三巨头</strong>罕见同台，AI算力产业链关注度持续升温。</p>
+
+    <h2>四、市场观察</h2>
+
+    <h3>▍5月PMI守住荣枯线，非制造业扩张加速</h3>
+    <p>国家统计局数据显示，5月制造业PMI为<strong>50.0%</strong>，较前月微降0.3个百分点，位于临界点；非制造业商务活动指数为<strong>50.1%</strong>，环比上升0.7个百分点；综合PMI产出指数为50.5%。大型企业与中小型企业的经营分化持续，经济结构转型压力仍在。</p>
+
+    <h3>▍美股再创历史新高，AI算力板块领跑</h3>
+    <p>5月30日，道指收盘首破<strong>51000点</strong>，纳指、标普500同步刷新历史高位；整个5月纳指累涨8.36%，费城半导体指数表现强劲。全球风险偏好回升，外资有望回流新兴市场，A股科技板块或获正向映射，但高位分化风险需警惕。</p>
+
+    <div class="summary-box">
+      <h2>📌 核心总结</h2>
+      <p>🔖 <strong>政策导向：</strong>6月新规密集落地，平台经济合规成本上升；国资国企改革方案下发，国有资本向新质生产力领域集中，央企重组整合预期升温。</p>
+      <p>🤖 <strong>企业趋势：</strong>宇树科技IPO上会、华为nova 16发布、COMPUTEX 2026开幕，构成今日科技三重催化，人形机器人、消费电子、AI算力产业链持续高热。</p>
+      <p>📈 <strong>市场信号：</strong>PMI守住荣枯线，外盘科技股强势为A股提供支撑；但科技赛道内部分化加剧，警惕高位回调。</p>
+      <p style="margin-top: 12px;">
+        <span class="opp-tag">✅ 机会</span>人形机器人/AI算力/国企改革受益方向
+        &nbsp;&nbsp;
+        <span class="risk-tag">⚠️ 风险</span>科技股高位分化/合规成本上升
+      </p>
+    </div>
+
+  </div><!-- /content-inner -->
+
+  <hr>
+  <div class="footer-cta">
+    <p>📱 关注公众号 <strong>一知桥</strong>，每日早晨 9:00 准时推送</p>
+    <p>👍 欢迎 <strong>点赞 · 在看 · 转发</strong>，让更多人看到信息差</p>
+  </div>
+</div><!-- /#write -->
+</body>
+</html>
