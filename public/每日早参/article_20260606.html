@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年6月6日 周六 今日速览 - 一知桥</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext');
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --glass-bg: rgba(255,255,255,0.92);
+  --card-bg: rgba(255,255,255,0.95);
+  --shadow: 0 2px 15px rgba(0,0,0,0.06);
+  --hover-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'WeChat Sans', 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', sans-serif;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f5f5f7 40%, #e3f2fd 100%);
+  background-attachment: fixed;
+  color: var(--primary-color);
+  line-height: 1.9;
+  font-size: 16px;
+  padding: 20px 0 40px;
+}
+#write {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 0 40px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+/* Cover Banner */
+.cover-banner {
+  width: 100%;
+  padding: 48px 40px 36px;
+  background: linear-gradient(135deg, #0d1b2d 0%, #1a3a4a 30%, #0d2b1a 60%, #1a2a3a 100%);
+  background-size: 400% 400%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+.cover-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(rgba(7,193,96,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7,193,96,0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+.cover-banner::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(7,193,96,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+.banner-date {
+  font-size: 13px;
+  color: rgba(7,193,96,0.9);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+.banner-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.banner-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  position: relative;
+  z-index: 1;
+}
+.banner-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #07c160, transparent);
+  border-radius: 2px;
+  margin: 20px 0 0;
+  position: relative;
+  z-index: 1;
+}
+.dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+.dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+.dot.active { background: #07c160; }
+/* Content */
+.content-inner {
+  padding: 36px 48px 20px;
+}
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 30px 0 14px;
+  padding-left: 14px;
+  border-left: 4px solid var(--accent-color);
+  line-height: 1.5;
+}
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 18px 0 8px;
+}
+p {
+  color: var(--secondary-color);
+  margin-bottom: 1.1em;
+  font-size: 15.5px;
+  line-height: 1.9;
+  text-align: justify;
+}
+strong { color: #1a1a2e; font-weight: 600; }
+.summary-box {
+  background: linear-gradient(135deg, rgba(7,193,96,0.06), rgba(7,193,96,0.02));
+  border-left: 4px solid var(--accent-color);
+  border-radius: 0 10px 10px 0;
+  padding: 20px 22px;
+  margin: 28px 0;
+}
+.summary-box h2 {
+  margin-top: 0;
+  border-left: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+.summary-box p {
+  margin-bottom: 0.6em;
+  font-size: 14.5px;
+}
+.risk-tag {
+  display: inline-block;
+  background: rgba(220,53,69,0.08);
+  color: #dc3545;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.opp-tag {
+  display: inline-block;
+  background: rgba(7,193,96,0.1);
+  color: #07c160;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.footer-cta {
+  text-align: center;
+  padding: 24px 48px 10px;
+  color: #999;
+  font-size: 14px;
+  line-height: 2;
+}
+.footer-cta strong { color: #07c160; }
+hr { border: none; border-top: 1px solid #eee; margin: 20px 48px; }
+@media (max-width: 640px) {
+  .content-inner { padding: 24px 20px 10px; }
+  .banner-title { font-size: 24px; }
+  .cover-banner { padding: 32px 24px 28px; }
+  .footer-cta { padding: 20px 20px 10px; }
+  hr { margin: 20px 20px; }
+}
+</style>
+</head>
+<body>
+<div id="write">
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <div class="banner-date">2026 · 06 · 06 &nbsp;|&nbsp; 周六 &nbsp;|&nbsp; 一知桥日报</div>
+    <div class="banner-title">今日速览</div>
+    <div class="banner-sub">政策 · 企业 · 市场 — 每日信息差</div>
+    <div class="banner-divider"></div>
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <div class="content-inner">
+
+    <h2>一、政策速递</h2>
+
+    <h3>&#x1F4CB; 私募基金23万亿市场迎顶层设计</h3>
+    <p>6月5日国务院办公厅发布《关于加强监管防范风险促进私募投资基金高质量发展的指导意见》，针对私募行业现存准入和监管短板出台<strong>18项举措</strong>，覆盖严控行业入口、出清不合格机构、打击违法违规、加强协同监管等六大板块。证监会后续将推进配套法规体系建设，私募行业"野蛮生长"时代正式终结。</p>
+
+    <h3>&#x1F4C9; 美国5月非农超预期，美联储加息预期骤升</h3>
+    <p>美国5月新增非农就业<strong>17.2万人</strong>，远超市场预期，失业率维持4.3%。交易员已完全计入12月前加息25个基点的预期，10月加息概率约60%。联邦基金利率期货大幅波动，全球风险资产承压。美联储主席沃什上任后首次议息会议（6月17日）成为下一个关键节点。</p>
+
+    <h3>&#x26A0;&#xFE0F; 韩国启动熔断机制，全球半导体恐慌蔓延</h3>
+    <p>6月5日韩国KOSPI指数暴跌<strong>超6%</strong>触发熔断，三星电子、SK海力士等半导体龙头大幅下挫。日本日经225指数跌超1200点。诱发因素包括美股半导体概念巨震叠加韩国财长对杠杆化投资的警告。费城半导体指数单日跌超10%，创2020年3月以来最大跌幅。</p>
+
+    <h2>二、企业要闻</h2>
+
+    <h3>&#x1F680; SpaceX与谷歌签300亿美元算力协议，IPO超额认购</h3>
+    <p>SpaceX提交监管文件，与谷歌达成算力租赁协议：2026年10月至2029年6月，谷歌<strong>每月支付9.2亿美元</strong>获取约11万个英伟达GPU及配套资源，合同总金额约300亿美元。SpaceX IPO认购订单已超可供发行股票数量，1.75万亿美元估值创历史纪录，最早6月12日挂牌纳斯达克。</p>
+
+    <h3>&#x1F697; 赛力斯&times;字节跳动合资品牌6月9日发布</h3>
+    <p>赛力斯集团参股的重庆赛豆科技将推出全新汽车品牌，与字节跳动旗下火山引擎深度合作，探索<strong>"AI定义汽车"</strong>路径。首款车型预计年内发布，提供纯电和增程双动力，车机交互大模型由豆包支撑，智驾方案或与元戎启行合作，字节正式入局整车制造。</p>
+
+    <h3>&#x1F916; 智谱AI冲刺科创板二次上市，AI"六小虎"资本分化加速</h3>
+    <p>6月5日智谱AI公告董事会通过科创板上市议案，拟募资约<strong>150亿元</strong>。距港股挂牌不足半年即启动A股二次上市，估值大幅跃升。与此同时，月之暗面完成20亿美元融资、DeepSeek估值突破450亿美元——AI大模型企业资本竞赛进入"抢跑道"阶段。</p>
+
+    <h3>&#x1F916; 英伟达示好韩国机器人产业，A股机器人概念涨停潮</h3>
+    <p>黄仁勋在GTC Taipei表示机器人技术将是<strong>韩国下一个重要产业</strong>，英伟达将与韩企合作。叠加宇树科技IPO过会催化，6月5日A股机器人概念超40只个股涨停或涨超10%，板块全天成交放量，人形机器人产业化预期持续升温。</p>
+
+    <h2>四、市场观察</h2>
+
+    <h3>&#x1F4C9; 全球风险资产遭"非农冲击"齐跌</h3>
+    <p>受非农超预期驱动，美股三大指数全线下挫：道指-1.35%、标普-2.64%、<strong>纳指-4.10%</strong>创近8个月最大跌幅。比特币跌破6万美元，较5月高点回落24%，本周累计跌近15%。黄金失守4320美元/盎司跌3.47%，白银暴跌近8%。A股6月5日午后跳水，创业板指-3.20%，全市场成交突破3万亿。全球同步risk-off。</p>
+
+    <!-- 核心总结 -->
+    <div class="summary-box">
+      <h2>核心总结</h2>
+      <p><strong>美联储加息预期重塑全球定价</strong>——非农超预期打破降息幻想，科技股首当其冲，纳指单日跌超千点创8个月最大跌幅，加密货币、贵金属、原油全线溃败。<strong>AI资本竞赛进入IPO密集期</strong>——SpaceX史上最大IPO、智谱二次上市、宇树过会，资本从"技术信仰"向"业绩兑现"加速切换。<strong>私募监管顶层设计落地</strong>——23万亿私募基金迎18项监管举措，不合格机构将被加速出清。</p>
+      <p>
+        <span class="opp-tag">机会</span> 人形机器人产业链 / SpaceX产业链 / 半导体回调后的低吸窗口
+        <span class="risk-tag">风险</span> 美联储加息落地前全球risk-off / 科技股拥挤度出清 / 比特币杠杆平仓
+      </p>
+    </div>
+
+  </div>
+
+  <hr>
+  <div class="footer-cta">
+    欢迎关注 <strong>「一知桥」</strong><br>
+    点赞 · 在看 · 共享每日信息差
+  </div>
+</div>
+</body>
+</html>
