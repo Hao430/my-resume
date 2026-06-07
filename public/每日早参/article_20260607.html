@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年6月7日 周日 今日速览 - 一知桥</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext');
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #555;
+  --light-gray: #f5f5f7;
+  --accent-color: #07c160;
+  --glass-bg: rgba(255,255,255,0.92);
+  --card-bg: rgba(255,255,255,0.95);
+  --shadow: 0 2px 15px rgba(0,0,0,0.06);
+  --hover-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'WeChat Sans', 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', sans-serif;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f5f5f7 40%, #e3f2fd 100%);
+  background-attachment: fixed;
+  color: var(--primary-color);
+  line-height: 1.9;
+  font-size: 16px;
+  padding: 20px 0 40px;
+}
+#write {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 0 40px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+/* Cover Banner */
+.cover-banner {
+  width: 100%;
+  padding: 48px 40px 36px;
+  background: linear-gradient(135deg, #0d1b2d 0%, #1a3a4a 30%, #0d2b1a 60%, #1a2a3a 100%);
+  background-size: 400% 400%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+.cover-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(rgba(7,193,96,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7,193,96,0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+.cover-banner::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(7,193,96,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+.banner-date {
+  font-size: 13px;
+  color: rgba(7,193,96,0.9);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+.banner-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.banner-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  position: relative;
+  z-index: 1;
+}
+.banner-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #07c160, transparent);
+  border-radius: 2px;
+  margin: 20px 0 0;
+  position: relative;
+  z-index: 1;
+}
+.dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+.dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+.dot.active { background: #07c160; }
+/* Content */
+.content-inner {
+  padding: 36px 48px 20px;
+}
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 30px 0 14px;
+  padding-left: 14px;
+  border-left: 4px solid var(--accent-color);
+  line-height: 1.5;
+}
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 18px 0 8px;
+}
+p {
+  color: var(--secondary-color);
+  margin-bottom: 1.1em;
+  font-size: 15.5px;
+  line-height: 1.9;
+  text-align: justify;
+}
+strong { color: #1a1a2e; font-weight: 600; }
+.summary-box {
+  background: linear-gradient(135deg, rgba(7,193,96,0.06), rgba(7,193,96,0.02));
+  border-left: 4px solid var(--accent-color);
+  border-radius: 0 10px 10px 0;
+  padding: 20px 22px;
+  margin: 28px 0;
+}
+.summary-box h2 {
+  margin-top: 0;
+  border-left: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+.summary-box p {
+  margin-bottom: 0.6em;
+  font-size: 14.5px;
+}
+.risk-tag {
+  display: inline-block;
+  background: rgba(220,53,69,0.08);
+  color: #dc3545;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.opp-tag {
+  display: inline-block;
+  background: rgba(7,193,96,0.1);
+  color: #07c160;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.footer-cta {
+  text-align: center;
+  padding: 24px 48px 10px;
+  color: #999;
+  font-size: 14px;
+  line-height: 2;
+}
+.footer-cta strong { color: #07c160; }
+hr { border: none; border-top: 1px solid #eee; margin: 20px 48px; }
+@media (max-width: 640px) {
+  .content-inner { padding: 24px 20px 10px; }
+  .banner-title { font-size: 24px; }
+  .cover-banner { padding: 32px 24px 28px; }
+  .footer-cta { padding: 20px 20px 10px; }
+  hr { margin: 20px 20px; }
+}
+</style>
+</head>
+<body>
+<div id="write">
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <div class="banner-date">2026 · 06 · 07 &nbsp;|&nbsp; 周日 &nbsp;|&nbsp; 一知桥日报</div>
+    <div class="banner-title">今日速览</div>
+    <div class="banner-sub">政策 · 企业 · 市场 — 每日信息差</div>
+    <div class="banner-divider"></div>
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <div class="content-inner">
+
+    <h2>一、政策速递</h2>
+
+    <h3>国常会定调新型工业化：智能制造是主攻方向</h3>
+    <p>6月5日国务院常务会议研究推进新型工业化，明确<strong>新一代智能制造是新型工业化主攻方向</strong>，锚定2035年基本实现新型工业化目标。会议同步研究未来产业发展，审议通过《实施就业优先战略"十四五"行动计划》，从产业升级和就业保障两端发力。</p>
+
+    <h3>证监会吴清：遏制公募赌押赛道，完善程序化交易监管</h3>
+    <p>6月6日证监会主席吴清在基金业协会会员大会上表示，将深入完善<strong>程序化交易监管机制</strong>，防范滥用技术优势；坚决遏制公募基金"赌押赛道""风格漂移"等顽疾，突出监管公平性和规范性，加强针对性监管。</p>
+
+    <h3>5月CPI/PPI 6月10日公布，金融数据同步出炉</h3>
+    <p>国家统计局将于6月10日发布5月通胀及金融数据。浙商证券预计CPI同比约<strong>1.2%</strong>、PPI约<strong>3.7%</strong>；中金预测5月新增贷款约4500亿元，新增社融约1.97万亿元，M2同比增速约8.5%。</p>
+
+    <h2>二、企业要闻</h2>
+
+    <h3>SpaceX 6.12上市倒计时：750亿美元募资改写人类IPO史</h3>
+    <p>SpaceX定于6月12日登陆纳斯达克，发行价<strong>135美元</strong>，拟募资750亿美元，估值1.77万亿美元超越沙特阿美成为史上最大IPO。马斯克持股价值8665亿美元，距全球首位万亿富翁仅一步之遥（股价再涨2.2%即可达成）。路透披露SpaceX已与谷歌签署<strong>300亿美元算力租赁协议</strong>，每月支付9.2亿美元获取约11万个GPU资源。</p>
+
+    <h3>亨通光电全球爆单：AI算力驱动光纤价格暴涨150%</h3>
+    <p>受全球AI数据中心投资及产能约束驱动，特种光纤价格一年涨幅超<strong>150%</strong>，部分产品出货价涨近10倍，订单量增400%。亨通光电产能订单双升，子公司亨通华海已于6月3日分拆上市，母公司集中资源发展核心光通信业务。</p>
+
+    <h3>苹果WWDC 2026明日开幕：库克任内最后一届，AI交付能力大考</h3>
+    <p>北京时间6月9日凌晨，苹果WWDC 2026全球开发者大会开幕。本届被视为<strong>库克卸任CEO前最后一届WWDC</strong>（库克将于9月1日转任执行董事长，硬件VP特努斯接棒）。新Siri将独立成App并接入谷歌Gemini模型，iOS 27或为折叠屏铺路。华尔街将其视作苹果证明AI执行力的<strong>最关键转折点</strong>。</p>
+
+    <h3>AI概念股迈威尔科技、伟创力纳入标普500指数</h3>
+    <p>标普道琼斯指数公司宣布，迈威尔科技和伟创力将于<strong>6月22日</strong>开盘前正式纳入标普500指数。两者均受益于AI数据中心需求激增，盘后股价齐涨，纳入后将吸引大量被动资金配置。</p>
+
+    <h2>四、市场观察</h2>
+
+    <h3>非农余波：纳指单日重挫超千点，全球risk-off延续</h3>
+    <p>6月6日美股延续跌势，纳指重挫<strong>1121.53点（-4.10%）</strong>创近8个月最大单日跌幅，芯片股遭大规模抛售。A股同步回调：上证-0.74%、深成指-2.21%、创业板指-3.20%。市场研判美联储加息预期短期难以消退，全球风险偏好持续受压。</p>
+
+    <h3>大宗商品分化：黄金承压，芯片材料暴涨</h3>
+    <p>受加息预期打压，金饰克价年内已跌<strong>约400元</strong>，回到2025年底水平。美伊僵局难破、霍尔木兹海峡封锁持续，原油旺季或有上行空间。值得注意的是，<strong>车规级存储芯片价格同比暴涨180%</strong>，多家新能源车企已宣布涨价，算力硬件供需缺口持续扩大。</p>
+
+    <!-- 核心总结 -->
+    <div class="summary-box">
+      <h2>核心总结</h2>
+      <p><strong>政策定调产业升级方向</strong>——国常会锁定智能制造为主攻方向，叠加程序化交易和公募基金监管从严，政策组合拳从"鼓励"走向"规范+升级"双线推进。<strong>"超级科技周"即将开启</strong>——下周苹果WWDC（6.9）、华为HDC鸿蒙7（6.12）、智源大会（6.12）、SpaceX史上最大IPO（6.12）密集登场，AI行业从"叙事期"进入"交付验证期"，市场对AI落地能力的检验门槛将大幅提升。</p>
+      <p>
+        <span class="opp-tag">机会</span> 算力产业链（光纤/芯片/存储供需缺口） / SpaceX产业链映射 / 苹果AI供应链
+        <span class="risk-tag">风险</span> 全球加息预期压制科技股估值 / 下周超级IPO抽血效应 / 美伊地缘升级
+      </p>
+    </div>
+
+  </div>
+
+  <hr>
+  <div class="footer-cta">
+    欢迎关注 <strong>「一知桥」</strong><br>
+    点赞 · 在看 · 共享每日信息差
+  </div>
+</div>
+</body>
+</html>
