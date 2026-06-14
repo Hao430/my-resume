@@ -1,6 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { api } from '../api'
+import { resumeData as localResumeData } from '../data/resume'
 import type { ResumeData } from '../types/resume'
 
 export const useResumeStore = defineStore('resume', () => {
@@ -14,7 +15,9 @@ export const useResumeStore = defineStore('resume', () => {
     try {
       data.value = (await api.getResume()) as unknown as ResumeData
     } catch (e) {
-      error.value = e instanceof Error ? e.message : '加载失败'
+      // 无后端时降级到本地数据
+      console.warn('API 不可用，使用本地数据:', e instanceof Error ? e.message : '')
+      data.value = localResumeData
     } finally {
       loading.value = false
     }
