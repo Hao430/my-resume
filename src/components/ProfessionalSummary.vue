@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import type { ResumeData } from '../types/resume'
+
+const { t } = useI18n()
 
 defineProps<{
   summary: ResumeData['professionalSummary']
@@ -9,7 +12,7 @@ defineProps<{
 <template>
   <section class="professional-summary">
     <div class="container">
-      <h2 class="section-title">个人简介</h2>
+      <h2 class="section-title">{{ t('professionalSummary.sectionTitle') }}</h2>
       <div class="professional-summary__content">
         <div class="professional-summary__item">
           <div class="professional-summary__icon">💪</div>

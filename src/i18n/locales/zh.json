@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "blog": "博客",
+    "dailyBrief": "早参",
+    "contact": "联系我"
+  },
+  "hero": {
+    "title": "墨砚斋",
+    "subtitle": "以墨载道，以技行事",
+    "description": "计算机科学 · 全栈开发 · 持续学习者",
+    "aboutMe": "关于我",
+    "readBlog": "阅读博客",
+    "scrollDown": "向下滚动"
+  },
+  "personalInfo": {
+    "sectionTitle": "个人信息",
+    "ethnicity": "汉族",
+    "nativePlace": "湖南湘潭"
+  },
+  "professionalSummary": {
+    "sectionTitle": "个人简介"
+  },
+  "skills": {
+    "sectionTitle": "专业技能",
+    "categories": {
+      "technical": "技术技能",
+      "professional": "专业能力",
+      "tools": "工具"
+    }
+  },
+  "projectExperience": {
+    "sectionTitle": "项目经历",
+    "roles": {
+      "backendCore": "后端核心开发",
+      "independentDev": "独立开发",
+      "fullstackDev": "全栈开发",
+      "projectLead": "项目负责人",
+      "productLead": "产品负责人",
+      "algorithmDev": "算法开发"
+    }
+  },
+  "workExperience": {
+    "sectionTitle": "工作经历"
+  },
+  "honors": {
+    "sectionTitle": "荣誉奖项",
+    "levels": {
+      "provincial": "省级",
+      "school": "校级"
+    }
+  },
+  "footer": {
+    "tagline": "以墨载道，以技行事",
+    "copyright": "用心沉淀，随缘分享",
+    "icp": "湘ICP备2025125191号-2"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "English"
+  }
+}

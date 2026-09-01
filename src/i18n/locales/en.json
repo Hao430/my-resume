@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "dailyBrief": "Daily Brief",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Mo Yan Zhai",
+    "subtitle": "Ink carries the way, code puts it into practice",
+    "description": "Computer Science · Full-Stack Development · Lifelong Learner",
+    "aboutMe": "About Me",
+    "readBlog": "Read Blog",
+    "scrollDown": "Scroll Down"
+  },
+  "personalInfo": {
+    "sectionTitle": "Personal Info",
+    "ethnicity": "Han Chinese",
+    "nativePlace": "Xiangtan, Hunan"
+  },
+  "professionalSummary": {
+    "sectionTitle": "Professional Summary"
+  },
+  "skills": {
+    "sectionTitle": "Skills",
+    "categories": {
+      "technical": "Technical Skills",
+      "professional": "Professional Skills",
+      "tools": "Tools"
+    }
+  },
+  "projectExperience": {
+    "sectionTitle": "Project Experience",
+    "roles": {
+      "backendCore": "Core Backend Developer",
+      "independentDev": "Independent Developer",
+      "fullstackDev": "Full-Stack Developer",
+      "projectLead": "Project Lead",
+      "productLead": "Product Lead",
+      "algorithmDev": "Algorithm Developer"
+    }
+  },
+  "workExperience": {
+    "sectionTitle": "Work Experience"
+  },
+  "honors": {
+    "sectionTitle": "Honors & Awards",
+    "levels": {
+      "provincial": "Provincial",
+      "school": "University"
+    }
+  },
+  "footer": {
+    "tagline": "Ink carries the way, code puts it into practice",
+    "copyright": "Crafted with care, shared with serendipity",
+    "icp": "ICP License:湘ICP备2025125191号-2"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "English"
+  }
+}

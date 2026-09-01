@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import type { ProjectExperience } from '../types/resume'
+
+const { t } = useI18n()
 
 defineProps<{
   projects: ProjectExperience[]
@@ -17,7 +20,7 @@ const getProjectUrl = (url: string) => {
 <template>
   <section id="projects" class="projects">
     <div class="container">
-      <h2 class="section-title">项目经验</h2>
+      <h2 class="section-title">{{ t('projectExperience.sectionTitle') }}</h2>
       <div class="projects__list">
         <div
           v-for="project in projects"
@@ -29,7 +32,6 @@ const getProjectUrl = (url: string) => {
             <span class="project-card__period">{{ project.period }}</span>
           </div>
           <div class="project-card__role">
-            <span class="project-card__role-label">角色：</span>
             <span class="project-card__role-value">{{ project.role }}</span>
           </div>
           <ul class="project-card__descriptions">

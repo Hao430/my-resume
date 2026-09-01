@@ -1,15 +1,18 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 // 打字机效果
 const displayText = ref('')
-const fullText = '以墨载道，以技行事'
+const fullText = computed(() => t('hero.subtitle'))
 const charIndex = ref(0)
 
 onMounted(() => {
   const typeInterval = setInterval(() => {
-    if (charIndex.value < fullText.length) {
-      displayText.value += fullText[charIndex.value]
+    if (charIndex.value < fullText.value.length) {
+      displayText.value += fullText.value[charIndex.value]
       charIndex.value++
     } else {
       clearInterval(typeInterval)
@@ -47,7 +50,7 @@ onMounted(() => {
 
       <!-- 简介 -->
       <p class="hero__description animate-fadeInUp delay-400">
-        计算机科学 · 全栈开发 · 持续学习者
+        {{ t('hero.description') }}
       </p>
 
       <!-- 关键词标签 -->
@@ -55,8 +58,8 @@ onMounted(() => {
         <span class="hero__tag">Vue / React</span>
         <span class="hero__tag">TypeScript</span>
         <span class="hero__tag">Node.js</span>
-        <span class="hero__tag">AI 应用</span>
-        <span class="hero__tag">产品思维</span>
+        <span class="hero__tag">AI Apps</span>
+        <span class="hero__tag">Product Thinking</span>
       </div>
 
       <!-- CTA 按钮 -->
@@ -66,21 +69,21 @@ onMounted(() => {
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
             <circle cx="12" cy="7" r="4"/>
           </svg>
-          关于我
+          {{ t('hero.aboutMe') }}
         </router-link>
         <router-link to="/blog" class="btn btn--outline">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
           </svg>
-          阅读博客
+          {{ t('hero.readBlog') }}
         </router-link>
       </div>
     </div>
 
     <!-- 滚动提示 -->
     <div class="hero__scroll-hint animate-fadeIn delay-800">
-      <span class="hero__scroll-text">向下滚动</span>
+      <span class="hero__scroll-text">{{ t('hero.scrollDown') }}</span>
       <div class="hero__scroll-arrow">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M12 5v14M5 12l7 7 7-7"/>

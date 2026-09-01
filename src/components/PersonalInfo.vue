@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import type { PersonalInfo } from '../types/resume'
+
+const { t } = useI18n()
 
 defineProps<{
   personalInfo: PersonalInfo
@@ -13,7 +16,7 @@ defineProps<{
         <div class="personal-info__main">
           <h2 class="personal-info__name">{{ personalInfo.name }}</h2>
           <p class="personal-info__details">
-            {{ personalInfo.ethnicity }} · {{ personalInfo.nativePlace }}
+            {{ t('personalInfo.ethnicity') }} · {{ t('personalInfo.nativePlace') }}
           </p>
           <div class="personal-info__education">
             <p class="personal-info__university">{{ personalInfo.university }}</p>

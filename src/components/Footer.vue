@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const currentYear = new Date().getFullYear()
 
 const socialLinks = [
@@ -26,7 +29,7 @@ const socialLinks = [
           <span class="footer__logo-name">张豪</span>
         </div>
         <p class="footer__tagline">
-          以墨载道，以技行事
+          {{ t('footer.tagline') }}
         </p>
       </div>
 
@@ -53,7 +56,7 @@ const socialLinks = [
         </div>
 
         <p class="footer__copyright">
-          © {{ currentYear }} 张豪 · 用心沉淀，随缘分享
+          © {{ currentYear }} 张豪 · {{ t('footer.copyright') }}
         </p>
         <p class="footer__icp">
           <a
@@ -62,7 +65,7 @@ const socialLinks = [
             rel="noopener noreferrer"
             class="footer__icp-link"
           >
-            湘ICP备2025125191号-2
+            {{ t('footer.icp') }}
           </a>
         </p>
       </div>

@@ -1,0 +1,190 @@
+{
+  "personalInfo": {
+    "name": "Hao Zhang",
+    "ethnicity": "Han Chinese",
+    "nativePlace": "Xiangtan, Hunan, China",
+    "contact": {
+      "email": "fervent430@163.com",
+      "github": "github.com/hao430"
+    },
+    "university": "Guiyang University",
+    "college": "College of Computer Science",
+    "major": "Data Science and Big Data Technology"
+  },
+  "professionalSummary": {
+    "strong": "Strong Foundation: Currently pursuing a B.S. in Data Science and Big Data Technology at Guiyang University (Class of 2027). Solid computer science fundamentals with hands-on experience leading multiple product and technical projects from 0 to 1. Awarded Provincial Gold Medal in \"Internet+\" Innovation Competition and Provincial Second Prize in Mathematical Modeling.",
+    "comprehensive": "Comprehensive Skills: Proficient in user research, requirements analysis, product planning, prototyping, and cross-team collaboration. Full-stack development capabilities with experience in AI application development, data processing, and system architecture design. Led enterprise-grade projects (360° Panoramic Cloud Platform, DocLake Data Lake System) with complete lifecycle experience from requirements analysis to deployment.",
+    "outstanding": "Outstanding Qualities: Strong sense of responsibility, solid execution, team management and multi-task coordination experience. Proficient in AI development tools and workflows (agent, skills, rules). Advocate of docs-as-code philosophy with engineering mindset and commitment to code quality."
+  },
+  "skills": [
+    {"name": "Vue.js", "category": "technical"},
+    {"name": "TypeScript", "category": "technical"},
+    {"name": "JavaScript", "category": "technical"},
+    {"name": "Next.js", "category": "technical"},
+    {"name": "React", "category": "technical"},
+    {"name": "HTML/CSS", "category": "technical"},
+    {"name": "WeChat Mini Program", "category": "technical"},
+    {"name": "Node.js", "category": "technical"},
+    {"name": "Express", "category": "technical"},
+    {"name": "Python", "category": "technical"},
+    {"name": "FastAPI", "category": "technical"},
+    {"name": "Java", "category": "technical"},
+    {"name": "Spring Boot", "category": "technical"},
+    {"name": "MySQL", "category": "technical"},
+    {"name": "PostgreSQL", "category": "technical"},
+    {"name": "Redis", "category": "technical"},
+    {"name": "Docker", "category": "technical"},
+    {"name": "Git", "category": "technical"},
+    {"name": "Linux", "category": "technical"},
+    {"name": "CI/CD", "category": "technical"},
+    {"name": "Cloud Platform Management", "category": "technical"},
+    {"name": "LLM Application Development", "category": "technical"},
+    {"name": "NumPy/Pandas", "category": "technical"},
+    {"name": "OCR/NLP", "category": "technical"},
+    {"name": "User Research", "category": "professional"},
+    {"name": "Requirements Analysis", "category": "professional"},
+    {"name": "Product Design", "category": "professional"},
+    {"name": "Data Analysis", "category": "professional"},
+    {"name": "Project Management", "category": "professional"},
+    {"name": "VS Code", "category": "tools"},
+    {"name": "Excel", "category": "tools"},
+    {"name": "FineBI", "category": "tools"},
+    {"name": "Navicat", "category": "tools"},
+    {"name": "Postman", "category": "tools"},
+    {"name": "AI Collaboration Tools", "category": "tools"},
+    {"name": "Feishu/DingTalk", "category": "tools"}
+  ],
+  "projectExperiences": [
+    {
+      "period": "Dec 2025 – Present",
+      "projectName": "360° Panoramic Cloud Platform AI Document Processing Backend",
+      "role": "Core Backend Developer",
+      "descriptions": [
+        "Enterprise backend for panoramic image management and AI-powered document processing in construction industry. Three-layer architecture (Routes→Services→DAOs), 5-phase refactoring, 43 source modules, ~10,000 lines of code.",
+        "Multi-engine AI document processing pipeline: PDF electronic/scan dual-mode parsing, 3-stage intelligent document classification (L1 keyword→L2 OCR→L3 AI semantic), Redis-based async task queue, handling hundreds of thousands of daily requests.",
+        "Integrated 7 cloud services (Huawei Cloud OBS/MaaS, Alibaba Bailian, Baidu Qianfan VL/OCR, weather API, DingTalk OpenAPI), achieving 90%+ query response improvement and connection pool utilization reduction from 80% to 10%."
+      ]
+    },
+    {
+      "period": "Jan 2026 – Present",
+      "projectName": "DocLake — Multi-Source Document Data Lake System",
+      "role": "Independent Developer",
+      "descriptions": [
+        "Enterprise document intelligence platform built with FastAPI+React, ARQ async queue, PostgreSQL(pgvector)+MinIO storage separation, deployed on Alibaba Cloud ECS.",
+        "Complete pipeline: heterogeneous documents→unified Markdown→LLM analysis→vector storage→multimodal search. Supports 10+ formats (PDF/DOCX/DOC/MD/TXT/HTML/XLSX/JPG/PNG), dual-engine crawling (Httpx+Playwright).",
+        "Integrated Qwen2.5 7B local model (llama.cpp), 3-layer JSON error handling improved LLM success rate from 85% to 99%+, extracting 18+ structured fields per document."
+      ]
+    },
+    {
+      "period": "May 2026 – Jun 2026",
+      "projectName": "Multi-Agent Tender Self-Audit System (AgentScope)",
+      "role": "Full-Stack Developer",
+      "descriptions": [
+        "5-agent collaborative tender audit system built on AgentScope 2.0.0: TenderParser→BidSelfcheck→PriceReview→RiskAssessment→ReportGenerator, 7-phase iterative development.",
+        "Docling+pdfplumber dual-engine PDF parsing, RuleEngine (18 rules, 4 severity levels), Map-Reduce long document processing, dual-track risk assessment (quantitative weighted + LLM comprehensive judgment).",
+        "Supports CLI/REST API/Python SDK deployment, end-to-end workflow (tender PDF input→Markdown report output), full AgentScope framework compliance."
+      ]
+    },
+    {
+      "period": "Apr 2026 – Present",
+      "projectName": "Construction Document Classification Service",
+      "role": "Core Backend Developer",
+      "descriptions": [
+        "3-stage intelligent classification pipeline (L1 exclusion→L2 OCR extraction→L3 AI classification) for construction industry documents. Supports PDF, images, Word, Excel with Alibaba+Baidu+Huawei Cloud integration.",
+        "Automated form attachment fetching and incremental classification, AI arbitration for multi-PDF classification conflicts, automatic description generation and Excel export.",
+        "5-phase optimization achieving test coverage from 2.4% to 18%, 143 test cases, code quality compliance."
+      ]
+    },
+    {
+      "period": "Jun 2024 – Present",
+      "projectName": "Bilibili Video Transcript Assistant",
+      "role": "Independent Developer",
+      "descriptions": [
+        "Browser extension for Bilibili platform providing intelligent subtitle processing and AI content generation to enhance learning and work efficiency.",
+        "Core features: Bilibili API fast subtitle retrieval, Whisper API speech recognition for videos without subtitles, AI transcript/summary/extraction; timestamp navigation, one-click copy, multi-model configuration.",
+        "Built with Manifest V3 architecture, native JavaScript; supports OpenAI GPT-3.5/4, Claude-3, DeepSeek, Doubao, Tongyi Qianwen; Chrome Storage API for data persistence."
+      ],
+      "url": "https://github.com/Hao430/bilibili-video-transcript"
+    },
+    {
+      "period": "Jan 2024 – Present",
+      "projectName": "NanFeng AI Chat Application",
+      "role": "Independent Developer",
+      "descriptions": [
+        "Architecture: Next.js 14 + TypeScript, EdgeOne Pages edge function deployment, integrated DeepSeek R1 series models with real-time web search.",
+        "Features: Complete chat interface with message management, streaming responses, thought process visualization, code highlighting, Mermaid diagram rendering; OpenAI API compatible, multi-model switching.",
+        "Technical highlights: SearXNG privacy search engine integration, responsive design, edge node deployment for global low-latency access, supporting thousands of daily requests."
+      ],
+      "url": "ai.hao430.xyz"
+    },
+    {
+      "period": "Oct 2025 – Dec 2025",
+      "projectName": "Party Member Management System",
+      "role": "Project Lead",
+      "descriptions": [
+        "Full-featured party member management system addressing information fragmentation and inefficient statistics. 10+ core tables, frontend-backend separation (Vue.js+Element UI / Node.js+Express).",
+        "Data visualization dashboard (ECharts: member structure, activity statistics, dues payment progress), improving statistical efficiency by 60%.",
+        "Complete digital tracking system for party member development pipeline (applicant→activist→development target→probationary→full member) with automated archiving."
+      ]
+    },
+    {
+      "period": "Mar 2025 – Oct 2025",
+      "projectName": "KangYun ShiShang Healthy Dining Platform",
+      "role": "Product Lead",
+      "descriptions": [
+        "Led comprehensive industry research: 15 merchant interviews, 5 supply chain companies, 30 end users, 200 surveys distributed (186 valid responses, 93% rate), producing 30,000-word requirements analysis report.",
+        "Built user persona tag system, user behavior analytics dashboard tracking full funnel (registration→browse→order→repurchase), established requirement-feedback closed loop.",
+        "Coordinated product, design, development, and operations teams. Awarded Provincial First Prize in E-commerce \"Three Creations\" Competition."
+      ]
+    },
+    {
+      "period": "Sep 2024 – Sep 2025",
+      "projectName": "\"Bench Dragon\" Mathematical Model & Optimization",
+      "role": "Algorithm Developer",
+      "descriptions": [
+        "Mathematical model for optimizing traditional Zhejiang-Fujian folk \"Bench Dragon\" movement trajectory, combining Archimedean spiral and Bezier curve principles, Python simulation of 223-segment dragon movement.",
+        "Simulated annealing multi-objective optimization (turning path, pitch, dragon head speed), S-shaped shortest path planning + collision detection, numerical solution within 300s.",
+        "Matplotlib visualization and Pandas statistical analysis, generating before/after optimization comparison reports. Awarded Provincial Second Prize in Mathematical Modeling."
+      ]
+    }
+  ],
+  "workExperiences": [
+    {
+      "period": "Nov 2025 – Present",
+      "company": "Guizhou Construction Supervision Consulting Co., Ltd.",
+      "position": "Application Development Intern",
+      "achievements": [
+        "Conducted 5 on-site construction investigations, interviewed project managers and supervision engineers, bridging technology implementation with business requirements; developed form designs and automation on DingTalk low-code platform.",
+        "Managed panoramic image module, designed EXIF-based image upload solution with MySQL+OBS storage architecture, enabling visual project progress management.",
+        "Led legacy system migration, intelligent document classification, tender review automation, multi-source data cleansing and vectorization for data lake construction; regular drone aerial photography of project sites."
+      ]
+    },
+    {
+      "period": "May 2025 – Present",
+      "company": "Student Party Branch",
+      "position": "Deputy Secretary",
+      "achievements": [
+        "Organized and hosted 12 \"Three Meetings and One Lesson\" and themed party day activities, strengthening theoretical learning and cohesion.",
+        "Developed \"Red Core Growth Plan\" and party member practice program, designed comprehensive scoring system (theoretical learning, volunteer service, academic performance).",
+        "Digitized party member development tracking (applicant→activist→development target→probationary→full member) with automated archiving and reminders."
+      ]
+    },
+    {
+      "period": "May 2024 – Present",
+      "company": "Big Data Innovation Association",
+      "position": "President",
+      "achievements": [
+        "Built algorithm training teams and project groups with 50+ members, establishing algorithm, project, and operations subgroups with formal meeting and reporting systems.",
+        "Weekly tech sharing sessions, incubated 15 student projects (3 won provincial competition awards).",
+        "Bridged academia and industry with 8 industry lectures covering 500+ students; guided teams in \"Internet+\" and Challenge Cup competitions, earning 5 provincial awards."
+      ]
+    }
+  ],
+  "honors": [
+    {"name": "E-commerce \"Three Creations\" Competition - Provincial First Prize", "level": "Provincial"},
+    {"name": "\"Internet+\" Innovation Competition - Provincial Gold Medal", "level": "Provincial"},
+    {"name": "Mathematical Modeling - Provincial Second Prize", "level": "Provincial"},
+    {"name": "Challenge Cup - Provincial Third Prize", "level": "Provincial"},
+    {"name": "Encouragement Scholarship", "level": "University"}
+  ]
+}

@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import type { WorkExperience } from '../types/resume'
+
+const { t } = useI18n()
 
 defineProps<{
   experiences: WorkExperience[]
@@ -9,7 +12,7 @@ defineProps<{
 <template>
   <section id="experience" class="experience">
     <div class="container">
-      <h2 class="section-title">工作经历</h2>
+      <h2 class="section-title">{{ t('workExperience.sectionTitle') }}</h2>
       <div class="experience__list">
         <div
           v-for="exp in experiences"

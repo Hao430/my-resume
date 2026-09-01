@@ -1,17 +1,21 @@
 <script setup lang="ts">
-import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+import LanguageSwitcher from './LanguageSwitcher.vue'
+
+const { t } = useI18n()
 
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 const headerRef = ref<HTMLElement | null>(null)
 
 // 路由链接
-const navItems = [
-  { path: '/', label: '首页' },
-  { path: '/about', label: '关于' },
-  { path: '/blog', label: '博客' },
-  { path: '/daily-brief', label: '早参' }
-]
+const navItems = computed(() => [
+  { path: '/', label: t('nav.home') },
+  { path: '/about', label: t('nav.about') },
+  { path: '/blog', label: t('nav.blog') },
+  { path: '/daily-brief', label: t('nav.dailyBrief') }
+])
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
@@ -85,14 +89,17 @@ const closeMobileMenu = () => {
         </router-link>
       </nav>
 
-      <!-- Contact Button -->
-      <a href="mailto:fervent430@163.com" class="header__contact btn btn--outline">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
-        </svg>
-        <span>联系我</span>
-      </a>
+      <!-- Language Switcher & Contact -->
+      <div class="header__actions">
+        <LanguageSwitcher />
+        <a href="mailto:fervent430@163.com" class="header__contact btn btn--outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>{{ t('nav.contact') }}</span>
+        </a>
+      </div>
 
       <!-- Mobile Menu Toggle -->
       <button class="header__mobile-toggle" @click="toggleMobileMenu" aria-label="菜单">
@@ -117,8 +124,11 @@ const closeMobileMenu = () => {
           {{ item.label }}
         </router-link>
         <a href="mailto:fervent430@163.com" class="header__mobile-nav-item" @click="closeMobileMenu">
-          联系我
+          {{ t('nav.contact') }}
         </a>
+        <div class="header__mobile-lang">
+          <LanguageSwitcher />
+        </div>
       </nav>
     </div>
   </header>
@@ -242,6 +252,13 @@ const closeMobileMenu = () => {
   width: 60%;
 }
 
+/* Actions */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
 /* Contact Button */
 .header__contact {
   display: flex;
@@ -335,10 +352,16 @@ const closeMobileMenu = () => {
   background-color: var(--color-ink-light);
 }
 
+.header__mobile-lang {
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  justify-content: center;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header__nav,
-  .header__contact {
+  .header__actions {
     display: none;
   }
 

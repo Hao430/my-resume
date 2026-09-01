@@ -1,21 +1,25 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import type { Skill } from '../types/resume'
+
+const { t } = useI18n()
 
 defineProps<{
   skills: Skill[]
 }>()
 
-const skillCategories = {
-  professional: '专业技能',
-  technical: '技术能力',
-  tools: '工具与平台'
-}
+const skillCategories = computed(() => ({
+  professional: t('skills.categories.professional'),
+  technical: t('skills.categories.technical'),
+  tools: t('skills.categories.tools')
+}))
 </script>
 
 <template>
   <section id="skills" class="skills">
     <div class="container">
-      <h2 class="section-title">专业技能</h2>
+      <h2 class="section-title">{{ t('skills.sectionTitle') }}</h2>
       <div class="skills__grid">
         <div
           v-for="(categorySkills, category) in {
