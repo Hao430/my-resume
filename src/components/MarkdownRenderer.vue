@@ -15,6 +15,9 @@ defineProps<{
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   color: var(--color-text);
+  /* 显式左对齐：post-content 位于 .page-header（text-align:center）内，
+     不声明这里会继承居中——正文必须始终左对齐 */
+  text-align: left;
 }
 
 .markdown-body h1 {
