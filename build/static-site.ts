@@ -1,5 +1,7 @@
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
+import { execFile } from 'node:child_process'
+import { promisify } from 'node:util'
 import type { Plugin } from 'vite'
 
 import {
@@ -35,6 +37,105 @@ import { toISODate } from '../src/utils/markdown'
  */
 
 const AUTHOR = '张豪 (Hao430)'
+const run = promisify(execFile)
+
+/* ---------------- 每篇文章专属的 OG 分享图 ---------------- */
+
+/** 按近似字符宽度折行（CJK 记 2 个宽度单位），最多 4 行 */
+function wrapTitle(text: string, maxWidth = 26, maxLines = 4): string[] {
+  const words = text.split(/\s+/)
+  const lines: string[] = []
+  let current = ''
+  const widthOf = (value: string) =>
+    [...value].reduce((sum, ch) => sum + (/[\u3000-\u9fff\uf900-\ufaff]/.test(ch) ? 2 : 1), 0)
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word
+    if (widthOf(candidate) > maxWidth && current) {
+      lines.push(current)
+      current = word
+    } else {
+      current = candidate
+    }
+  }
+  if (current) lines.push(current)
+  let result = lines
+  if (result.length > maxLines) {
+    result = result.slice(0, maxLines)
+    result[maxLines - 1] = `${(result[maxLines - 1] ?? '').slice(0, maxWidth - 1)}…`
+  } else if (result.length >= 2) {
+    // 避免最后一行只剩一个孤词
+    const last = (result[result.length - 1] ?? '').trim()
+    if (last && !last.includes(' ')) {
+      const prev = (result[result.length - 2] ?? '').trim().split(/\s+/)
+      if (prev.length > 1) {
+        const moved = prev.pop()
+        result[result.length - 2] = prev.join(' ')
+        result[result.length - 1] = `${moved} ${last}`
+      }
+    }
+  }
+  return result
+}
+
+function ogSvg(title: string, subtitle: string, tagline: string): string {
+  const lines = wrapTitle(title)
+  const size = lines.length <= 2 ? 76 : lines.length === 3 ? 66 : 58
+  const startY = 300 - ((lines.length - 1) * (size + 12)) / 2
+  const tspans = lines
+    .map((line, i) => `<tspan x="96" y="${startY + i * (size + 12)}">${escapeXml(line)}</tspan>`)
+    .join('')
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0d0f"/>
+      <stop offset="100%" stop-color="#17171b"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9454b"/>
+      <stop offset="100%" stop-color="#9e2a2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ink)"/>
+  <rect width="1200" height="6" fill="url(#acc)"/>
+  <g transform="translate(1040,520) scale(0.9)">
+    <path d="M 0 -80 C 8 -70, 54 -18, 54 16 C 54 50, 32 72, 0 80 C -32 72, -54 50, -54 16 C -54 -18, -8 -70, 0 -80 Z" fill="url(#acc)" opacity="0.9"/>
+  </g>
+  <rect x="96" y="150" width="96" height="5" fill="url(#acc)"/>
+  <text x="96" y="122" font-family="DejaVu Sans, Helvetica, sans-serif" font-size="26" letter-spacing="7" fill="#8f8b81">${escapeXml(subtitle.toUpperCase())}</text>
+  <text font-family="DejaVu Serif, Noto Sans CJK SC, Georgia, serif" font-size="${size}" font-weight="bold" fill="#f3f1ea">${tspans}</text>
+  <text x="96" y="556" font-family="DejaVu Sans, Noto Sans CJK SC, Helvetica, sans-serif" font-size="27" fill="#b7b3a8">${escapeXml(tagline)}</text>
+</svg>
+`
+}
+
+/** 构建环境（含 ESA 容器）的 CJK 字体不可控（本机有 Noto Sans CJK 但没有 Serif CJK），
+ *  所以标题/文案含中文时一律回退到品牌图，避免分享图渲染成豆腐块 */
+const CJK = /[\u3000-\u9fff\uf900-\ufaff\uff00-\uffef]/
+
+/** 生成一张专属分享图；环境不支持或标题含非拉丁字符时返回 null */
+async function renderOgImage(
+  outDir: string,
+  slug: string,
+  title: string,
+  subtitle: string,
+  tagline: string,
+): Promise<string | null> {
+  if (CJK.test(title) || CJK.test(tagline)) return null
+  const svg = ogSvg(title, subtitle, tagline)
+  const dir = path.join(outDir, 'og')
+  const file = path.join(dir, `${slug}.svg`)
+  const png = path.join(dir, `${slug}.png`)
+  try {
+    await fs.mkdir(dir, { recursive: true })
+    await fs.writeFile(file, svg, 'utf-8')
+    await run('rsvg-convert', ['-w', '1200', '-h', '630', file, '-o', png])
+    return `${SITE_URL}/og/${slug}.png`
+  } catch {
+    return null
+  }
+}
+
+/* ---------------- 插件 ---------------- */
 
 interface Brief {
   date: string
@@ -224,11 +325,13 @@ function setHtmlLang(html: string, lang: 'zh-CN' | 'en'): string {
     : html.replace(/<html/i, `<html lang="${lang}"`)
 }
 
-function postHtml(shell: string, post: LocalizedPost): string {
+function postHtml(shell: string, post: LocalizedPost, customImage?: string): string {
   const url = `${SITE_URL}${post.path}`
-  const image = post.cover
-    ? `${SITE_URL}${post.cover}`
-    : `${SITE_URL}/${post.bodyLang === 'en' ? 'og-image-en.png' : 'og-image.png'}`
+  const image =
+    customImage ??
+    (post.cover
+      ? `${SITE_URL}${post.cover}`
+      : `${SITE_URL}/${post.bodyLang === 'en' ? 'og-image-en.png' : 'og-image.png'}`)
   const siteName = post.bodyLang === 'en' ? SITE_NAME_EN : SITE_NAME_ZH
 
   let html = setHtmlLang(shell, post.bodyLang === 'en' ? 'en' : 'zh-CN')
@@ -472,14 +575,22 @@ Crawl-delay: 1
 
       /* 3. 每篇文章独立 head（用作者原文语言，保证 title / og:locale 与正文一致） */
       const emitted = new Set<string>()
+      let rendered = 0
       for (const post of catalog.map((item) => localizePost(item, item.primary.bodyLang))) {
         if (post.externalUrl || emitted.has(post.slug)) continue
         emitted.add(post.slug)
         const dir = path.join(outDir, post.path)
         writes.push(
-          fs.mkdir(dir, { recursive: true }).then(() =>
-            fs.writeFile(path.join(dir, 'index.html'), postHtml(shell, post), 'utf-8'),
-          ),
+          (async () => {
+            const tagline =
+              post.bodyLang === 'en'
+                ? `Hao Zhang · hao430.cn · ${post.readingMinutes} min read`
+                : `张豪 · hao430.cn · 阅读约 ${post.readingMinutes} 分钟`
+            const image = await renderOgImage(outDir, post.slug, post.title, SITE_NAME_EN, tagline)
+            if (image) rendered += 1
+            await fs.mkdir(dir, { recursive: true })
+            await fs.writeFile(path.join(dir, 'index.html'), postHtml(shell, post, image ?? undefined), 'utf-8')
+          })(),
         )
       }
 
@@ -524,7 +635,7 @@ Crawl-delay: 1
       this.info(
         `静态可发现性资产：${catalog.length} 篇文章（中文 ${zhItems.length} / 英文 ${enItems.length}）· ${briefs.length} 期早参 → feed.xml · feed-en.xml · briefs.xml · sitemap.xml · 预渲染 head（${
           Date.now() - startedAt
-        }ms）`,
+        }ms）· 专属分享图 ${rendered} 张`,
       )
     },
   }
