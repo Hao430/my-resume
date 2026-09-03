@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/node24/tsconfig.json",
+  "include": ["env.d.ts", "vitest.config.ts", "src/__tests__/**/*.ts", "src/components/MarkdownRenderer.vue", "src/components/LanguageSwitcher.vue", "src/components/Header.vue", "src/pages/ServicesPage.vue"],
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["node", "vite/client"],
+    "resolveJsonModule": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "allowImportingTsExtensions": false,
+    "skipLibCheck": true
+  }
+}

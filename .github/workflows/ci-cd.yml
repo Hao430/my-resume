@@ -46,6 +46,9 @@ jobs:
       - name: TypeScript 类型检查
         run: npm run type-check
 
+      - name: 自动化测试（vitest）
+        run: npm test
+
 
 
   # ============================================

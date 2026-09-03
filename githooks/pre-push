@@ -12,7 +12,7 @@ echo ""
 PKG_MGR="npm"
 
 # Step 1: TypeScript 类型检查
-echo "📘 [1/2] TypeScript 类型检查..."
+echo "📘 [1/3] TypeScript 类型检查..."
 $PKG_MGR run type-check 2>&1
 TYPECHECK_EXIT=$?
 
@@ -26,8 +26,23 @@ fi
 echo "✅ TypeScript 检查通过"
 echo ""
 
-# Step 2: 生产构建验证
-echo "📦 [2/2] 生产构建验证..."
+# Step 2: 自动化测试（vitest）
+echo "🧪 [2/3] 自动化测试（vitest）..."
+$PKG_MGR run test 2>&1
+TEST_EXIT=$?
+
+if [ $TEST_EXIT -ne 0 ]; then
+  echo ""
+  echo "❌ [pre-push] 自动化测试失败，推送已阻止"
+  echo "   修复失败用例后再推送（npm test）"
+  exit 1
+fi
+
+echo "✅ 测试通过"
+echo ""
+
+# Step 3: 生产构建验证
+echo "📦 [3/3] 生产构建验证..."
 $PKG_MGR run build-only 2>&1
 BUILD_EXIT=$?
 
@@ -39,7 +54,7 @@ if [ $BUILD_EXIT -ne 0 ]; then
 fi
 
 echo "✅ 构建验证通过"
-echo ""
+echo "" ""
 echo "🎉 [pre-push] 所有检查通过，正在推送..."
 echo "   推送后 ESA 将自动部署到 hao430.cn"
 exit 0
