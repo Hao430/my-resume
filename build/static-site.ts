@@ -217,6 +217,13 @@ ${entries.join('\n')}
 
 /* ---------------- 预渲染外壳 ---------------- */
 
+/** 让英文原文页面的 <html lang> 从一开始就是对的（而不是等 JS 改） */
+function setHtmlLang(html: string, lang: 'zh-CN' | 'en'): string {
+  return /<html[^>]*\slang="[^"]*"/i.test(html)
+    ? html.replace(/(<html[^>]*\slang=")[^"]*(")/i, `$1${lang}$2`)
+    : html.replace(/<html/i, `<html lang="${lang}"`)
+}
+
 function postHtml(shell: string, post: LocalizedPost): string {
   const url = `${SITE_URL}${post.path}`
   const image = post.cover
@@ -224,7 +231,8 @@ function postHtml(shell: string, post: LocalizedPost): string {
     : `${SITE_URL}/${post.bodyLang === 'en' ? 'og-image-en.png' : 'og-image.png'}`
   const siteName = post.bodyLang === 'en' ? SITE_NAME_EN : SITE_NAME_ZH
 
-  let html = replaceTitle(shell, `${post.title} | ${siteName}`)
+  let html = setHtmlLang(shell, post.bodyLang === 'en' ? 'en' : 'zh-CN')
+  html = replaceTitle(html, `${post.title} | ${siteName}`)
   html = upsertMeta(html, 'name', 'description', post.description)
   html = upsertLink(html, 'canonical', url)
   html = upsertMeta(html, 'property', 'og:title', post.title)
@@ -341,7 +349,30 @@ export function staticSitePlugin(): Plugin {
       writes.push(
         fs.writeFile(
           path.join(outDir, 'robots.txt'),
-          `User-agent: *\nAllow: /\n\n# 中英文双语内容，全站允许抓取\n\nSitemap: ${SITE_URL}/sitemap.xml\n\nCrawl-delay: 1\n`,
+`User-agent: *
+Allow: /
+
+# 中英文双语内容，全站允许抓取
+# 海外 AI 检索/问答入口也放行（内容即个人 IP 资产，宁可被引用也不要被抓不到）
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+
+Crawl-delay: 1
+`,
           'utf-8',
         ),
       )

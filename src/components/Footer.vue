@@ -25,7 +25,7 @@ const socialLinks = [
         <div class="footer__logo">
           <span class="footer__logo-text">墨</span>
           <span class="footer__logo-separator">·</span>
-          <span class="footer__logo-name">张豪</span>
+          <span class="footer__logo-name">{{ t('brand.name') }}</span>
         </div>
         <p class="footer__tagline">
           {{ t('footer.tagline') }}
@@ -61,7 +61,7 @@ const socialLinks = [
         </div>
 
         <p class="footer__copyright">
-          © {{ currentYear }} 张豪 · {{ t('footer.copyright') }}
+          © {{ currentYear }} {{ t('brand.name') }} · {{ t('footer.copyright') }}
         </p>
       </div>
     </div>

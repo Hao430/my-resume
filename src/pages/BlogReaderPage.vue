@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const route = useRoute()
 const router = useRouter()
@@ -27,7 +30,7 @@ onMounted(() => {
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>
-      返回博客
+      {{ t('reader.backToBlog') }}
     </button>
     
     <iframe
@@ -39,7 +42,7 @@ onMounted(() => {
     />
     
     <div v-if="!fileName" class="blog-reader__loading">
-      加载中...
+      {{ t('common.loading') }}
     </div>
   </div>
 </template>

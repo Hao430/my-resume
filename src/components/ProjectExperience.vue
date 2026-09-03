@@ -46,7 +46,7 @@ const getProjectUrl = (url: string) => {
           <!-- 添加项目链接 -->
           <div v-if="project.url" class="project-card__link">
             <a :href="getProjectUrl(project.url)" target="_blank" rel="noopener noreferrer">
-              查看项目 →
+              {{ t('common.viewProject') }} →
             </a>
           </div>
         </div>

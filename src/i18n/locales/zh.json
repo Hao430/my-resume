@@ -5,15 +5,17 @@
     "blog": "博客",
     "dailyBrief": "早参",
     "contact": "联系我",
-    "rss": "订阅"
+    "rss": "订阅",
+    "menu": "菜单"
   },
   "hero": {
-    "title": "墨砚斋",
     "subtitle": "以墨载道，以技行事",
     "description": "计算机科学 · 全栈开发 · 持续学习者",
     "aboutMe": "关于我",
     "readBlog": "阅读博客",
-    "scrollDown": "向下滚动"
+    "scrollDown": "向下滚动",
+    "titleAccent": "墨",
+    "titleRest": "砚斋"
   },
   "personalInfo": {
     "sectionTitle": "个人信息",
@@ -160,7 +162,12 @@
   },
   "slides": {
     "pageTitle": "演示文稿",
-    "empty": "暂无演示文稿"
+    "empty": "暂无演示文稿",
+    "pageSubtitle": "视觉表达 · 深度思考 · 演示分享",
+    "watch": "观看演示",
+    "pages": "{n} 页",
+    "backToList": "返回列表",
+    "notFound": "演示文稿不存在"
   },
   "seo": {
     "home": "首页",
@@ -170,5 +177,17 @@
     "slides": "演示文稿",
     "reader": "阅读",
     "dailyBrief": "每日早参"
+  },
+  "brand": {
+    "name": "张豪",
+    "mark": "墨"
+  },
+  "common": {
+    "loading": "加载中...",
+    "back": "返回",
+    "viewProject": "查看项目"
+  },
+  "reader": {
+    "backToBlog": "返回博客"
   }
 }

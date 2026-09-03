@@ -34,7 +34,7 @@ onMounted(() => {
       <!-- 主标题 -->
       <div class="hero__main">
         <h1 class="hero__title animate-fadeInUp">
-          <span class="hero__title-accent">墨</span>砚斋
+          <span class="hero__title-accent">{{ t('hero.titleAccent') }}</span>{{ t('hero.titleRest') }}
         </h1>
         <p class="hero__subtitle animate-fadeInUp delay-200">
           {{ displayText }}<span class="hero__cursor">|</span>

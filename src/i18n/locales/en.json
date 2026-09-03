@@ -5,15 +5,17 @@
     "blog": "Blog",
     "dailyBrief": "Daily Brief",
     "contact": "Contact",
-    "rss": "RSS"
+    "rss": "RSS",
+    "menu": "Menu"
   },
   "hero": {
-    "title": "Hao430",
     "subtitle": "Ink carries the way, code puts it into practice",
     "description": "Computer Science · Full-Stack Development · Lifelong Learner",
     "aboutMe": "About Me",
     "readBlog": "Read Blog",
-    "scrollDown": "Scroll Down"
+    "scrollDown": "Scroll Down",
+    "titleAccent": "H",
+    "titleRest": "ao430"
   },
   "personalInfo": {
     "sectionTitle": "Personal Info",
@@ -160,7 +162,12 @@
   },
   "slides": {
     "pageTitle": "Slides",
-    "empty": "No slides yet"
+    "empty": "No slides yet",
+    "pageSubtitle": "Visual essays · Deep dives · Talks",
+    "watch": "Watch the deck",
+    "pages": "{n} slides",
+    "backToList": "Back to slides",
+    "notFound": "Slide not found"
   },
   "seo": {
     "home": "Home",
@@ -170,5 +177,17 @@
     "slides": "Slides",
     "reader": "Reading",
     "dailyBrief": "Daily Brief"
+  },
+  "brand": {
+    "name": "Hao Zhang",
+    "mark": "墨"
+  },
+  "common": {
+    "loading": "Loading...",
+    "back": "Back",
+    "viewProject": "View project"
+  },
+  "reader": {
+    "backToBlog": "Back to blog"
   }
 }

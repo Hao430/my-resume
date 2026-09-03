@@ -1,12 +1,23 @@
 User-agent: *
 Allow: /
 
-# 允许所有爬虫访问
-# Disallow: /api/          # 如有需要可限制
-# Disallow: /private/       # 如有需要可限制
+# 中英文双语内容，全站允许抓取
+# 海外 AI 检索/问答入口也放行（内容即个人 IP 资产，宁可被引用也不要被抓不到）
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
 
-# Sitemap
 Sitemap: https://hao430.cn/sitemap.xml
 
-# 爬虫速率（建议值，可根据需要调整）
 Crawl-delay: 1

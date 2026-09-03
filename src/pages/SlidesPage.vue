@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { useSlidesStore } from '@/stores/slides'
+
+const { t } = useI18n()
 
 const slidesStore = useSlidesStore()
 </script>
@@ -11,10 +14,10 @@ const slidesStore = useSlidesStore()
       <div class="container">
         <h1 class="page-header__title animate-fadeInUp">
           <span class="page-header__accent">·</span>
-          演示文稿
+          {{ t('slides.pageTitle') }}
         </h1>
         <p class="page-header__subtitle animate-fadeInUp delay-200">
-          视觉表达 · 深度思考 · 演示分享
+          {{ t('slides.pageSubtitle') }}
         </p>
       </div>
     </section>
@@ -42,7 +45,7 @@ const slidesStore = useSlidesStore()
                   <polygon points="5 3 19 12 5 21 5 3"/>
                 </svg>
               </div>
-              <span class="slide-card__count">{{ slide.slides }} 页</span>
+              <span class="slide-card__count">{{ t('slides.pages', { n: slide.slides }) }}</span>
             </div>
 
             <!-- Content -->
@@ -55,7 +58,7 @@ const slidesStore = useSlidesStore()
                   :to="`/slides/${slide.id}`"
                   class="slide-card__link btn btn--primary"
                 >
-                  观看演示
+                  {{ t('slides.watch') }}
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
@@ -70,7 +73,7 @@ const slidesStore = useSlidesStore()
             <line x1="8" y1="21" x2="16" y2="21"/>
             <line x1="12" y1="17" x2="12" y2="21"/>
           </svg>
-          <p class="empty-state__text">暂无演示文稿</p>
+          <p class="empty-state__text">{{ t('slides.empty') }}</p>
         </div>
       </div>
     </section>

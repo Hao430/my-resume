@@ -73,7 +73,7 @@ const closeMobileMenu = () => {
         <img src="/logo.svg" alt="Logo" class="header__logo-icon" width="28" height="28" />
         <span class="header__logo-text">墨</span>
         <span class="header__logo-separator">·</span>
-        <span class="header__logo-name">张豪</span>
+        <span class="header__logo-name">{{ t('brand.name') }}</span>
       </router-link>
 
       <!-- Desktop Navigation -->
@@ -102,7 +102,7 @@ const closeMobileMenu = () => {
       </div>
 
       <!-- Mobile Menu Toggle -->
-      <button class="header__mobile-toggle" @click="toggleMobileMenu" aria-label="菜单">
+      <button class="header__mobile-toggle" @click="toggleMobileMenu" :aria-label="t('nav.menu')">
         <span :class="['header__hamburger', { 'header__hamburger--open': isMobileMenuOpen }]">
           <span></span>
           <span></span>

@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useSlidesStore } from '@/stores/slides'
+
+const { t } = useI18n()
 
 const route = useRoute()
 const router = useRouter()
@@ -21,7 +24,7 @@ function loadSlide() {
     error.value = ''
   } else {
     loading.value = false
-    error.value = '演示文稿不存在'
+    error.value = t('slides.notFound')
   }
 }
 
@@ -39,12 +42,12 @@ watch(() => route.params.id, loadSlide)
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>
-      返回列表
+      {{ t('slides.backToList') }}
     </button>
 
     <div v-if="loading" class="slide-viewer__loading">
       <div class="loading-spinner"></div>
-      <p>加载中...</p>
+      <p>{{ t('common.loading') }}</p>
     </div>
 
     <div v-else-if="error" class="slide-viewer__error">
@@ -54,7 +57,7 @@ watch(() => route.params.id, loadSlide)
         <line x1="12" y1="16" x2="12.01" y2="16"/>
       </svg>
       <p>{{ error }}</p>
-      <button class="btn btn--primary" @click="goBack">返回列表</button>
+      <button class="btn btn--primary" @click="goBack">{{ t('slides.backToList') }}</button>
     </div>
 
     <iframe
