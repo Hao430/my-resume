@@ -148,7 +148,8 @@ watchEffect(() => {
 }
 
 .post-toc {
-  margin: var(--space-8) 0;
+  max-width: 640px;
+  margin: var(--space-8) auto;
   padding: var(--space-4) var(--space-5);
   border: 1px solid var(--color-ink-border);
   border-radius: var(--radius-lg);
@@ -181,6 +182,9 @@ watchEffect(() => {
 }
 
 .post-nav {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
@@ -267,6 +271,8 @@ watchEffect(() => {
 }
 
 .post-content {
+  max-width: 640px;
+  margin: 0 auto;
   padding-top: var(--space-6);
   border-top: 1px solid var(--color-ink-border);
 }

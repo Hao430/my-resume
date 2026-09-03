@@ -57,14 +57,15 @@ defineProps<{
 }
 
 .markdown-body a {
-  color: var(--color-vermilion);
+  color: var(--color-link);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--transition-fast);
+  border-bottom: 1px solid var(--color-link);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .markdown-body a:hover {
-  border-bottom-color: var(--color-vermilion);
+  color: var(--color-link-hover);
+  border-bottom-color: var(--color-link-hover);
 }
 
 .markdown-body strong {
