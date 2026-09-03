@@ -23,6 +23,15 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 
 See [Vite Configuration Reference](https://vite.dev/config/).
 
+## 这个仓库
+
+个人网站 https://hao430.cn 的源码，**纯静态**（Vue 3 + Vite，无后端）。
+
+- 发文章：见 [`docs/writing.md`](docs/writing.md)（`npm run new-post -- "标题" --slug=xxx`）
+- 部署：推 `main` → 阿里云 ESA Pages 自动构建，全球加速（海外访问走境外节点）
+- 订阅：`/feed.xml`（博客）、`/briefs.xml`（每日早参）
+- 提交前自检：`npm run check`
+
 ## Project Setup
 
 ```sh

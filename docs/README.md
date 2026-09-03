@@ -1,36 +1,13 @@
-# Docs
+# 文档索引
 
-项目文档索引。
+## 当前状态（纯静态）
 
-## 开发计划
+- [`writing.md`](writing.md) — **怎么发文章**（内容工作流，日常只用这一份）
+- [`../CLAUDE.md`](../CLAUDE.md) — 开发规范、目录约定、硬性规则、部署自查
 
-| 文档 | 说明 |
-|------|------|
-| [开发计划](development-plan.md) | 前后端分离改造的渐进式开发计划（入口） |
-| [原始方案](plan/前后端分离方案.md) | 改造方案原始设计文档 |
+## 历史文档（后端已删除，仅作存档）
 
-## 架构
-
-| 文档 | 说明 |
-|------|------|
-| [当前架构](architecture/current-architecture.md) | 当前纯静态前端架构说明 |
-| [目标架构](architecture/target-architecture.md) | 目标前后端分离架构 |
-
-## API / 数据库
-
-| 文档 | 说明 |
-|------|------|
-| [API 接口文档](api/api-spec.md) | API 端点定义与请求/响应格式 |
-| [数据库设计](api/database-spec.md) | 数据库表结构 |
-
-## 参考
-
-| 文档 | 说明 |
-|------|------|
-| [项目概述](reference/IFLOW.md) | 项目概述与核心特性 |
-| [项目目标](reference/goal.md) | 初始开发目标与愿景 |
-| [部署说明](reference/架构与部署说明.md) | CI/CD 工作流与 ESA 配置 |
-| [数据同步](reference/sync-resume.md) | 简历数据编辑与同步流程 |
-| [代码审查报告](reference/代码审查报告.md) | 代码质量审查 |
-| [架构审查报告](reference/架构审查报告.md) | 架构设计审查 |
-| [简历优化报告](reference/resume-optimization-report.md) | 简历页面优化建议 |
+`docs/api/`、`docs/architecture/`、`docs/deployment/`、`docs/plan/`、`docs/reference/`
+里描述的是「Vue + Express + PostgreSQL」的旧架构。项目已改为纯静态：
+数据在构建期从 `content/posts/*.md` 与 `public/` 生成，运行时不再有任何 API 请求。
+这些文档保留是为了追溯决策，**不要按它们改代码**。

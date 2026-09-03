@@ -4,13 +4,17 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import { staticSitePlugin } from './build/static-site'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    vueDevTools(),
+    ...(process.env.NODE_ENV === 'production' || process.env.npm_lifecycle_event?.includes('build')
+      ? []
+      : [vueDevTools()]),
+    staticSitePlugin(),
   ],
   resolve: {
     alias: {
@@ -18,11 +22,7 @@ export default defineConfig({
     },
   },
   server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-      },
-    },
+    // 纯静态站点：无后端，开发服务器不需要 API 代理
+    host: true,
   },
 })

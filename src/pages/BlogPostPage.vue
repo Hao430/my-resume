@@ -1,24 +1,51 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { computed, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { api, type BlogPostDetail } from '../api'
+import { useI18n } from 'vue-i18n'
+import { useBlogStore, SITE_URL, SITE_NAME_ZH, SITE_NAME_EN } from '../stores/blog'
+import { setCanonical, setPageMeta } from '../utils/seo'
+import { formatDate } from '../utils/format'
+import MarkdownRenderer from '../components/MarkdownRenderer.vue'
 
 const route = useRoute()
 const router = useRouter()
+const { t, locale } = useI18n()
+const blogStore = useBlogStore()
 
-const slug = route.params.slug as string
-const post = ref<BlogPostDetail | null>(null)
-const loading = ref(true)
-const error = ref<string | null>(null)
+const slug = computed(() => String(route.params.slug ?? ''))
+const post = computed(() => blogStore.bySlug(slug.value, locale.value))
+const siblings = computed(() => blogStore.siblings(slug.value, locale.value))
+const notFound = computed(() => !post.value)
+const loc = computed(() => (locale.value.startsWith('en') ? 'en' : 'zh'))
 
-onMounted(async () => {
-  try {
-    post.value = await api.getPost(slug)
-  } catch (e) {
-    error.value = e instanceof Error ? e.message : '文章加载失败'
-  } finally {
-    loading.value = false
-  }
+const updatedLabel = computed(() => {
+  const current = post.value
+  if (!current || !current.updated || current.updated === current.date) return ''
+  return `${t('blog.post.updatedAt')} ${formatDate(current.updated, loc.value)}`
+})
+
+const dateLabel = computed(() => (post.value ? formatDate(post.value.date, loc.value) : ''))
+
+const originalHint = computed(() => {
+  const current = post.value
+  if (!current) return ''
+  return current.bodyLang !== loc.value
+    ? t(current.bodyLang === 'zh' ? 'blog.originalZh' : 'blog.originalEn')
+    : ''
+})
+
+/* 文章 head 同步：标题 / 摘要 / canonical（SPA 内导航与直链都要正确） */
+watchEffect(() => {
+  const current = post.value
+  if (!current) return
+  const site = loc.value === 'en' ? SITE_NAME_EN : SITE_NAME_ZH
+  setPageMeta({
+    title: `${current.title} | ${site}`,
+    description: current.description,
+    image: current.cover ? `${SITE_URL}${current.cover}` : undefined,
+    type: 'article',
+  })
+  setCanonical(route.path)
 })
 </script>
 
@@ -27,43 +54,81 @@ onMounted(async () => {
     <section class="page-header">
       <div class="container container--narrow">
         <button class="back-btn" @click="router.back()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
           </svg>
-          返回
+          {{ t('blog.post.back') }}
         </button>
 
-        <div v-if="loading" class="loading-state">
-          <p>文章加载中...</p>
-        </div>
-
-        <div v-else-if="error" class="error-state">
-          <p>{{ error }}</p>
+        <div v-if="notFound" class="error-state">
+          <p>{{ t('blog.post.notFound') }}</p>
+          <router-link to="/blog" class="btn btn--primary">{{ t('blog.pageTitle') }}</router-link>
         </div>
 
         <template v-else-if="post">
           <h1 class="page-header__title">{{ post.title }}</h1>
           <p class="page-header__subtitle">{{ post.description }}</p>
           <div class="post-meta">
-            <span class="post-meta__date">{{ post.date }}</span>
+            <time :datetime="post.date">{{ dateLabel }}</time>
+            <span v-if="updatedLabel"> · {{ updatedLabel }}</span>
+            <span class="post-meta__dot">·</span>
+            <span>{{ t('blog.minutes', { n: post.readingMinutes }) }}</span>
             <span v-for="tag in post.tags" :key="tag" class="badge badge--vermilion">
               {{ tag }}
             </span>
           </div>
+          <p v-if="originalHint" class="post-lang-hint">{{ originalHint }}</p>
+
+          <nav v-if="post.toc.length > 2" class="post-toc" :aria-label="t('blog.post.toc')">
+            <p class="post-toc__title">{{ t('blog.post.toc') }}</p>
+            <ul>
+              <li v-for="item in post.toc" :key="item.id" :class="`post-toc__item--${item.level}`">
+                <a :href="`#${item.id}`">{{ item.text }}</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Markdown 渲染内容 -->
+          <div class="post-content">
+            <MarkdownRenderer :html="post.contentHtml" />
+          </div>
+
           <a
-            v-if="post.external_url"
-            :href="post.external_url"
+            v-if="post.externalUrl"
+            :href="post.externalUrl"
             target="_blank"
             rel="noopener"
-            class="btn btn--primary"
+            class="btn btn--primary mt-8"
           >
-            阅读全文
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
+            {{ t('blog.post.readFull') }}
           </a>
+
+          <!-- 上一篇 / 下一篇 -->
+          <nav class="post-nav" :aria-label="t('blog.post.nav')">
+            <router-link
+              v-if="siblings.prev"
+              :to="siblings.prev.path"
+              class="post-nav__link post-nav__link--prev"
+            >
+              <span class="post-nav__label">{{ t('blog.post.prev') }}</span>
+              <span class="post-nav__title">{{ siblings.prev.title }}</span>
+            </router-link>
+            <router-link
+              v-if="siblings.next"
+              :to="siblings.next.path"
+              class="post-nav__link post-nav__link--next"
+            >
+              <span class="post-nav__label">{{ t('blog.post.next') }}</span>
+              <span class="post-nav__title">{{ siblings.next.title }}</span>
+            </router-link>
+          </nav>
         </template>
       </div>
     </section>
@@ -71,6 +136,91 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+
+.post-meta time {
+  color: inherit;
+}
+
+.post-lang-hint {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.post-toc {
+  margin: var(--space-8) 0;
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-ink-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-ink-light);
+}
+
+.post-toc__title {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.post-toc ul {
+  margin: 0;
+  padding-left: var(--space-4);
+  list-style: none;
+}
+
+.post-toc li {
+  margin-bottom: var(--space-1);
+  font-size: var(--text-sm);
+}
+
+.post-toc__item--3 {
+  padding-left: var(--space-4);
+  opacity: 0.85;
+}
+
+.post-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-ink-border);
+}
+
+.post-nav__link {
+  flex: 1 1 240px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border: 1px solid var(--color-ink-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: border-color var(--transition-fast);
+}
+
+.post-nav__link:hover {
+  border-color: var(--color-vermilion);
+}
+
+.post-nav__link--next {
+  text-align: right;
+}
+
+.post-nav__label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.post-nav__title {
+  font-family: var(--font-display);
+  color: var(--color-text);
+}
+
 .blog-post {
   padding-top: var(--header-height);
 }
@@ -108,10 +258,16 @@ onMounted(async () => {
   align-items: center;
   gap: var(--space-3);
   margin-top: var(--space-4);
+  margin-bottom: var(--space-8);
 }
 
 .post-meta__date {
   font-size: var(--text-sm);
   color: var(--color-text-tertiary);
+}
+
+.post-content {
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-ink-border);
 }
 </style>

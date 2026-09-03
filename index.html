@@ -15,21 +15,28 @@
     <meta name="msvalidate.01" content="14F5A9DEBC1CD7BE93FA056BD052AD19" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://hao430.cn" />
+    <link rel="canonical" href="https://hao430.cn/" />
     
-    <!-- Hreflang（中文站点） -->
-    <link rel="alternate" hreflang="zh-CN" href="https://hao430.cn" />
+    <!-- Hreflang：中英双语共用同一 URL（前端语言开关），x-default 交给海外访客 -->
+    <link rel="alternate" hreflang="zh-CN" href="https://hao430.cn/" />
+    <link rel="alternate" hreflang="x-default" href="https://hao430.cn/" />
+
+    <!-- RSS / Atom 订阅（海外读者主要靠订阅发现内容） -->
+    <link rel="alternate" type="application/rss+xml" title="张豪 · 博客文章 RSS" href="https://hao430.cn/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="English RSS (Hao430)" href="https://hao430.cn/feed-en.xml" hreflang="en" />
+    <link rel="alternate" type="application/rss+xml" title="每日早参 RSS" href="https://hao430.cn/briefs.xml" />
     
     <!-- 网站图标 -->
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/logo.svg" color="#b33939" />
     
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="张豪 | 技术人文空间" />
     <meta property="og:description" content="张豪的个人网站 - 技术博客、项目作品与成长思考" />
-    <meta property="og:url" content="https://hao430.cn" />
+    <meta property="og:url" content="https://hao430.cn/" />
     <meta property="og:site_name" content="张豪 | 技术人文空间" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:image" content="https://hao430.cn/og-image.png" />
@@ -154,7 +161,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Google Fonts: 思源宋体 + JetBrains Mono -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      />
+    </noscript>
 
     <title>张豪 | 技术人文空间</title>
   </head>

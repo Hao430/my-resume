@@ -21,7 +21,6 @@ const socialLinks = [
 <template>
   <footer class="footer">
     <div class="container footer__container">
-      <!-- Logo & Tagline -->
       <div class="footer__brand">
         <div class="footer__logo">
           <span class="footer__logo-text">墨</span>
@@ -33,10 +32,8 @@ const socialLinks = [
         </p>
       </div>
 
-      <!-- Divider -->
       <div class="footer__divider"></div>
 
-      <!-- Links & Copyright -->
       <div class="footer__bottom">
         <div class="footer__links">
           <a
@@ -53,25 +50,22 @@ const socialLinks = [
             </svg>
             <span class="footer__link-text">{{ link.name }}</span>
           </a>
+          <a href="/feed.xml" class="footer__link" :title="t('footer.rss')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 11a9 9 0 0 1 9 9"/>
+              <path d="M4 4a16 16 0 0 1 16 16"/>
+              <circle cx="5" cy="19" r="1" fill="currentColor"/>
+            </svg>
+            <span class="footer__link-text">{{ t('footer.rss') }}</span>
+          </a>
         </div>
 
         <p class="footer__copyright">
           © {{ currentYear }} 张豪 · {{ t('footer.copyright') }}
         </p>
-        <p class="footer__icp">
-          <a
-            href="https://beian.miit.gov.cn/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer__icp-link"
-          >
-            {{ t('footer.icp') }}
-          </a>
-        </p>
       </div>
     </div>
 
-    <!-- Decorative Seal -->
     <div class="footer__seal">
       <span>墨砚</span>
     </div>
@@ -92,7 +86,6 @@ const socialLinks = [
   z-index: 1;
 }
 
-/* Brand */
 .footer__brand {
   text-align: center;
   margin-bottom: var(--space-8);
@@ -132,20 +125,12 @@ const socialLinks = [
   margin: 0;
 }
 
-/* Divider */
 .footer__divider {
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--color-ink-border) 20%,
-    var(--color-ink-border) 80%,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, var(--color-ink-border) 20%, var(--color-ink-border) 80%, transparent);
   margin-bottom: var(--space-8);
 }
 
-/* Bottom */
 .footer__bottom {
   display: flex;
   flex-direction: column;
@@ -186,23 +171,6 @@ const socialLinks = [
   margin: 0;
 }
 
-.footer__icp {
-  font-size: var(--text-xs);
-  color: var(--color-text-tertiary);
-  margin: 0;
-}
-
-.footer__icp-link {
-  color: var(--color-text-tertiary);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-.footer__icp-link:hover {
-  color: var(--color-vermilion);
-}
-
-/* Decorative Seal */
 .footer__seal {
   position: absolute;
   right: var(--space-8);
@@ -226,12 +194,10 @@ const socialLinks = [
   letter-spacing: 0.1em;
 }
 
-/* Responsive */
 @media (max-width: 640px) {
   .footer__links {
     gap: var(--space-4);
   }
-
   .footer__seal {
     display: none;
   }

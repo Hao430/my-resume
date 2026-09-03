@@ -1,34 +1,37 @@
-import { ref } from 'vue'
+import { computed } from 'vue'
 import { defineStore } from 'pinia'
-import { api, type BlogPostListItem as BlogPost } from '../api'
+import {
+  adjacentPosts,
+  buildCatalog,
+  findPost,
+  listForLocale,
+  tagCloud,
+  type BlogPost,
+  type LocalizedPost,
+} from '../utils/post-catalog'
 
-export type { BlogPost }
+export * from '../utils/site'
+export type { BlogPost, LocalizedPost } from '../utils/post-catalog'
 
+/** Vite 构建期读入全部 markdown（纯静态，运行时零请求） */
+const POST_MODULES = import.meta.glob('/content/posts/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
+
+/**
+ * 博客 store：数据来自 content/posts/*.md，
+ * 语言解析、上下篇、标签云等逻辑与构建脚本共用 src/utils/post-catalog.ts。
+ */
 export const useBlogStore = defineStore('blog', () => {
-  const posts = ref<BlogPost[]>([])
-  const loading = ref(false)
-  const error = ref<string | null>(null)
+  const catalog = computed<BlogPost[]>(() => buildCatalog(POST_MODULES))
 
-  async function fetchPosts() {
-    loading.value = true
-    error.value = null
-    try {
-      posts.value = await api.getPosts()
-    } catch (e) {
-      error.value = e instanceof Error ? e.message : '加载失败'
-    } finally {
-      loading.value = false
-    }
-  }
+  const list = (locale: string): LocalizedPost[] => listForLocale(catalog.value, locale)
+  const latest = (locale: string, count = 3): LocalizedPost[] => list(locale).slice(0, count)
+  const bySlug = (slug: string, locale: string) => findPost(catalog.value, slug, locale)
+  const siblings = (slug: string, locale: string) => adjacentPosts(catalog.value, slug, locale)
+  const tags = (locale: string) => tagCloud(catalog.value, locale)
 
-  function getPostBySlug(slug: string): BlogPost | undefined {
-    return posts.value.find(p => p.slug === slug)
-  }
-
-  async function addPost(_post: { title: string; description: string; date: string; tags: string[] }) {
-    // 写接口暂未开放
-    throw new Error('Adding posts via API is not yet supported')
-  }
-
-  return { posts, loading, error, fetchPosts, getPostBySlug, addPost }
+  return { catalog, list, latest, bySlug, siblings, tags }
 })

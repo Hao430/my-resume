@@ -5,6 +5,7 @@ export interface DailyBrief {
   date: string;
   title: string;
   file: string;
+  url: string;
   displayDate: string;
 }
 
@@ -13,210 +14,245 @@ export const dailyBriefs: DailyBrief[] = [
     "date": "2026-06-07",
     "title": "2026年6月7日 周日 今日速览 - 一知桥",
     "file": "每日早参/article_20260607.html",
+    "url": "/briefs/2026-06-07/",
     "displayDate": "6月7日 周日"
   },
   {
     "date": "2026-06-06",
     "title": "2026年6月6日 周六 今日速览 - 一知桥",
     "file": "每日早参/article_20260606.html",
+    "url": "/briefs/2026-06-06/",
     "displayDate": "6月6日 周六"
   },
   {
     "date": "2026-06-04",
     "title": "2026年6月4日 周四 今日速览 - 一知桥",
     "file": "每日早参/article_20260604.html",
+    "url": "/briefs/2026-06-04/",
     "displayDate": "6月4日 周四"
   },
   {
     "date": "2026-06-02",
     "title": "2026年6月2日 周二 今日速览 - 一知桥",
     "file": "每日早参/article_20260602.html",
+    "url": "/briefs/2026-06-02/",
     "displayDate": "6月2日 周二"
   },
   {
     "date": "2026-06-01",
     "title": "2026年6月1日 周一 今日速览 - 一知桥",
     "file": "每日早参/article_20260601.html",
+    "url": "/briefs/2026-06-01/",
     "displayDate": "6月1日 周一"
   },
   {
     "date": "2026-05-30",
     "title": "2026年5月30日 周六 今日速览 | 一知桥",
     "file": "每日早参/article_20260530.html",
+    "url": "/briefs/2026-05-30/",
     "displayDate": "5月30日 周六"
   },
   {
     "date": "2026-05-27",
     "title": "2026年5月27日 周三 今日速览 - 一知桥",
     "file": "每日早参/article_20260527.html",
+    "url": "/briefs/2026-05-27/",
     "displayDate": "5月27日 周三"
   },
   {
     "date": "2026-05-26",
     "title": "2026年5月26日 周二 今日速览 - 一知桥",
     "file": "每日早参/article_20260526.html",
+    "url": "/briefs/2026-05-26/",
     "displayDate": "5月26日 周二"
   },
   {
     "date": "2026-05-16",
     "title": "2026年5月16日 周六 今日速览 - 一知桥",
     "file": "每日早参/article_20260516.html",
+    "url": "/briefs/2026-05-16/",
     "displayDate": "5月16日 周六"
   },
   {
     "date": "2026-05-14",
     "title": "2026年5月14日 周四 今日速览 - 一知桥",
     "file": "每日早参/article_20260514.html",
+    "url": "/briefs/2026-05-14/",
     "displayDate": "5月14日 周四"
   },
   {
     "date": "2026-05-13",
     "title": "2026年5月13日 周三 今日速览 | 一知桥",
     "file": "每日早参/article_20260513.html",
+    "url": "/briefs/2026-05-13/",
     "displayDate": "5月13日 周三"
   },
   {
     "date": "2026-05-11",
     "title": "5月11日 周一 今日速览 | 一知桥",
     "file": "每日早参/article_20260511.html",
+    "url": "/briefs/2026-05-11/",
     "displayDate": "5月11日 周一"
   },
   {
     "date": "2026-05-09",
     "title": "2026年5月9日 周六 今日速览 - 一知桥",
     "file": "每日早参/article_20260509.html",
+    "url": "/briefs/2026-05-09/",
     "displayDate": "5月9日 周六"
   },
   {
     "date": "2026-05-08",
     "title": "2026年5月8日 周五 今日速览 | 一知桥",
     "file": "每日早参/article_20260508.html",
+    "url": "/briefs/2026-05-08/",
     "displayDate": "5月8日 周五"
   },
   {
     "date": "2026-05-04",
     "title": "2026年5月4日 周一 今日速览 - 一知桥",
     "file": "每日早参/article_20260504.html",
+    "url": "/briefs/2026-05-04/",
     "displayDate": "5月4日 周一"
   },
   {
     "date": "2026-05-03",
     "title": "0503 周日 今日速览 | 一知桥",
     "file": "每日早参/article_20260503.html",
+    "url": "/briefs/2026-05-03/",
     "displayDate": "5月3日 周日"
   },
   {
     "date": "2026-05-02",
     "title": "5月2日 周六 今日速览",
     "file": "每日早参/article_20260502.html",
+    "url": "/briefs/2026-05-02/",
     "displayDate": "5月2日 周六"
   },
   {
     "date": "2026-05-01",
     "title": "2026年5月1日 周五 今日速览 | 一知桥",
     "file": "每日早参/article_20260501.html",
+    "url": "/briefs/2026-05-01/",
     "displayDate": "5月1日 周五"
   },
   {
     "date": "2026-04-29",
     "title": "2026年4月29日 周三 今日速览 | 一知桥",
     "file": "每日早参/article_20260429.html",
+    "url": "/briefs/2026-04-29/",
     "displayDate": "4月29日 周三"
   },
   {
     "date": "2026-04-28",
     "title": "0428 周二 今日速览 | 一知桥",
     "file": "每日早参/article_20260428.html",
+    "url": "/briefs/2026-04-28/",
     "displayDate": "4月28日 周二"
   },
   {
     "date": "2026-04-27",
     "title": "0427 周一 今日速览 | 一知桥",
     "file": "每日早参/article_20260427.html",
+    "url": "/briefs/2026-04-27/",
     "displayDate": "4月27日 周一"
   },
   {
     "date": "2026-04-26",
     "title": "一知桥 | 2026年4月26日 周日 今日速览",
     "file": "每日早参/article_20260426.html",
+    "url": "/briefs/2026-04-26/",
     "displayDate": "4月26日 周日"
   },
   {
     "date": "2026-04-25",
     "title": "一知桥 | 2026年4月25日 周六 今日速览",
     "file": "每日早参/article_20260425.html",
+    "url": "/briefs/2026-04-25/",
     "displayDate": "4月25日 周六"
   },
   {
     "date": "2026-04-24",
     "title": "2026年4月24日 周五 今日速览 | 一知桥",
     "file": "每日早参/article_20260424.html",
+    "url": "/briefs/2026-04-24/",
     "displayDate": "4月24日 周五"
   },
   {
     "date": "2026-04-23",
     "title": "一知桥·今日速览 2026年4月23日 周四",
     "file": "每日早参/article_20260423.html",
+    "url": "/briefs/2026-04-23/",
     "displayDate": "4月23日 周四"
   },
   {
     "date": "2026-04-22",
     "title": "2026.04.22 周三 今日速览 - 一知桥",
     "file": "每日早参/article_20260422.html",
+    "url": "/briefs/2026-04-22/",
     "displayDate": "4月22日 周三"
   },
   {
     "date": "2026-04-21",
     "title": "4月21日 周二 今日速览 - 一知桥",
     "file": "每日早参/article_20260421.html",
+    "url": "/briefs/2026-04-21/",
     "displayDate": "4月21日 周二"
   },
   {
     "date": "2026-04-20",
     "title": "4月20日 周一 今日速览 - 一知桥",
     "file": "每日早参/article_20260420.html",
+    "url": "/briefs/2026-04-20/",
     "displayDate": "4月20日 周一"
   },
   {
     "date": "2026-04-19",
     "title": "2026年4月19日 周日 今日速览 · 一知桥",
     "file": "每日早参/article_20260419.html",
+    "url": "/briefs/2026-04-19/",
     "displayDate": "4月19日 周日"
   },
   {
     "date": "2026-04-18",
     "title": "2026年4月18日 周六 今日速览 · 一知桥",
     "file": "每日早参/article_20260418.html",
+    "url": "/briefs/2026-04-18/",
     "displayDate": "4月18日 周六"
   },
   {
     "date": "2026-04-17",
     "title": "2026年4月17日 周四 今日速览 · 一知桥",
     "file": "每日早参/article_20260417.html",
+    "url": "/briefs/2026-04-17/",
     "displayDate": "4月17日 周五"
   },
   {
     "date": "2026-04-16",
     "title": "4月16日 周四 今日速览",
     "file": "每日早参/article_20260416.html",
+    "url": "/briefs/2026-04-16/",
     "displayDate": "4月16日 周四"
   },
   {
     "date": "2026-04-15",
     "title": "2026年4月15日 周三 今日速览 | 一知桥",
     "file": "每日早参/article_20260415.html",
+    "url": "/briefs/2026-04-15/",
     "displayDate": "4月15日 周三"
   },
   {
     "date": "2026-04-14",
     "title": "2026年4月14日 周二 今日速览 | 一知桥",
     "file": "每日早参/article_20260414.html",
+    "url": "/briefs/2026-04-14/",
     "displayDate": "4月14日 周二"
   },
   {
     "date": "2026-04-13",
     "title": "4月13日 周一 今日速览 | 一知桥",
     "file": "每日早参/article_20260413.html",
+    "url": "/briefs/2026-04-13/",
     "displayDate": "4月13日 周一"
   }
 ];

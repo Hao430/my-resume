@@ -1,29 +1,27 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
-import { api, type BriefListItem } from '../api'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { dailyBriefs, type DailyBrief } from '../data/dailyBriefs'
 
-const currentFile = ref<string | null>(null)
-const briefs = ref<BriefListItem[]>([])
-const loading = ref(false)
+const { t } = useI18n()
 
-const latestBrief = computed(() => briefs.value.length > 0 ? briefs.value[0] : null)
+/** 纯静态：早参列表在构建期由 scripts/sync-daily-briefs.cjs 生成，无 API 依赖 */
+const briefs = computed<DailyBrief[]>(() => dailyBriefs)
+const latestBrief = computed<DailyBrief | null>(() => briefs.value[0] ?? null)
 
-async function fetchBriefs() {
-  loading.value = true
-  try {
-    briefs.value = await api.getBriefs()
-  } catch {
-    // 静默处理，页面显示空状态
-  } finally {
-    loading.value = false
-  }
+const currentUrl = ref<string | null>(null)
+
+/**
+ * 开发环境读 public/每日早参/ 下的原始中文路径；
+ * 生产环境使用构建期生成的 ASCII 路径（对海外链接分享 / 爬虫更友好）。
+ */
+function briefUrl(brief: DailyBrief): string {
+  return import.meta.env.DEV ? `/${brief.file}` : brief.url
 }
 
-const openBrief = (date: string) => {
-  currentFile.value = `/每日早参/article_${date.replace(/-/g, '')}.html`
+const openBrief = (brief: DailyBrief) => {
+  currentUrl.value = briefUrl(brief)
 }
-
-onMounted(fetchBriefs)
 </script>
 
 <template>
@@ -33,10 +31,10 @@ onMounted(fetchBriefs)
       <div class="container">
         <h1 class="page-header__title animate-fadeInUp">
           <span class="page-header__accent">·</span>
-          每日早参
+          {{ t('dailyBrief.pageTitle') }}
         </h1>
         <p class="page-header__subtitle animate-fadeInUp delay-200">
-          每交易日早晨 8:30 推送 · 信息差 · 政策 × 产业 × 科技 × 市场
+          {{ t('dailyBrief.pageSubtitle') }}
         </p>
       </div>
     </section>
@@ -44,25 +42,25 @@ onMounted(fetchBriefs)
     <!-- Content -->
     <section class="section">
       <div class="container">
-        <!-- 今日速览 -->
+        <!-- Latest Brief -->
         <div v-if="latestBrief" class="latest-brief animate-fadeInUp">
-          <div class="latest-brief__badge">今日</div>
+          <div class="latest-brief__badge">{{ t('dailyBrief.today') }}</div>
           <h2 class="latest-brief__title">{{ latestBrief.title }}</h2>
-          <div class="latest-brief__meta">{{ latestBrief.display_date }}</div>
-          <button class="btn btn--primary" @click="openBrief(latestBrief.date)">
+          <div class="latest-brief__meta">{{ latestBrief.displayDate }}</div>
+          <button class="btn btn--primary" @click="openBrief(latestBrief)">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
               <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
             </svg>
-            阅读全文
+            {{ t('dailyBrief.readAll') }}
           </button>
         </div>
 
-        <!-- 历史早参 -->
+        <!-- History -->
         <div v-if="briefs.length > 1" class="history-section">
           <h3 class="history-section__title">
             <span class="section-title__accent">·</span>
-            历史早参
+            {{ t('dailyBrief.history') }}
           </h3>
           <div class="briefs-list">
             <article
@@ -71,50 +69,68 @@ onMounted(fetchBriefs)
               class="brief-card card card--glow animate-fadeInUp"
               :class="`delay-${(index % 3) * 100}`"
             >
-              <div class="brief-card__date">{{ brief.display_date }}</div>
+              <time class="brief-card__date" :datetime="brief.date">{{ brief.displayDate }}</time>
               <h4 class="brief-card__title">{{ brief.title }}</h4>
-              <button class="brief-card__link" @click="openBrief(brief.date)">
-                阅读
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </button>
+              <div class="brief-card__actions">
+                <button class="brief-card__link" @click="openBrief(brief)">
+                  {{ t('dailyBrief.read') }}
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                <a class="brief-card__external" :href="briefUrl(brief)" target="_blank" rel="noopener">
+                  {{ t('dailyBrief.openNew') }}
+                </a>
+              </div>
             </article>
           </div>
         </div>
 
-        <!-- 空状态 -->
-        <div v-if="!loading && briefs.length === 0" class="empty-state">
+        <!-- Empty State -->
+        <div v-if="briefs.length === 0" class="empty-state">
           <svg class="empty-state__icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <circle cx="12" cy="12" r="10"/>
             <path d="M12 6v6l4 2"/>
           </svg>
-          <p class="empty-state__text">暂无早参内容</p>
-          <p class="empty-state__hint">每天早上 8:30 更新</p>
+          <p class="empty-state__text">{{ t('dailyBrief.empty') }}</p>
+          <p class="empty-state__hint">{{ t('dailyBrief.emptyHint') }}</p>
         </div>
       </div>
     </section>
 
     <!-- Reader Modal -->
     <Teleport to="body">
-      <div v-if="currentFile" class="reader-modal" @click.self="currentFile = null">
-        <button class="reader-modal__close" @click="currentFile = null">
+      <div v-if="currentUrl" class="reader-modal" @click.self="currentUrl = null">
+        <button class="reader-modal__close" @click="currentUrl = null">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 6 6 18M6 6l12 12"/>
           </svg>
         </button>
-        <iframe
-          :src="`/${currentFile}`"
-          class="reader-modal__iframe"
-          frameborder="0"
-        />
+        <iframe :src="currentUrl" class="reader-modal__iframe" frameborder="0" />
       </div>
     </Teleport>
   </div>
 </template>
 
 <style scoped>
-/* Page Header */
+
+.brief-card__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.brief-card__external {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-ink-border);
+}
+
+.brief-card__external:hover {
+  color: var(--color-vermilion);
+}
+
 .page-header {
   padding-top: calc(var(--header-height) + var(--space-12));
   padding-bottom: var(--space-8);
@@ -144,7 +160,6 @@ onMounted(fetchBriefs)
   color: var(--color-text-secondary);
 }
 
-/* Latest Brief */
 .latest-brief {
   position: relative;
   padding: var(--space-8);
@@ -181,7 +196,6 @@ onMounted(fetchBriefs)
   margin-bottom: var(--space-6);
 }
 
-/* History Section */
 .history-section {
   margin-top: var(--space-8);
 }
@@ -246,7 +260,6 @@ onMounted(fetchBriefs)
   gap: var(--space-3);
 }
 
-/* Empty State */
 .empty-state {
   display: flex;
   flex-direction: column;
@@ -274,7 +287,6 @@ onMounted(fetchBriefs)
   margin-top: var(--space-2);
 }
 
-/* Reader Modal */
 .reader-modal {
   position: fixed;
   inset: 0;
@@ -313,33 +325,26 @@ onMounted(fetchBriefs)
   background: white;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .page-header {
     padding-top: calc(var(--header-height) + var(--space-8));
   }
-
   .page-header__title {
     font-size: var(--text-2xl);
   }
-
   .latest-brief {
     padding: var(--space-6);
   }
-
   .latest-brief__title {
     font-size: var(--text-lg);
     max-width: 100%;
   }
-
   .briefs-list {
     grid-template-columns: 1fr;
   }
-
   .reader-modal {
     padding: 0;
   }
-
   .reader-modal__iframe {
     height: 100vh;
     border-radius: 0;

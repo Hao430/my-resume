@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useResumeStore } from '../stores/resume'
 
+const { t } = useI18n()
 const resumeStore = useResumeStore()
 const rd = computed(() => resumeStore.data)
 
@@ -20,7 +22,7 @@ const scrollToSection = (id: string) => {
       <div class="container">
         <h1 class="page-header__title animate-fadeInUp">
           <span class="page-header__accent">·</span>
-          关于我
+          {{ t('about.pageTitle') }}
         </h1>
         <p class="page-header__subtitle animate-fadeInUp delay-200">
           {{ rd?.personalInfo.university }} · {{ rd?.personalInfo.major }}
@@ -34,11 +36,11 @@ const scrollToSection = (id: string) => {
         <nav class="nav-tabs__list">
           <button
             v-for="tab in [
-              { id: 'summary', label: '简介' },
-              { id: 'skills', label: '技能' },
-              { id: 'projects', label: '项目' },
-              { id: 'experience', label: '经历' },
-              { id: 'honors', label: '荣誉' }
+              { id: 'summary', label: t('about.tabs.summary') },
+              { id: 'skills', label: t('about.tabs.skills') },
+              { id: 'projects', label: t('about.tabs.projects') },
+              { id: 'experience', label: t('about.tabs.experience') },
+              { id: 'honors', label: t('about.tabs.honors') }
             ]"
             :key="tab.id"
             class="nav-tabs__item"
@@ -55,7 +57,7 @@ const scrollToSection = (id: string) => {
       <div class="container">
         <h2 class="section-title">
           <span class="section-title__accent">·</span>
-          专业简介
+          {{ t('about.summary.title') }}
         </h2>
         <div class="summary-cards">
           <div class="summary-card card animate-fadeInUp">
@@ -65,7 +67,7 @@ const scrollToSection = (id: string) => {
                 <polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
             </div>
-            <h3 class="summary-card__title">专业扎实</h3>
+            <h3 class="summary-card__title">{{ t('about.summary.strong') }}</h3>
             <p class="summary-card__text">{{ rd?.professionalSummary.strong }}</p>
           </div>
           <div class="summary-card card animate-fadeInUp delay-100">
@@ -76,7 +78,7 @@ const scrollToSection = (id: string) => {
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
             </div>
-            <h3 class="summary-card__title">能力全面</h3>
+            <h3 class="summary-card__title">{{ t('about.summary.comprehensive') }}</h3>
             <p class="summary-card__text">{{ rd?.professionalSummary.comprehensive }}</p>
           </div>
           <div class="summary-card card animate-fadeInUp delay-200">
@@ -85,7 +87,7 @@ const scrollToSection = (id: string) => {
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </div>
-            <h3 class="summary-card__title">素养突出</h3>
+            <h3 class="summary-card__title">{{ t('about.summary.outstanding') }}</h3>
             <p class="summary-card__text">{{ rd?.professionalSummary.outstanding }}</p>
           </div>
         </div>
@@ -97,12 +99,11 @@ const scrollToSection = (id: string) => {
       <div class="container">
         <h2 class="section-title">
           <span class="section-title__accent">·</span>
-          技能标签
+          {{ t('about.skills.title') }}
         </h2>
         <div class="skills-categories">
-          <!-- 技术技能 -->
           <div class="skill-category">
-            <h3 class="skill-category__title">技术能力</h3>
+            <h3 class="skill-category__title">{{ t('about.skills.technical') }}</h3>
             <div class="skill-tags">
               <span
                 v-for="skill in rd?.skills.filter(s => s.category === 'technical')"
@@ -113,9 +114,8 @@ const scrollToSection = (id: string) => {
               </span>
             </div>
           </div>
-          <!-- 专业能力 -->
           <div class="skill-category">
-            <h3 class="skill-category__title">专业能力</h3>
+            <h3 class="skill-category__title">{{ t('about.skills.professional') }}</h3>
             <div class="skill-tags">
               <span
                 v-for="skill in rd?.skills.filter(s => s.category === 'professional')"
@@ -126,9 +126,8 @@ const scrollToSection = (id: string) => {
               </span>
             </div>
           </div>
-          <!-- 工具 -->
           <div class="skill-category">
-            <h3 class="skill-category__title">工具软件</h3>
+            <h3 class="skill-category__title">{{ t('about.skills.tools') }}</h3>
             <div class="skill-tags">
               <span
                 v-for="skill in rd?.skills.filter(s => s.category === 'tools')"
@@ -148,7 +147,7 @@ const scrollToSection = (id: string) => {
       <div class="container">
         <h2 class="section-title">
           <span class="section-title__accent">·</span>
-          项目经验
+          {{ t('about.projects.title') }}
         </h2>
         <div class="timeline">
           <div
@@ -181,7 +180,7 @@ const scrollToSection = (id: string) => {
                   <polyline points="15 3 21 3 21 9"/>
                   <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
-                {{ project.url.startsWith('http') ? '访问项目' : '查看详情' }}
+                {{ project.url.startsWith('http') ? t('about.projects.visit') : t('about.projects.details') }}
               </a>
             </div>
           </div>
@@ -194,7 +193,7 @@ const scrollToSection = (id: string) => {
       <div class="container">
         <h2 class="section-title">
           <span class="section-title__accent">·</span>
-          工作经历
+          {{ t('about.experience.title') }}
         </h2>
         <div class="timeline">
           <div
@@ -226,7 +225,7 @@ const scrollToSection = (id: string) => {
       <div class="container">
         <h2 class="section-title">
           <span class="section-title__accent">·</span>
-          荣誉奖项
+          {{ t('about.honors.title') }}
         </h2>
         <div class="honors-list">
           <div
@@ -249,8 +248,6 @@ const scrollToSection = (id: string) => {
 </template>
 
 <style scoped>
-/* Page Header - 使用 global.css 公共样式 */
-/* 保留 AboutPage 特定的 padding-bottom */
 .page-header {
   padding-bottom: var(--space-12);
 }
@@ -260,13 +257,11 @@ const scrollToSection = (id: string) => {
     padding-top: calc(var(--header-height) + var(--space-8));
     padding-bottom: var(--space-8);
   }
-
   .page-header__title {
     font-size: var(--text-3xl);
   }
 }
 
-/* Navigation Tabs */
 .nav-tabs {
   position: sticky;
   top: var(--header-height);
@@ -304,15 +299,12 @@ const scrollToSection = (id: string) => {
   background-color: var(--color-ink-light);
 }
 
-/* Section Title - 使用 global.css 公共样式 */
-/* 保留响应式调整 */
 @media (max-width: 768px) {
   .section-title__accent {
     font-size: var(--text-2xl);
   }
 }
 
-/* Summary Cards */
 .summary-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -350,7 +342,6 @@ const scrollToSection = (id: string) => {
   margin: 0;
 }
 
-/* Skills */
 .skills-categories {
   display: flex;
   flex-direction: column;
@@ -396,7 +387,6 @@ const scrollToSection = (id: string) => {
   color: var(--color-gold);
 }
 
-/* Timeline */
 .timeline {
   position: relative;
   padding-left: var(--space-8);
@@ -409,11 +399,7 @@ const scrollToSection = (id: string) => {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(
-    180deg,
-    var(--color-vermilion) 0%,
-    var(--color-vermilion-muted) 100%
-  );
+  background: linear-gradient(180deg, var(--color-vermilion) 0%, var(--color-vermilion-muted) 100%);
 }
 
 .timeline-item {
@@ -481,7 +467,7 @@ const scrollToSection = (id: string) => {
 }
 
 .timeline-item__list li::before {
-  content: '·';
+  content: '\00b7';
   position: absolute;
   left: 0;
   color: var(--color-vermilion);
@@ -501,7 +487,6 @@ const scrollToSection = (id: string) => {
   gap: var(--space-3);
 }
 
-/* Honors */
 .honors-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -527,34 +512,27 @@ const scrollToSection = (id: string) => {
   font-weight: var(--font-medium);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .page-header {
     padding-top: calc(var(--header-height) + var(--space-8));
     padding-bottom: var(--space-8);
   }
-
   .page-header__title {
     font-size: var(--text-3xl);
   }
-
   .nav-tabs__list {
     justify-content: flex-start;
     padding: 0 var(--space-4);
   }
-
   .timeline {
     padding-left: var(--space-6);
   }
-
   .timeline::before {
     left: 5px;
   }
-
   .timeline-item__marker {
     left: calc(-1 * var(--space-6) + 1px);
   }
-
   .timeline-item__header {
     flex-direction: column;
     gap: var(--space-2);

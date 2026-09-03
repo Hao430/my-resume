@@ -66,7 +66,10 @@ function syncDailyBriefs() {
     return {
       date: dateStr,
       title: title,
+      // legacy：中文目录路径（public 下的原始文件，开发环境直接可用）
       file: `每日早参/${file}`,
+      // 海外友好：ASCII 路径，由 scripts/gen-seo.mjs 在构建期生成
+      url: `/briefs/${dateStr}/`,
       displayDate: `${formatDisplayDate(dateStr)} ${getWeekday(dateStr)}`
     };
   });
@@ -79,6 +82,7 @@ export interface DailyBrief {
   date: string;
   title: string;
   file: string;
+  url: string;
   displayDate: string;
 }
 

@@ -18,7 +18,7 @@ permissions:
 
 env:
   NODE_VERSION: '22'
-  PNPM_VERSION: '9'
+
 
 jobs:
   # ============================================
@@ -31,25 +31,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 安装 pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{ env.PNPM_VERSION }}
-
       - name: 设置 Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
+          cache: 'npm'
 
-      - name: 安装前端依赖
-        run: pnpm install --frozen-lockfile
+      - name: 安装依赖
+        run: npm ci
 
       - name: Lint 检查
-        run: pnpm run lint
+        run: npm run lint
 
       - name: TypeScript 类型检查
-        run: pnpm run type-check
+        run: npm run type-check
 
 
 
@@ -64,22 +59,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 安装 pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{ env.PNPM_VERSION }}
-
       - name: 设置 Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
+          cache: 'npm'
 
       - name: 安装依赖
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: 生产构建
-        run: pnpm run build-only
+        run: npm run build-only
 
       - name: 上传构建产物
         uses: actions/upload-artifact@v4
@@ -103,22 +93,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 安装 pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{ env.PNPM_VERSION }}
-
       - name: 设置 Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
+          cache: 'npm'
 
       - name: 安装依赖
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: 生产构建
-        run: pnpm run build-only
+        run: npm run build-only
 
       - name: 部署到阿里云 ESA
         run: |
@@ -162,8 +147,8 @@ jobs:
           generate_release_notes: true
           body: |
             ## 部署信息
-            - 🌐 前端: https://hao430.cn
-            - 🖥️ 后端 API: https://hao430.cn/api
+            - 🌐 站点: https://hao430.cn（纯静态，阿里云 ESA 全球加速）
+            - 📡 RSS: https://hao430.cn/feed.xml · https://hao430.cn/briefs.xml
             - 📦 构建产物: hao430-resume-${{ github.ref_name }}.zip
             - 🔧 Node: ${{ env.NODE_VERSION }}
         env:

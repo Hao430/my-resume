@@ -1,32 +1,48 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import Hero from '../components/Hero.vue'
 import { useResumeStore } from '../stores/resume'
+import { useBlogStore } from '../stores/blog'
+import { formatDate } from '../utils/format'
 
+const { t, locale } = useI18n()
 const resumeStore = useResumeStore()
+const blogStore = useBlogStore()
 const rd = computed(() => resumeStore.data)
 
-// 最新项目（取前3个）
 const recentProjects = computed(() => rd.value?.projectExperiences?.slice(0, 3) || [])
-
-// 最新荣誉（取前2个）
 const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
+
+/** 首页展示最近 3 篇文章（纯静态，数据在构建期已打进包） */
+const latestPosts = computed(() =>
+  blogStore.latest(locale.value, 3).map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.description,
+    path: post.path,
+    dateLabel: formatDate(post.date, locale.value),
+    date: post.date,
+    minutes: t('blog.minutes', { n: post.readingMinutes }),
+    tags: post.tags.slice(0, 2),
+  })),
+)
 </script>
 
 <template>
   <div class="home">
     <Hero />
 
-    <!-- 最新项目 -->
+    <!-- Recent Projects -->
     <section class="section section--alt">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">
             <span class="section-title__accent">·</span>
-            项目作品
+            {{ t('home.projects') }}
           </h2>
           <router-link to="/about" class="section-more">
-            查看全部
+            {{ t('home.viewAll') }}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
@@ -57,7 +73,7 @@ const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
               rel="noopener"
               class="project-card__link"
             >
-              查看项目
+              {{ t('home.viewAll') }}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                 <polyline points="15 3 21 3 21 9"/>
@@ -69,14 +85,14 @@ const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
       </div>
     </section>
 
-    <!-- 关于我预览 -->
+    <!-- About Preview -->
     <section class="section">
       <div class="container">
         <div class="about-preview">
           <div class="about-preview__content">
             <h2 class="section-title">
               <span class="section-title__accent">·</span>
-              关于我
+              {{ t('home.aboutTitle') }}
             </h2>
             <p class="about-preview__text">
               {{ rd?.professionalSummary?.strong }}
@@ -89,38 +105,76 @@ const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                 <circle cx="12" cy="7" r="4"/>
               </svg>
-              阅读完整简历
+              {{ t('home.readFullResume') }}
             </router-link>
           </div>
           <div class="about-preview__stats">
             <div class="stat-item">
               <span class="stat-item__value">{{ rd?.projectExperiences?.length }}</span>
-              <span class="stat-item__label">项目经验</span>
+              <span class="stat-item__label">{{ t('home.stats.projects') }}</span>
             </div>
             <div class="stat-item">
               <span class="stat-item__value">{{ rd?.workExperiences?.length }}</span>
-              <span class="stat-item__label">工作经历</span>
+              <span class="stat-item__label">{{ t('home.stats.experience') }}</span>
             </div>
             <div class="stat-item">
               <span class="stat-item__value">{{ rd?.honors?.length }}</span>
-              <span class="stat-item__label">荣誉奖项</span>
+              <span class="stat-item__label">{{ t('home.stats.honors') }}</span>
             </div>
             <div class="stat-item">
               <span class="stat-item__value">{{ rd?.skills?.length }}</span>
-              <span class="stat-item__label">技能标签</span>
+              <span class="stat-item__label">{{ t('home.stats.skills') }}</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 荣誉展示 -->
+    <!-- Latest Writing -->
     <section class="section section--alt">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">
             <span class="section-title__accent">·</span>
-            荣誉奖项
+            {{ t('home.writing') }}
+          </h2>
+          <router-link to="/blog" class="section-more">
+            {{ t('home.viewAll') }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </router-link>
+        </div>
+        <div v-if="latestPosts.length" class="writing-grid">
+          <router-link
+            v-for="(post, index) in latestPosts"
+            :key="post.slug"
+            :to="post.path"
+            class="writing-card card card--glow animate-fadeInUp"
+            :class="`delay-${(index + 1) * 100}`"
+          >
+            <div class="writing-card__meta">
+              <time :datetime="post.date">{{ post.dateLabel }}</time>
+              <span>{{ post.minutes }}</span>
+            </div>
+            <h3 class="writing-card__title">{{ post.title }}</h3>
+            <p class="writing-card__excerpt">{{ post.excerpt }}</p>
+            <div class="writing-card__tags">
+              <span v-for="tag in post.tags" :key="tag" class="badge badge--vermilion">{{ tag }}</span>
+            </div>
+            <span class="writing-card__more">{{ t('blog.readMore') }} →</span>
+          </router-link>
+        </div>
+      </div>
+    </section>
+
+    <!-- Honors -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="section-title__accent">·</span>
+            {{ t('honors.sectionTitle') }}
           </h2>
         </div>
         <div class="honors-grid">
@@ -144,7 +198,58 @@ const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
 </template>
 
 <style scoped>
-/* Section Styles */
+.writing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.writing-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  text-decoration: none;
+  color: inherit;
+}
+
+.writing-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.writing-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+}
+
+.writing-card__excerpt {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.writing-card__tags {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.writing-card__more {
+  margin-top: auto;
+  font-size: var(--text-sm);
+  color: var(--color-vermilion);
+}
+
 .section-header {
   display: flex;
   align-items: center;
@@ -181,7 +286,6 @@ const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
   color: var(--color-vermilion);
 }
 
-/* Projects Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -230,7 +334,7 @@ const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
 }
 
 .project-card__list li::before {
-  content: '·';
+  content: '\00b7';
   position: absolute;
   left: 0;
   color: var(--color-vermilion);
@@ -253,7 +357,6 @@ const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
   gap: var(--space-3);
 }
 
-/* About Preview */
 .about-preview {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -301,7 +404,6 @@ const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
   color: var(--color-text-tertiary);
 }
 
-/* Honors Grid */
 .honors-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -327,7 +429,6 @@ const recentHonors = computed(() => rd.value?.honors?.slice(0, 2) || [])
   font-weight: var(--font-medium);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .about-preview {
     grid-template-columns: 1fr;

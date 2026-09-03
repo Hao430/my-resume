@@ -8,9 +8,12 @@ const router = useRouter()
 const fileName = ref('')
 const iframeRef = ref<HTMLIFrameElement | null>(null)
 
+/** 只接受站内相对路径，防止 ?file=//evil.com 这种外站注入 */
+const SAFE_FILE = /^(?:[\w\u4e00-\u9fff-]+\/)*[\w\u4e00-\u9fff-]+\.html$/
+
 onMounted(() => {
-  const file = route.query.file as string
-  if (!file) {
+  const file = String(route.query.file ?? '')
+  if (!file || !SAFE_FILE.test(file) || file.startsWith('//')) {
     router.replace('/blog')
     return
   }

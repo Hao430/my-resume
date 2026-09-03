@@ -5,12 +5,8 @@
 
 echo "🔍 [pre-commit] 运行代码检查..."
 
-# 检查 pnpm 是否可用，否则使用 npm
-if command -v pnpm > /dev/null 2>&1; then
-  PKG_MGR="pnpm"
-else
-  PKG_MGR="npm"
-fi
+# 本项目统一使用 npm（唯一 lockfile：package-lock.json）
+PKG_MGR="npm"
 
 # 运行 lint（仅检查，不自动修复，保持提交内容纯净）
 $PKG_MGR run lint:oxlint 2>&1
@@ -22,7 +18,7 @@ ESLINT_EXIT=$?
 if [ $OXLINT_EXIT -ne 0 ] || [ $ESLINT_EXIT -ne 0 ]; then
   echo ""
   echo "❌ [pre-commit] Lint 检查失败，请修复后再提交"
-  echo "   提示：运行 pnpm run lint 自动修复"
+  echo "   提示：运行 npm run lint 自动修复"
   exit 1
 fi
 

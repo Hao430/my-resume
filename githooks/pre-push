@@ -8,12 +8,8 @@ echo "🚀 [pre-push] 推送前检查..."
 echo "   （ESA 将在推送后自动触发生产部署，请确保代码可构建）"
 echo ""
 
-# 检查 pnpm 是否可用，否则使用 npm
-if command -v pnpm > /dev/null 2>&1; then
-  PKG_MGR="pnpm"
-else
-  PKG_MGR="npm"
-fi
+# 本项目统一使用 npm（唯一 lockfile：package-lock.json）
+PKG_MGR="npm"
 
 # Step 1: TypeScript 类型检查
 echo "📘 [1/2] TypeScript 类型检查..."
@@ -23,7 +19,7 @@ TYPECHECK_EXIT=$?
 if [ $TYPECHECK_EXIT -ne 0 ]; then
   echo ""
   echo "❌ [pre-push] TypeScript 类型检查失败，推送已阻止"
-  echo "   修复类型错误后再推送"
+  echo "   修复类型错误后再推送（npm run type-check）"
   exit 1
 fi
 
