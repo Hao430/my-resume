@@ -136,3 +136,13 @@ content/posts/harness-development-paradigm.en.md     # 英文正文
 - 字体：拉丁字符优先 **Source Serif 4**，CJK 自动回退 **Noto Serif SC**，代码 **JetBrains Mono**；
   全部自托管在 `public/fonts/`（按 unicode-range 按需加载），**不要**在正文里指定字体。
 - 正文链接为朱砂红 + 下划线（对比度 ~4.9:1），来源引用请用 Markdown 链接写作，读者可感知。
+
+### 正文对齐：必须显式左对齐（2026-09-05 教训）
+
+- **正文一律左对齐**（`text-align: left`），不允许居中/两端对齐。这是全行业长文惯例：
+  抽查 5 个代表站点（simonwillison / vercel blog / zvi.substack / 阮一峰 / stripe blog）
+  1300+ 文本元素，正文无一例外 `left`/`start`；标题也基本左对齐（仅装饰元素居中）。
+- 页面**大标题（h1）居中**是本站设计语言，保留；但正文容器若未显式声明对齐，
+  会继承 `.page-header` 的 `text-align: center` 变成居中——这是真实踩过的 bug。
+- **规则**：`src/components/MarkdownRenderer.vue` 的 `.markdown-body` 必须保留
+  `text-align: left` 声明，重构时不可删除（已有注释说明原因）。

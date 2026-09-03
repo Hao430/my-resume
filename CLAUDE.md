@@ -64,6 +64,12 @@ scripts/        new-post.mjs、sync-daily-briefs.cjs
 9. 缩进 2 空格、UTF-8、LF（`.editorconfig`）。
 10. **字体必须自托管**（`public/fonts/`，321 个 woff2 分片随仓库提交）。
     禁止改回 Google Fonts 远程引用（国内访问会失败）；更新字体重跑 `npm run fonts`。
+11. **正文必须显式左对齐**：`.markdown-body`（MarkdownRenderer.vue）里的
+    `text-align: left` 声明不可删除——文章正文位于 `.page-header`（`text-align: center`）
+    内部，没有这条会继承居中（2026-09-05 线上 bug）。大标题 h1 居中保留为设计。
+12. 排版改动**要看继承后的计算样式**，不能只看基础样式表：正文这类内容型 CSS
+    若有嵌套在带对齐/居中容器里的可能，用浏览器 DevTools 核对
+    `getComputedStyle(el).textAlign` 等最终值，再合并推送。
 
 ## 常用命令
 
