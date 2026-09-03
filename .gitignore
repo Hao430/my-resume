@@ -42,3 +42,6 @@ __screenshots__/
 *.timestamp-*-*.mjs
 
 dist/
+
+# IndexNow 本地备份（key 文件本身要发布到站点根目录）
+.indexnow-key

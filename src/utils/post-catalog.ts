@@ -18,9 +18,10 @@ import {
  * 共用同一份逻辑，避免「站内看到 4 篇、RSS 里却是 3 篇」这类漂移。
  *
  * 双语约定：
- *   - 一个正文文件 = 一个 slug = 一个 URL（/blog/<slug>/）
- *   - `foo.md` 是默认版本，`foo.en.md` 是它的英文译文（同一 URL，语言可切换）
+ *   - 一个 slug = 一个 URL（/blog/<slug>/），多语言正文共用
+ *   - `foo.md` 是原始语言版本；`foo.en.md` / `foo.zh.md` 是对应语种的译文
  *   - frontmatter 的 `lang: zh|en|both` 控制出现在哪种语言的列表里
+ *   - 只有元数据翻译时（`title_en` / `title_zh` 等）不必建伴生文件
  */
 
 export type PostLocale = 'zh' | 'en'
@@ -132,29 +133,46 @@ function sortPosts(posts: BlogPost[]): BlogPost[] {
 /** 把 { 路径: markdown 原文 } 编译成文章目录（已按日期倒序，草稿已剔除） */
 export function buildCatalog(files: Record<string, string>): BlogPost[] {
   const originals: BlogPost[] = []
-  const translations: { slug: string; post: BlogPost }[] = []
+  const translations: { slug: string; locale: PostLocale; post: BlogPost }[] = []
 
   for (const [filePath, raw] of Object.entries(files)) {
     const { frontmatter, content } = parseFrontmatter(raw)
     if (frontmatter.draft) continue
 
     const withoutExt = filePath.replace(/\.md$/, '')
-    const isEnFile = withoutExt.endsWith('.en')
-    const slug = pathToSlug(isEnFile ? withoutExt.replace(/\.en$/, '') : withoutExt)
+    const companion = /\.(en|zh)$/.exec(withoutExt)
+    const isEnFile = companion?.[1] === 'en'
+    const isZhFile = companion?.[1] === 'zh'
+    const isCompanion = Boolean(companion)
+    const slug = pathToSlug(isCompanion ? withoutExt.replace(/\.(en|zh)$/, '') : withoutExt)
     const fallbackTitle = frontmatter.title || slug
+    // 伴生文件优先取「与本文件语种一致」的字段，其次取普通字段
     const version = toVersion(
-      isEnFile ? frontmatter.titleEn || frontmatter.title : frontmatter.title,
-      isEnFile ? frontmatter.descriptionEn || frontmatter.description : frontmatter.description,
-      isEnFile && frontmatter.tagsEn.length ? frontmatter.tagsEn : frontmatter.tags,
+      isEnFile
+        ? frontmatter.titleEn || frontmatter.title
+        : isZhFile
+          ? frontmatter.titleZh || frontmatter.title
+          : frontmatter.title,
+      isEnFile
+        ? frontmatter.descriptionEn || frontmatter.description
+        : isZhFile
+          ? frontmatter.descriptionZh || frontmatter.description
+          : frontmatter.description,
+      isEnFile && frontmatter.tagsEn.length
+        ? frontmatter.tagsEn
+        : isZhFile && frontmatter.tagsZh.length
+          ? frontmatter.tagsZh
+          : frontmatter.tags,
       content,
       fallbackTitle,
     )
     const date = toISODate(frontmatter.date, filePath)
     const updated = toISODate(frontmatter.updated) || date
 
-    if (isEnFile) {
+    if (isCompanion) {
       translations.push({
         slug,
+        locale: isEnFile ? 'en' : 'zh',
         post: {
           slug,
           date,
@@ -165,7 +183,7 @@ export function buildCatalog(files: Record<string, string>): BlogPost[] {
           legacy: frontmatter.legacy,
           primary: version,
           altMeta: { title: '', description: '', tags: [] },
-          locales: { en: version },
+          locales: { [isEnFile ? 'en' : 'zh']: version },
           path: frontmatter.externalUrl || `/blog/${slug}/`,
         },
       })
@@ -189,22 +207,23 @@ export function buildCatalog(files: Record<string, string>): BlogPost[] {
 
   const bySlug = new Map(originals.map((post) => [post.slug, post]))
 
-  for (const { slug, post: enPost } of translations) {
+  for (const { slug, locale: companionLocale, post: companion } of translations) {
+    const version = companion.primary
     const target = bySlug.get(slug)
-    const enVersion = enPost.primary
     if (!target) {
-      // 只有英文文件：也发布，中文界面同样可见
+      // 只有伴生文件：照样发布，另一语言回退到这份正文
       bySlug.set(slug, {
-        ...enPost,
+        ...companion,
         lang: 'both',
-        locales: { en: enVersion, zh: enVersion },
+        locales: { zh: version, en: version, [companionLocale]: version },
       })
       continue
     }
-    target.locales.en = enVersion
-    if (target.updated < enPost.updated) target.updated = enPost.updated
-    if (!target.date) target.date = enPost.date
-    if (target.lang === 'zh') target.lang = 'both'
+    target.locales[companionLocale] = version
+    if (target.updated < companion.updated) target.updated = companion.updated
+    if (!target.date) target.date = companion.date
+    if (!target.cover && companion.cover) target.cover = companion.cover
+    if (target.lang !== 'both') target.lang = 'both'
   }
 
   return sortPosts([...bySlug.values()])

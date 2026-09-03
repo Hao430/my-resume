@@ -43,20 +43,37 @@ draft: true                     # true 时构建产物完全不含这篇
 `title_en` / `description_en` / `tags_en` 只是「元数据翻译」：英文访客在列表和分享卡片上
 看到的是英文，正文仍是原文，页面顶部会提示「原文为中文」。
 
+## 海外优先：新文章默认双写
+
+站点的战略是**先服务海外读者**，所以新文章的推荐顺序是：
+
+1. 先写英文版，作为无后缀的原始文件（`foo.md`）——它决定 URL slug、预渲染 head、`og:locale`
+2. 再写中文版 `foo.zh.md`
+3. 反过来也行（中文原始 + `foo.en.md`），已有文章就是这种做法
+
+这样英文侧不只是"标题被翻译"，而是**同一 URL 下的完整英文正文**，
+英文读者从 `/feed-en.xml` 订到的也是全文。
+
 ## 想要真正的英文版正文：写伴生文件
 
-在同目录放 `文章slug.en.md`，它会与 `文章slug.md` 合并成**同一个 URL**（不会多出一份重复内容）：
+在同目录放 `文章slug.en.md`（或 `文章slug.zh.md`），它会与 `文章slug.md` 合并成**同一个 URL**（不会多出一份重复内容）：
 
 ```
-content/posts/harness-development-paradigm.md      # 中文版（默认版本）
-content/posts/harness-development-paradigm.en.md   # 英文版，同一条 URL，切换语言即换正文
+content/posts/ai-agent-permission-management.md      # 英文原文（决定 slug 与 head）
+content/posts/ai-agent-permission-management.zh.md   # 中文正文，同一条 URL
+content/posts/harness-development-paradigm.md        # 中文原文
+content/posts/harness-development-paradigm.en.md     # 英文正文
 ```
 
-伴生文件自己的 `title/description/tags` 就是英文版文案；反过来，英文原文配
-`xxx.md` + `xxx.zh.md`？不支持——请保持「无后缀 = 原始语言」。
+伴生文件里直接写 `title` / `description` / `tags`（就是本语言的版本）；
+`title_en` / `title_zh` 这类字段只在"只翻译元数据、不翻译正文"时用作兜底。
+
+伴生文件写的是该语言版本的完整正文，`title` / `description` / `tags` 就是该语言的文案。
+两个方向都支持：中文原文配 `foo.en.md`，或英文原文配 `foo.zh.md`。
+**但不要**同时存在 `foo.en.md` 和另一个 `foo-en.md`——后者会被当成另一篇文章，制造重复内容。
 `/feed.xml`（中文侧）与 `/feed-en.xml`（英文侧）会自动分别收录。
 
-参考实现：`content/posts/harness-development-paradigm.en.md`。
+参考实现：`ai-agent-permission-management.md` + `.zh.md`、`harness-development-paradigm.md` + `.en.md`。
 
 ## 旧的独立 HTML 文章
 
@@ -90,6 +107,14 @@ content/posts/harness-development-paradigm.en.md   # 英文版，同一条 URL�
 
 解析逻辑只有一份：`src/utils/markdown.ts` + `src/utils/post-catalog.ts`，
 浏览器端（`src/stores/blog.ts`）与构建脚本共用，避免「站内 4 篇、RSS 3 篇」的漂移。
+
+## 收录提交（海外搜索引擎）
+
+| 引擎 | 方式 | 状态 |
+|------|------|------|
+| Bing / Yandex / Naver / Seznam | **IndexNow**：站点根目录已放 key 文件，构建后执行 `node scripts/submit-indexnow.mjs` | 免账号，可立即推送全部 URL |
+| Google | Google Search Console → Sitemaps → 提交 `https://hao430.cn/sitemap.xml` | 需老板登录账号（见 `docs/seo-submission.md`） |
+| Bing Webmaster Tools | 可用 IndexNow key 直接验证站点所有权，无需 Microsoft 账号 | 建议顺手做 |
 
 ## 每日早参（HTML 流水）
 

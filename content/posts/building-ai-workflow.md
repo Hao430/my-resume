@@ -52,12 +52,15 @@ This is where most people start, but it should be step 3, not step 1:
 3. **Iterate quickly** — Small experiments beat long planning sessions
 4. **Document everything** — Your AI workflow should be as versionable as your code
 
-## Results
+## What I actually measure
 
-Since adopting this workflow:
-- Development velocity increased by ~40%
-- Bug detection improved significantly
-- Time spent on repetitive tasks dropped dramatically
+I do not trust a "40% faster" claim about my own workflow, because I have no before/after baseline and no way to isolate the tool from the mood. What I do track is narrower and checkable:
+
+- **Retries per task** — how often I have to send the agent back. Falling, and it is the only number that correlates with how well I wrote the brief.
+- **Review time as a share of total time** — rising when I let scope grow, which is my signal to cut the task in half.
+- **Escapes per release** — defects found after merge. Flat, but a spike here is what actually tells me the workflow degraded.
+
+If a metric cannot survive me forgetting to record it, it is not a metric. Two of the three above I still log by hand in one line per day.
 
 ## Conclusion
 

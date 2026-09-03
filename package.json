@@ -16,7 +16,8 @@
     "sync-daily-briefs": "node scripts/sync-daily-briefs.cjs",
     "prepare": "git config core.hooksPath githooks",
     "new-post": "node scripts/new-post.mjs",
-    "check": "run-s lint type-check build"
+    "check": "run-s lint type-check build",
+    "indexnow": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "markdown-it": "^15.0.1",

@@ -219,7 +219,9 @@ ${entries.join('\n')}
 
 function postHtml(shell: string, post: LocalizedPost): string {
   const url = `${SITE_URL}${post.path}`
-  const image = post.cover ? `${SITE_URL}${post.cover}` : `${SITE_URL}/og-image.png`
+  const image = post.cover
+    ? `${SITE_URL}${post.cover}`
+    : `${SITE_URL}/${post.bodyLang === 'en' ? 'og-image-en.png' : 'og-image.png'}`
   const siteName = post.bodyLang === 'en' ? SITE_NAME_EN : SITE_NAME_ZH
 
   let html = replaceTitle(shell, `${post.title} | ${siteName}`)
@@ -230,6 +232,12 @@ function postHtml(shell: string, post: LocalizedPost): string {
   html = upsertMeta(html, 'property', 'og:url', url)
   html = upsertMeta(html, 'property', 'og:type', 'article')
   html = upsertMeta(html, 'property', 'og:locale', post.bodyLang === 'en' ? 'en_US' : 'zh_CN')
+  html = upsertMeta(
+    html,
+    'property',
+    'og:locale:alternate',
+    post.bodyLang === 'en' ? 'zh_CN' : 'en_US',
+  )
   html = upsertMeta(html, 'property', 'og:image', image)
   html = upsertMeta(html, 'property', 'article:published_time', `${post.date}T08:00:00+08:00`)
   if (post.updated && post.updated !== post.date) {

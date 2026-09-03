@@ -71,6 +71,7 @@ npm run new-post -- "标题" --slug=english-slug    # 新建文章（默认 draf
 npm run lint && npm run type-check               # 质量检查
 npm run build                                    # 生成早参清单 → 类型检查 + 构建 + 可发现性资产
 npm run preview                                  # 构建后本地验证（含 /blog/<slug>/ 预渲染页）
+node scripts/submit-indexnow.mjs                 # 部署后向 Bing/Yandex/Naver 推送 URL
 ```
 
 ## 部署与验证

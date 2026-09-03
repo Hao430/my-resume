@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0d0f"/>
+      <stop offset="100%" stop-color="#151518"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9454b"/>
+      <stop offset="100%" stop-color="#9e2a2b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ink)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#acc)"/>
+
+  <!-- 墨点 -->
+  <g transform="translate(1010,150) scale(1.15)">
+    <path d="M 0 -80 C 8 -70, 54 -18, 54 16 C 54 50, 32 72, 0 80 C -32 72, -54 50, -54 16 C -54 -18, -8 -70, 0 -80 Z" fill="url(#acc)"/>
+  </g>
+
+  <g font-family="DejaVu Serif, Georgia, serif" fill="#f3f1ea">
+    <text x="96" y="238" font-size="34" letter-spacing="8" fill="#b7b3a8">PERSONAL SITE · HAO430.CN</text>
+    <text x="96" y="338" font-size="76" font-weight="bold">Hao Zhang</text>
+    <text x="96" y="418" font-size="42" fill="#d8d4c8">AI-era engineering, product notes</text>
+    <text x="96" y="478" font-size="42" fill="#d8d4c8">and daily briefs</text>
+  </g>
+
+  <g font-family="DejaVu Sans, Helvetica, sans-serif" fill="#8f8b81">
+    <text x="96" y="556" font-size="26">Chinese &amp; English · RSS: /feed.xml · /feed-en.xml</text>
+  </g>
+
+  <rect x="96" y="500" width="120" height="4" fill="url(#acc)"/>
+</svg>
