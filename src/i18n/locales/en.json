@@ -4,10 +4,11 @@
     "about": "About",
     "blog": "Blog",
     "dailyBrief": "Daily Brief",
-    "contact": "Contact"
+    "contact": "Contact",
+    "rss": "RSS"
   },
   "hero": {
-    "title": "Mo Yan Zhai",
+    "title": "Hao430",
     "subtitle": "Ink carries the way, code puts it into practice",
     "description": "Computer Science · Full-Stack Development · Lifelong Learner",
     "aboutMe": "About Me",
@@ -42,7 +43,12 @@
     }
   },
   "workExperience": {
-    "sectionTitle": "Work Experience"
+    "sectionTitle": "Work Experience",
+    "positions": {
+      "appDevIntern": "Application Development Intern",
+      "deputySecretary": "Deputy Secretary",
+      "president": "President"
+    }
   },
   "honors": {
     "sectionTitle": "Honors & Awards",
@@ -51,13 +57,118 @@
       "school": "University"
     }
   },
+  "home": {
+    "projects": "Projects",
+    "viewAll": "View All",
+    "aboutTitle": "About Me",
+    "readFullResume": "Read Full Resume",
+    "stats": {
+      "projects": "Projects",
+      "experience": "Experience",
+      "honors": "Honors",
+      "skills": "Skills"
+    },
+    "writing": "Latest writing"
+  },
+  "about": {
+    "pageTitle": "About Me",
+    "tabs": {
+      "summary": "Summary",
+      "skills": "Skills",
+      "projects": "Projects",
+      "experience": "Experience",
+      "honors": "Honors"
+    },
+    "summary": {
+      "title": "Professional Summary",
+      "strong": "Solid Fundamentals",
+      "comprehensive": "Full-Range Capability",
+      "outstanding": "Ownership & Rigor"
+    },
+    "skills": {
+      "title": "Skills",
+      "technical": "Technical Skills",
+      "professional": "Professional Skills",
+      "tools": "Tools"
+    },
+    "projects": {
+      "title": "Project Experience",
+      "visit": "Visit Project",
+      "details": "View Details"
+    },
+    "experience": {
+      "title": "Work Experience"
+    },
+    "honors": {
+      "title": "Honors & Awards"
+    }
+  },
+  "blog": {
+    "pageTitle": "Blog",
+    "pageSubtitle": "Thoughts · Technical Sharing · Growth",
+    "readMore": "Read",
+    "empty": "No posts yet",
+    "filters": {
+      "all": "All",
+      "article": "Articles",
+      "slides": "Slides",
+      "external": "External"
+    },
+    "type": {
+      "article": "Article",
+      "slides": "Slides",
+      "external": "External"
+    },
+    "post": {
+      "back": "Back",
+      "loading": "Loading...",
+      "notFound": "Post not found",
+      "readFull": "Read Full Article",
+      "updatedAt": "Updated",
+      "toc": "Contents",
+      "nav": "Post navigation",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "subscribe": "Subscribe via RSS",
+    "allTags": "All tags",
+    "minutes": "{n} min read",
+    "originalZh": "Original in Chinese",
+    "originalEn": "Original in English"
+  },
+  "dailyBrief": {
+    "pageTitle": "Daily Brief",
+    "pageSubtitle": "Weekday mornings 8:30 AM · Insights · Policy × Industry × Tech × Market",
+    "today": "Today",
+    "readAll": "Read Full Brief",
+    "history": "Past Briefs",
+    "read": "Read",
+    "empty": "No briefs available",
+    "emptyHint": "Updated daily at 8:30 AM",
+    "openNew": "Open in new tab",
+    "latest": "Latest",
+    "subscribe": "Subscribe to briefs (RSS)"
+  },
   "footer": {
     "tagline": "Ink carries the way, code puts it into practice",
     "copyright": "Crafted with care, shared with serendipity",
-    "icp": "ICP License:湘ICP备2025125191号-2"
+    "rss": "Subscribe via RSS"
   },
   "language": {
     "zh": "中文",
     "en": "English"
+  },
+  "slides": {
+    "pageTitle": "Slides",
+    "empty": "No slides yet"
+  },
+  "seo": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "post": "Post",
+    "slides": "Slides",
+    "reader": "Reading",
+    "dailyBrief": "Daily Brief"
   }
 }

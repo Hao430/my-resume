@@ -4,7 +4,8 @@
     "about": "关于",
     "blog": "博客",
     "dailyBrief": "早参",
-    "contact": "联系我"
+    "contact": "联系我",
+    "rss": "订阅"
   },
   "hero": {
     "title": "墨砚斋",
@@ -42,7 +43,12 @@
     }
   },
   "workExperience": {
-    "sectionTitle": "工作经历"
+    "sectionTitle": "工作经历",
+    "positions": {
+      "appDevIntern": "应用开发实习生",
+      "deputySecretary": "副书记",
+      "president": "会长"
+    }
   },
   "honors": {
     "sectionTitle": "荣誉奖项",
@@ -51,13 +57,118 @@
       "school": "校级"
     }
   },
+  "home": {
+    "projects": "项目作品",
+    "viewAll": "查看全部",
+    "aboutTitle": "关于我",
+    "readFullResume": "阅读完整简历",
+    "stats": {
+      "projects": "项目经验",
+      "experience": "工作经历",
+      "honors": "荣誉奖项",
+      "skills": "技能标签"
+    },
+    "writing": "最新文章"
+  },
+  "about": {
+    "pageTitle": "关于我",
+    "tabs": {
+      "summary": "简介",
+      "skills": "技能",
+      "projects": "项目",
+      "experience": "经历",
+      "honors": "荣誉"
+    },
+    "summary": {
+      "title": "专业简介",
+      "strong": "专业扎实",
+      "comprehensive": "能力全面",
+      "outstanding": "素养突出"
+    },
+    "skills": {
+      "title": "技能标签",
+      "technical": "技术能力",
+      "professional": "专业能力",
+      "tools": "工具软件"
+    },
+    "projects": {
+      "title": "项目经验",
+      "visit": "访问项目",
+      "details": "查看详情"
+    },
+    "experience": {
+      "title": "工作经历"
+    },
+    "honors": {
+      "title": "荣誉奖项"
+    }
+  },
+  "blog": {
+    "pageTitle": "博客",
+    "pageSubtitle": "思考沉淀 · 技术分享 · 成长记录",
+    "readMore": "阅读",
+    "empty": "暂无文章",
+    "filters": {
+      "all": "全部",
+      "article": "文章",
+      "slides": "演示",
+      "external": "外链"
+    },
+    "type": {
+      "article": "文章",
+      "slides": "演示",
+      "external": "外链"
+    },
+    "post": {
+      "back": "返回",
+      "loading": "文章加载中...",
+      "notFound": "文章未找到",
+      "readFull": "阅读全文",
+      "updatedAt": "更新于",
+      "toc": "目录",
+      "nav": "上下篇",
+      "prev": "上一篇",
+      "next": "下一篇"
+    },
+    "subscribe": "订阅 RSS",
+    "allTags": "全部标签",
+    "minutes": "{n} 分钟阅读",
+    "originalZh": "原文为中文",
+    "originalEn": "原文为英文"
+  },
+  "dailyBrief": {
+    "pageTitle": "每日早参",
+    "pageSubtitle": "每交易日早晨 8:30 推送 · 信息差 · 政策 × 产业 × 科技 × 市场",
+    "today": "今日",
+    "readAll": "阅读全文",
+    "history": "历史早参",
+    "read": "阅读",
+    "empty": "暂无早参内容",
+    "emptyHint": "每天早上 8:30 更新",
+    "openNew": "在新窗口打开",
+    "latest": "最新一期",
+    "subscribe": "订阅早参 RSS"
+  },
   "footer": {
     "tagline": "以墨载道，以技行事",
     "copyright": "用心沉淀，随缘分享",
-    "icp": "湘ICP备2025125191号-2"
+    "rss": "RSS 订阅"
   },
   "language": {
     "zh": "中文",
     "en": "English"
+  },
+  "slides": {
+    "pageTitle": "演示文稿",
+    "empty": "暂无演示文稿"
+  },
+  "seo": {
+    "home": "首页",
+    "about": "关于我",
+    "blog": "博客",
+    "post": "文章",
+    "slides": "演示文稿",
+    "reader": "阅读",
+    "dailyBrief": "每日早参"
   }
 }
