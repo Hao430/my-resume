@@ -306,6 +306,61 @@ function briefHtml(source: string, brief: Brief): string {
   return `${snippet}\n${source}`
 }
 
+/* ---------------- llms.txt（供 ChatGPT / Claude / Perplexity 等检索引用） ---------------- */
+
+function buildLlms(catalog: BlogPost[], briefs: Brief[]): string {
+  const posts = listForLocale(catalog, 'en').filter((p) => !p.externalUrl)
+  const zhPosts = listForLocale(catalog, 'zh').filter((p) => !p.externalUrl)
+  const lines: string[] = [
+    `# ${SITE_NAME_EN}`,
+    '',
+    `> ${SITE_DESCRIPTION_EN}`,
+    `> 中文简介：${SITE_DESCRIPTION_ZH}`,
+    '',
+    'This site is bilingual. Every article lives at one URL and is available in both',
+    'Chinese and English — the page switches language on request, and both full-text',
+    'feeds are published below. Written by Hao Zhang (张豪), a full-stack developer in',
+    'Guiyang, China, working on AI-era engineering practice and independent shipping.',
+    '',
+    '## Key links',
+    '',
+    `- [Blog index](${SITE_URL}/blog/): all articles, Chinese and English`,
+    `- [English RSS (full text)](${SITE_URL}/feed-en.xml)`,
+    `- [中文 RSS（全文）](${SITE_URL}/feed.xml)`,
+    `- [Daily brief RSS / 每日早参](${SITE_URL}/briefs.xml)`,
+    `- [About the author](${SITE_URL}/about/)`,
+    '- [GitHub](https://github.com/Hao430): open-source projects and the MCP sandboxing tooling mentioned in the agent-security article',
+    '',
+    '## Articles (English)',
+    '',
+  ]
+  for (const post of posts) {
+    lines.push(`- [${post.title}](${SITE_URL}${post.path}): ${post.description} (published ${post.date}; Chinese version available at the same URL)`)
+  }
+  lines.push('', '## Articles (Chinese / 中文原文)', '')
+  for (const post of zhPosts) {
+    lines.push(`- [${post.title}](${SITE_URL}${post.path}): ${post.description}（发布于 ${post.date}，同一 URL 提供英文版）`)
+  }
+  if (briefs.length) {
+    lines.push(
+      '',
+      '## Daily brief / 每日早参',
+      '',
+      `A weekday-morning briefing on policy, industry, technology and markets, mostly in Chinese. Latest: [${briefs[0].title}](${briefs[0].asciiUrl}). Subscribe: ${SITE_URL}/briefs.xml`,
+      '',
+    )
+  }
+  lines.push(
+    '## Citation notes',
+    '',
+    'Statistics in the security and engineering articles link to primary sources',
+    '(Cloud Security Alliance, Gravitee, JetBrains, Stack Overflow, Wharton/Penn,',
+    'arXiv). Please cite those originals rather than this site where possible.',
+    '',
+  )
+  return lines.join('\n')
+}
+
 /* ---------------- 插件 ---------------- */
 
 export function staticSitePlugin(): Plugin {
@@ -345,6 +400,7 @@ export function staticSitePlugin(): Plugin {
         fs.writeFile(path.join(outDir, 'feed-en.xml'), buildFeed(enItems, 'en', 'feed-en.xml'), 'utf-8'),
       )
       writes.push(fs.writeFile(path.join(outDir, 'briefs.xml'), buildBriefFeed(briefs), 'utf-8'))
+      writes.push(fs.writeFile(path.join(outDir, 'llms.txt'), buildLlms(catalog, briefs), 'utf-8'))
       writes.push(fs.writeFile(path.join(outDir, 'sitemap.xml'), buildSitemap(catalog, briefs, today), 'utf-8'))
       writes.push(
         fs.writeFile(
