@@ -128,3 +128,11 @@ content/posts/harness-development-paradigm.en.md     # 英文正文
 
 把 `article_YYYYMMDD.html` 放进 `public/每日早参/`，然后 `npm run build`（或 `npm run sync-daily-briefs`）
 就会出现在早参页与 `briefs.xml` 中，标题取自文件里的 `<title>`。
+
+
+## 排版与字体（全站统一）
+
+- 正文区固定窄栏 640px（英文 ~88 字符/行、中文 ~40 字/行），目录/上下篇导航同宽。
+- 字体：拉丁字符优先 **Source Serif 4**，CJK 自动回退 **Noto Serif SC**，代码 **JetBrains Mono**；
+  全部自托管在 `public/fonts/`（按 unicode-range 按需加载），**不要**在正文里指定字体。
+- 正文链接为朱砂红 + 下划线（对比度 ~4.9:1），来源引用请用 Markdown 链接写作，读者可感知。

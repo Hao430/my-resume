@@ -62,6 +62,8 @@ scripts/        new-post.mjs、sync-daily-briefs.cjs
 7. `npm run check`（lint + type-check + build）必须全绿才能推送；CI 与 githooks 都会拦。
 8. TypeScript：strict + `noUncheckedIndexedAccess`，下标/正则分组要显式处理 undefined。
 9. 缩进 2 空格、UTF-8、LF（`.editorconfig`）。
+10. **字体必须自托管**（`public/fonts/`，321 个 woff2 分片随仓库提交）。
+    禁止改回 Google Fonts 远程引用（国内访问会失败）；更新字体重跑 `npm run fonts`。
 
 ## 常用命令
 
@@ -72,6 +74,7 @@ npm run lint && npm run type-check               # 质量检查
 npm run build                                    # 生成早参清单 → 类型检查 + 构建 + 可发现性资产
 npm run preview                                  # 构建后本地验证（含 /blog/<slug>/ 预渲染页）
 node scripts/submit-indexnow.mjs                 # 部署后向 Bing/Yandex/Naver 推送 URL
+npm run fonts                                   # 重拉字体分片到 public/fonts/（并提交）
 ```
 
 ## 部署与验证
