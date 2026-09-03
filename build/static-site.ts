@@ -125,11 +125,25 @@ async function renderOgImage(
   const dir = path.join(outDir, 'og')
   const file = path.join(dir, `${slug}.svg`)
   const png = path.join(dir, `${slug}.png`)
+  const url = `${SITE_URL}/og/${slug}.png`
+  // 1. 已随仓库发布、或已拷进 dist 的现成图（ESA 构建容器没有 librsvg，靠这一条兜住）
+  for (const candidate of [png, path.join(process.cwd(), 'public', 'og', `${slug}.png`)]) {
+    try {
+      await fs.access(candidate)
+      return url
+    } catch {
+      /* 继续尝试渲染 */
+    }
+  }
+  // 2. 本机有 librsvg：即时渲染，并把结果同步回 public/og/，
+  //    这样改了英文标题后重新构建即可，ESA 容器（无 librsvg）也能继续用上一次的图
   try {
     await fs.mkdir(dir, { recursive: true })
     await fs.writeFile(file, svg, 'utf-8')
     await run('rsvg-convert', ['-w', '1200', '-h', '630', file, '-o', png])
-    return `${SITE_URL}/og/${slug}.png`
+    await fs.mkdir(path.join(process.cwd(), 'public', 'og'), { recursive: true })
+    await fs.copyFile(png, path.join(process.cwd(), 'public', 'og', `${slug}.png`))
+    return url
   } catch {
     return null
   }

@@ -99,6 +99,7 @@ content/posts/harness-development-paradigm.en.md     # 英文正文
 | `dist/feed.xml`、`dist/feed-en.xml` | `build/static-site.ts` | RSS 2.0，全文 `content:encoded`，Feedly / Inoreader 等可直接订阅 |
 | `dist/briefs.xml` | 同上 | 每日早参订阅源 |
 | `dist/sitemap.xml` | 同上 | 主页面 + 每篇文章 + 每期早参，`lastmod` 取 frontmatter 日期 |
+| `public/og/<slug>.png` | 同上（本机有时） | 英文文章的专属分享图；构建环境没有 librsvg 时用仓库里已提交的这张 |
 | `dist/blog/<slug>/index.html` | 同上 | 每篇文章独立 head（title / canonical / OG / Twitter / JSON-LD BlogPosting），不执行 JS 的抓取器也能拿到摘要 |
 | `dist/briefs/YYYY-MM-DD/index.html` | 同上 | 早参的 ASCII 路径副本；`public/每日早参/` 原件保留并补 canonical |
 | `dist/robots.txt` | 同上 | 指向 sitemap（`public/robots.txt` 只是开发期占位，构建时会被覆盖） |
@@ -115,6 +116,13 @@ content/posts/harness-development-paradigm.en.md     # 英文正文
 | Bing / Yandex / Naver / Seznam | **IndexNow**：站点根目录已放 key 文件，构建后执行 `node scripts/submit-indexnow.mjs` | 免账号，可立即推送全部 URL |
 | Google | Google Search Console → Sitemaps → 提交 `https://hao430.cn/sitemap.xml` | 需老板登录账号（见 `docs/seo-submission.md`） |
 | Bing Webmaster Tools | 可用 IndexNow key 直接验证站点所有权，无需 Microsoft 账号 | 建议顺手做 |
+
+## 专属分享图（OG image）
+
+- 只有**标题为拉丁字符**的文章会生成带自身标题的分享图（X / LinkedIn 上带标题的卡片点击率明显更高）。
+- 本机构建装了 librsvg 时会自动重绘并写回 `public/og/`，记得连同图片一起提交。
+- **ESA 构建容器没有 librsvg**，所以这些图必须提交进仓库；只改标题不提交图片时，线上会继续用上一张。
+- 中文标题一律使用品牌图 `/og-image.png`（构建容器不保证有中文字体，避免渲染成豆腐块）。
 
 ## 每日早参（HTML 流水）
 
