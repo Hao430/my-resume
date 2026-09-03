@@ -338,6 +338,25 @@ export function staticSitePlugin(): Plugin {
         ),
       )
 
+      /* 1b. 主要页面的 head 外壳（SPA 路由直链也能给出正确的 title / OG） */
+      const pageShells: { dir: string; title: string; desc: string; path: string }[] = [
+        { dir: 'about', title: '关于我', desc: `${SITE_DESCRIPTION_ZH}。Full-stack developer based in Guiyang, building AI-era tooling.`, path: '/about/' },
+        { dir: 'daily-brief', title: '每日早参', desc: '每交易日早晨的信息速览：政策 × 产业 × 科技 × 市场。Subscribe: /briefs.xml', path: '/daily-brief/' },
+        { dir: 'slides', title: '演示文稿', desc: '视觉表达与深度演示 · Slides and talks', path: '/slides/' },
+      ]
+      for (const page of pageShells) {
+        const dir = path.join(outDir, page.dir)
+        writes.push(
+          fs.mkdir(dir, { recursive: true }).then(() =>
+            fs.writeFile(
+              path.join(dir, 'index.html'),
+              listHtml(shell, `${page.title}`, page.desc, `${SITE_URL}${page.path}`),
+              'utf-8',
+            ),
+          ),
+        )
+      }
+
       /* 2. 博客列表页外壳 */
       writes.push(
         fs
