@@ -6,7 +6,8 @@
     "dailyBrief": "Daily Brief",
     "contact": "Contact",
     "rss": "RSS",
-    "menu": "Menu"
+    "menu": "Menu",
+    "services": "Services"
   },
   "hero": {
     "subtitle": "Ink carries the way, code puts it into practice",
@@ -176,7 +177,8 @@
     "post": "Post",
     "slides": "Slides",
     "reader": "Reading",
-    "dailyBrief": "Daily Brief"
+    "dailyBrief": "Daily Brief",
+    "services": "AI Coding Services"
   },
   "brand": {
     "name": "Hao Zhang",
@@ -189,5 +191,45 @@
   },
   "reader": {
     "backToBlog": "Back to blog"
+  },
+  "services": {
+    "badge": "Service validation pilot · limited availability",
+    "title": "Make AI coding actually deliver",
+    "subtitle": "Hands-on services for teams adopting AI coding: turn AI-assisted development into real productivity, then turn AI-generated code into a trustworthy asset. Every engagement starts with a written diagnosis — verify first, invest after.",
+    "aTitle": "AI Coding Workflow Optimization",
+    "aDesc": "Assess how your team actually uses Cursor, Claude Code and agent workflows, surface the efficiency leaks and risks, and deliver an actionable optimization plan.",
+    "aPoints": [
+      "Team AI-coding capability audit (where you are vs. what's achievable)",
+      "Workflow and engineering standards design (prompt assets, review loops, agent boundaries)",
+      "Rollout support: a staged path from pilot team to org-wide adoption"
+    ],
+    "aPrice": "Diagnostic report from $500–2,000, depending on team size",
+    "bTitle": "AI-Generated Code Security Audit & Remediation",
+    "bDesc": "Audit the AI/agent-generated parts of your codebase, deliver a prioritized risk report, and remediate on request. Especially relevant for teams facing disclosure obligations (e.g. CRA vulnerability reporting duties).",
+    "bPoints": [
+      "AI-code footprint detection and risk-surface scanning (supply chain, permissions, leaked secrets)",
+      "Written risk report: itemized severity ratings + fix guidance, ready for compliance workflows",
+      "Optional remediation delivery: from $20K, scoped per engagement, quoted up front"
+    ],
+    "bPrice": "Audit report from $3K, depending on codebase size",
+    "whyTitle": "Why me",
+    "why1Title": "First-hand practice, not secondhand summaries",
+    "why1Body": "Every position on AI coding and agent security comes from direct hands-on work, documented bilingually on hao430.cn (including “Your AI Agent Is Running as Root”).",
+    "why2Title": "Claims backed by evidence",
+    "why2Body": "References are independently verified (JetBrains, Stack Overflow, industry incidents); unverifiable numbers are not repeated, and hype is not recycled.",
+    "why3Title": "Diagnose first, quote after",
+    "why3Body": "A free 30-minute diagnosis comes first; the written proposal and fixed quote follow. No hidden fees, no lock-in.",
+    "processTitle": "How it works",
+    "process1": "30-min free diagnosis",
+    "process1Body": "Online call to understand your situation, goals and pain points. You decide whether to continue.",
+    "process2": "Written proposal & quote",
+    "process2Body": "A written proposal with a fixed quote within 48 hours of the diagnosis. No later upsells.",
+    "process3": "Delivery & follow-through",
+    "process3Body": "Deliverables are produced milestone by milestone, verifiable at each step.",
+    "ctaTitle": "Book a free 30-minute diagnosis",
+    "ctaBody": "One conversation gets you the biggest AI-coding waste and the most urgent risks in your team. Replies usually within 24 hours.",
+    "ctaButton": "Email to book",
+    "mailSubject": "AI Coding Services — diagnosis booking",
+    "fineprint": "Diagnosis is free, no sales pitch, no lock-in. Transparent pricing: audit from $3K, workflow diagnosis $500–2,000, remediation from $20K."
   }
 }

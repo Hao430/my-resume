@@ -314,6 +314,7 @@ function buildSitemap(catalog: BlogPost[], briefs: Brief[], today: string): stri
     urlEntry(`${SITE_URL}/`, today, 'weekly', '1.0'),
     urlEntry(`${SITE_URL}/about/`, today, 'monthly', '0.8'),
     urlEntry(`${SITE_URL}/blog/`, today, 'weekly', '0.9'),
+    urlEntry(`${SITE_URL}/services/`, today, 'monthly', '0.7'),
     urlEntry(`${SITE_URL}/daily-brief/`, today, 'daily', '0.8'),
   ]
   for (const post of catalog) {
@@ -554,6 +555,7 @@ Crawl-delay: 1
       const pageShells: { dir: string; title: string; desc: string; path: string }[] = [
         { dir: 'about', title: '关于我', desc: `${SITE_DESCRIPTION_ZH}。Full-stack developer based in Guiyang, building AI-era tooling.`, path: '/about/' },
         { dir: 'daily-brief', title: '每日早参', desc: '每交易日早晨的信息速览：政策 × 产业 × 科技 × 市场。Subscribe: /briefs.xml', path: '/daily-brief/' },
+        { dir: 'services', title: 'AI 编码服务', desc: 'AI coding workflow optimization and AI-generated code security audit & remediation — diagnose first, quote after.', path: '/services/' },
         { dir: 'slides', title: '演示文稿', desc: '视觉表达与深度演示 · Slides and talks', path: '/slides/' },
       ]
       for (const page of pageShells) {

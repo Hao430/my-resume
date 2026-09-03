@@ -27,6 +27,12 @@ const routes = [
   // 兼容早期分享出去的 /read?file=xxx.html 链接
   { path: '/read', name: 'blog-reader', component: () => import('../pages/BlogReaderPage.vue'), meta: { titleKey: 'seo.reader' } },
   {
+    path: '/services',
+    name: 'services',
+    component: () => import('../pages/ServicesPage.vue'),
+    meta: { titleKey: 'seo.services' },
+  },
+  {
     path: '/daily-brief',
     name: 'daily-brief',
     component: () => import('../pages/DailyBriefPage.vue'),
