@@ -3,7 +3,8 @@ import { computed, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useBlogStore, SITE_URL, SITE_NAME_ZH, SITE_NAME_EN } from '../stores/blog'
-import { setCanonical, setPageMeta } from '../utils/seo'
+import { SITE_EMAIL } from '../utils/site'
+import { setCanonical, setPageMeta, upsertJsonLd } from '../utils/seo'
 import { formatDate } from '../utils/format'
 import MarkdownRenderer from '../components/MarkdownRenderer.vue'
 
@@ -26,6 +27,11 @@ const updatedLabel = computed(() => {
 
 const dateLabel = computed(() => (post.value ? formatDate(post.value.date, loc.value) : ''))
 
+const mailHref = computed(() => {
+  const subject = t('services.mailSubject')
+  return `mailto:${SITE_EMAIL}?subject=${encodeURIComponent(subject)}`
+})
+
 const originalHint = computed(() => {
   const current = post.value
   if (!current) return ''
@@ -46,6 +52,26 @@ watchEffect(() => {
     type: 'article',
   })
   setCanonical(route.path)
+  /* 预渲染外壳已带 article-ld（BlogPosting）；SPA 内导航后按当前文章更新，避免错位 */
+  upsertJsonLd('article-ld', {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: current.title,
+    description: current.description,
+    inLanguage: loc.value === 'en' ? 'en' : 'zh-CN',
+    image: current.cover
+      ? `${SITE_URL}${current.cover}`
+      : `${SITE_URL}/${current.bodyLang === 'en' ? 'og-image-en.png' : 'og-image.png'}`,
+    datePublished: current.date,
+    dateModified: current.updated || current.date,
+    articleSection: current.tags.join(', '),
+    keywords: current.tags.join(', '),
+    wordCount: current.plain.length,
+    url: `${SITE_URL}${current.path}`,
+    author: { '@type': 'Person', name: '张豪 (Hao430)', url: `${SITE_URL}/about/` },
+    publisher: { '@type': 'Person', name: '张豪 (Hao430)', url: SITE_URL },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}${current.path}` },
+  })
 })
 </script>
 
@@ -109,6 +135,17 @@ watchEffect(() => {
           >
             {{ t('blog.post.readFull') }}
           </a>
+
+          <!-- 文末 CTA：把读者导向服务落地页（复用 services.* 文案，一处维护） -->
+          <aside class="post-cta" aria-label="services">
+            <h2 class="post-cta__title">{{ t('services.ctaTitle') }}</h2>
+            <p class="post-cta__body">{{ t('services.ctaBody') }}</p>
+            <div class="post-cta__actions">
+              <a :href="mailHref" class="btn btn--primary">{{ t('services.ctaButton') }}</a>
+              <router-link to="/services" class="btn btn--outline">{{ t('nav.services') }}</router-link>
+            </div>
+            <p class="post-cta__fineprint">{{ t('services.fineprint') }}</p>
+          </aside>
 
           <!-- 上一篇 / 下一篇 -->
           <nav class="post-nav" :aria-label="t('blog.post.nav')">
@@ -275,5 +312,43 @@ watchEffect(() => {
   margin: 0 auto;
   padding-top: var(--space-6);
   border-top: 1px solid var(--color-ink-border);
+}
+
+/* 文末 CTA 卡片：与正文同宽，视觉上区分于正文 */
+.post-cta {
+  max-width: 640px;
+  margin: var(--space-12) auto 0;
+  padding: var(--space-8);
+  background-color: var(--color-ink-light);
+  border: 1px solid var(--color-ink-border);
+  border-radius: var(--radius-lg);
+  text-align: left;
+}
+
+.post-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+}
+
+.post-cta__body {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.post-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.post-cta__fineprint {
+  margin-top: var(--space-6);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
 }
 </style>

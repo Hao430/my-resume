@@ -36,6 +36,19 @@ function upsertLink(rel: string, href: string): void {
   el.setAttribute('href', href)
 }
 
+/** 注入 / 更新一段 JSON-LD（按 id 定向：预渲染外壳已带 id 时更新内容，而非重复追加） */
+export function upsertJsonLd(id: string, data: Record<string, unknown>): void {
+  const selector = `script[type="application/ld+json"][id="${id}"]`
+  let el = document.head.querySelector<HTMLScriptElement>(selector)
+  if (!el) {
+    el = document.createElement('script')
+    el.type = 'application/ld+json'
+    el.id = id
+    document.head.appendChild(el)
+  }
+  el.textContent = JSON.stringify(data)
+}
+
 /** 设置 canonical + og:url */
 export function setCanonical(path: string): void {
   const url = canonicalUrl(path)

@@ -3,7 +3,7 @@ import { computed, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { SITE_EMAIL, SITE_NAME_ZH, SITE_NAME_EN } from '../utils/site'
-import { setPageMeta, setCanonical } from '../utils/seo'
+import { setPageMeta, setCanonical, upsertJsonLd } from '../utils/seo'
 
 const route = useRoute()
 const { t, locale } = useI18n()
@@ -12,6 +12,43 @@ const site = loc.value === 'en' ? SITE_NAME_EN : SITE_NAME_ZH
 const mailHref = `mailto:${SITE_EMAIL}?subject=${encodeURIComponent(t('services.mailSubject'))}`
 const pre = (i: number) => String(i)
 
+/* Services 页结构化数据：ProfessionalService + 服务目录（价格区间） */
+const serviceJsonLd = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: t('services.title'),
+  description: t('services.subtitle'),
+  url: 'https://hao430.cn/services/',
+  email: SITE_EMAIL,
+  areaServed: 'Worldwide',
+  serviceType: ['AI coding workflow optimization', 'AI-generated code security audit'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: loc.value === 'en' ? 'AI coding services' : 'AI 编码服务',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: t('services.aTitle'), description: t('services.aDesc') },
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          minPrice: 500,
+          maxPrice: 2000,
+          priceCurrency: 'USD',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: t('services.bTitle'), description: t('services.bDesc') },
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          minPrice: 3000,
+          priceCurrency: 'USD',
+        },
+      },
+    ],
+  },
+}))
+
 watchEffect(() => {
   setPageMeta({
     title: `${t('seo.services')} | ${site}`,
@@ -19,6 +56,7 @@ watchEffect(() => {
     type: 'website',
   })
   setCanonical(route.path)
+  upsertJsonLd('services-ld', serviceJsonLd.value)
 })
 </script>
 

@@ -319,13 +319,17 @@ function buildSitemap(catalog: BlogPost[], briefs: Brief[], today: string): stri
   ]
   for (const post of catalog) {
     if (post.externalUrl) continue
-    entries.push(
-      urlEntry(`${SITE_URL}${post.path}`, post.updated || post.date, 'monthly', '0.7'),
-    )
+    const imageUrl = post.cover
+      ? `${SITE_URL}${post.cover}`
+      : `${SITE_URL}/${post.primary.bodyLang === 'en' ? 'og-image-en.png' : 'og-image.png'}`
+    const imageXml = `    <image:image>\n      <image:loc>${imageUrl}</image:loc>\n      <image:title>${escapeXml(post.primary.title)}</image:title>\n    </image:image>`
+    const base = urlEntry(`${SITE_URL}${post.path}`, post.updated || post.date, 'monthly', '0.7')
+    entries.push(base.replace('  </url>', `${imageXml}\n  </url>`))
   }
   for (const brief of briefs) entries.push(urlEntry(brief.asciiUrl, brief.date, 'yearly', '0.5'))
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${entries.join('\n')}
 </urlset>
 `
@@ -394,7 +398,7 @@ function postHtml(shell: string, post: LocalizedPost, customImage?: string): str
     publisher: { '@type': 'Person', name: AUTHOR, url: SITE_URL },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   })
-  return appendHead(html, `<script type="application/ld+json">${jsonLd}</script>`)
+  return appendHead(html, `<script type="application/ld+json" id="article-ld">${jsonLd}</script>`)
 }
 
 function listHtml(shell: string, title: string, description: string, url: string): string {
@@ -561,13 +565,52 @@ Crawl-delay: 1
       for (const page of pageShells) {
         const dir = path.join(outDir, page.dir)
         writes.push(
-          fs.mkdir(dir, { recursive: true }).then(() =>
-            fs.writeFile(
-              path.join(dir, 'index.html'),
-              listHtml(shell, `${page.title}`, page.desc, `${SITE_URL}${page.path}`),
-              'utf-8',
-            ),
-          ),
+          fs.mkdir(dir, { recursive: true }).then(async () => {
+            let html = listHtml(shell, `${page.title}`, page.desc, `${SITE_URL}${page.path}`)
+            if (page.path === '/services/') {
+              html = appendHead(
+                html,
+                `<script type="application/ld+json" id="services-ld">${JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'ProfessionalService',
+                  name: 'AI 编码服务 · AI Coding Services',
+                  description:
+                    'AI coding workflow optimization and AI-generated code security audit & remediation — diagnose first, quote after. / 面向团队的 AI 编码落地服务，先诊断后报价。',
+                  url: `${SITE_URL}/services/`,
+                  email: SITE_EMAIL,
+                  areaServed: 'Worldwide',
+                  serviceType: ['AI coding workflow optimization', 'AI-generated code security audit'],
+                  hasOfferCatalog: {
+                    '@type': 'OfferCatalog',
+                    name: 'AI coding services / AI 编码服务',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'AI Coding Workflow Optimization / AI 编码工作流优化',
+                          description:
+                            'Assess Cursor / Claude Code / agent workflows, surface efficiency leaks, deliver an actionable optimization plan.',
+                        },
+                        priceSpecification: { '@type': 'PriceSpecification', minPrice: 500, maxPrice: 2000, priceCurrency: 'USD' },
+                      },
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'AI-Generated Code Security Audit & Remediation / AI 生成代码安全审计与修复',
+                          description:
+                            'Audit AI/agent-generated code, deliver a prioritized risk report, remediate on request. Relevant to CRA disclosure duties.',
+                        },
+                        priceSpecification: { '@type': 'PriceSpecification', minPrice: 3000, priceCurrency: 'USD' },
+                      },
+                    ],
+                  },
+                })}</script>`,
+              )
+            }
+            await fs.writeFile(path.join(dir, 'index.html'), html, 'utf-8')
+          }),
         )
       }
 
