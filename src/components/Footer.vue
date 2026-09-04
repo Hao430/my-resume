@@ -58,6 +58,9 @@ const socialLinks = [
             </svg>
             <span class="footer__link-text">{{ t('footer.rss') }}</span>
           </a>
+          <a href="/privacy/" class="footer__link">
+            <span class="footer__link-text">{{ t('footer.privacy') }}</span>
+          </a>
         </div>
 
         <p class="footer__copyright">

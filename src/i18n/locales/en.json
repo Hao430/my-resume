@@ -156,7 +156,8 @@
   "footer": {
     "tagline": "Ink carries the way, code puts it into practice",
     "copyright": "Crafted with care, shared with serendipity",
-    "rss": "Subscribe via RSS"
+    "rss": "Subscribe via RSS",
+    "privacy": "Privacy"
   },
   "language": {
     "zh": "中文",
@@ -179,7 +180,8 @@
     "slides": "Slides",
     "reader": "Reading",
     "dailyBrief": "Daily Brief",
-    "services": "AI Coding Services"
+    "services": "AI Coding Services",
+    "privacy": "Privacy Policy"
   },
   "brand": {
     "name": "Hao Zhang",
@@ -228,5 +230,28 @@
     "bPoints1": "AI-code footprint detection and risk-surface scanning (supply chain, permissions, leaked secrets)",
     "bPoints2": "Written risk report: itemized severity ratings + fix guidance, ready for compliance workflows",
     "bPoints3": "Optional remediation delivery: from $20K, scoped per engagement, quoted up front"
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy",
+    "updated": "Last updated: September 4, 2026",
+    "intro": "This Privacy Policy explains how hao430.cn (\"this site\") collects, uses and protects visitor information. By accessing this site, you agree to the practices described in this policy.",
+    "sec1Title": "1. Information We Collect",
+    "sec1Body": "This site is a static personal website. It has no user accounts and no registration.\nWe do not actively collect personally identifiable information such as your name, email or phone number, unless you contact us directly by email.\nWhen you visit, the server and content delivery network (CDN) may keep basic access logs (e.g. IP address, browser type, time of access) to ensure security and measure traffic.",
+    "sec2Title": "2. Cookies and Local Storage",
+    "sec2Body": "This site uses cookies and browser local storage to provide core features:\n- Language preference: your chosen interface language is stored in localStorage;\n- Third-party advertising and analytics services (see Section 3) may set their own cookies.\nYou can disable or clear cookies in your browser settings, but some features may be affected.",
+    "sec3Title": "3. Third-Party Advertising (Google AdSense)",
+    "sec3Body": "This site displays ads via Google AdSense. Google and its partners, as third-party vendors, may use cookies (such as the DoubleClick cookie) to serve ads on this site and across the web.\nGoogle uses information about your visits to this and other sites to serve personalized ads. You can opt out of personalized advertising via Google Ads Settings (adssettings.google.com), or learn more at www.aboutads.info.",
+    "sec4Title": "4. How We Use Information",
+    "sec4Body": "We use collected information to improve site content and experience, measure traffic, keep the site secure, and sustain operations through advertising.\nWe do not sell or rent your personal information to third parties.",
+    "sec5Title": "5. Your Rights",
+    "sec5Body": "Under applicable law (including the EU GDPR and China's Personal Information Protection Law), you have the right to access, correct or delete personal information related to this site.\nSince this site does not collect user account data, if you need to inquire about or delete any potentially stored information, please contact us via the details at the end of this page.",
+    "sec6Title": "6. External Links",
+    "sec6Body": "Articles on this site may link to third-party websites. We are not responsible for their privacy practices; we encourage you to review their privacy policies when you visit them.",
+    "sec7Title": "7. Children's Privacy",
+    "sec7Body": "This site is intended for the general public and is not directed at children under 13. We do not knowingly collect personal information from children.",
+    "sec8Title": "8. Policy Updates",
+    "sec8Body": "We may update this policy from time to time. When we do, we will revise the \"Last updated\" date on this page. Material changes will be highlighted prominently on this site.",
+    "sec9Title": "9. Contact Us",
+    "sec9Body": "If you have any questions about this Privacy Policy, please contact us at:"
   }
 }

@@ -38,6 +38,12 @@ const routes = [
     component: () => import('../pages/DailyBriefPage.vue'),
     meta: { titleKey: 'seo.dailyBrief' },
   },
+  {
+    path: '/privacy',
+    name: 'privacy',
+    component: () => import('../pages/PrivacyPage.vue'),
+    meta: { titleKey: 'seo.privacy' },
+  },
 ]
 
 const router = createRouter({
