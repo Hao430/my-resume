@@ -326,7 +326,7 @@ function buildSitemap(catalog: BlogPost[], briefs: Brief[], today: string): stri
     const base = urlEntry(`${SITE_URL}${post.path}`, post.updated || post.date, 'monthly', '0.7')
     entries.push(base.replace('  </url>', `${imageXml}\n  </url>`))
   }
-  for (const brief of briefs) entries.push(urlEntry(brief.asciiUrl, brief.date, 'yearly', '0.5'))
+  // 每日早参为模板化页面且已 noindex，不进入 sitemap（AdSense 政策：不收录低质模板页）
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -417,6 +417,7 @@ function listHtml(shell: string, title: string, description: string, url: string
 function briefHtml(source: string, brief: Brief): string {
   const snippet = [
     `<link rel="canonical" href="${brief.asciiUrl}">`,
+    `<meta name="robots" content="noindex, nofollow">`,
     `<meta property="og:title" content="${escapeXml(brief.title)}">`,
     `<meta property="og:description" content="${escapeXml(brief.summary || '每日早参')}">`,
     `<meta property="og:url" content="${brief.asciiUrl}">`,
