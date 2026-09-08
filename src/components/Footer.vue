@@ -65,6 +65,13 @@ const socialLinks = [
       <p class="footer__copyright">
         © {{ currentYear }} {{ t('brand.name') }} · {{ t('footer.copyright') }}
       </p>
+      <p class="footer__icp">
+        <a
+          href="https://beian.miit.gov.cn/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >湘ICP备2025125191号-2</a>
+      </p>
     </div>
 
     <div class="footer__seal" aria-hidden="true">
@@ -171,6 +178,23 @@ const socialLinks = [
   color: var(--color-text-tertiary);
   margin: 0;
   text-align: center;
+}
+
+.footer__icp {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  margin: var(--space-3) 0 0;
+  text-align: center;
+}
+
+.footer__icp a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer__icp a:hover {
+  color: var(--color-vermilion);
 }
 
 /* 印章装饰 */
