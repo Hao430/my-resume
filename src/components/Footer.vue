@@ -21,37 +21,33 @@ const socialLinks = [
 <template>
   <footer class="footer">
     <div class="container footer__container">
-      <div class="footer__brand">
-        <div class="footer__logo">
-          <span class="footer__logo-text">墨</span>
-          <span class="footer__logo-separator">·</span>
-          <span class="footer__logo-name">{{ t('brand.name') }}</span>
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-text">{{ t('brand.mark') }}</span>
+            <span class="footer__logo-separator" aria-hidden="true">·</span>
+            <span class="footer__logo-name">{{ t('brand.name') }}</span>
+          </div>
+          <p class="footer__tagline">{{ t('footer.tagline') }}</p>
         </div>
-        <p class="footer__tagline">
-          {{ t('footer.tagline') }}
-        </p>
-      </div>
 
-      <div class="footer__divider"></div>
-
-      <div class="footer__bottom">
         <div class="footer__links">
           <a
             v-for="link in socialLinks"
             :key="link.name"
             :href="link.url"
             :title="link.name"
-            class="footer__link"
+            class="footer__link footer__link--icon"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path :d="link.icon"/>
             </svg>
             <span class="footer__link-text">{{ link.name }}</span>
           </a>
-          <a href="/feed.xml" class="footer__link" :title="t('footer.rss')">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <a href="/feed.xml" class="footer__link footer__link--icon" :title="t('footer.rss')">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M4 11a9 9 0 0 1 9 9"/>
               <path d="M4 4a16 16 0 0 1 16 16"/>
               <circle cx="5" cy="19" r="1" fill="currentColor"/>
@@ -62,15 +58,17 @@ const socialLinks = [
             <span class="footer__link-text">{{ t('footer.privacy') }}</span>
           </a>
         </div>
-
-        <p class="footer__copyright">
-          © {{ currentYear }} {{ t('brand.name') }} · {{ t('footer.copyright') }}
-        </p>
       </div>
+
+      <div class="footer__divider"></div>
+
+      <p class="footer__copyright">
+        © {{ currentYear }} {{ t('brand.name') }} · {{ t('footer.copyright') }}
+      </p>
     </div>
 
-    <div class="footer__seal">
-      <span>墨砚</span>
+    <div class="footer__seal" aria-hidden="true">
+      <span>{{ t('footer.seal') }}</span>
     </div>
   </footer>
 </template>
@@ -78,8 +76,8 @@ const socialLinks = [
 <style scoped>
 .footer {
   position: relative;
-  background-color: var(--color-ink-light);
-  border-top: 1px solid var(--color-ink-border);
+  background: var(--surface-1);
+  border-top: 1px solid var(--hairline);
   padding: var(--space-12) 0 var(--space-8);
   overflow: hidden;
 }
@@ -89,16 +87,22 @@ const socialLinks = [
   z-index: 1;
 }
 
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
 .footer__brand {
-  text-align: center;
-  margin-bottom: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
 .footer__logo {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  margin-bottom: var(--space-3);
 }
 
 .footer__logo-text {
@@ -108,101 +112,92 @@ const socialLinks = [
   color: var(--color-vermilion);
 }
 
-.footer__logo-separator {
-  color: var(--color-ink-border);
-  font-size: var(--text-lg);
-}
+.footer__logo-separator { color: var(--color-ink-border); font-size: var(--text-lg); }
 
 .footer__logo-name {
   font-family: var(--font-display);
   font-size: var(--text-lg);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semibold);
   color: var(--color-text);
 }
 
 .footer__tagline {
-  font-family: var(--font-display);
   font-size: var(--text-sm);
   color: var(--color-text-tertiary);
-  letter-spacing: var(--tracking-wider);
+  letter-spacing: var(--tracking-wide);
   margin: 0;
-}
-
-.footer__divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-ink-border) 20%, var(--color-ink-border) 80%, transparent);
-  margin-bottom: var(--space-8);
-}
-
-.footer__bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-4);
 }
 
 .footer__links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-2) var(--space-6);
 }
 
 .footer__link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--space-2);
   color: var(--color-text-secondary);
   text-decoration: none;
+  font-size: var(--text-sm);
+  transition: color var(--transition-fast);
+}
+
+.footer__link--icon {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
   transition: all var(--transition-fast);
 }
 
-.footer__link:hover {
-  color: var(--color-vermilion);
+.footer__link--icon:hover {
+  color: var(--color-text);
+  border-color: var(--color-ink-muted);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.footer__link svg {
-  flex-shrink: 0;
-}
+.footer__link:hover:not(.footer__link--icon) { color: var(--color-vermilion); }
 
-.footer__link-text {
-  font-size: var(--text-sm);
+.footer__divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--hairline-strong) 30%, var(--hairline-strong) 70%, transparent);
+  margin: var(--space-8) 0 var(--space-6);
 }
 
 .footer__copyright {
   font-size: var(--text-sm);
   color: var(--color-text-tertiary);
   margin: 0;
+  text-align: center;
 }
 
+/* 印章装饰 */
 .footer__seal {
   position: absolute;
-  right: var(--space-8);
-  bottom: var(--space-6);
-  width: 50px;
-  height: 50px;
-  border: 2px solid var(--color-vermilion-muted);
-  border-radius: 50%;
+  right: clamp(1rem, 4vw, 2.5rem);
+  top: 50%;
+  transform: translateY(-50%) rotate(-12deg);
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid rgba(201, 79, 61, 0.28);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.4;
-  transform: rotate(-15deg);
+  opacity: 0.5;
 }
 
 .footer__seal span {
   font-family: var(--font-display);
   font-size: var(--text-xs);
-  color: var(--color-vermilion-muted);
+  color: var(--color-vermilion);
   writing-mode: vertical-rl;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
 }
 
 @media (max-width: 640px) {
-  .footer__links {
-    gap: var(--space-4);
-  }
-  .footer__seal {
-    display: none;
-  }
+  .footer__seal { display: none; }
 }
 </style>

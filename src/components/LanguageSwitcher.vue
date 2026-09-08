@@ -7,14 +7,18 @@ const toggleLanguage = () => {
   const newLocale = locale.value === 'zh' ? 'en' : 'zh'
   locale.value = newLocale
   localStorage.setItem('locale', newLocale)
-  // Update HTML lang attribute
   document.documentElement.lang = newLocale === 'zh' ? 'zh-CN' : 'en'
 }
 </script>
 
 <template>
-  <button class="lang-switcher" @click="toggleLanguage" :title="locale === 'zh' ? 'Switch to English' : '切换到中文'">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <button
+    class="lang-switcher"
+    @click="toggleLanguage"
+    :title="locale === 'zh' ? 'Switch to English' : '切换到中文'"
+    :aria-label="locale === 'zh' ? 'Switch to English' : '切换到中文'"
+  >
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
       <circle cx="12" cy="12" r="10"/>
       <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
     </svg>
@@ -24,26 +28,27 @@ const toggleLanguage = () => {
 
 <style scoped>
 .lang-switcher {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
-  background: none;
-  border: 1px solid var(--color-ink-border);
-  border-radius: var(--radius-md);
+  padding: 0.5rem 0.95rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-ink-muted);
+  border-radius: var(--radius-full);
   color: var(--color-text-secondary);
   cursor: pointer;
   font-size: var(--text-sm);
-  font-family: var(--font-display);
+  font-family: var(--font-fallback);
+  font-weight: 600;
   transition: all var(--transition-fast);
 }
 
 .lang-switcher:hover {
-  color: var(--color-vermilion);
-  border-color: var(--color-vermilion-muted);
+  color: var(--color-text);
+  border-color: rgba(201, 79, 61, 0.5);
+  background: rgba(201, 79, 61, 0.08);
 }
 
-.lang-switcher__text {
-  font-weight: var(--font-medium);
-}
+.lang-switcher svg { opacity: 0.7; }
+.lang-switcher:hover svg { opacity: 1; }
 </style>

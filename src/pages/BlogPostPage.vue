@@ -190,7 +190,7 @@ watchEffect(() => {
   padding: var(--space-4) var(--space-5);
   border: 1px solid var(--color-ink-border);
   border-radius: var(--radius-lg);
-  background-color: var(--color-ink-light);
+  background-color: var(--surface-1);
 }
 
 .post-toc__title {
@@ -308,21 +308,34 @@ watchEffect(() => {
 }
 
 .post-content {
-  max-width: 640px;
+  max-width: var(--container-reading);
   margin: 0 auto;
-  padding-top: var(--space-6);
-  border-top: 1px solid var(--color-ink-border);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--hairline);
 }
 
 /* 文末 CTA 卡片：与正文同宽，视觉上区分于正文 */
 .post-cta {
-  max-width: 640px;
+  position: relative;
+  max-width: var(--container-reading);
   margin: var(--space-12) auto 0;
   padding: var(--space-8);
-  background-color: var(--color-ink-light);
+  background:
+    radial-gradient(520px 240px at 12% -20%, rgba(201, 79, 61, 0.08), transparent 70%),
+    var(--color-ink-light);
   border: 1px solid var(--color-ink-border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
   text-align: left;
+  overflow: hidden;
+}
+.post-cta::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(201, 79, 61, 0.7) 25%, rgba(201, 79, 61, 0.7) 75%, transparent);
+  opacity: 0.6;
 }
 
 .post-cta__title {

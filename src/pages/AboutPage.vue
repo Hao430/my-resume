@@ -318,14 +318,16 @@ const scrollToSection = (id: string) => {
 }
 
 .summary-card__icon {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-vermilion-muted);
-  border-radius: var(--radius-lg);
-  color: var(--color-vermilion);
+  background: linear-gradient(180deg, rgba(201, 79, 61, 0.18), rgba(201, 79, 61, 0.08));
+  border: 1px solid rgba(201, 79, 61, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--color-vermilion-bright);
+  box-shadow: 0 4px 14px rgba(201, 79, 61, 0.12);
 }
 
 .summary-card__title {

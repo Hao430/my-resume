@@ -1,9 +1,16 @@
-/* 设计系统 - 墨砚风格 CSS变量定义 */
-/* 理念：墨韵 · 文化思考 + 技术精准 */
+/* ============================================================
+   设计系统 v2 —— 砚·刊（Inkstone Editorial）
+   理念：墨砚人文底色 × 技术编辑部的克制与秩序
+   ------------------------------------------------------------
+   变更要点（相对 v1）：
+   1. 朱砂由 #9e2a2b 暗红提亮为 #c94f3d 印泥朱砂，且收敛使用：
+      大面积中性灰阶承载信息，朱砂只用于关键强调（CTA/选中态/点睛）。
+   2. 新增暖灰文字梯度（主/次/弱三级），层次分明。
+   3. 表面层次：墨底 → 卡片面 → 悬浮面，逐级抬升带微弱渐变。
+   4. 保留全部 v1 变量名（组件兼容），新增 tokens 仅做扩展。
+   ============================================================ */
 
 /* ==================== 兼容性别名 ==================== */
-/* 旧组件兼容：PersonalInfo, WorkExperience, Honors, Skills */
-/* 建议后续统一迁移到新命名系统 */
 :root {
   /* 背景色别名 */
   --bg-primary: var(--color-ink);
@@ -22,41 +29,55 @@
 
 /* ==================== 色彩系统 ==================== */
 :root {
-  /* 主色调 - 墨砚色系 */
-  --color-ink: #0a0a0b;           /* 极深墨黑 - 主背景 */
-  --color-ink-light: #111111;       /* 近墨 - 卡片背景 */
-  --color-ink-border: #1f1f1f;     /* 边框色 */
-  --color-ink-muted: #252525;       /* 次级边框 */
+  /* ---- 墨底（中性灰阶，暖调） ---- */
+  --color-ink: #0b0b0d;            /* 极深墨黑 - 主背景 */
+  --color-ink-light: #131316;      /* 近墨 - 卡片背景 */
+  --color-ink-border: #222226;     /* 一级边框 */
+  --color-ink-muted: #2c2c31;      /* 次级边框/悬浮面 */
 
-  /* 文字色 */
-  --color-text: #e8e6e3;            /* 象牙白 - 主文字 */
-  --color-text-secondary: #7c7c7c;  /* 淡墨灰 - 次要文字 */
-  --color-text-tertiary: #4a4a4a;   /* 更淡的灰 */
+  /* 面层级（新） */
+  --surface-1: #101013;            /* 深于卡片的嵌层面 */
+  --surface-2: #19191d;            /* 悬浮卡片/悬停面 */
+  --surface-3: #232329;            /* 弹出/高亮面 */
+  --hairline: rgba(255, 255, 255, 0.06);
+  --hairline-strong: rgba(255, 255, 255, 0.1);
 
-  /* 强调色 - 朱砂红 */
-  --color-vermilion: #9e2a2b;       /* 沉稳红 - 主强调 */
-  --color-vermilion-light: #b33939; /* 亮红 - hover态 */
-  --color-vermilion-muted: #5c1919; /* 暗红 - 次级强调 */
+  /* ---- 文字（暖白 → 暖灰梯度） ---- */
+  --color-text: #ecebe8;            /* 暖象牙白 - 主文字 */
+  --color-text-secondary: #a3a09a;  /* 暖灰 - 次要文字（AA） */
+  --color-text-tertiary: #6d6a66;   /* 弱灰 - 辅助信息 */
+  --color-text-faint: #4a4845;      /* 极弱 - 水印/占位 */
 
-  /* 点缀色 - 铜金 */
-  --color-gold: #b8860b;           /* 古铜金 */
-  --color-gold-light: #d4a017;     /* 亮金 */
+  /* ---- 主强调：印泥朱砂（收敛使用） ---- */
+  --color-vermilion: #c94f3d;       /* 朱砂 - 主强调（较 v1 提亮去闷） */
+  --color-vermilion-light: #dd6f5c; /* 亮朱 - hover */
+  --color-vermilion-bright: #ef8a77;/* 更亮 - 小字号文本/描边 */
+  --color-vermilion-muted: rgba(201, 79, 61, 0.14);  /* 朱砂底染 */
 
-  /* 主题色 - 青墨绿 */
-  --color-jade: #2d4a3e;            /* 深青绿 */
-  --color-jade-light: #3d6a54;      /* 亮青 */
+  /* 点缀：鎏金（荣誉/奖章） */
+  --color-gold: #c2a24a;            /* 铜金 - 文字于暗底 */
+  --color-gold-light: #d8bb6a;      /* 亮金 - hover */
+
+  /* 辅助：青瓷（第二服务/经历） */
+  --color-jade: #35624f;            /* 青墨绿 - 边框 */
+  --color-jade-light: #5d9480;      /* 亮青 - 文字 */
+  --color-jade-muted: rgba(61, 106, 84, 0.16);
 
   /* 功能色 */
-  --color-link: #cc5b5b;            /* 链接色 - 暗底对比度约 4.9:1（AA） */
-  --color-link-hover: #e07070;      /* 链接 hover - 更亮 */
+  --color-link: #d9796c;            /* 链接（暗底 AA） */
+  --color-link-hover: #eda294;      /* 链接 hover */
+  --color-success: #6fae8c;
+  --color-warning: #d3a04a;
+  --color-danger: #d05a4d;
 
-  /* 阴影 */
-  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-glow-vermilion: 0 0 20px rgba(158, 42, 43, 0.3);
+  /* ---- 阴影（更深的层次 + 朱砂微光） ---- */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.28), 0 1px 0 rgba(255, 255, 255, 0.02) inset;
+  --shadow-hover: 0 10px 32px rgba(0, 0, 0, 0.5), 0 2px 0 rgba(255, 255, 255, 0.03) inset;
+  --shadow-glow-vermilion: 0 0 0 1px rgba(201, 79, 61, 0.25), 0 6px 28px rgba(201, 79, 61, 0.16);
+  --shadow-focus: 0 0 0 3px rgba(201, 79, 61, 0.28);
 
-  /* 间距 */
+  /* ---- 间距（8pt 体系微调） ---- */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -70,19 +91,23 @@
   --space-20: 5rem;
   --space-24: 6rem;
 
-  /* 圆角 */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  /* ---- 圆角（克制圆润） ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
 
-  /* 字体 */
+  /* ---- 字体（全部自托管） ----
+     display/正文：衬线（Source Serif 4 拉丁 + Noto Serif SC 中文）
+     mono：JetBrains Mono —— 用于眉题/元数据，制造技术编辑部反差 */
   --font-display: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif CN', serif;
   --font-body: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif CN', serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Microsoft YaHei', sans-serif;
 
-  /* 字体大小 */
+  /* ---- 字号（延续 + 微调，保证排版节奏） ---- */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -93,38 +118,44 @@
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
   --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
 
-  /* 行高 */
-  --leading-tight: 1.2;
-  --leading-snug: 1.375;
+  /* ---- 行高 ---- */
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
   --leading-normal: 1.6;
   --leading-relaxed: 1.75;
 
-  /* 字重 */
+  /* ---- 字重 ---- */
   --font-light: 300;
   --font-normal: 400;
   --font-medium: 500;
   --font-semibold: 600;
   --font-bold: 700;
 
-  /* 字间距 */
-  --tracking-tight: -0.025em;
+  /* ---- 字间距 ---- */
+  --tracking-tight: -0.02em;
   --tracking-normal: 0;
-  --tracking-wide: 0.025em;
-  --tracking-wider: 0.05em;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.08em;
+  --tracking-widest: 0.14em;
 
-  /* 过渡 */
-  --transition-fast: 150ms ease;
-  --transition-base: 200ms ease;
-  --transition-slow: 300ms ease;
-  --transition-slower: 500ms ease;
+  /* ---- 过渡（更细腻的缓动） ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 150ms var(--ease-out);
+  --transition-base: 250ms var(--ease-out);
+  --transition-slow: 400ms var(--ease-out);
+  --transition-slower: 650ms var(--ease-in-out);
 
-  /* 布局 */
+  /* ---- 布局 ---- */
   --container-max: 1200px;
-  --container-narrow: 800px;
-  --header-height: 72px;
+  --container-narrow: 720px;
+  --container-reading: 680px;
+  --header-height: 68px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
 
-  /* Z-Index层级 */
+  /* ---- Z-Index ---- */
   --z-base: 0;
   --z-dropdown: 100;
   --z-sticky: 200;

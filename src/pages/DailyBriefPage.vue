@@ -132,10 +132,8 @@ const openBrief = (brief: DailyBrief) => {
 }
 
 .page-header {
-  padding-top: calc(var(--header-height) + var(--space-12));
-  padding-bottom: var(--space-8);
-  background: linear-gradient(135deg, rgba(7, 193, 96, 0.08), transparent);
-  border-bottom: 1px solid var(--color-ink-border);
+  padding-top: calc(var(--header-height) + clamp(2.5rem, 7vw, 4.5rem));
+  padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .page-header__title {
@@ -163,10 +161,22 @@ const openBrief = (brief: DailyBrief) => {
 .latest-brief {
   position: relative;
   padding: var(--space-8);
-  background: linear-gradient(135deg, var(--color-ink-light), var(--color-ink));
+  background:
+    radial-gradient(520px 240px at 12% -20%, rgba(201, 79, 61, 0.08), transparent 70%),
+    linear-gradient(135deg, var(--color-ink-light), var(--color-ink));
   border: 1px solid var(--color-ink-border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
   margin-bottom: var(--space-10);
+  overflow: hidden;
+}
+.latest-brief::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(201, 79, 61, 0.6) 25%, rgba(201, 79, 61, 0.6) 75%, transparent);
+  opacity: 0.5;
 }
 
 .latest-brief__badge {
@@ -176,10 +186,10 @@ const openBrief = (brief: DailyBrief) => {
   padding: var(--space-1) var(--space-3);
   font-size: var(--text-xs);
   font-weight: var(--font-semibold);
-  color: var(--color-vermilion);
-  background: rgba(237, 28, 36, 0.1);
-  border: 1px solid rgba(237, 28, 36, 0.2);
-  border-radius: var(--radius-sm);
+  color: var(--color-vermilion-bright);
+  background: var(--color-vermilion-muted);
+  border: 1px solid rgba(201, 79, 61, 0.35);
+  border-radius: var(--radius-full);
 }
 
 .latest-brief__title {

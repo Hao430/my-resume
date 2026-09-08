@@ -1,302 +1,247 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-// 打字机效果
-const displayText = ref('')
-const fullText = computed(() => t('hero.subtitle'))
-const charIndex = ref(0)
-
-onMounted(() => {
-  const typeInterval = setInterval(() => {
-    if (charIndex.value < fullText.value.length) {
-      displayText.value += fullText.value[charIndex.value]
-      charIndex.value++
-    } else {
-      clearInterval(typeInterval)
-    }
-  }, 150)
-})
+const tags = ['Vue / React', 'TypeScript', 'Node.js', 'AI Apps', 'Product Thinking']
 </script>
 
 <template>
   <section class="hero">
-    <!-- 背景装饰 -->
-    <div class="hero__bg">
-      <div class="hero__ink-stain hero__ink-stain--1"></div>
-      <div class="hero__ink-stain hero__ink-stain--2"></div>
-      <div class="hero__ink-stain hero__ink-stain--3"></div>
+    <!-- 背景氛围 -->
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__grid"></div>
     </div>
 
-    <div class="container hero__content">
-      <!-- 主标题 -->
+    <div class="container hero__inner">
+      <!-- 左栏：主文案 -->
       <div class="hero__main">
-        <h1 class="hero__title animate-fadeInUp">
-          <span class="hero__title-accent">{{ t('hero.titleAccent') }}</span>{{ t('hero.titleRest') }}
+        <p class="eyebrow hero__eyebrow animate-fadeInUp">{{ t('hero.greeting') || 'Tech · Humanities' }}</p>
+        <h1 class="hero__title animate-fadeInUp delay-100">
+          <span class="hero__title-mark">{{ t('hero.titleAccent') }}</span>{{ t('hero.titleRest') }}
         </h1>
         <p class="hero__subtitle animate-fadeInUp delay-200">
-          {{ displayText }}<span class="hero__cursor">|</span>
+          {{ t('hero.subtitle') }}<span class="hero__cursor" aria-hidden="true">|</span>
         </p>
+        <p class="hero__description animate-fadeInUp delay-300">
+          {{ t('hero.description') }}
+        </p>
+
+        <div class="hero__actions animate-fadeInUp delay-400">
+          <router-link to="/about" class="btn btn--primary">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+            {{ t('hero.aboutMe') }}
+          </router-link>
+          <router-link to="/blog" class="btn btn--outline">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+            {{ t('hero.readBlog') }}
+          </router-link>
+          <router-link to="/services" class="btn btn--ghost">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+            {{ t('hero.services') }}
+          </router-link>
+        </div>
       </div>
 
-      <!-- 分隔线 -->
-      <div class="hero__divider animate-fadeInUp delay-300">
-        <span class="hero__divider-line"></span>
-        <span class="hero__divider-dot"></span>
-        <span class="hero__divider-line"></span>
-      </div>
-
-      <!-- 简介 -->
-      <p class="hero__description animate-fadeInUp delay-400">
-        {{ t('hero.description') }}
-      </p>
-
-      <!-- 关键词标签 -->
-      <div class="hero__tags animate-fadeInUp delay-500">
-        <span class="hero__tag">Vue / React</span>
-        <span class="hero__tag">TypeScript</span>
-        <span class="hero__tag">Node.js</span>
-        <span class="hero__tag">AI Apps</span>
-        <span class="hero__tag">Product Thinking</span>
-      </div>
-
-      <!-- CTA 按钮 -->
-      <div class="hero__actions animate-fadeInUp delay-600">
-        <router-link to="/about" class="btn btn--primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          {{ t('hero.aboutMe') }}
-        </router-link>
-        <router-link to="/blog" class="btn btn--outline">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-          </svg>
-          {{ t('hero.readBlog') }}
-        </router-link>
-        <router-link to="/services" class="btn btn--ghost">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-          </svg>
-          {{ t('hero.services') }}
-        </router-link>
-      </div>
+      <!-- 右栏：技术标签墙 -->
+      <aside class="hero__side animate-fadeInUp delay-300" aria-label="stack">
+        <div class="hero__panel card card--inset">
+          <p class="hero__panel-label mono">{{ t('hero.stackLabel') || 'Stack' }}</p>
+          <div class="hero__tag-cloud">
+            <span v-for="tag in tags" :key="tag" class="hero__tag">{{ tag }}</span>
+          </div>
+          <div class="hero__panel-footer">
+            <span class="hero__line" aria-hidden="true"></span>
+            <span class="hero__panel-note mono">hao430.cn</span>
+          </div>
+        </div>
+      </aside>
     </div>
 
     <!-- 滚动提示 -->
-    <div class="hero__scroll-hint animate-fadeIn delay-800">
+    <a href="#content" class="hero__scroll-hint" :aria-label="t('hero.scrollDown')">
       <span class="hero__scroll-text">{{ t('hero.scrollDown') }}</span>
-      <div class="hero__scroll-arrow">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <span class="hero__scroll-arrow" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M12 5v14M5 12l7 7 7-7"/>
         </svg>
-      </div>
-    </div>
+      </span>
+    </a>
   </section>
 </template>
 
 <style scoped>
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: var(--space-24) var(--space-6);
+  padding: var(--header-height) var(--gutter) 4rem;
   overflow: hidden;
 }
 
-/* 背景装饰 */
+/* 背景 */
 .hero__bg {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  overflow: hidden;
 }
 
-.hero__ink-stain {
+.hero__glow {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--color-vermilion-muted) 0%, transparent 70%);
-  opacity: 0.15;
-  filter: blur(60px);
+  filter: blur(90px);
+}
+.hero__glow--1 { width: 520px; height: 520px; top: -16%; right: -8%; background: rgba(201, 79, 61, 0.14); }
+.hero__glow--2 { width: 460px; height: 460px; bottom: -18%; left: -10%; background: rgba(98, 130, 113, 0.1); }
+
+/* 极淡网格，编辑部刻度感 */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(720px 520px at 30% 40%, #000 0%, transparent 72%);
+  -webkit-mask-image: radial-gradient(720px 520px at 30% 40%, #000 0%, transparent 72%);
 }
 
-.hero__ink-stain--1 {
-  width: 500px;
-  height: 500px;
-  top: -10%;
-  right: -10%;
-  animation: float 20s ease-in-out infinite;
-}
-
-.hero__ink-stain--2 {
-  width: 400px;
-  height: 400px;
-  bottom: -5%;
-  left: -5%;
-  animation: float 25s ease-in-out infinite reverse;
-}
-
-.hero__ink-stain--3 {
-  width: 300px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulse 10s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(30px, -30px);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0.1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.2;
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-}
-
-/* 主内容 */
-.hero__content {
+.hero__inner {
   position: relative;
   z-index: 1;
-  text-align: center;
-  max-width: 800px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 400px);
+  gap: clamp(2rem, 6vw, 4.5rem);
+  align-items: center;
 }
 
 .hero__main {
-  margin-bottom: var(--space-6);
+  max-width: 640px;
+}
+
+.hero__eyebrow {
+  margin-bottom: var(--space-5);
 }
 
 .hero__title {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 10vw, 5rem);
+  font-size: clamp(2.6rem, 8vw, 4.6rem);
   font-weight: var(--font-bold);
   letter-spacing: var(--tracking-tight);
-  line-height: 1.1;
+  line-height: 1.02;
   margin-bottom: var(--space-4);
 }
 
-.hero__title-accent {
+.hero__title-mark {
   color: var(--color-vermilion);
   position: relative;
 }
 
-.hero__title-accent::after {
+.hero__title-mark::after {
   content: '';
   position: absolute;
-  bottom: 0.1em;
   left: 0;
+  bottom: 0.04em;
   width: 100%;
-  height: 3px;
+  height: 0.06em;
   background: linear-gradient(90deg, var(--color-vermilion), transparent);
+  opacity: 0.55;
 }
 
 .hero__subtitle {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
+  font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+  font-weight: var(--font-medium);
   color: var(--color-text-secondary);
-  letter-spacing: var(--tracking-wider);
-  margin-bottom: 0;
+  letter-spacing: 0.01em;
+  margin-bottom: var(--space-6);
 }
 
 .hero__cursor {
   display: inline-block;
   width: 2px;
-  height: 1.2em;
-  background-color: var(--color-vermilion);
-  margin-left: 2px;
-  animation: blink 1s step-end infinite;
-  vertical-align: text-bottom;
+  height: 1.1em;
+  background: var(--color-vermilion);
+  margin-left: 3px;
+  animation: blink 1.1s step-end infinite;
+  vertical-align: -0.12em;
 }
+@keyframes blink { 50% { opacity: 0; } }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-/* 分隔线 */
-.hero__divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-  margin: var(--space-8) 0;
-}
-
-.hero__divider-line {
-  width: 60px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-ink-border));
-}
-
-.hero__divider-line:last-child {
-  background: linear-gradient(90deg, var(--color-ink-border), transparent);
-}
-
-.hero__divider-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--color-vermilion);
-}
-
-/* 简介 */
 .hero__description {
-  font-family: var(--font-display);
   font-size: var(--text-lg);
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-6);
-  letter-spacing: var(--tracking-wide);
-}
-
-/* 标签 */
-.hero__tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-3);
+  max-width: 48ch;
   margin-bottom: var(--space-8);
 }
 
-.hero__tag {
-  padding: var(--space-2) var(--space-4);
-  font-size: var(--text-sm);
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* 右侧面板 */
+.hero__side { width: 100%; }
+
+.hero__panel {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.hero__panel-label {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
   color: var(--color-text-tertiary);
-  background-color: var(--color-ink-light);
+}
+
+.hero__tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero__tag {
+  padding: 0.44rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  background: var(--surface-1);
   border: 1px solid var(--color-ink-border);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
+  border-radius: var(--radius-full);
+  transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .hero__tag:hover {
   color: var(--color-vermilion);
-  border-color: var(--color-vermilion-muted);
+  border-color: rgba(201, 79, 61, 0.5);
+  transform: translateY(-2px);
 }
 
-/* CTA 按钮 */
-.hero__actions {
+.hero__panel-footer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-4);
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--hairline);
+}
+
+.hero__line { flex: 1; height: 1px; background: var(--hairline-strong); }
+
+.hero__panel-note {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
 }
 
 /* 滚动提示 */
@@ -309,52 +254,35 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   gap: var(--space-2);
+  color: var(--color-text-tertiary);
+  text-decoration: none;
 }
 
 .hero__scroll-text {
+  font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: var(--color-text-tertiary);
-  letter-spacing: var(--tracking-wider);
+  letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
 }
 
 .hero__scroll-arrow {
-  color: var(--color-text-tertiary);
-  animation: bounce 2s ease-in-out infinite;
+  animation: bounce 2.2s var(--ease-in-out) infinite;
 }
-
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
 }
 
 /* 响应式 */
-@media (max-width: 768px) {
-  .hero {
-    padding: var(--space-20) var(--space-4);
-  }
+@media (max-width: 900px) {
+  .hero { align-items: flex-start; padding-top: calc(var(--header-height) + 2.5rem); }
+  .hero__inner { grid-template-columns: 1fr; gap: var(--space-8); }
+  .hero__side { max-width: 460px; }
+  .hero__scroll-hint { display: none; }
+}
 
-  .hero__tags {
-    gap: var(--space-2);
-  }
-
-  .hero__tag {
-    padding: var(--space-1) var(--space-3);
-    font-size: var(--text-xs);
-  }
-
-  .hero__actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero__actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
+@media (max-width: 640px) {
+  .hero__actions { flex-direction: column; width: 100%; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
 }
 </style>

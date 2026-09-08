@@ -17,7 +17,9 @@
     "scrollDown": "向下滚动",
     "titleAccent": "墨",
     "titleRest": "砚斋",
-    "services": "服务"
+    "services": "服务",
+    "greeting": "技术 · 人文",
+    "stackLabel": "技术栈"
   },
   "personalInfo": {
     "sectionTitle": "个人信息",
@@ -157,7 +159,8 @@
     "tagline": "以墨载道，以技行事",
     "copyright": "用心沉淀，随缘分享",
     "rss": "RSS 订阅",
-    "privacy": "隐私政策"
+    "privacy": "隐私政策",
+    "seal": "砚刊"
   },
   "language": {
     "zh": "中文",

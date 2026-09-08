@@ -17,7 +17,9 @@
     "scrollDown": "Scroll Down",
     "titleAccent": "H",
     "titleRest": "ao430",
-    "services": "Services"
+    "services": "Services",
+    "greeting": "Tech · Humanities",
+    "stackLabel": "Stack"
   },
   "personalInfo": {
     "sectionTitle": "Personal Info",
@@ -157,7 +159,8 @@
     "tagline": "Ink carries the way, code puts it into practice",
     "copyright": "Crafted with care, shared with serendipity",
     "rss": "Subscribe via RSS",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "seal": "Inkstone"
   },
   "language": {
     "zh": "中文",
