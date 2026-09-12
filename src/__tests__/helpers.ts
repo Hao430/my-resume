@@ -1,7 +1,17 @@
 import { createI18n } from 'vue-i18n'
+import { createPinia, setActivePinia } from 'pinia'
 import type { Ref } from 'vue'
 import zh from '../i18n/locales/zh.json'
 import en from '../i18n/locales/en.json'
+
+/**
+ * 创建隔离的 Pinia 实例并设为当前激活实例
+ */
+export function makePinia() {
+  const pinia = createPinia()
+  setActivePinia(pinia)
+  return pinia
+}
 
 /**
  * 每次测试独立 i18n 实例，避免 locale 状态在用例间泄漏。
@@ -27,11 +37,13 @@ export function makeI18n(locale: 'zh' | 'en' = 'zh') {
 
 export function resetDom(): void {
   document.documentElement.lang = 'zh-CN'
+  document.documentElement.removeAttribute('data-theme')
+  document.documentElement.classList.remove('dark', 'light')
   localStorage.clear()
   document.title = ''
   document.head
     .querySelectorAll(
-      'meta[name="description"], meta[property="og:description"], meta[name="twitter:description"], meta[property="og:title"], meta[property="og:url"], link[rel="canonical"]',
+      'meta[name="description"], meta[property="og:description"], meta[name="twitter:description"], meta[property="og:title"], meta[property="og:url"], link[rel="canonical"], meta[name="theme-color"]',
     )
     .forEach((el) => el.remove())
 }

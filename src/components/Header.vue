@@ -2,6 +2,7 @@
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import LanguageSwitcher from './LanguageSwitcher.vue'
+import ThemeSwitcher from './ThemeSwitcher.vue'
 
 const { t } = useI18n()
 
@@ -12,10 +13,10 @@ const headerRef = ref<HTMLElement | null>(null)
 // 路由链接
 const navItems = computed(() => [
   { path: '/', label: t('nav.home') },
-  { path: '/about', label: t('nav.about') },
-  { path: '/blog', label: t('nav.blog') },
   { path: '/services', label: t('nav.services') },
-  { path: '/daily-brief', label: t('nav.dailyBrief') }
+  { path: '/tools', label: t('nav.tools') },
+  { path: '/blog', label: t('nav.blog') },
+  { path: '/about', label: t('nav.about') }
 ])
 
 const handleScroll = () => {
@@ -90,8 +91,9 @@ const closeMobileMenu = () => {
         </router-link>
       </nav>
 
-      <!-- Language Switcher & Contact -->
+      <!-- Language Switcher, Theme Switcher & Contact -->
       <div class="header__actions">
+        <ThemeSwitcher />
         <LanguageSwitcher />
         <a href="mailto:fervent430@163.com" class="btn btn--outline header__contact">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -125,7 +127,8 @@ const closeMobileMenu = () => {
         <a href="mailto:fervent430@163.com" class="header__mobile-nav-item" @click="closeMobileMenu">
           {{ t('nav.contact') }}
         </a>
-        <div class="header__mobile-lang">
+        <div class="header__mobile-actions header__mobile-lang">
+          <ThemeSwitcher />
           <LanguageSwitcher />
         </div>
       </nav>
@@ -150,11 +153,11 @@ const closeMobileMenu = () => {
 }
 
 .header--scrolled {
-  background: rgba(11, 11, 13, 0.82);
+  background: var(--header-bg-scrolled);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
   border-bottom-color: var(--hairline);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 0 var(--hairline);
 }
 
 .header__container {
@@ -295,7 +298,7 @@ const closeMobileMenu = () => {
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(11, 11, 13, 0.97);
+  background: var(--header-mobile-bg);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--hairline);
   padding: var(--space-4) 0 var(--space-6);
@@ -330,14 +333,15 @@ const closeMobileMenu = () => {
 
 .header__mobile-nav-item:hover {
   color: var(--color-text);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface-1);
   padding-left: var(--space-4);
 }
 
-.header__mobile-lang {
+.header__mobile-actions {
   padding: var(--space-4) var(--space-2) 0;
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 /* Responsive */

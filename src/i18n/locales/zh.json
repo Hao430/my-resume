@@ -3,7 +3,7 @@
     "home": "首页",
     "about": "关于",
     "blog": "博客",
-    "dailyBrief": "早参",
+    "tools": "工具",
     "contact": "联系我",
     "rss": "订阅",
     "menu": "菜单",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "subtitle": "以墨载道，以技行事",
-    "description": "计算机科学 · 全栈开发 · 持续学习者",
-    "aboutMe": "关于我",
-    "readBlog": "阅读博客",
+    "description": "技术顾问 · 独立研究者 · 全栈造物者",
+    "aboutMe": "关于与叙事",
+    "readBlog": "研究与文章",
     "scrollDown": "向下滚动",
     "titleAccent": "墨",
     "titleRest": "砚斋",
-    "services": "服务",
-    "greeting": "技术 · 人文",
-    "stackLabel": "技术栈"
+    "services": "顾问与服务",
+    "greeting": "顾问 · 研究 · 造物",
+    "stackLabel": "能力谱系"
   },
   "personalInfo": {
     "sectionTitle": "个人信息",
@@ -27,86 +27,104 @@
     "nativePlace": "湖南湘潭"
   },
   "professionalSummary": {
-    "sectionTitle": "个人简介"
+    "sectionTitle": "核心品牌定位"
   },
   "skills": {
-    "sectionTitle": "专业技能",
+    "sectionTitle": "技术与能力谱系",
     "categories": {
-      "technical": "技术技能",
-      "professional": "专业能力",
-      "tools": "工具"
+      "technical": "核心技术栈",
+      "professional": "架构与咨询能力",
+      "tools": "工程工具与环境"
     }
   },
   "projectExperience": {
-    "sectionTitle": "项目经历",
+    "sectionTitle": "工程造物与系统架构",
     "roles": {
-      "backendCore": "后端核心开发",
-      "independentDev": "独立开发",
-      "fullstackDev": "全栈开发",
-      "projectLead": "项目负责人",
-      "productLead": "产品负责人",
-      "algorithmDev": "算法开发"
+      "backendCore": "后端核心架构",
+      "independentDev": "独立造物 / 全栈开发",
+      "fullstackDev": "全栈系统开发",
+      "projectLead": "项目负责人 / 架构设计",
+      "productLead": "产品负责人 / 需求工程",
+      "algorithmDev": "算法研发与建模"
     }
   },
   "workExperience": {
-    "sectionTitle": "工作经历",
+    "sectionTitle": "实战历练与履历",
     "positions": {
-      "appDevIntern": "应用开发实习生",
+      "appDevIntern": "应用开发工程师",
       "deputySecretary": "副书记",
       "president": "会长"
     }
   },
   "honors": {
-    "sectionTitle": "荣誉奖项",
+    "sectionTitle": "荣誉奖项与学术成果",
     "levels": {
-      "provincial": "省级",
-      "school": "校级"
+      "provincial": "省级荣誉",
+      "school": "校级荣誉"
     }
   },
   "home": {
-    "projects": "项目作品",
+    "pillarsEyebrow": "核心支柱",
+    "pillarsTitle": "顾问 · 研究 · 造物",
+    "pillar1Title": "技术顾问",
+    "pillar1Desc": "AI 编码工作流诊断、Agent 边界治理与代码安全审计，把 AI 编码沉淀为可信生产力资产。",
+    "pillar1Action": "了解顾问服务",
+    "pillar2Title": "独立研究者",
+    "pillar2Desc": "实证探索 Agent 权限安全、CRA 漏洞合规落地与大模型工程范式，坚持中英双语深度研究输出。",
+    "pillar2Action": "阅读研究专栏",
+    "pillar3Title": "全栈造物者",
+    "pillar3Desc": "端到端架构生产级文档数据湖、多智能体协同自审系统与独立产品，闭环交付高质量工程资产。",
+    "pillar3Action": "查看工程造物",
+    "projectsEyebrow": "精选工程与造物",
+    "projects": "精选系统与造物",
     "viewAll": "查看全部",
-    "aboutTitle": "关于我",
-    "readFullResume": "阅读完整简历",
+    "aboutEyebrow": "技术叙事与理念",
+    "aboutTitle": "技术履历与理念",
+    "readFullResume": "探索完整履历与背景",
     "stats": {
-      "projects": "项目经验",
-      "experience": "工作经历",
-      "honors": "荣誉奖项",
-      "skills": "技能标签"
+      "projects": "系统与造物",
+      "experience": "实战与历练",
+      "honors": "荣誉与认证",
+      "skills": "核心技能栈"
     },
-    "writing": "最新文章"
+    "writingEyebrow": "研究与思考沉淀",
+    "writing": "最新研究与文章"
   },
   "about": {
-    "pageTitle": "关于我",
+    "pageTitle": "关于与品牌叙事",
+    "pageSubtitle": "技术顾问 · 独立研究者 · 全栈造物者",
     "tabs": {
-      "summary": "简介",
-      "skills": "技能",
-      "projects": "项目",
-      "experience": "经历",
-      "honors": "荣誉"
+      "summary": "核心定位",
+      "skills": "能力谱系",
+      "projects": "工程造物",
+      "experience": "实战历练",
+      "honors": "荣誉资质"
     },
     "summary": {
-      "title": "专业简介",
-      "strong": "专业扎实",
-      "comprehensive": "能力全面",
-      "outstanding": "素养突出"
+      "title": "三大核心品牌支柱",
+      "strong": "技术顾问",
+      "strongSub": "AI 编码落地 · 工作流诊断 · 代码安全审计",
+      "comprehensive": "全栈造物者",
+      "comprehensiveSub": "端到端系统架构 · 多智能体协同 · 数据湖工程",
+      "outstanding": "独立研究者",
+      "outstandingSub": "前沿范式实证 · 智能体安全治理 · 双语深度写作"
     },
     "skills": {
-      "title": "技能标签",
-      "technical": "技术能力",
-      "professional": "专业能力",
-      "tools": "工具软件"
+      "title": "技术与能力谱系",
+      "technical": "核心技术栈",
+      "professional": "架构与咨询能力",
+      "tools": "工程工具与环境"
     },
     "projects": {
-      "title": "项目经验",
-      "visit": "访问项目",
+      "title": "工程造物与系统架构",
+      "visit": "访问作品",
       "details": "查看详情"
     },
     "experience": {
-      "title": "工作经历"
+      "title": "实战历练与履历"
     },
     "honors": {
-      "title": "荣誉奖项"
+      "title": "荣誉奖项与学术成果"
     }
   },
   "blog": {
@@ -142,18 +160,17 @@
     "originalZh": "原文为中文",
     "originalEn": "原文为英文"
   },
-  "dailyBrief": {
-    "pageTitle": "每日早参",
-    "pageSubtitle": "每交易日早晨 8:30 推送 · 信息差 · 政策 × 产业 × 科技 × 市场",
-    "today": "今日",
-    "readAll": "阅读全文",
-    "history": "历史早参",
-    "read": "阅读",
-    "empty": "暂无早参内容",
-    "emptyHint": "每天早上 8:30 更新",
-    "openNew": "在新窗口打开",
-    "latest": "最新一期",
-    "subscribe": "订阅早参 RSS"
+  "tools": {
+    "pageTitle": "工坊与小工具",
+    "pageSubtitle": "轻量造物 · 实用工具 · 外部雷达与精选链接",
+    "craftsTitle": "独立造物与小工具",
+    "craftsDesc": "正在迭代与上线一系列开箱即用的技术辅助工具，敬请期待。",
+    "linksTitle": "造物雷达与精选外链",
+    "linksDesc": "精选开源项目、数字资产与优质技术生态。",
+    "comingSoon": "即将上线",
+    "visit": "访问体验",
+    "statusActive": "已上线",
+    "statusWip": "实验构建中"
   },
   "footer": {
     "tagline": "以墨载道，以技行事",
@@ -182,7 +199,7 @@
     "post": "文章",
     "slides": "演示文稿",
     "reader": "阅读",
-    "dailyBrief": "每日早参",
+    "tools": "工具与工坊",
     "services": "AI 编码服务",
     "privacy": "隐私政策"
   },
@@ -199,40 +216,18 @@
     "backToBlog": "返回博客"
   },
   "services": {
-    "badge": "服务验证 · 小规模接待",
-    "title": "让 AI 编码真正交付价值",
-    "subtitle": "面向团队的 AI 编码落地服务：先把 AI 编码变成生产力，再把 AI 生成的代码变成可信资产。以诊断报告为交付起点，先验证、后投入。",
-    "aTitle": "AI 编码工作流优化",
-    "aDesc": "评估团队 Cursor / Claude Code / Agent 工作流的使用现状，找出效率黑洞与风险点，输出可落地的优化方案。",
-    "aPrice": "诊断报告 $500–2,000，视团队规模",
-    "bTitle": "AI 生成代码安全审计与修复",
-    "bDesc": "对代码库中 AI / Agent 生成的代码段做安全审计，输出风险报告，并可按需执行修复。对需要对接监管披露义务（如 CRA 漏洞报告义务）的团队尤其实用。",
-    "bPrice": "审计报告 $3K 起，视代码库规模",
-    "whyTitle": "为什么找我",
-    "why1Title": "第一手实操，不是转述",
-    "why1Body": "关于 AI 编码与 Agent 安全的全部观点均来自亲手实践，并以中英双语文章沉淀在 hao430.cn（含 《Your AI Agent Is Running as Root》）。",
-    "why2Title": "以证据说话",
-    "why2Body": "引用独立来源核实（JetBrains、Stack Overflow、行业事件），不给无法证实的数字背书，不造概念。",
-    "why3Title": "先诊断，后报价",
-    "why3Body": "30 分钟免费诊断先行，书面方案与报价在诊断之后给出；没有隐含费用，没有长期绑定。",
-    "processTitle": "合作流程",
-    "process1": "30 分钟免费诊断",
-    "process1Body": "线上会议，聊清现状、目标与痛点，你决定是否继续。",
-    "process2": "书面方案与报价",
-    "process2Body": "诊断后 48 小时内给出书面方案与固定报价，无后续加价。",
-    "process3": "交付与陪跑",
-    "process3Body": "按里程碑交付报告或落地改造，每一步都可验证。",
+    "badge": "顾问咨询 · 体系升级",
+    "title": "顾问与技术服务",
+    "subtitle": "正在对顾问咨询与技术服务体系进行重新规划与升级。",
+    "status": "服务内容重新梳理中",
+    "statusDesc": "我们正在结合最新的工程实践与业务场景，重新规划更贴合实际落地需求的咨询与技术服务方案。旧版服务模块已暂停接待。",
+    "inquiryTitle": "定制化探讨与直接沟通",
+    "inquiryDesc": "若你在 AI 编码实践、架构设计、技术选型或工程治理方面有具体的业务需求，依然欢迎直接通过邮件探讨，我们将提供定制化的交流支持。",
     "ctaTitle": "预约 30 分钟免费诊断",
     "ctaBody": "一次对话，找出你团队 AI 编码最大的浪费点与最紧迫的风险。回复通常在 24 小时内。",
     "ctaButton": "发邮件预约",
     "mailSubject": "AI 编码服务诊断预约",
-    "fineprint": "诊断免费、无推销、无长期绑定。价格透明：审计报告 $3K 起、工作流诊断 $500–2,000、修复工程 $20K 起。",
-    "aPoints1": "团队 AI 编码能力体检（现状 vs 最佳实践差距）",
-    "aPoints2": "工作流与工程规范设计（提示词资产、代码审查、Agent 边界）",
-    "aPoints3": "落地陪跑：从试点团队到全组推广的分步路线",
-    "bPoints1": "AI 生成代码指纹识别与风险面扫描（第三方依赖、权限、密钥泄露）",
-    "bPoints2": "书面风险报告：逐项定级 + 修复建议，可直接对接合规流程",
-    "bPoints3": "修复工程交付（可选）：$20K起，规模相关，先报价后开工"
+    "fineprint": "通常在 24 小时内回复 · 针对具体业务场景提供点对点反馈"
   },
   "privacy": {
     "pageTitle": "隐私政策",
@@ -241,7 +236,7 @@
     "sec1Title": "1. 我们收集的信息",
     "sec1Body": "本站是纯静态个人网站，不设用户账号，不要求注册。\n我们不会主动收集你的姓名、邮箱、电话等可识别身份的信息，除非你主动通过邮件联系我们。\n访问本站时，服务器与内容分发网络（CDN）可能会记录基本的访问日志（如 IP 地址、浏览器类型、访问时间），用于保障服务安全与统计流量。",
     "sec2Title": "2. Cookie 与本地存储",
-    "sec2Body": "本站使用 Cookie 与浏览器本地存储来提供核心功能：\n- 语言偏好：记录你选择的界面语言（localStorage）；\n- 第三方广告与统计服务（见第 3 节）可能设置自己的 Cookie。\n你可以在浏览器设置中禁用或清除 Cookie，但部分功能可能受影响。",
+    "sec2Body": "本站使用 Cookie 与浏览器本地存储来提供核心功能：\n- 语言偏好：记录你选择的界面语言（localStorage）；\n- 主题设置：记录你选择的主题偏好（localStorage）；\n- 第三方广告与统计服务（见第 3 节）可能设置自己的 Cookie。\n你可以在浏览器设置中禁用或清除 Cookie，但部分功能可能受影响。",
     "sec3Title": "3. 第三方广告（Google AdSense）",
     "sec3Body": "本站接入 Google AdSense 展示广告。Google（含其关联公司）作为第三方广告服务商，可能会使用 Cookie（如 DoubleClick Cookie）在本站及互联网其他网站上投放广告。\nGoogle 会根据你访问本站及其他网站的信息，投放个性化广告。你可以通过 Google 广告设置（adssettings.google.com）选择退出个性化广告，也可以访问 www.aboutads.info 了解更多。",
     "sec4Title": "4. 信息的使用",
@@ -256,5 +251,13 @@
     "sec8Body": "我们可能不时更新本政策。政策变更后，我们会更新本页的“更新日期”。重大变更将在本站显著位置提示。",
     "sec9Title": "9. 联系我们",
     "sec9Body": "如对本隐私政策有任何疑问，请通过下方邮箱联系我们："
+  },
+  "theme": {
+    "system": "系统",
+    "dark": "深色",
+    "light": "浅色",
+    "current": "当前主题",
+    "active": "实际生效",
+    "clickToCycle": "点击切换主题"
   }
 }

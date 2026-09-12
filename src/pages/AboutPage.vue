@@ -25,7 +25,7 @@ const scrollToSection = (id: string) => {
           {{ t('about.pageTitle') }}
         </h1>
         <p class="page-header__subtitle animate-fadeInUp delay-200">
-          {{ rd?.personalInfo.university }} · {{ rd?.personalInfo.major }}
+          {{ t('about.pageSubtitle') }}
         </p>
       </div>
     </section>
@@ -52,7 +52,7 @@ const scrollToSection = (id: string) => {
       </div>
     </div>
 
-    <!-- Professional Summary -->
+    <!-- Core Pillars / Summary -->
     <section id="summary" class="section">
       <div class="container">
         <h2 class="section-title">
@@ -60,41 +60,60 @@ const scrollToSection = (id: string) => {
           {{ t('about.summary.title') }}
         </h2>
         <div class="summary-cards">
+          <!-- Pillar 1: Technical Consultant -->
           <div class="summary-card card animate-fadeInUp">
-            <div class="summary-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
+            <div class="summary-card__header">
+              <div class="summary-card__icon summary-card__icon--vermilion">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="summary-card__title">{{ t('about.summary.strong') }}</h3>
+                <span class="summary-card__subtitle">{{ t('about.summary.strongSub') }}</span>
+              </div>
             </div>
-            <h3 class="summary-card__title">{{ t('about.summary.strong') }}</h3>
             <p class="summary-card__text">{{ rd?.professionalSummary.strong }}</p>
           </div>
+
+          <!-- Pillar 2: Full-Stack Maker -->
           <div class="summary-card card animate-fadeInUp delay-100">
-            <div class="summary-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
+            <div class="summary-card__header">
+              <div class="summary-card__icon summary-card__icon--jade">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="summary-card__title">{{ t('about.summary.comprehensive') }}</h3>
+                <span class="summary-card__subtitle">{{ t('about.summary.comprehensiveSub') }}</span>
+              </div>
             </div>
-            <h3 class="summary-card__title">{{ t('about.summary.comprehensive') }}</h3>
             <p class="summary-card__text">{{ rd?.professionalSummary.comprehensive }}</p>
           </div>
+
+          <!-- Pillar 3: Independent Researcher -->
           <div class="summary-card card animate-fadeInUp delay-200">
-            <div class="summary-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
+            <div class="summary-card__header">
+              <div class="summary-card__icon summary-card__icon--gold">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="summary-card__title">{{ t('about.summary.outstanding') }}</h3>
+                <span class="summary-card__subtitle">{{ t('about.summary.outstandingSub') }}</span>
+              </div>
             </div>
-            <h3 class="summary-card__title">{{ t('about.summary.outstanding') }}</h3>
             <p class="summary-card__text">{{ rd?.professionalSummary.outstanding }}</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills & Capabilities -->
     <section id="skills" class="section section--alt">
       <div class="container">
         <h2 class="section-title">
@@ -142,7 +161,7 @@ const scrollToSection = (id: string) => {
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects / Creations -->
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">
@@ -162,7 +181,7 @@ const scrollToSection = (id: string) => {
                 <h3 class="timeline-item__title">{{ project.projectName }}</h3>
                 <span class="badge badge--vermilion">{{ project.role }}</span>
               </div>
-              <p class="timeline-item__period">{{ project.period }}</p>
+              <p class="timeline-item__period mono">{{ project.period }}</p>
               <ul class="timeline-item__list">
                 <li v-for="(desc, i) in project.descriptions" :key="i">
                   {{ desc }}
@@ -188,7 +207,7 @@ const scrollToSection = (id: string) => {
       </div>
     </section>
 
-    <!-- Work Experience -->
+    <!-- Work Experience / Track Record -->
     <section id="experience" class="section section--alt">
       <div class="container">
         <h2 class="section-title">
@@ -208,7 +227,7 @@ const scrollToSection = (id: string) => {
                 <h3 class="timeline-item__title">{{ exp.position }}</h3>
                 <span class="badge badge--jade">{{ exp.company }}</span>
               </div>
-              <p class="timeline-item__period">{{ exp.period }}</p>
+              <p class="timeline-item__period mono">{{ exp.period }}</p>
               <ul class="timeline-item__list">
                 <li v-for="(achievement, i) in exp.achievements" :key="i">
                   {{ achievement }}
@@ -220,13 +239,29 @@ const scrollToSection = (id: string) => {
       </div>
     </section>
 
-    <!-- Honors -->
+    <!-- Academic Background & Honors -->
     <section id="honors" class="section">
       <div class="container">
         <h2 class="section-title">
           <span class="section-title__accent">·</span>
           {{ t('about.honors.title') }}
         </h2>
+
+        <!-- Academic Grounding Card -->
+        <div v-if="rd?.personalInfo" class="academic-card card mb-8 animate-fadeInUp">
+          <div class="academic-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="academic-card__body">
+            <h3 class="academic-card__title">{{ rd.personalInfo.university }}</h3>
+            <p class="academic-card__desc">{{ rd.personalInfo.college }} · {{ rd.personalInfo.major }}</p>
+          </div>
+          <span class="badge badge--neutral mono">Computer Science</span>
+        </div>
+
         <div class="honors-list">
           <div
             v-for="(honor, index) in rd?.honors"
@@ -250,6 +285,12 @@ const scrollToSection = (id: string) => {
 <style scoped>
 .page-header {
   padding-bottom: var(--space-12);
+}
+
+.page-header__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-vermilion);
+  letter-spacing: var(--tracking-wide);
 }
 
 @media (max-width: 768px) {
@@ -315,6 +356,13 @@ const scrollToSection = (id: string) => {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+.summary-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
 }
 
 .summary-card__icon {
@@ -323,11 +371,26 @@ const scrollToSection = (id: string) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(201, 79, 61, 0.18), rgba(201, 79, 61, 0.08));
-  border: 1px solid rgba(201, 79, 61, 0.3);
   border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.summary-card__icon--vermilion {
+  background: rgba(201, 79, 61, 0.14);
+  border: 1px solid rgba(201, 79, 61, 0.3);
   color: var(--color-vermilion-bright);
-  box-shadow: 0 4px 14px rgba(201, 79, 61, 0.12);
+}
+
+.summary-card__icon--jade {
+  background: rgba(98, 130, 113, 0.14);
+  border: 1px solid rgba(98, 130, 113, 0.3);
+  color: var(--color-jade-light);
+}
+
+.summary-card__icon--gold {
+  background: rgba(212, 163, 89, 0.14);
+  border: 1px solid rgba(212, 163, 89, 0.3);
+  color: var(--color-gold-light);
 }
 
 .summary-card__title {
@@ -335,6 +398,14 @@ const scrollToSection = (id: string) => {
   font-size: var(--text-xl);
   font-weight: var(--font-semibold);
   margin: 0;
+  color: var(--color-text);
+}
+
+.summary-card__subtitle {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  margin-top: 2px;
 }
 
 .summary-card__text {
@@ -448,7 +519,7 @@ const scrollToSection = (id: string) => {
 }
 
 .timeline-item__period {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   color: var(--color-text-tertiary);
   margin: 0 0 var(--space-4);
 }
@@ -487,6 +558,46 @@ const scrollToSection = (id: string) => {
 
 .timeline-item__link:hover {
   gap: var(--space-3);
+}
+
+.academic-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+}
+
+.academic-card__icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: rgba(212, 163, 89, 0.12);
+  color: var(--color-gold-light);
+  border: 1px solid rgba(212, 163, 89, 0.25);
+  flex-shrink: 0;
+}
+
+.academic-card__body {
+  flex: 1;
+}
+
+.academic-card__title {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  margin: 0 0 2px;
+}
+
+.academic-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.mb-8 {
+  margin-bottom: var(--space-8);
 }
 
 .honors-list {

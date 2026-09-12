@@ -1,6 +1,14 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import { useThemeStore } from './stores/theme'
+
+const themeStore = useThemeStore()
+
+onMounted(() => {
+  themeStore.applyThemeToDom(themeStore.activeTheme)
+})
 </script>
 
 <template>

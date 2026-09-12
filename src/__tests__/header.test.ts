@@ -1,13 +1,14 @@
 import { describe, expect, it } from 'vitest'
 import { mount, RouterLinkStub } from '@vue/test-utils'
 import Header from '../components/Header.vue'
-import { makeI18n, resetDom } from './helpers'
+import { makeI18n, makePinia, resetDom } from './helpers'
 
 function mountHeader(locale: 'zh' | 'en' = 'zh', currentPath = '/') {
+  const pinia = makePinia()
   const { i18n } = makeI18n(locale)
   const wrapper = mount(Header, {
     global: {
-      plugins: [i18n],
+      plugins: [pinia, i18n],
       stubs: {
         RouterLink: RouterLinkStub,
       },
@@ -16,7 +17,7 @@ function mountHeader(locale: 'zh' | 'en' = 'zh', currentPath = '/') {
       },
     },
   })
-  return { wrapper, i18n }
+  return { wrapper, i18n, pinia }
 }
 
 describe('Header 导航', () => {
@@ -24,7 +25,7 @@ describe('Header 导航', () => {
     resetDom()
     const { wrapper } = mountHeader('zh')
     const labels = wrapper.findAll('.header__nav-item').map((n) => n.text())
-    expect(labels).toEqual(['首页', '关于', '博客', '服务', '早参'])
+    expect(labels).toEqual(['首页', '服务', '工具', '博客', '关于'])
     wrapper.unmount()
   })
 
@@ -32,7 +33,7 @@ describe('Header 导航', () => {
     resetDom()
     const { wrapper } = mountHeader('en')
     const labels = wrapper.findAll('.header__nav-item').map((n) => n.text())
-    expect(labels).toEqual(['Home', 'About', 'Blog', 'Services', 'Daily Brief'])
+    expect(labels).toEqual(['Home', 'Services', 'Tools', 'Blog', 'About'])
     wrapper.unmount()
   })
 
@@ -87,6 +88,15 @@ describe('Header 移动端菜单', () => {
     const { wrapper } = mountHeader()
     await wrapper.find('button.header__mobile-toggle').trigger('click')
     expect(wrapper.find('.header__mobile-lang .lang-switcher').exists()).toBe(true)
+    wrapper.unmount()
+  })
+
+  it('桌面端与移动端均包含主题切换器', async () => {
+    resetDom()
+    const { wrapper } = mountHeader()
+    expect(wrapper.find('.header__actions .theme-switcher').exists()).toBe(true)
+    await wrapper.find('button.header__mobile-toggle').trigger('click')
+    expect(wrapper.find('.header__mobile-actions .theme-switcher').exists()).toBe(true)
     wrapper.unmount()
   })
 })

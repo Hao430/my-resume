@@ -34,8 +34,64 @@ const latestPosts = computed(() =>
     <Hero />
 
     <main id="content">
-      <!-- Recent Projects -->
-      <section v-if="recentProjects.length" class="section section--alt">
+      <!-- Three Core Pillars Section -->
+      <section class="section section--alt">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow section-head__eyebrow">{{ t('home.pillarsEyebrow') }}</p>
+            <h2 class="section-head__title">{{ t('home.pillarsTitle') }}</h2>
+          </div>
+
+          <div class="pillars-grid">
+            <!-- Pillar 1: Technical Consultant -->
+            <article class="card pillar-card animate-fadeInUp delay-100">
+              <div class="pillar-card__icon pillar-card__icon--vermilion">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <h3 class="pillar-card__title">{{ t('home.pillar1Title') }}</h3>
+              <p class="pillar-card__desc">{{ t('home.pillar1Desc') }}</p>
+              <router-link to="/services" class="pillar-card__action">
+                {{ t('home.pillar1Action') }} →
+              </router-link>
+            </article>
+
+            <!-- Pillar 2: Independent Researcher -->
+            <article class="card pillar-card animate-fadeInUp delay-200">
+              <div class="pillar-card__icon pillar-card__icon--gold">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                </svg>
+              </div>
+              <h3 class="pillar-card__title">{{ t('home.pillar2Title') }}</h3>
+              <p class="pillar-card__desc">{{ t('home.pillar2Desc') }}</p>
+              <router-link to="/blog" class="pillar-card__action">
+                {{ t('home.pillar2Action') }} →
+              </router-link>
+            </article>
+
+            <!-- Pillar 3: Full-Stack Maker -->
+            <article class="card pillar-card animate-fadeInUp delay-300">
+              <div class="pillar-card__icon pillar-card__icon--jade">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h3 class="pillar-card__title">{{ t('home.pillar3Title') }}</h3>
+              <p class="pillar-card__desc">{{ t('home.pillar3Desc') }}</p>
+              <router-link to="/about" class="pillar-card__action">
+                {{ t('home.pillar3Action') }} →
+              </router-link>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Projects / Creations -->
+      <section v-if="recentProjects.length" class="section">
         <div class="container">
           <div class="section-head section-head--split section-head--mobile-stack">
             <div>
@@ -195,6 +251,86 @@ const latestPosts = computed(() =>
 <style scoped>
 .card-grid {
   --card-min: 300px;
+}
+
+/* Three Core Pillars */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 79, 61, 0.4);
+  box-shadow: var(--shadow-hover);
+}
+
+.pillar-card__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.pillar-card__icon--vermilion {
+  background: rgba(201, 79, 61, 0.12);
+  border: 1px solid rgba(201, 79, 61, 0.3);
+  color: var(--color-vermilion-bright);
+}
+
+.pillar-card__icon--gold {
+  background: rgba(212, 163, 89, 0.12);
+  border: 1px solid rgba(212, 163, 89, 0.3);
+  color: var(--color-gold-light);
+}
+
+.pillar-card__icon--jade {
+  background: rgba(98, 130, 113, 0.12);
+  border: 1px solid rgba(98, 130, 113, 0.3);
+  color: var(--color-jade-light);
+}
+
+.pillar-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+}
+
+.pillar-card__desc {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+  flex: 1;
+}
+
+.pillar-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-vermilion);
+  text-decoration: none;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.pillar-card__action:hover {
+  gap: var(--space-3);
+  color: var(--color-vermilion-bright);
 }
 
 /* Writing card */

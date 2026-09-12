@@ -33,10 +33,14 @@ const routes = [
     meta: { titleKey: 'seo.services' },
   },
   {
+    path: '/tools',
+    name: 'tools',
+    component: () => import('../pages/ToolsPage.vue'),
+    meta: { titleKey: 'seo.tools' },
+  },
+  {
     path: '/daily-brief',
-    name: 'daily-brief',
-    component: () => import('../pages/DailyBriefPage.vue'),
-    meta: { titleKey: 'seo.dailyBrief' },
+    redirect: '/tools',
   },
   {
     path: '/privacy',

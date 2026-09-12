@@ -3,7 +3,14 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const tags = ['Vue / React', 'TypeScript', 'Node.js', 'AI Apps', 'Product Thinking']
+const tags = [
+  'AI Workflow Advisory',
+  'Code Security Audit',
+  'Agent & Multi-Agent',
+  'DocLake / RAG',
+  'Full-Stack Architecture',
+  'TypeScript · Python'
+]
 </script>
 
 <template>
@@ -18,7 +25,7 @@ const tags = ['Vue / React', 'TypeScript', 'Node.js', 'AI Apps', 'Product Thinki
     <div class="container hero__inner">
       <!-- 左栏：主文案 -->
       <div class="hero__main">
-        <p class="eyebrow hero__eyebrow animate-fadeInUp">{{ t('hero.greeting') || 'Tech · Humanities' }}</p>
+        <p class="eyebrow hero__eyebrow animate-fadeInUp">{{ t('hero.greeting') || 'Consultant · Researcher · Maker' }}</p>
         <h1 class="hero__title animate-fadeInUp delay-100">
           <span class="hero__title-mark">{{ t('hero.titleAccent') }}</span>{{ t('hero.titleRest') }}
         </h1>
@@ -30,37 +37,37 @@ const tags = ['Vue / React', 'TypeScript', 'Node.js', 'AI Apps', 'Product Thinki
         </p>
 
         <div class="hero__actions animate-fadeInUp delay-400">
-          <router-link to="/about" class="btn btn--primary">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-            </svg>
-            {{ t('hero.aboutMe') }}
-          </router-link>
-          <router-link to="/blog" class="btn btn--outline">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-            </svg>
-            {{ t('hero.readBlog') }}
-          </router-link>
-          <router-link to="/services" class="btn btn--ghost">
+          <router-link to="/services" class="btn btn--primary">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
             </svg>
             {{ t('hero.services') }}
           </router-link>
+          <router-link to="/about" class="btn btn--outline">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+            {{ t('hero.aboutMe') }}
+          </router-link>
+          <router-link to="/blog" class="btn btn--ghost">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+            {{ t('hero.readBlog') }}
+          </router-link>
         </div>
       </div>
 
-      <!-- 右栏：技术标签墙 -->
+      <!-- 右栏：技术与能力标签墙 -->
       <aside class="hero__side animate-fadeInUp delay-300" aria-label="stack">
         <div class="hero__panel card card--inset">
-          <p class="hero__panel-label mono">{{ t('hero.stackLabel') || 'Stack' }}</p>
+          <p class="hero__panel-label mono">{{ t('hero.stackLabel') || 'Capabilities' }}</p>
           <div class="hero__tag-cloud">
             <span v-for="tag in tags" :key="tag" class="hero__tag">{{ tag }}</span>
           </div>
           <div class="hero__panel-footer">
             <span class="hero__line" aria-hidden="true"></span>
-            <span class="hero__panel-note mono">hao430.cn</span>
+            <span class="hero__panel-note mono">hao430.cn · Advisory & Systems</span>
           </div>
         </div>
       </aside>
@@ -100,16 +107,16 @@ const tags = ['Vue / React', 'TypeScript', 'Node.js', 'AI Apps', 'Product Thinki
   border-radius: 50%;
   filter: blur(90px);
 }
-.hero__glow--1 { width: 520px; height: 520px; top: -16%; right: -8%; background: rgba(201, 79, 61, 0.14); }
-.hero__glow--2 { width: 460px; height: 460px; bottom: -18%; left: -10%; background: rgba(98, 130, 113, 0.1); }
+.hero__glow--1 { width: 520px; height: 520px; top: -16%; right: -8%; background: var(--ambient-glow-1); }
+.hero__glow--2 { width: 460px; height: 460px; bottom: -18%; left: -10%; background: var(--ambient-glow-2); }
 
 /* 极淡网格，编辑部刻度感 */
 .hero__grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(720px 520px at 30% 40%, #000 0%, transparent 72%);
   -webkit-mask-image: radial-gradient(720px 520px at 30% 40%, #000 0%, transparent 72%);

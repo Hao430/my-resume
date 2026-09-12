@@ -6,9 +6,15 @@ import { makeI18n, resetDom } from './helpers'
 
 async function mountServices(locale: 'zh' | 'en' = 'zh') {
   const { i18n, composer } = makeI18n(locale)
+  const stub = { template: '<div />' }
   const router = createRouter({
     history: createMemoryHistory(),
-    routes: [{ path: '/services', name: 'services', component: ServicesPage }],
+    routes: [
+      { path: '/services', name: 'services', component: ServicesPage },
+      { path: '/tools', name: 'tools', component: stub },
+      { path: '/blog', name: 'blog', component: stub },
+      { path: '/about', name: 'about', component: stub },
+    ],
   })
   router.push('/services')
   await router.isReady()
@@ -19,13 +25,13 @@ async function mountServices(locale: 'zh' | 'en' = 'zh') {
 }
 
 describe('ServicesPage（服务落地页）', () => {
-  it('渲染两项服务卡片（01 / 02）', async () => {
+  it('渲染服务重构提示与咨询卡片', async () => {
     resetDom()
-    const { wrapper } = await mountServices()
-    const cards = wrapper.findAll('.service-card')
-    expect(cards).toHaveLength(2)
-    expect(wrapper.find('.service-card__head .badge--vermilion').text()).toBe('01')
-    expect(wrapper.find('.service-card__head .badge--jade').text()).toBe('02')
+    const { wrapper, composer } = await mountServices()
+    expect(wrapper.find('.status-card').exists()).toBe(true)
+    expect(wrapper.find('.status-card .badge--vermilion').text()).toBe(composer.t('services.status'))
+    expect(wrapper.find('.inquiry-card').exists()).toBe(true)
+    expect(wrapper.find('.inquiry-card__title').text()).toBe(composer.t('services.inquiryTitle'))
     wrapper.unmount()
   })
 
@@ -38,18 +44,6 @@ describe('ServicesPage（服务落地页）', () => {
       `mailto:fervent430@163.com?subject=${encodeURIComponent(subject)}`,
     )
     expect(cta.text()).toBe('发邮件预约')
-    wrapper.unmount()
-  })
-
-  it('服务卖点不泄漏裸 i18n key（2026-09-05 修复：aPoints/bPoints 拆键）', async () => {
-    resetDom()
-    const { wrapper, composer } = await mountServices('zh')
-    const lis = wrapper.findAll('.service-card__points li')
-    expect(lis).toHaveLength(6)
-    const texts = lis.map((li) => li.text())
-    expect(texts.some((t) => t.startsWith('services.') || t.includes(' aPoints'))).toBe(false)
-    expect(texts[0]).toBe(composer.t('services.aPoints1'))
-    expect(texts[3]).toBe(composer.t('services.bPoints1'))
     wrapper.unmount()
   })
 

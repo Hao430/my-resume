@@ -10,9 +10,8 @@ const { t, locale } = useI18n()
 const loc = computed(() => (locale.value.startsWith('en') ? 'en' : 'zh'))
 const site = loc.value === 'en' ? SITE_NAME_EN : SITE_NAME_ZH
 const mailHref = `mailto:${SITE_EMAIL}?subject=${encodeURIComponent(t('services.mailSubject'))}`
-const pre = (i: number) => String(i)
 
-/* Services 页结构化数据：ProfessionalService + 服务目录（价格区间） */
+/* Services 页结构化数据：ProfessionalService */
 const serviceJsonLd = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -21,32 +20,11 @@ const serviceJsonLd = computed(() => ({
   url: 'https://hao430.cn/services/',
   email: SITE_EMAIL,
   areaServed: 'Worldwide',
-  serviceType: ['AI coding workflow optimization', 'AI-generated code security audit'],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: loc.value === 'en' ? 'AI coding services' : 'AI 编码服务',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: t('services.aTitle'), description: t('services.aDesc') },
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          minPrice: 500,
-          maxPrice: 2000,
-          priceCurrency: 'USD',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: t('services.bTitle'), description: t('services.bDesc') },
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          minPrice: 3000,
-          priceCurrency: 'USD',
-        },
-      },
-    ],
-  },
+  serviceType: [
+    'Technical Consulting',
+    'AI Coding Workflow Advisory',
+    'Full-Stack System Architecture',
+  ],
 }))
 
 watchEffect(() => {
@@ -70,79 +48,60 @@ watchEffect(() => {
       </div>
     </section>
 
-    <!-- 两项服务 -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="services-grid">
-          <article class="card service-card">
-            <div class="service-card__head">
-              <span class="badge badge--vermilion">01</span>
-              <h2 class="service-card__title">{{ t('services.aTitle') }}</h2>
-            </div>
-            <p class="service-card__desc">{{ t('services.aDesc') }}</p>
-            <ul class="service-card__points">
-              <li v-for="i in 3" :key="`a${i}`">{{ t(`services.aPoints${pre(i)}`) }}</li>
-            </ul>
-            <p class="service-card__price">{{ t('services.aPrice') }}</p>
-          </article>
-
-          <article class="card service-card">
-            <div class="service-card__head">
-              <span class="badge badge--jade">02</span>
-              <h2 class="service-card__title">{{ t('services.bTitle') }}</h2>
-            </div>
-            <p class="service-card__desc">{{ t('services.bDesc') }}</p>
-            <ul class="service-card__points">
-              <li v-for="i in 3" :key="`b${i}`">{{ t(`services.bPoints${pre(i)}`) }}</li>
-            </ul>
-            <p class="service-card__price">{{ t('services.bPrice') }}</p>
-          </article>
+    <!-- 服务重构与直接沟通主要区域 -->
+    <main class="container container--narrow services-main">
+      <!-- 状态与说明卡片 -->
+      <article class="card status-card animate-fadeInUp">
+        <div class="status-card__header">
+          <span class="badge badge--vermilion">{{ t('services.status') }}</span>
+          <span class="status-card__site mono">hao430.cn/services</span>
         </div>
-      </div>
-    </section>
+        <p class="status-card__desc">{{ t('services.statusDesc') }}</p>
+      </article>
 
-    <!-- 为什么找我 -->
-    <section class="section">
-      <div class="container container--narrow">
-        <h2 class="section-title"><span class="section-title__accent">·</span>{{ t('services.whyTitle') }}</h2>
-        <div class="why-grid">
-          <div v-for="i in 3" :key="`w${i}`" class="why-item">
-            <h3 class="why-item__title">{{ t(`services.why${i}Title`) }}</h3>
-            <p class="why-item__body">{{ t(`services.why${i}Body`) }}</p>
-          </div>
+      <!-- 定制化咨询与交流通道 -->
+      <section class="card inquiry-card animate-fadeInUp delay-100">
+        <div class="inquiry-card__head">
+          <span class="badge badge--jade">Inquiry & Contact</span>
+          <h2 class="inquiry-card__title">{{ t('services.inquiryTitle') }}</h2>
         </div>
-      </div>
-    </section>
+        <p class="inquiry-card__desc">{{ t('services.inquiryDesc') }}</p>
 
-    <!-- 合作流程 -->
-    <section class="section section--alt">
-      <div class="container container--narrow">
-        <h2 class="section-title"><span class="section-title__accent">·</span>{{ t('services.processTitle') }}</h2>
-        <ol class="process">
-          <li v-for="i in 3" :key="`p${i}`" class="process__step">
-            <span class="process__num">{{ i }}</span>
-            <h3 class="process__title">{{ t(`services.process${i}`) }}</h3>
-            <p class="process__body">{{ t(`services.process${i}Body`) }}</p>
-          </li>
-        </ol>
-      </div>
-    </section>
+        <div class="inquiry-card__actions">
+          <a :href="mailHref" class="btn btn--primary btn--lg">
+            {{ t('services.ctaButton') }}
+          </a>
+          <router-link to="/tools" class="btn btn--outline btn--lg">
+            {{ t('nav.tools') }} →
+          </router-link>
+        </div>
 
-    <!-- CTA -->
-    <section class="section services-cta">
-      <div class="container container--narrow text-center">
-        <h2 class="services-cta__title">{{ t('services.ctaTitle') }}</h2>
-        <p class="services-cta__body">{{ t('services.ctaBody') }}</p>
-        <a :href="mailHref" class="btn btn--primary btn--lg mt-8">{{ t('services.ctaButton') }}</a>
-        <p class="services-cta__fineprint">{{ t('services.fineprint') }}</p>
-      </div>
-    </section>
+        <p class="inquiry-card__fineprint mono">
+          {{ t('services.fineprint') }}
+        </p>
+      </section>
+
+      <!-- 站内关联 -->
+      <section class="related-nav animate-fadeInUp delay-200">
+        <router-link to="/blog" class="card related-card">
+          <span class="related-card__sub mono">Read & Research</span>
+          <h3 class="related-card__title">{{ t('nav.blog') }}</h3>
+          <p class="related-card__desc">深入探索关于 Agent 安全、系统架构与技术选型的长文论述。</p>
+        </router-link>
+        <router-link to="/about" class="card related-card">
+          <span class="related-card__sub mono">Profile & Bio</span>
+          <h3 class="related-card__title">{{ t('nav.about') }}</h3>
+          <p class="related-card__desc">了解过往全栈研发经历、核心工程沉淀与独立研究方向。</p>
+        </router-link>
+      </section>
+    </main>
   </div>
 </template>
 
 <style scoped>
 .services {
   padding-top: var(--header-height);
+  padding-bottom: var(--space-16);
 }
 
 .services__badge {
@@ -156,194 +115,133 @@ watchEffect(() => {
   padding: var(--space-1) var(--space-3);
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+.services-main {
+  display: flex;
+  flex-direction: column;
   gap: var(--space-8);
+  margin-top: var(--space-8);
 }
 
-@media (min-width: 768px) {
-  .services-grid {
+/* 状态说明卡片 */
+.status-card {
+  padding: var(--space-6) var(--space-8);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--color-vermilion);
+}
+
+.status-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.status-card__site {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}
+
+.status-card__desc {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* 咨询通道卡片 */
+.inquiry-card {
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background: var(--color-ink-light);
+  border: 1px solid var(--color-ink-border);
+}
+
+.inquiry-card__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.inquiry-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin: 0;
+  color: var(--color-text);
+}
+
+.inquiry-card__desc {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 65ch;
+}
+
+.inquiry-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.btn--lg {
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--text-base);
+}
+
+.inquiry-card__fineprint {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+
+/* 站内导流 */
+.related-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .related-nav {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.service-card {
-  display: flex;
-  flex-direction: column;
-  padding: var(--space-8);
-}
-
-.service-card__head {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-3);
-  margin-bottom: var(--space-4);
-}
-
-.service-card__title {
-  font-size: var(--text-xl);
-  font-weight: var(--font-semibold);
-  color: var(--color-text);
-}
-
-.service-card__desc {
-  color: var(--color-text-secondary);
-  flex: 0 0 auto;
-}
-
-.service-card__points {
-  list-style: none;
-  margin: var(--space-6) 0;
-  padding: 0;
-  border-top: 1px solid var(--color-ink-border);
-  padding-top: var(--space-5);
-}
-
-.service-card__points li {
-  position: relative;
-  padding-left: var(--space-6);
-  margin-bottom: var(--space-4);
-  font-size: var(--text-sm);
-  color: var(--color-text);
-}
-
-.service-card__points li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.45em;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--color-vermilion);
-  opacity: 0.8;
-}
-
-.service-card__price {
-  margin-top: auto;
-  padding-top: var(--space-4);
-  border-top: 1px dashed var(--color-ink-border);
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  color: var(--color-gold);
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-}
-
-@media (min-width: 768px) {
-  .why-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.why-item {
+.related-card {
   padding: var(--space-6);
-  background: var(--color-ink-light);
-  border: 1px solid var(--color-ink-border);
   border-radius: var(--radius-lg);
-  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
 }
-.why-item:hover {
-  border-color: rgba(201, 79, 61, 0.35);
-  transform: translateY(-2px);
+
+.related-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 79, 61, 0.4);
   box-shadow: var(--shadow-card);
 }
-.why-item__title {
-  font-size: var(--text-lg);
-  font-weight: var(--font-semibold);
-  margin-bottom: var(--space-3);
-  color: var(--color-text);
-}
 
-.why-item__body {
-  font-size: var(--text-sm);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-secondary);
-}
-
-.process {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-}
-
-@media (min-width: 768px) {
-  .process {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-8);
-  }
-}
-
-.process__step {
-  padding: var(--space-6);
-  background-color: var(--color-ink-light);
-  border: 1px solid var(--color-ink-border);
-  border-radius: var(--radius-lg);
-  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
-}
-.process__step:hover {
-  border-color: rgba(201, 79, 61, 0.3);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
-}
-
-.process__num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: var(--color-vermilion);
-  color: var(--color-text);
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  margin-bottom: var(--space-4);
-}
-
-.process__title {
-  font-size: var(--text-base);
-  font-weight: var(--font-semibold);
+.related-card__sub {
+  font-size: var(--text-xs);
+  color: var(--color-vermilion);
+  letter-spacing: 0.05em;
+  display: block;
   margin-bottom: var(--space-2);
 }
 
-.process__body {
+.related-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  margin: 0 0 var(--space-2);
+  color: var(--color-text);
+}
+
+.related-card__desc {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
-}
-
-.services-cta {
-  text-align: center;
-}
-
-.services-cta__title {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  margin-bottom: var(--space-4);
-}
-
-.services-cta__body {
-  color: var(--color-text-secondary);
-  max-width: 36em;
-  margin: 0 auto;
-}
-
-.btn--lg {
-  padding: var(--space-4) var(--space-10);
-  font-size: var(--text-base);
-}
-
-.services-cta__fineprint {
-  margin-top: var(--space-8);
-  font-size: var(--text-xs);
-  color: var(--color-text-tertiary);
+  line-height: var(--leading-relaxed);
+  margin: 0;
 }
 </style>

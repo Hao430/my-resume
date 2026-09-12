@@ -12,9 +12,9 @@
     "major": "Data Science and Big Data Technology"
   },
   "professionalSummary": {
-    "strong": "Strong Foundation: Currently pursuing a B.S. in Data Science and Big Data Technology at Guiyang University (Class of 2027). Solid computer science fundamentals with hands-on experience leading multiple product and technical projects from 0 to 1. Awarded Provincial Gold Medal in \"Internet+\" Innovation Competition and Provincial Second Prize in Mathematical Modeling.",
-    "comprehensive": "Comprehensive Skills: Proficient in user research, requirements analysis, product planning, prototyping, and cross-team collaboration. Full-stack development capabilities with experience in AI application development, data processing, and system architecture design. Led enterprise-grade projects (360° Panoramic Cloud Platform, DocLake Data Lake System) with complete lifecycle experience from requirements analysis to deployment.",
-    "outstanding": "Outstanding Qualities: Strong sense of responsibility, solid execution, team management and multi-task coordination experience. Proficient in AI development tools and workflows (agent, skills, rules). Advocate of docs-as-code philosophy with engineering mindset and commitment to code quality."
+    "strong": "Technical Advisory & Architecture: Specializing in team AI coding workflow optimization, code asset security audits, and enterprise-grade distributed system architectures. Led multiple 0-to-1 architectures including the 360° Panoramic Cloud Platform and DocLake Data Lake System, with complete capability across diagnosis, systems design, production delivery, and security compliance.",
+    "comprehensive": "Full-Stack Craft & Complex Systems: End-to-end full-stack engineering and complex pipeline construction across Vue/React, TypeScript, FastAPI, Node.js, and distributed storage. Built a 5-agent collaborative audit system (AgentScope), multi-source document ingestion pipelines (Docling/OCR/LLM), and vector search systems, fusing intuitive product UX with high-throughput backend performance.",
+    "outstanding": "Independent Research & Engineering Rigor: Committed to empirical AI research and bilingual publishing on AI agent governance, CRA vulnerability reporting, and emerging paradigms (author of \"Your AI Agent Is Running as Root\"). Strict adherence to docs-as-code and high observability, driving delivery with measurable metrics and stringent security standards."
   },
   "skills": [
     {"name": "Vue.js", "category": "technical"},

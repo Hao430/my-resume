@@ -26,7 +26,7 @@ describe('i18n 双语键一致性（规则 #6）', () => {
       'nav.about',
       'nav.blog',
       'nav.services',
-      'nav.dailyBrief',
+      'nav.tools',
       'nav.contact',
       'nav.menu',
       'services.mailSubject',

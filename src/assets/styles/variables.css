@@ -28,14 +28,16 @@
 }
 
 /* ==================== 色彩系统 ==================== */
-:root {
+/* 默认深色模式（砚·刊 Inkstone Editorial） */
+:root,
+[data-theme="dark"] {
   /* ---- 墨底（中性灰阶，暖调） ---- */
   --color-ink: #0b0b0d;            /* 极深墨黑 - 主背景 */
   --color-ink-light: #131316;      /* 近墨 - 卡片背景 */
   --color-ink-border: #222226;     /* 一级边框 */
   --color-ink-muted: #2c2c31;      /* 次级边框/悬浮面 */
 
-  /* 面层级（新） */
+  /* 面层级 */
   --surface-1: #101013;            /* 深于卡片的嵌层面 */
   --surface-2: #19191d;            /* 悬浮卡片/悬停面 */
   --surface-3: #232329;            /* 弹出/高亮面 */
@@ -77,6 +79,120 @@
   --shadow-glow-vermilion: 0 0 0 1px rgba(201, 79, 61, 0.25), 0 6px 28px rgba(201, 79, 61, 0.16);
   --shadow-focus: 0 0 0 3px rgba(201, 79, 61, 0.28);
 
+  /* 环境自适应特性 */
+  --header-bg-scrolled: rgba(11, 11, 13, 0.85);
+  --header-mobile-bg: rgba(11, 11, 13, 0.97);
+  --card-highlight: rgba(255, 255, 255, 0.022);
+  --grid-line: rgba(255, 255, 255, 0.022);
+  --ambient-glow-1: rgba(201, 79, 61, 0.05);
+  --ambient-glow-2: rgba(98, 130, 113, 0.04);
+}
+
+/* ==================== 浅色模式（宣纸·墨印 Rice Paper & Inkstone） ==================== */
+[data-theme="light"] {
+  /* ---- 宣纸底（雅致温润、极低饱和度暖灰，拒绝刺眼纯白） ---- */
+  --color-ink: #f7f6f2;            /* 宣纸暖白 - 主背景 */
+  --color-ink-light: #ffffff;      /* 纯净卡片面（明暗阶差 ≤ 5%） */
+  --color-ink-border: #e4e0d7;     /* 一级边框 */
+  --color-ink-muted: #d4cfc3;      /* 次级边框/分隔线 */
+
+  /* 面层级（浅色调下内嵌与悬浮） */
+  --surface-1: #eeebe3;            /* 内嵌底色（代码块/引用） */
+  --surface-2: #ffffff;            /* 悬浮卡片面 */
+  --surface-3: #e6e2d8;            /* 弹出高亮面 */
+  --hairline: rgba(0, 0, 0, 0.06);
+  --hairline-strong: rgba(0, 0, 0, 0.12);
+
+  /* ---- 文字（墨色梯度，符合 WCAG AA/AAA 高对比度） ---- */
+  --color-text: #1a1a1c;            /* 焦墨黑 - 主文字 (~14:1 对比度) */
+  --color-text-secondary: #53504a;  /* 浓墨灰 - 次要文字 (~6.5:1 对比度) */
+  --color-text-tertiary: #78746c;   /* 弱灰 - 辅助信息 (~4.8:1 对比度) */
+  --color-text-faint: #aba79d;      /* 极弱 - 水印/占位 */
+
+  /* ---- 主强调：印泥朱砂（浅底提炼深邃，确保清晰度） ---- */
+  --color-vermilion: #b93724;       /* 浅底朱砂印泥 */
+  --color-vermilion-light: #cb4632; /* hover */
+  --color-vermilion-bright: #982a1a;/* 点击/强调 */
+  --color-vermilion-muted: rgba(185, 55, 36, 0.08);  /* 朱砂底染 */
+
+  /* 点缀：雅金 */
+  --color-gold: #825b16;            /* 青铜雅金 (浅底高对比度) */
+  --color-gold-light: #9a6d1c;
+
+  /* 辅助：青瓷竹绿 */
+  --color-jade: #24523d;            /* 浅底深青瓷 */
+  --color-jade-light: #326b52;
+  --color-jade-muted: rgba(36, 82, 61, 0.08);
+
+  /* 功能色 */
+  --color-link: #b93724;
+  --color-link-hover: #8e2313;
+  --color-success: #236844;
+  --color-warning: #945d12;
+  --color-danger: #b32b1f;
+
+  /* ---- 阴影（轻盈纸质感，无厚重黑圈） ---- */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-glow-vermilion: 0 0 0 1px rgba(185, 55, 36, 0.22), 0 4px 18px rgba(185, 55, 36, 0.1);
+  --shadow-focus: 0 0 0 3px rgba(185, 55, 36, 0.22);
+
+  /* 环境自适应特性 */
+  --header-bg-scrolled: rgba(247, 246, 242, 0.88);
+  --header-mobile-bg: rgba(247, 246, 242, 0.98);
+  --card-highlight: rgba(0, 0, 0, 0.012);
+  --grid-line: rgba(0, 0, 0, 0.035);
+  --ambient-glow-1: rgba(185, 55, 36, 0.035);
+  --ambient-glow-2: rgba(36, 82, 61, 0.03);
+}
+
+/* 纯 CSS 媒体查询回退（当未显式设置 data-theme="dark" 且系统为浅色时） */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-ink: #f7f6f2;
+    --color-ink-light: #ffffff;
+    --color-ink-border: #e4e0d7;
+    --color-ink-muted: #d4cfc3;
+    --surface-1: #eeebe3;
+    --surface-2: #ffffff;
+    --surface-3: #e6e2d8;
+    --hairline: rgba(0, 0, 0, 0.06);
+    --hairline-strong: rgba(0, 0, 0, 0.12);
+    --color-text: #1a1a1c;
+    --color-text-secondary: #53504a;
+    --color-text-tertiary: #78746c;
+    --color-text-faint: #aba79d;
+    --color-vermilion: #b93724;
+    --color-vermilion-light: #cb4632;
+    --color-vermilion-bright: #982a1a;
+    --color-vermilion-muted: rgba(185, 55, 36, 0.08);
+    --color-gold: #825b16;
+    --color-gold-light: #9a6d1c;
+    --color-jade: #24523d;
+    --color-jade-light: #326b52;
+    --color-jade-muted: rgba(36, 82, 61, 0.08);
+    --color-link: #b93724;
+    --color-link-hover: #8e2313;
+    --color-success: #236844;
+    --color-warning: #945d12;
+    --color-danger: #b32b1f;
+    --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+    --shadow-glow-vermilion: 0 0 0 1px rgba(185, 55, 36, 0.22), 0 4px 18px rgba(185, 55, 36, 0.1);
+    --shadow-focus: 0 0 0 3px rgba(185, 55, 36, 0.22);
+    --header-bg-scrolled: rgba(247, 246, 242, 0.88);
+    --header-mobile-bg: rgba(247, 246, 242, 0.98);
+    --card-highlight: rgba(0, 0, 0, 0.012);
+    --grid-line: rgba(0, 0, 0, 0.035);
+    --ambient-glow-1: rgba(185, 55, 36, 0.035);
+    --ambient-glow-2: rgba(36, 82, 61, 0.03);
+  }
+}
+
+/* ==================== 全局通用设计系统 Token（间距/圆角/排版/布局） ==================== */
+:root {
   /* ---- 间距（8pt 体系微调） ---- */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
