@@ -2,8 +2,12 @@
 
 ## 项目定位
 
-个人网站 + 博客（https://hao430.cn），**纯静态**：无后端、无数据库、无运行时 API 请求。
+个人网站 + 博客 + 工具页（https://hao430.cn），**纯静态**：无自有后端、无数据库。
 构建产物 `dist/` 由阿里云 ESA Pages 自动构建部署（全球加速，海外走境外边缘节点）。
+
+工具页**允许浏览器直连第三方免认证 API**（CORS 放行、无需 key），选型与实测结果见
+`/root/.octop/agents/7J8E3S/projects/hao430cn-tools-api-radar.md`。边界：不得引入自有后端、
+不得使用需要密钥的接口（会暴露凭证）、不得走自建代理。**新增联网工具时必须同步更新隐私政策页**。
 
 ## 技术栈
 
@@ -51,8 +55,9 @@ scripts/        new-post.mjs、fonts-download.mjs、submit-indexnow.mjs
 
 ## 硬性规则
 
-1. **禁止任何运行时后端请求**（`fetch('/api/...')` 一律视为回归）。数据要么在 `content/`、
-   `public/`，要么由构建脚本生成到 `src/data/`。
+1. **禁止自有后端**：任何指向 `/api/...` 或自建服务的请求一律视为回归。数据要么在
+   `content/`、`public/`，要么由构建脚本生成到 `src/data/`。工具页可直连第三方
+   **免认证** API（见「项目定位」），但不得引入密钥或自建代理。
 2. **不要在组件之外实例化用了 `useI18n()` 的 store**（例如 `main.ts` 预热）。
    Pinia setup store 里没有组件实例，`useI18n()` 会抛
    `Must be called at the top of a setup function` 并让整页白屏；
@@ -81,6 +86,12 @@ scripts/        new-post.mjs、fonts-download.mjs、submit-indexnow.mjs
     改动构建配置后必须验证 `dist/` 里这些文件真的生成了，且内容不是 HTML。
     注意 `src/__tests__/build-consistency.test.ts` 在 `dist/feed.xml` 缺失时会**静默跳过**，
     不能靠它兜底。
+14. **新增页面（含工具页）三处齐改**：`src/router/index.ts` 加路由、`src/data/site-pages.ts`
+    加一条（该文件同时驱动预渲染 head 外壳与 sitemap，是静态页清单的单一事实来源）、
+    zh.json 与 en.json 加键。**文案一律走 i18n，勿在组件里硬编码中文**——英文站会原样
+    显示中文（ToolsPage 曾经如此，见 `src/__tests__/tools-page.test.ts`）。
+    注意 `listHtml()` 只写 head 外壳，正文仍由 SPA 渲染；若某页需要正文级 SEO，
+    要单独决定（会与 SPA 渲染结果产生切换闪烁）。
 
 ## 常用命令
 

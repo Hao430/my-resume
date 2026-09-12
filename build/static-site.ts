@@ -21,6 +21,7 @@ import {
 } from '../src/utils/site'
 import { escapeXml, toRfc822 } from '../src/utils/format'
 import { toISODate } from '../src/utils/markdown'
+import { STATIC_PAGES, buildFaqJsonLd } from '../src/data/site-pages'
 
 /**
  * 纯静态站点的构建期产物生成器（Vite 插件，apply: 'build'）
@@ -309,15 +310,11 @@ function urlEntry(loc: string, lastmod: string, changefreq: string, priority: st
   return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
 }
 
-function buildSitemap(catalog: BlogPost[], briefs: Brief[], today: string): string {
-  const entries = [
-    urlEntry(`${SITE_URL}/`, today, 'weekly', '1.0'),
-    urlEntry(`${SITE_URL}/about/`, today, 'monthly', '0.8'),
-    urlEntry(`${SITE_URL}/blog/`, today, 'weekly', '0.9'),
-    urlEntry(`${SITE_URL}/services/`, today, 'monthly', '0.7'),
-    urlEntry(`${SITE_URL}/tools/`, today, 'monthly', '0.6'),
-    urlEntry(`${SITE_URL}/privacy/`, today, 'yearly', '0.3'),
-  ]
+function buildSitemap(catalog: BlogPost[], today: string): string {
+  // 静态页条目由 src/data/site-pages.ts 统一驱动，避免与预渲染外壳的清单漂移
+  const entries = STATIC_PAGES.map((page) =>
+    urlEntry(`${SITE_URL}${page.path}`, today, page.changefreq, page.priority),
+  )
   for (const post of catalog) {
     if (post.externalUrl) continue
     const imageUrl = post.cover
@@ -529,7 +526,7 @@ export function staticSitePlugin(): Plugin {
         writes.push(fs.writeFile(path.join(outDir, 'briefs.xml'), buildBriefFeed(briefs), 'utf-8'))
       }
       writes.push(fs.writeFile(path.join(outDir, 'llms.txt'), buildLlms(catalog, briefs), 'utf-8'))
-      writes.push(fs.writeFile(path.join(outDir, 'sitemap.xml'), buildSitemap(catalog, briefs, today), 'utf-8'))
+      writes.push(fs.writeFile(path.join(outDir, 'sitemap.xml'), buildSitemap(catalog, today), 'utf-8'))
       writes.push(
         fs.writeFile(
           path.join(outDir, 'robots.txt'),
@@ -561,83 +558,31 @@ Crawl-delay: 1
         ),
       )
 
-      /* 1b. 主要页面的 head 外壳（SPA 路由直链也能给出正确的 title / OG） */
-      const pageShells: { dir: string; title: string; desc: string; path: string }[] = [
-        { dir: 'about', title: '关于我', desc: `${SITE_DESCRIPTION_ZH}。Full-stack developer based in Guiyang, building AI-era tooling.`, path: '/about/' },
-        { dir: 'tools', title: '工坊与小工具', desc: '轻量造物 · 实用工具 · 外部雷达与精选链接。Lightweight in-house tools, workshops and curated links.', path: '/tools/' },
-        { dir: 'privacy', title: '隐私政策', desc: '本站隐私政策：Cookie、Google AdSense 广告与数据收集说明。Privacy policy: cookies, Google AdSense ads and data collection.', path: '/privacy/' },
-        { dir: 'services', title: 'AI 编码服务', desc: 'AI coding workflow optimization and AI-generated code security audit & remediation — diagnose first, quote after.', path: '/services/' },
-        { dir: 'slides', title: '演示文稿', desc: '视觉表达与深度演示 · Slides and talks', path: '/slides/' },
-      ]
-      for (const page of pageShells) {
+      /* 2. 主要页面的 head 外壳（SPA 路由直链也能给出正确的 title / OG）
+       *    页面清单与 sitemap 同源：src/data/site-pages.ts，新增页面只改那一处 */
+      for (const page of STATIC_PAGES.filter((item) => item.emitShell)) {
         const dir = path.join(outDir, page.dir)
+        const pageUrl = `${SITE_URL}${page.path}`
         writes.push(
           fs.mkdir(dir, { recursive: true }).then(async () => {
-            let html = listHtml(shell, `${page.title}`, page.desc, `${SITE_URL}${page.path}`)
-            if (page.path === '/services/') {
+            let html = listHtml(shell, page.title, page.desc, pageUrl)
+            if (page.jsonLd) {
               html = appendHead(
                 html,
-                `<script type="application/ld+json" id="services-ld">${JSON.stringify({
-                  '@context': 'https://schema.org',
-                  '@type': 'ProfessionalService',
-                  name: 'AI 编码服务 · AI Coding Services',
-                  description:
-                    'AI coding workflow optimization and AI-generated code security audit & remediation — diagnose first, quote after. / 面向团队的 AI 编码落地服务，先诊断后报价。',
-                  url: `${SITE_URL}/services/`,
-                  email: SITE_EMAIL,
-                  areaServed: 'Worldwide',
-                  serviceType: ['AI coding workflow optimization', 'AI-generated code security audit'],
-                  hasOfferCatalog: {
-                    '@type': 'OfferCatalog',
-                    name: 'AI coding services / AI 编码服务',
-                    itemListElement: [
-                      {
-                        '@type': 'Offer',
-                        itemOffered: {
-                          '@type': 'Service',
-                          name: 'AI Coding Workflow Optimization / AI 编码工作流优化',
-                          description:
-                            'Assess Cursor / Claude Code / agent workflows, surface efficiency leaks, deliver an actionable optimization plan.',
-                        },
-                        priceSpecification: { '@type': 'PriceSpecification', minPrice: 500, maxPrice: 2000, priceCurrency: 'USD' },
-                      },
-                      {
-                        '@type': 'Offer',
-                        itemOffered: {
-                          '@type': 'Service',
-                          name: 'AI-Generated Code Security Audit & Remediation / AI 生成代码安全审计与修复',
-                          description:
-                            'Audit AI/agent-generated code, deliver a prioritized risk report, remediate on request. Relevant to CRA disclosure duties.',
-                        },
-                        priceSpecification: { '@type': 'PriceSpecification', minPrice: 3000, priceCurrency: 'USD' },
-                      },
-                    ],
-                  },
-                })}</script>`,
+                `<script type="application/ld+json" id="${page.dir}-ld">${JSON.stringify(page.jsonLd)}</script>`,
+              )
+            }
+            const faq = buildFaqJsonLd(page)
+            if (faq) {
+              html = appendHead(
+                html,
+                `<script type="application/ld+json" id="${page.dir}-faq-ld">${faq}</script>`,
               )
             }
             await fs.writeFile(path.join(dir, 'index.html'), html, 'utf-8')
           }),
         )
       }
-
-      /* 2. 博客列表页外壳 */
-      writes.push(
-        fs
-          .mkdir(path.join(outDir, 'blog'), { recursive: true })
-          .then(() =>
-            fs.writeFile(
-              path.join(outDir, 'blog', 'index.html'),
-              listHtml(
-                shell,
-                '博客',
-                `${SITE_DESCRIPTION_ZH}。Personal blog of Hao Zhang — AI-era engineering, product notes. English feed: /feed-en.xml`,
-                `${SITE_URL}/blog/`,
-              ),
-              'utf-8',
-            ),
-          ),
-      )
 
       /* 3. 每篇文章独立 head（用作者原文语言，保证 title / og:locale 与正文一致） */
       const emitted = new Set<string>()

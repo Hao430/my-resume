@@ -5,65 +5,54 @@ const { t } = useI18n()
 
 interface ToolItem {
   id: string
-  title: string
-  desc: string
+  /** i18n 叶子键，对应 tools.items.<i18nKey>.title / .desc */
+  i18nKey: string
   tags: string[]
   status: 'active' | 'wip' | 'planned'
   url?: string
 }
 
+/** 三态各自对应独立的文案键——此前 planned 会错误地显示成「实验构建中」 */
+const STATUS_LABEL_KEY: Record<ToolItem['status'], string> = {
+  active: 'tools.statusActive',
+  wip: 'tools.statusWip',
+  planned: 'tools.statusPlanned',
+}
+
 interface ExternalLink {
-  title: string
-  desc: string
+  /** i18n 叶子键，对应 tools.links.<i18nKey>.title / .desc */
+  i18nKey: string
   url: string
   category: string
 }
 
-// 规划中小工具
-const plannedTools: ToolItem[] = [
+// 自研工具（标题与描述走 i18n，勿在此硬编码文案）
+const labTools: ToolItem[] = [
   {
     id: 'agent-context',
-    title: 'Agent Context & Prompt Optimizer',
-    desc: '面向 AI 编码的上下文预算裁剪、Prompt 结构化评估与系统指令规范器。',
+    i18nKey: 'agentContext',
     tags: ['AI Coding', 'Agent', 'Prompt'],
     status: 'wip',
   },
   {
     id: 'code-security-checker',
-    title: 'Code Security & Dependency Radar',
-    desc: '轻量级依赖项合规检查、开源漏洞与 CRA（网络韧性法案）风险速查工具。',
+    i18nKey: 'codeSecurityChecker',
     tags: ['Security', 'CRA', 'Compliance'],
     status: 'planned',
   },
   {
     id: 'markdown-cleaner',
-    title: 'Markdown Spec & Doc Lake Parser',
-    desc: '自动化技术规范提纯、元数据解析与多源文档湖入库清洗格式化工具。',
+    i18nKey: 'markdownCleaner',
     tags: ['DocLake', 'Markdown', 'Tool'],
     status: 'planned',
   },
 ]
 
-// 精选外链与数字资产
+// 精选外链与数字资产（文案走 i18n，勿硬编码）
 const externalLinks: ExternalLink[] = [
-  {
-    title: 'GitHub / hao430',
-    desc: '开源项目、工程实现代码与智能体协同工作流实证仓库。',
-    url: 'https://github.com/hao430',
-    category: 'Code & Repos',
-  },
-  {
-    title: '技术与学术论文沉淀',
-    desc: '前沿 Agent 体系、RAG 混合检索及分布式后端技术调研沉淀。',
-    url: '/blog',
-    category: 'Research',
-  },
-  {
-    title: '技术顾问与合作咨询',
-    desc: '团队 AI 编码工作流升级、代码安全审计与架构咨询直达预约。',
-    url: '/services',
-    category: 'Advisory',
-  },
+  { i18nKey: 'repos', url: 'https://github.com/hao430', category: 'Code & Repos' },
+  { i18nKey: 'research', url: '/blog', category: 'Research' },
+  { i18nKey: 'advisory', url: '/services', category: 'Advisory' },
 ]
 </script>
 
@@ -88,7 +77,7 @@ const externalLinks: ExternalLink[] = [
       <section class="tools-section">
         <div class="section-head section-head--split">
           <div>
-            <p class="eyebrow section-head__eyebrow">Creations & Lab</p>
+            <p class="eyebrow section-head__eyebrow">{{ t('tools.craftsEyebrow') }}</p>
             <h2 class="section-head__title">{{ t('tools.craftsTitle') }}</h2>
           </div>
         </div>
@@ -96,19 +85,19 @@ const externalLinks: ExternalLink[] = [
 
         <div class="tools-grid">
           <article
-            v-for="tool in plannedTools"
+            v-for="tool in labTools"
             :key="tool.id"
             class="card tool-card animate-fadeInUp"
           >
             <div class="tool-card__header">
               <span class="badge" :class="tool.status === 'active' ? 'badge--jade' : 'badge--neutral'">
-                {{ tool.status === 'active' ? t('tools.statusActive') : t('tools.statusWip') }}
+                {{ t(STATUS_LABEL_KEY[tool.status]) }}
               </span>
               <span class="tool-card__id mono">#{{ tool.id }}</span>
             </div>
 
-            <h3 class="tool-card__title">{{ tool.title }}</h3>
-            <p class="tool-card__desc">{{ tool.desc }}</p>
+            <h3 class="tool-card__title">{{ t(`tools.items.${tool.i18nKey}.title`) }}</h3>
+            <p class="tool-card__desc">{{ t(`tools.items.${tool.i18nKey}.desc`) }}</p>
 
             <div class="tool-card__tags">
               <span v-for="tag in tool.tags" :key="tag" class="badge badge--inset mono">
@@ -138,7 +127,7 @@ const externalLinks: ExternalLink[] = [
       <section class="tools-section">
         <div class="section-head section-head--split">
           <div>
-            <p class="eyebrow section-head__eyebrow">Radar & Links</p>
+            <p class="eyebrow section-head__eyebrow">{{ t('tools.linksEyebrow') }}</p>
             <h2 class="section-head__title">{{ t('tools.linksTitle') }}</h2>
           </div>
         </div>
@@ -147,7 +136,7 @@ const externalLinks: ExternalLink[] = [
         <div class="links-grid">
           <a
             v-for="link in externalLinks"
-            :key="link.title"
+            :key="link.i18nKey"
             :href="link.url"
             :target="link.url.startsWith('http') ? '_blank' : '_self'"
             :rel="link.url.startsWith('http') ? 'noopener noreferrer' : undefined"
@@ -160,8 +149,8 @@ const externalLinks: ExternalLink[] = [
                 <polyline points="7 7 17 7 17 17"/>
               </svg>
             </div>
-            <h3 class="link-card__title">{{ link.title }}</h3>
-            <p class="link-card__desc">{{ link.desc }}</p>
+            <h3 class="link-card__title">{{ t(`tools.links.${link.i18nKey}.title`) }}</h3>
+            <p class="link-card__desc">{{ t(`tools.links.${link.i18nKey}.desc`) }}</p>
           </a>
         </div>
       </section>

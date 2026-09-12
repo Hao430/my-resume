@@ -163,14 +163,45 @@
   "tools": {
     "pageTitle": "Lab & Tools",
     "pageSubtitle": "Lightweight Creations · Practical Utilities · Radar & Curated Links",
+    "craftsEyebrow": "Creations & Lab",
     "craftsTitle": "Standalone Creations & Utilities",
     "craftsDesc": "A suite of focused, out-of-the-box developer tools and experiments currently in active development.",
+    "linksEyebrow": "Radar & Links",
     "linksTitle": "Radar & Curated Resources",
     "linksDesc": "Selected open-source ecosystems, digital assets, and high-signal resources.",
+    "links": {
+      "repos": {
+        "title": "GitHub / hao430",
+        "desc": "Open-source projects, engineering implementations, and working repositories for agent collaboration workflows."
+      },
+      "research": {
+        "title": "Technical & Academic Writing",
+        "desc": "Research notes on frontier agent systems, hybrid RAG retrieval, and distributed backend engineering."
+      },
+      "advisory": {
+        "title": "Consulting & Collaboration",
+        "desc": "AI coding workflow upgrades, code security audits, and architecture advisory for teams."
+      }
+    },
     "comingSoon": "Coming Soon",
     "visit": "Visit",
     "statusActive": "Online",
-    "statusWip": "In Development"
+    "statusWip": "In Development",
+    "statusPlanned": "Planned",
+    "items": {
+      "agentContext": {
+        "title": "Agent Context & Prompt Optimizer",
+        "desc": "Context-budget trimming, structured prompt evaluation, and a system-instruction linter for AI coding."
+      },
+      "codeSecurityChecker": {
+        "title": "Code Security & Dependency Radar",
+        "desc": "Lightweight dependency compliance checks, open-source vulnerability lookup, and CRA (Cyber Resilience Act) risk triage."
+      },
+      "markdownCleaner": {
+        "title": "Markdown Spec & Doc Lake Parser",
+        "desc": "Automated spec extraction, metadata parsing, and multi-source doc-lake ingest cleanup."
+      }
+    }
   },
   "footer": {
     "tagline": "Ink carries the way, code puts it into practice",
