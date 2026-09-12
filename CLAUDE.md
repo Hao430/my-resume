@@ -90,8 +90,12 @@ scripts/        new-post.mjs、fonts-download.mjs、submit-indexnow.mjs
     加一条（该文件同时驱动预渲染 head 外壳与 sitemap，是静态页清单的单一事实来源）、
     zh.json 与 en.json 加键。**文案一律走 i18n，勿在组件里硬编码中文**——英文站会原样
     显示中文（ToolsPage 曾经如此，见 `src/__tests__/tools-page.test.ts`）。
-    注意 `listHtml()` 只写 head 外壳，正文仍由 SPA 渲染；若某页需要正文级 SEO，
-    要单独决定（会与 SPA 渲染结果产生切换闪烁）。
+    注意 `listHtml()` 只写 head 外壳，正文仍由 SPA 渲染。
+    **正文级 SEO 已于 2026-09-12 决定不做**：Googlebot 渲染 JS 能拿到全部内容，
+    非 JS 的 AI 爬虫有 RSS 全文（`content:encoded`）与 `llms.txt` 两条路径。
+    已知代价：走 HTML 且不执行 JS 的爬虫读不到文章正文。
+    若日后要补，首选在 `<body>` 注入 `<noscript>` 块（源码对爬虫可见、JS 用户零闪烁），
+    而不是注入 `#app`（预渲染文本与 SPA 渲染结果不同，用户会看到一次切换闪烁）。
 
 ## 常用命令
 

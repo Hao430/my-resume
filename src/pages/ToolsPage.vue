@@ -31,19 +31,19 @@ const labTools: ToolItem[] = [
   {
     id: 'agent-context',
     i18nKey: 'agentContext',
-    tags: ['AI Coding', 'Agent', 'Prompt'],
+    tags: ['Context Window', 'Token Budget', 'AI Coding'],
     status: 'wip',
   },
   {
     id: 'code-security-checker',
     i18nKey: 'codeSecurityChecker',
-    tags: ['Security', 'CRA', 'Compliance'],
+    tags: ['Dependencies', 'Vulnerability', 'CRA'],
     status: 'planned',
   },
   {
     id: 'markdown-cleaner',
     i18nKey: 'markdownCleaner',
-    tags: ['DocLake', 'Markdown', 'Tool'],
+    tags: ['Markdown', 'AI Output', 'Text'],
     status: 'planned',
   },
 ]

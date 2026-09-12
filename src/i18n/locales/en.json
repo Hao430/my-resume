@@ -190,16 +190,16 @@
     "statusPlanned": "Planned",
     "items": {
       "agentContext": {
-        "title": "Agent Context & Prompt Optimizer",
-        "desc": "Context-budget trimming, structured prompt evaluation, and a system-instruction linter for AI coding."
+        "title": "Context Window & Token Budget Calculator",
+        "desc": "Token budgets for multi-turn and multi-tool calls, context-window usage and overflow warnings, with model cost and VRAM comparison."
       },
       "codeSecurityChecker": {
-        "title": "Code Security & Dependency Radar",
-        "desc": "Lightweight dependency compliance checks, open-source vulnerability lookup, and CRA (Cyber Resilience Act) risk triage."
+        "title": "Dependency Vulnerability & License Check",
+        "desc": "Paste a package.json or requirements.txt to look up vulnerabilities, licenses and fixed versions, with CRA compliance notes and Markdown export."
       },
       "markdownCleaner": {
-        "title": "Markdown Spec & Doc Lake Parser",
-        "desc": "Automated spec extraction, metadata parsing, and multi-source doc-lake ingest cleanup."
+        "title": "AI Output Cleaner · Markdown Toolbox",
+        "desc": "Strip Markdown formatting, emoji and stray blank lines, normalise punctuation, and convert between HTML and Markdown — ready to paste into Word, Notion or email."
       }
     }
   },

@@ -190,16 +190,16 @@
     "statusPlanned": "规划中",
     "items": {
       "agentContext": {
-        "title": "Agent Context & Prompt Optimizer",
-        "desc": "面向 AI 编码的上下文预算裁剪、Prompt 结构化评估与系统指令规范器。"
+        "title": "上下文窗口与 Token 预算计算器",
+        "desc": "多轮对话与多工具调用的 token 预算、上下文窗口占用与超限预警，附模型成本与显存需求对比。"
       },
       "codeSecurityChecker": {
-        "title": "Code Security & Dependency Radar",
-        "desc": "轻量级依赖项合规检查、开源漏洞与 CRA（网络韧性法案）风险速查工具。"
+        "title": "依赖漏洞与许可证检查",
+        "desc": "贴入 package.json 或 requirements.txt，在线查漏洞、许可证与修复版本，附 CRA 合规关注点，可导出 Markdown。"
       },
       "markdownCleaner": {
-        "title": "Markdown Spec & Doc Lake Parser",
-        "desc": "自动化技术规范提纯、元数据解析与多源文档湖入库清洗格式化工具。"
+        "title": "AI 输出清理器 · Markdown 工具箱",
+        "desc": "一键去除 Markdown 格式、emoji 与多余空行，规范中英标点全半角，适配公众号 / 知乎 / Word 直贴，并支持 HTML 与 Markdown 互转。"
       }
     }
   },
