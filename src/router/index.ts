@@ -39,6 +39,12 @@ const routes = [
     meta: { titleKey: 'seo.tools' },
   },
   {
+    path: '/tools/markdown-cleaner',
+    name: 'tool-markdown-cleaner',
+    component: () => import('../pages/tools/MarkdownCleanerPage.vue'),
+    meta: { titleKey: 'seo.toolMarkdownCleaner' },
+  },
+  {
     path: '/daily-brief',
     redirect: '/tools',
   },

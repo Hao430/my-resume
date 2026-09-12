@@ -201,6 +201,30 @@
         "title": "AI Output Cleaner · Markdown Toolbox",
         "desc": "Strip Markdown formatting, emoji and stray blank lines, normalise punctuation, and convert between HTML and Markdown — ready to paste into Word, Notion or email."
       }
+    },
+    "cleaner": {
+      "pageSubtitle": "Turn AI output into clean, paste-ready text",
+      "offlineBadge": "100% local",
+      "offlineNote": "Everything runs in your browser — nothing you paste is uploaded to any server.",
+      "inputLabel": "Paste your text",
+      "inputPlaceholder": "Paste content copied from ChatGPT / Claude / Notion…",
+      "sample": "Load sample",
+      "convertHtml": "HTML to Markdown",
+      "clear": "Clear",
+      "optionsLabel": "Cleaning options",
+      "optStripMarkdown": "Strip Markdown formatting",
+      "optRemoveEmoji": "Remove emoji",
+      "optStripHtml": "Strip HTML tags",
+      "optCollapseBlankLines": "Collapse blank lines",
+      "optTrimLines": "Trim line whitespace",
+      "optNormalizeCjkPunctuation": "Full-width CJK punctuation",
+      "optHalfWidthAscii": "Half-width letters and digits",
+      "outputLabel": "Result",
+      "copy": "Copy result",
+      "copied": "Copied",
+      "emptyOutput": "The cleaned result appears here as you type",
+      "stats": "{before} chars in → {after} out · {saved}% shorter",
+      "sampleText": "## Key Takeaways 🎉\n\n1. **Context budgeting matters**: don't dump everything in.\n\n\n\n2. Use [Claude](https://claude.ai) to structure the material first, then feed the coding agent.\n\n> Tip: keep 20% headroom.\n\n- Point one\n- Point two\n"
     }
   },
   "footer": {
@@ -231,6 +255,7 @@
     "slides": "Slides",
     "reader": "Reading",
     "tools": "Tools & Lab",
+    "toolMarkdownCleaner": "AI Output Cleaner",
     "services": "AI Coding Services",
     "privacy": "Privacy Policy"
   },

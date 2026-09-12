@@ -1,4 +1,6 @@
 import { SITE_DESCRIPTION_ZH, SITE_EMAIL, SITE_URL } from '../utils/site'
+import { LIVE_TOOLS, toolPath, type ToolMeta } from './tools'
+import zh from '../i18n/locales/zh.json'
 
 /**
  * 静态页面的单一事实来源
@@ -69,6 +71,23 @@ const SERVICES_JSON_LD = {
       },
     ],
   },
+}
+
+/**
+ * 工具页标题/描述直接取 zh.json，避免与卡片文案出现两份。
+ * 预渲染外壳是中文优先（与 listHtml 的站点名一致），故只读中文副本。
+ */
+function toolToPage(tool: ToolMeta): StaticPage {
+  const item = zh.tools.items[tool.i18nKey]
+  return {
+    dir: `tools/${tool.slug}`,
+    title: item.title,
+    desc: item.desc,
+    path: toolPath(tool),
+    changefreq: 'monthly',
+    priority: '0.6',
+    emitShell: true,
+  }
 }
 
 export const STATIC_PAGES: StaticPage[] = [
@@ -154,6 +173,8 @@ export const STATIC_PAGES: StaticPage[] = [
     priority: '0.3',
     emitShell: true,
   },
+  // 已上线的工具页：每个工具一个独立 URL，是工具线长尾 SEO 的落点
+  ...LIVE_TOOLS.map(toolToPage),
 ]
 
 /**

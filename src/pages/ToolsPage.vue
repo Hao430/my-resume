@@ -1,19 +1,11 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { TOOLS, toolPath } from '../data/tools'
 
 const { t } = useI18n()
 
-interface ToolItem {
-  id: string
-  /** i18n 叶子键，对应 tools.items.<i18nKey>.title / .desc */
-  i18nKey: string
-  tags: string[]
-  status: 'active' | 'wip' | 'planned'
-  url?: string
-}
-
 /** 三态各自对应独立的文案键——此前 planned 会错误地显示成「实验构建中」 */
-const STATUS_LABEL_KEY: Record<ToolItem['status'], string> = {
+const STATUS_LABEL_KEY: Record<(typeof TOOLS)[number]['status'], string> = {
   active: 'tools.statusActive',
   wip: 'tools.statusWip',
   planned: 'tools.statusPlanned',
@@ -26,27 +18,7 @@ interface ExternalLink {
   category: string
 }
 
-// 自研工具（标题与描述走 i18n，勿在此硬编码文案）
-const labTools: ToolItem[] = [
-  {
-    id: 'agent-context',
-    i18nKey: 'agentContext',
-    tags: ['Context Window', 'Token Budget', 'AI Coding'],
-    status: 'wip',
-  },
-  {
-    id: 'code-security-checker',
-    i18nKey: 'codeSecurityChecker',
-    tags: ['Dependencies', 'Vulnerability', 'CRA'],
-    status: 'planned',
-  },
-  {
-    id: 'markdown-cleaner',
-    i18nKey: 'markdownCleaner',
-    tags: ['Markdown', 'AI Output', 'Text'],
-    status: 'planned',
-  },
-]
+// 自研工具清单在 src/data/tools.ts（单一事实来源：卡片 + 预渲染外壳 + sitemap）
 
 // 精选外链与数字资产（文案走 i18n，勿硬编码）
 const externalLinks: ExternalLink[] = [
@@ -85,15 +57,15 @@ const externalLinks: ExternalLink[] = [
 
         <div class="tools-grid">
           <article
-            v-for="tool in labTools"
-            :key="tool.id"
+            v-for="tool in TOOLS"
+            :key="tool.slug"
             class="card tool-card animate-fadeInUp"
           >
             <div class="tool-card__header">
               <span class="badge" :class="tool.status === 'active' ? 'badge--jade' : 'badge--neutral'">
                 {{ t(STATUS_LABEL_KEY[tool.status]) }}
               </span>
-              <span class="tool-card__id mono">#{{ tool.id }}</span>
+              <span class="tool-card__id mono">#{{ tool.slug }}</span>
             </div>
 
             <h3 class="tool-card__title">{{ t(`tools.items.${tool.i18nKey}.title`) }}</h3>
@@ -106,15 +78,13 @@ const externalLinks: ExternalLink[] = [
             </div>
 
             <div class="tool-card__footer">
-              <a
-                v-if="tool.url"
-                :href="tool.url"
-                target="_blank"
-                rel="noopener noreferrer"
+              <RouterLink
+                v-if="tool.status === 'active'"
+                :to="toolPath(tool)"
                 class="tool-card__action btn btn--outline"
               >
                 {{ t('tools.visit') }} →
-              </a>
+              </RouterLink>
               <span v-else class="tool-card__pending mono">
                 {{ t('tools.comingSoon') }}
               </span>

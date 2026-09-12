@@ -201,6 +201,30 @@
         "title": "AI 输出清理器 · Markdown 工具箱",
         "desc": "一键去除 Markdown 格式、emoji 与多余空行，规范中英标点全半角，适配公众号 / 知乎 / Word 直贴，并支持 HTML 与 Markdown 互转。"
       }
+    },
+    "cleaner": {
+      "pageSubtitle": "把 AI 输出洗成能直接粘贴的干净文本",
+      "offlineBadge": "纯本地",
+      "offlineNote": "全部处理在你的浏览器内完成，粘贴的内容不会上传到任何服务器。",
+      "inputLabel": "粘贴内容",
+      "inputPlaceholder": "把从 ChatGPT / Claude / Notion 复制出来的内容贴到这里…",
+      "sample": "载入示例",
+      "convertHtml": "HTML 转 Markdown",
+      "clear": "清空",
+      "optionsLabel": "清理选项",
+      "optStripMarkdown": "去掉 Markdown 格式",
+      "optRemoveEmoji": "去掉 emoji",
+      "optStripHtml": "去掉 HTML 标签",
+      "optCollapseBlankLines": "压缩连续空行",
+      "optTrimLines": "去行首尾空白",
+      "optNormalizeCjkPunctuation": "中文标点转全角",
+      "optHalfWidthAscii": "全角字母数字转半角",
+      "outputLabel": "清理结果",
+      "copy": "复制结果",
+      "copied": "已复制",
+      "emptyOutput": "清理结果会随输入实时显示在这里",
+      "stats": "输入 {before} 字 → 输出 {after} 字 · 减少 {saved}%",
+      "sampleText": "## 核心结论 🎉\n\n1. **上下文预算是关键**：不是把所有资料都塞进去。\n\n\n\n2. 先用 [Claude](https://claude.ai) 做结构化整理，再喂给编码 agent。\n\n> 提示：留出 20% 余量。\n\n- 要点一\n- 要点二\n"
     }
   },
   "footer": {
@@ -231,6 +255,7 @@
     "slides": "演示文稿",
     "reader": "阅读",
     "tools": "工具与工坊",
+    "toolMarkdownCleaner": "AI 输出清理器",
     "services": "AI 编码服务",
     "privacy": "隐私政策"
   },
