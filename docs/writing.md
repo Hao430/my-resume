@@ -97,14 +97,14 @@ content/posts/harness-development-paradigm.en.md     # 英文正文
 | 产物 / 文件 | 生成者 | 说明 |
 |------|--------|------|
 | `dist/feed.xml`、`dist/feed-en.xml` | `build/static-site.ts` | RSS 2.0，全文 `content:encoded`，Feedly / Inoreader 等可直接订阅 |
-| `dist/briefs.xml` | 同上 | 每日早参订阅源 |
-| `dist/sitemap.xml` | 同上 | 主页面 + 每篇文章 + 每期早参，`lastmod` 取 frontmatter 日期 |
+| `dist/sitemap.xml` | 同上 | 主页面 + 每篇文章，`lastmod` 取 frontmatter 日期 |
+| `dist/llms.txt` | 同上 | 供 ChatGPT / Claude / Perplexity 等检索入口引用的站点摘要 |
 | `public/og/<slug>.png` | 同上（本机有时） | 英文文章的专属分享图；构建环境没有 librsvg 时用仓库里已提交的这张 |
 | `dist/blog/<slug>/index.html` | 同上 | 每篇文章独立 head（title / canonical / OG / Twitter / JSON-LD BlogPosting），不执行 JS 的抓取器也能拿到摘要 |
-| `dist/briefs/YYYY-MM-DD/index.html` | 同上 | 早参的 ASCII 路径副本；`public/每日早参/` 原件保留并补 canonical |
 | `dist/robots.txt` | 同上 | 指向 sitemap（`public/robots.txt` 只是开发期占位，构建时会被覆盖） |
 | ~~`public/sitemap.xml`~~ | — | 已删除：sitemap 只由构建生成，避免仓库里留一份过期的和线上打架 |
-| `src/data/dailyBriefs.ts` | `scripts/sync-daily-briefs.cjs` | 早参清单 |
+
+静态页外壳（`/about/`、`/blog/`、`/privacy/`、`/services/`、`/slides/`、`/tools/`）也会一并预渲染 head。
 
 解析逻辑只有一份：`src/utils/markdown.ts` + `src/utils/post-catalog.ts`，
 浏览器端（`src/stores/blog.ts`）与构建脚本共用，避免「站内 4 篇、RSS 3 篇」的漂移。
@@ -124,10 +124,12 @@ content/posts/harness-development-paradigm.en.md     # 英文正文
 - **ESA 构建容器没有 librsvg**，所以这些图必须提交进仓库；只改标题不提交图片时，线上会继续用上一张。
 - 中文标题一律使用品牌图 `/og-image.png`（构建容器不保证有中文字体，避免渲染成豆腐块）。
 
-## 每日早参（HTML 流水）
+## 每日早参（已下线）
 
-把 `article_YYYYMMDD.html` 放进 `public/每日早参/`，然后 `npm run build`（或 `npm run sync-daily-briefs`）
-就会出现在早参页与 `briefs.xml` 中，标题取自文件里的 `<title>`。
+原「每日早参」栏目已由 `/tools` 工具页取代，`/daily-brief` 保留为跳转。
+`scripts/sync-daily-briefs.cjs`、`src/data/dailyBriefs.ts`、`DailyBriefPage.vue` 与
+`public/每日早参/` 均已删除，`build/static-site.ts` 里的 brief 代码路径保留为休眠状态：
+把 `article_YYYYMMDD.html` 放回 `public/每日早参/` 即会自动恢复 `briefs.xml` 与页面副本。
 
 
 ## 排版与字体（全站统一）

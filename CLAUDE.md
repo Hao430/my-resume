@@ -21,17 +21,20 @@
 
 ```
 src/
-  components/  通用组件（MarkdownRenderer 渲染文章正文）
-  pages/       页面组件
-  stores/      blog.ts / resume.ts / slides.ts —— 全部基于静态数据
-  data/        resume.ts（手写）、slides.ts（手写）、dailyBriefs.ts（构建期生成）
+  components/  通用组件（MarkdownRenderer 渲染文章正文、ThemeSwitcher 主题切换）
+  pages/       页面组件（含 ToolsPage 工具页；原 DailyBriefPage 已下线）
+  stores/      blog.ts / resume.ts / slides.ts / theme.ts —— 全部基于静态数据
+  data/        resume.ts（手写）、slides.ts（手写）
   utils/       markdown.ts（frontmatter/渲染）、post-catalog.ts（目录构建+双语合并）、
                format.ts（日期/XML）、seo.ts（运行时 head 修正）、site.ts（站点常量）
   i18n/locales/ zh.json / en.json / resume-en.json
-content/posts/  文章（发文章只改这里；foo.en.md 是 foo.md 的英文伴生版本）
-public/         静态资源；每日早参在 public/每日早参/
-build/          static-site.ts：Vite 插件，构建期产出 RSS / sitemap / 预渲染 head
-scripts/        new-post.mjs、sync-daily-briefs.cjs
+  __tests__/   Vitest 单测（`npm test`）
+content/posts/  文章（发文章只改这里；英文母本为 foo.md + foo.zh.md，
+               中文母本为 foo.md + foo.en.md，两种约定 post-catalog 都识别）
+public/         静态资源（fonts/ 自托管字体、og/ 预生成分享图）
+build/          static-site.ts：Vite 插件，构建期产出 RSS / sitemap / llms.txt /
+                逐篇预渲染 head / 专属分享图
+scripts/        new-post.mjs、fonts-download.mjs、submit-indexnow.mjs
 ```
 
 ## 命名规范
@@ -59,7 +62,8 @@ scripts/        new-post.mjs、sync-daily-briefs.cjs
    `legacy: [/旧页面.html]`，构建时会给旧页面补 canonical 指回 `/blog/<slug>/`。
 5. i18n 文案里**不要出现裸 `|`**（vue-i18n 当复数分隔符）；站点名带竖线的用 `utils/site.ts` 常量拼接。
 6. zh.json 与 en.json 的键必须一一对应（缺键会在页面上直接显示 key）。
-7. `npm run check`（lint + type-check + build）必须全绿才能推送；CI 与 githooks 都会拦。
+7. `npm run check`（lint + type-check + build）必须全绿才能推送；`npm test`（Vitest）另行执行，
+   **不在 `check` 内**。githooks：pre-commit 跑 lint，pre-push 跑 type-check + test + build-only。
 8. TypeScript：strict + `noUncheckedIndexedAccess`，下标/正则分组要显式处理 undefined。
 9. 缩进 2 空格、UTF-8、LF（`.editorconfig`）。
 10. **字体必须自托管**（`public/fonts/`，321 个 woff2 分片随仓库提交）。
@@ -70,6 +74,13 @@ scripts/        new-post.mjs、sync-daily-briefs.cjs
 12. 排版改动**要看继承后的计算样式**，不能只看基础样式表：正文这类内容型 CSS
     若有嵌套在带对齐/居中容器里的可能，用浏览器 DevTools 核对
     `getComputedStyle(el).textAlign` 等最终值，再合并推送。
+13. **可发现性资产是硬需求，不可"简化"掉**：`build/static-site.ts`（`staticSitePlugin()`，
+    挂在 `vite.config.ts`）负责产出 `feed.xml` / `feed-en.xml` / `sitemap.xml` / `llms.txt` /
+    逐篇预渲染 head / 专属分享图。删掉它不会有任何构建报错——线上会静默地把 `feed.xml`
+    和 `sitemap.xml` 交给 SPA 兜底返回 HTML，而 `robots.txt` 仍指向 sitemap（2026-09-12 事故）。
+    改动构建配置后必须验证 `dist/` 里这些文件真的生成了，且内容不是 HTML。
+    注意 `src/__tests__/build-consistency.test.ts` 在 `dist/feed.xml` 缺失时会**静默跳过**，
+    不能靠它兜底。
 
 ## 常用命令
 
@@ -77,7 +88,8 @@ scripts/        new-post.mjs、sync-daily-briefs.cjs
 npm run dev                                      # 本地开发
 npm run new-post -- "标题" --slug=english-slug    # 新建文章（默认 draft: true）
 npm run lint && npm run type-check               # 质量检查
-npm run build                                    # 生成早参清单 → 类型检查 + 构建 + 可发现性资产
+npm test                                         # Vitest 单测（不在 check 内）
+npm run build                                    # 类型检查 + 构建 + 可发现性资产
 npm run preview                                  # 构建后本地验证（含 /blog/<slug>/ 预渲染页）
 node scripts/submit-indexnow.mjs                 # 部署后向 Bing/Yandex/Naver 推送 URL
 npm run fonts                                   # 重拉字体分片到 public/fonts/（并提交）
@@ -91,5 +103,5 @@ npm run fonts                                   # 重拉字体分片到 public/f
   ```bash
   curl -sI https://hao430.cn/blog/<slug>/ | head -3        # Server: ESA
   curl -s https://hao430.cn/feed.xml | grep -c '<item>'    # 篇数对得上
-  curl -s https://hao430.cn/sitemap.xml | grep -c '<loc>'  # 页面 + 文章 + 早参
+  curl -s https://hao430.cn/sitemap.xml | grep -c '<loc>'  # 静态页 + 每篇文章
   ```

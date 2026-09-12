@@ -52,7 +52,7 @@ src/stores/blog.ts  ───→ BlogPage.vue / BlogPostPage.vue
 
 src/stores/slides.ts ───→ SlidesPage.vue / SlideViewerPage.vue
 
-src/data/dailyBriefs.ts ──→ DailyBriefPage.vue
+src/stores/theme.ts  ───→ ThemeSwitcher.vue（localStorage 持久化，非构建期数据）
 ```
 
 **问题**：修改任何内容都需要重新 `git push → ESA 自动构建部署`，无法在线更新。
@@ -71,8 +71,8 @@ my-resume/
 ├── src/
 │   ├── components/      # Vue 组件
 │   ├── pages/           # 页面组件（8个）
-│   ├── stores/          # Pinia Store（blog, slides）
-│   ├── data/            # 静态数据（resume, dailyBriefs）
+│   ├── stores/          # Pinia Store（blog, slides, resume, theme）
+│   ├── data/            # 静态数据（resume, slides）
 │   ├── router/          # 路由配置
 │   ├── types/           # 类型定义
 │   └── App.vue          # 根组件
