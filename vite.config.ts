@@ -22,7 +22,7 @@ export default defineConfig({
     },
   },
   server: {
-    // 纯静态站点：无后端，开发服务器不需要 API 代理
-    host: true,
+    host: '0.0.0.0',
+    port: 3000,
   },
 })

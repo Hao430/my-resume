@@ -1,0 +1,6 @@
+{
+  "name": "张豪 | 技术人文空间",
+  "description": "张豪的个人网站 — 技术博客、项目作品与成长思考。Hao Zhang's personal site: AI-era engineering notes, product thinking and a bilingual (Chinese/English) blog.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
