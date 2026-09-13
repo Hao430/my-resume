@@ -128,3 +128,20 @@ npm run sync-deps                                # 重抓依赖雷达数据到 s
   curl -s https://hao430.cn/feed.xml | grep -c '<item>'    # 篇数对得上
   curl -s https://hao430.cn/sitemap.xml | grep -c '<loc>'  # 静态页 + 每篇文章
   ```
+- ⚠️ **HTTP 200 在本站不能作为「资源存在」的证据。** ESA 配了 `notFoundStrategy:
+  singlePageApplication`，任何**不存在**的路径都会返回 `index.html` 加 200。
+  所以判断「新构建是否上线」时必须看 **Content-Type 或内容本身**，只看状态码会误报成功
+  （2026-09-13 判断一个新 JS chunk 是否部署时踩过：拿到的 8129 字节"文件"其实是
+  8.13 kB 的 index.html）。正确做法：
+
+  ```bash
+  # 错：SPA 兜底也会给 200
+  curl -s -o /dev/null -w '%{http_code}' https://hao430.cn/assets/<chunk>.js
+
+  # 对：确认它是 JS 且内容含新代码
+  curl -sI https://hao430.cn/assets/<chunk>.js | grep -i '^content-type'   # 须为 javascript
+  curl -s  https://hao430.cn/assets/<chunk>.js | grep -c '<新代码里的字符串>'
+  ```
+
+  同理适用于 `feed.xml` / `sitemap.xml` / `llms.txt`：它们被删掉时线上不会 404，
+  而是返回 HTML，必须校验内容而非状态码（见硬性规则第 13 条）。
