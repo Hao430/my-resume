@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 2900,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "MODERATE": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-mvjj-gqq2-p4hw",
@@ -20,6 +24,7 @@
       ],
       "summary": "Cross-Site Scripting in react-dom",
       "severity": "MODERATE",
+      "published": "2019-01-04T19:05:35Z",
       "ranges": [
         {
           "introduced": "16.0.0",

@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 84,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "HIGH": 2,
+    "UNKNOWN": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-8rrh-rw8j-w5fx",
@@ -20,6 +25,7 @@
       ],
       "summary": "Wheel Affected by Arbitrary File Permission Modification via Path Traversal in wheel unpack",
       "severity": "HIGH",
+      "published": "2026-01-22T18:02:56Z",
       "ranges": [
         {
           "introduced": "0.40.0",
@@ -34,20 +40,7 @@
       ],
       "summary": "pypa/wheel vulnerable to Regular Expression denial of service (ReDoS)",
       "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.38.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2022-43017",
-      "aliases": [
-        "CVE-2022-40898"
-      ],
-      "summary": "PYSEC-2022-43017",
-      "severity": null,
+      "published": "2022-12-23T00:30:23Z",
       "ranges": [
         {
           "introduced": "0",
@@ -62,10 +55,26 @@
       ],
       "summary": "Wheel Affected by Arbitrary File Permission Modification via Path Traversal in wheel unpack",
       "severity": null,
+      "published": "2026-07-07T16:03:19.867108Z",
       "ranges": [
         {
           "introduced": "0.40.0",
           "fixed": "0.46.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-43017",
+      "aliases": [
+        "CVE-2022-40898"
+      ],
+      "summary": "PYSEC-2022-43017",
+      "severity": null,
+      "published": "2022-12-23T00:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.38.1"
         }
       ]
     }

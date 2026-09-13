@@ -12,18 +12,40 @@
   "deprecatedReason": "",
   "versionCount": 161,
   "latestAffected": false,
+  "vulnerabilityCount": 16,
+  "severityCounts": {
+    "MODERATE": 7,
+    "HIGH": 1,
+    "UNKNOWN": 8
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-652x-xj99-gmcc",
+      "id": "GHSA-x84v-xcm2-53pg",
       "aliases": [
-        "CVE-2014-1830"
+        "CVE-2018-18074"
       ],
-      "summary": "Exposure of Sensitive Information to an Unauthorized Actor in Requests",
-      "severity": "MODERATE",
+      "summary": "Insufficiently Protected Credentials in Requests",
+      "severity": "HIGH",
+      "published": "2018-10-29T19:06:46Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "2.3.0"
+          "fixed": "2.20.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gc5v-m9x4-r6x2",
+      "aliases": [
+        "CVE-2026-25645"
+      ],
+      "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+      "severity": "MODERATE",
+      "published": "2026-03-25T16:56:28Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.33.0"
         }
       ]
     },
@@ -34,6 +56,7 @@
       ],
       "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
       "severity": "MODERATE",
+      "published": "2025-06-09T19:06:08Z",
       "ranges": [
         {
           "introduced": "0",
@@ -48,38 +71,11 @@
       ],
       "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
       "severity": "MODERATE",
+      "published": "2024-05-20T20:15:00Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "2.32.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-cfj3-7x9c-4p3h",
-      "aliases": [
-        "CVE-2014-1829"
-      ],
-      "summary": "Exposure of Sensitive Information to an Unauthorized Actor in Requests",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.3.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-gc5v-m9x4-r6x2",
-      "aliases": [
-        "CVE-2026-25645"
-      ],
-      "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.33.0"
         }
       ]
     },
@@ -90,10 +86,41 @@
       ],
       "summary": "Unintended leak of Proxy-Authorization header in requests",
       "severity": "MODERATE",
+      "published": "2023-05-22T20:36:32Z",
       "ranges": [
         {
           "introduced": "2.3.0",
           "fixed": "2.31.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cfj3-7x9c-4p3h",
+      "aliases": [
+        "CVE-2014-1829"
+      ],
+      "summary": "Exposure of Sensitive Information to an Unauthorized Actor in Requests",
+      "severity": "MODERATE",
+      "published": "2022-05-17T03:49:35Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-652x-xj99-gmcc",
+      "aliases": [
+        "CVE-2014-1830"
+      ],
+      "summary": "Exposure of Sensitive Information to an Unauthorized Actor in Requests",
+      "severity": "MODERATE",
+      "published": "2022-05-14T02:09:22Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
         }
       ]
     },
@@ -104,106 +131,11 @@
       ],
       "summary": "Python Requests Session Fixation",
       "severity": "MODERATE",
+      "published": "2022-05-13T01:11:23Z",
       "ranges": [
         {
           "introduced": "2.1.0",
           "fixed": "2.6.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-x84v-xcm2-53pg",
-      "aliases": [
-        "CVE-2018-18074"
-      ],
-      "summary": "Insufficiently Protected Credentials in Requests",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.20.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2014-13",
-      "aliases": [
-        "CVE-2014-1829"
-      ],
-      "summary": "PYSEC-2014-13",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.3.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2014-14",
-      "aliases": [
-        "CVE-2014-1830"
-      ],
-      "summary": "PYSEC-2014-14",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.3.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2015-17",
-      "aliases": [
-        "CVE-2015-2296"
-      ],
-      "summary": "PYSEC-2015-17",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3bd8afbff29e50b38f889b2f688785a669b9aafc"
-        },
-        {
-          "introduced": "2.1.0",
-          "fixed": "2.6.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2018-28",
-      "aliases": [
-        "CVE-2018-18074"
-      ],
-      "summary": "PYSEC-2018-28",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "c45d7c49ea75133e52ab22a8e9e13173938e36ff"
-        },
-        {
-          "introduced": "0",
-          "fixed": "2.20.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2023-74",
-      "aliases": [
-        "CVE-2023-32681"
-      ],
-      "summary": "PYSEC-2023-74",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
-        },
-        {
-          "introduced": "2.3.0",
-          "fixed": "2.31.0"
         }
       ]
     },
@@ -214,6 +146,7 @@
       ],
       "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
       "severity": null,
+      "published": "2026-07-07T16:02:54.151964Z",
       "ranges": [
         {
           "introduced": "0",
@@ -228,6 +161,7 @@
       ],
       "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
       "severity": null,
+      "published": "2026-07-07T11:45:42.890131Z",
       "ranges": [
         {
           "introduced": "0",
@@ -242,10 +176,98 @@
       ],
       "summary": "PYSEC-2026-2275",
       "severity": null,
+      "published": "2026-03-25T17:16:52.970Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "2.33.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-74",
+      "aliases": [
+        "CVE-2023-32681"
+      ],
+      "summary": "PYSEC-2023-74",
+      "severity": null,
+      "published": "2023-05-26T18:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+        },
+        {
+          "introduced": "2.3.0",
+          "fixed": "2.31.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-28",
+      "aliases": [
+        "CVE-2018-18074"
+      ],
+      "summary": "PYSEC-2018-28",
+      "severity": null,
+      "published": "2018-10-09T17:29:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "c45d7c49ea75133e52ab22a8e9e13173938e36ff"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.20.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-17",
+      "aliases": [
+        "CVE-2015-2296"
+      ],
+      "summary": "PYSEC-2015-17",
+      "severity": null,
+      "published": "2015-03-18T16:59:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3bd8afbff29e50b38f889b2f688785a669b9aafc"
+        },
+        {
+          "introduced": "2.1.0",
+          "fixed": "2.6.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-13",
+      "aliases": [
+        "CVE-2014-1829"
+      ],
+      "summary": "PYSEC-2014-13",
+      "severity": null,
+      "published": "2014-10-15T14:55:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-14",
+      "aliases": [
+        "CVE-2014-1830"
+      ],
+      "summary": "PYSEC-2014-14",
+      "severity": null,
+      "published": "2014-10-15T14:55:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
         }
       ]
     }

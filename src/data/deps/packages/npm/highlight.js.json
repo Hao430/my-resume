@@ -12,12 +12,17 @@
   "deprecatedReason": "",
   "versionCount": 105,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "MODERATE": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-7wwv-vh3v-89cq",
       "aliases": [],
       "summary": "ReDOS vulnerabities: multiple grammars",
       "severity": "MODERATE",
+      "published": "2020-12-04T16:47:20Z",
       "ranges": [
         {
           "introduced": "9.0.0",
@@ -36,6 +41,7 @@
       ],
       "summary": "Prototype Pollution in highlight.js",
       "severity": "MODERATE",
+      "published": "2020-11-24T22:58:41Z",
       "ranges": [
         {
           "introduced": "0",

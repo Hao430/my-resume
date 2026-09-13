@@ -12,6 +12,8 @@
   "deprecatedReason": "",
   "versionCount": 259,
   "latestAffected": false,
+  "vulnerabilityCount": 0,
+  "severityCounts": {},
   "vulnerabilities": [],
   "fetchedAt": "2026-09-13",
   "homepage": "https://github.com/postcss/autoprefixer#readme",

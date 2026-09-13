@@ -10,6 +10,11 @@
   "deprecatedReason": "",
   "versionCount": 76,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "CRITICAL": 1,
+    "UNKNOWN": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-h8pj-cxx2-jfg2",
@@ -18,6 +23,7 @@
       ],
       "summary": "Improper Input Validation in httpx",
       "severity": "CRITICAL",
+      "published": "2022-04-29T00:00:25Z",
       "ranges": [
         {
           "introduced": "0",
@@ -32,6 +38,7 @@
       ],
       "summary": "PYSEC-2022-183",
       "severity": null,
+      "published": "2022-04-28T14:15:00Z",
       "ranges": [
         {
           "introduced": "0",

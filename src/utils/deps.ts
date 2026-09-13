@@ -63,6 +63,7 @@ export interface RawOsvVuln {
   id: string
   summary?: string
   aliases?: string[]
+  published?: string
   database_specific?: { severity?: string }
   affected?: {
     ranges?: {
@@ -86,6 +87,8 @@ export interface VulnerabilityRecord {
   summary: string
   /** LOW | MODERATE | HIGH | CRITICAL；缺失为 null，UI 须能处理 */
   severity: string | null
+  /** 披露时间，用于排序与展示；缺失为 null */
+  published: string | null
   ranges: VulnRange[]
 }
 
@@ -108,12 +111,13 @@ export interface PackageRecord {
   repo?: string
   /** **当前最新版**是否落在任一受影响区间内（由 OSV 带 version 的查询直接给出） */
   latestAffected: boolean
-  /** **历史全量**漏洞，含已修复的——与 latestAffected 是两个不同的事实 */
+  /** **历史总数**，含已修复的——与 latestAffected 是两个不同的事实 */
+  vulnerabilityCount: number
+  severityCounts: Record<string, number>
+  /** 已按 §4.5 排序并截断；长度可能小于 vulnerabilityCount */
   vulnerabilities: VulnerabilityRecord[]
   fetchedAt: string
 }
-
-const SEVERITY_ORDER = ['LOW', 'MODERATE', 'HIGH', 'CRITICAL']
 
 /* ---------------- 变换 ---------------- */
 
@@ -183,7 +187,70 @@ export function toVulnerabilityRecord(osv: RawOsvVuln): VulnerabilityRecord {
     aliases: (osv.aliases ?? []).filter((alias) => /^CVE-/i.test(alias)),
     summary: osv.summary?.trim() || osv.id,
     severity,
+    published: typeof osv.published === 'string' ? osv.published : null,
     ranges: toRanges(osv.affected),
+  }
+}
+
+/* ---------------- 排序与截断（spec §4.5） ---------------- */
+
+/**
+ * 每包最多存储的漏洞条目数。实测 156 个包中仅 6 个超过此值，
+ * 截断后明细总体积从 1.8 MB 降到 0.51 MB，最大单文件从 614 KB 降到约 36 KB。
+ */
+export const MAX_STORED_VULNS = 50
+
+const SEVERITY_ORDER = ['LOW', 'MODERATE', 'HIGH', 'CRITICAL']
+
+/** 未知严重度记 -1，排在所有已知等级之后 */
+function severityRank(severity: string | null): number {
+  return severity ? SEVERITY_ORDER.indexOf(severity) : -1
+}
+
+/**
+ * 严重度降序 → 发布时间降序 → id 升序。
+ * 末位用 id 兜底是为了**排序确定**：否则同一份输入每次跑出的顺序可能不同，
+ * 每次同步都会产生满屏 git diff 噪声。
+ */
+export function sortVulnerabilities(vulnerabilities: VulnerabilityRecord[]): VulnerabilityRecord[] {
+  return [...vulnerabilities].sort((a, b) => {
+    const bySeverity = severityRank(b.severity) - severityRank(a.severity)
+    if (bySeverity !== 0) return bySeverity
+    const byDate = (b.published ?? '').localeCompare(a.published ?? '')
+    if (byDate !== 0) return byDate
+    return a.id.localeCompare(b.id)
+  })
+}
+
+/** 各严重度的条目数；严重度缺失记为 UNKNOWN。只统计出现过的键，保持 JSON 精简 */
+export function countBySeverity(vulnerabilities: VulnerabilityRecord[]): Record<string, number> {
+  const counts: Record<string, number> = {}
+  for (const vuln of vulnerabilities) {
+    const key = vuln.severity && SEVERITY_ORDER.includes(vuln.severity) ? vuln.severity : 'UNKNOWN'
+    counts[key] = (counts[key] ?? 0) + 1
+  }
+  return counts
+}
+
+export interface CappedVulnerabilities {
+  /** **历史总数**，与截断无关——页面必须用它而不是 vulnerabilities.length */
+  vulnerabilityCount: number
+  severityCounts: Record<string, number>
+  vulnerabilities: VulnerabilityRecord[]
+}
+
+/**
+ * 排序并截断。总数与严重度分布都基于**截断前**的全部条目统计，
+ * 否则读者会以为这个包只有 50 条漏洞、且分布被扭曲。
+ */
+export function capVulnerabilities(
+  vulnerabilities: VulnerabilityRecord[],
+  max = MAX_STORED_VULNS,
+): CappedVulnerabilities {
+  return {
+    vulnerabilityCount: vulnerabilities.length,
+    severityCounts: countBySeverity(vulnerabilities),
+    vulnerabilities: sortVulnerabilities(vulnerabilities).slice(0, max),
   }
 }
 
@@ -246,7 +313,8 @@ export function toIndexEntry(record: PackageRecord): PackageIndexEntry {
     licenses: record.licenses,
     deprecated: record.deprecated,
     latestAffected: record.latestAffected,
-    vulnerabilityCount: record.vulnerabilities.length,
+    // 用历史总数，不是截断后的长度——否则索引里的数字会比包页少
+    vulnerabilityCount: record.vulnerabilityCount,
     highestSeverity: highestSeverity(record.vulnerabilities),
   }
 }
@@ -278,6 +346,7 @@ export function buildPackageRecord(input: BuildPackageInput): PackageRecord | nu
   if (!latest) return null
 
   const detail = input.versionDetail
+  const capped = capVulnerabilities(input.vulnerabilities)
   const record: PackageRecord = {
     system: input.system,
     name: input.name,
@@ -290,7 +359,9 @@ export function buildPackageRecord(input: BuildPackageInput): PackageRecord | nu
     deprecatedReason: detail.deprecatedReason ?? '',
     versionCount: input.versionList.versions?.length ?? 0,
     latestAffected: input.latestAffected,
-    vulnerabilities: input.vulnerabilities,
+    vulnerabilityCount: capped.vulnerabilityCount,
+    severityCounts: capped.severityCounts,
+    vulnerabilities: capped.vulnerabilities,
     fetchedAt: input.fetchedAt,
   }
 

@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 187,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "HIGH": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-35q2-47q7-3pc3",
@@ -20,6 +24,7 @@
       ],
       "summary": "Node-Redis potential exponential regex in monitor mode",
       "severity": "HIGH",
+      "published": "2021-04-27T15:56:03Z",
       "ranges": [
         {
           "introduced": "2.6.0",

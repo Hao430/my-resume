@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 317,
   "latestAffected": false,
+  "vulnerabilityCount": 3,
+  "severityCounts": {
+    "HIGH": 1,
+    "UNKNOWN": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-8h2j-cgx8-6xv7",
@@ -20,25 +25,8 @@
       ],
       "summary": "Cross-Site Request Forgery (CSRF) in FastAPI",
       "severity": "HIGH",
+      "published": "2021-06-10T15:43:54Z",
       "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.65.2"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2021-100",
-      "aliases": [
-        "CVE-2021-32677"
-      ],
-      "summary": "PYSEC-2021-100",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "fa7e3c996edf2d5482fff8f9d890ac2390dede4d"
-        },
         {
           "introduced": "0",
           "fixed": "0.65.2"
@@ -52,6 +40,7 @@
       ],
       "summary": "PYSEC-2024-38",
       "severity": null,
+      "published": "2024-02-05T15:15:00Z",
       "ranges": [
         {
           "introduced": "0",
@@ -60,6 +49,25 @@
         {
           "introduced": "0",
           "fixed": "0.109.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-100",
+      "aliases": [
+        "CVE-2021-32677"
+      ],
+      "summary": "PYSEC-2021-100",
+      "severity": null,
+      "published": "2021-06-09T18:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "fa7e3c996edf2d5482fff8f9d890ac2390dede4d"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.65.2"
         }
       ]
     }

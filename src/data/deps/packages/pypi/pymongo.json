@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 1695,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "MODERATE": 2,
+    "UNKNOWN": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-m87m-mmvp-v9qm",
@@ -20,6 +25,7 @@
       ],
       "summary": "PyMongo Out-of-bounds Read in the bson module",
       "severity": "MODERATE",
+      "published": "2024-06-05T15:30:39Z",
       "ranges": [
         {
           "introduced": "0",
@@ -34,25 +40,8 @@
       ],
       "summary": "Use of NullPointerException Catch to Detect NULL Pointer Dereference in Pymongo",
       "severity": "MODERATE",
+      "published": "2022-05-14T02:10:10Z",
       "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.5.2"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2013-30",
-      "aliases": [
-        "CVE-2013-2132"
-      ],
-      "summary": "PYSEC-2013-30",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "a060c15ef87e0f0e72974c7c0e57fe811bbd06a2"
-        },
         {
           "introduced": "0",
           "fixed": "2.5.2"
@@ -66,10 +55,30 @@
       ],
       "summary": "PyMongo Out-of-bounds Read in the bson module",
       "severity": null,
+      "published": "2026-07-07T11:45:45.680005Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "4.6.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-30",
+      "aliases": [
+        "CVE-2013-2132"
+      ],
+      "summary": "PYSEC-2013-30",
+      "severity": null,
+      "published": "2013-08-15T17:55:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "a060c15ef87e0f0e72974c7c0e57fe811bbd06a2"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.5.2"
         }
       ]
     }

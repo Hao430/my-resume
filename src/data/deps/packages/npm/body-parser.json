@@ -12,6 +12,12 @@
   "deprecatedReason": "",
   "versionCount": 85,
   "latestAffected": false,
+  "vulnerabilityCount": 3,
+  "severityCounts": {
+    "HIGH": 1,
+    "LOW": 1,
+    "MODERATE": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-qwcr-r2fm-qrc7",
@@ -20,28 +26,11 @@
       ],
       "summary": "body-parser vulnerable to denial of service when url encoding is enabled",
       "severity": "HIGH",
+      "published": "2024-09-10T15:52:39Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "1.20.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-v422-hmwv-36x6",
-      "aliases": [
-        "CVE-2026-12590"
-      ],
-      "summary": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.20.6"
-        },
-        {
-          "introduced": "2.0.0",
-          "fixed": "2.3.0"
         }
       ]
     },
@@ -52,10 +41,30 @@
       ],
       "summary": "body-parser is vulnerable to denial of service when url encoding is used",
       "severity": "MODERATE",
+      "published": "2025-11-25T14:20:21Z",
       "ranges": [
         {
           "introduced": "2.2.0",
           "fixed": "2.2.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v422-hmwv-36x6",
+      "aliases": [
+        "CVE-2026-12590"
+      ],
+      "summary": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
+      "severity": "LOW",
+      "published": "2026-07-20T23:23:26Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.20.6"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.3.0"
         }
       ]
     }

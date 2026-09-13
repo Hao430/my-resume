@@ -12,7 +12,54 @@
   "deprecatedReason": "",
   "versionCount": 145,
   "latestAffected": false,
+  "vulnerabilityCount": 5,
+  "severityCounts": {
+    "HIGH": 5
+  },
   "vulnerabilities": [
+    {
+      "id": "GHSA-7r86-cg39-jmmj",
+      "aliases": [
+        "CVE-2026-27903"
+      ],
+      "summary": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+      "severity": "HIGH",
+      "published": "2026-02-26T22:10:18Z",
+      "ranges": [
+        {
+          "introduced": "10.0.0",
+          "fixed": "10.2.3"
+        },
+        {
+          "introduced": "9.0.0",
+          "fixed": "9.0.7"
+        },
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.0.6"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.4.8"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.2.2"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.1.8"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.2.5"
+        },
+        {
+          "introduced": "0",
+          "fixed": "3.1.3"
+        }
+      ]
+    },
     {
       "id": "GHSA-23c5-xmqv-rm74",
       "aliases": [
@@ -20,6 +67,7 @@
       ],
       "summary": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
       "severity": "HIGH",
+      "published": "2026-02-26T22:07:15Z",
       "ranges": [
         {
           "introduced": "10.0.0",
@@ -62,6 +110,7 @@
       ],
       "summary": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
       "severity": "HIGH",
+      "published": "2026-02-18T22:38:11Z",
       "ranges": [
         {
           "introduced": "10.0.0",
@@ -98,54 +147,13 @@
       ]
     },
     {
-      "id": "GHSA-7r86-cg39-jmmj",
-      "aliases": [
-        "CVE-2026-27903"
-      ],
-      "summary": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "10.0.0",
-          "fixed": "10.2.3"
-        },
-        {
-          "introduced": "9.0.0",
-          "fixed": "9.0.7"
-        },
-        {
-          "introduced": "8.0.0",
-          "fixed": "8.0.6"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.4.8"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.2.2"
-        },
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.1.8"
-        },
-        {
-          "introduced": "4.0.0",
-          "fixed": "4.2.5"
-        },
-        {
-          "introduced": "0",
-          "fixed": "3.1.3"
-        }
-      ]
-    },
-    {
       "id": "GHSA-f8q6-p94x-37v3",
       "aliases": [
         "CVE-2022-3517"
       ],
       "summary": "minimatch ReDoS vulnerability",
       "severity": "HIGH",
+      "published": "2022-10-18T12:00:32Z",
       "ranges": [
         {
           "introduced": "0",
@@ -160,6 +168,7 @@
       ],
       "summary": "Regular Expression Denial of Service in minimatch",
       "severity": "HIGH",
+      "published": "2018-10-09T00:40:41Z",
       "ranges": [
         {
           "introduced": "0",

@@ -12,6 +12,12 @@
   "deprecatedReason": "",
   "versionCount": 96,
   "latestAffected": false,
+  "vulnerabilityCount": 3,
+  "severityCounts": {
+    "HIGH": 1,
+    "MODERATE": 1,
+    "LOW": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-r683-j2x4-v87g",
@@ -20,6 +26,7 @@
       ],
       "summary": "node-fetch forwards secure headers to untrusted sites",
       "severity": "HIGH",
+      "published": "2022-01-21T23:55:52Z",
       "ranges": [
         {
           "introduced": "3.0.0",
@@ -38,6 +45,7 @@
       ],
       "summary": "node-fetch Inefficient Regular Expression Complexity",
       "severity": "MODERATE",
+      "published": "2022-08-02T00:00:25Z",
       "ranges": [
         {
           "introduced": "3.0.0",
@@ -52,6 +60,7 @@
       ],
       "summary": "The `size` option isn't honored after following a redirect in node-fetch",
       "severity": "LOW",
+      "published": "2020-09-10T17:46:21Z",
       "ranges": [
         {
           "introduced": "2.0.0",

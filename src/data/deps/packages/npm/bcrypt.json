@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 55,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "MODERATE": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-5wg4-74h6-q47v",
@@ -20,6 +24,7 @@
       ],
       "summary": "Integer Overflow or Wraparound and Use of a Broken or Risky Cryptographic Algorithm in bcrypt",
       "severity": "MODERATE",
+      "published": "2020-08-20T14:38:49Z",
       "ranges": [
         {
           "introduced": "0",

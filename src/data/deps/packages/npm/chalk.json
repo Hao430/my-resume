@@ -12,12 +12,17 @@
   "deprecatedReason": "",
   "versionCount": 44,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "UNKNOWN": 1
+  },
   "vulnerabilities": [
     {
       "id": "MAL-2025-46969",
       "aliases": [],
       "summary": "Malicious code in chalk (npm)",
       "severity": null,
+      "published": "2025-09-08T17:11:19Z",
       "ranges": []
     }
   ],

@@ -12,7 +12,31 @@
   "deprecatedReason": "",
   "versionCount": 206,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "MODERATE": 2,
+    "UNKNOWN": 2
+  },
   "vulnerabilities": [
+    {
+      "id": "GHSA-mr82-8j83-vxmv",
+      "aliases": [
+        "CVE-2024-3772"
+      ],
+      "summary": "Pydantic regular expression denial of service",
+      "severity": "MODERATE",
+      "published": "2024-04-15T03:31:00Z",
+      "ranges": [
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.4.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.10.13"
+        }
+      ]
+    },
     {
       "id": "GHSA-5jqp-qgf6-3pvh",
       "aliases": [
@@ -20,6 +44,7 @@
       ],
       "summary": "Use of \"infinity\" as an input to datetime and date fields causes infinite loop in pydantic",
       "severity": "MODERATE",
+      "published": "2021-05-13T20:23:17Z",
       "ranges": [
         {
           "introduced": "0",
@@ -36,20 +61,21 @@
       ]
     },
     {
-      "id": "GHSA-mr82-8j83-vxmv",
+      "id": "PYSEC-2026-1812",
       "aliases": [
         "CVE-2024-3772"
       ],
       "summary": "Pydantic regular expression denial of service",
-      "severity": "MODERATE",
+      "severity": null,
+      "published": "2026-07-07T11:45:38.517274Z",
       "ranges": [
-        {
-          "introduced": "2.0.0",
-          "fixed": "2.4.0"
-        },
         {
           "introduced": "0",
           "fixed": "1.10.13"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.4.0"
         }
       ]
     },
@@ -60,6 +86,7 @@
       ],
       "summary": "PYSEC-2021-47",
       "severity": null,
+      "published": "2021-05-13T19:15:00Z",
       "ranges": [
         {
           "introduced": "0",
@@ -76,24 +103,6 @@
         {
           "introduced": "1.8",
           "fixed": "1.8.2"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1812",
-      "aliases": [
-        "CVE-2024-3772"
-      ],
-      "summary": "Pydantic regular expression denial of service",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.10.13"
-        },
-        {
-          "introduced": "2.0.0",
-          "fixed": "2.4.0"
         }
       ]
     }

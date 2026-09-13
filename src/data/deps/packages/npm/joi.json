@@ -12,7 +12,31 @@
   "deprecatedReason": "",
   "versionCount": 259,
   "latestAffected": false,
+  "vulnerabilityCount": 3,
+  "severityCounts": {
+    "LOW": 2,
+    "MODERATE": 1
+  },
   "vulnerabilities": [
+    {
+      "id": "GHSA-q7cg-457f-vx79",
+      "aliases": [
+        "CVE-2026-48038"
+      ],
+      "summary": "joi has an uncaught RangeError on deeply nested input through recursive `link()` schemas",
+      "severity": "MODERATE",
+      "published": "2026-06-11T13:27:32Z",
+      "ranges": [
+        {
+          "introduced": "18.0.0",
+          "fixed": "18.2.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "17.13.4"
+        }
+      ]
+    },
     {
       "id": "GHSA-6w3j-5fw6-r9vr",
       "aliases": [
@@ -20,6 +44,7 @@
       ],
       "summary": "joi: Prototype pollution via a `__proto__` language key in custom messages",
       "severity": "LOW",
+      "published": "2026-09-08T20:55:58Z",
       "ranges": [
         {
           "introduced": "17.2.0",
@@ -42,6 +67,7 @@
       ],
       "summary": "joi: object().rename() with a template target can set the validated object's prototype",
       "severity": "LOW",
+      "published": "2026-09-08T20:51:21Z",
       "ranges": [
         {
           "introduced": "16.0.0",
@@ -50,24 +76,6 @@
         {
           "introduced": "18.0.0",
           "fixed": "18.2.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-q7cg-457f-vx79",
-      "aliases": [
-        "CVE-2026-48038"
-      ],
-      "summary": "joi has an uncaught RangeError on deeply nested input through recursive `link()` schemas",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "18.0.0",
-          "fixed": "18.2.1"
-        },
-        {
-          "introduced": "0",
-          "fixed": "17.13.4"
         }
       ]
     }

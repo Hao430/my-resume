@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 230,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "LOW": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-4x5r-pxfx-6jf8",
@@ -20,6 +24,7 @@
       ],
       "summary": "@babel/core: Arbitrary File Read via sourceMappingURL Comment",
       "severity": "LOW",
+      "published": "2026-06-15T17:14:14Z",
       "ranges": [
         {
           "introduced": "8.0.0-alpha.0",

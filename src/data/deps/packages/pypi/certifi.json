@@ -12,18 +12,26 @@
   "deprecatedReason": "",
   "versionCount": 75,
   "latestAffected": false,
+  "vulnerabilityCount": 6,
+  "severityCounts": {
+    "LOW": 1,
+    "MODERATE": 1,
+    "HIGH": 1,
+    "UNKNOWN": 3
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-248v-346w-9cwc",
+      "id": "GHSA-xqr8-7jwr-rhp7",
       "aliases": [
-        "CVE-2024-39689"
+        "CVE-2023-37920"
       ],
-      "summary": "Certifi removes GLOBALTRUST root certificate",
-      "severity": "LOW",
+      "summary": "Removal of e-Tugra root certificate",
+      "severity": "HIGH",
+      "published": "2023-07-25T14:43:53Z",
       "ranges": [
         {
-          "introduced": "2021.5.30",
-          "fixed": "2024.7.4"
+          "introduced": "2015.4.28",
+          "fixed": "2023.7.22"
         }
       ]
     },
@@ -34,6 +42,7 @@
       ],
       "summary": "Certifi removing TrustCor root certificate",
       "severity": "MODERATE",
+      "published": "2022-12-07T23:05:18Z",
       "ranges": [
         {
           "introduced": "2017.11.05",
@@ -42,12 +51,47 @@
       ]
     },
     {
-      "id": "GHSA-xqr8-7jwr-rhp7",
+      "id": "GHSA-248v-346w-9cwc",
+      "aliases": [
+        "CVE-2024-39689"
+      ],
+      "summary": "Certifi removes GLOBALTRUST root certificate",
+      "severity": "LOW",
+      "published": "2024-07-05T20:06:40Z",
+      "ranges": [
+        {
+          "introduced": "2021.5.30",
+          "fixed": "2024.7.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-230",
+      "aliases": [
+        "CVE-2024-39689"
+      ],
+      "summary": "PYSEC-2024-230",
+      "severity": null,
+      "published": "2024-07-05T19:15:10Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "bd8153872e9c6fc98f4023df9c2deaffea2fa463"
+        },
+        {
+          "introduced": "2021.5.30",
+          "fixed": "2024.7.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-135",
       "aliases": [
         "CVE-2023-37920"
       ],
-      "summary": "Removal of e-Tugra root certificate",
-      "severity": "HIGH",
+      "summary": "PYSEC-2023-135",
+      "severity": null,
+      "published": "2023-08-03T19:36:12Z",
       "ranges": [
         {
           "introduced": "2015.4.28",
@@ -62,42 +106,11 @@
       ],
       "summary": "PYSEC-2022-42986",
       "severity": null,
+      "published": "2022-12-07T22:15:00Z",
       "ranges": [
         {
           "introduced": "2017.11.5",
           "fixed": "2022.12.7"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2023-135",
-      "aliases": [
-        "CVE-2023-37920"
-      ],
-      "summary": "PYSEC-2023-135",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "2015.4.28",
-          "fixed": "2023.7.22"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2024-230",
-      "aliases": [
-        "CVE-2024-39689"
-      ],
-      "summary": "PYSEC-2024-230",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "bd8153872e9c6fc98f4023df9c2deaffea2fa463"
-        },
-        {
-          "introduced": "2021.5.30",
-          "fixed": "2024.7.4"
         }
       ]
     }

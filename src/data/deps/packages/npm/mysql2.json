@@ -12,33 +12,13 @@
   "deprecatedReason": "",
   "versionCount": 325,
   "latestAffected": false,
+  "vulnerabilityCount": 7,
+  "severityCounts": {
+    "HIGH": 2,
+    "MODERATE": 3,
+    "CRITICAL": 2
+  },
   "vulnerabilities": [
-    {
-      "id": "GHSA-3f6p-5ww8-9rcr",
-      "aliases": [],
-      "summary": "MySQL2: Auth Plugin Downgrade to mysql_clear_password Leaks Plaintext Credentials",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.22.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-49j4-86m8-q2jw",
-      "aliases": [
-        "CVE-2024-21509"
-      ],
-      "summary": "mysql2 vulnerable to Prototype Poisoning",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.9.4"
-        }
-      ]
-    },
     {
       "id": "GHSA-4rch-2fh8-94vw",
       "aliases": [
@@ -46,6 +26,7 @@
       ],
       "summary": "MySQL2 for Node Arbitrary Code Injection",
       "severity": "CRITICAL",
+      "published": "2024-04-23T06:30:47Z",
       "ranges": [
         {
           "introduced": "0",
@@ -60,6 +41,63 @@
       ],
       "summary": "mysql2 Remote Code Execution (RCE) via the readCodeFor function",
       "severity": "CRITICAL",
+      "published": "2024-04-11T06:30:35Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.9.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3f6p-5ww8-9rcr",
+      "aliases": [],
+      "summary": "MySQL2: Auth Plugin Downgrade to mysql_clear_password Leaks Plaintext Credentials",
+      "severity": "HIGH",
+      "published": "2026-09-01T16:40:34Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.22.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pmh2-wpjm-fj45",
+      "aliases": [
+        "CVE-2024-21512"
+      ],
+      "summary": "mysql2 vulnerable to Prototype Pollution",
+      "severity": "HIGH",
+      "published": "2024-05-30T18:34:32Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.9.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rgwj-5xj2-c3m3",
+      "aliases": [],
+      "summary": "MySQL2: Unbounded zlib inflate in compressed MySQL protocol handler allows decompression-bomb DoS",
+      "severity": "MODERATE",
+      "published": "2026-08-31T22:36:20Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.23.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-49j4-86m8-q2jw",
+      "aliases": [
+        "CVE-2024-21509"
+      ],
+      "summary": "mysql2 vulnerable to Prototype Poisoning",
+      "severity": "MODERATE",
+      "published": "2024-04-10T15:30:39Z",
       "ranges": [
         {
           "introduced": "0",
@@ -74,36 +112,11 @@
       ],
       "summary": "mysql2 cache poisoning vulnerability",
       "severity": "MODERATE",
+      "published": "2024-04-10T15:30:39Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "3.9.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-pmh2-wpjm-fj45",
-      "aliases": [
-        "CVE-2024-21512"
-      ],
-      "summary": "mysql2 vulnerable to Prototype Pollution",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.9.8"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-rgwj-5xj2-c3m3",
-      "aliases": [],
-      "summary": "MySQL2: Unbounded zlib inflate in compressed MySQL protocol handler allows decompression-bomb DoS",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.23.1"
         }
       ]
     }

@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 168,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "HIGH": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-5j98-mcp5-4vw2",
@@ -20,6 +24,7 @@
       ],
       "summary": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
       "severity": "HIGH",
+      "published": "2025-11-17T17:38:56Z",
       "ranges": [
         {
           "introduced": "11.0.0",

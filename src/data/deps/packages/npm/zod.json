@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 1010,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "MODERATE": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-m95q-7qp3-xv42",
@@ -20,6 +24,7 @@
       ],
       "summary": "Zod denial of service vulnerability",
       "severity": "MODERATE",
+      "published": "2023-09-28T21:30:58Z",
       "ranges": [
         {
           "introduced": "0",

@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 192,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "MODERATE": 1,
+    "UNKNOWN": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-6w46-j5rx-g56g",
@@ -20,6 +25,7 @@
       ],
       "summary": "pytest has vulnerable tmpdir handling",
       "severity": "MODERATE",
+      "published": "2026-01-22T06:30:29Z",
       "ranges": [
         {
           "introduced": "0",
@@ -34,6 +40,7 @@
       ],
       "summary": "pytest has vulnerable tmpdir handling",
       "severity": null,
+      "published": "2026-07-07T16:03:19.758250Z",
       "ranges": [
         {
           "introduced": "0",

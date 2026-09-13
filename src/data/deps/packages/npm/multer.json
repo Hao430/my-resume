@@ -12,50 +12,40 @@
   "deprecatedReason": "",
   "versionCount": 56,
   "latestAffected": false,
+  "vulnerabilityCount": 13,
+  "severityCounts": {
+    "MODERATE": 1,
+    "HIGH": 11,
+    "LOW": 1
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-3p4h-7m6x-2hcm",
+      "id": "GHSA-wc9g-mqfw-jrwm",
       "aliases": [
-        "CVE-2026-5038"
+        "CVE-2026-77078"
       ],
-      "summary": "Multer vulnerable to Denial of Service via incomplete cleanup of aborted uploads",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "2.0.0-alpha.1",
-          "fixed": "2.2.0"
-        },
-        {
-          "introduced": "3.0.0-alpha.1",
-          "fixed": "3.0.0-alpha.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-44fp-w29j-9vj5",
-      "aliases": [
-        "CVE-2025-47935"
-      ],
-      "summary": "Multer vulnerable to Denial of Service via memory leaks from unclosed streams",
+      "summary": "multer vulnerable to Denial of Service via crafted multipart field names",
       "severity": "HIGH",
+      "published": "2026-09-08T21:30:20Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "2.0.0"
+          "fixed": "2.3.0"
         }
       ]
     },
     {
-      "id": "GHSA-4pg4-qvpc-4q3h",
+      "id": "GHSA-qfvm-cv95-jqjf",
       "aliases": [
-        "CVE-2025-47944"
+        "CVE-2026-77037"
       ],
-      "summary": "Multer vulnerable to Denial of Service from maliciously crafted requests",
+      "summary": "multer vulnerable to Denial of Service via file descriptor leak on aborted uploads",
       "severity": "HIGH",
+      "published": "2026-09-08T21:29:51Z",
       "ranges": [
         {
-          "introduced": "1.4.4-lts.1",
-          "fixed": "2.0.0"
+          "introduced": "2.2.0",
+          "fixed": "2.3.0"
         }
       ]
     },
@@ -66,24 +56,11 @@
       ],
       "summary": "multer vulnerable to Denial of Service via oversized array index in field names",
       "severity": "HIGH",
+      "published": "2026-09-08T21:28:43Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "2.3.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-5528-5vmv-3xc2",
-      "aliases": [
-        "CVE-2026-3520"
-      ],
-      "summary": "Multer Vulnerable to Denial of Service via Uncontrolled Recursion",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.1.1"
         }
       ]
     },
@@ -94,6 +71,7 @@
       ],
       "summary": "Multer vulnerable to Denial of Service via deeply nested field names",
       "severity": "HIGH",
+      "published": "2026-06-17T18:12:27Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -106,12 +84,58 @@
       ]
     },
     {
+      "id": "GHSA-5528-5vmv-3xc2",
+      "aliases": [
+        "CVE-2026-3520"
+      ],
+      "summary": "Multer Vulnerable to Denial of Service via Uncontrolled Recursion",
+      "severity": "HIGH",
+      "published": "2026-03-05T00:27:50Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xf7r-hgr6-v32p",
+      "aliases": [
+        "CVE-2026-3304"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via incomplete cleanup",
+      "severity": "HIGH",
+      "published": "2026-03-01T01:18:50Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v52c-386h-88mc",
+      "aliases": [
+        "CVE-2026-2359"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via resource exhaustion",
+      "severity": "HIGH",
+      "published": "2026-03-01T01:18:27Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.1.0"
+        }
+      ]
+    },
+    {
       "id": "GHSA-fjgf-rc76-4x9p",
       "aliases": [
         "CVE-2025-7338"
       ],
       "summary": "Multer vulnerable to Denial of Service via unhandled exception from malformed request",
       "severity": "HIGH",
+      "published": "2025-07-17T21:01:54Z",
       "ranges": [
         {
           "introduced": "1.4.4-lts.1",
@@ -126,6 +150,7 @@
       ],
       "summary": "Multer vulnerable to Denial of Service via unhandled exception",
       "severity": "HIGH",
+      "published": "2025-06-05T01:09:35Z",
       "ranges": [
         {
           "introduced": "1.4.4-lts.1",
@@ -134,16 +159,51 @@
       ]
     },
     {
-      "id": "GHSA-qfvm-cv95-jqjf",
+      "id": "GHSA-4pg4-qvpc-4q3h",
       "aliases": [
-        "CVE-2026-77037"
+        "CVE-2025-47944"
       ],
-      "summary": "multer vulnerable to Denial of Service via file descriptor leak on aborted uploads",
+      "summary": "Multer vulnerable to Denial of Service from maliciously crafted requests",
       "severity": "HIGH",
+      "published": "2025-05-19T22:16:30Z",
       "ranges": [
         {
-          "introduced": "2.2.0",
-          "fixed": "2.3.0"
+          "introduced": "1.4.4-lts.1",
+          "fixed": "2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-44fp-w29j-9vj5",
+      "aliases": [
+        "CVE-2025-47935"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via memory leaks from unclosed streams",
+      "severity": "HIGH",
+      "published": "2025-05-19T22:04:17Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3p4h-7m6x-2hcm",
+      "aliases": [
+        "CVE-2026-5038"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via incomplete cleanup of aborted uploads",
+      "severity": "MODERATE",
+      "published": "2026-06-17T18:11:48Z",
+      "ranges": [
+        {
+          "introduced": "2.0.0-alpha.1",
+          "fixed": "2.2.0"
+        },
+        {
+          "introduced": "3.0.0-alpha.1",
+          "fixed": "3.0.0-alpha.2"
         }
       ]
     },
@@ -154,52 +214,11 @@
       ],
       "summary": "multer vulnerable to file size limit bypass via async fileFilter race condition",
       "severity": "LOW",
+      "published": "2026-09-08T21:29:42Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "2.3.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-v52c-386h-88mc",
-      "aliases": [
-        "CVE-2026-2359"
-      ],
-      "summary": "Multer vulnerable to Denial of Service via resource exhaustion",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.1.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-wc9g-mqfw-jrwm",
-      "aliases": [
-        "CVE-2026-77078"
-      ],
-      "summary": "multer vulnerable to Denial of Service via crafted multipart field names",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.3.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-xf7r-hgr6-v32p",
-      "aliases": [
-        "CVE-2026-3304"
-      ],
-      "summary": "Multer vulnerable to Denial of Service via incomplete cleanup",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.1.0"
         }
       ]
     }

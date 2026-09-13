@@ -12,32 +12,40 @@
   "deprecatedReason": "",
   "versionCount": 304,
   "latestAffected": false,
+  "vulnerabilityCount": 35,
+  "severityCounts": {
+    "MODERATE": 16,
+    "LOW": 9,
+    "HIGH": 10
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-2mjp-6q6p-2qxm",
+      "id": "GHSA-4cwx-7wf7-3272",
       "aliases": [
-        "CVE-2026-1525"
+        "CVE-2026-13697"
       ],
-      "summary": "Undici has an HTTP Request/Response Smuggling issue",
-      "severity": "MODERATE",
+      "summary": "undici vulnerable to cross-user information disclosure and parse-time crash via degenerate private cache directives",
+      "severity": "HIGH",
+      "published": "2026-08-03T19:19:47Z",
       "ranges": [
         {
-          "introduced": "0",
-          "fixed": "6.24.0"
+          "introduced": "7.0.0",
+          "fixed": "7.29.0"
         },
         {
-          "introduced": "7.0.0",
-          "fixed": "7.24.0"
+          "introduced": "8.0.0",
+          "fixed": "8.9.0"
         }
       ]
     },
     {
-      "id": "GHSA-35p6-xmwp-9g52",
+      "id": "GHSA-vxpw-j846-p89q",
       "aliases": [
-        "CVE-2026-6733"
+        "CVE-2026-12151"
       ],
-      "summary": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
-      "severity": "LOW",
+      "summary": "undici WebSocket client vulnerable to denial of service via fragment count bypass",
+      "severity": "HIGH",
+      "published": "2026-06-19T14:22:01Z",
       "ranges": [
         {
           "introduced": "0",
@@ -54,20 +62,40 @@
       ]
     },
     {
-      "id": "GHSA-3787-6prv-h9w3",
+      "id": "GHSA-hm92-r4w5-c3mj",
       "aliases": [
-        "CVE-2024-24758"
+        "CVE-2026-6734"
       ],
-      "summary": "Undici proxy-authorization header not cleared on cross-origin redirect in fetch",
-      "severity": "LOW",
+      "summary": "undici vulnerable to cross-origin request routing via SOCKS5 proxy pool reuse",
+      "severity": "HIGH",
+      "published": "2026-06-19T14:20:20Z",
       "ranges": [
         {
-          "introduced": "0",
-          "fixed": "5.28.3"
+          "introduced": "7.23.0",
+          "fixed": "7.28.0"
         },
         {
-          "introduced": "6.0.0",
-          "fixed": "6.6.1"
+          "introduced": "8.0.0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vmh5-mc38-953g",
+      "aliases": [
+        "CVE-2026-9697"
+      ],
+      "summary": "undici vulnerable to TLS certificate validation bypass via dropped requestTls in SOCKS5 ProxyAgent",
+      "severity": "HIGH",
+      "published": "2026-06-18T14:28:21Z",
+      "ranges": [
+        {
+          "introduced": "7.23.0",
+          "fixed": "7.28.0"
+        },
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.5.0"
         }
       ]
     },
@@ -78,6 +106,7 @@
       ],
       "summary": "undici WebSocket client vulnerable to denial of service via cumulative fragment bypass",
       "severity": "HIGH",
+      "published": "2026-06-18T14:28:10Z",
       "ranges": [
         {
           "introduced": "8.0.0",
@@ -86,40 +115,13 @@
       ]
     },
     {
-      "id": "GHSA-3cvr-822r-rqcc",
+      "id": "GHSA-vrm6-8vpv-qv8q",
       "aliases": [
-        "CVE-2022-31150"
+        "CVE-2026-1526"
       ],
-      "summary": "undici before v5.8.0 vulnerable to CRLF injection in request headers",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.8.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-3g92-w8c5-73pq",
-      "aliases": [
-        "CVE-2024-38372"
-      ],
-      "summary": "Undici vulnerable to data leak when using response.arrayBuffer()",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "6.14.0",
-          "fixed": "6.19.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-4992-7rv2-5pvq",
-      "aliases": [
-        "CVE-2026-1527"
-      ],
-      "summary": "Undici has CRLF Injection in undici via `upgrade` option",
-      "severity": "MODERATE",
+      "summary": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
+      "severity": "HIGH",
+      "published": "2026-03-13T20:41:56Z",
       "ranges": [
         {
           "introduced": "0",
@@ -132,58 +134,81 @@
       ]
     },
     {
-      "id": "GHSA-4cwx-7wf7-3272",
+      "id": "GHSA-v9p9-hfj2-hcw8",
       "aliases": [
-        "CVE-2026-13697"
+        "CVE-2026-2229"
       ],
-      "summary": "undici vulnerable to cross-user information disclosure and parse-time crash via degenerate private cache directives",
+      "summary": "Undici has Unhandled Exception in WebSocket Client Due to Invalid server_max_window_bits Validation",
       "severity": "HIGH",
+      "published": "2026-03-13T20:41:41Z",
       "ranges": [
         {
-          "introduced": "7.0.0",
-          "fixed": "7.29.0"
+          "introduced": "0",
+          "fixed": "6.24.0"
         },
         {
-          "introduced": "8.0.0",
-          "fixed": "8.9.0"
+          "introduced": "7.0.0",
+          "fixed": "7.24.0"
         }
       ]
     },
     {
-      "id": "GHSA-5r9g-qh6m-jxff",
+      "id": "GHSA-f269-vfmq-vjvj",
       "aliases": [
-        "CVE-2023-23936"
+        "CVE-2026-1528"
       ],
-      "summary": "CRLF Injection in Nodejs ‘undici’ via host",
-      "severity": "MODERATE",
+      "summary": "Undici: Malicious WebSocket 64-bit length overflows parser and crashes the client",
+      "severity": "HIGH",
+      "published": "2026-03-13T20:07:26Z",
       "ranges": [
         {
-          "introduced": "2.0.0",
+          "introduced": "6.0.0",
+          "fixed": "6.24.0"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.24.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r6ch-mqf9-qc9w",
+      "aliases": [
+        "CVE-2023-24807"
+      ],
+      "summary": "Regular Expression Denial of Service in Headers",
+      "severity": "HIGH",
+      "published": "2023-02-16T20:46:10Z",
+      "ranges": [
+        {
+          "introduced": "0",
           "fixed": "5.19.1"
         }
       ]
     },
     {
-      "id": "GHSA-8qr4-xgw6-wmr3",
+      "id": "GHSA-pgw7-wx7w-2w33",
       "aliases": [
-        "CVE-2022-35949"
+        "CVE-2022-32210"
       ],
-      "summary": "`undici.request` vulnerable to SSRF using absolute URL on `pathname`",
-      "severity": "MODERATE",
+      "summary": "ProxyAgent vulnerable to MITM",
+      "severity": "HIGH",
+      "published": "2022-06-17T01:02:29Z",
       "ranges": [
         {
-          "introduced": "0",
-          "fixed": "5.8.2"
+          "introduced": "4.8.2",
+          "fixed": "5.5.1"
         }
       ]
     },
     {
-      "id": "GHSA-8xcm-r25x-g524",
+      "id": "GHSA-m8rv-5g2x-5cg5",
       "aliases": [
-        "CVE-2026-16728"
+        "CVE-2026-15157"
       ],
-      "summary": "undici vulnerable to downstream response desynchronization via retry interceptor",
+      "summary": "undici vulnerable to CRLF Injection via blob-like body 'type' property",
       "severity": "MODERATE",
+      "published": "2026-08-03T19:33:53Z",
       "ranges": [
         {
           "introduced": "0",
@@ -200,178 +225,13 @@
       ]
     },
     {
-      "id": "GHSA-9f24-jqhm-jfcw",
-      "aliases": [
-        "CVE-2024-24750"
-      ],
-      "summary": "fetch(url) leads to a memory leak in undici",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.6.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-9qxr-qj54-h672",
-      "aliases": [
-        "CVE-2024-30261"
-      ],
-      "summary": "Undici's fetch with integrity option is too lax when algorithm is specified but hash value is in incorrect",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.28.4"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.11.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-c76h-2ccp-4975",
-      "aliases": [
-        "CVE-2025-22150"
-      ],
-      "summary": "Use of Insufficiently Random Values in undici",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "4.5.0",
-          "fixed": "5.28.5"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.21.1"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.2.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-cxrh-j4jr-qwg3",
-      "aliases": [
-        "CVE-2025-47279"
-      ],
-      "summary": "undici Denial of Service attack via bad certificate data",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.29.0"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.21.2"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.5.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-f269-vfmq-vjvj",
-      "aliases": [
-        "CVE-2026-1528"
-      ],
-      "summary": "Undici: Malicious WebSocket 64-bit length overflows parser and crashes the client",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.24.0"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.24.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-f772-66g8-q5h3",
-      "aliases": [
-        "CVE-2022-35948"
-      ],
-      "summary": "Nodejs ‘undici’ vulnerable to CRLF Injection via Content-Type",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.8.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-g8m3-5g58-fq7m",
-      "aliases": [
-        "CVE-2026-11525"
-      ],
-      "summary": "undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "6.27.0"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.28.0"
-        },
-        {
-          "introduced": "8.0.0",
-          "fixed": "8.5.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-g9mf-h72j-4rw9",
-      "aliases": [
-        "CVE-2026-22036"
-      ],
-      "summary": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.18.2"
-        },
-        {
-          "introduced": "0",
-          "fixed": "6.23.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hm92-r4w5-c3mj",
-      "aliases": [
-        "CVE-2026-6734"
-      ],
-      "summary": "undici vulnerable to cross-origin request routing via SOCKS5 proxy pool reuse",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "7.23.0",
-          "fixed": "7.28.0"
-        },
-        {
-          "introduced": "8.0.0",
-          "fixed": "8.2.0"
-        }
-      ]
-    },
-    {
       "id": "GHSA-jr45-8vmc-qm54",
       "aliases": [
         "CVE-2026-14643"
       ],
       "summary": "undici vulnerable to cross-user information disclosure via whitespace around equals in Cache-Control directives",
       "severity": "MODERATE",
+      "published": "2026-08-03T19:32:12Z",
       "ranges": [
         {
           "introduced": "7.0.0",
@@ -384,30 +244,36 @@
       ]
     },
     {
-      "id": "GHSA-m4v8-wqvr-p9f7",
+      "id": "GHSA-v3r7-h72x-cjcm",
       "aliases": [
-        "CVE-2024-30260"
+        "CVE-2026-16729"
       ],
-      "summary": "Undici's Proxy-Authorization header not cleared on cross-origin redirect for dispatch, request, stream, pipeline",
-      "severity": "LOW",
+      "summary": "undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields",
+      "severity": "MODERATE",
+      "published": "2026-08-03T19:30:52Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "5.28.4"
+          "fixed": "6.28.0"
         },
         {
-          "introduced": "6.0.0",
-          "fixed": "6.11.1"
+          "introduced": "7.0.0",
+          "fixed": "7.29.0"
+        },
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.9.0"
         }
       ]
     },
     {
-      "id": "GHSA-m8rv-5g2x-5cg5",
+      "id": "GHSA-8xcm-r25x-g524",
       "aliases": [
-        "CVE-2026-15157"
+        "CVE-2026-16728"
       ],
-      "summary": "undici vulnerable to CRLF Injection via blob-like body 'type' property",
+      "summary": "undici vulnerable to downstream response desynchronization via retry interceptor",
       "severity": "MODERATE",
+      "published": "2026-08-03T19:24:33Z",
       "ranges": [
         {
           "introduced": "0",
@@ -430,6 +296,7 @@
       ],
       "summary": "undici vulnerable to HTTP header injection via Set-Cookie percent-decoding",
       "severity": "MODERATE",
+      "published": "2026-06-19T14:21:30Z",
       "ranges": [
         {
           "introduced": "0",
@@ -442,34 +309,6 @@
         {
           "introduced": "8.0.0",
           "fixed": "8.5.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-pgw7-wx7w-2w33",
-      "aliases": [
-        "CVE-2022-32210"
-      ],
-      "summary": "ProxyAgent vulnerable to MITM",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "4.8.2",
-          "fixed": "5.5.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-phc3-fgpg-7m6h",
-      "aliases": [
-        "CVE-2026-2581"
-      ],
-      "summary": "Undici has Unbounded Memory Consumption in its DeduplicationHandler via Response Buffering that leads to DoS",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "7.17.0",
-          "fixed": "7.24.0"
         }
       ]
     },
@@ -480,6 +319,7 @@
       ],
       "summary": "undici vulnerable to cross-user information disclosure via shared cache whitespace bypass",
       "severity": "MODERATE",
+      "published": "2026-06-18T14:28:13Z",
       "ranges": [
         {
           "introduced": "7.0.0",
@@ -492,12 +332,168 @@
       ]
     },
     {
-      "id": "GHSA-q768-x9m6-m9qp",
+      "id": "GHSA-4992-7rv2-5pvq",
       "aliases": [
-        "CVE-2022-31151"
+        "CVE-2026-1527"
       ],
-      "summary": "undici before v5.8.0 vulnerable to uncleared cookies on cross-host / cross-origin redirect",
-      "severity": "LOW",
+      "summary": "Undici has CRLF Injection in undici via `upgrade` option",
+      "severity": "MODERATE",
+      "published": "2026-03-13T20:41:26Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.24.0"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.24.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-phc3-fgpg-7m6h",
+      "aliases": [
+        "CVE-2026-2581"
+      ],
+      "summary": "Undici has Unbounded Memory Consumption in its DeduplicationHandler via Response Buffering that leads to DoS",
+      "severity": "MODERATE",
+      "published": "2026-03-13T20:37:58Z",
+      "ranges": [
+        {
+          "introduced": "7.17.0",
+          "fixed": "7.24.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2mjp-6q6p-2qxm",
+      "aliases": [
+        "CVE-2026-1525"
+      ],
+      "summary": "Undici has an HTTP Request/Response Smuggling issue",
+      "severity": "MODERATE",
+      "published": "2026-03-13T20:07:03Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.24.0"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.24.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g9mf-h72j-4rw9",
+      "aliases": [
+        "CVE-2026-22036"
+      ],
+      "summary": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
+      "severity": "MODERATE",
+      "published": "2026-01-14T21:06:08Z",
+      "ranges": [
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.18.2"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.23.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c76h-2ccp-4975",
+      "aliases": [
+        "CVE-2025-22150"
+      ],
+      "summary": "Use of Insufficiently Random Values in undici",
+      "severity": "MODERATE",
+      "published": "2025-01-21T21:10:47Z",
+      "ranges": [
+        {
+          "introduced": "4.5.0",
+          "fixed": "5.28.5"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.21.1"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.2.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9f24-jqhm-jfcw",
+      "aliases": [
+        "CVE-2024-24750"
+      ],
+      "summary": "fetch(url) leads to a memory leak in undici",
+      "severity": "MODERATE",
+      "published": "2024-02-16T15:59:38Z",
+      "ranges": [
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.6.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5r9g-qh6m-jxff",
+      "aliases": [
+        "CVE-2023-23936"
+      ],
+      "summary": "CRLF Injection in Nodejs ‘undici’ via host",
+      "severity": "MODERATE",
+      "published": "2023-02-16T20:46:30Z",
+      "ranges": [
+        {
+          "introduced": "2.0.0",
+          "fixed": "5.19.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f772-66g8-q5h3",
+      "aliases": [
+        "CVE-2022-35948"
+      ],
+      "summary": "Nodejs ‘undici’ vulnerable to CRLF Injection via Content-Type",
+      "severity": "MODERATE",
+      "published": "2022-08-18T19:02:56Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.8.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8qr4-xgw6-wmr3",
+      "aliases": [
+        "CVE-2022-35949"
+      ],
+      "summary": "`undici.request` vulnerable to SSRF using absolute URL on `pathname`",
+      "severity": "MODERATE",
+      "published": "2022-08-18T18:59:46Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.8.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3cvr-822r-rqcc",
+      "aliases": [
+        "CVE-2022-31150"
+      ],
+      "summary": "undici before v5.8.0 vulnerable to CRLF injection in request headers",
+      "severity": "MODERATE",
+      "published": "2022-07-21T20:30:10Z",
       "ranges": [
         {
           "introduced": "0",
@@ -506,102 +502,13 @@
       ]
     },
     {
-      "id": "GHSA-r6ch-mqf9-qc9w",
+      "id": "GHSA-g8m3-5g58-fq7m",
       "aliases": [
-        "CVE-2023-24807"
+        "CVE-2026-11525"
       ],
-      "summary": "Regular Expression Denial of Service in Headers",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.19.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-v3r7-h72x-cjcm",
-      "aliases": [
-        "CVE-2026-16729"
-      ],
-      "summary": "undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "6.28.0"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.29.0"
-        },
-        {
-          "introduced": "8.0.0",
-          "fixed": "8.9.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-v9p9-hfj2-hcw8",
-      "aliases": [
-        "CVE-2026-2229"
-      ],
-      "summary": "Undici has Unhandled Exception in WebSocket Client Due to Invalid server_max_window_bits Validation",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "6.24.0"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.24.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-vmh5-mc38-953g",
-      "aliases": [
-        "CVE-2026-9697"
-      ],
-      "summary": "undici vulnerable to TLS certificate validation bypass via dropped requestTls in SOCKS5 ProxyAgent",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "7.23.0",
-          "fixed": "7.28.0"
-        },
-        {
-          "introduced": "8.0.0",
-          "fixed": "8.5.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-vrm6-8vpv-qv8q",
-      "aliases": [
-        "CVE-2026-1526"
-      ],
-      "summary": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "6.24.0"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.24.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-vxpw-j846-p89q",
-      "aliases": [
-        "CVE-2026-12151"
-      ],
-      "summary": "undici WebSocket client vulnerable to denial of service via fragment count bypass",
-      "severity": "HIGH",
+      "summary": "undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching",
+      "severity": "LOW",
+      "published": "2026-06-19T14:34:46Z",
       "ranges": [
         {
           "introduced": "0",
@@ -618,16 +525,150 @@
       ]
     },
     {
+      "id": "GHSA-35p6-xmwp-9g52",
+      "aliases": [
+        "CVE-2026-6733"
+      ],
+      "summary": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+      "severity": "LOW",
+      "published": "2026-06-19T14:19:13Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.27.0"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.28.0"
+        },
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.5.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cxrh-j4jr-qwg3",
+      "aliases": [
+        "CVE-2025-47279"
+      ],
+      "summary": "undici Denial of Service attack via bad certificate data",
+      "severity": "LOW",
+      "published": "2025-05-15T14:15:06Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.29.0"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.21.2"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.5.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3g92-w8c5-73pq",
+      "aliases": [
+        "CVE-2024-38372"
+      ],
+      "summary": "Undici vulnerable to data leak when using response.arrayBuffer()",
+      "severity": "LOW",
+      "published": "2024-07-09T13:32:30Z",
+      "ranges": [
+        {
+          "introduced": "6.14.0",
+          "fixed": "6.19.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9qxr-qj54-h672",
+      "aliases": [
+        "CVE-2024-30261"
+      ],
+      "summary": "Undici's fetch with integrity option is too lax when algorithm is specified but hash value is in incorrect",
+      "severity": "LOW",
+      "published": "2024-04-04T14:20:54Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.28.4"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.11.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m4v8-wqvr-p9f7",
+      "aliases": [
+        "CVE-2024-30260"
+      ],
+      "summary": "Undici's Proxy-Authorization header not cleared on cross-origin redirect for dispatch, request, stream, pipeline",
+      "severity": "LOW",
+      "published": "2024-04-04T14:20:39Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.28.4"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.11.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3787-6prv-h9w3",
+      "aliases": [
+        "CVE-2024-24758"
+      ],
+      "summary": "Undici proxy-authorization header not cleared on cross-origin redirect in fetch",
+      "severity": "LOW",
+      "published": "2024-02-16T16:02:52Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.28.3"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.6.1"
+        }
+      ]
+    },
+    {
       "id": "GHSA-wqq4-5wpv-mx2g",
       "aliases": [
         "CVE-2023-45143"
       ],
       "summary": "Undici's cookie header not cleared on cross-origin redirect in fetch",
       "severity": "LOW",
+      "published": "2023-10-16T14:05:37Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "5.26.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q768-x9m6-m9qp",
+      "aliases": [
+        "CVE-2022-31151"
+      ],
+      "summary": "undici before v5.8.0 vulnerable to uncleared cookies on cross-host / cross-origin redirect",
+      "severity": "LOW",
+      "published": "2022-07-21T20:31:05Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.8.0"
         }
       ]
     }

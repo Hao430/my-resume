@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 592,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "LOW": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-5j4c-8p2g-v4jx",
@@ -20,6 +24,7 @@
       ],
       "summary": "ReDoS vulnerability in vue package that is exploitable through inefficient regex evaluation in the parseHTML function",
       "severity": "LOW",
+      "published": "2024-10-15T18:30:50Z",
       "ranges": [
         {
           "introduced": "2.0.0-alpha.1",

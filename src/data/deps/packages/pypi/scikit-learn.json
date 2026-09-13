@@ -12,6 +12,13 @@
   "deprecatedReason": "",
   "versionCount": 141,
   "latestAffected": false,
+  "vulnerabilityCount": 6,
+  "severityCounts": {
+    "CRITICAL": 1,
+    "MODERATE": 1,
+    "HIGH": 1,
+    "UNKNOWN": 3
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-jjw5-xxj6-pcv5",
@@ -20,24 +27,11 @@
       ],
       "summary": "scikit-learn Deserialization of Untrusted Data",
       "severity": "CRITICAL",
+      "published": "2022-05-24T17:17:59Z",
       "ranges": [
         {
           "introduced": "0",
           "lastAffected": "0.23.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jw8x-6495-233v",
-      "aliases": [
-        "CVE-2024-5206"
-      ],
-      "summary": "scikit-learn sensitive data leakage vulnerability",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.5.0"
         }
       ]
     },
@@ -48,6 +42,7 @@
       ],
       "summary": "scikit-learn Denial of Service",
       "severity": "HIGH",
+      "published": "2022-05-24T17:34:40Z",
       "ranges": [
         {
           "introduced": "0.23.2",
@@ -56,30 +51,17 @@
       ]
     },
     {
-      "id": "PYSEC-2020-107",
+      "id": "GHSA-jw8x-6495-233v",
       "aliases": [
-        "CVE-2020-13092"
+        "CVE-2024-5206"
       ],
-      "summary": "PYSEC-2020-107",
-      "severity": null,
+      "summary": "scikit-learn sensitive data leakage vulnerability",
+      "severity": "MODERATE",
+      "published": "2024-06-06T21:30:37Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "0.23.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2020-108",
-      "aliases": [
-        "CVE-2020-28975"
-      ],
-      "summary": "PYSEC-2020-108",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.24.dev0"
+          "fixed": "1.5.0"
         }
       ]
     },
@@ -90,6 +72,7 @@
       ],
       "summary": "PYSEC-2024-110",
       "severity": null,
+      "published": "2024-06-06T19:16:00Z",
       "ranges": [
         {
           "introduced": "0",
@@ -98,6 +81,36 @@
         {
           "introduced": "0",
           "fixed": "1.5.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-108",
+      "aliases": [
+        "CVE-2020-28975"
+      ],
+      "summary": "PYSEC-2020-108",
+      "severity": null,
+      "published": "2020-11-21T21:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.24.dev0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-107",
+      "aliases": [
+        "CVE-2020-13092"
+      ],
+      "summary": "PYSEC-2020-107",
+      "severity": null,
+      "published": "2020-05-15T19:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.23.1"
         }
       ]
     }

@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 55,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "CRITICAL": 1,
+    "HIGH": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-cf4h-3jhx-xvhq",
@@ -20,6 +25,7 @@
       ],
       "summary": "Arbitrary Code Execution in underscore",
       "severity": "CRITICAL",
+      "published": "2021-05-06T16:09:43Z",
       "ranges": [
         {
           "introduced": "1.3.2",
@@ -34,6 +40,7 @@
       ],
       "summary": "Underscore has unlimited recursion in _.flatten and _.isEqual, potential for DoS attack",
       "severity": "HIGH",
+      "published": "2026-03-03T17:46:06Z",
       "ranges": [
         {
           "introduced": "0",

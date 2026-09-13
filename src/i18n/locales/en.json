@@ -256,7 +256,9 @@
       "severityModerate": "Moderate",
       "severityHigh": "High",
       "severityCritical": "Critical",
-      "severityUnknown": "Unknown"
+      "severityUnknown": "Unknown",
+      "pkgTruncated": "Showing the top {shown}, ordered by severity.",
+      "pkgViewAll": "See all {count} on OSV"
     }
   },
   "footer": {

@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 221,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "CRITICAL": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-67hx-6x53-jw92",
@@ -20,6 +24,7 @@
       ],
       "summary": "Babel vulnerable to arbitrary code execution when compiling specifically crafted malicious code",
       "severity": "CRITICAL",
+      "published": "2023-10-16T13:55:36Z",
       "ranges": [
         {
           "introduced": "0",

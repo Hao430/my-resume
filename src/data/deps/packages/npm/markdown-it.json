@@ -12,18 +12,24 @@
   "deprecatedReason": "",
   "versionCount": 87,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "MODERATE": 3,
+    "HIGH": 1
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-38c4-r59v-3vqw",
+      "id": "GHSA-j5p7-jf4q-742q",
       "aliases": [
-        "CVE-2026-2327"
+        "CVE-2015-10005"
       ],
-      "summary": "markdown-it is has a Regular Expression Denial of Service (ReDoS)",
-      "severity": "MODERATE",
+      "summary": "markdown-it vulnerable to Inefficient Regular Expression Complexity",
+      "severity": "HIGH",
+      "published": "2022-12-27T09:30:41Z",
       "ranges": [
         {
-          "introduced": "13.0.0",
-          "fixed": "14.1.1"
+          "introduced": "0",
+          "fixed": "3.0.0"
         }
       ]
     },
@@ -34,10 +40,26 @@
       ],
       "summary": "markdown-it: Quadratic complexity DoS in smartquotes rule via replaceAt string operations",
       "severity": "MODERATE",
+      "published": "2026-06-15T20:41:06Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "14.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-38c4-r59v-3vqw",
+      "aliases": [
+        "CVE-2026-2327"
+      ],
+      "summary": "markdown-it is has a Regular Expression Denial of Service (ReDoS)",
+      "severity": "MODERATE",
+      "published": "2026-02-12T06:30:13Z",
+      "ranges": [
+        {
+          "introduced": "13.0.0",
+          "fixed": "14.1.1"
         }
       ]
     },
@@ -48,24 +70,11 @@
       ],
       "summary": "Uncontrolled Resource Consumption in markdown-it",
       "severity": "MODERATE",
+      "published": "2022-01-12T22:20:22Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "12.3.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-j5p7-jf4q-742q",
-      "aliases": [
-        "CVE-2015-10005"
-      ],
-      "summary": "markdown-it vulnerable to Inefficient Regular Expression Complexity",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.0.0"
         }
       ]
     }

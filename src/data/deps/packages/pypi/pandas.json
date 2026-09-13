@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 343,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "UNKNOWN": 1
+  },
   "vulnerabilities": [
     {
       "id": "PYSEC-2020-73",
@@ -20,6 +24,7 @@
       ],
       "summary": "PYSEC-2020-73",
       "severity": null,
+      "published": "2020-05-15T19:15:00Z",
       "ranges": [
         {
           "introduced": "0",

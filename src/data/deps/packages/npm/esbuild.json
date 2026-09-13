@@ -12,12 +12,18 @@
   "deprecatedReason": "",
   "versionCount": 482,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "MODERATE": 1,
+    "LOW": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-67mh-4wv8-2f99",
       "aliases": [],
       "summary": "esbuild enables any website to send any requests to the development server and read the response",
       "severity": "MODERATE",
+      "published": "2025-02-10T17:48:07Z",
       "ranges": [
         {
           "introduced": "0",
@@ -30,6 +36,7 @@
       "aliases": [],
       "summary": "esbuild allows arbitrary file read when running the development server on Windows",
       "severity": "LOW",
+      "published": "2026-06-12T20:08:53Z",
       "ranges": [
         {
           "introduced": "0.27.3",

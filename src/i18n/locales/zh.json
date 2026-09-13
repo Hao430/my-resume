@@ -256,7 +256,9 @@
       "severityModerate": "中",
       "severityHigh": "高",
       "severityCritical": "严重",
-      "severityUnknown": "未知"
+      "severityUnknown": "未知",
+      "pkgTruncated": "此处显示按严重度排序的前 {shown} 条。",
+      "pkgViewAll": "在 OSV 查看全部 {count} 条"
     }
   },
   "footer": {

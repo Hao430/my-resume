@@ -12,63 +12,13 @@
   "deprecatedReason": "",
   "versionCount": 622,
   "latestAffected": false,
+  "vulnerabilityCount": 14,
+  "severityCounts": {
+    "MODERATE": 6,
+    "HIGH": 1,
+    "UNKNOWN": 7
+  },
   "vulnerabilities": [
-    {
-      "id": "GHSA-55x5-fj6c-h6m8",
-      "aliases": [
-        "CVE-2021-43818"
-      ],
-      "summary": "lxml's HTML Cleaner allows crafted and SVG embedded scripts to pass through",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.6.5"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-57qw-cc2g-pv5p",
-      "aliases": [
-        "CVE-2014-3146"
-      ],
-      "summary": "lxml Cross-site Scripting Via Control Characters",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.3.5"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jq4v-f5q6-mjqq",
-      "aliases": [
-        "CVE-2021-28957"
-      ],
-      "summary": "lxml vulnerable to Cross-Site Scripting",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.6.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-pgww-xf46-h92r",
-      "aliases": [
-        "CVE-2020-27783"
-      ],
-      "summary": "lxml vulnerable to Cross-site Scripting",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.6.2"
-        }
-      ]
-    },
     {
       "id": "GHSA-vfmq-68hx-4jfw",
       "aliases": [
@@ -76,6 +26,7 @@
       ],
       "summary": "lxml: Default configuration of iterparse() and ETCompatXMLParser() allows XXE to local files",
       "severity": "HIGH",
+      "published": "2026-04-21T20:38:44Z",
       "ranges": [
         {
           "introduced": "0",
@@ -90,10 +41,26 @@
       ],
       "summary": "lxml NULL Pointer Dereference allows attackers to cause a denial of service",
       "severity": "MODERATE",
+      "published": "2022-07-06T00:00:30Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "4.9.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-57qw-cc2g-pv5p",
+      "aliases": [
+        "CVE-2014-3146"
+      ],
+      "summary": "lxml Cross-site Scripting Via Control Characters",
+      "severity": "MODERATE",
+      "published": "2022-05-14T04:01:59Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.3.5"
         }
       ]
     },
@@ -104,6 +71,7 @@
       ],
       "summary": "Improper Neutralization of Input During Web Page Generation in LXML",
       "severity": "MODERATE",
+      "published": "2022-05-13T01:13:21Z",
       "ranges": [
         {
           "introduced": "0",
@@ -112,66 +80,81 @@
       ]
     },
     {
-      "id": "PYSEC-2014-9",
+      "id": "GHSA-55x5-fj6c-h6m8",
       "aliases": [
-        "CVE-2014-3146"
+        "CVE-2021-43818"
       ],
-      "summary": "PYSEC-2014-9",
-      "severity": null,
+      "summary": "lxml's HTML Cleaner allows crafted and SVG embedded scripts to pass through",
+      "severity": "MODERATE",
+      "published": "2021-12-13T18:14:36Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "3.3.5"
+          "fixed": "4.6.5"
         }
       ]
     },
     {
-      "id": "PYSEC-2018-12",
+      "id": "GHSA-jq4v-f5q6-mjqq",
       "aliases": [
-        "CVE-2018-19787"
+        "CVE-2021-28957"
       ],
-      "summary": "PYSEC-2018-12",
-      "severity": null,
+      "summary": "lxml vulnerable to Cross-Site Scripting",
+      "severity": "MODERATE",
+      "published": "2021-03-22T16:53:53Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "6be1d081b49c97cfd7b3fbd934a193b668629109"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.2.5"
+          "fixed": "4.6.3"
         }
       ]
     },
     {
-      "id": "PYSEC-2020-62",
+      "id": "GHSA-pgww-xf46-h92r",
       "aliases": [
         "CVE-2020-27783"
       ],
-      "summary": "PYSEC-2020-62",
-      "severity": null,
+      "summary": "lxml vulnerable to Cross-site Scripting",
+      "severity": "MODERATE",
+      "published": "2021-01-07T21:54:01Z",
       "ranges": [
         {
-          "introduced": "1.2",
+          "introduced": "0",
           "fixed": "4.6.2"
         }
       ]
     },
     {
-      "id": "PYSEC-2021-19",
+      "id": "PYSEC-2026-87",
       "aliases": [
-        "CVE-2021-28957"
+        "CVE-2026-41066"
       ],
-      "summary": "PYSEC-2021-19",
+      "summary": "PYSEC-2026-87",
       "severity": null,
+      "published": "2026-04-24T17:16:20.933Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "a5f9cb52079dc57477c460dbe6ba0f775e14a999"
+          "fixed": "6.1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-230",
+      "aliases": [
+        "CVE-2022-2309"
+      ],
+      "summary": "PYSEC-2022-230",
+      "severity": null,
+      "published": "2022-07-05T10:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "86368e9cf70a0ad23cccd5ee32de847149af0c6f"
         },
         {
           "introduced": "0",
-          "fixed": "4.6.3"
+          "fixed": "4.9.1"
         }
       ]
     },
@@ -182,6 +165,7 @@
       ],
       "summary": "PYSEC-2021-852",
       "severity": null,
+      "published": "2021-12-13T18:15:00Z",
       "ranges": [
         {
           "introduced": "0",
@@ -201,34 +185,70 @@
       ]
     },
     {
-      "id": "PYSEC-2022-230",
+      "id": "PYSEC-2021-19",
       "aliases": [
-        "CVE-2022-2309"
+        "CVE-2021-28957"
       ],
-      "summary": "PYSEC-2022-230",
+      "summary": "PYSEC-2021-19",
       "severity": null,
+      "published": "2021-03-21T05:15:00Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "86368e9cf70a0ad23cccd5ee32de847149af0c6f"
+          "fixed": "a5f9cb52079dc57477c460dbe6ba0f775e14a999"
         },
         {
           "introduced": "0",
-          "fixed": "4.9.1"
+          "fixed": "4.6.3"
         }
       ]
     },
     {
-      "id": "PYSEC-2026-87",
+      "id": "PYSEC-2020-62",
       "aliases": [
-        "CVE-2026-41066"
+        "CVE-2020-27783"
       ],
-      "summary": "PYSEC-2026-87",
+      "summary": "PYSEC-2020-62",
       "severity": null,
+      "published": "2020-12-03T17:15:00Z",
+      "ranges": [
+        {
+          "introduced": "1.2",
+          "fixed": "4.6.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-12",
+      "aliases": [
+        "CVE-2018-19787"
+      ],
+      "summary": "PYSEC-2018-12",
+      "severity": null,
+      "published": "2018-12-02T10:29:00Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "6.1.0"
+          "fixed": "6be1d081b49c97cfd7b3fbd934a193b668629109"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.2.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-9",
+      "aliases": [
+        "CVE-2014-3146"
+      ],
+      "summary": "PYSEC-2014-9",
+      "severity": null,
+      "published": "2014-05-14T19:55:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.3.5"
         }
       ]
     }

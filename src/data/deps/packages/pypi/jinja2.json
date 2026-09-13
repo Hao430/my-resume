@@ -12,7 +12,28 @@
   "deprecatedReason": "",
   "versionCount": 66,
   "latestAffected": false,
+  "vulnerabilityCount": 20,
+  "severityCounts": {
+    "HIGH": 3,
+    "MODERATE": 7,
+    "UNKNOWN": 10
+  },
   "vulnerabilities": [
+    {
+      "id": "GHSA-8r7q-cvjq-x353",
+      "aliases": [
+        "CVE-2014-1402"
+      ],
+      "summary": "Incorrect Privilege Assignment in Jinja2",
+      "severity": "HIGH",
+      "published": "2022-05-14T04:04:14Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.7.2"
+        }
+      ]
+    },
     {
       "id": "GHSA-462w-v97r-4m45",
       "aliases": [
@@ -20,6 +41,7 @@
       ],
       "summary": "Jinja2 sandbox escape via string formatting",
       "severity": "HIGH",
+      "published": "2019-04-10T14:30:24Z",
       "ranges": [
         {
           "introduced": "0",
@@ -28,16 +50,17 @@
       ]
     },
     {
-      "id": "GHSA-8r7q-cvjq-x353",
+      "id": "GHSA-hj2j-77xm-mc5v",
       "aliases": [
-        "CVE-2014-1402"
+        "CVE-2016-10745"
       ],
-      "summary": "Incorrect Privilege Assignment in Jinja2",
+      "summary": "Jinja2 sandbox escape vulnerability",
       "severity": "HIGH",
+      "published": "2019-04-10T14:30:13Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "2.7.2"
+          "fixed": "2.8.1"
         }
       ]
     },
@@ -48,10 +71,71 @@
       ],
       "summary": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
       "severity": "MODERATE",
+      "published": "2025-03-05T20:40:14Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "3.1.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q2x7-8rv6-6q7h",
+      "aliases": [
+        "CVE-2024-56326"
+      ],
+      "summary": "Jinja has a sandbox breakout through indirect reference to format method",
+      "severity": "MODERATE",
+      "published": "2024-12-23T17:56:08Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.1.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gmj6-6f8f-6699",
+      "aliases": [
+        "CVE-2024-56201"
+      ],
+      "summary": "Jinja has a sandbox breakout through malicious filenames",
+      "severity": "MODERATE",
+      "published": "2024-12-23T17:54:12Z",
+      "ranges": [
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.1.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h75v-3vvj-5mfj",
+      "aliases": [
+        "CVE-2024-34064"
+      ],
+      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "severity": "MODERATE",
+      "published": "2024-05-06T14:20:59Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.1.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h5c8-rqwp-cp95",
+      "aliases": [
+        "CVE-2024-22195"
+      ],
+      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "severity": "MODERATE",
+      "published": "2024-01-11T15:20:48Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.1.3"
         }
       ]
     },
@@ -62,6 +146,7 @@
       ],
       "summary": "Insecure Temporary File in Jinja2",
       "severity": "MODERATE",
+      "published": "2022-05-17T04:01:00Z",
       "ranges": [
         {
           "introduced": "0",
@@ -76,154 +161,7 @@
       ],
       "summary": "Regular Expression Denial of Service (ReDoS) in Jinja2",
       "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.11.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-gmj6-6f8f-6699",
-      "aliases": [
-        "CVE-2024-56201"
-      ],
-      "summary": "Jinja has a sandbox breakout through malicious filenames",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "3.0.0",
-          "fixed": "3.1.5"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-h5c8-rqwp-cp95",
-      "aliases": [
-        "CVE-2024-22195"
-      ],
-      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.1.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-h75v-3vvj-5mfj",
-      "aliases": [
-        "CVE-2024-34064"
-      ],
-      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.1.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hj2j-77xm-mc5v",
-      "aliases": [
-        "CVE-2016-10745"
-      ],
-      "summary": "Jinja2 sandbox escape vulnerability",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.8.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-q2x7-8rv6-6q7h",
-      "aliases": [
-        "CVE-2024-56326"
-      ],
-      "summary": "Jinja has a sandbox breakout through indirect reference to format method",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.1.5"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2014-8",
-      "aliases": [
-        "CVE-2014-1402"
-      ],
-      "summary": "PYSEC-2014-8",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.7.2"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2014-82",
-      "aliases": [
-        "CVE-2014-0012"
-      ],
-      "summary": "PYSEC-2014-82",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "acb672b6a179567632e032f547582f30fa2f4aa7"
-        },
-        {
-          "introduced": "0",
-          "fixed": "2.7.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2019-217",
-      "aliases": [
-        "CVE-2019-10906"
-      ],
-      "summary": "PYSEC-2019-217",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.10.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2019-220",
-      "aliases": [
-        "CVE-2016-10745"
-      ],
-      "summary": "PYSEC-2019-220",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "9b53045c34e61013dc8f09b7e52a555fa16bed16"
-        },
-        {
-          "introduced": "0",
-          "fixed": "2.8.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2021-66",
-      "aliases": [
-        "CVE-2020-28493"
-      ],
-      "summary": "PYSEC-2021-66",
-      "severity": null,
+      "published": "2021-03-19T21:28:05Z",
       "ranges": [
         {
           "introduced": "0",
@@ -238,52 +176,11 @@
       ],
       "summary": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
       "severity": null,
+      "published": "2026-07-07T14:34:50.446969Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "3.1.6"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1472",
-      "aliases": [
-        "CVE-2024-56201"
-      ],
-      "summary": "Jinja has a sandbox breakout through malicious filenames",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "3.0.0",
-          "fixed": "3.1.5"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1473",
-      "aliases": [
-        "CVE-2024-22195"
-      ],
-      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.1.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1474",
-      "aliases": [
-        "CVE-2024-34064"
-      ],
-      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.1.4"
         }
       ]
     },
@@ -294,10 +191,139 @@
       ],
       "summary": "Jinja has a sandbox breakout through indirect reference to format method",
       "severity": null,
+      "published": "2026-07-07T14:34:47.732576Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "3.1.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1472",
+      "aliases": [
+        "CVE-2024-56201"
+      ],
+      "summary": "Jinja has a sandbox breakout through malicious filenames",
+      "severity": null,
+      "published": "2026-07-07T14:34:47.677447Z",
+      "ranges": [
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.1.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1474",
+      "aliases": [
+        "CVE-2024-34064"
+      ],
+      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "severity": null,
+      "published": "2026-07-07T11:45:41.875280Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.1.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1473",
+      "aliases": [
+        "CVE-2024-22195"
+      ],
+      "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "severity": null,
+      "published": "2026-07-07T11:45:29.949639Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.1.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-66",
+      "aliases": [
+        "CVE-2020-28493"
+      ],
+      "summary": "PYSEC-2021-66",
+      "severity": null,
+      "published": "2021-02-01T20:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.11.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-220",
+      "aliases": [
+        "CVE-2016-10745"
+      ],
+      "summary": "PYSEC-2019-220",
+      "severity": null,
+      "published": "2019-04-08T13:29:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9b53045c34e61013dc8f09b7e52a555fa16bed16"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.8.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-217",
+      "aliases": [
+        "CVE-2019-10906"
+      ],
+      "summary": "PYSEC-2019-217",
+      "severity": null,
+      "published": "2019-04-07T00:29:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.10.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-8",
+      "aliases": [
+        "CVE-2014-1402"
+      ],
+      "summary": "PYSEC-2014-8",
+      "severity": null,
+      "published": "2014-05-19T14:55:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.7.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-82",
+      "aliases": [
+        "CVE-2014-0012"
+      ],
+      "summary": "PYSEC-2014-82",
+      "severity": null,
+      "published": "2014-05-19T14:55:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "acb672b6a179567632e032f547582f30fa2f4aa7"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.7.3"
         }
       ]
     }

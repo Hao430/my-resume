@@ -12,6 +12,12 @@
   "deprecatedReason": "",
   "versionCount": 153,
   "latestAffected": false,
+  "vulnerabilityCount": 21,
+  "severityCounts": {
+    "CRITICAL": 1,
+    "MODERATE": 5,
+    "HIGH": 15
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-23hp-3jrh-7fpw",
@@ -20,6 +26,7 @@
       ],
       "summary": "node-tar: Decompression/parse DoS via unlimited input",
       "severity": "CRITICAL",
+      "published": "2026-07-20T21:52:03Z",
       "ranges": [
         {
           "introduced": "0",
@@ -28,16 +35,77 @@
       ]
     },
     {
-      "id": "GHSA-29xp-372q-xqph",
+      "id": "GHSA-r292-9mhp-454m",
       "aliases": [
-        "CVE-2025-64118"
+        "CVE-2026-73566"
       ],
-      "summary": "node-tar has a race condition leading to uninitialized memory exposure",
-      "severity": "MODERATE",
+      "summary": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
+      "severity": "HIGH",
+      "published": "2026-07-24T16:26:16Z",
       "ranges": [
         {
-          "introduced": "7.5.1",
-          "fixed": "7.5.2"
+          "introduced": "0",
+          "fixed": "7.5.21"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8x88-c5mf-7j5w",
+      "aliases": [
+        "CVE-2026-59874"
+      ],
+      "summary": "node-tar: Negative tar entry size causes infinite loop in archive replace",
+      "severity": "HIGH",
+      "published": "2026-07-20T21:51:39Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.5.18"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9ppj-qmqm-q256",
+      "aliases": [
+        "CVE-2026-31802"
+      ],
+      "summary": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+      "severity": "HIGH",
+      "published": "2026-03-10T23:44:58Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.5.11"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qffp-2rhf-9h96",
+      "aliases": [
+        "CVE-2026-29786"
+      ],
+      "summary": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+      "severity": "HIGH",
+      "published": "2026-03-05T00:52:32Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.5.10"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-83g3-92jg-28cx",
+      "aliases": [
+        "CVE-2026-26960"
+      ],
+      "summary": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+      "severity": "HIGH",
+      "published": "2026-02-18T00:57:13Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.5.8"
         }
       ]
     },
@@ -48,10 +116,110 @@
       ],
       "summary": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
       "severity": "HIGH",
+      "published": "2026-01-28T16:35:31Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "7.5.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r6q2-hw4h-h46w",
+      "aliases": [
+        "CVE-2026-23950"
+      ],
+      "summary": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+      "severity": "HIGH",
+      "published": "2026-01-21T01:05:49Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.5.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8qq5-rm4j-mr97",
+      "aliases": [
+        "CVE-2026-23745"
+      ],
+      "summary": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+      "severity": "HIGH",
+      "published": "2026-01-16T21:16:20Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.5.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9r2w-394v-53qc",
+      "aliases": [
+        "CVE-2021-37701"
+      ],
+      "summary": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
+      "severity": "HIGH",
+      "published": "2021-08-31T16:05:27Z",
+      "ranges": [
+        {
+          "introduced": "3.0.0",
+          "fixed": "4.4.16"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.0.8"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.1.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qq89-hq3f-393p",
+      "aliases": [
+        "CVE-2021-37712"
+      ],
+      "summary": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
+      "severity": "HIGH",
+      "published": "2021-08-31T16:05:17Z",
+      "ranges": [
+        {
+          "introduced": "3.0.0",
+          "fixed": "4.4.18"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.0.10"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.1.9"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5955-9wpr-37jh",
+      "aliases": [
+        "CVE-2021-37713"
+      ],
+      "summary": "Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization",
+      "severity": "HIGH",
+      "published": "2021-08-31T16:05:05Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.4.18"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.0.10"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.1.9"
         }
       ]
     },
@@ -62,6 +230,7 @@
       ],
       "summary": "Arbitrary File Creation/Overwrite due to insufficient absolute path sanitization",
       "severity": "HIGH",
+      "published": "2021-08-03T19:06:36Z",
       "ranges": [
         {
           "introduced": "0",
@@ -82,226 +251,13 @@
       ]
     },
     {
-      "id": "GHSA-5955-9wpr-37jh",
-      "aliases": [
-        "CVE-2021-37713"
-      ],
-      "summary": "Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.4.18"
-        },
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.0.10"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.1.9"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-83g3-92jg-28cx",
-      "aliases": [
-        "CVE-2026-26960"
-      ],
-      "summary": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "7.5.8"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-8qq5-rm4j-mr97",
-      "aliases": [
-        "CVE-2026-23745"
-      ],
-      "summary": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "7.5.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-8x88-c5mf-7j5w",
-      "aliases": [
-        "CVE-2026-59874"
-      ],
-      "summary": "node-tar: Negative tar entry size causes infinite loop in archive replace",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "7.5.18"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-9ppj-qmqm-q256",
-      "aliases": [
-        "CVE-2026-31802"
-      ],
-      "summary": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "7.5.11"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-9r2w-394v-53qc",
-      "aliases": [
-        "CVE-2021-37701"
-      ],
-      "summary": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "3.0.0",
-          "fixed": "4.4.16"
-        },
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.0.8"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.1.7"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-f5x3-32g6-xq36",
-      "aliases": [
-        "CVE-2024-28863"
-      ],
-      "summary": "Denial of service while parsing a tar file due to lack of folders count validation",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "6.2.1"
-        },
-        {
-          "introduced": "0",
-          "fixed": "6.2.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-gfjr-3jmm-4g9v",
-      "aliases": [
-        "CVE-2015-8860"
-      ],
-      "summary": "Symlink Arbitrary File Overwrite in tar",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.0.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-gvwx-54wh-qm9j",
-      "aliases": [
-        "CVE-2026-59875"
-      ],
-      "summary": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "7.5.17"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-j44m-qm6p-hp7m",
-      "aliases": [
-        "CVE-2018-20834"
-      ],
-      "summary": "Arbitrary File Overwrite in tar",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "3.0.0",
-          "fixed": "4.4.2"
-        },
-        {
-          "introduced": "0",
-          "fixed": "2.2.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-qffp-2rhf-9h96",
-      "aliases": [
-        "CVE-2026-29786"
-      ],
-      "summary": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "7.5.10"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-qq89-hq3f-393p",
-      "aliases": [
-        "CVE-2021-37712"
-      ],
-      "summary": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "3.0.0",
-          "fixed": "4.4.18"
-        },
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.0.10"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.1.9"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-r292-9mhp-454m",
-      "aliases": [
-        "CVE-2026-73566"
-      ],
-      "summary": "node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "7.5.21"
-        }
-      ]
-    },
-    {
       "id": "GHSA-r628-mhmh-qjhw",
       "aliases": [
         "CVE-2021-32803"
       ],
       "summary": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning",
       "severity": "HIGH",
+      "published": "2021-08-03T19:00:40Z",
       "ranges": [
         {
           "introduced": "3.0.0",
@@ -322,30 +278,36 @@
       ]
     },
     {
-      "id": "GHSA-r6q2-hw4h-h46w",
+      "id": "GHSA-j44m-qm6p-hp7m",
       "aliases": [
-        "CVE-2026-23950"
+        "CVE-2018-20834"
       ],
-      "summary": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+      "summary": "Arbitrary File Overwrite in tar",
       "severity": "HIGH",
+      "published": "2019-05-01T18:37:31Z",
       "ranges": [
         {
+          "introduced": "3.0.0",
+          "fixed": "4.4.2"
+        },
+        {
           "introduced": "0",
-          "fixed": "7.5.4"
+          "fixed": "2.2.2"
         }
       ]
     },
     {
-      "id": "GHSA-vmf3-w455-68vh",
+      "id": "GHSA-gfjr-3jmm-4g9v",
       "aliases": [
-        "CVE-2026-53655"
+        "CVE-2015-8860"
       ],
-      "summary": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
-      "severity": "MODERATE",
+      "summary": "Symlink Arbitrary File Overwrite in tar",
+      "severity": "HIGH",
+      "published": "2017-10-24T18:33:36Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "7.5.16"
+          "fixed": "2.0.0"
         }
       ]
     },
@@ -356,10 +318,75 @@
       ],
       "summary": "node-tar: Process crash via PAX numeric path type confusion",
       "severity": "MODERATE",
+      "published": "2026-07-20T21:53:14Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "7.5.18"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gvwx-54wh-qm9j",
+      "aliases": [
+        "CVE-2026-59875"
+      ],
+      "summary": "node-tar: Uncaught Exception DoS via NUL byte in PAX path/linkpath records",
+      "severity": "MODERATE",
+      "published": "2026-07-20T21:51:12Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.5.17"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vmf3-w455-68vh",
+      "aliases": [
+        "CVE-2026-53655"
+      ],
+      "summary": "node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)",
+      "severity": "MODERATE",
+      "published": "2026-06-15T17:19:42Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.5.16"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-29xp-372q-xqph",
+      "aliases": [
+        "CVE-2025-64118"
+      ],
+      "summary": "node-tar has a race condition leading to uninitialized memory exposure",
+      "severity": "MODERATE",
+      "published": "2025-10-30T17:13:17Z",
+      "ranges": [
+        {
+          "introduced": "7.5.1",
+          "fixed": "7.5.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f5x3-32g6-xq36",
+      "aliases": [
+        "CVE-2024-28863"
+      ],
+      "summary": "Denial of service while parsing a tar file due to lack of folders count validation",
+      "severity": "MODERATE",
+      "published": "2024-03-22T16:57:05Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.2.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.2.1"
         }
       ]
     }

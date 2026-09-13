@@ -12,7 +12,128 @@
   "deprecatedReason": "",
   "versionCount": 752,
   "latestAffected": false,
+  "vulnerabilityCount": 22,
+  "severityCounts": {
+    "HIGH": 7,
+    "MODERATE": 13,
+    "LOW": 2
+  },
   "vulnerabilities": [
+    {
+      "id": "GHSA-fx2h-pf6j-xcff",
+      "aliases": [
+        "CVE-2026-53571"
+      ],
+      "summary": "vite: `server.fs.deny` bypass on Windows alternate paths",
+      "severity": "HIGH",
+      "published": "2026-06-15T17:17:45Z",
+      "ranges": [
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.0.16"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.3.5"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.4.3"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.1.24"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c27g-q93r-2cwf",
+      "aliases": [
+        "CVE-2024-52011"
+      ],
+      "summary": "launch-editor vulnerable to command injection via the crafted request on Windows",
+      "severity": "HIGH",
+      "published": "2026-06-03T18:02:48Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.9.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "5.4.9"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v2wj-q39q-566r",
+      "aliases": [
+        "CVE-2026-39364"
+      ],
+      "summary": "Vite: `server.fs.deny` bypassed with queries",
+      "severity": "HIGH",
+      "published": "2026-04-06T18:03:32Z",
+      "ranges": [
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.0.5"
+        },
+        {
+          "introduced": "7.1.0",
+          "fixed": "7.3.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p9ff-h696-f583",
+      "aliases": [
+        "CVE-2026-39363"
+      ],
+      "summary": "Vite Vulnerable to Arbitrary File Read via Vite Dev Server WebSocket",
+      "severity": "HIGH",
+      "published": "2026-04-06T18:03:24Z",
+      "ranges": [
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.0.5"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.3.2"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.4.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c24v-8rfc-w8vw",
+      "aliases": [
+        "CVE-2024-23331"
+      ],
+      "summary": "Vite dev server option `server.fs.deny` can be bypassed when hosted on case-insensitive filesystem",
+      "severity": "HIGH",
+      "published": "2024-01-19T21:58:47Z",
+      "ranges": [
+        {
+          "introduced": "2.7.0",
+          "fixed": "2.9.17"
+        },
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.2.8"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.5.2"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.0.12"
+        }
+      ]
+    },
     {
       "id": "GHSA-353f-5xf4-qw67",
       "aliases": [
@@ -20,6 +141,7 @@
       ],
       "summary": "Vite Server Options (server.fs.deny) can be bypassed using double forward-slash (//)",
       "severity": "HIGH",
+      "published": "2023-06-06T02:01:39Z",
       "ranges": [
         {
           "introduced": "0",
@@ -48,12 +170,156 @@
       ]
     },
     {
+      "id": "GHSA-mv48-hcvh-8jj8",
+      "aliases": [
+        "CVE-2022-35204"
+      ],
+      "summary": "Vite before v2.9.13 vulnerable to directory traversal via crafted URL to victim's service",
+      "severity": "HIGH",
+      "published": "2022-08-19T00:00:20Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.9.13"
+        },
+        {
+          "introduced": "3.0.0-alpha.0",
+          "fixed": "3.0.0-beta.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v6wh-96g9-6wx3",
+      "aliases": [
+        "CVE-2026-53632"
+      ],
+      "summary": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
+      "severity": "MODERATE",
+      "published": "2026-06-15T17:18:31Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.14.1"
+        },
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.0.16"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.3.5"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.4.3"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.1.24"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4w7w-66w2-5vf9",
+      "aliases": [
+        "CVE-2026-39365"
+      ],
+      "summary": "Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling",
+      "severity": "MODERATE",
+      "published": "2026-04-06T18:03:46Z",
+      "ranges": [
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.0.5"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.3.2"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.4.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-93m4-6634-74q7",
+      "aliases": [
+        "CVE-2025-62522"
+      ],
+      "summary": "vite allows server.fs.deny bypass via backslash on Windows",
+      "severity": "MODERATE",
+      "published": "2025-10-20T19:54:28Z",
+      "ranges": [
+        {
+          "introduced": "7.1.0",
+          "fixed": "7.1.11"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.0.8"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.4.1"
+        },
+        {
+          "introduced": "2.9.18",
+          "fixed": "5.4.21"
+        },
+        {
+          "introduced": "3.2.9",
+          "fixed": "5.4.21"
+        },
+        {
+          "introduced": "4.5.3",
+          "fixed": "5.4.21"
+        },
+        {
+          "introduced": "5.2.6",
+          "fixed": "5.4.21"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-859w-5945-r5v3",
+      "aliases": [
+        "CVE-2025-46565"
+      ],
+      "summary": "Vite's server.fs.deny bypassed with /. for files under project root",
+      "severity": "MODERATE",
+      "published": "2025-04-30T17:40:27Z",
+      "ranges": [
+        {
+          "introduced": "6.3.0",
+          "fixed": "6.3.4"
+        },
+        {
+          "introduced": "6.2.0",
+          "fixed": "6.2.7"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.1.6"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.4.19"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.5.14"
+        }
+      ]
+    },
+    {
       "id": "GHSA-356w-63v5-8wf4",
       "aliases": [
         "CVE-2025-32395"
       ],
       "summary": "Vite has an `server.fs.deny` bypass with an invalid `request-target`",
       "severity": "MODERATE",
+      "published": "2025-04-11T14:06:03Z",
       "ranges": [
         {
           "introduced": "6.2.0",
@@ -78,12 +344,44 @@
       ]
     },
     {
+      "id": "GHSA-xcj6-pq6g-qj4x",
+      "aliases": [
+        "CVE-2025-31486"
+      ],
+      "summary": "Vite allows server.fs.deny to be bypassed with .svg or relative paths",
+      "severity": "MODERATE",
+      "published": "2025-04-04T14:20:05Z",
+      "ranges": [
+        {
+          "introduced": "6.2.0",
+          "fixed": "6.2.5"
+        },
+        {
+          "introduced": "6.1.0",
+          "fixed": "6.1.4"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.14"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.4.17"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.5.12"
+        }
+      ]
+    },
+    {
       "id": "GHSA-4r4m-qw57-chr8",
       "aliases": [
         "CVE-2025-31125"
       ],
       "summary": "Vite has a `server.fs.deny` bypassed for `inline` and `raw` with `?import` query",
       "severity": "MODERATE",
+      "published": "2025-03-31T17:31:54Z",
       "ranges": [
         {
           "introduced": "6.2.0",
@@ -108,24 +406,56 @@
       ]
     },
     {
-      "id": "GHSA-4w7w-66w2-5vf9",
+      "id": "GHSA-x574-m823-4x7w",
       "aliases": [
-        "CVE-2026-39365"
+        "CVE-2025-30208"
       ],
-      "summary": "Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling",
+      "summary": "Vite bypasses server.fs.deny when using ?raw??",
       "severity": "MODERATE",
+      "published": "2025-03-25T14:00:02Z",
       "ranges": [
         {
-          "introduced": "8.0.0",
-          "fixed": "8.0.5"
+          "introduced": "6.2.0",
+          "fixed": "6.2.3"
         },
         {
-          "introduced": "7.0.0",
-          "fixed": "7.3.2"
+          "introduced": "6.1.0",
+          "fixed": "6.1.2"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.12"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.4.15"
         },
         {
           "introduced": "0",
-          "fixed": "6.4.2"
+          "fixed": "4.5.10"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vg6x-rcgg-rjx6",
+      "aliases": [
+        "CVE-2025-24010"
+      ],
+      "summary": "Websites were able to send any requests to the development server and read the response in vite",
+      "severity": "MODERATE",
+      "published": "2025-01-21T19:52:55Z",
+      "ranges": [
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.9"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.4.12"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.5.6"
         }
       ]
     },
@@ -136,6 +466,7 @@
       ],
       "summary": "Vite DOM Clobbering gadget found in vite bundled scripts that leads to XSS",
       "severity": "MODERATE",
+      "published": "2024-09-17T19:28:01Z",
       "ranges": [
         {
           "introduced": "5.4.0",
@@ -164,32 +495,37 @@
       ]
     },
     {
-      "id": "GHSA-859w-5945-r5v3",
+      "id": "GHSA-9cwx-2883-4wfx",
       "aliases": [
-        "CVE-2025-46565"
+        "CVE-2024-45811"
       ],
-      "summary": "Vite's server.fs.deny bypassed with /. for files under project root",
+      "summary": "Vite's `server.fs.deny` is bypassed when using `?import&raw`",
       "severity": "MODERATE",
+      "published": "2024-09-17T18:44:12Z",
       "ranges": [
         {
-          "introduced": "6.3.0",
-          "fixed": "6.3.4"
+          "introduced": "5.4.0",
+          "fixed": "5.4.6"
         },
         {
-          "introduced": "6.2.0",
-          "fixed": "6.2.7"
+          "introduced": "5.3.0",
+          "fixed": "5.3.6"
         },
         {
-          "introduced": "6.0.0",
-          "fixed": "6.1.6"
+          "introduced": "5.2.0",
+          "fixed": "5.2.14"
         },
         {
-          "introduced": "5.0.0",
-          "fixed": "5.4.19"
+          "introduced": "4.0.0",
+          "fixed": "4.5.4"
         },
         {
           "introduced": "0",
-          "fixed": "4.5.14"
+          "fixed": "3.2.11"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.1.8"
         }
       ]
     },
@@ -200,6 +536,7 @@
       ],
       "summary": "Vite's `server.fs.deny` did not deny requests for patterns with directories.",
       "severity": "MODERATE",
+      "published": "2024-04-03T16:46:17Z",
       "ranges": [
         {
           "introduced": "2.7.0",
@@ -234,6 +571,7 @@
       ],
       "summary": "Vite XSS vulnerability in `server.transformIndexHtml` via URL payload",
       "severity": "MODERATE",
+      "published": "2023-12-05T23:31:34Z",
       "ranges": [
         {
           "introduced": "4.4.0",
@@ -250,154 +588,13 @@
       ]
     },
     {
-      "id": "GHSA-93m4-6634-74q7",
-      "aliases": [
-        "CVE-2025-62522"
-      ],
-      "summary": "vite allows server.fs.deny bypass via backslash on Windows",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "7.1.0",
-          "fixed": "7.1.11"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.0.8"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.4.1"
-        },
-        {
-          "introduced": "2.9.18",
-          "fixed": "5.4.21"
-        },
-        {
-          "introduced": "3.2.9",
-          "fixed": "5.4.21"
-        },
-        {
-          "introduced": "4.5.3",
-          "fixed": "5.4.21"
-        },
-        {
-          "introduced": "5.2.6",
-          "fixed": "5.4.21"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-9cwx-2883-4wfx",
-      "aliases": [
-        "CVE-2024-45811"
-      ],
-      "summary": "Vite's `server.fs.deny` is bypassed when using `?import&raw`",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "5.4.0",
-          "fixed": "5.4.6"
-        },
-        {
-          "introduced": "5.3.0",
-          "fixed": "5.3.6"
-        },
-        {
-          "introduced": "5.2.0",
-          "fixed": "5.2.14"
-        },
-        {
-          "introduced": "4.0.0",
-          "fixed": "4.5.4"
-        },
-        {
-          "introduced": "0",
-          "fixed": "3.2.11"
-        },
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.1.8"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-c24v-8rfc-w8vw",
-      "aliases": [
-        "CVE-2024-23331"
-      ],
-      "summary": "Vite dev server option `server.fs.deny` can be bypassed when hosted on case-insensitive filesystem",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "2.7.0",
-          "fixed": "2.9.17"
-        },
-        {
-          "introduced": "3.0.0",
-          "fixed": "3.2.8"
-        },
-        {
-          "introduced": "4.0.0",
-          "fixed": "4.5.2"
-        },
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.0.12"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-c27g-q93r-2cwf",
-      "aliases": [
-        "CVE-2024-52011"
-      ],
-      "summary": "launch-editor vulnerable to command injection via the crafted request on Windows",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.9.0"
-        },
-        {
-          "introduced": "0",
-          "fixed": "5.4.9"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-fx2h-pf6j-xcff",
-      "aliases": [
-        "CVE-2026-53571"
-      ],
-      "summary": "vite: `server.fs.deny` bypass on Windows alternate paths",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "8.0.0",
-          "fixed": "8.0.16"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.3.5"
-        },
-        {
-          "introduced": "0",
-          "fixed": "6.4.3"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.1.24"
-        }
-      ]
-    },
-    {
       "id": "GHSA-g4jq-h2w9-997c",
       "aliases": [
         "CVE-2025-58751"
       ],
       "summary": "Vite middleware may serve files starting with the same name with the public directory",
       "severity": "LOW",
+      "published": "2025-09-09T20:55:56Z",
       "ranges": [
         {
           "introduced": "7.1.0",
@@ -424,6 +621,7 @@
       ],
       "summary": "Vite's `server.fs` settings were not applied to HTML files",
       "severity": "LOW",
+      "published": "2025-09-09T20:54:42Z",
       "ranges": [
         {
           "introduced": "7.1.0",
@@ -440,176 +638,6 @@
         {
           "introduced": "0",
           "fixed": "5.4.20"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-mv48-hcvh-8jj8",
-      "aliases": [
-        "CVE-2022-35204"
-      ],
-      "summary": "Vite before v2.9.13 vulnerable to directory traversal via crafted URL to victim's service",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.9.13"
-        },
-        {
-          "introduced": "3.0.0-alpha.0",
-          "fixed": "3.0.0-beta.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-p9ff-h696-f583",
-      "aliases": [
-        "CVE-2026-39363"
-      ],
-      "summary": "Vite Vulnerable to Arbitrary File Read via Vite Dev Server WebSocket",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "8.0.0",
-          "fixed": "8.0.5"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.3.2"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.4.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-v2wj-q39q-566r",
-      "aliases": [
-        "CVE-2026-39364"
-      ],
-      "summary": "Vite: `server.fs.deny` bypassed with queries",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "8.0.0",
-          "fixed": "8.0.5"
-        },
-        {
-          "introduced": "7.1.0",
-          "fixed": "7.3.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-v6wh-96g9-6wx3",
-      "aliases": [
-        "CVE-2026-53632"
-      ],
-      "summary": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.14.1"
-        },
-        {
-          "introduced": "8.0.0",
-          "fixed": "8.0.16"
-        },
-        {
-          "introduced": "7.0.0",
-          "fixed": "7.3.5"
-        },
-        {
-          "introduced": "0",
-          "fixed": "6.4.3"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.1.24"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-vg6x-rcgg-rjx6",
-      "aliases": [
-        "CVE-2025-24010"
-      ],
-      "summary": "Websites were able to send any requests to the development server and read the response in vite",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.0.9"
-        },
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.4.12"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.5.6"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-x574-m823-4x7w",
-      "aliases": [
-        "CVE-2025-30208"
-      ],
-      "summary": "Vite bypasses server.fs.deny when using ?raw??",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "6.2.0",
-          "fixed": "6.2.3"
-        },
-        {
-          "introduced": "6.1.0",
-          "fixed": "6.1.2"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.0.12"
-        },
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.4.15"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.5.10"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-xcj6-pq6g-qj4x",
-      "aliases": [
-        "CVE-2025-31486"
-      ],
-      "summary": "Vite allows server.fs.deny to be bypassed with .svg or relative paths",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "6.2.0",
-          "fixed": "6.2.5"
-        },
-        {
-          "introduced": "6.1.0",
-          "fixed": "6.1.4"
-        },
-        {
-          "introduced": "6.0.0",
-          "fixed": "6.0.14"
-        },
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.4.17"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.5.12"
         }
       ]
     }

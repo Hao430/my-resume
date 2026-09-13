@@ -12,124 +12,26 @@
   "deprecatedReason": "",
   "versionCount": 159,
   "latestAffected": false,
+  "vulnerabilityCount": 42,
+  "severityCounts": {
+    "MODERATE": 7,
+    "HIGH": 12,
+    "LOW": 5,
+    "UNKNOWN": 18
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-39hc-v87j-747x",
-      "aliases": [],
-      "summary": "Vulnerable OpenSSL included in cryptography wheels",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "37.0.0",
-          "fixed": "38.0.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-3ww4-gg4f-jr7f",
+      "id": "GHSA-jwv3-5hgf-82ww",
       "aliases": [
-        "CVE-2023-50782"
+        "CVE-2026-69249"
       ],
-      "summary": "Python Cryptography package vulnerable to Bleichenbacher timing oracle attack",
+      "summary": "python-cryptography: Duplicate self-signed intermediates can cause exponential path-building",
       "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "42.0.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-537c-gmf6-5ccf",
-      "aliases": [],
-      "summary": "Vulnerable OpenSSL included in cryptography wheels",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0.5.0",
-          "fixed": "48.0.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-5cpq-8wj7-hf2v",
-      "aliases": [],
-      "summary": "Vulnerable OpenSSL included in cryptography wheels",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0.5",
-          "fixed": "41.0.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-6vqw-3v5j-54x4",
-      "aliases": [
-        "CVE-2024-26130"
-      ],
-      "summary": "cryptography NULL pointer dereference with pkcs12.serialize_key_and_certificates when called with a non-matching certificate and private key and an hmac_hash override",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "38.0.0",
-          "fixed": "42.0.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-79v4-65xg-pq4g",
-      "aliases": [
-        "CVE-2024-12797"
-      ],
-      "summary": "Vulnerable OpenSSL included in cryptography wheels",
-      "severity": "LOW",
+      "published": "2026-08-03T21:26:50Z",
       "ranges": [
         {
           "introduced": "42.0.0",
-          "fixed": "44.0.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-9v9h-cgj8-h64p",
-      "aliases": [
-        "CVE-2024-0727"
-      ],
-      "summary": "Null pointer dereference in PKCS12 parsing",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "42.0.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-cf7p-gm2m-833m",
-      "aliases": [
-        "CVE-2023-38325"
-      ],
-      "summary": "cryptography mishandles SSH certificates",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "40.0.0",
-          "fixed": "41.0.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-fcf9-3qw3-gxmj",
-      "aliases": [
-        "CVE-2018-10903"
-      ],
-      "summary": "PyCA Cryptography vulnerable to GCM tag forgery",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "1.9.0",
-          "fixed": "2.3"
+          "fixed": "49.0.0"
         }
       ]
     },
@@ -140,6 +42,7 @@
       ],
       "summary": "cryptography: PKCS#7 EnvelopedData decryption exposes a Bleichenbacher oracle through distinguishable errors and timing",
       "severity": "HIGH",
+      "published": "2026-08-03T21:17:00Z",
       "ranges": [
         {
           "introduced": "44.0.0",
@@ -148,124 +51,15 @@
       ]
     },
     {
-      "id": "GHSA-h4gh-qq45-vh27",
+      "id": "GHSA-537c-gmf6-5ccf",
       "aliases": [],
-      "summary": "pyca/cryptography has a vulnerable OpenSSL included in cryptography wheels",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "37.0.0",
-          "fixed": "43.0.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hggm-jpg3-v476",
-      "aliases": [
-        "CVE-2020-25659"
-      ],
-      "summary": "RSA decryption vulnerable to Bleichenbacher timing vulnerability",
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
       "severity": "HIGH",
+      "published": "2026-06-15T20:12:27Z",
       "ranges": [
         {
-          "introduced": "0",
-          "fixed": "3.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jfhm-5ghh-2f97",
-      "aliases": [
-        "CVE-2023-49083"
-      ],
-      "summary": "cryptography vulnerable to NULL-dereference when loading PKCS7 certificates",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "3.1",
-          "fixed": "41.0.6"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jm77-qphf-c4w8",
-      "aliases": [],
-      "summary": "pyca/cryptography's wheels include vulnerable OpenSSL",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0.8",
-          "fixed": "41.0.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jwv3-5hgf-82ww",
-      "aliases": [
-        "CVE-2026-69249"
-      ],
-      "summary": "python-cryptography: Duplicate self-signed intermediates can cause exponential path-building",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "42.0.0",
-          "fixed": "49.0.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-m2h6-j472-rp4c",
-      "aliases": [
-        "CVE-2026-69248"
-      ],
-      "summary": "python-cryptography verifier accepts wildcard DNS names allowing escape from permittedSubtrees",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "45.0.0",
-          "fixed": "49.0.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-m959-cc7f-wv43",
-      "aliases": [
-        "CVE-2026-34073"
-      ],
-      "summary": "cryptography has incomplete DNS name constraint enforcement on peer names",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "46.0.6"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-p423-j2cm-9vmq",
-      "aliases": [
-        "CVE-2026-39892"
-      ],
-      "summary": "Cryptography vulnerable to buffer overflow if non-contiguous buffers were passed to APIs",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "45.0.0",
-          "fixed": "46.0.7"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-q3cj-2r34-2cwc",
-      "aliases": [
-        "CVE-2016-9243"
-      ],
-      "summary": "Improper input validation in cryptography",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.5.3"
+          "introduced": "0.5.0",
+          "fixed": "48.0.1"
         }
       ]
     },
@@ -276,6 +70,7 @@
       ],
       "summary": "cryptography Vulnerable to a Subgroup Attack Due to Missing Subgroup Validation for SECT Curves",
       "severity": "HIGH",
+      "published": "2026-02-10T21:27:06Z",
       "ranges": [
         {
           "introduced": "0",
@@ -284,42 +79,47 @@
       ]
     },
     {
-      "id": "GHSA-rhm9-p9w5-fwm7",
+      "id": "GHSA-6vqw-3v5j-54x4",
       "aliases": [
-        "CVE-2020-36242"
+        "CVE-2024-26130"
       ],
-      "summary": "PyCA Cryptography symmetrically encrypting large values can lead to integer overflow",
+      "summary": "cryptography NULL pointer dereference with pkcs12.serialize_key_and_certificates when called with a non-matching certificate and private key and an hmac_hash override",
       "severity": "HIGH",
+      "published": "2024-02-21T18:04:40Z",
       "ranges": [
         {
-          "introduced": "3.1",
-          "fixed": "3.3.2"
+          "introduced": "38.0.0",
+          "fixed": "42.0.4"
         }
       ]
     },
     {
-      "id": "GHSA-v8gr-m533-ghj9",
-      "aliases": [],
-      "summary": "Vulnerable OpenSSL included in cryptography wheels",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "2.5",
-          "fixed": "41.0.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-w7pp-m8wf-vj6r",
+      "id": "GHSA-3ww4-gg4f-jr7f",
       "aliases": [
-        "CVE-2023-23931"
+        "CVE-2023-50782"
       ],
-      "summary": "Cipher.update_into can corrupt memory if passed an immutable python object as the outbuf",
-      "severity": "MODERATE",
+      "summary": "Python Cryptography package vulnerable to Bleichenbacher timing oracle attack",
+      "severity": "HIGH",
+      "published": "2024-02-05T21:30:31Z",
       "ranges": [
         {
-          "introduced": "1.8",
-          "fixed": "39.0.1"
+          "introduced": "0",
+          "fixed": "42.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cf7p-gm2m-833m",
+      "aliases": [
+        "CVE-2023-38325"
+      ],
+      "summary": "cryptography mishandles SSH certificates",
+      "severity": "HIGH",
+      "published": "2023-07-14T21:31:08Z",
+      "ranges": [
+        {
+          "introduced": "40.0.0",
+          "fixed": "41.0.2"
         }
       ]
     },
@@ -330,6 +130,7 @@
       ],
       "summary": "Vulnerable OpenSSL included in cryptography wheels",
       "severity": "HIGH",
+      "published": "2023-02-08T22:17:06Z",
       "ranges": [
         {
           "introduced": "0.8.1",
@@ -346,17 +147,14 @@
       ]
     },
     {
-      "id": "PYSEC-2017-8",
+      "id": "GHSA-q3cj-2r34-2cwc",
       "aliases": [
         "CVE-2016-9243"
       ],
-      "summary": "PYSEC-2017-8",
-      "severity": null,
+      "summary": "Improper input validation in cryptography",
+      "severity": "HIGH",
+      "published": "2022-05-17T02:51:56Z",
       "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "b924696b2e8731f39696584d12cceeb3aeb2d874"
-        },
         {
           "introduced": "0",
           "fixed": "1.5.3"
@@ -364,40 +162,13 @@
       ]
     },
     {
-      "id": "PYSEC-2018-52",
-      "aliases": [
-        "CVE-2018-10903"
-      ],
-      "summary": "PYSEC-2018-52",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "1.9",
-          "fixed": "2.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2021-62",
-      "aliases": [
-        "CVE-2020-25659"
-      ],
-      "summary": "PYSEC-2021-62",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.2.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2021-63",
+      "id": "GHSA-rhm9-p9w5-fwm7",
       "aliases": [
         "CVE-2020-36242"
       ],
-      "summary": "PYSEC-2021-63",
-      "severity": null,
+      "summary": "PyCA Cryptography symmetrically encrypting large values can lead to integer overflow",
+      "severity": "HIGH",
+      "published": "2021-02-10T01:32:27Z",
       "ranges": [
         {
           "introduced": "3.1",
@@ -406,17 +177,117 @@
       ]
     },
     {
-      "id": "PYSEC-2023-11",
+      "id": "GHSA-hggm-jpg3-v476",
       "aliases": [
-        "CVE-2023-23931"
+        "CVE-2020-25659"
       ],
-      "summary": "PYSEC-2023-11",
-      "severity": null,
+      "summary": "RSA decryption vulnerable to Bleichenbacher timing vulnerability",
+      "severity": "HIGH",
+      "published": "2020-10-27T20:33:13Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "94a50a9731f35405f0357fa5f3b177d46a726ab3"
-        },
+          "fixed": "3.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fcf9-3qw3-gxmj",
+      "aliases": [
+        "CVE-2018-10903"
+      ],
+      "summary": "PyCA Cryptography vulnerable to GCM tag forgery",
+      "severity": "HIGH",
+      "published": "2018-07-31T18:28:09Z",
+      "ranges": [
+        {
+          "introduced": "1.9.0",
+          "fixed": "2.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m2h6-j472-rp4c",
+      "aliases": [
+        "CVE-2026-69248"
+      ],
+      "summary": "python-cryptography verifier accepts wildcard DNS names allowing escape from permittedSubtrees",
+      "severity": "MODERATE",
+      "published": "2026-08-03T21:26:57Z",
+      "ranges": [
+        {
+          "introduced": "45.0.0",
+          "fixed": "49.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p423-j2cm-9vmq",
+      "aliases": [
+        "CVE-2026-39892"
+      ],
+      "summary": "Cryptography vulnerable to buffer overflow if non-contiguous buffers were passed to APIs",
+      "severity": "MODERATE",
+      "published": "2026-04-08T19:23:08Z",
+      "ranges": [
+        {
+          "introduced": "45.0.0",
+          "fixed": "46.0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h4gh-qq45-vh27",
+      "aliases": [],
+      "summary": "pyca/cryptography has a vulnerable OpenSSL included in cryptography wheels",
+      "severity": "MODERATE",
+      "published": "2024-09-03T21:59:48Z",
+      "ranges": [
+        {
+          "introduced": "37.0.0",
+          "fixed": "43.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9v9h-cgj8-h64p",
+      "aliases": [
+        "CVE-2024-0727"
+      ],
+      "summary": "Null pointer dereference in PKCS12 parsing",
+      "severity": "MODERATE",
+      "published": "2024-01-26T09:30:23Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "42.0.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jfhm-5ghh-2f97",
+      "aliases": [
+        "CVE-2023-49083"
+      ],
+      "summary": "cryptography vulnerable to NULL-dereference when loading PKCS7 certificates",
+      "severity": "MODERATE",
+      "published": "2023-11-28T20:46:46Z",
+      "ranges": [
+        {
+          "introduced": "3.1",
+          "fixed": "41.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w7pp-m8wf-vj6r",
+      "aliases": [
+        "CVE-2023-23931"
+      ],
+      "summary": "Cipher.update_into can corrupt memory if passed an immutable python object as the outbuf",
+      "severity": "MODERATE",
+      "published": "2023-02-07T20:54:10Z",
+      "ranges": [
         {
           "introduced": "1.8",
           "fixed": "39.0.1"
@@ -424,34 +295,234 @@
       ]
     },
     {
-      "id": "PYSEC-2023-112",
-      "aliases": [
-        "CVE-2023-38325"
-      ],
-      "summary": "PYSEC-2023-112",
-      "severity": null,
+      "id": "GHSA-39hc-v87j-747x",
+      "aliases": [],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "severity": "MODERATE",
+      "published": "2022-11-02T18:11:56Z",
       "ranges": [
         {
-          "introduced": "40.0.0",
-          "fixed": "41.0.2"
+          "introduced": "37.0.0",
+          "fixed": "38.0.3"
         }
       ]
     },
     {
-      "id": "PYSEC-2023-254",
+      "id": "GHSA-m959-cc7f-wv43",
       "aliases": [
-        "CVE-2023-49083"
+        "CVE-2026-34073"
       ],
-      "summary": "PYSEC-2023-254",
-      "severity": null,
+      "summary": "cryptography has incomplete DNS name constraint enforcement on peer names",
+      "severity": "LOW",
+      "published": "2026-03-27T19:56:21Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "f09c261ca10a31fe41b1262306db7f8f1da0e48a"
-        },
+          "fixed": "46.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-79v4-65xg-pq4g",
+      "aliases": [
+        "CVE-2024-12797"
+      ],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "severity": "LOW",
+      "published": "2025-02-11T18:06:42Z",
+      "ranges": [
         {
-          "introduced": "3.1",
-          "fixed": "41.0.6"
+          "introduced": "42.0.0",
+          "fixed": "44.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v8gr-m533-ghj9",
+      "aliases": [],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "severity": "LOW",
+      "published": "2023-09-21T17:07:01Z",
+      "ranges": [
+        {
+          "introduced": "2.5",
+          "fixed": "41.0.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jm77-qphf-c4w8",
+      "aliases": [],
+      "summary": "pyca/cryptography's wheels include vulnerable OpenSSL",
+      "severity": "LOW",
+      "published": "2023-08-01T22:34:41Z",
+      "ranges": [
+        {
+          "introduced": "0.8",
+          "fixed": "41.0.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5cpq-8wj7-hf2v",
+      "aliases": [],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "severity": "LOW",
+      "published": "2023-06-02T17:13:10Z",
+      "ranges": [
+        {
+          "introduced": "0.5",
+          "fixed": "41.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3554",
+      "aliases": [
+        "CVE-2026-69248"
+      ],
+      "summary": "python-cryptography verifier accepts wildcard DNS names allowing escape from permittedSubtrees",
+      "severity": null,
+      "published": "2026-08-04T11:34:48.085980Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "49.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3553",
+      "aliases": [
+        "CVE-2026-69249"
+      ],
+      "summary": "python-cryptography: Duplicate self-signed intermediates can cause exponential path-building",
+      "severity": null,
+      "published": "2026-08-04T11:34:47.857042Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "49.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3552",
+      "aliases": [
+        "CVE-2026-69247"
+      ],
+      "summary": "cryptography: PKCS#7 EnvelopedData decryption exposes a Bleichenbacher oracle through distinguishable errors and timing",
+      "severity": null,
+      "published": "2026-08-04T11:34:47.697724Z",
+      "ranges": [
+        {
+          "introduced": "44.0.0",
+          "fixed": "50.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1284",
+      "aliases": [
+        "CVE-2024-12797"
+      ],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "severity": null,
+      "published": "2026-07-07T14:34:49.574389Z",
+      "ranges": [
+        {
+          "introduced": "42.0.0",
+          "fixed": "44.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1283",
+      "aliases": [
+        "CVE-2023-50782"
+      ],
+      "summary": "Python Cryptography package vulnerable to Bleichenbacher timing oracle attack",
+      "severity": null,
+      "published": "2026-07-07T11:45:32.057431Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "42.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1285",
+      "aliases": [
+        "CVE-2024-0727"
+      ],
+      "summary": "Null pointer dereference in PKCS12 parsing",
+      "severity": null,
+      "published": "2026-07-07T11:45:31.186666Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "42.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-800",
+      "aliases": [
+        "CVE-2023-0286"
+      ],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "severity": null,
+      "published": "2026-07-07T10:17:27.618960Z",
+      "ranges": [
+        {
+          "introduced": "0.8.1",
+          "fixed": "39.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-36",
+      "aliases": [
+        "CVE-2026-39892"
+      ],
+      "summary": "PYSEC-2026-36",
+      "severity": null,
+      "published": "2026-04-08T21:17:01.547Z",
+      "ranges": [
+        {
+          "introduced": "45.0.0",
+          "fixed": "46.0.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-35",
+      "aliases": [
+        "CVE-2026-34073"
+      ],
+      "summary": "PYSEC-2026-35",
+      "severity": null,
+      "published": "2026-03-31T03:15:59.123Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "46.0.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2141",
+      "aliases": [
+        "CVE-2026-26007"
+      ],
+      "summary": "PYSEC-2026-2141",
+      "severity": null,
+      "published": "2026-02-10T22:17:00.307Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "46.0.5"
         }
       ]
     },
@@ -462,6 +533,7 @@
       ],
       "summary": "PYSEC-2024-225",
       "severity": null,
+      "published": "2024-02-21T17:15:09Z",
       "ranges": [
         {
           "introduced": "0",
@@ -474,142 +546,119 @@
       ]
     },
     {
-      "id": "PYSEC-2026-1283",
+      "id": "PYSEC-2023-254",
       "aliases": [
-        "CVE-2023-50782"
+        "CVE-2023-49083"
       ],
-      "summary": "Python Cryptography package vulnerable to Bleichenbacher timing oracle attack",
+      "summary": "PYSEC-2023-254",
       "severity": null,
+      "published": "2023-11-29T19:15:00Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "42.0.0"
+          "fixed": "f09c261ca10a31fe41b1262306db7f8f1da0e48a"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "41.0.6"
         }
       ]
     },
     {
-      "id": "PYSEC-2026-1284",
+      "id": "PYSEC-2023-112",
       "aliases": [
-        "CVE-2024-12797"
+        "CVE-2023-38325"
       ],
-      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "summary": "PYSEC-2023-112",
       "severity": null,
+      "published": "2023-07-14T20:15:00Z",
       "ranges": [
         {
-          "introduced": "42.0.0",
-          "fixed": "44.0.1"
+          "introduced": "40.0.0",
+          "fixed": "41.0.2"
         }
       ]
     },
     {
-      "id": "PYSEC-2026-1285",
+      "id": "PYSEC-2023-11",
       "aliases": [
-        "CVE-2024-0727"
+        "CVE-2023-23931"
       ],
-      "summary": "Null pointer dereference in PKCS12 parsing",
+      "summary": "PYSEC-2023-11",
       "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "42.0.2"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2141",
-      "aliases": [
-        "CVE-2026-26007"
-      ],
-      "summary": "PYSEC-2026-2141",
-      "severity": null,
+      "published": "2023-02-07T21:15:00Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "46.0.5"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-35",
-      "aliases": [
-        "CVE-2026-34073"
-      ],
-      "summary": "PYSEC-2026-35",
-      "severity": null,
-      "ranges": [
+          "fixed": "94a50a9731f35405f0357fa5f3b177d46a726ab3"
+        },
         {
-          "introduced": "0",
-          "fixed": "46.0.6"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-3552",
-      "aliases": [
-        "CVE-2026-69247"
-      ],
-      "summary": "cryptography: PKCS#7 EnvelopedData decryption exposes a Bleichenbacher oracle through distinguishable errors and timing",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "44.0.0",
-          "fixed": "50.0.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-3553",
-      "aliases": [
-        "CVE-2026-69249"
-      ],
-      "summary": "python-cryptography: Duplicate self-signed intermediates can cause exponential path-building",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "49.0.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-3554",
-      "aliases": [
-        "CVE-2026-69248"
-      ],
-      "summary": "python-cryptography verifier accepts wildcard DNS names allowing escape from permittedSubtrees",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "49.0.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-36",
-      "aliases": [
-        "CVE-2026-39892"
-      ],
-      "summary": "PYSEC-2026-36",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "45.0.0",
-          "fixed": "46.0.7"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-800",
-      "aliases": [
-        "CVE-2023-0286"
-      ],
-      "summary": "Vulnerable OpenSSL included in cryptography wheels",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0.8.1",
+          "introduced": "1.8",
           "fixed": "39.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-63",
+      "aliases": [
+        "CVE-2020-36242"
+      ],
+      "summary": "PYSEC-2021-63",
+      "severity": null,
+      "published": "2021-02-07T20:15:00Z",
+      "ranges": [
+        {
+          "introduced": "3.1",
+          "fixed": "3.3.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-62",
+      "aliases": [
+        "CVE-2020-25659"
+      ],
+      "summary": "PYSEC-2021-62",
+      "severity": null,
+      "published": "2021-01-11T16:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.2.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-52",
+      "aliases": [
+        "CVE-2018-10903"
+      ],
+      "summary": "PYSEC-2018-52",
+      "severity": null,
+      "published": "2018-07-30T16:29:00Z",
+      "ranges": [
+        {
+          "introduced": "1.9",
+          "fixed": "2.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2017-8",
+      "aliases": [
+        "CVE-2016-9243"
+      ],
+      "summary": "PYSEC-2017-8",
+      "severity": null,
+      "published": "2017-03-27T17:59:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "b924696b2e8731f39696584d12cceeb3aeb2d874"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.5.3"
         }
       ]
     }

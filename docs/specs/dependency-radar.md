@@ -1,8 +1,8 @@
 # Spec: 依赖漏洞与许可证雷达（构建期长尾页）
 
 - **slug**: `dependency-radar` · **索引页**: `/tools/dependency-radar/` · **包页**: `/tools/dependency-radar/<system>/<package>/`
-- **状态**: 待实现（这是 A1 的第一片，不含交互式检查器）
-- **数据源**: `api.deps.dev` v3（免认证、CORS 放行）
+- **状态**: 已上线（这是 A1 的第一片，不含交互式检查器）
+- **数据源**: `api.deps.dev` v3 + `api.osv.dev`（均免认证）
 
 ## 1. 目标场景
 
@@ -83,12 +83,15 @@ npm semver 与 PyPI PEP 440 规则不同，自行比较极易出错。
   "homepage": "https://lodash.com/",       // 缺失则省略
   "repo": "https://github.com/lodash/lodash",
   "latestAffected": false,                 // 由带 version 的 OSV 查询直接得出，不做版本比较
-  "vulnerabilities": [                     // 全部历史漏洞，与最新版是否受影响无关
+  "vulnerabilityCount": 10,                // 历史总数；列表被截断后**仍然准确**
+  "severityCounts": { "HIGH": 3, "MODERATE": 5, "UNKNOWN": 2 },
+  "vulnerabilities": [                     // 历史漏洞，按 4.6 排序并截断
     {
       "id": "GHSA-29mw-wpgm-hmr9",
       "aliases": ["CVE-2020-28500"],
       "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
       "severity": "MODERATE",              // LOW|MODERATE|HIGH|CRITICAL，缺失为 null
+      "published": "2022-01-06T20:30:46Z",
       "ranges": [{ "introduced": "4.0.0", "fixed": "4.17.21" }]
     }
   ],
@@ -96,8 +99,12 @@ npm semver 与 PyPI PEP 440 规则不同，自行比较极易出错。
 }
 ```
 
-另生成一份聚合索引 `src/data/deps/index.json`，供索引页与客户端检索使用（只含轻量字段：
-system / name / latest / licenses / advisoryCount / maxCvss / deprecation）。
+另生成一份聚合索引 `src/data/deps/index.json`，供索引页与客户端检索使用，**只含摘要**
+（system / name / slug / path / latest / licenses / latestAffected / vulnerabilityCount /
+highestSeverity / deprecated），**不含漏洞明细**。
+
+实测理由：156 个包的完整记录是 1.5 MB（gzip 120 KB），整个塞进客户端 bundle 太重；
+摘要只有 59 KB（gzip 5 KB）。明细按包分文件、由页面按需动态加载。
 
 ## 4. 页面规则
 
@@ -109,13 +116,14 @@ system / name / latest / licenses / advisoryCount / maxCvss / deprecation）。
 ### 4.2 包页 `/tools/dependency-radar/<system>/<name>/`
 
 必须呈现：包名、生态、最新版号与发布日期、许可证、是否弃用（含原因）、版本总数、
-主页与源码链接、**影响最新版的漏洞清单**。
+主页与源码链接、**历史漏洞清单（含每条的影响区间）**，以及在列表被截断时指向 OSV 完整列表的链接。
 
 ### 4.3 漏洞语义（最容易写错，务必守住）
 
 页面要**同时**呈现两个不同的事实，并让读者一眼分清：
 
-1. **这个包历史上有多少已知漏洞**（`vulnerabilities.length`，含已修复的）
+1. **这个包历史上有多少已知漏洞**（`vulnerabilityCount`，含已修复的。
+   **注意不能用 `vulnerabilities.length`**——列表按 4.5 截断后它只是显示条数）
 2. **当前最新版是否受影响**（`latestAffected`）
 
 正例（lodash）：`lodash 有 10 个已知漏洞；最新版 4.18.1 不受影响。`
@@ -125,6 +133,7 @@ system / name / latest / licenses / advisoryCount / maxCvss / deprecation）。
   读者手里的旧版本可能正在受影响区间内。这是本工具最基本的诚实性要求。
 - **不得**只显示数量而不给区间。漏洞条目必须带上受影响区间（渲染成文字，
   如 `>=4.0.0 <4.17.21`），读者才能自己对照手里的版本。
+- 列表被截断时，**不得**让读者以为列出的就是全部：须同时给出总数与 OSV 完整列表入口（见 4.5）。
 - 历史漏洞为 `0` 时才可说「无已知漏洞记录」；为 `0` 时**不要**下"安全"的结论。
 - 页面必须标注数据抓取时间——漏洞库持续更新，静态页会过时。
 
@@ -144,7 +153,23 @@ scoped 包是三段（`/npm/angular/core/`），而 `/tools/dependency-radar/:sy
 
 `pypi` 的包名不含 `/`，永远只有一段，同一套路由可覆盖两种生态。
 
-### 4.5 空数据
+### 4.5 列表排序与上限（防单页过大）
+
+**问题**：实测 tensorflow 有 861 条历史漏洞，单文件 614 KB，页面还要渲染 861 张卡片——
+下载与渲染都是负担。而 861 条 CVE 对读者也不是信息，是噪声。
+
+**规则**：
+- 每包**最多存 50 条**漏洞条目，按 `severity` 降序 → `published` 降序 → `id` 升序排序后截断。
+  末位用 `id` 兜底是为了**排序确定**：否则每次同步的产物顺序可能不同，git diff 会满是噪声。
+- `vulnerabilityCount` 始终是**历史总数**，截断不影响它——绝不能让读者以为只有 50 条。
+- 必须有 `severityCounts`，让被截断时的严重度分布仍然可见。
+- 被截断时（`vulnerabilityCount > vulnerabilities.length`）页面**必须**给出指向
+  OSV 完整列表的链接：`https://osv.dev/list?q=<name>&ecosystem=<ecosystem>`（实测可用）。
+
+**选 50 的依据**（实测分布）：156 个包中仅 6 个超过 50 条、3 个超过 100 条。
+截断到 50 后明细总体积从 1.8 MB 降到 0.51 MB，最大单文件从 614 KB 降到约 36 KB。
+
+### 4.6 空数据
 
 某包抓取失败（404 / 网络错误）时：**从生成数据中整体略去**，并在同步脚本结束时列出失败清单。
 不得写入半成品数据，也不得让构建失败。
@@ -175,7 +200,8 @@ scoped 包是三段（`/npm/angular/core/`），而 `/tools/dependency-radar/:sy
 
 1. **数据会过时**：新披露的漏洞不会自动出现在已生成的静态页上，需重跑同步。
 2. **只覆盖最新版**：用户手里的旧版本可能比页面显示的更危险——页面必须避免暗示相反结论。
-3. **收录范围有限**：100 个包，查不到的包不代表不存在。
+3. **收录范围有限**：精选 156 个包，查不到的包不代表不存在。
+4. **漏洞列表每包最多 50 条**（见 4.5）：超出部分只能去 OSV 查看，页面会给出入口与总数。
 4. **构建体积**：100 个包页 + 索引。索引会进客户端 bundle，须保持轻量（只放列表展示所需字段）。
 
 ## 8. 验收标准
@@ -184,8 +210,10 @@ scoped 包是三段（`/npm/angular/core/`），而 `/tools/dependency-radar/:sy
 - 数据正确性：断言 lodash 的 `latest === '4.18.1'`（守 3.2 的排序坑）；断言 `@angular/core`
   的 slug 映射为 `angular/core`；断言 `pickLatestVersion` 读的是 `versionKey.version`
   而不是扁平字段（曾因此 16 个测试全绿而实际全量抓取失败）。
-- 漏洞语义：断言 lodash 的 `latestAffected === false` 且 `vulnerabilities.length > 0`
+- 漏洞语义：断言 lodash 的 `latestAffected === false` 且 `vulnerabilityCount > 0`
   （两个事实同时成立，正是 4.3 要守的场景）；断言严重度缺失时落为 `null` 而非报错。
+- 截断（4.5）：断言超过上限的包其 `vulnerabilities.length === 50` 而 `vulnerabilityCount` 保持原值；
+  断言排序确定（同一输入两次排序结果一致）；断言被截断的页面渲染出 OSV 完整列表链接。
 - 构建：`npm run build` **不产生任何网络请求**（可用断网或 spy 验证）。
 - 产物：每个包页有独立 `dist/tools/dependency-radar/<system>/<name>/index.html`，
   标题/描述/canonical 正确；全部进 sitemap。
@@ -198,7 +226,7 @@ scoped 包是三段（`/npm/angular/core/`），而 `/tools/dependency-radar/:sy
 | 位置 | 作用 |
 |---|---|
 | `scripts/deps-seed.json` | 首批包清单（同步脚本的输入） |
-| `scripts/sync-deps.mjs` | 抓取 → 写 `src/data/deps/`；**不参与 build** |
+| `scripts/sync-deps.ts` | 抓取 → 写 `src/data/deps/`；**不参与 build**（Node 原生类型擦除直接运行） |
 | `src/data/deps/*.json` | 生成的数据，随仓库提交 |
 | `src/data/tools.ts` | 工具 slug 改为 `dependency-radar`（须与 `DEPENDENCY_RADAR_SLUG` 一致，否则卡片链到不存在的页面）、status 改为 `active` |
 | `src/data/site-pages.ts` | 由数据派生索引页 + 每个包页的 `StaticPage` |

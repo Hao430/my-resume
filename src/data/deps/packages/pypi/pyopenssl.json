@@ -12,21 +12,13 @@
   "deprecatedReason": "",
   "versionCount": 79,
   "latestAffected": false,
+  "vulnerabilityCount": 10,
+  "severityCounts": {
+    "HIGH": 4,
+    "LOW": 1,
+    "UNKNOWN": 5
+  },
   "vulnerabilities": [
-    {
-      "id": "GHSA-2rcm-phc9-3945",
-      "aliases": [
-        "CVE-2018-1000808"
-      ],
-      "summary": "Pyopenssl Incorrect Memory Management",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "17.5.0"
-        }
-      ]
-    },
     {
       "id": "GHSA-5pwr-322w-8jr4",
       "aliases": [
@@ -34,6 +26,7 @@
       ],
       "summary": "pyOpenSSL DTLS cookie callback buffer overflow",
       "severity": "HIGH",
+      "published": "2026-03-16T16:22:29Z",
       "ranges": [
         {
           "introduced": "22.0.0",
@@ -48,6 +41,7 @@
       ],
       "summary": "PyOpenSSL Mishandles NUL Byte In Certificate Subject Alternative Name",
       "severity": "HIGH",
+      "published": "2022-05-17T04:56:46Z",
       "ranges": [
         {
           "introduced": "0",
@@ -62,6 +56,22 @@
       ],
       "summary": "PyOpenSSL Use-After-Free vulnerability",
       "severity": "HIGH",
+      "published": "2018-10-10T16:10:38Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "17.5.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2rcm-phc9-3945",
+      "aliases": [
+        "CVE-2018-1000808"
+      ],
+      "summary": "Pyopenssl Incorrect Memory Management",
+      "severity": "HIGH",
+      "published": "2018-10-10T16:10:23Z",
       "ranges": [
         {
           "introduced": "0",
@@ -76,6 +86,7 @@
       ],
       "summary": "pyOpenSSL allows TLS connection bypass via unhandled callback exception in set_tlsext_servername_callback",
       "severity": "LOW",
+      "published": "2026-03-16T15:15:43Z",
       "ranges": [
         {
           "introduced": "0.14.0",
@@ -84,16 +95,32 @@
       ]
     },
     {
-      "id": "PYSEC-2013-31",
+      "id": "PYSEC-2026-2269",
       "aliases": [
-        "CVE-2013-4314"
+        "CVE-2026-27459"
       ],
-      "summary": "PYSEC-2013-31",
+      "summary": "PYSEC-2026-2269",
       "severity": null,
+      "published": "2026-03-18T00:16:19.273Z",
       "ranges": [
         {
-          "introduced": "0",
-          "fixed": "0.13.1"
+          "introduced": "22.0.0",
+          "fixed": "26.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2268",
+      "aliases": [
+        "CVE-2026-27448"
+      ],
+      "summary": "PYSEC-2026-2268",
+      "severity": null,
+      "published": "2026-03-18T00:16:19.107Z",
+      "ranges": [
+        {
+          "introduced": "0.14",
+          "fixed": "26.0.0"
         }
       ]
     },
@@ -104,6 +131,7 @@
       ],
       "summary": "PYSEC-2018-23",
       "severity": null,
+      "published": "2018-10-08T15:29:00Z",
       "ranges": [
         {
           "introduced": "0",
@@ -118,6 +146,7 @@
       ],
       "summary": "PYSEC-2018-24",
       "severity": null,
+      "published": "2018-10-08T15:29:00Z",
       "ranges": [
         {
           "introduced": "0",
@@ -126,30 +155,17 @@
       ]
     },
     {
-      "id": "PYSEC-2026-2268",
+      "id": "PYSEC-2013-31",
       "aliases": [
-        "CVE-2026-27448"
+        "CVE-2013-4314"
       ],
-      "summary": "PYSEC-2026-2268",
+      "summary": "PYSEC-2013-31",
       "severity": null,
+      "published": "2013-09-30T21:55:00Z",
       "ranges": [
         {
-          "introduced": "0.14",
-          "fixed": "26.0.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2269",
-      "aliases": [
-        "CVE-2026-27459"
-      ],
-      "summary": "PYSEC-2026-2269",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "22.0.0",
-          "fixed": "26.0.0"
+          "introduced": "0",
+          "fixed": "0.13.1"
         }
       ]
     }

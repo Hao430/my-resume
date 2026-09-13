@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 41,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "MODERATE": 2,
+    "UNKNOWN": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-65pc-fj4g-8rjx",
@@ -20,6 +25,7 @@
       ],
       "summary": "Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix",
       "severity": "MODERATE",
+      "published": "2026-05-19T14:34:32Z",
       "ranges": [
         {
           "introduced": "0",
@@ -34,27 +40,10 @@
       ],
       "summary": "Internationalized Domain Names in Applications (IDNA) vulnerable to denial of service from specially crafted inputs to idna.encode",
       "severity": "MODERATE",
+      "published": "2024-04-11T21:32:40Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "3.7"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2024-60",
-      "aliases": [
-        "CVE-2024-3651"
-      ],
-      "summary": "PYSEC-2024-60",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1d365e17e10d72d0b7876316fc7b9ca0eebdd38d"
-        },
-        {
-          "introduced": "0.1",
           "fixed": "3.7"
         }
       ]
@@ -66,10 +55,30 @@
       ],
       "summary": "PYSEC-2026-215",
       "severity": null,
+      "published": "2026-06-05T23:16:43.343Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "3.15"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-60",
+      "aliases": [
+        "CVE-2024-3651"
+      ],
+      "summary": "PYSEC-2024-60",
+      "severity": null,
+      "published": "2024-07-07T18:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1d365e17e10d72d0b7876316fc7b9ca0eebdd38d"
+        },
+        {
+          "introduced": "0.1",
+          "fixed": "3.7"
         }
       ]
     }

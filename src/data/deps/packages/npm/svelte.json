@@ -12,32 +12,50 @@
   "deprecatedReason": "",
   "versionCount": 1091,
   "latestAffected": false,
+  "vulnerabilityCount": 14,
+  "severityCounts": {
+    "MODERATE": 13,
+    "HIGH": 1
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-6738-r8g5-qwp3",
-      "aliases": [
-        "CVE-2025-15265"
-      ],
-      "summary": "svelte vulnerable to Cross-site Scripting",
-      "severity": "MODERATE",
+      "id": "GHSA-gw32-9rmw-qwww",
+      "aliases": [],
+      "summary": "svelte is vulnerable to XSS with textarea bind:value",
+      "severity": "HIGH",
+      "published": "2026-01-16T21:02:56Z",
       "ranges": [
         {
-          "introduced": "5.46.0",
-          "fixed": "5.46.4"
+          "introduced": "3.0.0",
+          "fixed": "3.59.2"
         }
       ]
     },
     {
-      "id": "GHSA-8266-84wp-wv5c",
-      "aliases": [
-        "CVE-2024-45047"
-      ],
-      "summary": "Svelte has a potential mXSS vulnerability due to improper HTML escaping",
+      "id": "GHSA-f3cj-j4f6-wq85",
+      "aliases": [],
+      "summary": "Svelte: SSR XSS via Insecure Promise Serialization in hydratable",
       "severity": "MODERATE",
+      "published": "2026-05-14T20:30:09Z",
+      "ranges": [
+        {
+          "introduced": "5.46.0",
+          "fixed": "5.55.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rcqx-6q8c-2c42",
+      "aliases": [
+        "CVE-2026-42573"
+      ],
+      "summary": "Svelte Vulnerable to XSS via DOM Clobbering of Internal Framework State",
+      "severity": "MODERATE",
+      "published": "2026-05-14T20:29:13Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "4.2.19"
+          "fixed": "5.55.7"
         }
       ]
     },
@@ -48,104 +66,11 @@
       ],
       "summary": "Svelte: ReDoS in `<svelte:element>` Tag Validation",
       "severity": "MODERATE",
+      "published": "2026-05-14T20:29:05Z",
       "ranges": [
         {
           "introduced": "5.51.5",
           "fixed": "5.55.7"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-crpf-4hrx-3jrp",
-      "aliases": [
-        "CVE-2026-27125"
-      ],
-      "summary": "Svelte SSR attribute spreading includes inherited properties from prototype chain",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.51.5"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-f3cj-j4f6-wq85",
-      "aliases": [],
-      "summary": "Svelte: SSR XSS via Insecure Promise Serialization in hydratable",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "5.46.0",
-          "fixed": "5.55.7"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-f7gr-6p89-r883",
-      "aliases": [
-        "CVE-2026-27121"
-      ],
-      "summary": "Svelte affected by cross-site scripting via spread attributes in Svelte SSR",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.51.5"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-gw32-9rmw-qwww",
-      "aliases": [],
-      "summary": "svelte is vulnerable to XSS with textarea bind:value",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "3.0.0",
-          "fixed": "3.59.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-h7h7-mm68-gmrc",
-      "aliases": [
-        "CVE-2026-27119"
-      ],
-      "summary": "Svelte affected by XSS in SSR `<option>` element",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "5.39.3",
-          "fixed": "5.51.5"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-m56q-vw4c-c2cp",
-      "aliases": [
-        "CVE-2026-27122"
-      ],
-      "summary": "Svelte SSR does not validate dynamic element tag names in `<svelte:element>`",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.51.5"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-phwv-c562-gvmh",
-      "aliases": [
-        "CVE-2026-27901"
-      ],
-      "summary": "Svelte vulnerable to XSS during SSR with contenteditable `bind:innerText` and `bind:textContent`",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.53.5"
         }
       ]
     },
@@ -156,6 +81,7 @@
       ],
       "summary": "Svelte SSR vulnerable to cross-site scripting via spread attributes",
       "severity": "MODERATE",
+      "published": "2026-05-14T20:19:42Z",
       "ranges": [
         {
           "introduced": "0",
@@ -170,6 +96,7 @@
       ],
       "summary": "Svelte: XSS via HTML Comment Injection in SSR Error Boundary Hydration Markers",
       "severity": "MODERATE",
+      "published": "2026-02-26T22:25:45Z",
       "ranges": [
         {
           "introduced": "5.53.0",
@@ -178,16 +105,107 @@
       ]
     },
     {
-      "id": "GHSA-rcqx-6q8c-2c42",
+      "id": "GHSA-phwv-c562-gvmh",
       "aliases": [
-        "CVE-2026-42573"
+        "CVE-2026-27901"
       ],
-      "summary": "Svelte Vulnerable to XSS via DOM Clobbering of Internal Framework State",
+      "summary": "Svelte vulnerable to XSS during SSR with contenteditable `bind:innerText` and `bind:textContent`",
       "severity": "MODERATE",
+      "published": "2026-02-26T22:24:54Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "5.55.7"
+          "fixed": "5.53.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-crpf-4hrx-3jrp",
+      "aliases": [
+        "CVE-2026-27125"
+      ],
+      "summary": "Svelte SSR attribute spreading includes inherited properties from prototype chain",
+      "severity": "MODERATE",
+      "published": "2026-02-19T20:28:49Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.51.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m56q-vw4c-c2cp",
+      "aliases": [
+        "CVE-2026-27122"
+      ],
+      "summary": "Svelte SSR does not validate dynamic element tag names in `<svelte:element>`",
+      "severity": "MODERATE",
+      "published": "2026-02-19T15:18:42Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.51.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f7gr-6p89-r883",
+      "aliases": [
+        "CVE-2026-27121"
+      ],
+      "summary": "Svelte affected by cross-site scripting via spread attributes in Svelte SSR",
+      "severity": "MODERATE",
+      "published": "2026-02-19T15:18:33Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.51.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h7h7-mm68-gmrc",
+      "aliases": [
+        "CVE-2026-27119"
+      ],
+      "summary": "Svelte affected by XSS in SSR `<option>` element",
+      "severity": "MODERATE",
+      "published": "2026-02-19T15:18:19Z",
+      "ranges": [
+        {
+          "introduced": "5.39.3",
+          "fixed": "5.51.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6738-r8g5-qwp3",
+      "aliases": [
+        "CVE-2025-15265"
+      ],
+      "summary": "svelte vulnerable to Cross-site Scripting",
+      "severity": "MODERATE",
+      "published": "2026-01-15T20:13:33Z",
+      "ranges": [
+        {
+          "introduced": "5.46.0",
+          "fixed": "5.46.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8266-84wp-wv5c",
+      "aliases": [
+        "CVE-2024-45047"
+      ],
+      "summary": "Svelte has a potential mXSS vulnerability due to improper HTML escaping",
+      "severity": "MODERATE",
+      "published": "2024-08-30T16:49:10Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.2.19"
         }
       ]
     },
@@ -198,6 +216,7 @@
       ],
       "summary": "Svelte vulnerable to XSS when using objects during server-side rendering",
       "severity": "MODERATE",
+      "published": "2022-07-13T00:00:41Z",
       "ranges": [
         {
           "introduced": "0",

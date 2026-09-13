@@ -12,21 +12,12 @@
   "deprecatedReason": "",
   "versionCount": 217,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "MODERATE": 2,
+    "UNKNOWN": 2
+  },
   "vulnerabilities": [
-    {
-      "id": "GHSA-q5f5-3gjm-7mfm",
-      "aliases": [
-        "CVE-2026-34450"
-      ],
-      "summary": "Claude SDK for Python has Insecure Default File Permissions in Local Filesystem Memory Tool",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0.86.0",
-          "fixed": "0.87.0"
-        }
-      ]
-    },
     {
       "id": "GHSA-w828-4qhx-vxx3",
       "aliases": [
@@ -34,6 +25,7 @@
       ],
       "summary": "Claude SDK for Python: Memory Tool Path Validation Race Condition Allows Sandbox Escape",
       "severity": "MODERATE",
+      "published": "2026-04-01T21:17:34Z",
       "ranges": [
         {
           "introduced": "0.86.0",
@@ -42,12 +34,13 @@
       ]
     },
     {
-      "id": "PYSEC-2026-2114",
+      "id": "GHSA-q5f5-3gjm-7mfm",
       "aliases": [
         "CVE-2026-34450"
       ],
-      "summary": "PYSEC-2026-2114",
-      "severity": null,
+      "summary": "Claude SDK for Python has Insecure Default File Permissions in Local Filesystem Memory Tool",
+      "severity": "MODERATE",
+      "published": "2026-04-01T21:15:30Z",
       "ranges": [
         {
           "introduced": "0.86.0",
@@ -62,6 +55,22 @@
       ],
       "summary": "PYSEC-2026-2115",
       "severity": null,
+      "published": "2026-03-31T22:16:20.320Z",
+      "ranges": [
+        {
+          "introduced": "0.86.0",
+          "fixed": "0.87.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2114",
+      "aliases": [
+        "CVE-2026-34450"
+      ],
+      "summary": "PYSEC-2026-2114",
+      "severity": null,
+      "published": "2026-03-31T22:16:19.987Z",
       "ranges": [
         {
           "introduced": "0.86.0",

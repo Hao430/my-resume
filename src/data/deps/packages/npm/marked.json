@@ -12,18 +12,25 @@
   "deprecatedReason": "",
   "versionCount": 224,
   "latestAffected": false,
+  "vulnerabilityCount": 13,
+  "severityCounts": {
+    "MODERATE": 7,
+    "HIGH": 5,
+    "LOW": 1
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-4r62-v4vq-hr96",
+      "id": "GHSA-6v9c-7cg6-27q7",
       "aliases": [
-        "CVE-2021-21306"
+        "CVE-2026-41680"
       ],
-      "summary": "Regular Expression Denial of Service (REDoS) in Marked",
-      "severity": "MODERATE",
+      "summary": "Marked Vulnerable to OOM Denial of Service via Infinite Recursion in marked Tokenizer",
+      "severity": "HIGH",
+      "published": "2026-04-29T22:12:20Z",
       "ranges": [
         {
-          "introduced": "1.1.1",
-          "fixed": "2.0.0"
+          "introduced": "18.0.0",
+          "fixed": "18.0.2"
         }
       ]
     },
@@ -34,6 +41,7 @@
       ],
       "summary": "Inefficient Regular Expression Complexity in marked",
       "severity": "HIGH",
+      "published": "2022-01-14T21:04:46Z",
       "ranges": [
         {
           "introduced": "0",
@@ -42,70 +50,32 @@
       ]
     },
     {
-      "id": "GHSA-6v9c-7cg6-27q7",
+      "id": "GHSA-rrrm-qjm4-v8hf",
       "aliases": [
-        "CVE-2026-41680"
+        "CVE-2022-21680"
       ],
-      "summary": "Marked Vulnerable to OOM Denial of Service via Infinite Recursion in marked Tokenizer",
+      "summary": "Inefficient Regular Expression Complexity in marked",
       "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "18.0.0",
-          "fixed": "18.0.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-7px7-7xjx-hxm8",
-      "aliases": [
-        "CVE-2017-1000427"
-      ],
-      "summary": "Marked vulnerable to XSS from data URIs",
-      "severity": "MODERATE",
+      "published": "2022-01-14T21:04:41Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "0.3.7"
+          "fixed": "4.0.10"
         }
       ]
     },
     {
-      "id": "GHSA-9cw2-jqp5-7x39",
+      "id": "GHSA-x5pg-88wf-qq4p",
       "aliases": [
-        "CVE-2014-3743"
+        "CVE-2017-16114"
       ],
-      "summary": "Multiple Content Injection Vulnerabilities in marked",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.3.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-cfjh-p3g4-3q2f",
-      "aliases": [
-        "CVE-2015-1370"
-      ],
-      "summary": "VBScript Content Injection in marked",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.3.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-ch52-vgq2-943f",
-      "aliases": [],
       "summary": "Regular Expression Denial of Service in marked",
-      "severity": "LOW",
+      "severity": "HIGH",
+      "published": "2018-07-24T20:10:52Z",
       "ranges": [
         {
-          "introduced": "0.4.0",
-          "fixed": "0.7.0"
+          "introduced": "0",
+          "fixed": "0.3.9"
         }
       ]
     },
@@ -116,6 +86,7 @@
       ],
       "summary": "Regular Expression Denial of Service in marked",
       "severity": "HIGH",
+      "published": "2017-10-24T18:33:36Z",
       "ranges": [
         {
           "introduced": "0",
@@ -130,6 +101,7 @@
       ],
       "summary": "Marked allows Regular Expression Denial of Service (ReDoS) attacks",
       "severity": "MODERATE",
+      "published": "2025-05-23T15:31:16Z",
       "ranges": [
         {
           "introduced": "0",
@@ -138,16 +110,45 @@
       ]
     },
     {
-      "id": "GHSA-rrrm-qjm4-v8hf",
+      "id": "GHSA-4r62-v4vq-hr96",
       "aliases": [
-        "CVE-2022-21680"
+        "CVE-2021-21306"
       ],
-      "summary": "Inefficient Regular Expression Complexity in marked",
-      "severity": "HIGH",
+      "summary": "Regular Expression Denial of Service (REDoS) in Marked",
+      "severity": "MODERATE",
+      "published": "2021-02-08T21:17:58Z",
+      "ranges": [
+        {
+          "introduced": "1.1.1",
+          "fixed": "2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9cw2-jqp5-7x39",
+      "aliases": [
+        "CVE-2014-3743"
+      ],
+      "summary": "Multiple Content Injection Vulnerabilities in marked",
+      "severity": "MODERATE",
+      "published": "2020-08-31T22:52:52Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "4.0.10"
+          "fixed": "0.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xf5p-87ch-gxw2",
+      "aliases": [],
+      "summary": "Marked ReDoS due to email addresses being evaluated in quadratic time",
+      "severity": "MODERATE",
+      "published": "2019-06-05T14:10:03Z",
+      "ranges": [
+        {
+          "introduced": "0.3.14",
+          "fixed": "0.6.2"
         }
       ]
     },
@@ -158,6 +159,7 @@
       ],
       "summary": "Sanitization bypass using HTML Entities in marked",
       "severity": "MODERATE",
+      "published": "2019-02-18T23:58:20Z",
       "ranges": [
         {
           "introduced": "0",
@@ -166,28 +168,45 @@
       ]
     },
     {
-      "id": "GHSA-x5pg-88wf-qq4p",
+      "id": "GHSA-7px7-7xjx-hxm8",
       "aliases": [
-        "CVE-2017-16114"
+        "CVE-2017-1000427"
       ],
-      "summary": "Regular Expression Denial of Service in marked",
-      "severity": "HIGH",
+      "summary": "Marked vulnerable to XSS from data URIs",
+      "severity": "MODERATE",
+      "published": "2018-01-04T21:04:19Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "0.3.9"
+          "fixed": "0.3.7"
         }
       ]
     },
     {
-      "id": "GHSA-xf5p-87ch-gxw2",
-      "aliases": [],
-      "summary": "Marked ReDoS due to email addresses being evaluated in quadratic time",
+      "id": "GHSA-cfjh-p3g4-3q2f",
+      "aliases": [
+        "CVE-2015-1370"
+      ],
+      "summary": "VBScript Content Injection in marked",
       "severity": "MODERATE",
+      "published": "2017-10-24T18:33:36Z",
       "ranges": [
         {
-          "introduced": "0.3.14",
-          "fixed": "0.6.2"
+          "introduced": "0",
+          "fixed": "0.3.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-ch52-vgq2-943f",
+      "aliases": [],
+      "summary": "Regular Expression Denial of Service in marked",
+      "severity": "LOW",
+      "published": "2020-09-03T18:15:53Z",
+      "ranges": [
+        {
+          "introduced": "0.4.0",
+          "fixed": "0.7.0"
         }
       ]
     }

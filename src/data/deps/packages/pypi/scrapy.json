@@ -12,16 +12,38 @@
   "deprecatedReason": "",
   "versionCount": 121,
   "latestAffected": true,
+  "vulnerabilityCount": 23,
+  "severityCounts": {
+    "MODERATE": 7,
+    "HIGH": 7,
+    "UNKNOWN": 9
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-23j4-mw76-5v7h",
-      "aliases": [],
-      "summary": "Scrapy allows redirect following in protocols other than HTTP",
-      "severity": "MODERATE",
+      "id": "GHSA-76g3-c3x4-crvx",
+      "aliases": [
+        "CVE-2026-84366"
+      ],
+      "summary": "Scrapy: S3DownloadHandler sends signed S3 requests over plaintext HTTP by default",
+      "severity": "HIGH",
+      "published": "2026-09-02T22:50:44Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "2.11.2"
+          "fixed": "2.17"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cwxj-rr6w-m6w7",
+      "aliases": [],
+      "summary": "Scrapy: Arbitrary Module Import via Referrer-Policy Header in RefererMiddleware",
+      "severity": "HIGH",
+      "published": "2026-03-13T20:02:36Z",
+      "ranges": [
+        {
+          "introduced": "1.4.0",
+          "fixed": "2.14.2"
         }
       ]
     },
@@ -32,6 +54,7 @@
       ],
       "summary": "Scrapy is vulnerable to a denial of service (DoS) attack due to flaws in brotli decompression implementation",
       "severity": "HIGH",
+      "published": "2025-10-31T00:30:35Z",
       "ranges": [
         {
           "introduced": "0",
@@ -44,40 +67,13 @@
       ]
     },
     {
-      "id": "GHSA-4qqq-9vqf-3h3f",
-      "aliases": [
-        "CVE-2024-1968"
-      ],
-      "summary": "Scrapy leaks the authorization header on same-domain but cross-origin redirects",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.11.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-76g3-c3x4-crvx",
-      "aliases": [
-        "CVE-2026-84366"
-      ],
-      "summary": "Scrapy: S3DownloadHandler sends signed S3 requests over plaintext HTTP by default",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.17"
-        }
-      ]
-    },
-    {
       "id": "GHSA-7j7m-v7m3-jqm7",
       "aliases": [
         "CVE-2024-3572"
       ],
       "summary": "Scrapy decompression bomb vulnerability",
       "severity": "HIGH",
+      "published": "2024-02-16T16:07:13Z",
       "ranges": [
         {
           "introduced": "2.0.0",
@@ -90,10 +86,105 @@
       ]
     },
     {
+      "id": "GHSA-cw9j-q3vf-hrrv",
+      "aliases": [
+        "CVE-2024-3574"
+      ],
+      "summary": "Scrapy authorization header leakage on cross-domain redirect",
+      "severity": "HIGH",
+      "published": "2024-02-15T15:32:15Z",
+      "ranges": [
+        {
+          "introduced": "2",
+          "fixed": "2.11.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.8.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cc65-xxvf-f7r9",
+      "aliases": [
+        "CVE-2024-1892"
+      ],
+      "summary": "Scrapy vulnerable to ReDoS via XMLFeedSpider",
+      "severity": "HIGH",
+      "published": "2024-02-15T15:22:02Z",
+      "ranges": [
+        {
+          "introduced": "2",
+          "fixed": "2.11.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.8.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h7wm-ph43-c39p",
+      "aliases": [
+        "CVE-2017-14158"
+      ],
+      "summary": "Scrapy denial of service vulnerability",
+      "severity": "HIGH",
+      "published": "2022-05-17T01:16:31Z",
+      "ranges": [
+        {
+          "introduced": "0.7",
+          "lastAffected": "2.15.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-23j4-mw76-5v7h",
+      "aliases": [],
+      "summary": "Scrapy allows redirect following in protocols other than HTTP",
+      "severity": "MODERATE",
+      "published": "2024-05-14T20:14:49Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.11.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jm3v-qxmh-hxwv",
+      "aliases": [],
+      "summary": "Scrapy's redirects ignoring scheme-specific proxy settings",
+      "severity": "MODERATE",
+      "published": "2024-05-14T20:14:43Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.11.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4qqq-9vqf-3h3f",
+      "aliases": [
+        "CVE-2024-1968"
+      ],
+      "summary": "Scrapy leaks the authorization header on same-domain but cross-origin redirects",
+      "severity": "MODERATE",
+      "published": "2024-05-14T20:14:33Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.11.2"
+        }
+      ]
+    },
+    {
       "id": "GHSA-9x8m-2xpf-crp3",
       "aliases": [],
       "summary": "Scrapy before 2.6.2 and 1.8.3 vulnerable to one proxy sending credentials to another",
       "severity": "MODERATE",
+      "published": "2022-07-29T22:26:57Z",
       "ranges": [
         {
           "introduced": "0",
@@ -106,120 +197,11 @@
       ]
     },
     {
-      "id": "GHSA-cc65-xxvf-f7r9",
-      "aliases": [
-        "CVE-2024-1892"
-      ],
-      "summary": "Scrapy vulnerable to ReDoS via XMLFeedSpider",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "2",
-          "fixed": "2.11.1"
-        },
-        {
-          "introduced": "0",
-          "fixed": "1.8.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-cjvr-mfj7-j4j8",
-      "aliases": [
-        "CVE-2022-0577"
-      ],
-      "summary": "Incorrect Authorization and Exposure of Sensitive Information to an Unauthorized Actor in scrapy",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.8.2"
-        },
-        {
-          "introduced": "2.0.0",
-          "fixed": "2.6.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-cw9j-q3vf-hrrv",
-      "aliases": [
-        "CVE-2024-3574"
-      ],
-      "summary": "Scrapy authorization header leakage on cross-domain redirect",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "2",
-          "fixed": "2.11.1"
-        },
-        {
-          "introduced": "0",
-          "fixed": "1.8.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-cwxj-rr6w-m6w7",
-      "aliases": [],
-      "summary": "Scrapy: Arbitrary Module Import via Referrer-Policy Header in RefererMiddleware",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "1.4.0",
-          "fixed": "2.14.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-h7wm-ph43-c39p",
-      "aliases": [
-        "CVE-2017-14158"
-      ],
-      "summary": "Scrapy denial of service vulnerability",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0.7",
-          "lastAffected": "2.15.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jm3v-qxmh-hxwv",
-      "aliases": [],
-      "summary": "Scrapy's redirects ignoring scheme-specific proxy settings",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.11.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jwqp-28gf-p498",
-      "aliases": [
-        "CVE-2021-41125"
-      ],
-      "summary": "Scrapy HTTP authentication credentials potentially leaked to target websites",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.8.1"
-        },
-        {
-          "introduced": "2.0.0",
-          "fixed": "2.5.1"
-        }
-      ]
-    },
-    {
       "id": "GHSA-mfjm-vh54-3f96",
       "aliases": [],
       "summary": "Scrapy cookie-setting is not restricted based on the public suffix list",
       "severity": "MODERATE",
+      "published": "2022-03-01T22:13:28Z",
       "ranges": [
         {
           "introduced": "0",
@@ -232,30 +214,33 @@
       ]
     },
     {
-      "id": "PYSEC-2017-83",
+      "id": "GHSA-cjvr-mfj7-j4j8",
       "aliases": [
-        "CVE-2017-14158"
+        "CVE-2022-0577"
       ],
-      "summary": "PYSEC-2017-83",
-      "severity": null,
+      "summary": "Incorrect Authorization and Exposure of Sensitive Information to an Unauthorized Actor in scrapy",
+      "severity": "MODERATE",
+      "published": "2022-03-01T22:12:47Z",
       "ranges": [
         {
-          "introduced": "0.7"
+          "introduced": "0",
+          "fixed": "1.8.2"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.6.1"
         }
       ]
     },
     {
-      "id": "PYSEC-2021-363",
+      "id": "GHSA-jwqp-28gf-p498",
       "aliases": [
         "CVE-2021-41125"
       ],
-      "summary": "PYSEC-2021-363",
-      "severity": null,
+      "summary": "Scrapy HTTP authentication credentials potentially leaked to target websites",
+      "severity": "MODERATE",
+      "published": "2021-10-06T17:46:22Z",
       "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "b01d69a1bf48060daec8f751368622352d8b85a6"
-        },
         {
           "introduced": "0",
           "fixed": "1.8.1"
@@ -267,63 +252,17 @@
       ]
     },
     {
-      "id": "PYSEC-2022-159",
+      "id": "PYSEC-2026-3918",
       "aliases": [
-        "CVE-2022-0577"
+        "CVE-2026-84366"
       ],
-      "summary": "PYSEC-2022-159",
+      "summary": "Scrapy: S3DownloadHandler sends signed S3 requests over plaintext HTTP by default",
       "severity": null,
+      "published": "2026-09-10T09:44:59.789119Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "8ce01b3b76d4634f55067d6cfdf632ec70ba304a"
-        },
-        {
-          "introduced": "0",
-          "fixed": "2.6.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2024-162",
-      "aliases": [
-        "CVE-2024-1892"
-      ],
-      "summary": "PYSEC-2024-162",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "479619b340f197a8f24c5db45bc068fb8755f2c5"
-        },
-        {
-          "fixed": "479619b340f197a8f24c5db45bc068fb8755f2c5"
-        },
-        {
-          "introduced": "0",
-          "fixed": "2.11.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2024-258",
-      "aliases": [
-        "CVE-2024-1968"
-      ],
-      "summary": "PYSEC-2024-258",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1d0502f25bbe55a22899af915623fda1aaeb9dd8"
-        },
-        {
-          "introduced": "0",
-          "fixed": "2.0.0"
-        },
-        {
-          "introduced": "2.0.0",
-          "fixed": "2.11.2"
+          "fixed": "2.17.0"
         }
       ]
     },
@@ -334,6 +273,7 @@
       ],
       "summary": "Scrapy is vulnerable to a denial of service (DoS) attack due to flaws in brotli decompression implementation",
       "severity": null,
+      "published": "2026-07-07T16:03:09.250252Z",
       "ranges": [
         {
           "introduced": "0",
@@ -348,6 +288,7 @@
       ],
       "summary": "Scrapy decompression bomb vulnerability",
       "severity": null,
+      "published": "2026-07-07T11:45:32.655272Z",
       "ranges": [
         {
           "introduced": "0",
@@ -366,6 +307,7 @@
       ],
       "summary": "Scrapy authorization header leakage on cross-domain redirect",
       "severity": null,
+      "published": "2026-07-07T11:45:32.587793Z",
       "ranges": [
         {
           "introduced": "0",
@@ -378,16 +320,103 @@
       ]
     },
     {
-      "id": "PYSEC-2026-3918",
+      "id": "PYSEC-2024-258",
       "aliases": [
-        "CVE-2026-84366"
+        "CVE-2024-1968"
       ],
-      "summary": "Scrapy: S3DownloadHandler sends signed S3 requests over plaintext HTTP by default",
+      "summary": "PYSEC-2024-258",
       "severity": null,
+      "published": "2024-05-20T08:15:08Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "2.17.0"
+          "fixed": "1d0502f25bbe55a22899af915623fda1aaeb9dd8"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.0.0"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.11.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-162",
+      "aliases": [
+        "CVE-2024-1892"
+      ],
+      "summary": "PYSEC-2024-162",
+      "severity": null,
+      "published": "2024-02-28T00:15:53Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "479619b340f197a8f24c5db45bc068fb8755f2c5"
+        },
+        {
+          "fixed": "479619b340f197a8f24c5db45bc068fb8755f2c5"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.11.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-159",
+      "aliases": [
+        "CVE-2022-0577"
+      ],
+      "summary": "PYSEC-2022-159",
+      "severity": null,
+      "published": "2022-03-02T04:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8ce01b3b76d4634f55067d6cfdf632ec70ba304a"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.6.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-363",
+      "aliases": [
+        "CVE-2021-41125"
+      ],
+      "summary": "PYSEC-2021-363",
+      "severity": null,
+      "published": "2021-10-06T18:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "b01d69a1bf48060daec8f751368622352d8b85a6"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.8.1"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.5.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2017-83",
+      "aliases": [
+        "CVE-2017-14158"
+      ],
+      "summary": "PYSEC-2017-83",
+      "severity": null,
+      "published": "2017-09-05T17:29:00Z",
+      "ranges": [
+        {
+          "introduced": "0.7"
         }
       ]
     }

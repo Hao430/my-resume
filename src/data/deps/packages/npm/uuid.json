@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 55,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "MODERATE": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-w5hq-g745-h8pq",
@@ -21,6 +25,7 @@
       ],
       "summary": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
       "severity": "MODERATE",
+      "published": "2026-04-22T20:53:24Z",
       "ranges": [
         {
           "introduced": "0",

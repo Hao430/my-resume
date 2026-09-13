@@ -12,7 +12,31 @@
   "deprecatedReason": "",
   "versionCount": 133,
   "latestAffected": false,
+  "vulnerabilityCount": 5,
+  "severityCounts": {
+    "HIGH": 3,
+    "MODERATE": 2
+  },
   "vulnerabilities": [
+    {
+      "id": "GHSA-xwg4-73v4-xw9w",
+      "aliases": [
+        "CVE-2026-73086"
+      ],
+      "summary": "nanoid: Integer Overflow or Wraparound",
+      "severity": "HIGH",
+      "published": "2026-09-01T19:23:45Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.3.12"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "5.1.11"
+        }
+      ]
+    },
     {
       "id": "GHSA-28wg-ghj8-5hjv",
       "aliases": [
@@ -20,6 +44,7 @@
       ],
       "summary": "nanoid: non-secure generators can loop indefinitely with negative size",
       "severity": "HIGH",
+      "published": "2026-07-29T15:31:12Z",
       "ranges": [
         {
           "introduced": "0",
@@ -38,6 +63,7 @@
       ],
       "summary": "nanoid: custom generators can loop indefinitely when size is zero",
       "severity": "HIGH",
+      "published": "2026-07-29T15:31:12Z",
       "ranges": [
         {
           "introduced": "0",
@@ -56,6 +82,7 @@
       ],
       "summary": "Predictable results in nanoid generation when given non-integer values",
       "severity": "MODERATE",
+      "published": "2024-12-09T03:30:59Z",
       "ranges": [
         {
           "introduced": "4.0.0",
@@ -74,28 +101,11 @@
       ],
       "summary": "Exposure of Sensitive Information to an Unauthorized Actor in nanoid",
       "severity": "MODERATE",
+      "published": "2022-01-21T23:57:06Z",
       "ranges": [
         {
           "introduced": "3.0.0",
           "fixed": "3.1.31"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-xwg4-73v4-xw9w",
-      "aliases": [
-        "CVE-2026-73086"
-      ],
-      "summary": "nanoid: Integer Overflow or Wraparound",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.3.12"
-        },
-        {
-          "introduced": "4.0.0",
-          "fixed": "5.1.11"
         }
       ]
     }

@@ -12,49 +12,14 @@
   "deprecatedReason": "",
   "versionCount": 202,
   "latestAffected": false,
+  "vulnerabilityCount": 20,
+  "severityCounts": {
+    "MODERATE": 4,
+    "HIGH": 5,
+    "LOW": 1,
+    "UNKNOWN": 10
+  },
   "vulnerabilities": [
-    {
-      "id": "GHSA-2c2j-9gv5-cj73",
-      "aliases": [
-        "CVE-2025-54121"
-      ],
-      "summary": "Starlette has possible denial-of-service vector when parsing large files in multipart forms",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.47.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-74m5-2c7w-9w3x",
-      "aliases": [
-        "CVE-2023-30798"
-      ],
-      "summary": "MultipartParser denial of service with too many fields or files",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.25.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-7f5h-v6xp-fcq8",
-      "aliases": [
-        "CVE-2025-62727"
-      ],
-      "summary": "Starlette vulnerable to O(n^2) DoS via Range header merging in ``starlette.responses.FileResponse``",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0.39.0",
-          "fixed": "0.49.1"
-        }
-      ]
-    },
     {
       "id": "GHSA-82w8-qh3p-5jfq",
       "aliases": [
@@ -62,66 +27,11 @@
       ],
       "summary": "Starlette: request.form() limits silently ignored for application/x-www-form-urlencoded enable DoS",
       "severity": "HIGH",
+      "published": "2026-06-15T20:39:53Z",
       "ranges": [
         {
           "introduced": "0.4.1",
           "fixed": "1.3.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-86qp-5c8j-p5mr",
-      "aliases": [
-        "CVE-2026-48710"
-      ],
-      "summary": "Starlette has missing Host header validation that poisons request.url.path, bypassing path-based security checks",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.0.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-f96h-pmfr-66vw",
-      "aliases": [
-        "CVE-2024-47874"
-      ],
-      "summary": "Starlette Denial of service (DoS) via multipart/form-data",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.40.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jp82-jpqv-5vv3",
-      "aliases": [
-        "CVE-2026-54282"
-      ],
-      "summary": "Starlette: Unvalidated request path concatenated into authority poisons request.url.hostname",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.3.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-v5gw-mw7f-84px",
-      "aliases": [
-        "CVE-2023-29159"
-      ],
-      "summary": "Starlette has Path Traversal vulnerability in StaticFiles",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0.13.5",
-          "fixed": "0.27.0"
         }
       ]
     },
@@ -132,10 +42,56 @@
       ],
       "summary": "Starlette: SSRF and NTLM credential theft via UNC paths in StaticFiles on Windows",
       "severity": "HIGH",
+      "published": "2026-06-15T20:16:30Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7f5h-v6xp-fcq8",
+      "aliases": [
+        "CVE-2025-62727"
+      ],
+      "summary": "Starlette vulnerable to O(n^2) DoS via Range header merging in ``starlette.responses.FileResponse``",
+      "severity": "HIGH",
+      "published": "2025-10-28T20:38:01Z",
+      "ranges": [
+        {
+          "introduced": "0.39.0",
+          "fixed": "0.49.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f96h-pmfr-66vw",
+      "aliases": [
+        "CVE-2024-47874"
+      ],
+      "summary": "Starlette Denial of service (DoS) via multipart/form-data",
+      "severity": "HIGH",
+      "published": "2024-10-15T18:12:57Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.40.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-74m5-2c7w-9w3x",
+      "aliases": [
+        "CVE-2023-30798"
+      ],
+      "summary": "MultipartParser denial of service with too many fields or files",
+      "severity": "HIGH",
+      "published": "2023-02-14T21:31:28Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.25.0"
         }
       ]
     },
@@ -146,6 +102,7 @@
       ],
       "summary": "Starlette: Arbitrary HTTP method dispatched to `HTTPEndpoint` attributes via `getattr`",
       "severity": "MODERATE",
+      "published": "2026-06-15T20:16:05Z",
       "ranges": [
         {
           "introduced": "0",
@@ -154,44 +111,13 @@
       ]
     },
     {
-      "id": "PYSEC-2023-48",
-      "aliases": [
-        "CVE-2023-30798"
-      ],
-      "summary": "PYSEC-2023-48",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "8c74c2c8dba7030154f8af18e016136bea1938fa"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.25.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2023-83",
-      "aliases": [
-        "CVE-2023-29159"
-      ],
-      "summary": "PYSEC-2023-83",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0.13.5",
-          "fixed": "0.27.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-161",
+      "id": "GHSA-86qp-5c8j-p5mr",
       "aliases": [
         "CVE-2026-48710"
       ],
-      "summary": "BadHost: Missing Host header validation poisons request.url.path, bypassing path-based security checks",
-      "severity": null,
+      "summary": "Starlette has missing Host header validation that poisons request.url.path, bypassing path-based security checks",
+      "severity": "MODERATE",
+      "published": "2026-06-04T13:15:17Z",
       "ranges": [
         {
           "introduced": "0",
@@ -200,16 +126,47 @@
       ]
     },
     {
-      "id": "PYSEC-2026-1941",
+      "id": "GHSA-2c2j-9gv5-cj73",
       "aliases": [
         "CVE-2025-54121"
       ],
       "summary": "Starlette has possible denial-of-service vector when parsing large files in multipart forms",
-      "severity": null,
+      "severity": "MODERATE",
+      "published": "2025-07-21T19:34:23Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "0.47.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v5gw-mw7f-84px",
+      "aliases": [
+        "CVE-2023-29159"
+      ],
+      "summary": "Starlette has Path Traversal vulnerability in StaticFiles",
+      "severity": "MODERATE",
+      "published": "2023-05-17T03:49:14Z",
+      "ranges": [
+        {
+          "introduced": "0.13.5",
+          "fixed": "0.27.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jp82-jpqv-5vv3",
+      "aliases": [
+        "CVE-2026-54282"
+      ],
+      "summary": "Starlette: Unvalidated request path concatenated into authority poisons request.url.hostname",
+      "severity": "LOW",
+      "published": "2026-06-15T20:38:08Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3.0"
         }
       ]
     },
@@ -220,10 +177,26 @@
       ],
       "summary": "Starlette vulnerable to O(n^2) DoS via Range header merging in ``starlette.responses.FileResponse``",
       "severity": null,
+      "published": "2026-07-07T16:03:08.430192Z",
       "ranges": [
         {
           "introduced": "0.39.0",
           "fixed": "0.49.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1941",
+      "aliases": [
+        "CVE-2025-54121"
+      ],
+      "summary": "Starlette has possible denial-of-service vector when parsing large files in multipart forms",
+      "severity": null,
+      "published": "2026-07-07T16:02:58.086064Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.47.2"
         }
       ]
     },
@@ -234,10 +207,41 @@
       ],
       "summary": "Starlette Denial of service (DoS) via multipart/form-data",
       "severity": null,
+      "published": "2026-07-07T14:34:43.184287Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "0.40.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-249",
+      "aliases": [
+        "CVE-2026-54283"
+      ],
+      "summary": "PYSEC-2026-249",
+      "severity": null,
+      "published": "2026-06-22T18:16:46.943Z",
+      "ranges": [
+        {
+          "introduced": "0.4.1",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-248",
+      "aliases": [
+        "CVE-2026-54282"
+      ],
+      "summary": "PYSEC-2026-248",
+      "severity": null,
+      "published": "2026-06-22T18:16:46.807Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3.0"
         }
       ]
     },
@@ -248,6 +252,7 @@
       ],
       "summary": "PYSEC-2026-2280",
       "severity": null,
+      "published": "2026-06-17T20:17:22.427Z",
       "ranges": [
         {
           "introduced": "0",
@@ -262,6 +267,7 @@
       ],
       "summary": "PYSEC-2026-2281",
       "severity": null,
+      "published": "2026-06-17T19:18:09.807Z",
       "ranges": [
         {
           "introduced": "0",
@@ -270,30 +276,51 @@
       ]
     },
     {
-      "id": "PYSEC-2026-248",
+      "id": "PYSEC-2026-161",
       "aliases": [
-        "CVE-2026-54282"
+        "CVE-2026-48710"
       ],
-      "summary": "PYSEC-2026-248",
+      "summary": "BadHost: Missing Host header validation poisons request.url.path, bypassing path-based security checks",
       "severity": null,
+      "published": "2026-05-22T13:10:03Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "1.3.0"
+          "fixed": "1.0.1"
         }
       ]
     },
     {
-      "id": "PYSEC-2026-249",
+      "id": "PYSEC-2023-83",
       "aliases": [
-        "CVE-2026-54283"
+        "CVE-2023-29159"
       ],
-      "summary": "PYSEC-2026-249",
+      "summary": "PYSEC-2023-83",
       "severity": null,
+      "published": "2023-06-01T02:15:00Z",
       "ranges": [
         {
-          "introduced": "0.4.1",
-          "fixed": "1.3.1"
+          "introduced": "0.13.5",
+          "fixed": "0.27.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-48",
+      "aliases": [
+        "CVE-2023-30798"
+      ],
+      "summary": "PYSEC-2023-48",
+      "severity": null,
+      "published": "2023-04-21T16:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8c74c2c8dba7030154f8af18e016136bea1938fa"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.25.0"
         }
       ]
     }

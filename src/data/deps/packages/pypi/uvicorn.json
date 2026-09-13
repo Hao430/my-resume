@@ -12,14 +12,20 @@
   "deprecatedReason": "",
   "versionCount": 202,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "HIGH": 2,
+    "UNKNOWN": 2
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-33c7-2mpw-hg34",
+      "id": "GHSA-f97h-2pfx-f59f",
       "aliases": [
-        "CVE-2020-7694"
+        "CVE-2020-7695"
       ],
-      "summary": "Log injection in uvicorn",
+      "summary": "HTTP response splitting in uvicorn",
       "severity": "HIGH",
+      "published": "2020-07-29T18:07:20Z",
       "ranges": [
         {
           "introduced": "0",
@@ -28,12 +34,13 @@
       ]
     },
     {
-      "id": "GHSA-f97h-2pfx-f59f",
+      "id": "GHSA-33c7-2mpw-hg34",
       "aliases": [
-        "CVE-2020-7695"
+        "CVE-2020-7694"
       ],
-      "summary": "HTTP response splitting in uvicorn",
+      "summary": "Log injection in uvicorn",
       "severity": "HIGH",
+      "published": "2020-07-29T18:07:16Z",
       "ranges": [
         {
           "introduced": "0",
@@ -48,6 +55,7 @@
       ],
       "summary": "PYSEC-2020-150",
       "severity": null,
+      "published": "2020-07-27T12:15:00Z",
       "ranges": [
         {
           "introduced": "0",
@@ -62,6 +70,7 @@
       ],
       "summary": "PYSEC-2020-151",
       "severity": null,
+      "published": "2020-07-27T12:15:00Z",
       "ranges": [
         {
           "introduced": "0",

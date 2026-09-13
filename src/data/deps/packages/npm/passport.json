@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 33,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "MODERATE": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-v923-w3x8-wh69",
@@ -20,6 +24,7 @@
       ],
       "summary": "Passport vulnerable to session regeneration when a users logs in or out",
       "severity": "MODERATE",
+      "published": "2022-07-02T00:00:19Z",
       "ranges": [
         {
           "introduced": "0",

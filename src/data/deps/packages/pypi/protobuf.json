@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 267,
   "latestAffected": false,
+  "vulnerabilityCount": 9,
+  "severityCounts": {
+    "HIGH": 4,
+    "UNKNOWN": 5
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-7gcm-g887-7qv7",
@@ -20,6 +25,7 @@
       ],
       "summary": "protobuf affected by a JSON recursion depth bypass",
       "severity": "HIGH",
+      "published": "2026-01-23T15:31:35Z",
       "ranges": [
         {
           "introduced": "6.30.0rc1",
@@ -32,12 +38,36 @@
       ]
     },
     {
+      "id": "GHSA-8qvm-5x2c-j2w7",
+      "aliases": [
+        "CVE-2025-4565"
+      ],
+      "summary": "protobuf-python has a potential Denial of Service issue",
+      "severity": "HIGH",
+      "published": "2025-06-16T16:02:58Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.25.8"
+        },
+        {
+          "introduced": "5.26.0rc1",
+          "fixed": "5.29.5"
+        },
+        {
+          "introduced": "6.30.0rc1",
+          "fixed": "6.31.1"
+        }
+      ]
+    },
+    {
       "id": "GHSA-8gq9-2x98-w8hf",
       "aliases": [
         "CVE-2022-1941"
       ],
       "summary": "protobuf-cpp and protobuf-python have potential Denial of Service issue",
       "severity": "HIGH",
+      "published": "2022-09-23T20:31:15Z",
       "ranges": [
         {
           "introduced": "0",
@@ -58,34 +88,13 @@
       ]
     },
     {
-      "id": "GHSA-8qvm-5x2c-j2w7",
-      "aliases": [
-        "CVE-2025-4565"
-      ],
-      "summary": "protobuf-python has a potential Denial of Service issue",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.25.8"
-        },
-        {
-          "introduced": "5.26.0rc1",
-          "fixed": "5.29.5"
-        },
-        {
-          "introduced": "6.30.0rc1",
-          "fixed": "6.31.1"
-        }
-      ]
-    },
-    {
       "id": "GHSA-jwvw-v7c5-m82h",
       "aliases": [
         "CVE-2015-5237"
       ],
       "summary": "protobuf susceptible to buffer overflow",
       "severity": "HIGH",
+      "published": "2022-05-13T01:06:54Z",
       "ranges": [
         {
           "introduced": "0",
@@ -106,34 +115,6 @@
         {
           "introduced": "0",
           "fixed": "3.4.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2017-65",
-      "aliases": [
-        "CVE-2015-5237"
-      ],
-      "summary": "PYSEC-2017-65",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.4.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2022-48",
-      "aliases": [
-        "CVE-2021-22570"
-      ],
-      "summary": "PYSEC-2022-48",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.15.0"
         }
       ]
     },
@@ -144,6 +125,7 @@
       ],
       "summary": "protobuf affected by a JSON recursion depth bypass",
       "severity": null,
+      "published": "2026-07-07T16:03:20.164682Z",
       "ranges": [
         {
           "introduced": "0",
@@ -162,6 +144,7 @@
       ],
       "summary": "protobuf-python has a potential Denial of Service issue",
       "severity": null,
+      "published": "2026-07-07T16:02:55.431384Z",
       "ranges": [
         {
           "introduced": "0",
@@ -184,6 +167,7 @@
       ],
       "summary": "protobuf-cpp and protobuf-python have potential Denial of Service issue",
       "severity": null,
+      "published": "2026-07-07T10:17:22.281659Z",
       "ranges": [
         {
           "introduced": "0",
@@ -200,6 +184,36 @@
         {
           "introduced": "4.0.0",
           "fixed": "4.21.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-48",
+      "aliases": [
+        "CVE-2021-22570"
+      ],
+      "summary": "PYSEC-2022-48",
+      "severity": null,
+      "published": "2022-01-26T14:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.15.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2017-65",
+      "aliases": [
+        "CVE-2015-5237"
+      ],
+      "summary": "PYSEC-2017-65",
+      "severity": null,
+      "published": "2017-09-25T17:29:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.4.0"
         }
       ]
     }

@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 103,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "HIGH": 1,
+    "UNKNOWN": 3
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-xp76-357g-9wqq",
@@ -20,42 +25,11 @@
       ],
       "summary": "SciPy creates insecure temporary directories",
       "severity": "HIGH",
+      "published": "2022-05-05T00:28:59Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "0.12.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2019-156",
-      "aliases": [
-        "CVE-2013-4251"
-      ],
-      "summary": "PYSEC-2019-156",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "bd296e0336420b840fcd2faabb97084fd252a973"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.12.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2023-102",
-      "aliases": [
-        "CVE-2023-25399"
-      ],
-      "summary": "PYSEC-2023-102",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.10.0"
         }
       ]
     },
@@ -66,10 +40,45 @@
       ],
       "summary": "PYSEC-2023-114",
       "severity": null,
+      "published": "2023-07-06T21:15:00Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "1.8.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-102",
+      "aliases": [
+        "CVE-2023-25399"
+      ],
+      "summary": "PYSEC-2023-102",
+      "severity": null,
+      "published": "2023-07-05T17:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.10.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-156",
+      "aliases": [
+        "CVE-2013-4251"
+      ],
+      "summary": "PYSEC-2019-156",
+      "severity": null,
+      "published": "2019-11-04T20:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "bd296e0336420b840fcd2faabb97084fd252a973"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.12.1"
         }
       ]
     }

@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 288,
   "latestAffected": false,
+  "vulnerabilityCount": 5,
+  "severityCounts": {
+    "MODERATE": 3,
+    "LOW": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-cm5g-3pgc-8rg4",
@@ -20,10 +25,30 @@
       ],
       "summary": "Express ressource injection",
       "severity": "MODERATE",
+      "published": "2024-10-29T18:30:37Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "4.0.0-rc1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rv95-896h-c2vc",
+      "aliases": [
+        "CVE-2024-29041"
+      ],
+      "summary": "Express.js Open Redirect in malformed URLs",
+      "severity": "MODERATE",
+      "published": "2024-03-25T19:40:26Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.19.2"
+        },
+        {
+          "introduced": "5.0.0-alpha.1",
+          "fixed": "5.0.0-beta.3"
         }
       ]
     },
@@ -34,6 +59,7 @@
       ],
       "summary": "No Charset in Content-Type Header in express",
       "severity": "MODERATE",
+      "published": "2018-10-23T17:22:54Z",
       "ranges": [
         {
           "introduced": "0",
@@ -52,6 +78,7 @@
       ],
       "summary": "Express Open Redirect vulnerability",
       "severity": "LOW",
+      "published": "2024-10-03T21:31:05Z",
       "ranges": [
         {
           "introduced": "3.4.5",
@@ -66,6 +93,7 @@
       ],
       "summary": "express vulnerable to XSS via response.redirect()",
       "severity": "LOW",
+      "published": "2024-09-10T19:41:04Z",
       "ranges": [
         {
           "introduced": "0",
@@ -74,24 +102,6 @@
         {
           "introduced": "5.0.0-alpha.1",
           "fixed": "5.0.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-rv95-896h-c2vc",
-      "aliases": [
-        "CVE-2024-29041"
-      ],
-      "summary": "Express.js Open Redirect in malformed URLs",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.19.2"
-        },
-        {
-          "introduced": "5.0.0-alpha.1",
-          "fixed": "5.0.0-beta.3"
         }
       ]
     }

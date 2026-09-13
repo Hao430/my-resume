@@ -12,200 +12,26 @@
   "deprecatedReason": "",
   "versionCount": 313,
   "latestAffected": false,
+  "vulnerabilityCount": 93,
+  "severityCounts": {
+    "MODERATE": 26,
+    "LOW": 17,
+    "HIGH": 4,
+    "UNKNOWN": 46
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-27mf-ghqm-j3j8",
+      "id": "GHSA-cq5v-8q36-5273",
       "aliases": [
-        "CVE-2024-52303"
+        "CVE-2026-69244"
       ],
-      "summary": "aiohttp has a memory leak when middleware is enabled when requesting a resource with a non-allowed method",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "3.10.6",
-          "fixed": "3.10.11"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-2fqr-mr3j-6wp8",
-      "aliases": [
-        "CVE-2026-54279"
-      ],
-      "summary": "aiohttp: Host-Only Cookies Become Domain Cookies After CookieJar Persistence",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-2vrm-gr82-f7m5",
-      "aliases": [
-        "CVE-2026-34514"
-      ],
-      "summary": "AIOHTTP has CRLF injection through multipart part content type header construction",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-3wq7-rqq7-wx6j",
-      "aliases": [
-        "CVE-2026-34517"
-      ],
-      "summary": "AIOHTTP has late size enforcement for non-file multipart fields causes memory DoS",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-45c4-8wx5-qw6w",
-      "aliases": [
-        "CVE-2023-37276"
-      ],
-      "summary": "aiohttp.web.Application vulnerable to HTTP request smuggling via llhttp HTTP request parser",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.8.5"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-4fvr-rgm6-gqmc",
-      "aliases": [
-        "CVE-2026-54273"
-      ],
-      "summary": "aiohttp: HTTP/1 Pipelined Requests Queue Without Limit",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-4m7w-qmgq-4wj5",
-      "aliases": [
-        "CVE-2026-54275"
-      ],
-      "summary": "aiohttp: TLS Server Hostname Override Is Ignored When Reusing HTTPS Connections",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-54jq-c3m8-4m76",
-      "aliases": [
-        "CVE-2025-69226"
-      ],
-      "summary": "AIOHTTP vulnerable to brute-force leak of internal static ﬁle path components",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-5h86-8mv2-jq9f",
-      "aliases": [
-        "CVE-2024-23334"
-      ],
-      "summary": "aiohttp is vulnerable to directory traversal",
+      "summary": "AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
       "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "1.0.5",
-          "fixed": "3.9.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-5m98-qgg9-wh84",
-      "aliases": [
-        "CVE-2024-30251"
-      ],
-      "summary": "aiohttp vulnerable to Denial of Service when trying to parse malformed POST requests",
-      "severity": "HIGH",
+      "published": "2026-08-03T20:51:13Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "3.9.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-63hf-3vf5-4wqf",
-      "aliases": [
-        "CVE-2026-34520"
-      ],
-      "summary": "AIOHTTP's C parser (llhttp) accepts null bytes and control characters in response header values - header injection/security bypass",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-63hw-fmq6-xxg2",
-      "aliases": [
-        "CVE-2026-54277"
-      ],
-      "summary": "aiohttp: C HTTP Parser Bypasses max_line_size for Fragmented Lines",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-69f9-5gxw-wvc2",
-      "aliases": [
-        "CVE-2025-69224"
-      ],
-      "summary": "AIOHTTP's unicode processing of header values could cause parsing discrepancies",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-6jhg-hg63-jvvf",
-      "aliases": [
-        "CVE-2025-69228"
-      ],
-      "summary": "AIOHTTP vulnerable to  denial of service through large payloads",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
+          "fixed": "3.14.3"
         }
       ]
     },
@@ -216,6 +42,7 @@
       ],
       "summary": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb",
       "severity": "HIGH",
+      "published": "2026-01-05T22:58:41Z",
       "ranges": [
         {
           "introduced": "0",
@@ -224,12 +51,13 @@
       ]
     },
     {
-      "id": "GHSA-7gpw-8wmc-pm8g",
+      "id": "GHSA-5m98-qgg9-wh84",
       "aliases": [
-        "CVE-2024-27306"
+        "CVE-2024-30251"
       ],
-      "summary": "aiohttp Cross-site Scripting vulnerability on index pages for static file handling",
-      "severity": "MODERATE",
+      "summary": "aiohttp vulnerable to Denial of Service when trying to parse malformed POST requests",
+      "severity": "HIGH",
+      "published": "2024-05-03T17:29:54Z",
       "ranges": [
         {
           "introduced": "0",
@@ -238,268 +66,17 @@
       ]
     },
     {
-      "id": "GHSA-8495-4g3g-x7pr",
+      "id": "GHSA-5h86-8mv2-jq9f",
       "aliases": [
-        "CVE-2024-52304"
+        "CVE-2024-23334"
       ],
-      "summary": "aiohttp allows request smuggling due to incorrect parsing of chunk extensions",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.10.11"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-8qpw-xqxj-h4r2",
-      "aliases": [
-        "CVE-2024-23829"
-      ],
-      "summary": "aiohttp's HTTP parser (the python one, not llhttp) still overly lenient about separators",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.9.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-9548-qrrj-x5pj",
-      "aliases": [
-        "CVE-2025-53643"
-      ],
-      "summary": "AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.12.14"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-966j-vmvw-g2g9",
-      "aliases": [
-        "CVE-2026-34518"
-      ],
-      "summary": "AIOHTTP leaks Cookie and Proxy-Authorization headers on cross-origin redirect",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-9x8q-7h8h-wcw9",
-      "aliases": [
-        "CVE-2026-54280"
-      ],
-      "summary": "aiohttp: Payload Response Resources Are Not Closed After Mid-Body Disconnect",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-c427-h43c-vf67",
-      "aliases": [
-        "CVE-2026-34525"
-      ],
-      "summary": "AIOHTTP accepts duplicate Host headers",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-cq5v-8q36-5273",
-      "aliases": [
-        "CVE-2026-69244"
-      ],
-      "summary": "AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
+      "summary": "aiohttp is vulnerable to directory traversal",
       "severity": "HIGH",
+      "published": "2024-01-29T22:31:03Z",
       "ranges": [
         {
-          "introduced": "0",
-          "fixed": "3.14.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-fh55-r93g-j68g",
-      "aliases": [
-        "CVE-2025-69230"
-      ],
-      "summary": "AIOHTTP Vulnerable to Cookie Parser Warning Storm",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-g3cq-j2xw-wf74",
-      "aliases": [
-        "CVE-2026-54278"
-      ],
-      "summary": "aiohttp: Unread Compressed Request Bodies Bypass client_max_size During Cleanup",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-g84x-mcqj-x9qq",
-      "aliases": [
-        "CVE-2025-69229"
-      ],
-      "summary": "AIOHTTP vulnerable to DoS through chunked messages",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-gfw2-4jvh-wgfg",
-      "aliases": [
-        "CVE-2023-47627"
-      ],
-      "summary": "AIOHTTP has problems in HTTP parser (the python one, not llhttp)",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.8.6"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hcc4-c3v8-rx92",
-      "aliases": [
-        "CVE-2026-34513"
-      ],
-      "summary": "AIOHTTP Affected by Denial of Service (DoS) via Unbounded DNS Cache in TCPConnector",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hg6j-4rv6-33pg",
-      "aliases": [
-        "CVE-2026-47265"
-      ],
-      "summary": "AIOHTTP is vulnerable to cross-origin redirect with per-request cookies",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hpj7-wq8m-9hgp",
-      "aliases": [
-        "CVE-2026-54276"
-      ],
-      "summary": "aiohttp: DigestAuthMiddleware Applies Credentials to Cross-Origin Redirect Challenges",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jg22-mg44-37j8",
-      "aliases": [
-        "CVE-2026-34993"
-      ],
-      "summary": "AIOHTTP is Vulnerable to Deserialization of Untrusted Data",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jj3x-wxrx-4x23",
-      "aliases": [
-        "CVE-2025-69227"
-      ],
-      "summary": "AIOHTTP vulnerable to DoS when bypassing asserts",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jwhx-xcg6-8xhj",
-      "aliases": [
-        "CVE-2024-42367"
-      ],
-      "summary": "In aiohttp, compressed files as symlinks are not protected from path traversal",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "3.10.0b1",
-          "fixed": "3.10.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-m5qp-6w8w-w647",
-      "aliases": [
-        "CVE-2026-34516"
-      ],
-      "summary": "AIOHTTP has a Multipart Header Size Bypass",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-m6qw-4cw2-hm4m",
-      "aliases": [
-        "CVE-2026-50269"
-      ],
-      "summary": "aiohttp: CRLF injection in multipart headers",
-      "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.0"
+          "introduced": "1.0.5",
+          "fixed": "3.9.2"
         }
       ]
     },
@@ -510,6 +87,7 @@
       ],
       "summary": "AIOHTTP: HTTP request smuggling via WebSocket upgrade",
       "severity": "MODERATE",
+      "published": "2026-08-03T20:46:10Z",
       "ranges": [
         {
           "introduced": "0",
@@ -524,6 +102,7 @@
       ],
       "summary": "AIOHTTP: WebSocket client accepts compressed frames without negotiated permessage-deflate",
       "severity": "MODERATE",
+      "published": "2026-08-03T20:40:55Z",
       "ranges": [
         {
           "introduced": "0",
@@ -532,26 +111,133 @@
       ]
     },
     {
-      "id": "GHSA-mqqc-3gqh-h2x8",
+      "id": "GHSA-xcgm-r5h9-7989",
       "aliases": [
-        "CVE-2025-69225"
+        "CVE-2026-54274"
       ],
-      "summary": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements",
-      "severity": "LOW",
+      "summary": "aiohttp: Incomplete websocket frame payloads bypass memory limits",
+      "severity": "MODERATE",
+      "published": "2026-06-15T20:11:22Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "3.13.3"
+          "fixed": "3.14.1"
         }
       ]
     },
     {
-      "id": "GHSA-mwh4-6h8g-pg8w",
+      "id": "GHSA-4fvr-rgm6-gqmc",
       "aliases": [
-        "CVE-2026-34519"
+        "CVE-2026-54273"
       ],
-      "summary": "AIOHTTP has HTTP response splitting via \\r in reason phrase",
-      "severity": "LOW",
+      "summary": "aiohttp: HTTP/1 Pipelined Requests Queue Without Limit",
+      "severity": "MODERATE",
+      "published": "2026-06-15T20:10:32Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g3cq-j2xw-wf74",
+      "aliases": [
+        "CVE-2026-54278"
+      ],
+      "summary": "aiohttp: Unread Compressed Request Bodies Bypass client_max_size During Cleanup",
+      "severity": "MODERATE",
+      "published": "2026-06-15T20:09:51Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-63hw-fmq6-xxg2",
+      "aliases": [
+        "CVE-2026-54277"
+      ],
+      "summary": "aiohttp: C HTTP Parser Bypasses max_line_size for Fragmented Lines",
+      "severity": "MODERATE",
+      "published": "2026-06-15T20:09:16Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hpj7-wq8m-9hgp",
+      "aliases": [
+        "CVE-2026-54276"
+      ],
+      "summary": "aiohttp: DigestAuthMiddleware Applies Credentials to Cross-Origin Redirect Challenges",
+      "severity": "MODERATE",
+      "published": "2026-06-15T20:09:06Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hg6j-4rv6-33pg",
+      "aliases": [
+        "CVE-2026-47265"
+      ],
+      "summary": "AIOHTTP is vulnerable to cross-origin redirect with per-request cookies",
+      "severity": "MODERATE",
+      "published": "2026-06-03T21:34:38Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jg22-mg44-37j8",
+      "aliases": [
+        "CVE-2026-34993"
+      ],
+      "summary": "AIOHTTP is Vulnerable to Deserialization of Untrusted Data",
+      "severity": "MODERATE",
+      "published": "2026-06-03T20:56:54Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c427-h43c-vf67",
+      "aliases": [
+        "CVE-2026-34525"
+      ],
+      "summary": "AIOHTTP accepts duplicate Host headers",
+      "severity": "MODERATE",
+      "published": "2026-04-01T21:49:45Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m5qp-6w8w-w647",
+      "aliases": [
+        "CVE-2026-34516"
+      ],
+      "summary": "AIOHTTP has a Multipart Header Size Bypass",
+      "severity": "MODERATE",
+      "published": "2026-04-01T21:43:07Z",
       "ranges": [
         {
           "introduced": "0",
@@ -566,6 +252,7 @@
       ],
       "summary": "AIOHTTP affected by UNC SSRF/NTLMv2 Credential Theft/Local File Read in static resource handler on Windows",
       "severity": "MODERATE",
+      "published": "2026-04-01T21:26:36Z",
       "ranges": [
         {
           "introduced": "0",
@@ -574,14 +261,137 @@
       ]
     },
     {
-      "id": "GHSA-pjjw-qhg8-p2p9",
-      "aliases": [],
-      "summary": "aiohttp has vulnerable dependency that is vulnerable to request smuggling",
+      "id": "GHSA-w2fm-2cpv-w7v5",
+      "aliases": [
+        "CVE-2026-22815"
+      ],
+      "summary": "aiohttp allows unlimited trailer headers, leading to possible uncapped memory usage",
       "severity": "MODERATE",
+      "published": "2026-04-01T19:45:17Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "3.8.6"
+          "fixed": "3.13.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g84x-mcqj-x9qq",
+      "aliases": [
+        "CVE-2025-69229"
+      ],
+      "summary": "AIOHTTP vulnerable to DoS through chunked messages",
+      "severity": "MODERATE",
+      "published": "2026-01-05T23:13:29Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6jhg-hg63-jvvf",
+      "aliases": [
+        "CVE-2025-69228"
+      ],
+      "summary": "AIOHTTP vulnerable to  denial of service through large payloads",
+      "severity": "MODERATE",
+      "published": "2026-01-05T23:13:14Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jj3x-wxrx-4x23",
+      "aliases": [
+        "CVE-2025-69227"
+      ],
+      "summary": "AIOHTTP vulnerable to DoS when bypassing asserts",
+      "severity": "MODERATE",
+      "published": "2026-01-05T23:10:15Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8495-4g3g-x7pr",
+      "aliases": [
+        "CVE-2024-52304"
+      ],
+      "summary": "aiohttp allows request smuggling due to incorrect parsing of chunk extensions",
+      "severity": "MODERATE",
+      "published": "2024-11-18T21:02:32Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.10.11"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-27mf-ghqm-j3j8",
+      "aliases": [
+        "CVE-2024-52303"
+      ],
+      "summary": "aiohttp has a memory leak when middleware is enabled when requesting a resource with a non-allowed method",
+      "severity": "MODERATE",
+      "published": "2024-11-18T21:02:17Z",
+      "ranges": [
+        {
+          "introduced": "3.10.6",
+          "fixed": "3.10.11"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jwhx-xcg6-8xhj",
+      "aliases": [
+        "CVE-2024-42367"
+      ],
+      "summary": "In aiohttp, compressed files as symlinks are not protected from path traversal",
+      "severity": "MODERATE",
+      "published": "2024-08-09T16:49:58Z",
+      "ranges": [
+        {
+          "introduced": "3.10.0b1",
+          "fixed": "3.10.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7gpw-8wmc-pm8g",
+      "aliases": [
+        "CVE-2024-27306"
+      ],
+      "summary": "aiohttp Cross-site Scripting vulnerability on index pages for static file handling",
+      "severity": "MODERATE",
+      "published": "2024-04-18T13:45:21Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.9.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8qpw-xqxj-h4r2",
+      "aliases": [
+        "CVE-2024-23829"
+      ],
+      "summary": "aiohttp's HTTP parser (the python one, not llhttp) still overly lenient about separators",
+      "severity": "MODERATE",
+      "published": "2024-01-29T22:30:07Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.9.2"
         }
       ]
     },
@@ -592,6 +402,7 @@
       ],
       "summary": "aiohttp's ClientSession is vulnerable to CRLF injection via version",
       "severity": "MODERATE",
+      "published": "2023-11-27T23:17:42Z",
       "ranges": [
         {
           "introduced": "0",
@@ -606,6 +417,7 @@
       ],
       "summary": "aiohttp's ClientSession is vulnerable to CRLF injection via method",
       "severity": "MODERATE",
+      "published": "2023-11-27T23:17:24Z",
       "ranges": [
         {
           "introduced": "0",
@@ -614,26 +426,116 @@
       ]
     },
     {
-      "id": "GHSA-v6wp-4m6f-gcjg",
-      "aliases": [
-        "CVE-2021-21330"
-      ],
-      "summary": "`aiohttp` Open Redirect vulnerability (`normalize_path_middleware` middleware)",
-      "severity": "LOW",
+      "id": "GHSA-pjjw-qhg8-p2p9",
+      "aliases": [],
+      "summary": "aiohttp has vulnerable dependency that is vulnerable to request smuggling",
+      "severity": "MODERATE",
+      "published": "2023-11-27T23:15:38Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "3.7.4"
+          "fixed": "3.8.6"
         }
       ]
     },
     {
-      "id": "GHSA-w2fm-2cpv-w7v5",
+      "id": "GHSA-gfw2-4jvh-wgfg",
       "aliases": [
-        "CVE-2026-22815"
+        "CVE-2023-47627"
       ],
-      "summary": "aiohttp allows unlimited trailer headers, leading to possible uncapped memory usage",
+      "summary": "AIOHTTP has problems in HTTP parser (the python one, not llhttp)",
       "severity": "MODERATE",
+      "published": "2023-11-14T22:20:59Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.8.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-45c4-8wx5-qw6w",
+      "aliases": [
+        "CVE-2023-37276"
+      ],
+      "summary": "aiohttp.web.Application vulnerable to HTTP request smuggling via llhttp HTTP request parser",
+      "severity": "MODERATE",
+      "published": "2023-07-20T14:52:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.8.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4m7w-qmgq-4wj5",
+      "aliases": [
+        "CVE-2026-54275"
+      ],
+      "summary": "aiohttp: TLS Server Hostname Override Is Ignored When Reusing HTTPS Connections",
+      "severity": "LOW",
+      "published": "2026-06-15T20:11:13Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9x8q-7h8h-wcw9",
+      "aliases": [
+        "CVE-2026-54280"
+      ],
+      "summary": "aiohttp: Payload Response Resources Are Not Closed After Mid-Body Disconnect",
+      "severity": "LOW",
+      "published": "2026-06-15T20:10:44Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2fqr-mr3j-6wp8",
+      "aliases": [
+        "CVE-2026-54279"
+      ],
+      "summary": "aiohttp: Host-Only Cookies Become Domain Cookies After CookieJar Persistence",
+      "severity": "LOW",
+      "published": "2026-06-15T20:08:51Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m6qw-4cw2-hm4m",
+      "aliases": [
+        "CVE-2026-50269"
+      ],
+      "summary": "aiohttp: CRLF injection in multipart headers",
+      "severity": "LOW",
+      "published": "2026-06-15T20:07:26Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.14.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-63hf-3vf5-4wqf",
+      "aliases": [
+        "CVE-2026-34520"
+      ],
+      "summary": "AIOHTTP's C parser (llhttp) accepts null bytes and control characters in response header values - header injection/security bypass",
+      "severity": "LOW",
+      "published": "2026-04-01T21:49:06Z",
       "ranges": [
         {
           "introduced": "0",
@@ -642,16 +544,152 @@
       ]
     },
     {
-      "id": "GHSA-xcgm-r5h9-7989",
+      "id": "GHSA-mwh4-6h8g-pg8w",
       "aliases": [
-        "CVE-2026-54274"
+        "CVE-2026-34519"
       ],
-      "summary": "aiohttp: Incomplete websocket frame payloads bypass memory limits",
-      "severity": "MODERATE",
+      "summary": "AIOHTTP has HTTP response splitting via \\r in reason phrase",
+      "severity": "LOW",
+      "published": "2026-04-01T21:48:24Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "3.14.1"
+          "fixed": "3.13.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-966j-vmvw-g2g9",
+      "aliases": [
+        "CVE-2026-34518"
+      ],
+      "summary": "AIOHTTP leaks Cookie and Proxy-Authorization headers on cross-origin redirect",
+      "severity": "LOW",
+      "published": "2026-04-01T21:47:46Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3wq7-rqq7-wx6j",
+      "aliases": [
+        "CVE-2026-34517"
+      ],
+      "summary": "AIOHTTP has late size enforcement for non-file multipart fields causes memory DoS",
+      "severity": "LOW",
+      "published": "2026-04-01T21:47:07Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2vrm-gr82-f7m5",
+      "aliases": [
+        "CVE-2026-34514"
+      ],
+      "summary": "AIOHTTP has CRLF injection through multipart part content type header construction",
+      "severity": "LOW",
+      "published": "2026-04-01T21:20:06Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hcc4-c3v8-rx92",
+      "aliases": [
+        "CVE-2026-34513"
+      ],
+      "summary": "AIOHTTP Affected by Denial of Service (DoS) via Unbounded DNS Cache in TCPConnector",
+      "severity": "LOW",
+      "published": "2026-04-01T21:19:22Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fh55-r93g-j68g",
+      "aliases": [
+        "CVE-2025-69230"
+      ],
+      "summary": "AIOHTTP Vulnerable to Cookie Parser Warning Storm",
+      "severity": "LOW",
+      "published": "2026-01-05T23:13:46Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-54jq-c3m8-4m76",
+      "aliases": [
+        "CVE-2025-69226"
+      ],
+      "summary": "AIOHTTP vulnerable to brute-force leak of internal static ﬁle path components",
+      "severity": "LOW",
+      "published": "2026-01-05T23:09:51Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mqqc-3gqh-h2x8",
+      "aliases": [
+        "CVE-2025-69225"
+      ],
+      "summary": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements",
+      "severity": "LOW",
+      "published": "2026-01-05T23:09:30Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-69f9-5gxw-wvc2",
+      "aliases": [
+        "CVE-2025-69224"
+      ],
+      "summary": "AIOHTTP's unicode processing of header values could cause parsing discrepancies",
+      "severity": "LOW",
+      "published": "2026-01-05T22:58:57Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.13.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9548-qrrj-x5pj",
+      "aliases": [
+        "CVE-2025-53643"
+      ],
+      "summary": "AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections",
+      "severity": "LOW",
+      "published": "2025-07-14T19:33:31Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.12.14"
         }
       ]
     },
@@ -662,6 +700,7 @@
       ],
       "summary": "Aiohttp has inconsistent interpretation of `Content-Length` vs. `Transfer-Encoding` differing in C and Python fallbacks",
       "severity": "LOW",
+      "published": "2023-11-14T20:36:25Z",
       "ranges": [
         {
           "introduced": "0",
@@ -670,632 +709,17 @@
       ]
     },
     {
-      "id": "PYSEC-2021-76",
+      "id": "GHSA-v6wp-4m6f-gcjg",
       "aliases": [
         "CVE-2021-21330"
       ],
-      "summary": "PYSEC-2021-76",
-      "severity": null,
+      "summary": "`aiohttp` Open Redirect vulnerability (`normalize_path_middleware` middleware)",
+      "severity": "LOW",
+      "published": "2021-02-26T02:11:57Z",
       "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2545222a3853e31ace15d87ae0e2effb7da0c96b"
-        },
         {
           "introduced": "0",
           "fixed": "3.7.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2023-120",
-      "aliases": [
-        "CVE-2023-37276"
-      ],
-      "summary": "aiohttp.web.Application vulnerable to HTTP request smuggling via llhttp HTTP request parser",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.8.5"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2023-246",
-      "aliases": [
-        "CVE-2023-47627"
-      ],
-      "summary": "PYSEC-2023-246",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "d5c12ba890557a575c313bb3017910d7616fce3d"
-        },
-        {
-          "introduced": "0",
-          "fixed": "3.8.6"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2023-247",
-      "aliases": [
-        "CVE-2023-47641"
-      ],
-      "summary": "PYSEC-2023-247",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "f016f0680e4ace6742b03a70cb0382ce86abe371"
-        },
-        {
-          "introduced": "0",
-          "fixed": "3.8.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2023-250",
-      "aliases": [
-        "CVE-2023-49081"
-      ],
-      "summary": "PYSEC-2023-250",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1e86b777e61cf4eefc7d92fa57fa19dcc676013b"
-        },
-        {
-          "introduced": "0",
-          "fixed": "3.9.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2023-251",
-      "aliases": [
-        "CVE-2023-49082"
-      ],
-      "summary": "PYSEC-2023-251",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "e4ae01c2077d2cfa116aa82e4ff6866857f7c466"
-        },
-        {
-          "introduced": "0",
-          "fixed": "3.9.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2024-24",
-      "aliases": [
-        "CVE-2024-23334"
-      ],
-      "summary": "PYSEC-2024-24",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1c335944d6a8b1298baf179b7c0b3069f10c514b"
-        },
-        {
-          "introduced": "1.0.5",
-          "fixed": "3.9.2"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2024-26",
-      "aliases": [
-        "CVE-2024-23829"
-      ],
-      "summary": "PYSEC-2024-26",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "33ccdfb0a12690af5bb49bda2319ec0907fa7827"
-        },
-        {
-          "introduced": "0",
-          "fixed": "3.9.2"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1096",
-      "aliases": [
-        "CVE-2024-52303"
-      ],
-      "summary": "aiohttp has a memory leak when middleware is enabled when requesting a resource with a non-allowed method",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "3.10.6",
-          "fixed": "3.10.11"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1097",
-      "aliases": [
-        "CVE-2025-69226"
-      ],
-      "summary": "AIOHTTP vulnerable to brute-force leak of internal static ﬁle path components",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1098",
-      "aliases": [
-        "CVE-2024-30251"
-      ],
-      "summary": "aiohttp vulnerable to Denial of Service when trying to parse malformed POST requests",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.9.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1099",
-      "aliases": [
-        "CVE-2025-69224"
-      ],
-      "summary": "AIOHTTP's unicode processing of header values could cause parsing discrepancies",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1100",
-      "aliases": [
-        "CVE-2025-69228"
-      ],
-      "summary": "AIOHTTP vulnerable to  denial of service through large payloads",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1101",
-      "aliases": [
-        "CVE-2025-69223"
-      ],
-      "summary": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1102",
-      "aliases": [
-        "CVE-2024-27306"
-      ],
-      "summary": "aiohttp Cross-site Scripting vulnerability on index pages for static file handling",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.9.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1103",
-      "aliases": [
-        "CVE-2024-52304"
-      ],
-      "summary": "aiohttp allows request smuggling due to incorrect parsing of chunk extensions",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.10.11"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1104",
-      "aliases": [
-        "CVE-2025-53643"
-      ],
-      "summary": "AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.12.14"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1105",
-      "aliases": [
-        "CVE-2025-69230"
-      ],
-      "summary": "AIOHTTP Vulnerable to Cookie Parser Warning Storm",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1106",
-      "aliases": [
-        "CVE-2025-69229"
-      ],
-      "summary": "AIOHTTP vulnerable to DoS through chunked messages",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1107",
-      "aliases": [
-        "CVE-2025-69227"
-      ],
-      "summary": "AIOHTTP vulnerable to DoS when bypassing asserts",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1108",
-      "aliases": [
-        "CVE-2024-42367"
-      ],
-      "summary": "In aiohttp, compressed files as symlinks are not protected from path traversal",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "3.10.0b1",
-          "fixed": "3.10.2"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-1109",
-      "aliases": [
-        "CVE-2025-69225"
-      ],
-      "summary": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.3"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2094",
-      "aliases": [
-        "CVE-2026-22815"
-      ],
-      "summary": "PYSEC-2026-2094",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2095",
-      "aliases": [
-        "CVE-2026-34513"
-      ],
-      "summary": "PYSEC-2026-2095",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2096",
-      "aliases": [
-        "CVE-2026-34514"
-      ],
-      "summary": "PYSEC-2026-2096",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2097",
-      "aliases": [
-        "CVE-2026-34515"
-      ],
-      "summary": "PYSEC-2026-2097",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2098",
-      "aliases": [
-        "CVE-2026-34516"
-      ],
-      "summary": "PYSEC-2026-2098",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2099",
-      "aliases": [
-        "CVE-2026-34517"
-      ],
-      "summary": "PYSEC-2026-2099",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2100",
-      "aliases": [
-        "CVE-2026-34518"
-      ],
-      "summary": "PYSEC-2026-2100",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2101",
-      "aliases": [
-        "CVE-2026-34519"
-      ],
-      "summary": "PYSEC-2026-2101",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2102",
-      "aliases": [
-        "CVE-2026-34520"
-      ],
-      "summary": "PYSEC-2026-2102",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2103",
-      "aliases": [
-        "CVE-2026-34525"
-      ],
-      "summary": "PYSEC-2026-2103",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.13.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2104",
-      "aliases": [
-        "CVE-2026-34993"
-      ],
-      "summary": "PYSEC-2026-2104",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2105",
-      "aliases": [
-        "CVE-2026-47265"
-      ],
-      "summary": "PYSEC-2026-2105",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2106",
-      "aliases": [
-        "CVE-2026-50269"
-      ],
-      "summary": "PYSEC-2026-2106",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.0"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2107",
-      "aliases": [
-        "CVE-2026-54273"
-      ],
-      "summary": "PYSEC-2026-2107",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2108",
-      "aliases": [
-        "CVE-2026-54274"
-      ],
-      "summary": "PYSEC-2026-2108",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2109",
-      "aliases": [
-        "CVE-2026-54276"
-      ],
-      "summary": "PYSEC-2026-2109",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2110",
-      "aliases": [
-        "CVE-2026-54277"
-      ],
-      "summary": "PYSEC-2026-2110",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2111",
-      "aliases": [
-        "CVE-2026-54278"
-      ],
-      "summary": "PYSEC-2026-2111",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2112",
-      "aliases": [
-        "CVE-2026-54279"
-      ],
-      "summary": "PYSEC-2026-2112",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-2113",
-      "aliases": [
-        "CVE-2026-54280"
-      ],
-      "summary": "PYSEC-2026-2113",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2026-237",
-      "aliases": [
-        "CVE-2026-54275"
-      ],
-      "summary": "PYSEC-2026-237",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "3.14.1"
         }
       ]
     },
@@ -1306,6 +730,7 @@
       ],
       "summary": "AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
       "severity": null,
+      "published": "2026-08-04T11:34:47.557457Z",
       "ranges": [
         {
           "introduced": "0",
@@ -1320,6 +745,7 @@
       ],
       "summary": "AIOHTTP: HTTP request smuggling via WebSocket upgrade",
       "severity": null,
+      "published": "2026-08-04T11:34:47.269769Z",
       "ranges": [
         {
           "introduced": "0",
@@ -1334,6 +760,7 @@
       ],
       "summary": "AIOHTTP: WebSocket client accepts compressed frames without negotiated permessage-deflate",
       "severity": null,
+      "published": "2026-08-04T11:34:46.955491Z",
       "ranges": [
         {
           "introduced": "0",

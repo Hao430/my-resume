@@ -12,18 +12,25 @@
   "deprecatedReason": "",
   "versionCount": 887,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "LOW": 2,
+    "MODERATE": 1,
+    "CRITICAL": 1
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-38r7-794h-5758",
+      "id": "GHSA-hc6q-2mpp-qw7j",
       "aliases": [
-        "CVE-2025-68157"
+        "CVE-2023-28154"
       ],
-      "summary": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects → SSRF + cache persistence",
-      "severity": "LOW",
+      "summary": "Cross-realm object access in Webpack 5",
+      "severity": "CRITICAL",
+      "published": "2023-03-13T03:30:15Z",
       "ranges": [
         {
-          "introduced": "5.49.0",
-          "fixed": "5.104.0"
+          "introduced": "5.0.0",
+          "fixed": "5.76.0"
         }
       ]
     },
@@ -34,6 +41,7 @@
       ],
       "summary": "Webpack's AutoPublicPathRuntimeModule has a DOM Clobbering Gadget that leads to XSS",
       "severity": "MODERATE",
+      "published": "2024-08-27T19:50:40Z",
       "ranges": [
         {
           "introduced": "5.0.0-alpha.0",
@@ -48,6 +56,7 @@
       ],
       "summary": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
       "severity": "LOW",
+      "published": "2026-02-05T18:38:10Z",
       "ranges": [
         {
           "introduced": "5.49.0",
@@ -56,16 +65,17 @@
       ]
     },
     {
-      "id": "GHSA-hc6q-2mpp-qw7j",
+      "id": "GHSA-38r7-794h-5758",
       "aliases": [
-        "CVE-2023-28154"
+        "CVE-2025-68157"
       ],
-      "summary": "Cross-realm object access in Webpack 5",
-      "severity": "CRITICAL",
+      "summary": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects → SSRF + cache persistence",
+      "severity": "LOW",
+      "published": "2026-02-05T18:35:28Z",
       "ranges": [
         {
-          "introduced": "5.0.0",
-          "fixed": "5.76.0"
+          "introduced": "5.49.0",
+          "fixed": "5.104.0"
         }
       ]
     }

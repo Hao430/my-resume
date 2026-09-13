@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 359,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "MODERATE": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-2g4f-4pwh-qvx6",
@@ -20,6 +24,7 @@
       ],
       "summary": "ajv has ReDoS when using `$data` option",
       "severity": "MODERATE",
+      "published": "2026-02-11T21:30:39Z",
       "ranges": [
         {
           "introduced": "7.0.0-alpha.0",
@@ -38,6 +43,7 @@
       ],
       "summary": "Prototype Pollution in Ajv",
       "severity": "MODERATE",
+      "published": "2022-02-10T23:30:59Z",
       "ranges": [
         {
           "introduced": "0",

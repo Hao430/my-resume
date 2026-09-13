@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 35,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "LOW": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-pxg6-pf52-xh8x",
@@ -20,6 +24,7 @@
       ],
       "summary": "cookie accepts cookie name, path, and domain with out of bounds characters",
       "severity": "LOW",
+      "published": "2024-10-04T20:31:00Z",
       "ranges": [
         {
           "introduced": "0",

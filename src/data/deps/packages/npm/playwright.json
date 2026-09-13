@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 5682,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "HIGH": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-7mvr-c777-76hp",
@@ -20,6 +24,7 @@
       ],
       "summary": "Playwright downloads and installs browsers without verifying the authenticity of the SSL certificate",
       "severity": "HIGH",
+      "published": "2025-10-14T18:30:36Z",
       "ranges": [
         {
           "introduced": "0",

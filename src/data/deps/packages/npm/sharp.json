@@ -12,16 +12,22 @@
   "deprecatedReason": "",
   "versionCount": 191,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "HIGH": 3,
+    "MODERATE": 1
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-54xq-cgqr-rpm3",
+      "id": "GHSA-rgj7-g3m4-5g8c",
       "aliases": [],
-      "summary": "sharp vulnerability in libwebp dependency CVE-2023-4863",
+      "summary": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545",
       "severity": "HIGH",
+      "published": "2026-09-08T21:25:11Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "0.32.6"
+          "fixed": "0.35.4"
         }
       ]
     },
@@ -30,10 +36,24 @@
       "aliases": [],
       "summary": "sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591",
       "severity": "HIGH",
+      "published": "2026-07-21T22:07:17Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "0.35.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-54xq-cgqr-rpm3",
+      "aliases": [],
+      "summary": "sharp vulnerability in libwebp dependency CVE-2023-4863",
+      "severity": "HIGH",
+      "published": "2023-11-16T17:14:15Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.32.6"
         }
       ]
     },
@@ -44,22 +64,11 @@
       ],
       "summary": "sharp vulnerable to Command Injection in post-installation over build environment",
       "severity": "MODERATE",
+      "published": "2022-06-01T19:58:29Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "0.30.5"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-rgj7-g3m4-5g8c",
-      "aliases": [],
-      "summary": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.35.4"
         }
       ]
     }

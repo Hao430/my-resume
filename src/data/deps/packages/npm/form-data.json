@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 53,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "CRITICAL": 1,
+    "HIGH": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-fjxv-7rqg-78g4",
@@ -20,6 +25,7 @@
       ],
       "summary": "form-data uses unsafe random function in form-data for choosing boundary",
       "severity": "CRITICAL",
+      "published": "2025-07-21T19:04:54Z",
       "ranges": [
         {
           "introduced": "0",
@@ -42,6 +48,7 @@
       ],
       "summary": "form-data: CRLF injection in form-data via unescaped multipart field names and filenames",
       "severity": "HIGH",
+      "published": "2026-06-15T17:26:26Z",
       "ranges": [
         {
           "introduced": "0",

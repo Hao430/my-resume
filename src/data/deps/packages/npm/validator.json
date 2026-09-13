@@ -12,46 +12,24 @@
   "deprecatedReason": "",
   "versionCount": 218,
   "latestAffected": false,
+  "vulnerabilityCount": 10,
+  "severityCounts": {
+    "MODERATE": 8,
+    "HIGH": 2
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-552w-rqg8-gxxm",
+      "id": "GHSA-vghf-hv5q-vc2g",
       "aliases": [
-        "CVE-2013-7453"
+        "CVE-2025-12758"
       ],
-      "summary": "Moderate severity vulnerability that affects validator",
-      "severity": "MODERATE",
+      "summary": "Validator is Vulnerable to Incomplete Filtering of One or More Instances of Special Elements",
+      "severity": "HIGH",
+      "published": "2025-11-27T06:31:25Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "1.1.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-79mx-88w7-8f7q",
-      "aliases": [
-        "CVE-2014-9772"
-      ],
-      "summary": "XSS Filter Bypass via Encoded URL in validator",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.0.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-9965-vmph-33xx",
-      "aliases": [
-        "CVE-2025-56200"
-      ],
-      "summary": "validator.js has a URL validation bypass vulnerability in its isURL function",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "13.15.20"
+          "fixed": "13.15.22"
         }
       ]
     },
@@ -62,6 +40,7 @@
       ],
       "summary": "Regular Expression Denial of Service in validator",
       "severity": "HIGH",
+      "published": "2020-08-31T23:01:13Z",
       "ranges": [
         {
           "introduced": "0",
@@ -70,16 +49,30 @@
       ]
     },
     {
-      "id": "GHSA-q4qq-fm7q-cwp5",
+      "id": "GHSA-9965-vmph-33xx",
       "aliases": [
-        "CVE-2013-7454"
+        "CVE-2025-56200"
       ],
-      "summary": "Multiple XSS Filter Bypasses in validator",
+      "summary": "validator.js has a URL validation bypass vulnerability in its isURL function",
       "severity": "MODERATE",
+      "published": "2025-09-30T18:30:25Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "1.1.0"
+          "fixed": "13.15.20"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xx4c-jj58-r7x6",
+      "aliases": [],
+      "summary": "Inefficient Regular Expression Complexity in Validator.js",
+      "severity": "MODERATE",
+      "published": "2021-11-19T20:14:23Z",
+      "ranges": [
+        {
+          "introduced": "11.1.0",
+          "fixed": "13.7.0"
         }
       ]
     },
@@ -90,10 +83,56 @@
       ],
       "summary": "Inefficient Regular Expression Complexity in validator.js",
       "severity": "MODERATE",
+      "published": "2021-11-03T17:34:45Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "13.7.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-79mx-88w7-8f7q",
+      "aliases": [
+        "CVE-2014-9772"
+      ],
+      "summary": "XSS Filter Bypass via Encoded URL in validator",
+      "severity": "MODERATE",
+      "published": "2018-11-06T23:12:49Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-552w-rqg8-gxxm",
+      "aliases": [
+        "CVE-2013-7453"
+      ],
+      "summary": "Moderate severity vulnerability that affects validator",
+      "severity": "MODERATE",
+      "published": "2017-10-24T18:33:36Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q4qq-fm7q-cwp5",
+      "aliases": [
+        "CVE-2013-7454"
+      ],
+      "summary": "Multiple XSS Filter Bypasses in validator",
+      "severity": "MODERATE",
+      "published": "2017-10-24T18:33:36Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.0"
         }
       ]
     },
@@ -104,6 +143,7 @@
       ],
       "summary": "Moderate severity vulnerability that affects validator",
       "severity": "MODERATE",
+      "published": "2017-10-24T18:33:36Z",
       "ranges": [
         {
           "introduced": "0",
@@ -118,36 +158,11 @@
       ],
       "summary": "Moderate severity vulnerability that affects validator",
       "severity": "MODERATE",
+      "published": "2017-10-24T18:33:36Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "1.1.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-vghf-hv5q-vc2g",
-      "aliases": [
-        "CVE-2025-12758"
-      ],
-      "summary": "Validator is Vulnerable to Incomplete Filtering of One or More Instances of Special Elements",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "13.15.22"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-xx4c-jj58-r7x6",
-      "aliases": [],
-      "summary": "Inefficient Regular Expression Complexity in Validator.js",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "11.1.0",
-          "fixed": "13.7.0"
         }
       ]
     }

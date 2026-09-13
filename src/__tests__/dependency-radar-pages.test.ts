@@ -175,6 +175,44 @@ describe('构建期不联网（spec §2 硬约束）', () => {
   })
 })
 
+describe('包页：列表截断（spec §4.5）', () => {
+  it('被截断时显示历史总数而非 50，并给出 OSV 完整列表入口', async () => {
+    resetDom()
+    const { wrapper } = await mountPackage('/tools/dependency-radar/pypi/tensorflow')
+
+    // 标题里的数字必须是历史总数
+    expect(wrapper.find('.history__count').text()).toBe('861')
+    // 卡片最多渲染 50 张
+    expect(wrapper.findAll('.vuln')).toHaveLength(50)
+
+    const note = wrapper.find('.truncated-note')
+    expect(note.exists()).toBe(true)
+    const link = note.find('a')
+    expect(link.attributes('href')).toContain('osv.dev/list')
+    expect(link.attributes('href')).toContain('tensorflow')
+    wrapper.unmount()
+  })
+
+  it('严重度分布在被截断时仍代表全部条目（不被截断扭曲）', async () => {
+    resetDom()
+    const { wrapper } = await mountPackage('/tools/dependency-radar/pypi/tensorflow')
+    const shown = wrapper
+      .findAll('.severity-breakdown .badge')
+      .map((n) => Number(n.text().replace(/\D/g, '')))
+      .reduce((sum, n) => sum + n, 0)
+    // 分布之和应等于历史总数，而不是渲染出来的 50 条
+    expect(shown).toBe(861)
+    wrapper.unmount()
+  })
+
+  it('未超上限的包不显示截断提示', async () => {
+    resetDom()
+    const { wrapper } = await mountPackage('/tools/dependency-radar/npm/lodash')
+    expect(wrapper.find('.truncated-note').exists()).toBe(false)
+    wrapper.unmount()
+  })
+})
+
 describe('包页：内容与路由', () => {
   it('列出历史漏洞及其受影响区间（读者靠它对照自己手里的版本）', async () => {
     resetDom()

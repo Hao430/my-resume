@@ -12,81 +12,12 @@
   "deprecatedReason": "",
   "versionCount": 1108,
   "latestAffected": false,
+  "vulnerabilityCount": 7,
+  "severityCounts": {
+    "HIGH": 6,
+    "MODERATE": 1
+  },
   "vulnerabilities": [
-    {
-      "id": "GHSA-39pv-4j6c-2g6v",
-      "aliases": [
-        "CVE-2026-54266"
-      ],
-      "summary": "@angular/common: Weak 32-Bit Cache Key Hashing in `HttpTransferCache` Leading to Cross-Request Data Leakage and State Poisoning",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "22.0.0-next.0",
-          "fixed": "22.0.1"
-        },
-        {
-          "introduced": "21.0.0-next.0",
-          "fixed": "21.2.17"
-        },
-        {
-          "introduced": "20.0.0-next.0",
-          "fixed": "20.3.25"
-        },
-        {
-          "introduced": "0",
-          "lastAffected": "19.2.25"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-48r7-hpm6-gfxm",
-      "aliases": [
-        "CVE-2026-54268"
-      ],
-      "summary": "@angular/common: Denial of Service (DoS) via OOM in Date Formatting (formatDate)",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "22.0.0-next.0",
-          "fixed": "22.0.1"
-        },
-        {
-          "introduced": "21.0.0-next.0",
-          "fixed": "21.2.17"
-        },
-        {
-          "introduced": "20.0.0-next.0",
-          "fixed": "20.3.25"
-        },
-        {
-          "introduced": "0",
-          "lastAffected": "19.2.25"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-58c5-g7wp-6w37",
-      "aliases": [
-        "CVE-2025-66035"
-      ],
-      "summary": "Angular is Vulnerable to XSRF Token Leakage via Protocol-Relative URLs in Angular HTTP Client",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "21.0.0-next.0",
-          "fixed": "21.0.1"
-        },
-        {
-          "introduced": "20.0.0-next.0",
-          "fixed": "20.3.14"
-        },
-        {
-          "introduced": "0",
-          "fixed": "19.2.16"
-        }
-      ]
-    },
     {
       "id": "GHSA-jhpw-976m-542j",
       "aliases": [
@@ -94,6 +25,7 @@
       ],
       "summary": "Angular: Cache-Key Ambiguity in HttpTransferCache Leading to Cross-Request Response Reuse and State Poisoning",
       "severity": "HIGH",
+      "published": "2026-08-03T15:59:13Z",
       "ranges": [
         {
           "introduced": "22.0.0-next.0",
@@ -114,24 +46,52 @@
       ]
     },
     {
-      "id": "GHSA-p297-fm68-3q8c",
+      "id": "GHSA-48r7-hpm6-gfxm",
       "aliases": [
-        "CVE-2026-88059"
+        "CVE-2026-54268"
       ],
-      "summary": "Angular: Information Leak via `HttpTransferCache` Bypass When Using `withRequestsMadeViaParent`",
-      "severity": "MODERATE",
+      "summary": "@angular/common: Denial of Service (DoS) via OOM in Date Formatting (formatDate)",
+      "severity": "HIGH",
+      "published": "2026-06-15T17:24:52Z",
       "ranges": [
         {
-          "introduced": "22.0.0",
-          "fixed": "22.1.1"
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.1"
         },
         {
-          "introduced": "21.0.0",
-          "fixed": "21.2.20"
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.17"
         },
         {
-          "introduced": "20.0.0",
-          "fixed": "20.3.28"
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.25"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "19.2.25"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-39pv-4j6c-2g6v",
+      "aliases": [
+        "CVE-2026-54266"
+      ],
+      "summary": "@angular/common: Weak 32-Bit Cache Key Hashing in `HttpTransferCache` Leading to Cross-Request Data Leakage and State Poisoning",
+      "severity": "HIGH",
+      "published": "2026-06-15T17:24:02Z",
+      "ranges": [
+        {
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.1"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.17"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.25"
         },
         {
           "introduced": "0",
@@ -146,6 +106,7 @@
       ],
       "summary": "@angular/common: Denial of Service (DoS) via OOM in Number Formatting (digitsInfo)",
       "severity": "HIGH",
+      "published": "2026-06-15T16:52:30Z",
       "ranges": [
         {
           "introduced": "22.0.0-next.0",
@@ -176,6 +137,7 @@
       ],
       "summary": "@angular/common: Information Leak via Default Caching of Credentialed Requests in HttpTransferCache",
       "severity": "HIGH",
+      "published": "2026-06-15T16:51:53Z",
       "ranges": [
         {
           "introduced": "22.0.0-next.0",
@@ -196,6 +158,56 @@
         {
           "introduced": "21.0.0-next.0",
           "fixed": "21.2.15"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-58c5-g7wp-6w37",
+      "aliases": [
+        "CVE-2025-66035"
+      ],
+      "summary": "Angular is Vulnerable to XSRF Token Leakage via Protocol-Relative URLs in Angular HTTP Client",
+      "severity": "HIGH",
+      "published": "2025-11-26T23:18:50Z",
+      "ranges": [
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.0.1"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.14"
+        },
+        {
+          "introduced": "0",
+          "fixed": "19.2.16"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p297-fm68-3q8c",
+      "aliases": [
+        "CVE-2026-88059"
+      ],
+      "summary": "Angular: Information Leak via `HttpTransferCache` Bypass When Using `withRequestsMadeViaParent`",
+      "severity": "MODERATE",
+      "published": "2026-09-10T20:19:19Z",
+      "ranges": [
+        {
+          "introduced": "22.0.0",
+          "fixed": "22.1.1"
+        },
+        {
+          "introduced": "21.0.0",
+          "fixed": "21.2.20"
+        },
+        {
+          "introduced": "20.0.0",
+          "fixed": "20.3.28"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "19.2.25"
         }
       ]
     }

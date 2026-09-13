@@ -12,7 +12,32 @@
   "deprecatedReason": "",
   "versionCount": 169,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "MODERATE": 1,
+    "HIGH": 1,
+    "UNKNOWN": 2
+  },
   "vulnerabilities": [
+    {
+      "id": "GHSA-8fww-64cx-x8p5",
+      "aliases": [
+        "CVE-2023-28859"
+      ],
+      "summary": "redis-py Race Condition due to incomplete fix",
+      "severity": "HIGH",
+      "published": "2023-03-26T21:30:23Z",
+      "ranges": [
+        {
+          "introduced": "4.5.0",
+          "fixed": "4.5.4"
+        },
+        {
+          "introduced": "4.2.0",
+          "fixed": "4.4.4"
+        }
+      ]
+    },
     {
       "id": "GHSA-24wv-mv5m-xv4h",
       "aliases": [
@@ -20,6 +45,7 @@
       ],
       "summary": "redis-py Race Condition vulnerability",
       "severity": "MODERATE",
+      "published": "2023-03-26T21:30:23Z",
       "ranges": [
         {
           "introduced": "4.4.0",
@@ -36,30 +62,13 @@
       ]
     },
     {
-      "id": "GHSA-8fww-64cx-x8p5",
-      "aliases": [
-        "CVE-2023-28859"
-      ],
-      "summary": "redis-py Race Condition due to incomplete fix",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "4.5.0",
-          "fixed": "4.5.4"
-        },
-        {
-          "introduced": "4.2.0",
-          "fixed": "4.4.4"
-        }
-      ]
-    },
-    {
       "id": "PYSEC-2023-45",
       "aliases": [
         "CVE-2023-28858"
       ],
       "summary": "PYSEC-2023-45",
       "severity": null,
+      "published": "2023-03-26T19:15:00Z",
       "ranges": [
         {
           "introduced": "4.2.0",
@@ -82,6 +91,7 @@
       ],
       "summary": "PYSEC-2023-46",
       "severity": null,
+      "published": "2023-03-26T19:15:00Z",
       "ranges": [
         {
           "introduced": "4.2.0",

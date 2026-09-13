@@ -12,6 +12,12 @@
   "deprecatedReason": "",
   "versionCount": 77,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "HIGH": 2,
+    "LOW": 1,
+    "UNKNOWN": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-4x49-vf9v-38px",
@@ -20,6 +26,7 @@
       ],
       "summary": "debug@4.4.2 contains malware after npm account takeover",
       "severity": "HIGH",
+      "published": "2025-09-15T21:30:55Z",
       "ranges": [
         {
           "introduced": "4.4.2",
@@ -34,6 +41,7 @@
       ],
       "summary": "debug Inefficient Regular Expression Complexity vulnerability",
       "severity": "HIGH",
+      "published": "2023-01-09T12:30:19Z",
       "ranges": [
         {
           "introduced": "3.0.0",
@@ -52,6 +60,7 @@
       ],
       "summary": "Regular Expression Denial of Service in debug",
       "severity": "LOW",
+      "published": "2018-08-09T20:18:07Z",
       "ranges": [
         {
           "introduced": "0",
@@ -78,6 +87,7 @@
       ],
       "summary": "Malicious code in debug (npm)",
       "severity": null,
+      "published": "2025-09-08T14:26:51Z",
       "ranges": []
     }
   ],

@@ -12,7 +12,25 @@
   "deprecatedReason": "",
   "versionCount": 2945,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "MODERATE": 1,
+    "HIGH": 1
+  },
   "vulnerabilities": [
+    {
+      "id": "GHSA-hg79-j56m-fxgv",
+      "aliases": [],
+      "summary": "Cross-Site Scripting in react",
+      "severity": "HIGH",
+      "published": "2020-09-04T15:26:04Z",
+      "ranges": [
+        {
+          "introduced": "0.0.1",
+          "fixed": "0.14.0"
+        }
+      ]
+    },
     {
       "id": "GHSA-g53w-52xc-2j85",
       "aliases": [
@@ -20,6 +38,7 @@
       ],
       "summary": "Cross-Site Scripting in react",
       "severity": "MODERATE",
+      "published": "2020-09-04T16:52:57Z",
       "ranges": [
         {
           "introduced": "0.4.0",
@@ -28,18 +47,6 @@
         {
           "introduced": "0.5.0",
           "fixed": "0.5.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hg79-j56m-fxgv",
-      "aliases": [],
-      "summary": "Cross-Site Scripting in react",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0.0.1",
-          "fixed": "0.14.0"
         }
       ]
     }

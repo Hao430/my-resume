@@ -12,7 +12,52 @@
   "deprecatedReason": "",
   "versionCount": 280,
   "latestAffected": false,
+  "vulnerabilityCount": 11,
+  "severityCounts": {
+    "HIGH": 4,
+    "MODERATE": 1,
+    "UNKNOWN": 6
+  },
   "vulnerabilities": [
+    {
+      "id": "GHSA-p25m-jpj4-qcrr",
+      "aliases": [
+        "CVE-2023-4785"
+      ],
+      "summary": "Denial of Service Vulnerability in gRPC TCP Server (Posix-compatible platforms)",
+      "severity": "HIGH",
+      "published": "2023-09-13T18:31:26Z",
+      "ranges": [
+        {
+          "introduced": "1.56.0",
+          "fixed": "1.56.2"
+        },
+        {
+          "introduced": "1.55.0",
+          "fixed": "1.55.3"
+        },
+        {
+          "introduced": "1.54.0",
+          "fixed": "1.54.3"
+        },
+        {
+          "introduced": "1.53.0",
+          "fixed": "1.53.2"
+        },
+        {
+          "introduced": "1.55.0",
+          "fixed": "1.55.3"
+        },
+        {
+          "introduced": "1.54.0",
+          "fixed": "1.54.3"
+        },
+        {
+          "introduced": "1.53.0",
+          "fixed": "1.53.2"
+        }
+      ]
+    },
     {
       "id": "GHSA-496j-2rq6-j6cc",
       "aliases": [
@@ -20,6 +65,7 @@
       ],
       "summary": "Excessive Iteration in gRPC",
       "severity": "HIGH",
+      "published": "2023-08-09T15:30:15Z",
       "ranges": [
         {
           "introduced": "0",
@@ -62,6 +108,7 @@
       ],
       "summary": "gRPC Reachable Assertion issue",
       "severity": "HIGH",
+      "published": "2023-07-06T21:15:08Z",
       "ranges": [
         {
           "introduced": "1.51.0",
@@ -74,40 +121,6 @@
         {
           "introduced": "1.51.0",
           "fixed": "1.53.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-9hxf-ppjv-w6rq",
-      "aliases": [
-        "CVE-2023-32732"
-      ],
-      "summary": "gRPC connection termination issue",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.53.0",
-          "fixed": "1.53.1"
-        },
-        {
-          "introduced": "1.53.0",
-          "fixed": "1.53.1"
-        },
-        {
-          "introduced": "1.53.0",
-          "fixed": "1.53.1"
-        },
-        {
-          "introduced": "1.54.0",
-          "fixed": "1.54.2"
-        },
-        {
-          "introduced": "1.54.0",
-          "fixed": "1.54.2"
-        },
-        {
-          "introduced": "1.54.0",
-          "fixed": "1.54.2"
         }
       ]
     },
@@ -118,6 +131,7 @@
       ],
       "summary": "Connection confusion in gRPC",
       "severity": "HIGH",
+      "published": "2023-07-05T19:12:51Z",
       "ranges": [
         {
           "introduced": "1.53.0",
@@ -146,58 +160,60 @@
       ]
     },
     {
-      "id": "GHSA-p25m-jpj4-qcrr",
+      "id": "GHSA-9hxf-ppjv-w6rq",
+      "aliases": [
+        "CVE-2023-32732"
+      ],
+      "summary": "gRPC connection termination issue",
+      "severity": "MODERATE",
+      "published": "2023-07-06T21:15:08Z",
+      "ranges": [
+        {
+          "introduced": "1.53.0",
+          "fixed": "1.53.1"
+        },
+        {
+          "introduced": "1.53.0",
+          "fixed": "1.53.1"
+        },
+        {
+          "introduced": "1.53.0",
+          "fixed": "1.53.1"
+        },
+        {
+          "introduced": "1.54.0",
+          "fixed": "1.54.2"
+        },
+        {
+          "introduced": "1.54.0",
+          "fixed": "1.54.2"
+        },
+        {
+          "introduced": "1.54.0",
+          "fixed": "1.54.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1428",
       "aliases": [
         "CVE-2023-4785"
       ],
       "summary": "Denial of Service Vulnerability in gRPC TCP Server (Posix-compatible platforms)",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "1.56.0",
-          "fixed": "1.56.2"
-        },
-        {
-          "introduced": "1.55.0",
-          "fixed": "1.55.3"
-        },
-        {
-          "introduced": "1.54.0",
-          "fixed": "1.54.3"
-        },
-        {
-          "introduced": "1.53.0",
-          "fixed": "1.53.2"
-        },
-        {
-          "introduced": "1.55.0",
-          "fixed": "1.55.3"
-        },
-        {
-          "introduced": "1.54.0",
-          "fixed": "1.54.3"
-        },
-        {
-          "introduced": "1.53.0",
-          "fixed": "1.53.2"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2017-101",
-      "aliases": [
-        "CVE-2017-8359"
-      ],
-      "summary": "PYSEC-2017-101",
       "severity": null,
+      "published": "2026-07-07T11:45:24.303647Z",
       "ranges": [
         {
-          "introduced": "0",
-          "fixed": "6544a2d5d9ecdb64214da1d228886a7d15bbf5c7"
+          "introduced": "1.55.0",
+          "fixed": "1.55.3"
         },
         {
-          "introduced": "0",
-          "fixed": "1.3.0"
+          "introduced": "1.54.0",
+          "fixed": "1.54.3"
+        },
+        {
+          "introduced": "1.53.0",
+          "fixed": "1.53.2"
         }
       ]
     },
@@ -208,6 +224,7 @@
       ],
       "summary": "Excessive Iteration in gRPC",
       "severity": null,
+      "published": "2026-07-07T11:45:22.144608Z",
       "ranges": [
         {
           "introduced": "0",
@@ -228,26 +245,13 @@
       ]
     },
     {
-      "id": "PYSEC-2026-1425",
-      "aliases": [
-        "CVE-2023-1428"
-      ],
-      "summary": "gRPC Reachable Assertion issue",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "1.51.0",
-          "fixed": "1.53.0"
-        }
-      ]
-    },
-    {
       "id": "PYSEC-2026-1426",
       "aliases": [
         "CVE-2023-32732"
       ],
       "summary": "gRPC connection termination issue",
       "severity": null,
+      "published": "2026-07-07T11:45:20.840192Z",
       "ranges": [
         {
           "introduced": "1.53.0",
@@ -256,6 +260,21 @@
         {
           "introduced": "1.54.0",
           "fixed": "1.54.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1425",
+      "aliases": [
+        "CVE-2023-1428"
+      ],
+      "summary": "gRPC Reachable Assertion issue",
+      "severity": null,
+      "published": "2026-07-07T11:45:20.615704Z",
+      "ranges": [
+        {
+          "introduced": "1.51.0",
+          "fixed": "1.53.0"
         }
       ]
     },
@@ -266,6 +285,7 @@
       ],
       "summary": "Connection confusion in gRPC",
       "severity": null,
+      "published": "2026-07-07T11:45:19.959086Z",
       "ranges": [
         {
           "introduced": "1.53.0",
@@ -278,24 +298,21 @@
       ]
     },
     {
-      "id": "PYSEC-2026-1428",
+      "id": "PYSEC-2017-101",
       "aliases": [
-        "CVE-2023-4785"
+        "CVE-2017-8359"
       ],
-      "summary": "Denial of Service Vulnerability in gRPC TCP Server (Posix-compatible platforms)",
+      "summary": "PYSEC-2017-101",
       "severity": null,
+      "published": "2017-04-30T17:59:00Z",
       "ranges": [
         {
-          "introduced": "1.55.0",
-          "fixed": "1.55.3"
+          "introduced": "0",
+          "fixed": "6544a2d5d9ecdb64214da1d228886a7d15bbf5c7"
         },
         {
-          "introduced": "1.54.0",
-          "fixed": "1.54.3"
-        },
-        {
-          "introduced": "1.53.0",
-          "fixed": "1.53.2"
+          "introduced": "0",
+          "fixed": "1.3.0"
         }
       ]
     }

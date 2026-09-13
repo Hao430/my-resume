@@ -12,18 +12,24 @@
   "deprecatedReason": "",
   "versionCount": 332,
   "latestAffected": false,
+  "vulnerabilityCount": 6,
+  "severityCounts": {
+    "CRITICAL": 3,
+    "UNKNOWN": 3
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-38fc-9xqv-7f7q",
+      "id": "GHSA-hfg2-wf6j-x53p",
       "aliases": [
-        "CVE-2019-7548"
+        "CVE-2012-0805"
       ],
-      "summary": "SQLAlchemy is vulnerable to SQL Injection via group_by parameter",
+      "summary": "SQLAlchemy vulnerable to SQL injection",
       "severity": "CRITICAL",
+      "published": "2022-05-14T03:49:27Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "1.2.19"
+          "fixed": "0.7.0b4"
         }
       ]
     },
@@ -34,6 +40,7 @@
       ],
       "summary": "SQLAlchemy vulnerable to SQL Injection via order_by parameter",
       "severity": "CRITICAL",
+      "published": "2019-04-16T15:50:41Z",
       "ranges": [
         {
           "introduced": "0",
@@ -42,30 +49,17 @@
       ]
     },
     {
-      "id": "GHSA-hfg2-wf6j-x53p",
+      "id": "GHSA-38fc-9xqv-7f7q",
       "aliases": [
-        "CVE-2012-0805"
+        "CVE-2019-7548"
       ],
-      "summary": "SQLAlchemy vulnerable to SQL injection",
+      "summary": "SQLAlchemy is vulnerable to SQL Injection via group_by parameter",
       "severity": "CRITICAL",
+      "published": "2019-04-16T15:50:39Z",
       "ranges": [
         {
           "introduced": "0",
-          "fixed": "0.7.0b4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2012-9",
-      "aliases": [
-        "CVE-2012-0805"
-      ],
-      "summary": "PYSEC-2012-9",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.7.0"
+          "fixed": "1.2.19"
         }
       ]
     },
@@ -76,6 +70,7 @@
       ],
       "summary": "PYSEC-2019-123",
       "severity": null,
+      "published": "2019-02-20T00:29:00Z",
       "ranges": [
         {
           "introduced": "0",
@@ -90,10 +85,26 @@
       ],
       "summary": "PYSEC-2019-124",
       "severity": null,
+      "published": "2019-02-06T21:29:00Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "1.2.18"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2012-9",
+      "aliases": [
+        "CVE-2012-0805"
+      ],
+      "summary": "PYSEC-2012-9",
+      "severity": null,
+      "published": "2012-06-05T22:55:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.7.0"
         }
       ]
     }

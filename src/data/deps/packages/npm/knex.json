@@ -12,21 +12,12 @@
   "deprecatedReason": "",
   "versionCount": 264,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "HIGH": 1,
+    "CRITICAL": 1
+  },
   "vulnerabilities": [
-    {
-      "id": "GHSA-4jv9-3563-23j3",
-      "aliases": [
-        "CVE-2016-20018"
-      ],
-      "summary": "Knex.js has a limited SQL injection vulnerability",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "2.4.0"
-        }
-      ]
-    },
     {
       "id": "GHSA-58v4-qwx5-7f59",
       "aliases": [
@@ -34,10 +25,26 @@
       ],
       "summary": "SQL Injection in knex",
       "severity": "CRITICAL",
+      "published": "2019-10-21T16:12:13Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "0.19.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4jv9-3563-23j3",
+      "aliases": [
+        "CVE-2016-20018"
+      ],
+      "summary": "Knex.js has a limited SQL injection vulnerability",
+      "severity": "HIGH",
+      "published": "2022-12-19T09:30:23Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.4.0"
         }
       ]
     }

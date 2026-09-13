@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 196,
   "latestAffected": false,
+  "vulnerabilityCount": 3,
+  "severityCounts": {
+    "CRITICAL": 1,
+    "HIGH": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-33f9-j839-rf8h",
@@ -20,6 +25,22 @@
       ],
       "summary": "Prototype Pollution in immer",
       "severity": "CRITICAL",
+      "published": "2021-09-02T17:17:37Z",
+      "ranges": [
+        {
+          "introduced": "7.0.0",
+          "fixed": "9.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c36v-fmgq-m8hx",
+      "aliases": [
+        "CVE-2021-3757"
+      ],
+      "summary": "Prototype Pollution in immer",
+      "severity": "HIGH",
+      "published": "2021-09-07T22:57:14Z",
       "ranges": [
         {
           "introduced": "7.0.0",
@@ -34,24 +55,11 @@
       ],
       "summary": "Prototype Pollution in immer",
       "severity": "HIGH",
+      "published": "2021-01-20T21:27:56Z",
       "ranges": [
         {
           "introduced": "7.0.0",
           "fixed": "8.0.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-c36v-fmgq-m8hx",
-      "aliases": [
-        "CVE-2021-3757"
-      ],
-      "summary": "Prototype Pollution in immer",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "7.0.0",
-          "fixed": "9.0.6"
         }
       ]
     }

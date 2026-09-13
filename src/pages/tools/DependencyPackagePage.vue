@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import { formatVulnRange, type PackageRecord } from '../../utils/deps'
+import { OSV_ECOSYSTEM, formatVulnRange, type PackageRecord } from '../../utils/deps'
 
 const { t } = useI18n()
 const route = useRoute()
@@ -65,6 +65,34 @@ function rangesOf(vuln: PackageRecord['vulnerabilities'][number]): string[] {
 }
 
 const osvUrl = (id: string) => `https://osv.dev/vulnerability/${id}`
+
+/** 列表被截断时指向 OSV 完整列表，读者才有地方看全部（spec §4.5 要求） */
+const osvListUrl = computed(() =>
+  record.value
+    ? `https://osv.dev/list?q=${encodeURIComponent(record.value.name)}&ecosystem=${encodeURIComponent(OSV_ECOSYSTEM[record.value.system])}`
+    : '',
+)
+
+const truncated = computed(
+  () => !!record.value && record.value.vulnerabilityCount > record.value.vulnerabilities.length,
+)
+
+/** 严重度分布按 CRITICAL → LOW → UNKNOWN 展示，便于一眼看出风险构成 */
+const SEVERITY_DISPLAY_ORDER = ['CRITICAL', 'HIGH', 'MODERATE', 'LOW', 'UNKNOWN']
+
+const severityBreakdown = computed(() => {
+  const counts = record.value?.severityCounts ?? {}
+  return SEVERITY_DISPLAY_ORDER.filter((key) => (counts[key] ?? 0) > 0).map((key) => ({
+    key,
+    count: counts[key] ?? 0,
+    label: severityLabel(key === 'UNKNOWN' ? null : key),
+    className: severityClass(key === 'UNKNOWN' ? null : key),
+  }))
+})
+
+function formatDate(iso: string | null): string {
+  return iso ? iso.slice(0, 10) : ''
+}
 </script>
 
 <template>
@@ -100,7 +128,7 @@ const osvUrl = (id: string) => `https://osv.dev/vulnerability/${id}`
             }}
           </p>
           <p class="verdict__hint">
-            {{ t('tools.radar.pkgVerdictHint', { count: record.vulnerabilities.length }) }}
+            {{ t('tools.radar.pkgVerdictHint', { count: record.vulnerabilityCount }) }}
           </p>
         </section>
 
@@ -138,14 +166,34 @@ const osvUrl = (id: string) => `https://osv.dev/vulnerability/${id}`
         <section class="history">
           <h2 class="history__title">
             {{ t('tools.radar.pkgHistoryTitle') }}
-            <span class="mono history__count">{{ record.vulnerabilities.length }}</span>
+            <span class="mono history__count">{{ record.vulnerabilityCount }}</span>
           </h2>
 
-          <p v-if="record.vulnerabilities.length === 0" class="state">
+          <p v-if="severityBreakdown.length" class="severity-breakdown">
+            <span
+              v-for="item in severityBreakdown"
+              :key="item.key"
+              class="badge"
+              :class="item.className"
+            >
+              {{ item.label }} {{ item.count }}
+            </span>
+          </p>
+
+          <p v-if="record.vulnerabilityCount === 0" class="state">
             {{ t('tools.radar.pkgHistoryNone') }}
           </p>
 
-          <ul v-else class="vuln-list">
+          <p v-if="truncated" class="truncated-note">
+            {{ t('tools.radar.pkgTruncated', { shown: record.vulnerabilities.length }) }}
+            <a :href="osvListUrl" target="_blank" rel="noopener noreferrer">
+              {{ t('tools.radar.pkgViewAll', { count: record.vulnerabilityCount }) }} →
+            </a>
+          </p>
+
+          <!-- 注意：不能用 v-else 承接上面的 v-if——中间的截断提示会打断 v-if/v-else 链，
+               导致被截断的包一张卡片都不渲染（测试抓到过） -->
+          <ul v-if="record.vulnerabilityCount > 0" class="vuln-list">
             <li v-for="vuln in record.vulnerabilities" :key="vuln.id" class="card vuln">
               <div class="vuln__head">
                 <a :href="osvUrl(vuln.id)" target="_blank" rel="noopener noreferrer" class="vuln__id mono">
@@ -156,7 +204,10 @@ const osvUrl = (id: string) => `https://osv.dev/vulnerability/${id}`
                 </span>
               </div>
               <p class="vuln__summary">{{ vuln.summary }}</p>
-              <p v-if="vuln.aliases.length" class="vuln__aliases mono">{{ vuln.aliases.join(' · ') }}</p>
+              <p v-if="formatDate(vuln.published) || vuln.aliases.length" class="vuln__meta mono">
+                <span v-if="formatDate(vuln.published)">{{ formatDate(vuln.published) }}</span>
+                <span v-if="vuln.aliases.length">{{ vuln.aliases.join(' · ') }}</span>
+              </p>
               <p v-if="rangesOf(vuln).length" class="vuln__ranges">
                 <span class="vuln__ranges-label">{{ t('tools.radar.pkgRangeLabel') }}</span>
                 <span v-for="r in rangesOf(vuln)" :key="r" class="mono vuln__range">{{ r }}</span>
@@ -320,10 +371,31 @@ const osvUrl = (id: string) => `https://osv.dev/vulnerability/${id}`
   line-height: var(--leading-relaxed);
 }
 
-.vuln__aliases {
+.vuln__meta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
   margin: 0 0 var(--space-2);
   font-size: var(--text-xs);
   color: var(--color-text-tertiary);
+}
+
+.severity-breakdown {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin: 0 0 var(--space-4);
+}
+
+.truncated-note {
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.truncated-note a {
+  color: var(--color-link);
 }
 
 .vuln__ranges {

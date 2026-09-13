@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 151,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "HIGH": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-3xq5-wjfh-ppjc",
@@ -20,6 +24,7 @@
       ],
       "summary": "Luxon Inefficient Regular Expression Complexity vulnerability",
       "severity": "HIGH",
+      "published": "2023-01-09T14:10:49Z",
       "ranges": [
         {
           "introduced": "1.0.0",

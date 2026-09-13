@@ -12,131 +12,13 @@
   "deprecatedReason": "",
   "versionCount": 117,
   "latestAffected": false,
+  "vulnerabilityCount": 10,
+  "severityCounts": {
+    "MODERATE": 5,
+    "HIGH": 4,
+    "CRITICAL": 1
+  },
   "vulnerabilities": [
-    {
-      "id": "GHSA-29mw-wpgm-hmr9",
-      "aliases": [
-        "CVE-2020-28500"
-      ],
-      "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "4.0.0",
-          "fixed": "4.17.21"
-        },
-        {
-          "introduced": "4.0.0",
-          "fixed": "4.17.21"
-        },
-        {
-          "introduced": "4.0.0",
-          "lastAffected": "4.5.1"
-        },
-        {
-          "introduced": "4.0.0",
-          "lastAffected": "4.5.1"
-        },
-        {
-          "introduced": "4.0.0",
-          "fixed": "4.17.21"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-35jh-r3h4-6jhm",
-      "aliases": [
-        "CVE-2021-23337",
-        "CVE-2026-4800"
-      ],
-      "summary": "Command Injection in lodash",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.17.21"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.17.21"
-        },
-        {
-          "introduced": "0",
-          "lastAffected": "4.5.0"
-        },
-        {
-          "introduced": "0",
-          "lastAffected": "1.0.0"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.17.21"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-4xc9-xhrj-v574",
-      "aliases": [
-        "CVE-2018-16487"
-      ],
-      "summary": "Prototype Pollution in lodash",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.17.11"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.17.11"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-f23m-r3pf-42rh",
-      "aliases": [
-        "CVE-2025-13465",
-        "CVE-2026-2950"
-      ],
-      "summary": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.18.0"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.18.0"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.18.0"
-        },
-        {
-          "introduced": "4.0.0",
-          "fixed": "4.18.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-fvqr-27wr-82fm",
-      "aliases": [
-        "CVE-2018-3721"
-      ],
-      "summary": "Prototype Pollution in lodash",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "4.17.5"
-        },
-        {
-          "introduced": "0",
-          "fixed": "4.17.5"
-        }
-      ]
-    },
     {
       "id": "GHSA-jf85-cpcp-j695",
       "aliases": [
@@ -144,6 +26,7 @@
       ],
       "summary": "Prototype Pollution in lodash",
       "severity": "CRITICAL",
+      "published": "2019-07-10T19:45:23Z",
       "ranges": [
         {
           "introduced": "0",
@@ -168,12 +51,73 @@
       ]
     },
     {
+      "id": "GHSA-r5fr-rjxr-66jc",
+      "aliases": [
+        "CVE-2021-23337",
+        "CVE-2026-4800"
+      ],
+      "summary": "lodash vulnerable to Code Injection via `_.template` imports key names",
+      "severity": "HIGH",
+      "published": "2026-04-01T23:51:12Z",
+      "ranges": [
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.18.0"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.18.0"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.18.0"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.18.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-35jh-r3h4-6jhm",
+      "aliases": [
+        "CVE-2021-23337",
+        "CVE-2026-4800"
+      ],
+      "summary": "Command Injection in lodash",
+      "severity": "HIGH",
+      "published": "2021-05-06T16:05:51Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.17.21"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.17.21"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "4.5.0"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "1.0.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.17.21"
+        }
+      ]
+    },
+    {
       "id": "GHSA-p6mc-m468-83gw",
       "aliases": [
         "CVE-2020-8203"
       ],
       "summary": "Prototype Pollution in lodash",
       "severity": "HIGH",
+      "published": "2020-07-15T19:15:48Z",
       "ranges": [
         {
           "introduced": "3.7.0",
@@ -210,55 +154,49 @@
       ]
     },
     {
-      "id": "GHSA-r5fr-rjxr-66jc",
+      "id": "GHSA-4xc9-xhrj-v574",
       "aliases": [
-        "CVE-2021-23337",
-        "CVE-2026-4800"
+        "CVE-2018-16487"
       ],
-      "summary": "lodash vulnerable to Code Injection via `_.template` imports key names",
+      "summary": "Prototype Pollution in lodash",
       "severity": "HIGH",
+      "published": "2019-02-07T18:16:48Z",
       "ranges": [
         {
-          "introduced": "4.0.0",
-          "fixed": "4.18.0"
+          "introduced": "0",
+          "fixed": "4.17.11"
         },
         {
-          "introduced": "4.0.0",
-          "fixed": "4.18.0"
-        },
-        {
-          "introduced": "4.0.0",
-          "fixed": "4.18.0"
-        },
-        {
-          "introduced": "4.0.0",
-          "fixed": "4.18.0"
+          "introduced": "0",
+          "fixed": "4.17.11"
         }
       ]
     },
     {
-      "id": "GHSA-x5rq-j2xg-h7qm",
+      "id": "GHSA-f23m-r3pf-42rh",
       "aliases": [
-        "CVE-2019-1010266"
+        "CVE-2025-13465",
+        "CVE-2026-2950"
       ],
-      "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
+      "summary": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
       "severity": "MODERATE",
+      "published": "2026-04-01T23:50:27Z",
       "ranges": [
         {
-          "introduced": "4.7.0",
-          "fixed": "4.17.11"
+          "introduced": "0",
+          "fixed": "4.18.0"
         },
         {
-          "introduced": "4.7.0",
-          "fixed": "4.17.11"
+          "introduced": "0",
+          "fixed": "4.18.0"
         },
         {
-          "introduced": "4.7.0",
-          "fixed": "4.17.11"
+          "introduced": "0",
+          "fixed": "4.18.0"
         },
         {
-          "introduced": "4.7.0",
-          "fixed": "4.17.11"
+          "introduced": "4.0.0",
+          "fixed": "4.18.0"
         }
       ]
     },
@@ -270,6 +208,7 @@
       ],
       "summary": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
       "severity": "MODERATE",
+      "published": "2026-01-21T23:01:22Z",
       "ranges": [
         {
           "introduced": "4.0.0",
@@ -286,6 +225,83 @@
         {
           "introduced": "4.0.0",
           "fixed": "4.17.23"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-29mw-wpgm-hmr9",
+      "aliases": [
+        "CVE-2020-28500"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
+      "severity": "MODERATE",
+      "published": "2022-01-06T20:30:46Z",
+      "ranges": [
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.17.21"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.17.21"
+        },
+        {
+          "introduced": "4.0.0",
+          "lastAffected": "4.5.1"
+        },
+        {
+          "introduced": "4.0.0",
+          "lastAffected": "4.5.1"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.17.21"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x5rq-j2xg-h7qm",
+      "aliases": [
+        "CVE-2019-1010266"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
+      "severity": "MODERATE",
+      "published": "2019-07-19T16:13:07Z",
+      "ranges": [
+        {
+          "introduced": "4.7.0",
+          "fixed": "4.17.11"
+        },
+        {
+          "introduced": "4.7.0",
+          "fixed": "4.17.11"
+        },
+        {
+          "introduced": "4.7.0",
+          "fixed": "4.17.11"
+        },
+        {
+          "introduced": "4.7.0",
+          "fixed": "4.17.11"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fvqr-27wr-82fm",
+      "aliases": [
+        "CVE-2018-3721"
+      ],
+      "summary": "Prototype Pollution in lodash",
+      "severity": "MODERATE",
+      "published": "2018-07-26T15:14:52Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.17.5"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.17.5"
         }
       ]
     }

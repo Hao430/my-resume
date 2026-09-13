@@ -137,8 +137,9 @@ async function main() {
       const record = outcome.ok ? outcome.record : null
       const mark = record
         ? `✓ ${record.latest}` +
-          (record.vulnerabilities.length
-            ? ` · 历史漏洞 ${record.vulnerabilities.length}${record.latestAffected ? '（最新版受影响）' : '（最新版不受影响）'}`
+          // 必须用 vulnerabilityCount（历史总数）；vulnerabilities.length 是截断后的
+          (record.vulnerabilityCount
+            ? ` · 历史漏洞 ${record.vulnerabilityCount}${record.latestAffected ? '（最新版受影响）' : '（最新版不受影响）'}`
             : '')
         : `✗ ${outcome.reason}`
       console.log(`  ${system.padEnd(5)} ${name.padEnd(28)} ${mark}`)
@@ -157,7 +158,8 @@ async function main() {
     (a, b) =>
       a.system.localeCompare(b.system) ||
       Number(b.latestAffected) - Number(a.latestAffected) ||
-      b.vulnerabilities.length - a.vulnerabilities.length ||
+      // 同样用历史总数排序，否则超过上限的包会全并列为 50
+      b.vulnerabilityCount - a.vulnerabilityCount ||
       a.name.localeCompare(b.name),
   )
 
@@ -186,9 +188,9 @@ async function main() {
   console.log(`\n写入 ${path.relative(ROOT, OUT_PATH)}`)
   console.log(`收录 ${packages.length} / ${jobs.length} 个包（npm ${payload.counts.npm} · pypi ${payload.counts.pypi}）`)
   console.log(
-    `有历史漏洞的包 ${packages.filter((p) => p.vulnerabilities.length > 0).length} 个 · ` +
+    `有历史漏洞的包 ${packages.filter((p) => p.vulnerabilityCount > 0).length} 个 · ` +
       `其中最新版仍受影响 ${packages.filter((p) => p.latestAffected).length} 个 · ` +
-      `漏洞条目合计 ${packages.reduce((n, p) => n + p.vulnerabilities.length, 0)} 条`,
+      `漏洞条目合计 ${packages.reduce((n, p) => n + p.vulnerabilityCount, 0)} 条`,
   )
 
   if (failures.length > 0) {

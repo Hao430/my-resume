@@ -12,21 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 104,
   "latestAffected": false,
+  "vulnerabilityCount": 2,
+  "severityCounts": {
+    "HIGH": 2
+  },
   "vulnerabilities": [
-    {
-      "id": "GHSA-9qrh-qjmc-5w2p",
-      "aliases": [
-        "CVE-2022-21227"
-      ],
-      "summary": "Denial-of-Service when binding invalid parameters in sqlite3",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "5.0.0",
-          "fixed": "5.0.3"
-        }
-      ]
-    },
     {
       "id": "GHSA-jqv5-7xpx-qj74",
       "aliases": [
@@ -34,10 +24,26 @@
       ],
       "summary": "sqlite vulnerable to code execution due to Object coercion",
       "severity": "HIGH",
+      "published": "2023-03-13T20:00:52Z",
       "ranges": [
         {
           "introduced": "5.0.0",
           "fixed": "5.1.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9qrh-qjmc-5w2p",
+      "aliases": [
+        "CVE-2022-21227"
+      ],
+      "summary": "Denial-of-Service when binding invalid parameters in sqlite3",
+      "severity": "HIGH",
+      "published": "2022-04-28T20:25:23Z",
+      "ranges": [
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.0.3"
         }
       ]
     }

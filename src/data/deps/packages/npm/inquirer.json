@@ -12,6 +12,8 @@
   "deprecatedReason": "",
   "versionCount": 240,
   "latestAffected": false,
+  "vulnerabilityCount": 0,
+  "severityCounts": {},
   "vulnerabilities": [],
   "fetchedAt": "2026-09-13",
   "homepage": "https://github.com/SBoudrias/Inquirer.js/blob/main/packages/inquirer/README.md",

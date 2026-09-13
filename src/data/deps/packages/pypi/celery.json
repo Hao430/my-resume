@@ -12,6 +12,12 @@
   "deprecatedReason": "",
   "versionCount": 224,
   "latestAffected": false,
+  "vulnerabilityCount": 4,
+  "severityCounts": {
+    "HIGH": 1,
+    "MODERATE": 1,
+    "UNKNOWN": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-q4xr-rc97-m4xx",
@@ -20,6 +26,7 @@
       ],
       "summary": "OS Command Injection in celery",
       "severity": "HIGH",
+      "published": "2022-01-06T22:22:02Z",
       "ranges": [
         {
           "introduced": "0",
@@ -34,6 +41,7 @@
       ],
       "summary": "Celery local privilege escalation vulnerability",
       "severity": "MODERATE",
+      "published": "2022-05-17T05:36:00Z",
       "ranges": [
         {
           "introduced": "2.1.0",
@@ -50,12 +58,28 @@
       ]
     },
     {
+      "id": "PYSEC-2021-858",
+      "aliases": [
+        "CVE-2021-23727"
+      ],
+      "summary": "PYSEC-2021-858",
+      "severity": null,
+      "published": "2021-12-29T17:15:00Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.2"
+        }
+      ]
+    },
+    {
       "id": "PYSEC-2011-17",
       "aliases": [
         "CVE-2011-4356"
       ],
       "summary": "PYSEC-2011-17",
       "severity": null,
+      "published": "2011-12-05T11:55:00Z",
       "ranges": [
         {
           "introduced": "2.1",
@@ -68,20 +92,6 @@
         {
           "introduced": "2.4",
           "fixed": "2.4.4"
-        }
-      ]
-    },
-    {
-      "id": "PYSEC-2021-858",
-      "aliases": [
-        "CVE-2021-23727"
-      ],
-      "summary": "PYSEC-2021-858",
-      "severity": null,
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "5.2.2"
         }
       ]
     }

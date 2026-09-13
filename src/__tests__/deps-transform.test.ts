@@ -1,14 +1,17 @@
 import { describe, expect, it } from 'vitest'
 import {
   buildPackageRecord,
+  capVulnerabilities,
   formatVulnRange,
   highestSeverity,
   packageSlug,
   pickLatestVersion,
+  sortVulnerabilities,
   toIndexEntry,
   toVulnerabilityRecord,
   type PackageRecord,
   type RawVersionEntry,
+  type VulnerabilityRecord,
   type RawVersionList,
 } from '../utils/deps'
 
@@ -202,6 +205,70 @@ describe('formatVulnRange（区间只渲染成文字，不做版本比较）', (
   })
 })
 
+describe('列表截断与排序（spec §4.5）', () => {
+  const vuln = (
+    id: string,
+    severity: string | null,
+    published: string | null = null,
+  ): VulnerabilityRecord => ({ id, aliases: [], summary: 's', severity, published, ranges: [] })
+
+  it('按 严重度降序 → 发布时间降序 → id 升序 排序', () => {
+    const sorted = sortVulnerabilities([
+      vuln('b', 'LOW', '2020-01-01T00:00:00Z'),
+      vuln('a', 'HIGH', '2021-01-01T00:00:00Z'),
+      vuln('c', 'HIGH', '2023-01-01T00:00:00Z'),
+    ])
+    expect(sorted.map((v) => v.id)).toEqual(['c', 'a', 'b'])
+  })
+
+  it('同严重度同日期时用 id 兜底，保证排序确定（否则每次同步的 diff 都是噪声）', () => {
+    const input = [vuln('z', 'HIGH', '2021-01-01T00:00:00Z'), vuln('a', 'HIGH', '2021-01-01T00:00:00Z')]
+    const first = sortVulnerabilities(input).map((v) => v.id)
+    const second = sortVulnerabilities([...input].reverse()).map((v) => v.id)
+    expect(first).toEqual(['a', 'z'])
+    expect(second).toEqual(first)
+  })
+
+  it('未知严重度排在已知之后', () => {
+    const sorted = sortVulnerabilities([vuln('u', null), vuln('l', 'LOW')])
+    expect(sorted.map((v) => v.id)).toEqual(['l', 'u'])
+  })
+
+  it('截断到上限，但总数保持原值（不得让读者以为只有 50 条）', () => {
+    const many = Array.from({ length: 861 }, (_, i) => vuln(`GHSA-${i}`, 'HIGH'))
+    const capped = capVulnerabilities(many)
+    expect(capped.vulnerabilities).toHaveLength(50)
+    expect(capped.vulnerabilityCount).toBe(861)
+  })
+
+  it('未超上限时原样保留，总数一致', () => {
+    const few = [vuln('a', 'HIGH'), vuln('b', 'LOW')]
+    const capped = capVulnerabilities(few)
+    expect(capped.vulnerabilities).toHaveLength(2)
+    expect(capped.vulnerabilityCount).toBe(2)
+  })
+
+  it('统计各严重度数量，缺失严重度记为 UNKNOWN', () => {
+    const capped = capVulnerabilities([
+      vuln('a', 'HIGH'),
+      vuln('b', 'HIGH'),
+      vuln('c', 'MODERATE'),
+      vuln('d', null),
+    ])
+    expect(capped.severityCounts).toEqual({ HIGH: 2, MODERATE: 1, UNKNOWN: 1 })
+  })
+
+  it('严重度统计基于全部条目，而非截断后的（否则分布会被扭曲）', () => {
+    const many = [
+      ...Array.from({ length: 60 }, (_, i) => vuln(`H-${i}`, 'HIGH')),
+      ...Array.from({ length: 5 }, (_, i) => vuln(`L-${i}`, 'LOW')),
+    ]
+    const capped = capVulnerabilities(many)
+    expect(capped.vulnerabilities).toHaveLength(50)
+    expect(capped.severityCounts).toEqual({ HIGH: 60, LOW: 5 })
+  })
+})
+
 describe('highestSeverity（供索引页排序与标识）', () => {
   const vuln = (severity: string | null) => ({
     id: 'x',
@@ -236,9 +303,11 @@ describe('toIndexEntry（索引只存摘要，防 bundle 膨胀）', () => {
     deprecatedReason: '',
     versionCount: 200,
     latestAffected: false,
+    vulnerabilityCount: 2,
+    severityCounts: { HIGH: 1, LOW: 1 },
     vulnerabilities: [
-      { id: 'a', aliases: [], summary: 's', severity: 'HIGH', ranges: [] },
-      { id: 'b', aliases: [], summary: 's', severity: 'LOW', ranges: [] },
+      { id: 'a', aliases: [], summary: 's', severity: 'HIGH', published: null, ranges: [] },
+      { id: 'b', aliases: [], summary: 's', severity: 'LOW', published: null, ranges: [] },
     ],
     fetchedAt: '2026-09-13',
   }
@@ -259,9 +328,15 @@ describe('toIndexEntry（索引只存摘要，防 bundle 膨胀）', () => {
   })
 
   it('无漏洞时最高严重度为 null（列表不能显示成"零严重度"）', () => {
-    const entry = toIndexEntry({ ...full, vulnerabilities: [] })
+    const entry = toIndexEntry({ ...full, vulnerabilities: [], vulnerabilityCount: 0 })
     expect(entry.vulnerabilityCount).toBe(0)
     expect(entry.highestSeverity).toBeNull()
+  })
+
+  it('列表被截断时索引仍显示历史总数，不是 50', () => {
+    // 这是最容易漏的一处：索引若用 vulnerabilities.length，数字会比包页少一大截
+    const entry = toIndexEntry({ ...full, vulnerabilityCount: 861 })
+    expect(entry.vulnerabilityCount).toBe(861)
   })
 })
 

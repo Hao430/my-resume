@@ -12,6 +12,10 @@
   "deprecatedReason": "",
   "versionCount": 249,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "CRITICAL": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-wc9v-mj63-m9g5",
@@ -20,6 +24,7 @@
       ],
       "summary": "Remote Code Execution in pg",
       "severity": "CRITICAL",
+      "published": "2018-07-24T19:44:42Z",
       "ranges": [
         {
           "introduced": "0",

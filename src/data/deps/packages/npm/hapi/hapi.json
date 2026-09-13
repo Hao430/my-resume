@@ -12,12 +12,17 @@
   "deprecatedReason": "",
   "versionCount": 61,
   "latestAffected": false,
+  "vulnerabilityCount": 1,
+  "severityCounts": {
+    "HIGH": 1
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-23vw-mhv5-grv5",
       "aliases": [],
       "summary": "Denial of Service in @hapi/hapi",
       "severity": "HIGH",
+      "published": "2020-09-03T15:48:43Z",
       "ranges": [
         {
           "introduced": "0",

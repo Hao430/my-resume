@@ -12,274 +12,41 @@
   "deprecatedReason": "",
   "versionCount": 144,
   "latestAffected": false,
+  "vulnerabilityCount": 44,
+  "severityCounts": {
+    "HIGH": 18,
+    "MODERATE": 23,
+    "LOW": 2,
+    "UNKNOWN": 1
+  },
   "vulnerabilities": [
     {
-      "id": "GHSA-35jp-ww65-95wh",
+      "id": "GHSA-gcfj-64vw-6mp9",
       "aliases": [
-        "CVE-2026-44494"
+        "CVE-2026-67320"
       ],
-      "summary": "axios Vulnerable to Full Man-in-the-Middle via Prototype Pollution Gadget in `config.proxy`",
+      "summary": "Axios Node HTTP adapter can use an inherited proxy after interceptor config cloning",
       "severity": "HIGH",
+      "published": "2026-07-20T22:40:07Z",
       "ranges": [
         {
-          "introduced": "1.0.0",
-          "fixed": "1.16.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-3g43-6gmg-66jw",
-      "aliases": [
-        "CVE-2026-44495"
-      ],
-      "summary": "axios Vulnerable to Credential Theft and Response Hijacking via Prototype Pollution Gadget in Config Merge",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.2"
-        },
-        {
-          "introduced": "0.19.0",
-          "fixed": "0.31.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-3p68-rc4w-qgx5",
-      "aliases": [
-        "CVE-2025-62718"
-      ],
-      "summary": "Axios has a NO_PROXY Hostname Normalization Bypass that Leads to SSRF",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.0"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.31.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-3w6x-2g7m-8v23",
-      "aliases": [
-        "CVE-2026-42044"
-      ],
-      "summary": "Axios: Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-42h9-826w-cgv3",
-      "aliases": [
-        "CVE-2026-67313"
-      ],
-      "summary": "Axios: Excessive recursion in formDataToJSON can cause denial of service",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0.28.0",
+          "introduced": "0.31.1",
           "fixed": "0.33.0"
         },
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.18.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-42xw-2xvc-qx8m",
-      "aliases": [
-        "CVE-2019-10742"
-      ],
-      "summary": "Denial of Service in axios",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.18.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-43fc-jf86-j433",
-      "aliases": [
-        "CVE-2026-25639"
-      ],
-      "summary": "Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.13.5"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.30.3"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-445q-vr5w-6q77",
-      "aliases": [
-        "CVE-2026-42037"
-      ],
-      "summary": "Axios: CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-4hjh-wcwx-xvwj",
-      "aliases": [
-        "CVE-2025-58754"
-      ],
-      "summary": "Axios is vulnerable to DoS attack through lack of data size check",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.12.0"
-        },
-        {
-          "introduced": "0.28.0",
-          "fixed": "0.30.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-4w2v-q235-vp99",
-      "aliases": [
-        "CVE-2020-28168"
-      ],
-      "summary": "Axios vulnerable to Server-Side Request Forgery",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.21.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-5c9x-8gcm-mpgx",
-      "aliases": [
-        "CVE-2026-42034"
-      ],
-      "summary": "Axios' HTTP adapter-streamed uploads bypass maxBodyLength when maxRedirects: 0",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.1"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.31.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-62hf-57xw-28j9",
-      "aliases": [
-        "CVE-2026-42039"
-      ],
-      "summary": "Axios: unbounded recursion in toFormData causes DoS via deeply nested request data",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.1"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.31.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-654m-c8p4-x5fp",
-      "aliases": [
-        "CVE-2026-44489"
-      ],
-      "summary": "Axios has a Patch Bypass: Proxy-Authorization Header Injection via Prototype Pollution — Incomplete Null-Prototype Fix",
-      "severity": "LOW",
-      "ranges": [
         {
           "introduced": "1.15.2",
-          "fixed": "1.16.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-6chq-wfr3-2hj9",
-      "aliases": [
-        "CVE-2026-42035"
-      ],
-      "summary": "Axios: Header Injection via Prototype Pollution",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.1"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.31.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-777c-7fjr-54vf",
-      "aliases": [
-        "CVE-2026-44488"
-      ],
-      "summary": "Allocation of Resources Without Limits or Throttling in Axios",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "1.7.0",
-          "fixed": "1.16.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-7q8q-rj6j-mhjq",
-      "aliases": [
-        "CVE-2026-67319"
-      ],
-      "summary": "Axios: Nested axios option objects can consume polluted prototype values",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0.8.0",
-          "fixed": "0.33.0"
-        },
-        {
-          "introduced": "1.0.0",
           "fixed": "1.18.0"
         }
       ]
     },
     {
-      "id": "GHSA-898c-q2cr-xwhg",
+      "id": "GHSA-hfxv-24rg-xrqf",
       "aliases": [
-        "CVE-2026-44490"
+        "CVE-2026-44496"
       ],
-      "summary": "axios has DoS & Header Injection via Prototype Pollution Read-Side Gadgets in axios merge functions",
-      "severity": "MODERATE",
+      "summary": "Axios: Regular Expression Denial of Service (ReDoS) via Cookie Name Injection",
+      "severity": "HIGH",
+      "published": "2026-06-04T14:24:06Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -292,112 +59,28 @@
       ]
     },
     {
-      "id": "GHSA-8hc4-vh64-cxmj",
+      "id": "GHSA-777c-7fjr-54vf",
       "aliases": [
-        "CVE-2024-39338"
+        "CVE-2026-44488"
       ],
-      "summary": "Server-Side Request Forgery in axios",
+      "summary": "Allocation of Resources Without Limits or Throttling in Axios",
       "severity": "HIGH",
+      "published": "2026-06-04T14:21:37Z",
       "ranges": [
         {
-          "introduced": "1.3.2",
-          "fixed": "1.7.4"
+          "introduced": "1.7.0",
+          "fixed": "1.16.0"
         }
       ]
     },
     {
-      "id": "GHSA-cph5-m8f7-6c5x",
+      "id": "GHSA-p92q-9vqr-4j8v",
       "aliases": [
-        "CVE-2021-3749"
+        "CVE-2026-44487"
       ],
-      "summary": "axios Inefficient Regular Expression Complexity vulnerability",
+      "summary": "Axios: Proxy-Authorization Credential Leak to Origin Server Across HTTP-to-HTTPS Redirect in Axios Node.js HTTP Adapter",
       "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "0.21.2"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-f4gw-2p7v-4548",
-      "aliases": [
-        "CVE-2026-67315"
-      ],
-      "summary": "Axios: NO_PROXY bypass for 0.0.0.0 local addresses in axios",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.15.0",
-          "fixed": "1.18.0"
-        },
-        {
-          "introduced": "0.31.0",
-          "fixed": "0.33.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-fvcv-3m26-pcqx",
-      "aliases": [
-        "CVE-2026-40175"
-      ],
-      "summary": "Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.0"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.31.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-gcfj-64vw-6mp9",
-      "aliases": [
-        "CVE-2026-67320"
-      ],
-      "summary": "Axios Node HTTP adapter can use an inherited proxy after interceptor config cloning",
-      "severity": "HIGH",
-      "ranges": [
-        {
-          "introduced": "0.31.1",
-          "fixed": "0.33.0"
-        },
-        {
-          "introduced": "1.15.2",
-          "fixed": "1.18.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hcpx-6fm6-wx23",
-      "aliases": [
-        "CVE-2026-67321"
-      ],
-      "summary": "Axios form serializer maxDepth bypass via {} metatoken",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0.31.1",
-          "fixed": "0.33.0"
-        },
-        {
-          "introduced": "1.15.1",
-          "fixed": "1.18.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hfxv-24rg-xrqf",
-      "aliases": [
-        "CVE-2026-44496"
-      ],
-      "summary": "Axios: Regular Expression Denial of Service (ReDoS) via Cookie Name Injection",
-      "severity": "HIGH",
+      "published": "2026-06-04T14:19:53Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -416,6 +99,7 @@
       ],
       "summary": "Axios: Proxy-Authorization header leaks to redirect target when proxy is re-evaluated to direct connection",
       "severity": "HIGH",
+      "published": "2026-06-04T14:15:01Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -428,97 +112,50 @@
       ]
     },
     {
-      "id": "GHSA-jqh4-m9w3-8hp9",
+      "id": "GHSA-3g43-6gmg-66jw",
       "aliases": [
-        "CVE-2026-67317"
+        "CVE-2026-44495"
       ],
-      "summary": "Axios: Fetch adapter `ReadableStream` uploads bypass `maxBodyLength`",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.7.0",
-          "fixed": "1.18.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-jr5f-v2jv-69x6",
-      "aliases": [
-        "CVE-2025-27152"
-      ],
-      "summary": "axios Requests Vulnerable To Possible SSRF and Credential Leakage via Absolute URL",
+      "summary": "axios Vulnerable to Credential Theft and Response Hijacking via Prototype Pollution Gadget in Config Merge",
       "severity": "HIGH",
+      "published": "2026-05-29T16:07:31Z",
       "ranges": [
         {
           "introduced": "1.0.0",
-          "fixed": "1.8.2"
+          "fixed": "1.15.2"
         },
         {
-          "introduced": "0",
-          "fixed": "0.30.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-m7pr-hjqh-92cm",
-      "aliases": [
-        "CVE-2026-42038"
-      ],
-      "summary": "Axios: no_proxy bypass via IP alias allows SSRF",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.1"
-        },
-        {
-          "introduced": "0",
+          "introduced": "0.19.0",
           "fixed": "0.31.1"
         }
       ]
     },
     {
-      "id": "GHSA-mmx7-hfxf-jppx",
+      "id": "GHSA-35jp-ww65-95wh",
       "aliases": [
-        "CVE-2026-67316"
+        "CVE-2026-44494"
       ],
-      "summary": "Axios: Prototype pollution gadgets can alter axios request construction",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.18.0"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.33.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-mwf2-3pr3-8698",
-      "aliases": [
-        "CVE-2026-67318"
-      ],
-      "summary": "Axios: HTTP/2 streamed uploads bypass `maxBodyLength`",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.13.0",
-          "fixed": "1.18.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-p92q-9vqr-4j8v",
-      "aliases": [
-        "CVE-2026-44487"
-      ],
-      "summary": "Axios: Proxy-Authorization Credential Leak to Origin Server Across HTTP-to-HTTPS Redirect in Axios Node.js HTTP Adapter",
+      "summary": "axios Vulnerable to Full Man-in-the-Middle via Prototype Pollution Gadget in `config.proxy`",
       "severity": "HIGH",
+      "published": "2026-05-29T16:04:00Z",
       "ranges": [
         {
           "introduced": "1.0.0",
+          "fixed": "1.16.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pjwm-pj3p-43mv",
+      "aliases": [
+        "CVE-2026-44492"
+      ],
+      "summary": "axios's shouldBypassProxy does not recognize IPv4-mapped IPv6 addresses, allowing NO_PROXY bypass (incomplete fix for CVE-2025-62718)",
+      "severity": "HIGH",
+      "published": "2026-05-29T15:59:30Z",
+      "ranges": [
+        {
+          "introduced": "1.15.0",
           "fixed": "1.16.0"
         },
         {
@@ -534,6 +171,7 @@
       ],
       "summary": "Axios: Prototype Pollution Gadgets - Response Tampering, Data Exfiltration, and Request Hijacking",
       "severity": "HIGH",
+      "published": "2026-05-05T00:26:29Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -546,38 +184,21 @@
       ]
     },
     {
-      "id": "GHSA-pjwm-pj3p-43mv",
+      "id": "GHSA-6chq-wfr3-2hj9",
       "aliases": [
-        "CVE-2026-44492"
+        "CVE-2026-42035"
       ],
-      "summary": "axios's shouldBypassProxy does not recognize IPv4-mapped IPv6 addresses, allowing NO_PROXY bypass (incomplete fix for CVE-2025-62718)",
+      "summary": "Axios: Header Injection via Prototype Pollution",
       "severity": "HIGH",
+      "published": "2026-05-05T00:25:47Z",
       "ranges": [
         {
-          "introduced": "1.15.0",
-          "fixed": "1.16.0"
+          "introduced": "1.0.0",
+          "fixed": "1.15.1"
         },
         {
           "introduced": "0",
-          "fixed": "0.32.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-pmv8-rq9r-6j72",
-      "aliases": [
-        "CVE-2026-67312"
-      ],
-      "summary": "Axios: Deep formToJSON Key Recursion Can Cause Denial of Service",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0.28.0",
-          "fixed": "0.33.0"
-        },
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.18.0"
+          "fixed": "0.31.1"
         }
       ]
     },
@@ -588,6 +209,7 @@
       ],
       "summary": "Axios: Incomplete Fix for CVE-2025-62718 — NO_PROXY Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8) in Axios 1.15.0",
       "severity": "HIGH",
+      "published": "2026-05-05T00:20:58Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -606,6 +228,7 @@
       ],
       "summary": "Axios has prototype pollution read-side gadgets in HTTP adapter that allow credential injection and request hijacking",
       "severity": "HIGH",
+      "published": "2026-05-05T00:18:38Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -614,16 +237,354 @@
       ]
     },
     {
-      "id": "GHSA-qj83-cq47-w5f8",
+      "id": "GHSA-43fc-jf86-j433",
       "aliases": [
-        "CVE-2026-39865"
+        "CVE-2026-25639"
       ],
-      "summary": "Axios HTTP/2 Session Cleanup State Corruption Vulnerability",
+      "summary": "Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig",
+      "severity": "HIGH",
+      "published": "2026-02-09T17:46:14Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.13.5"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.30.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4hjh-wcwx-xvwj",
+      "aliases": [
+        "CVE-2025-58754"
+      ],
+      "summary": "Axios is vulnerable to DoS attack through lack of data size check",
+      "severity": "HIGH",
+      "published": "2025-09-11T21:07:55Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.12.0"
+        },
+        {
+          "introduced": "0.28.0",
+          "fixed": "0.30.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jr5f-v2jv-69x6",
+      "aliases": [
+        "CVE-2025-27152"
+      ],
+      "summary": "axios Requests Vulnerable To Possible SSRF and Credential Leakage via Absolute URL",
+      "severity": "HIGH",
+      "published": "2025-03-07T15:16:00Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.8.2"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.30.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8hc4-vh64-cxmj",
+      "aliases": [
+        "CVE-2024-39338"
+      ],
+      "summary": "Server-Side Request Forgery in axios",
+      "severity": "HIGH",
+      "published": "2024-08-12T15:30:49Z",
+      "ranges": [
+        {
+          "introduced": "1.3.2",
+          "fixed": "1.7.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cph5-m8f7-6c5x",
+      "aliases": [
+        "CVE-2021-3749"
+      ],
+      "summary": "axios Inefficient Regular Expression Complexity vulnerability",
+      "severity": "HIGH",
+      "published": "2021-09-01T18:23:02Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.21.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-42xw-2xvc-qx8m",
+      "aliases": [
+        "CVE-2019-10742"
+      ],
+      "summary": "Denial of Service in axios",
+      "severity": "HIGH",
+      "published": "2019-05-29T18:04:45Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.18.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hcpx-6fm6-wx23",
+      "aliases": [
+        "CVE-2026-67321"
+      ],
+      "summary": "Axios form serializer maxDepth bypass via {} metatoken",
       "severity": "MODERATE",
+      "published": "2026-07-20T22:38:04Z",
+      "ranges": [
+        {
+          "introduced": "0.31.1",
+          "fixed": "0.33.0"
+        },
+        {
+          "introduced": "1.15.1",
+          "fixed": "1.18.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7q8q-rj6j-mhjq",
+      "aliases": [
+        "CVE-2026-67319"
+      ],
+      "summary": "Axios: Nested axios option objects can consume polluted prototype values",
+      "severity": "MODERATE",
+      "published": "2026-07-20T22:37:31Z",
+      "ranges": [
+        {
+          "introduced": "0.8.0",
+          "fixed": "0.33.0"
+        },
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.18.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mwf2-3pr3-8698",
+      "aliases": [
+        "CVE-2026-67318"
+      ],
+      "summary": "Axios: HTTP/2 streamed uploads bypass `maxBodyLength`",
+      "severity": "MODERATE",
+      "published": "2026-07-20T22:37:03Z",
       "ranges": [
         {
           "introduced": "1.13.0",
-          "fixed": "1.13.2"
+          "fixed": "1.18.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jqh4-m9w3-8hp9",
+      "aliases": [
+        "CVE-2026-67317"
+      ],
+      "summary": "Axios: Fetch adapter `ReadableStream` uploads bypass `maxBodyLength`",
+      "severity": "MODERATE",
+      "published": "2026-07-20T22:27:12Z",
+      "ranges": [
+        {
+          "introduced": "1.7.0",
+          "fixed": "1.18.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mmx7-hfxf-jppx",
+      "aliases": [
+        "CVE-2026-67316"
+      ],
+      "summary": "Axios: Prototype pollution gadgets can alter axios request construction",
+      "severity": "MODERATE",
+      "published": "2026-07-20T22:25:07Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.18.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.33.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f4gw-2p7v-4548",
+      "aliases": [
+        "CVE-2026-67315"
+      ],
+      "summary": "Axios: NO_PROXY bypass for 0.0.0.0 local addresses in axios",
+      "severity": "MODERATE",
+      "published": "2026-07-20T22:20:18Z",
+      "ranges": [
+        {
+          "introduced": "1.15.0",
+          "fixed": "1.18.0"
+        },
+        {
+          "introduced": "0.31.0",
+          "fixed": "0.33.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-42h9-826w-cgv3",
+      "aliases": [
+        "CVE-2026-67313"
+      ],
+      "summary": "Axios: Excessive recursion in formDataToJSON can cause denial of service",
+      "severity": "MODERATE",
+      "published": "2026-07-20T17:58:59Z",
+      "ranges": [
+        {
+          "introduced": "0.28.0",
+          "fixed": "0.33.0"
+        },
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.18.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xj6q-8x83-jv6g",
+      "aliases": [
+        "CVE-2026-67314"
+      ],
+      "summary": "Axios: Prototype pollution auth subfields can inject Basic auth",
+      "severity": "MODERATE",
+      "published": "2026-07-20T17:51:17Z",
+      "ranges": [
+        {
+          "introduced": "1.15.2",
+          "fixed": "1.18.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pmv8-rq9r-6j72",
+      "aliases": [
+        "CVE-2026-67312"
+      ],
+      "summary": "Axios: Deep formToJSON Key Recursion Can Cause Denial of Service",
+      "severity": "MODERATE",
+      "published": "2026-07-20T17:48:18Z",
+      "ranges": [
+        {
+          "introduced": "0.28.0",
+          "fixed": "0.33.0"
+        },
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.18.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-898c-q2cr-xwhg",
+      "aliases": [
+        "CVE-2026-44490"
+      ],
+      "summary": "axios has DoS & Header Injection via Prototype Pollution Read-Side Gadgets in axios merge functions",
+      "severity": "MODERATE",
+      "published": "2026-05-29T15:54:57Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.16.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.32.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-445q-vr5w-6q77",
+      "aliases": [
+        "CVE-2026-42037"
+      ],
+      "summary": "Axios: CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream",
+      "severity": "MODERATE",
+      "published": "2026-05-05T00:40:45Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.15.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m7pr-hjqh-92cm",
+      "aliases": [
+        "CVE-2026-42038"
+      ],
+      "summary": "Axios: no_proxy bypass via IP alias allows SSRF",
+      "severity": "MODERATE",
+      "published": "2026-05-05T00:40:17Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.15.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.31.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-62hf-57xw-28j9",
+      "aliases": [
+        "CVE-2026-42039"
+      ],
+      "summary": "Axios: unbounded recursion in toFormData causes DoS via deeply nested request data",
+      "severity": "MODERATE",
+      "published": "2026-05-05T00:34:32Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.15.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.31.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5c9x-8gcm-mpgx",
+      "aliases": [
+        "CVE-2026-42034"
+      ],
+      "summary": "Axios' HTTP adapter-streamed uploads bypass maxBodyLength when maxRedirects: 0",
+      "severity": "MODERATE",
+      "published": "2026-05-05T00:33:25Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.15.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.31.1"
         }
       ]
     },
@@ -634,6 +595,26 @@
       ],
       "summary": "Axios: HTTP adapter streamed responses bypass maxContentLength",
       "severity": "MODERATE",
+      "published": "2026-05-05T00:26:57Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.15.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.31.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xx6v-rp6x-q39c",
+      "aliases": [
+        "CVE-2026-42042"
+      ],
+      "summary": "Axios: XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion",
+      "severity": "MODERATE",
+      "published": "2026-05-05T00:25:22Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -652,6 +633,7 @@
       ],
       "summary": "Axios: Authentication Bypass via Prototype Pollution Gadget in `validateStatus` Merge Strategy",
       "severity": "MODERATE",
+      "published": "2026-05-05T00:21:39Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -664,12 +646,81 @@
       ]
     },
     {
+      "id": "GHSA-3w6x-2g7m-8v23",
+      "aliases": [
+        "CVE-2026-42044"
+      ],
+      "summary": "Axios: Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`",
+      "severity": "MODERATE",
+      "published": "2026-05-05T00:19:33Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.15.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fvcv-3m26-pcqx",
+      "aliases": [
+        "CVE-2026-40175"
+      ],
+      "summary": "Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain",
+      "severity": "MODERATE",
+      "published": "2026-04-10T19:47:16Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.15.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.31.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3p68-rc4w-qgx5",
+      "aliases": [
+        "CVE-2025-62718"
+      ],
+      "summary": "Axios has a NO_PROXY Hostname Normalization Bypass that Leads to SSRF",
+      "severity": "MODERATE",
+      "published": "2026-04-09T17:32:19Z",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.15.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.31.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qj83-cq47-w5f8",
+      "aliases": [
+        "CVE-2026-39865"
+      ],
+      "summary": "Axios HTTP/2 Session Cleanup State Corruption Vulnerability",
+      "severity": "MODERATE",
+      "published": "2026-04-08T15:51:48Z",
+      "ranges": [
+        {
+          "introduced": "1.13.0",
+          "fixed": "1.13.2"
+        }
+      ]
+    },
+    {
       "id": "GHSA-wf5p-g6vw-rhxx",
       "aliases": [
         "CVE-2023-45857"
       ],
       "summary": "Axios Cross-Site Request Forgery Vulnerability",
       "severity": "MODERATE",
+      "published": "2023-11-08T21:30:37Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -682,44 +733,43 @@
       ]
     },
     {
+      "id": "GHSA-4w2v-q235-vp99",
+      "aliases": [
+        "CVE-2020-28168"
+      ],
+      "summary": "Axios vulnerable to Server-Side Request Forgery",
+      "severity": "MODERATE",
+      "published": "2021-01-04T20:59:40Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.21.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-654m-c8p4-x5fp",
+      "aliases": [
+        "CVE-2026-44489"
+      ],
+      "summary": "Axios has a Patch Bypass: Proxy-Authorization Header Injection via Prototype Pollution — Incomplete Null-Prototype Fix",
+      "severity": "LOW",
+      "published": "2026-05-29T15:51:02Z",
+      "ranges": [
+        {
+          "introduced": "1.15.2",
+          "fixed": "1.16.0"
+        }
+      ]
+    },
+    {
       "id": "GHSA-xhjh-pmcv-23jw",
       "aliases": [
         "CVE-2026-42040"
       ],
       "summary": "Axios: Null Byte Injection via Reverse-Encoding in AxiosURLSearchParams",
       "severity": "LOW",
-      "ranges": [
-        {
-          "introduced": "1.0.0",
-          "fixed": "1.15.1"
-        },
-        {
-          "introduced": "0",
-          "fixed": "0.31.1"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-xj6q-8x83-jv6g",
-      "aliases": [
-        "CVE-2026-67314"
-      ],
-      "summary": "Axios: Prototype pollution auth subfields can inject Basic auth",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "1.15.2",
-          "fixed": "1.18.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-xx6v-rp6x-q39c",
-      "aliases": [
-        "CVE-2026-42042"
-      ],
-      "summary": "Axios: XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion",
-      "severity": "MODERATE",
+      "published": "2026-05-05T00:18:03Z",
       "ranges": [
         {
           "introduced": "1.0.0",
@@ -736,6 +786,7 @@
       "aliases": [],
       "summary": "Malicious code in axios (npm)",
       "severity": null,
+      "published": "2026-03-31T03:15:49Z",
       "ranges": []
     }
   ],

@@ -12,6 +12,11 @@
   "deprecatedReason": "",
   "versionCount": 39,
   "latestAffected": false,
+  "vulnerabilityCount": 6,
+  "severityCounts": {
+    "HIGH": 4,
+    "MODERATE": 2
+  },
   "vulnerabilities": [
     {
       "id": "GHSA-3949-f494-cm99",
@@ -20,6 +25,7 @@
       ],
       "summary": "Cross-site Scripting in Prism",
       "severity": "HIGH",
+      "published": "2022-02-22T19:32:18Z",
       "ranges": [
         {
           "introduced": "1.14.0",
@@ -34,6 +40,7 @@
       ],
       "summary": "Regular Expression Denial of Service (ReDoS) in Prism",
       "severity": "HIGH",
+      "published": "2021-06-28T18:33:18Z",
       "ranges": [
         {
           "introduced": "0",
@@ -48,24 +55,11 @@
       ],
       "summary": "Denial of service in prismjs",
       "severity": "HIGH",
+      "published": "2021-03-01T19:52:33Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "1.23.0"
-        }
-      ]
-    },
-    {
-      "id": "GHSA-hqhp-5p83-hx96",
-      "aliases": [
-        "CVE-2021-3801"
-      ],
-      "summary": "prismjs Regular Expression Denial of Service vulnerability",
-      "severity": "MODERATE",
-      "ranges": [
-        {
-          "introduced": "0",
-          "fixed": "1.25.0"
         }
       ]
     },
@@ -76,6 +70,7 @@
       ],
       "summary": "Cross-Site Scripting in Prism",
       "severity": "HIGH",
+      "published": "2020-08-07T22:28:30Z",
       "ranges": [
         {
           "introduced": "1.1.0",
@@ -90,10 +85,26 @@
       ],
       "summary": "PrismJS DOM Clobbering vulnerability",
       "severity": "MODERATE",
+      "published": "2025-03-03T09:30:34Z",
       "ranges": [
         {
           "introduced": "0",
           "fixed": "1.30.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hqhp-5p83-hx96",
+      "aliases": [
+        "CVE-2021-3801"
+      ],
+      "summary": "prismjs Regular Expression Denial of Service vulnerability",
+      "severity": "MODERATE",
+      "published": "2021-09-20T20:44:48Z",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.25.0"
         }
       ]
     }
