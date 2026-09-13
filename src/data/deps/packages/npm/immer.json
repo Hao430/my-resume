@@ -1,0 +1,62 @@
+{
+  "system": "npm",
+  "name": "immer",
+  "slug": "immer",
+  "path": "/tools/dependency-radar/npm/immer/",
+  "latest": "11.1.18",
+  "publishedAt": "2026-08-19T07:25:22Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 196,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-33f9-j839-rf8h",
+      "aliases": [
+        "CVE-2021-23436"
+      ],
+      "summary": "Prototype Pollution in immer",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "7.0.0",
+          "fixed": "9.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9qmh-276g-x5pj",
+      "aliases": [
+        "CVE-2020-28477"
+      ],
+      "summary": "Prototype Pollution in immer",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "7.0.0",
+          "fixed": "8.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c36v-fmgq-m8hx",
+      "aliases": [
+        "CVE-2021-3757"
+      ],
+      "summary": "Prototype Pollution in immer",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "7.0.0",
+          "fixed": "9.0.6"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/immerjs/immer#readme",
+  "repo": "https://github.com/immerjs/immer.git"
+}

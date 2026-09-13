@@ -1,0 +1,18 @@
+{
+  "system": "pypi",
+  "name": "python-dateutil",
+  "slug": "python-dateutil",
+  "path": "/tools/dependency-radar/pypi/python-dateutil/",
+  "latest": "2.9.0.post0",
+  "publishedAt": "2024-03-01T18:36:18Z",
+  "licenses": [
+    "non-standard"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 27,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/dateutil/dateutil"
+}

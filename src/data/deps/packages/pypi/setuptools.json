@@ -1,0 +1,167 @@
+{
+  "system": "pypi",
+  "name": "setuptools",
+  "slug": "setuptools",
+  "path": "/tools/dependency-radar/pypi/setuptools/",
+  "latest": "84.0.0",
+  "publishedAt": "2026-08-08T18:27:56Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 703,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-27x4-j476-jp5f",
+      "aliases": [
+        "CVE-2013-1633"
+      ],
+      "summary": "Setuptools vulnerable to Man-in-the-middle attacks",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5rjg-fvgr-3xxf",
+      "aliases": [
+        "CVE-2025-47273"
+      ],
+      "summary": "setuptools has a path traversal vulnerability in PackageIndex.download that leads to Arbitrary File Write",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "78.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cx63-2mw6-8hw5",
+      "aliases": [
+        "CVE-2024-6345"
+      ],
+      "summary": "setuptools vulnerable to Command Injection via package URL",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "70.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h35f-9h28-mq5c",
+      "aliases": [
+        "CVE-2026-59890"
+      ],
+      "summary": "setuptools: MANIFEST.in exclusion bypass in sdist via Unicode normalization collision (NFC/NFD) on macOS APFS/HFS+",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "83.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r9hx-vwmv-q579",
+      "aliases": [
+        "CVE-2022-40897"
+      ],
+      "summary": "pypa/setuptools vulnerable to Regular Expression Denial of Service (ReDoS)",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "65.5.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-22",
+      "aliases": [
+        "CVE-2013-1633"
+      ],
+      "summary": "PYSEC-2013-22",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-43012",
+      "aliases": [
+        "CVE-2022-40897"
+      ],
+      "summary": "PYSEC-2022-43012",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "43a9c9bfa6aa626ec2a22540bea28d2ca77964be"
+        },
+        {
+          "introduced": "0",
+          "fixed": "65.5.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-49",
+      "aliases": [
+        "CVE-2025-47273"
+      ],
+      "summary": "PYSEC-2025-49",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "250a6d17978f9f6ac3ac887091f2d32886fbbb0b"
+        },
+        {
+          "introduced": "0",
+          "fixed": "78.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1918",
+      "aliases": [
+        "CVE-2024-6345"
+      ],
+      "summary": "setuptools vulnerable to Command Injection via package URL",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "70.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3447",
+      "aliases": [
+        "CVE-2026-59890"
+      ],
+      "summary": "PYSEC-2026-3447",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "83.0.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/pypa/setuptools"
+}

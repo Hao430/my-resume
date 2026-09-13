@@ -1,0 +1,34 @@
+{
+  "system": "npm",
+  "name": "puppeteer",
+  "slug": "puppeteer",
+  "path": "/tools/dependency-radar/npm/puppeteer/",
+  "latest": "25.10.0",
+  "publishedAt": "2026-09-03T13:16:42Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 1007,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-c2gp-86p4-5935",
+      "aliases": [
+        "CVE-2019-5786"
+      ],
+      "summary": "Use-After-Free in puppeteer",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.13.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/puppeteer/puppeteer/tree/main#readme",
+  "repo": "https://github.com/puppeteer/puppeteer.git#main"
+}

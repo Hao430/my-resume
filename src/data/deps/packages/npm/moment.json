@@ -1,0 +1,84 @@
+{
+  "system": "npm",
+  "name": "moment",
+  "slug": "moment",
+  "path": "/tools/dependency-radar/npm/moment/",
+  "latest": "2.30.1",
+  "publishedAt": "2023-12-27T10:38:43Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 76,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-446m-mv8f-q348",
+      "aliases": [
+        "CVE-2017-18214"
+      ],
+      "summary": "Regular Expression Denial of Service in moment",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.19.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-87vv-r9j6-g5qv",
+      "aliases": [
+        "CVE-2016-4055"
+      ],
+      "summary": "Regular Expression Denial of Service in moment",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.11.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8hfj-j24r-96c4",
+      "aliases": [
+        "CVE-2022-24785"
+      ],
+      "summary": "Path Traversal: 'dir/../../filename' in moment.locale",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.29.2"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.29.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wc69-rhjr-hc9g",
+      "aliases": [
+        "CVE-2022-31129"
+      ],
+      "summary": "Moment.js vulnerable to Inefficient Regular Expression Complexity",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.18.0",
+          "fixed": "2.29.4"
+        },
+        {
+          "introduced": "2.18.0",
+          "fixed": "2.29.4"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://momentjs.com",
+  "repo": "https://github.com/moment/moment.git"
+}

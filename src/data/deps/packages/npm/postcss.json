@@ -1,0 +1,126 @@
+{
+  "system": "npm",
+  "name": "postcss",
+  "slug": "postcss",
+  "path": "/tools/dependency-radar/npm/postcss/",
+  "latest": "8.5.28",
+  "publishedAt": "2026-09-03T15:13:59Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 292,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-566m-qj78-rww5",
+      "aliases": [
+        "CVE-2021-23382"
+      ],
+      "summary": "Regular Expression Denial of Service in postcss",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.2.13"
+        },
+        {
+          "introduced": "0",
+          "fixed": "7.0.36"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6g55-p6wh-862q",
+      "aliases": [
+        "CVE-2026-45623"
+      ],
+      "summary": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.5.12"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7fh5-64p2-3v2j",
+      "aliases": [
+        "CVE-2023-44270"
+      ],
+      "summary": "PostCSS line return parsing error",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.4.31"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fxqj-rqcc-2cmp",
+      "aliases": [
+        "CVE-2026-69153"
+      ],
+      "summary": "PostCSS: incomplete fix of GHSA-6g55-p6wh-862q — attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.5.23"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hwj9-h5mp-3pm3",
+      "aliases": [
+        "CVE-2021-23368"
+      ],
+      "summary": "Regular Expression Denial of Service in postcss",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.0.36"
+        },
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.2.10"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qx2v-qp2m-jg93",
+      "aliases": [
+        "CVE-2026-41305"
+      ],
+      "summary": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.5.10"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r28c-9q8g-f849",
+      "aliases": [
+        "CVE-2026-73646"
+      ],
+      "summary": "PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.5.18"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://postcss.org/",
+  "repo": "https://github.com/postcss/postcss.git"
+}

@@ -1,0 +1,159 @@
+{
+  "system": "pypi",
+  "name": "pyopenssl",
+  "slug": "pyopenssl",
+  "path": "/tools/dependency-radar/pypi/pyopenssl/",
+  "latest": "26.4.0",
+  "publishedAt": "2026-08-01T19:50:48Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 79,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-2rcm-phc9-3945",
+      "aliases": [
+        "CVE-2018-1000808"
+      ],
+      "summary": "Pyopenssl Incorrect Memory Management",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "17.5.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5pwr-322w-8jr4",
+      "aliases": [
+        "CVE-2026-27459"
+      ],
+      "summary": "pyOpenSSL DTLS cookie callback buffer overflow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "22.0.0",
+          "fixed": "26.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6748-36qp-fx6r",
+      "aliases": [
+        "CVE-2013-4314"
+      ],
+      "summary": "PyOpenSSL Mishandles NUL Byte In Certificate Subject Alternative Name",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.13.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p28m-34f6-967q",
+      "aliases": [
+        "CVE-2018-1000807"
+      ],
+      "summary": "PyOpenSSL Use-After-Free vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "17.5.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vp96-hxj8-p424",
+      "aliases": [
+        "CVE-2026-27448"
+      ],
+      "summary": "pyOpenSSL allows TLS connection bypass via unhandled callback exception in set_tlsext_servername_callback",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0.14.0",
+          "fixed": "26.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-31",
+      "aliases": [
+        "CVE-2013-4314"
+      ],
+      "summary": "PYSEC-2013-31",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.13.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-23",
+      "aliases": [
+        "CVE-2018-1000807"
+      ],
+      "summary": "PYSEC-2018-23",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "17.5.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-24",
+      "aliases": [
+        "CVE-2018-1000808"
+      ],
+      "summary": "PYSEC-2018-24",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "17.5.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2268",
+      "aliases": [
+        "CVE-2026-27448"
+      ],
+      "summary": "PYSEC-2026-2268",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0.14",
+          "fixed": "26.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2269",
+      "aliases": [
+        "CVE-2026-27459"
+      ],
+      "summary": "PYSEC-2026-2269",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "22.0.0",
+          "fixed": "26.0.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/pyca/pyopenssl"
+}

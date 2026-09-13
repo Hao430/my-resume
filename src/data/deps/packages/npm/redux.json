@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "redux",
+  "slug": "redux",
+  "path": "/tools/dependency-radar/npm/redux/",
+  "latest": "5.0.1",
+  "publishedAt": "2023-12-23T16:47:28Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 85,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "http://redux.js.org",
+  "repo": "https://github.com/reduxjs/redux.git"
+}

@@ -1,0 +1,252 @@
+{
+  "system": "pypi",
+  "name": "numpy",
+  "slug": "numpy",
+  "path": "/tools/dependency-radar/pypi/numpy/",
+  "latest": "2.5.3",
+  "publishedAt": "2026-09-06T16:25:48Z",
+  "licenses": [
+    "0BSD AND BSD-3-Clause AND CC0-1.0 AND MIT AND Zlib"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 171,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-2fc2-6r4j-p65h",
+      "aliases": [
+        "CVE-2014-1859"
+      ],
+      "summary": "Numpy arbitrary file write via symlink attack",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.8.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5545-2q6w-2gh6",
+      "aliases": [
+        "CVE-2021-41495"
+      ],
+      "summary": "NumPy NULL Pointer Dereference",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.19"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6p56-wp2h-9hxr",
+      "aliases": [
+        "CVE-2021-33430"
+      ],
+      "summary": "NumPy Buffer Overflow (Disputed)",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.9.0",
+          "fixed": "1.21"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9fq2-x9r6-wfmf",
+      "aliases": [
+        "CVE-2019-6446"
+      ],
+      "summary": "Numpy Deserialization of Untrusted Data",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.16.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cw6w-4rcx-xphc",
+      "aliases": [
+        "CVE-2014-1858"
+      ],
+      "summary": "Arbitrary file write in NumPy",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.8.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f7c7-j99h-c22f",
+      "aliases": [
+        "CVE-2021-41496"
+      ],
+      "summary": "Buffer Copy without Checking Size of Input in NumPy",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.19"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fpfv-jqm9-f5jm",
+      "aliases": [
+        "CVE-2021-34141"
+      ],
+      "summary": "Incorrect Comparison in NumPy",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.22"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-frgw-fgh6-9g52",
+      "aliases": [
+        "CVE-2017-12852"
+      ],
+      "summary": "Numpy missing input validation",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.13.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2017-1",
+      "aliases": [
+        "CVE-2017-12852"
+      ],
+      "summary": "PYSEC-2017-1",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.13.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-33",
+      "aliases": [
+        "CVE-2014-1858"
+      ],
+      "summary": "PYSEC-2018-33",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0bb46c1448b0d3f5453d5182a17ea7ac5854ee15"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.8.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-34",
+      "aliases": [
+        "CVE-2014-1859"
+      ],
+      "summary": "PYSEC-2018-34",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0bb46c1448b0d3f5453d5182a17ea7ac5854ee15"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.8.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-108",
+      "aliases": [
+        "CVE-2019-6446"
+      ],
+      "summary": "PYSEC-2019-108",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.16.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-854",
+      "aliases": [
+        "CVE-2021-33430"
+      ],
+      "summary": "PYSEC-2021-854",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.9.0",
+          "fixed": "1.10.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-855",
+      "aliases": [
+        "CVE-2021-34141"
+      ],
+      "summary": "PYSEC-2021-855",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.9.0",
+          "fixed": "1.10.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-856",
+      "aliases": [
+        "CVE-2021-41495"
+      ],
+      "summary": "PYSEC-2021-856",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.19.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-857",
+      "aliases": [
+        "CVE-2021-41496"
+      ],
+      "summary": "PYSEC-2021-857",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.19.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://numpy.org",
+  "repo": "https://github.com/numpy/numpy"
+}

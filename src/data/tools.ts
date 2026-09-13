@@ -35,10 +35,12 @@ export const TOOLS: ToolMeta[] = [
     status: 'wip',
   },
   {
-    slug: 'code-security-checker',
+    // slug 必须与 src/utils/deps.ts 的 DEPENDENCY_RADAR_SLUG 一致：
+    // 卡片链接指向 toolPath()，即 /tools/dependency-radar/，也就是雷达索引页
+    slug: 'dependency-radar',
     i18nKey: 'codeSecurityChecker',
     tags: ['Dependencies', 'Vulnerability', 'CRA'],
-    status: 'planned',
+    status: 'active',
   },
 ]
 

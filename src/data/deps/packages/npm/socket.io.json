@@ -1,0 +1,66 @@
+{
+  "system": "npm",
+  "name": "socket.io",
+  "slug": "socket.io",
+  "path": "/tools/dependency-radar/npm/socket.io/",
+  "latest": "4.8.3",
+  "publishedAt": "2025-12-23T16:42:13Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 161,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-25hc-qcg6-38wj",
+      "aliases": [
+        "CVE-2024-38355"
+      ],
+      "summary": "socket.io has an unhandled 'error' event",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.5.1"
+        },
+        {
+          "introduced": "3.0.0",
+          "fixed": "4.6.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fxwf-4rqh-v8g3",
+      "aliases": [
+        "CVE-2020-28481"
+      ],
+      "summary": "CORS misconfiguration in socket.io",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.4.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qv2v-m59f-v5fw",
+      "aliases": [
+        "CVE-2017-16031"
+      ],
+      "summary": "Insecure randomness in socket.io",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.9.7"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/socketio/socket.io/tree/main/packages/socket.io#readme",
+  "repo": "https://github.com/socketio/socket.io.git"
+}

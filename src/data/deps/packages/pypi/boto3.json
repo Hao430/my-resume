@@ -1,0 +1,18 @@
+{
+  "system": "pypi",
+  "name": "boto3",
+  "slug": "boto3",
+  "path": "/tools/dependency-radar/pypi/boto3/",
+  "latest": "1.43.93",
+  "publishedAt": "2026-09-11T19:23:01Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 2116,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/boto/boto3"
+}

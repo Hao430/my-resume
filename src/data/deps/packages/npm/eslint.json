@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "eslint",
+  "slug": "eslint",
+  "path": "/tools/dependency-radar/npm/eslint/",
+  "latest": "10.10.0",
+  "publishedAt": "2026-09-04T14:34:21Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 429,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://eslint.org",
+  "repo": "https://github.com/eslint/eslint.git"
+}

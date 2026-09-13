@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "prettier",
+  "slug": "prettier",
+  "path": "/tools/dependency-radar/npm/prettier/",
+  "latest": "3.9.6",
+  "publishedAt": "2026-07-21T05:51:53Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 195,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://prettier.io",
+  "repo": "https://github.com/prettier/prettier.git"
+}

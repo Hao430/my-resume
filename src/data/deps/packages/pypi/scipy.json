@@ -1,0 +1,80 @@
+{
+  "system": "pypi",
+  "name": "scipy",
+  "slug": "scipy",
+  "path": "/tools/dependency-radar/pypi/scipy/",
+  "latest": "1.18.1",
+  "publishedAt": "2026-08-21T23:25:53Z",
+  "licenses": [
+    "non-standard"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 103,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-xp76-357g-9wqq",
+      "aliases": [
+        "CVE-2013-4251"
+      ],
+      "summary": "SciPy creates insecure temporary directories",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.12.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-156",
+      "aliases": [
+        "CVE-2013-4251"
+      ],
+      "summary": "PYSEC-2019-156",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "bd296e0336420b840fcd2faabb97084fd252a973"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.12.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-102",
+      "aliases": [
+        "CVE-2023-25399"
+      ],
+      "summary": "PYSEC-2023-102",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.10.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-114",
+      "aliases": [
+        "CVE-2023-29824"
+      ],
+      "summary": "PYSEC-2023-114",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.8.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://scipy.org/",
+  "repo": "https://github.com/scipy/scipy"
+}

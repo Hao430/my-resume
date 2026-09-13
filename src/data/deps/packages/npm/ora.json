@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "ora",
+  "slug": "ora",
+  "path": "/tools/dependency-radar/npm/ora/",
+  "latest": "9.4.1",
+  "publishedAt": "2026-06-22T12:24:49Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 57,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/sindresorhus/ora#readme",
+  "repo": "https://github.com/sindresorhus/ora.git"
+}

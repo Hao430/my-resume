@@ -1,0 +1,255 @@
+{
+  "system": "pypi",
+  "name": "requests",
+  "slug": "requests",
+  "path": "/tools/dependency-radar/pypi/requests/",
+  "latest": "2.34.2",
+  "publishedAt": "2026-05-14T19:25:26Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 161,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-652x-xj99-gmcc",
+      "aliases": [
+        "CVE-2014-1830"
+      ],
+      "summary": "Exposure of Sensitive Information to an Unauthorized Actor in Requests",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9hjg-9r4m-mvj7",
+      "aliases": [
+        "CVE-2024-47081"
+      ],
+      "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.32.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9wx4-h78v-vm56",
+      "aliases": [
+        "CVE-2024-35195"
+      ],
+      "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.32.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cfj3-7x9c-4p3h",
+      "aliases": [
+        "CVE-2014-1829"
+      ],
+      "summary": "Exposure of Sensitive Information to an Unauthorized Actor in Requests",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gc5v-m9x4-r6x2",
+      "aliases": [
+        "CVE-2026-25645"
+      ],
+      "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.33.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j8r2-6x86-q33q",
+      "aliases": [
+        "CVE-2023-32681"
+      ],
+      "summary": "Unintended leak of Proxy-Authorization header in requests",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.3.0",
+          "fixed": "2.31.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pg2w-x9wp-vw92",
+      "aliases": [
+        "CVE-2015-2296"
+      ],
+      "summary": "Python Requests Session Fixation",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.1.0",
+          "fixed": "2.6.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x84v-xcm2-53pg",
+      "aliases": [
+        "CVE-2018-18074"
+      ],
+      "summary": "Insufficiently Protected Credentials in Requests",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.20.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-13",
+      "aliases": [
+        "CVE-2014-1829"
+      ],
+      "summary": "PYSEC-2014-13",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-14",
+      "aliases": [
+        "CVE-2014-1830"
+      ],
+      "summary": "PYSEC-2014-14",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-17",
+      "aliases": [
+        "CVE-2015-2296"
+      ],
+      "summary": "PYSEC-2015-17",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3bd8afbff29e50b38f889b2f688785a669b9aafc"
+        },
+        {
+          "introduced": "2.1.0",
+          "fixed": "2.6.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-28",
+      "aliases": [
+        "CVE-2018-18074"
+      ],
+      "summary": "PYSEC-2018-28",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "c45d7c49ea75133e52ab22a8e9e13173938e36ff"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.20.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-74",
+      "aliases": [
+        "CVE-2023-32681"
+      ],
+      "summary": "PYSEC-2023-74",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+        },
+        {
+          "introduced": "2.3.0",
+          "fixed": "2.31.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1872",
+      "aliases": [
+        "CVE-2024-47081"
+      ],
+      "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.32.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1873",
+      "aliases": [
+        "CVE-2024-35195"
+      ],
+      "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.32.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2275",
+      "aliases": [
+        "CVE-2026-25645"
+      ],
+      "summary": "PYSEC-2026-2275",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.33.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/psf/requests"
+}

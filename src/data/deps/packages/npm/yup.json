@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "yup",
+  "slug": "yup",
+  "path": "/tools/dependency-radar/npm/yup/",
+  "latest": "1.7.1",
+  "publishedAt": "2025-09-21T13:59:55Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 132,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/jquense/yup",
+  "repo": "https://github.com/jquense/yup.git"
+}

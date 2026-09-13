@@ -1,0 +1,18 @@
+{
+  "system": "pypi",
+  "name": "beautifulsoup4",
+  "slug": "beautifulsoup4",
+  "path": "/tools/dependency-radar/pypi/beautifulsoup4/",
+  "latest": "4.15.0",
+  "publishedAt": "2026-06-07T16:44:21Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 56,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://www.crummy.com/software/BeautifulSoup/bs4/"
+}

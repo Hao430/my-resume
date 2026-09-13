@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "commander",
+  "slug": "commander",
+  "path": "/tools/dependency-radar/npm/commander/",
+  "latest": "15.0.0",
+  "publishedAt": "2026-05-29T09:16:23Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 124,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/tj/commander.js#readme",
+  "repo": "https://github.com/tj/commander.js.git"
+}

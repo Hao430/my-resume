@@ -1,0 +1,93 @@
+{
+  "system": "pypi",
+  "name": "black",
+  "slug": "black",
+  "path": "/tools/dependency-radar/pypi/black/",
+  "latest": "26.5.1",
+  "publishedAt": "2026-05-18T17:05:42Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 73,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-3936-cmfr-pm3m",
+      "aliases": [
+        "CVE-2026-32274"
+      ],
+      "summary": "Black: Arbitrary file writes from unsanitized user input in cache file name",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "24.3.0",
+          "fixed": "26.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fj7x-q9j7-g6q6",
+      "aliases": [
+        "CVE-2024-21503"
+      ],
+      "summary": "Black vulnerable to Regular Expression Denial of Service (ReDoS)",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "24.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-48",
+      "aliases": [
+        "CVE-2024-21503"
+      ],
+      "summary": "PYSEC-2024-48",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "f00093672628d212b8965a8993cee8bedf5fe9b8"
+        },
+        {
+          "introduced": "0",
+          "fixed": "24.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2120",
+      "aliases": [
+        "CVE-2026-31900"
+      ],
+      "summary": "PYSEC-2026-2120",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2121",
+      "aliases": [
+        "CVE-2026-32274"
+      ],
+      "summary": "PYSEC-2026-2121",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.3.1"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/psf/black"
+}

@@ -1,0 +1,104 @@
+{
+  "system": "npm",
+  "name": "prismjs",
+  "slug": "prismjs",
+  "path": "/tools/dependency-radar/npm/prismjs/",
+  "latest": "1.30.0",
+  "publishedAt": "2025-03-10T17:56:20Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 39,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-3949-f494-cm99",
+      "aliases": [
+        "CVE-2022-23647"
+      ],
+      "summary": "Cross-site Scripting in Prism",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.14.0",
+          "fixed": "1.27.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gj77-59wh-66hg",
+      "aliases": [
+        "CVE-2021-32723"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in Prism",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.24.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h4hr-7fg3-h35w",
+      "aliases": [
+        "CVE-2021-23341"
+      ],
+      "summary": "Denial of service in prismjs",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.23.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hqhp-5p83-hx96",
+      "aliases": [
+        "CVE-2021-3801"
+      ],
+      "summary": "prismjs Regular Expression Denial of Service vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.25.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wvhm-4hhf-97x9",
+      "aliases": [
+        "CVE-2020-15138"
+      ],
+      "summary": "Cross-Site Scripting in Prism",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.1.0",
+          "fixed": "1.21.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x7hr-w5r2-h6wg",
+      "aliases": [
+        "CVE-2024-53382"
+      ],
+      "summary": "PrismJS DOM Clobbering vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.30.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/PrismJS/prism#readme",
+  "repo": "https://github.com/PrismJS/prism.git"
+}

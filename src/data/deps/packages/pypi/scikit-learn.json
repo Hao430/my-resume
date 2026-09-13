@@ -1,0 +1,108 @@
+{
+  "system": "pypi",
+  "name": "scikit-learn",
+  "slug": "scikit-learn",
+  "path": "/tools/dependency-radar/pypi/scikit-learn/",
+  "latest": "1.9.1",
+  "publishedAt": "2026-09-10T18:33:17Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 141,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-jjw5-xxj6-pcv5",
+      "aliases": [
+        "CVE-2020-13092"
+      ],
+      "summary": "scikit-learn Deserialization of Untrusted Data",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "lastAffected": "0.23.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jw8x-6495-233v",
+      "aliases": [
+        "CVE-2024-5206"
+      ],
+      "summary": "scikit-learn sensitive data leakage vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.5.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jxfp-4rvq-9h9m",
+      "aliases": [
+        "CVE-2020-28975"
+      ],
+      "summary": "scikit-learn Denial of Service",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0.23.2",
+          "fixed": "1.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-107",
+      "aliases": [
+        "CVE-2020-13092"
+      ],
+      "summary": "PYSEC-2020-107",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.23.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-108",
+      "aliases": [
+        "CVE-2020-28975"
+      ],
+      "summary": "PYSEC-2020-108",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.24.dev0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-110",
+      "aliases": [
+        "CVE-2024-5206"
+      ],
+      "summary": "PYSEC-2024-110",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "70ca21f106b603b611da73012c9ade7cd8e438b8"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.5.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://scikit-learn.org",
+  "repo": "https://github.com/scikit-learn/scikit-learn"
+}

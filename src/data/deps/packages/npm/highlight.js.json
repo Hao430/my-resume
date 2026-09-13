@@ -1,0 +1,54 @@
+{
+  "system": "npm",
+  "name": "highlight.js",
+  "slug": "highlight.js",
+  "path": "/tools/dependency-radar/npm/highlight.js/",
+  "latest": "11.12.0",
+  "publishedAt": "2026-08-12T04:06:58Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 105,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-7wwv-vh3v-89cq",
+      "aliases": [],
+      "summary": "ReDOS vulnerabities: multiple grammars",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "9.0.0",
+          "fixed": "10.4.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "10.4.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vfrc-7r7c-w9mx",
+      "aliases": [
+        "CVE-2020-26237"
+      ],
+      "summary": "Prototype Pollution in highlight.js",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.18.2"
+        },
+        {
+          "introduced": "10.0.0",
+          "fixed": "10.1.2"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://highlightjs.org/",
+  "repo": "git://github.com/highlightjs/highlight.js.git"
+}

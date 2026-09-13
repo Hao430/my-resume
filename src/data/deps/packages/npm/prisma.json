@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "prisma",
+  "slug": "prisma",
+  "path": "/tools/dependency-radar/npm/prisma/",
+  "latest": "8.0.0-rc.14",
+  "publishedAt": "2026-09-12T14:24:40Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 9320,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/prisma/prisma-cli#readme",
+  "repo": "https://github.com/prisma/prisma-cli.git"
+}

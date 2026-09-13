@@ -1,0 +1,44 @@
+{
+  "system": "npm",
+  "name": "esbuild",
+  "slug": "esbuild",
+  "path": "/tools/dependency-radar/npm/esbuild/",
+  "latest": "0.28.2",
+  "publishedAt": "2026-08-08T20:00:55Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 482,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-67mh-4wv8-2f99",
+      "aliases": [],
+      "summary": "esbuild enables any website to send any requests to the development server and read the response",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.25.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g7r4-m6w7-qqqr",
+      "aliases": [],
+      "summary": "esbuild allows arbitrary file read when running the development server on Windows",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0.27.3",
+          "fixed": "0.28.1"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/evanw/esbuild#readme",
+  "repo": "https://github.com/evanw/esbuild.git"
+}

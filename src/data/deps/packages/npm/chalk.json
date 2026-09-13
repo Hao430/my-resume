@@ -1,0 +1,27 @@
+{
+  "system": "npm",
+  "name": "chalk",
+  "slug": "chalk",
+  "path": "/tools/dependency-radar/npm/chalk/",
+  "latest": "6.0.0",
+  "publishedAt": "2026-07-26T14:51:07Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 44,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "MAL-2025-46969",
+      "aliases": [],
+      "summary": "Malicious code in chalk (npm)",
+      "severity": null,
+      "ranges": []
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/chalk/chalk#readme",
+  "repo": "https://github.com/chalk/chalk.git"
+}

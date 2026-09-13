@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "jsdom",
+  "slug": "jsdom",
+  "path": "/tools/dependency-radar/npm/jsdom/",
+  "latest": "30.0.1",
+  "publishedAt": "2026-07-29T04:18:42Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 285,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/jsdom/jsdom#readme",
+  "repo": "https://github.com/jsdom/jsdom.git"
+}

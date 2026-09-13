@@ -115,6 +115,7 @@ npm run build                                    # 类型检查 + 构建 + 可�
 npm run preview                                  # 构建后本地验证（含 /blog/<slug>/ 预渲染页）
 node scripts/submit-indexnow.mjs                 # 部署后向 Bing/Yandex/Naver 推送 URL
 npm run fonts                                   # 重拉字体分片到 public/fonts/（并提交）
+npm run sync-deps                                # 重抓依赖雷达数据到 src/data/deps/（手动，绝不进 build）
 ```
 
 ## 部署与验证

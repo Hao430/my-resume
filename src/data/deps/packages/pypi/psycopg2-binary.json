@@ -1,0 +1,19 @@
+{
+  "system": "pypi",
+  "name": "psycopg2-binary",
+  "slug": "psycopg2-binary",
+  "path": "/tools/dependency-radar/pypi/psycopg2-binary/",
+  "latest": "2.9.13",
+  "publishedAt": "2026-09-09T23:55:44Z",
+  "licenses": [
+    "non-standard"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 27,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://psycopg.org/",
+  "repo": "https://github.com/psycopg/psycopg2"
+}

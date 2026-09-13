@@ -1,0 +1,19 @@
+{
+  "system": "pypi",
+  "name": "matplotlib",
+  "slug": "matplotlib",
+  "path": "/tools/dependency-radar/pypi/matplotlib/",
+  "latest": "3.11.2",
+  "publishedAt": "2026-09-11T19:04:09Z",
+  "licenses": [
+    "non-standard"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 125,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://matplotlib.org",
+  "repo": "https://github.com/matplotlib/matplotlib"
+}

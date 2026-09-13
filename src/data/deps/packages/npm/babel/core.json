@@ -1,0 +1,38 @@
+{
+  "system": "npm",
+  "name": "@babel/core",
+  "slug": "babel/core",
+  "path": "/tools/dependency-radar/npm/babel/core/",
+  "latest": "8.0.5",
+  "publishedAt": "2026-09-10T21:13:19Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 230,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-4x5r-pxfx-6jf8",
+      "aliases": [
+        "CVE-2026-49356"
+      ],
+      "summary": "@babel/core: Arbitrary File Read via sourceMappingURL Comment",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "8.0.0-alpha.0",
+          "fixed": "8.0.0-rc.6"
+        },
+        {
+          "introduced": "0",
+          "fixed": "7.29.6"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://babel.dev/docs/en/next/babel-core",
+  "repo": "https://github.com/babel/babel.git"
+}

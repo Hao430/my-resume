@@ -1,0 +1,42 @@
+{
+  "system": "npm",
+  "name": "luxon",
+  "slug": "luxon",
+  "path": "/tools/dependency-radar/npm/luxon/",
+  "latest": "3.7.2",
+  "publishedAt": "2025-09-05T10:14:55Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 151,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-3xq5-wjfh-ppjc",
+      "aliases": [
+        "CVE-2023-22467"
+      ],
+      "summary": "Luxon Inefficient Regular Expression Complexity vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.28.1"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.5.2"
+        },
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.2.1"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/moment/luxon#readme",
+  "repo": "https://github.com/moment/luxon.git"
+}

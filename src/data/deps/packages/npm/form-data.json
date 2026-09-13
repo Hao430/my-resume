@@ -1,0 +1,64 @@
+{
+  "system": "npm",
+  "name": "form-data",
+  "slug": "form-data",
+  "path": "/tools/dependency-radar/npm/form-data/",
+  "latest": "4.0.6",
+  "publishedAt": "2026-06-12T17:37:53Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 53,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-fjxv-7rqg-78g4",
+      "aliases": [
+        "CVE-2025-7783"
+      ],
+      "summary": "form-data uses unsafe random function in form-data for choosing boundary",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.5.4"
+        },
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.0.4"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.0.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hmw2-7cc7-3qxx",
+      "aliases": [
+        "CVE-2026-12143"
+      ],
+      "summary": "form-data: CRLF injection in form-data via unescaped multipart field names and filenames",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.5.6"
+        },
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.0.5"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.0.6"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/form-data/form-data#readme",
+  "repo": "git://github.com/form-data/form-data.git"
+}

@@ -1,0 +1,2348 @@
+{
+  "fetchedAt": "2026-09-13",
+  "counts": {
+    "npm": 98,
+    "pypi": 58
+  },
+  "seedSize": 156,
+  "packages": [
+    {
+      "system": "npm",
+      "name": "next",
+      "slug": "next",
+      "path": "/tools/dependency-radar/npm/next/",
+      "latest": "16.3.5",
+      "publishedAt": "2026-09-11T17:26:46Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 66,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "axios",
+      "slug": "axios",
+      "path": "/tools/dependency-radar/npm/axios/",
+      "latest": "1.20.0",
+      "publishedAt": "2026-08-26T08:20:14Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 44,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "undici",
+      "slug": "undici",
+      "path": "/tools/dependency-radar/npm/undici/",
+      "latest": "8.10.2",
+      "publishedAt": "2026-09-04T14:00:54Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 35,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "dompurify",
+      "slug": "dompurify",
+      "path": "/tools/dependency-radar/npm/dompurify/",
+      "latest": "3.4.15",
+      "publishedAt": "2026-09-06T11:39:57Z",
+      "licenses": [
+        "Apache-2.0 OR MPL-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 28,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "vite",
+      "slug": "vite",
+      "path": "/tools/dependency-radar/npm/vite/",
+      "latest": "8.3.0",
+      "publishedAt": "2026-09-10T11:30:26Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 22,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "nuxt",
+      "slug": "nuxt",
+      "path": "/tools/dependency-radar/npm/nuxt/",
+      "latest": "4.5.2",
+      "publishedAt": "2026-08-05T16:16:07Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 21,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "tar",
+      "slug": "tar",
+      "path": "/tools/dependency-radar/npm/tar/",
+      "latest": "7.5.22",
+      "publishedAt": "2026-07-24T15:48:51Z",
+      "licenses": [
+        "BlueOak-1.0.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 21,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "sequelize",
+      "slug": "sequelize",
+      "path": "/tools/dependency-radar/npm/sequelize/",
+      "latest": "6.37.8",
+      "publishedAt": "2026-03-07T18:44:43Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 18,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "nodemailer",
+      "slug": "nodemailer",
+      "path": "/tools/dependency-radar/npm/nodemailer/",
+      "latest": "10.0.9",
+      "publishedAt": "2026-09-12T09:00:02Z",
+      "licenses": [
+        "MIT-0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 15,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "svelte",
+      "slug": "svelte",
+      "path": "/tools/dependency-radar/npm/svelte/",
+      "latest": "5.57.0",
+      "publishedAt": "2026-08-28T23:33:45Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 14,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "marked",
+      "slug": "marked",
+      "path": "/tools/dependency-radar/npm/marked/",
+      "latest": "18.0.13",
+      "publishedAt": "2026-09-12T21:44:16Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 13,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "multer",
+      "slug": "multer",
+      "path": "/tools/dependency-radar/npm/multer/",
+      "latest": "2.3.0",
+      "publishedAt": "2026-08-28T19:15:50Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 13,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "fastify",
+      "slug": "fastify",
+      "path": "/tools/dependency-radar/npm/fastify/",
+      "latest": "5.12.4",
+      "publishedAt": "2026-09-11T09:23:32Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 12,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "lodash",
+      "slug": "lodash",
+      "path": "/tools/dependency-radar/npm/lodash/",
+      "latest": "4.18.1",
+      "publishedAt": "2026-04-01T21:01:20Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 10,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "validator",
+      "slug": "validator",
+      "path": "/tools/dependency-radar/npm/validator/",
+      "latest": "13.15.35",
+      "publishedAt": "2026-04-02T19:45:30Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 10,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "@angular/core",
+      "slug": "angular/core",
+      "path": "/tools/dependency-radar/npm/angular/core/",
+      "latest": "22.1.6",
+      "publishedAt": "2026-09-09T20:15:04Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 9,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "mongoose",
+      "slug": "mongoose",
+      "path": "/tools/dependency-radar/npm/mongoose/",
+      "latest": "9.10.0",
+      "publishedAt": "2026-09-10T17:22:52Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 9,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "qs",
+      "slug": "qs",
+      "path": "/tools/dependency-radar/npm/qs/",
+      "latest": "6.16.0",
+      "publishedAt": "2026-08-29T23:50:15Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 9,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "jquery",
+      "slug": "jquery",
+      "path": "/tools/dependency-radar/npm/jquery/",
+      "latest": "4.0.0",
+      "publishedAt": "2026-01-18T00:28:13Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 8,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "@angular/common",
+      "slug": "angular/common",
+      "path": "/tools/dependency-radar/npm/angular/common/",
+      "latest": "22.1.6",
+      "publishedAt": "2026-09-09T20:13:17Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 7,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "mysql2",
+      "slug": "mysql2",
+      "path": "/tools/dependency-radar/npm/mysql2/",
+      "latest": "3.24.4",
+      "publishedAt": "2026-09-08T04:05:59Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 7,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "postcss",
+      "slug": "postcss",
+      "path": "/tools/dependency-radar/npm/postcss/",
+      "latest": "8.5.28",
+      "publishedAt": "2026-09-03T15:13:59Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 7,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "ws",
+      "slug": "ws",
+      "path": "/tools/dependency-radar/npm/ws/",
+      "latest": "8.21.3",
+      "publishedAt": "2026-08-07T14:10:25Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 7,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "prismjs",
+      "slug": "prismjs",
+      "path": "/tools/dependency-radar/npm/prismjs/",
+      "latest": "1.30.0",
+      "publishedAt": "2025-03-10T17:56:20Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 6,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "express",
+      "slug": "express",
+      "path": "/tools/dependency-radar/npm/express/",
+      "latest": "5.2.1",
+      "publishedAt": "2025-12-01T20:49:43Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 5,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "follow-redirects",
+      "slug": "follow-redirects",
+      "path": "/tools/dependency-radar/npm/follow-redirects/",
+      "latest": "1.16.0",
+      "publishedAt": "2026-04-13T11:03:45Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 5,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "koa",
+      "slug": "koa",
+      "path": "/tools/dependency-radar/npm/koa/",
+      "latest": "3.2.1",
+      "publishedAt": "2026-05-21T07:25:34Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 5,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "minimatch",
+      "slug": "minimatch",
+      "path": "/tools/dependency-radar/npm/minimatch/",
+      "latest": "10.2.6",
+      "publishedAt": "2026-07-27T19:00:09Z",
+      "licenses": [
+        "BlueOak-1.0.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 5,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "nanoid",
+      "slug": "nanoid",
+      "path": "/tools/dependency-radar/npm/nanoid/",
+      "latest": "6.0.1",
+      "publishedAt": "2026-08-03T10:59:07Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 5,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "debug",
+      "slug": "debug",
+      "path": "/tools/dependency-radar/npm/debug/",
+      "latest": "4.4.3",
+      "publishedAt": "2025-09-13T17:25:19Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "jsonwebtoken",
+      "slug": "jsonwebtoken",
+      "path": "/tools/dependency-radar/npm/jsonwebtoken/",
+      "latest": "9.0.3",
+      "publishedAt": "2025-12-04T10:27:57Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "markdown-it",
+      "slug": "markdown-it",
+      "path": "/tools/dependency-radar/npm/markdown-it/",
+      "latest": "15.0.2",
+      "publishedAt": "2026-09-11T04:04:18Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "moment",
+      "slug": "moment",
+      "path": "/tools/dependency-radar/npm/moment/",
+      "latest": "2.30.1",
+      "publishedAt": "2023-12-27T10:38:43Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "sharp",
+      "slug": "sharp",
+      "path": "/tools/dependency-radar/npm/sharp/",
+      "latest": "0.35.4",
+      "publishedAt": "2026-08-26T09:42:27Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "webpack",
+      "slug": "webpack",
+      "path": "/tools/dependency-radar/npm/webpack/",
+      "latest": "5.110.3",
+      "publishedAt": "2026-09-01T20:02:13Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "body-parser",
+      "slug": "body-parser",
+      "path": "/tools/dependency-radar/npm/body-parser/",
+      "latest": "2.3.0",
+      "publishedAt": "2026-06-15T10:46:12Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 3,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "immer",
+      "slug": "immer",
+      "path": "/tools/dependency-radar/npm/immer/",
+      "latest": "11.1.18",
+      "publishedAt": "2026-08-19T07:25:22Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 3,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "joi",
+      "slug": "joi",
+      "path": "/tools/dependency-radar/npm/joi/",
+      "latest": "18.2.9",
+      "publishedAt": "2026-09-11T13:31:30Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 3,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "node-fetch",
+      "slug": "node-fetch",
+      "path": "/tools/dependency-radar/npm/node-fetch/",
+      "latest": "3.3.2",
+      "publishedAt": "2023-07-25T11:50:17Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 3,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "socket.io",
+      "slug": "socket.io",
+      "path": "/tools/dependency-radar/npm/socket.io/",
+      "latest": "4.8.3",
+      "publishedAt": "2025-12-23T16:42:13Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 3,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "@nestjs/core",
+      "slug": "nestjs/core",
+      "path": "/tools/dependency-radar/npm/nestjs/core/",
+      "latest": "12.0.1",
+      "publishedAt": "2026-08-27T07:29:12Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "ajv",
+      "slug": "ajv",
+      "path": "/tools/dependency-radar/npm/ajv/",
+      "latest": "8.20.0",
+      "publishedAt": "2026-04-24T15:22:16Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "esbuild",
+      "slug": "esbuild",
+      "path": "/tools/dependency-radar/npm/esbuild/",
+      "latest": "0.28.2",
+      "publishedAt": "2026-08-08T20:00:55Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "form-data",
+      "slug": "form-data",
+      "path": "/tools/dependency-radar/npm/form-data/",
+      "latest": "4.0.6",
+      "publishedAt": "2026-06-12T17:37:53Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "highlight.js",
+      "slug": "highlight.js",
+      "path": "/tools/dependency-radar/npm/highlight.js/",
+      "latest": "11.12.0",
+      "publishedAt": "2026-08-12T04:06:58Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "knex",
+      "slug": "knex",
+      "path": "/tools/dependency-radar/npm/knex/",
+      "latest": "3.3.0",
+      "publishedAt": "2026-06-26T14:56:43Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "react",
+      "slug": "react",
+      "path": "/tools/dependency-radar/npm/react/",
+      "latest": "19.3.0",
+      "publishedAt": "2026-09-09T17:21:30Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "rollup",
+      "slug": "rollup",
+      "path": "/tools/dependency-radar/npm/rollup/",
+      "latest": "4.63.2",
+      "publishedAt": "2026-09-12T06:40:09Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "semver",
+      "slug": "semver",
+      "path": "/tools/dependency-radar/npm/semver/",
+      "latest": "7.8.5",
+      "publishedAt": "2026-06-19T18:32:48Z",
+      "licenses": [
+        "ISC"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "sqlite3",
+      "slug": "sqlite3",
+      "path": "/tools/dependency-radar/npm/sqlite3/",
+      "latest": "6.0.1",
+      "publishedAt": "2026-03-12T15:28:29Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "underscore",
+      "slug": "underscore",
+      "path": "/tools/dependency-radar/npm/underscore/",
+      "latest": "1.13.8",
+      "publishedAt": "2026-02-19T11:42:14Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "@babel/core",
+      "slug": "babel/core",
+      "path": "/tools/dependency-radar/npm/babel/core/",
+      "latest": "8.0.5",
+      "publishedAt": "2026-09-10T21:13:19Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "LOW"
+    },
+    {
+      "system": "npm",
+      "name": "@babel/traverse",
+      "slug": "babel/traverse",
+      "path": "/tools/dependency-radar/npm/babel/traverse/",
+      "latest": "8.0.5",
+      "publishedAt": "2026-09-10T21:13:16Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "@hapi/hapi",
+      "slug": "hapi/hapi",
+      "path": "/tools/dependency-radar/npm/hapi/hapi/",
+      "latest": "21.4.10",
+      "publishedAt": "2026-07-22T09:05:38Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "bcrypt",
+      "slug": "bcrypt",
+      "path": "/tools/dependency-radar/npm/bcrypt/",
+      "latest": "6.0.0",
+      "publishedAt": "2025-05-11T18:06:24Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "chalk",
+      "slug": "chalk",
+      "path": "/tools/dependency-radar/npm/chalk/",
+      "latest": "6.0.0",
+      "publishedAt": "2026-07-26T14:51:07Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "cookie",
+      "slug": "cookie",
+      "path": "/tools/dependency-radar/npm/cookie/",
+      "latest": "2.0.1",
+      "publishedAt": "2026-06-30T22:15:13Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "LOW"
+    },
+    {
+      "system": "npm",
+      "name": "glob",
+      "slug": "glob",
+      "path": "/tools/dependency-radar/npm/glob/",
+      "latest": "13.0.6",
+      "publishedAt": "2026-02-19T17:26:33Z",
+      "licenses": [
+        "BlueOak-1.0.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "luxon",
+      "slug": "luxon",
+      "path": "/tools/dependency-radar/npm/luxon/",
+      "latest": "3.7.2",
+      "publishedAt": "2025-09-05T10:14:55Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "passport",
+      "slug": "passport",
+      "path": "/tools/dependency-radar/npm/passport/",
+      "latest": "0.7.0",
+      "publishedAt": "2023-11-27T22:57:38Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "pg",
+      "slug": "pg",
+      "path": "/tools/dependency-radar/npm/pg/",
+      "latest": "8.23.0",
+      "publishedAt": "2026-08-08T19:27:05Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "npm",
+      "name": "playwright",
+      "slug": "playwright",
+      "path": "/tools/dependency-radar/npm/playwright/",
+      "latest": "1.63.0",
+      "publishedAt": "2026-09-04T22:45:21Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "puppeteer",
+      "slug": "puppeteer",
+      "path": "/tools/dependency-radar/npm/puppeteer/",
+      "latest": "25.10.0",
+      "publishedAt": "2026-09-03T13:16:42Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "react-dom",
+      "slug": "react-dom",
+      "path": "/tools/dependency-radar/npm/react-dom/",
+      "latest": "19.3.0",
+      "publishedAt": "2026-09-09T17:17:39Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "redis",
+      "slug": "redis",
+      "path": "/tools/dependency-radar/npm/redis/",
+      "latest": "6.2.1",
+      "publishedAt": "2026-08-11T10:02:52Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "npm",
+      "name": "uuid",
+      "slug": "uuid",
+      "path": "/tools/dependency-radar/npm/uuid/",
+      "latest": "14.0.2",
+      "publishedAt": "2026-08-18T18:21:56Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "vue",
+      "slug": "vue",
+      "path": "/tools/dependency-radar/npm/vue/",
+      "latest": "3.5.42",
+      "publishedAt": "2026-08-27T05:52:49Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "LOW"
+    },
+    {
+      "system": "npm",
+      "name": "zod",
+      "slug": "zod",
+      "path": "/tools/dependency-radar/npm/zod/",
+      "latest": "4.6.4",
+      "publishedAt": "2026-09-13T00:12:11Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "npm",
+      "name": "@prisma/client",
+      "slug": "prisma/client",
+      "path": "/tools/dependency-radar/npm/prisma/client/",
+      "latest": "7.10.0",
+      "publishedAt": "2026-08-25T12:54:34Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "archiver",
+      "slug": "archiver",
+      "path": "/tools/dependency-radar/npm/archiver/",
+      "latest": "8.0.0",
+      "publishedAt": "2026-05-08T08:05:23Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "autoprefixer",
+      "slug": "autoprefixer",
+      "path": "/tools/dependency-radar/npm/autoprefixer/",
+      "latest": "10.6.0",
+      "publishedAt": "2026-09-12T15:54:36Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "bcryptjs",
+      "slug": "bcryptjs",
+      "path": "/tools/dependency-radar/npm/bcryptjs/",
+      "latest": "3.0.3",
+      "publishedAt": "2025-11-02T22:09:43Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "cheerio",
+      "slug": "cheerio",
+      "path": "/tools/dependency-radar/npm/cheerio/",
+      "latest": "1.2.0",
+      "publishedAt": "2026-01-23T16:29:49Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "chokidar",
+      "slug": "chokidar",
+      "path": "/tools/dependency-radar/npm/chokidar/",
+      "latest": "5.0.0",
+      "publishedAt": "2025-11-25T23:28:06Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "classnames",
+      "slug": "classnames",
+      "path": "/tools/dependency-radar/npm/classnames/",
+      "latest": "2.5.1",
+      "publishedAt": "2023-12-29T15:55:16Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "commander",
+      "slug": "commander",
+      "path": "/tools/dependency-radar/npm/commander/",
+      "latest": "15.0.0",
+      "publishedAt": "2026-05-29T09:16:23Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "cors",
+      "slug": "cors",
+      "path": "/tools/dependency-radar/npm/cors/",
+      "latest": "2.8.6",
+      "publishedAt": "2026-01-22T14:41:30Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "date-fns",
+      "slug": "date-fns",
+      "path": "/tools/dependency-radar/npm/date-fns/",
+      "latest": "4.4.0",
+      "publishedAt": "2026-05-29T23:23:42Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "dayjs",
+      "slug": "dayjs",
+      "path": "/tools/dependency-radar/npm/dayjs/",
+      "latest": "1.11.23",
+      "publishedAt": "2026-08-17T11:52:35Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "dotenv",
+      "slug": "dotenv",
+      "path": "/tools/dependency-radar/npm/dotenv/",
+      "latest": "17.4.2",
+      "publishedAt": "2026-04-12T16:41:11Z",
+      "licenses": [
+        "BSD-2-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "eslint",
+      "slug": "eslint",
+      "path": "/tools/dependency-radar/npm/eslint/",
+      "latest": "10.10.0",
+      "publishedAt": "2026-09-04T14:34:21Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "express-session",
+      "slug": "express-session",
+      "path": "/tools/dependency-radar/npm/express-session/",
+      "latest": "1.19.0",
+      "publishedAt": "2026-01-22T14:46:26Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "fs-extra",
+      "slug": "fs-extra",
+      "path": "/tools/dependency-radar/npm/fs-extra/",
+      "latest": "11.4.0",
+      "publishedAt": "2026-07-23T19:52:08Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "helmet",
+      "slug": "helmet",
+      "path": "/tools/dependency-radar/npm/helmet/",
+      "latest": "8.3.0",
+      "publishedAt": "2026-07-12T01:20:06Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "inquirer",
+      "slug": "inquirer",
+      "path": "/tools/dependency-radar/npm/inquirer/",
+      "latest": "14.2.2",
+      "publishedAt": "2026-09-07T17:58:32Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "jsdom",
+      "slug": "jsdom",
+      "path": "/tools/dependency-radar/npm/jsdom/",
+      "latest": "30.0.1",
+      "publishedAt": "2026-07-29T04:18:42Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "ora",
+      "slug": "ora",
+      "path": "/tools/dependency-radar/npm/ora/",
+      "latest": "9.4.1",
+      "publishedAt": "2026-06-22T12:24:49Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "prettier",
+      "slug": "prettier",
+      "path": "/tools/dependency-radar/npm/prettier/",
+      "latest": "3.9.6",
+      "publishedAt": "2026-07-21T05:51:53Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "prisma",
+      "slug": "prisma",
+      "path": "/tools/dependency-radar/npm/prisma/",
+      "latest": "8.0.0-rc.14",
+      "publishedAt": "2026-09-12T14:24:40Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "ramda",
+      "slug": "ramda",
+      "path": "/tools/dependency-radar/npm/ramda/",
+      "latest": "0.32.0",
+      "publishedAt": "2025-10-10T16:29:39Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "redux",
+      "slug": "redux",
+      "path": "/tools/dependency-radar/npm/redux/",
+      "latest": "5.0.1",
+      "publishedAt": "2023-12-23T16:47:28Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "rimraf",
+      "slug": "rimraf",
+      "path": "/tools/dependency-radar/npm/rimraf/",
+      "latest": "6.1.3",
+      "publishedAt": "2026-02-16T00:59:39Z",
+      "licenses": [
+        "BlueOak-1.0.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "rxjs",
+      "slug": "rxjs",
+      "path": "/tools/dependency-radar/npm/rxjs/",
+      "latest": "7.8.2",
+      "publishedAt": "2025-02-22T03:00:42Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "sass",
+      "slug": "sass",
+      "path": "/tools/dependency-radar/npm/sass/",
+      "latest": "1.104.1",
+      "publishedAt": "2026-09-12T07:37:44Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "typescript",
+      "slug": "typescript",
+      "path": "/tools/dependency-radar/npm/typescript/",
+      "latest": "7.0.2",
+      "publishedAt": "2026-07-08T15:55:18Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "yargs",
+      "slug": "yargs",
+      "path": "/tools/dependency-radar/npm/yargs/",
+      "latest": "18.1.0",
+      "publishedAt": "2026-07-26T04:07:48Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "yup",
+      "slug": "yup",
+      "path": "/tools/dependency-radar/npm/yup/",
+      "latest": "1.7.1",
+      "publishedAt": "2025-09-21T13:59:55Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "npm",
+      "name": "zustand",
+      "slug": "zustand",
+      "path": "/tools/dependency-radar/npm/zustand/",
+      "latest": "5.0.15",
+      "publishedAt": "2026-08-13T00:39:55Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "scrapy",
+      "slug": "scrapy",
+      "path": "/tools/dependency-radar/pypi/scrapy/",
+      "latest": "2.19.0",
+      "publishedAt": "2026-09-10T11:14:18Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": true,
+      "vulnerabilityCount": 23,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "tensorflow",
+      "slug": "tensorflow",
+      "path": "/tools/dependency-radar/pypi/tensorflow/",
+      "latest": "2.21.0",
+      "publishedAt": "2026-03-06T17:25:14Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 861,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "django",
+      "slug": "django",
+      "path": "/tools/dependency-radar/pypi/django/",
+      "latest": "6.1.1",
+      "publishedAt": "2026-09-02T17:20:39Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 321,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "pillow",
+      "slug": "pillow",
+      "path": "/tools/dependency-radar/pypi/pillow/",
+      "latest": "12.3.0",
+      "publishedAt": "2026-07-01T11:55:03Z",
+      "licenses": [
+        "MIT-CMU"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 153,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "aiohttp",
+      "slug": "aiohttp",
+      "path": "/tools/dependency-radar/pypi/aiohttp/",
+      "latest": "3.14.3",
+      "publishedAt": "2026-07-23T01:56:10Z",
+      "licenses": [
+        "Apache-2.0 AND MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 93,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "transformers",
+      "slug": "transformers",
+      "path": "/tools/dependency-radar/pypi/transformers/",
+      "latest": "5.17.0",
+      "publishedAt": "2026-09-09T15:39:53Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 54,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "torch",
+      "slug": "torch",
+      "path": "/tools/dependency-radar/pypi/torch/",
+      "latest": "2.14.0",
+      "publishedAt": "2026-09-02T13:46:04Z",
+      "licenses": [
+        "Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT AND Apache-2.0 WITH LLVM-exception"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 43,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "cryptography",
+      "slug": "cryptography",
+      "path": "/tools/dependency-radar/pypi/cryptography/",
+      "latest": "50.0.1",
+      "publishedAt": "2026-08-25T19:44:22Z",
+      "licenses": [
+        "Apache-2.0 OR BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 42,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "urllib3",
+      "slug": "urllib3",
+      "path": "/tools/dependency-radar/pypi/urllib3/",
+      "latest": "2.7.0",
+      "publishedAt": "2026-05-07T16:13:17Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 38,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "tornado",
+      "slug": "tornado",
+      "path": "/tools/dependency-radar/pypi/tornado/",
+      "latest": "6.5.8",
+      "publishedAt": "2026-08-07T02:12:31Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 35,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "twisted",
+      "slug": "twisted",
+      "path": "/tools/dependency-radar/pypi/twisted/",
+      "latest": "26.4.0",
+      "publishedAt": "2026-05-11T11:24:49Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 30,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "pip",
+      "slug": "pip",
+      "path": "/tools/dependency-radar/pypi/pip/",
+      "latest": "26.2.1",
+      "publishedAt": "2026-08-04T22:51:12Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 26,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "jinja2",
+      "slug": "jinja2",
+      "path": "/tools/dependency-radar/pypi/jinja2/",
+      "latest": "3.1.6",
+      "publishedAt": "2025-03-05T20:05:00Z",
+      "licenses": [
+        "non-standard"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 20,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "starlette",
+      "slug": "starlette",
+      "path": "/tools/dependency-radar/pypi/starlette/",
+      "latest": "1.6.0",
+      "publishedAt": "2026-08-08T18:27:56Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 20,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "numpy",
+      "slug": "numpy",
+      "path": "/tools/dependency-radar/pypi/numpy/",
+      "latest": "2.5.3",
+      "publishedAt": "2026-09-06T16:25:48Z",
+      "licenses": [
+        "0BSD AND BSD-3-Clause AND CC0-1.0 AND MIT AND Zlib"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 16,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "requests",
+      "slug": "requests",
+      "path": "/tools/dependency-radar/pypi/requests/",
+      "latest": "2.34.2",
+      "publishedAt": "2026-05-14T19:25:26Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 16,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "lxml",
+      "slug": "lxml",
+      "path": "/tools/dependency-radar/pypi/lxml/",
+      "latest": "6.1.3",
+      "publishedAt": "2026-09-02T14:49:14Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 14,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "paramiko",
+      "slug": "paramiko",
+      "path": "/tools/dependency-radar/pypi/paramiko/",
+      "latest": "5.0.0",
+      "publishedAt": "2026-05-09T18:28:50Z",
+      "licenses": [
+        "LGPL-2.1"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 12,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "grpcio",
+      "slug": "grpcio",
+      "path": "/tools/dependency-radar/pypi/grpcio/",
+      "latest": "1.83.1",
+      "publishedAt": "2026-08-28T07:08:57Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 11,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "flask",
+      "slug": "flask",
+      "path": "/tools/dependency-radar/pypi/flask/",
+      "latest": "3.1.3",
+      "publishedAt": "2026-02-19T05:00:56Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 10,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "pyopenssl",
+      "slug": "pyopenssl",
+      "path": "/tools/dependency-radar/pypi/pyopenssl/",
+      "latest": "26.4.0",
+      "publishedAt": "2026-08-01T19:50:48Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 10,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "setuptools",
+      "slug": "setuptools",
+      "path": "/tools/dependency-radar/pypi/setuptools/",
+      "latest": "84.0.0",
+      "publishedAt": "2026-08-08T18:27:56Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 10,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "protobuf",
+      "slug": "protobuf",
+      "path": "/tools/dependency-radar/pypi/protobuf/",
+      "latest": "7.36.1",
+      "publishedAt": "2026-08-31T22:40:00Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 9,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "pyyaml",
+      "slug": "pyyaml",
+      "path": "/tools/dependency-radar/pypi/pyyaml/",
+      "latest": "6.0.3",
+      "publishedAt": "2025-09-25T21:32:40Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 8,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "certifi",
+      "slug": "certifi",
+      "path": "/tools/dependency-radar/pypi/certifi/",
+      "latest": "2026.7.22",
+      "publishedAt": "2026-07-22T03:35:11Z",
+      "licenses": [
+        "MPL-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 6,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "gunicorn",
+      "slug": "gunicorn",
+      "path": "/tools/dependency-radar/pypi/gunicorn/",
+      "latest": "26.2.0",
+      "publishedAt": "2026-08-24T15:05:57Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 6,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "scikit-learn",
+      "slug": "scikit-learn",
+      "path": "/tools/dependency-radar/pypi/scikit-learn/",
+      "latest": "1.9.1",
+      "publishedAt": "2026-09-10T18:33:17Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 6,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "sqlalchemy",
+      "slug": "sqlalchemy",
+      "path": "/tools/dependency-radar/pypi/sqlalchemy/",
+      "latest": "2.0.52",
+      "publishedAt": "2026-08-11T21:17:05Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 6,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "black",
+      "slug": "black",
+      "path": "/tools/dependency-radar/pypi/black/",
+      "latest": "26.5.1",
+      "publishedAt": "2026-05-18T17:05:42Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 5,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "anthropic",
+      "slug": "anthropic",
+      "path": "/tools/dependency-radar/pypi/anthropic/",
+      "latest": "1.5.0",
+      "publishedAt": "2026-09-10T17:45:34Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "pypi",
+      "name": "celery",
+      "slug": "celery",
+      "path": "/tools/dependency-radar/pypi/celery/",
+      "latest": "5.6.3",
+      "publishedAt": "2026-03-26T12:14:49Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "idna",
+      "slug": "idna",
+      "path": "/tools/dependency-radar/pypi/idna/",
+      "latest": "3.19.0",
+      "publishedAt": "2026-08-18T05:14:22Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "pypi",
+      "name": "pydantic",
+      "slug": "pydantic",
+      "path": "/tools/dependency-radar/pypi/pydantic/",
+      "latest": "2.13.5",
+      "publishedAt": "2026-08-28T14:03:59Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "pypi",
+      "name": "pymongo",
+      "slug": "pymongo",
+      "path": "/tools/dependency-radar/pypi/pymongo/",
+      "latest": "4.18.1",
+      "publishedAt": "2026-09-10T14:56:25Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "pypi",
+      "name": "redis",
+      "slug": "redis",
+      "path": "/tools/dependency-radar/pypi/redis/",
+      "latest": "8.1.0",
+      "publishedAt": "2026-07-30T08:50:58Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "scipy",
+      "slug": "scipy",
+      "path": "/tools/dependency-radar/pypi/scipy/",
+      "latest": "1.18.1",
+      "publishedAt": "2026-08-21T23:25:53Z",
+      "licenses": [
+        "non-standard"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "tqdm",
+      "slug": "tqdm",
+      "path": "/tools/dependency-radar/pypi/tqdm/",
+      "latest": "4.70.1",
+      "publishedAt": "2026-09-11T07:25:14Z",
+      "licenses": [
+        "MIT AND MPL-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "uvicorn",
+      "slug": "uvicorn",
+      "path": "/tools/dependency-radar/pypi/uvicorn/",
+      "latest": "0.52.4",
+      "publishedAt": "2026-08-19T06:27:40Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "wheel",
+      "slug": "wheel",
+      "path": "/tools/dependency-radar/pypi/wheel/",
+      "latest": "0.48.0",
+      "publishedAt": "2026-08-11T22:02:26Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 4,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "fastapi",
+      "slug": "fastapi",
+      "path": "/tools/dependency-radar/pypi/fastapi/",
+      "latest": "0.141.1",
+      "publishedAt": "2026-07-29T17:18:04Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 3,
+      "highestSeverity": "HIGH"
+    },
+    {
+      "system": "pypi",
+      "name": "httpx",
+      "slug": "httpx",
+      "path": "/tools/dependency-radar/pypi/httpx/",
+      "latest": "1.0.0.dev6",
+      "publishedAt": "2026-08-31T17:59:54Z",
+      "licenses": [],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "CRITICAL"
+    },
+    {
+      "system": "pypi",
+      "name": "pytest",
+      "slug": "pytest",
+      "path": "/tools/dependency-radar/pypi/pytest/",
+      "latest": "9.1.1",
+      "publishedAt": "2026-06-19T10:58:31Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 2,
+      "highestSeverity": "MODERATE"
+    },
+    {
+      "system": "pypi",
+      "name": "click",
+      "slug": "click",
+      "path": "/tools/dependency-radar/pypi/click/",
+      "latest": "8.5.0",
+      "publishedAt": "2026-08-26T13:33:12Z",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "pandas",
+      "slug": "pandas",
+      "path": "/tools/dependency-radar/pypi/pandas/",
+      "latest": "3.0.5",
+      "publishedAt": "2026-07-22T22:18:57Z",
+      "licenses": [
+        "non-standard"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 1,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "attrs",
+      "slug": "attrs",
+      "path": "/tools/dependency-radar/pypi/attrs/",
+      "latest": "26.1.0",
+      "publishedAt": "2026-03-19T14:22:23Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "beautifulsoup4",
+      "slug": "beautifulsoup4",
+      "path": "/tools/dependency-radar/pypi/beautifulsoup4/",
+      "latest": "4.15.0",
+      "publishedAt": "2026-06-07T16:44:21Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "boto3",
+      "slug": "boto3",
+      "path": "/tools/dependency-radar/pypi/boto3/",
+      "latest": "1.43.93",
+      "publishedAt": "2026-09-11T19:23:01Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "charset-normalizer",
+      "slug": "charset-normalizer",
+      "path": "/tools/dependency-radar/pypi/charset-normalizer/",
+      "latest": "3.5.1",
+      "publishedAt": "2026-08-15T08:18:18Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "flake8",
+      "slug": "flake8",
+      "path": "/tools/dependency-radar/pypi/flake8/",
+      "latest": "7.3.0",
+      "publishedAt": "2025-06-20T19:31:34Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "matplotlib",
+      "slug": "matplotlib",
+      "path": "/tools/dependency-radar/pypi/matplotlib/",
+      "latest": "3.11.2",
+      "publishedAt": "2026-09-11T19:04:09Z",
+      "licenses": [
+        "non-standard"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "mypy",
+      "slug": "mypy",
+      "path": "/tools/dependency-radar/pypi/mypy/",
+      "latest": "2.3.1",
+      "publishedAt": "2026-08-15T03:03:09Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "openai",
+      "slug": "openai",
+      "path": "/tools/dependency-radar/pypi/openai/",
+      "latest": "3.13.0",
+      "publishedAt": "2026-09-10T19:38:25Z",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "packaging",
+      "slug": "packaging",
+      "path": "/tools/dependency-radar/pypi/packaging/",
+      "latest": "26.3.0",
+      "publishedAt": "2026-08-04T18:15:27Z",
+      "licenses": [
+        "Apache-2.0 OR BSD-2-Clause"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "psycopg2-binary",
+      "slug": "psycopg2-binary",
+      "path": "/tools/dependency-radar/pypi/psycopg2-binary/",
+      "latest": "2.9.13",
+      "publishedAt": "2026-09-09T23:55:44Z",
+      "licenses": [
+        "non-standard"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "python-dateutil",
+      "slug": "python-dateutil",
+      "path": "/tools/dependency-radar/pypi/python-dateutil/",
+      "latest": "2.9.0.post0",
+      "publishedAt": "2024-03-01T18:36:18Z",
+      "licenses": [
+        "non-standard"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "pytz",
+      "slug": "pytz",
+      "path": "/tools/dependency-radar/pypi/pytz/",
+      "latest": "2026.3.0.post1",
+      "publishedAt": "2026-07-25T15:12:05Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "rich",
+      "slug": "rich",
+      "path": "/tools/dependency-radar/pypi/rich/",
+      "latest": "15.0.0",
+      "publishedAt": "2026-04-12T08:24:02Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    },
+    {
+      "system": "pypi",
+      "name": "six",
+      "slug": "six",
+      "path": "/tools/dependency-radar/pypi/six/",
+      "latest": "1.17.0",
+      "publishedAt": "2024-12-04T17:35:26Z",
+      "licenses": [
+        "MIT"
+      ],
+      "deprecated": false,
+      "latestAffected": false,
+      "vulnerabilityCount": 0,
+      "highestSeverity": null
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "system": "npm",
+  "name": "express",
+  "slug": "express",
+  "path": "/tools/dependency-radar/npm/express/",
+  "latest": "5.2.1",
+  "publishedAt": "2025-12-01T20:49:43Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 288,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-cm5g-3pgc-8rg4",
+      "aliases": [
+        "CVE-2024-10491"
+      ],
+      "summary": "Express ressource injection",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.0.0-rc1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gpvr-g6gh-9mc2",
+      "aliases": [
+        "CVE-2014-6393"
+      ],
+      "summary": "No Charset in Content-Type Header in express",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.11.0"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.5.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jj78-5fmv-mv28",
+      "aliases": [
+        "CVE-2024-9266"
+      ],
+      "summary": "Express Open Redirect vulnerability",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "3.4.5",
+          "fixed": "4.0.0-rc1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qw6h-vgh9-j6wx",
+      "aliases": [
+        "CVE-2024-43796"
+      ],
+      "summary": "express vulnerable to XSS via response.redirect()",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.20.0"
+        },
+        {
+          "introduced": "5.0.0-alpha.1",
+          "fixed": "5.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rv95-896h-c2vc",
+      "aliases": [
+        "CVE-2024-29041"
+      ],
+      "summary": "Express.js Open Redirect in malformed URLs",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.19.2"
+        },
+        {
+          "introduced": "5.0.0-alpha.1",
+          "fixed": "5.0.0-beta.3"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://expressjs.com/",
+  "repo": "https://github.com/expressjs/express.git"
+}

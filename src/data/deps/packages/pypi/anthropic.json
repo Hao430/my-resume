@@ -1,0 +1,76 @@
+{
+  "system": "pypi",
+  "name": "anthropic",
+  "slug": "anthropic",
+  "path": "/tools/dependency-radar/pypi/anthropic/",
+  "latest": "1.5.0",
+  "publishedAt": "2026-09-10T17:45:34Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 217,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-q5f5-3gjm-7mfm",
+      "aliases": [
+        "CVE-2026-34450"
+      ],
+      "summary": "Claude SDK for Python has Insecure Default File Permissions in Local Filesystem Memory Tool",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0.86.0",
+          "fixed": "0.87.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w828-4qhx-vxx3",
+      "aliases": [
+        "CVE-2026-34452"
+      ],
+      "summary": "Claude SDK for Python: Memory Tool Path Validation Race Condition Allows Sandbox Escape",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0.86.0",
+          "fixed": "0.87.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2114",
+      "aliases": [
+        "CVE-2026-34450"
+      ],
+      "summary": "PYSEC-2026-2114",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0.86.0",
+          "fixed": "0.87.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2115",
+      "aliases": [
+        "CVE-2026-34452"
+      ],
+      "summary": "PYSEC-2026-2115",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0.86.0",
+          "fixed": "0.87.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/anthropics/anthropic-sdk-python",
+  "repo": "https://github.com/anthropics/anthropic-sdk-python"
+}

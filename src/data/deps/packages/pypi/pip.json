@@ -1,0 +1,388 @@
+{
+  "system": "pypi",
+  "name": "pip",
+  "slug": "pip",
+  "path": "/tools/dependency-radar/pypi/pip/",
+  "latest": "26.2.1",
+  "publishedAt": "2026-08-04T22:51:12Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 159,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-4gv5-qhvr-36vv",
+      "aliases": [
+        "CVE-2013-1888"
+      ],
+      "summary": "Improper Link Resolution Before File Access in pip",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4xh5-x5gv-qwph",
+      "aliases": [
+        "CVE-2025-8869"
+      ],
+      "summary": "pip's fallback tar extraction doesn't check symbolic links point to extraction directory",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "25.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-53mr-44pp-crf4",
+      "aliases": [
+        "CVE-2014-8991"
+      ],
+      "summary": "pip lack of randomness in build directory",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.3",
+          "fixed": "6.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-58qw-9mgm-455v",
+      "aliases": [
+        "CVE-2026-3219"
+      ],
+      "summary": "pip has an interpretation conflict due to handling both concatenated tar and ZIP files as ZIP files",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5xp3-jfq3-5q8x",
+      "aliases": [
+        "CVE-2021-3572"
+      ],
+      "summary": "Improper Input Validation in pip",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "21.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6vgw-5pg2-w6jp",
+      "aliases": [
+        "CVE-2026-1703"
+      ],
+      "summary": "pip Path Traversal vulnerability",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c5h8-cq4v-cvfm",
+      "aliases": [
+        "CVE-2013-5123"
+      ],
+      "summary": "Improper Authentication in pip",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g3p5-fjj9-h8gj",
+      "aliases": [
+        "CVE-2013-1629"
+      ],
+      "summary": "Improper Input Validation in pip",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gpvv-69j7-gwj8",
+      "aliases": [
+        "CVE-2019-20916"
+      ],
+      "summary": "Path Traversal in pip",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "19.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jp4c-xjxw-mgf9",
+      "aliases": [
+        "CVE-2026-6357"
+      ],
+      "summary": "pip Vulnerable to Inclusion of Functionality from Untrusted Control Sphere",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mq26-g339-26xf",
+      "aliases": [
+        "CVE-2023-5752"
+      ],
+      "summary": "Command Injection in pip when used with Mercurial",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "23.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qwm4-qh6w-59xr",
+      "aliases": [
+        "CVE-2026-13346"
+      ],
+      "summary": "pip would incorrectly handle doubly-encoded package URLs from indexes",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wf93-45jw-7689",
+      "aliases": [
+        "CVE-2026-8643"
+      ],
+      "summary": "pip: Path traversal in console_scripts/gui_scripts entry point names allows installing scripts outside of target directory",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.1.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-8",
+      "aliases": [
+        "CVE-2013-1629"
+      ],
+      "summary": "PYSEC-2013-8",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-9",
+      "aliases": [
+        "CVE-2013-1888"
+      ],
+      "summary": "PYSEC-2013-9",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-11",
+      "aliases": [
+        "CVE-2014-8991"
+      ],
+      "summary": "PYSEC-2014-11",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.3",
+          "fixed": "6.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-160",
+      "aliases": [
+        "CVE-2013-5123"
+      ],
+      "summary": "PYSEC-2019-160",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-173",
+      "aliases": [
+        "CVE-2019-20916"
+      ],
+      "summary": "PYSEC-2020-173",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "a4c735b14a62f9cb864533808ac63936704f2ace"
+        },
+        {
+          "introduced": "0",
+          "fixed": "19.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-437",
+      "aliases": [
+        "CVE-2021-3572"
+      ],
+      "summary": "PYSEC-2021-437",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "21.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-228",
+      "aliases": [
+        "CVE-2023-5752"
+      ],
+      "summary": "PYSEC-2023-228",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "23.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1795",
+      "aliases": [
+        "CVE-2025-8869"
+      ],
+      "summary": "pip's fallback tar extraction doesn't check symbolic links point to extraction directory",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "25.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1796",
+      "aliases": [
+        "CVE-2026-1703"
+      ],
+      "summary": "pip Path Traversal vulnerability",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-196",
+      "aliases": [
+        "CVE-2026-8643"
+      ],
+      "summary": "PYSEC-2026-196",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.1.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2875",
+      "aliases": [
+        "CVE-2026-3219"
+      ],
+      "summary": "pip has an interpretation conflict due to handling both concatenated tar and ZIP files as ZIP files",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2876",
+      "aliases": [
+        "CVE-2026-6357"
+      ],
+      "summary": "pip Vulnerable to Inclusion of Functionality from Untrusted Control Sphere",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3721",
+      "aliases": [
+        "CVE-2026-13346"
+      ],
+      "summary": "PYSEC-2026-3721",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "26.2"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://pip.pypa.io/",
+  "repo": "https://github.com/pypa/pip"
+}

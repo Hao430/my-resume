@@ -1,0 +1,18 @@
+{
+  "system": "pypi",
+  "name": "six",
+  "slug": "six",
+  "path": "/tools/dependency-radar/pypi/six/",
+  "latest": "1.17.0",
+  "publishedAt": "2024-12-04T17:35:26Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 29,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/benjaminp/six"
+}

@@ -1,0 +1,41 @@
+{
+  "system": "npm",
+  "name": "@babel/traverse",
+  "slug": "babel/traverse",
+  "path": "/tools/dependency-radar/npm/babel/traverse/",
+  "latest": "8.0.5",
+  "publishedAt": "2026-09-10T21:13:16Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 221,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-67hx-6x53-jw92",
+      "aliases": [
+        "CVE-2023-45133"
+      ],
+      "summary": "Babel vulnerable to arbitrary code execution when compiling specifically crafted malicious code",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.23.2"
+        },
+        {
+          "introduced": "8.0.0-alpha.0",
+          "fixed": "8.0.0-alpha.4"
+        },
+        {
+          "introduced": "0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://babel.dev/docs/en/next/babel-traverse",
+  "repo": "https://github.com/babel/babel.git"
+}

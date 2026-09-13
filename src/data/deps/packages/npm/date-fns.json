@@ -1,0 +1,18 @@
+{
+  "system": "npm",
+  "name": "date-fns",
+  "slug": "date-fns",
+  "path": "/tools/dependency-radar/npm/date-fns/",
+  "latest": "4.4.0",
+  "publishedAt": "2026-05-29T23:23:42Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 209,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/date-fns/date-fns"
+}

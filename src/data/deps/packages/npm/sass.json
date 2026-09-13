@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "sass",
+  "slug": "sass",
+  "path": "/tools/dependency-radar/npm/sass/",
+  "latest": "1.104.1",
+  "publishedAt": "2026-09-12T07:37:44Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 325,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/sass/dart-sass",
+  "repo": "https://github.com/sass/dart-sass.git"
+}

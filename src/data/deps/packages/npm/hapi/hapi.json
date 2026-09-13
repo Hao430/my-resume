@@ -1,0 +1,36 @@
+{
+  "system": "npm",
+  "name": "@hapi/hapi",
+  "slug": "hapi/hapi",
+  "path": "/tools/dependency-radar/npm/hapi/hapi/",
+  "latest": "21.4.10",
+  "publishedAt": "2026-07-22T09:05:38Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 61,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-23vw-mhv5-grv5",
+      "aliases": [],
+      "summary": "Denial of Service in @hapi/hapi",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "18.4.1"
+        },
+        {
+          "introduced": "19.0.0",
+          "fixed": "19.1.1"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://hapi.dev",
+  "repo": "git://github.com/hapijs/hapi.git"
+}

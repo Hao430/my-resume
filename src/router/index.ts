@@ -45,6 +45,20 @@ const routes = [
     meta: { titleKey: 'seo.toolMarkdownCleaner' },
   },
   {
+    path: '/tools/dependency-radar',
+    name: 'tool-dependency-radar',
+    component: () => import('../pages/tools/DependencyRadarPage.vue'),
+    meta: { titleKey: 'seo.dependencyRadar' },
+  },
+  {
+    // :pkg+ 收成数组——npm 作用域包在 URL 里是多段（/npm/angular/core/），
+    // 用单段参数会让它们 404（见 docs/specs/dependency-radar.md §4.4）
+    path: '/tools/dependency-radar/:system/:pkg+',
+    name: 'dependency-package',
+    component: () => import('../pages/tools/DependencyPackagePage.vue'),
+    meta: { titleKey: 'seo.dependencyPackage' },
+  },
+  {
     path: '/daily-brief',
     redirect: '/tools',
   },

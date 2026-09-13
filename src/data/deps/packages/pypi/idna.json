@@ -1,0 +1,79 @@
+{
+  "system": "pypi",
+  "name": "idna",
+  "slug": "idna",
+  "path": "/tools/dependency-radar/pypi/idna/",
+  "latest": "3.19.0",
+  "publishedAt": "2026-08-18T05:14:22Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 41,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-65pc-fj4g-8rjx",
+      "aliases": [
+        "CVE-2026-45409"
+      ],
+      "summary": "Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.15"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jjg7-2v4v-x38h",
+      "aliases": [
+        "CVE-2024-3651"
+      ],
+      "summary": "Internationalized Domain Names in Applications (IDNA) vulnerable to denial of service from specially crafted inputs to idna.encode",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-60",
+      "aliases": [
+        "CVE-2024-3651"
+      ],
+      "summary": "PYSEC-2024-60",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1d365e17e10d72d0b7876316fc7b9ca0eebdd38d"
+        },
+        {
+          "introduced": "0.1",
+          "fixed": "3.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-215",
+      "aliases": [
+        "CVE-2026-45409"
+      ],
+      "summary": "PYSEC-2026-215",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.15"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/kjd/idna"
+}

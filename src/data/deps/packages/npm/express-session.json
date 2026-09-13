@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "express-session",
+  "slug": "express-session",
+  "path": "/tools/dependency-radar/npm/express-session/",
+  "latest": "1.19.0",
+  "publishedAt": "2026-01-22T14:46:26Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 67,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/expressjs/session#readme",
+  "repo": "https://github.com/expressjs/session.git"
+}

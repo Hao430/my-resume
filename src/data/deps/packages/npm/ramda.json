@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "ramda",
+  "slug": "ramda",
+  "path": "/tools/dependency-radar/npm/ramda/",
+  "latest": "0.32.0",
+  "publishedAt": "2025-10-10T16:29:39Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 63,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://ramdajs.com/",
+  "repo": "git://github.com/ramda/ramda.git"
+}

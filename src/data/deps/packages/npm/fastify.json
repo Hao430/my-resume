@@ -1,0 +1,198 @@
+{
+  "system": "npm",
+  "name": "fastify",
+  "slug": "fastify",
+  "path": "/tools/dependency-radar/npm/fastify/",
+  "latest": "5.12.4",
+  "publishedAt": "2026-09-11T09:23:32Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 329,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-247c-9743-5963",
+      "aliases": [
+        "CVE-2025-32442",
+        "CVE-2026-33806"
+      ],
+      "summary": "Fastify has a Body Schema Validation Bypass via Leading Space in Content-Type Header",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "5.3.2",
+          "fixed": "5.8.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3fjj-p79j-c9hh",
+      "aliases": [
+        "CVE-2022-41919"
+      ],
+      "summary": "Fastify: Incorrect Content-Type parsing can lead to CSRF attack",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.10.2"
+        },
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.29.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3m5p-2c4r-xxw2",
+      "aliases": [
+        "CVE-2026-16732"
+      ],
+      "summary": "fastify vulnerable to X-Forwarded-* spoofing under trustProxy hop-count",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.8.3",
+          "fixed": "5.12.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-444r-cwp2-x5xf",
+      "aliases": [
+        "CVE-2026-3635"
+      ],
+      "summary": "fastify: request.protocol and request.host Spoofable via X-Forwarded-Proto/Host from Untrusted Connections",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.8.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-455w-c45v-86rg",
+      "aliases": [
+        "CVE-2022-39288"
+      ],
+      "summary": "fastify vulnerable to denial of service via malicious Content-Type",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.8.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-573f-x89g-hqp9",
+      "aliases": [
+        "CVE-2026-3419"
+      ],
+      "summary": "Fastify's Missing End Anchor in \"subtypeNameReg\" Allows Malformed Content-Types to Pass Validation",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.7.2",
+          "fixed": "5.8.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jx2c-rxcm-jvmq",
+      "aliases": [
+        "CVE-2026-25223"
+      ],
+      "summary": "Fastify's Content-Type header tab character allows body validation bypass",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.7.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mg2h-6x62-wpwc",
+      "aliases": [
+        "CVE-2025-32442",
+        "CVE-2026-33806"
+      ],
+      "summary": "Fastify vulnerable to invalid content-type parsing, which could lead to validation bypass",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.3.2"
+        },
+        {
+          "introduced": "4.29.0",
+          "fixed": "4.29.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mq6c-fh97-4gwv",
+      "aliases": [
+        "CVE-2018-3711"
+      ],
+      "summary": "Denial of Service vulnerability with large JSON payloads in fastify",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.38.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mrq3-vjjr-p77c",
+      "aliases": [
+        "CVE-2026-25224"
+      ],
+      "summary": "Fastify Vulnerable to DoS via Unbounded Memory Allocation in sendWebStream",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.7.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w2qp-rph6-63g4",
+      "aliases": [
+        "CVE-2026-18504"
+      ],
+      "summary": "fastify vulnerable to schema validation bypass via root primitive coercion mismatch",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.12.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xw5p-hw6r-2j98",
+      "aliases": [
+        "CVE-2020-8192"
+      ],
+      "summary": "Denial of service in fastify",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.15.1"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://fastify.dev/",
+  "repo": "https://github.com/fastify/fastify.git"
+}

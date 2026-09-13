@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "cheerio",
+  "slug": "cheerio",
+  "path": "/tools/dependency-radar/npm/cheerio/",
+  "latest": "1.2.0",
+  "publishedAt": "2026-01-23T16:29:49Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 74,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://cheerio.js.org/",
+  "repo": "git://github.com/cheeriojs/cheerio.git"
+}

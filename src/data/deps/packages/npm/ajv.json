@@ -1,0 +1,52 @@
+{
+  "system": "npm",
+  "name": "ajv",
+  "slug": "ajv",
+  "path": "/tools/dependency-radar/npm/ajv/",
+  "latest": "8.20.0",
+  "publishedAt": "2026-04-24T15:22:16Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 359,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-2g4f-4pwh-qvx6",
+      "aliases": [
+        "CVE-2025-69873"
+      ],
+      "summary": "ajv has ReDoS when using `$data` option",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "7.0.0-alpha.0",
+          "fixed": "8.18.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.14.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v88g-cgmw-v5xw",
+      "aliases": [
+        "CVE-2020-15366"
+      ],
+      "summary": "Prototype Pollution in Ajv",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.12.3"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://ajv.js.org",
+  "repo": "https://github.com/ajv-validator/ajv.git"
+}

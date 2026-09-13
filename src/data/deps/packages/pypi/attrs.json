@@ -1,0 +1,18 @@
+{
+  "system": "pypi",
+  "name": "attrs",
+  "slug": "attrs",
+  "path": "/tools/dependency-radar/pypi/attrs/",
+  "latest": "26.1.0",
+  "publishedAt": "2026-03-19T14:22:23Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 36,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/python-attrs/attrs"
+}

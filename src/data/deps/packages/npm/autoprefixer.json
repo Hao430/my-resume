@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "autoprefixer",
+  "slug": "autoprefixer",
+  "path": "/tools/dependency-radar/npm/autoprefixer/",
+  "latest": "10.6.0",
+  "publishedAt": "2026-09-12T15:54:36Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 259,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/postcss/autoprefixer#readme",
+  "repo": "https://github.com/postcss/autoprefixer.git"
+}

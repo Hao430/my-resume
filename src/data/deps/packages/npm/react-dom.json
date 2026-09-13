@@ -1,0 +1,50 @@
+{
+  "system": "npm",
+  "name": "react-dom",
+  "slug": "react-dom",
+  "path": "/tools/dependency-radar/npm/react-dom/",
+  "latest": "19.3.0",
+  "publishedAt": "2026-09-09T17:17:39Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 2900,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-mvjj-gqq2-p4hw",
+      "aliases": [
+        "CVE-2018-6341"
+      ],
+      "summary": "Cross-Site Scripting in react-dom",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "16.0.0",
+          "fixed": "16.0.1"
+        },
+        {
+          "introduced": "16.1.0",
+          "fixed": "16.1.2"
+        },
+        {
+          "introduced": "16.2.0",
+          "fixed": "16.2.1"
+        },
+        {
+          "introduced": "16.3.0",
+          "fixed": "16.3.3"
+        },
+        {
+          "introduced": "16.4.0",
+          "fixed": "16.4.2"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://react.dev/",
+  "repo": "https://github.com/react/react.git"
+}

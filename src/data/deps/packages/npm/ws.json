@@ -1,0 +1,152 @@
+{
+  "system": "npm",
+  "name": "ws",
+  "slug": "ws",
+  "path": "/tools/dependency-radar/npm/ws/",
+  "latest": "8.21.3",
+  "publishedAt": "2026-08-07T14:10:25Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 188,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-2mhh-w6q8-5hxw",
+      "aliases": [
+        "CVE-2016-10518"
+      ],
+      "summary": "Remote Memory Disclosure in ws",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3h5v-q93c-6h6q",
+      "aliases": [
+        "CVE-2024-37890"
+      ],
+      "summary": "ws affected by a DoS when handling a request with many HTTP headers",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.1.0",
+          "fixed": "5.2.4"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.2.3"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.5.10"
+        },
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.17.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-58qx-3vcg-4xpx",
+      "aliases": [
+        "CVE-2026-45736"
+      ],
+      "summary": "ws: Uninitialized memory disclosure",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.20.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5v72-xg48-5rpm",
+      "aliases": [],
+      "summary": "Denial of Service in ws",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0.6.0",
+          "fixed": "1.1.5"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "3.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6663-c963-2gqg",
+      "aliases": [
+        "CVE-2016-10542"
+      ],
+      "summary": "DoS due to excessively large websocket message in ws",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6fc8-4gx4-v693",
+      "aliases": [
+        "CVE-2021-32640"
+      ],
+      "summary": "ReDoS in Sec-Websocket-Protocol header",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.4.6"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.2.2"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.2.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-96hv-2xvq-fx4p",
+      "aliases": [
+        "CVE-2026-48779"
+      ],
+      "summary": "ws: Memory exhaustion DoS from tiny fragments and data chunks",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.1.0",
+          "fixed": "5.2.5"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.2.4"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.5.11"
+        },
+        {
+          "introduced": "8.0.0",
+          "fixed": "8.21.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/websockets/ws",
+  "repo": "https://github.com/websockets/ws.git"
+}

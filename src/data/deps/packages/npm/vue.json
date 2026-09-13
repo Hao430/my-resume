@@ -1,0 +1,34 @@
+{
+  "system": "npm",
+  "name": "vue",
+  "slug": "vue",
+  "path": "/tools/dependency-radar/npm/vue/",
+  "latest": "3.5.42",
+  "publishedAt": "2026-08-27T05:52:49Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 592,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-5j4c-8p2g-v4jx",
+      "aliases": [
+        "CVE-2024-9506"
+      ],
+      "summary": "ReDoS vulnerability in vue package that is exploitable through inefficient regex evaluation in the parseHTML function",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "2.0.0-alpha.1",
+          "fixed": "3.0.0-alpha.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://vuejs.org/",
+  "repo": "https://github.com/vuejs/core.git"
+}

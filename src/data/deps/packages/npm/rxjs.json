@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "rxjs",
+  "slug": "rxjs",
+  "path": "/tools/dependency-radar/npm/rxjs/",
+  "latest": "7.8.2",
+  "publishedAt": "2025-02-22T03:00:42Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 167,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://rxjs.dev",
+  "repo": "https://github.com/reactivex/rxjs.git"
+}

@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "yargs",
+  "slug": "yargs",
+  "path": "/tools/dependency-radar/npm/yargs/",
+  "latest": "18.1.0",
+  "publishedAt": "2026-07-26T04:07:48Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 266,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://yargs.js.org/",
+  "repo": "https://github.com/yargs/yargs.git"
+}

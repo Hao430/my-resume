@@ -1,0 +1,50 @@
+{
+  "system": "npm",
+  "name": "react",
+  "slug": "react",
+  "path": "/tools/dependency-radar/npm/react/",
+  "latest": "19.3.0",
+  "publishedAt": "2026-09-09T17:21:30Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 2945,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-g53w-52xc-2j85",
+      "aliases": [
+        "CVE-2013-7035"
+      ],
+      "summary": "Cross-Site Scripting in react",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0.4.0",
+          "fixed": "0.4.2"
+        },
+        {
+          "introduced": "0.5.0",
+          "fixed": "0.5.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hg79-j56m-fxgv",
+      "aliases": [],
+      "summary": "Cross-Site Scripting in react",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0.0.1",
+          "fixed": "0.14.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://react.dev/",
+  "repo": "https://github.com/react/react.git"
+}

@@ -1,0 +1,19 @@
+{
+  "system": "pypi",
+  "name": "openai",
+  "slug": "openai",
+  "path": "/tools/dependency-radar/pypi/openai/",
+  "latest": "3.13.0",
+  "publishedAt": "2026-09-10T19:38:25Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 424,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/openai/openai-python",
+  "repo": "https://github.com/openai/openai-python"
+}

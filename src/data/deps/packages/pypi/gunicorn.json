@@ -1,0 +1,104 @@
+{
+  "system": "pypi",
+  "name": "gunicorn",
+  "slug": "gunicorn",
+  "path": "/tools/dependency-radar/pypi/gunicorn/",
+  "latest": "26.2.0",
+  "publishedAt": "2026-08-24T15:05:57Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 99,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-32pc-xphx-q4f6",
+      "aliases": [
+        "CVE-2018-1000164"
+      ],
+      "summary": "Gunicorn contains Improper Neutralization of CRLF sequences in HTTP headers",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "19.5.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hc5x-x2vx-497g",
+      "aliases": [
+        "CVE-2024-6827"
+      ],
+      "summary": "Gunicorn HTTP Request/Response Smuggling vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w3h3-4rj7-4ph4",
+      "aliases": [
+        "CVE-2024-1135"
+      ],
+      "summary": "Request smuggling leading to endpoint restriction bypass in Gunicorn",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-55",
+      "aliases": [
+        "CVE-2018-1000164"
+      ],
+      "summary": "PYSEC-2018-55",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "19.5.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1433",
+      "aliases": [
+        "CVE-2024-6827"
+      ],
+      "summary": "Gunicorn HTTP Request/Response Smuggling vulnerability",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1434",
+      "aliases": [
+        "CVE-2024-1135"
+      ],
+      "summary": "Request smuggling leading to endpoint restriction bypass in Gunicorn",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "22.0.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://gunicorn.org",
+  "repo": "https://github.com/benoitc/gunicorn"
+}

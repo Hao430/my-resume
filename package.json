@@ -18,6 +18,7 @@
     "check": "run-s lint type-check build",
     "indexnow": "node scripts/submit-indexnow.mjs",
     "fonts": "node scripts/fonts-download.mjs",
+    "sync-deps": "node scripts/sync-deps.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:type": "vue-tsc -p tsconfig.test.json --noEmit"

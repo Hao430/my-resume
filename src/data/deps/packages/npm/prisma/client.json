@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "@prisma/client",
+  "slug": "prisma/client",
+  "path": "/tools/dependency-radar/npm/prisma/client/",
+  "latest": "7.10.0",
+  "publishedAt": "2026-08-25T12:54:34Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 10656,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://www.prisma.io",
+  "repo": "https://github.com/prisma/prisma.git"
+}

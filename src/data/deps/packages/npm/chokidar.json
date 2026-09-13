@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "chokidar",
+  "slug": "chokidar",
+  "path": "/tools/dependency-radar/npm/chokidar/",
+  "latest": "5.0.0",
+  "publishedAt": "2025-11-25T23:28:06Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 109,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/paulmillr/chokidar",
+  "repo": "https://github.com/paulmillr/chokidar.git"
+}

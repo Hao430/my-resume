@@ -1,0 +1,226 @@
+{
+  "system": "npm",
+  "name": "nodemailer",
+  "slug": "nodemailer",
+  "path": "/tools/dependency-radar/npm/nodemailer/",
+  "latest": "10.0.9",
+  "publishedAt": "2026-09-12T09:00:02Z",
+  "licenses": [
+    "MIT-0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 318,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-268h-hp4c-crq3",
+      "aliases": [
+        "CVE-2026-82661"
+      ],
+      "summary": "Nodemailer: CRLF injection in Nodemailer List-* header comments allows arbitrary message header injection",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.0.9"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2x7j-588g-ccc2",
+      "aliases": [],
+      "summary": "Nodemailer: Quadratic (O(n²)) time complexity in addressparser allows remote denial of service via a crafted address list",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-48ww-j4fc-435p",
+      "aliases": [
+        "CVE-2020-7769"
+      ],
+      "summary": "Command injection in nodemailer",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.4.16"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8m3c-c648-2xjj",
+      "aliases": [],
+      "summary": "Nodemailer: resolveContent() on a MailMessage bypasses disableFileAccess/disableUrlAccess when called with the legacy signature",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9h6g-pr28-7cqp",
+      "aliases": [
+        "CVE-2024-58379"
+      ],
+      "summary": "nodemailer ReDoS when trying to send a specially crafted email",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.9.9"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c7w3-x93f-qmm8",
+      "aliases": [
+        "CVE-2026-82854"
+      ],
+      "summary": "Nodemailer has SMTP command injection due to unsanitized `envelope.size` parameter",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.0.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cc9r-2j5m-2m83",
+      "aliases": [],
+      "summary": "Nodemailer: Recipient-domain validation bypass via RFC 5322 comment mis-parsing leads to email delivery to an attacker-controlled domain",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "6.9.16",
+          "fixed": "9.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hwqf-gcqm-7353",
+      "aliases": [
+        "CVE-2021-23400"
+      ],
+      "summary": "Header injection in nodemailer",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.6.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mm7p-fcc7-pg87",
+      "aliases": [
+        "CVE-2025-13033"
+      ],
+      "summary": "Nodemailer: Email to an unintended domain can occur due to Interpretation Conflict",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p6gq-j5cr-w38f",
+      "aliases": [
+        "CVE-2026-82659"
+      ],
+      "summary": "Nodemailer: Message-level raw option bypasses disableFileAccess/disableUrlAccess, enabling arbitrary file read and full-response SSRF in the delivered message",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r7g4-qg5f-qqm2",
+      "aliases": [
+        "CVE-2026-82662"
+      ],
+      "summary": "Nodemailer: Improper TLS Certificate Validation in OAuth2 Token Fetch Enables Credential Interception",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.0.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rcmh-qjqh-p98v",
+      "aliases": [
+        "CVE-2025-14874"
+      ],
+      "summary": "Nodemailer’s addressparser is vulnerable to DoS caused by recursive calls",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.0.0",
+          "fixed": "7.0.11"
+        },
+        {
+          "introduced": "3.0.0",
+          "lastAffected": "6.10.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vvjj-xcjg-gr5g",
+      "aliases": [
+        "CVE-2026-82853"
+      ],
+      "summary": "Nodemailer Vulnerable to SMTP Command Injection via CRLF in Transport name Option (EHLO/HELO)",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.0.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wmmp-3585-3rmp",
+      "aliases": [],
+      "summary": "Nodemailer: IDN/Punycode domain allow-list bypass leads to email delivery to an attacker-controlled domain",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wqvq-jvpq-h66f",
+      "aliases": [
+        "CVE-2026-82660"
+      ],
+      "summary": "Nodemailer jsonTransport bypasses disableFileAccess and disableUrlAccess during message normalization",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.0.9"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://nodemailer.com/",
+  "repo": "https://github.com/nodemailer/nodemailer.git"
+}

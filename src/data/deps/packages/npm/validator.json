@@ -1,0 +1,158 @@
+{
+  "system": "npm",
+  "name": "validator",
+  "slug": "validator",
+  "path": "/tools/dependency-radar/npm/validator/",
+  "latest": "13.15.35",
+  "publishedAt": "2026-04-02T19:45:30Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 218,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-552w-rqg8-gxxm",
+      "aliases": [
+        "CVE-2013-7453"
+      ],
+      "summary": "Moderate severity vulnerability that affects validator",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-79mx-88w7-8f7q",
+      "aliases": [
+        "CVE-2014-9772"
+      ],
+      "summary": "XSS Filter Bypass via Encoded URL in validator",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9965-vmph-33xx",
+      "aliases": [
+        "CVE-2025-56200"
+      ],
+      "summary": "validator.js has a URL validation bypass vulnerability in its isURL function",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "13.15.20"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f5w6-r7rg-mcgq",
+      "aliases": [
+        "CVE-2014-8882"
+      ],
+      "summary": "Regular Expression Denial of Service in validator",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.22.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q4qq-fm7q-cwp5",
+      "aliases": [
+        "CVE-2013-7454"
+      ],
+      "summary": "Multiple XSS Filter Bypasses in validator",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qgmg-gppg-76g5",
+      "aliases": [
+        "CVE-2021-3765"
+      ],
+      "summary": "Inefficient Regular Expression Complexity in validator.js",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "13.7.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qpjp-7rp2-9c3f",
+      "aliases": [
+        "CVE-2013-7451"
+      ],
+      "summary": "Moderate severity vulnerability that affects validator",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rh6c-q938-3r9q",
+      "aliases": [
+        "CVE-2013-7452"
+      ],
+      "summary": "Moderate severity vulnerability that affects validator",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vghf-hv5q-vc2g",
+      "aliases": [
+        "CVE-2025-12758"
+      ],
+      "summary": "Validator is Vulnerable to Incomplete Filtering of One or More Instances of Special Elements",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "13.15.22"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xx4c-jj58-r7x6",
+      "aliases": [],
+      "summary": "Inefficient Regular Expression Complexity in Validator.js",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "11.1.0",
+          "fixed": "13.7.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/validatorjs/validator.js",
+  "repo": "https://github.com/validatorjs/validator.js.git"
+}

@@ -1,0 +1,18 @@
+{
+  "system": "pypi",
+  "name": "packaging",
+  "slug": "packaging",
+  "path": "/tools/dependency-radar/pypi/packaging/",
+  "latest": "26.3.0",
+  "publishedAt": "2026-08-04T18:15:27Z",
+  "licenses": [
+    "Apache-2.0 OR BSD-2-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 54,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/pypa/packaging"
+}

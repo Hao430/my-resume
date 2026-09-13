@@ -1,6 +1,7 @@
 import { SITE_DESCRIPTION_ZH, SITE_EMAIL, SITE_URL } from '../utils/site'
 import { LIVE_TOOLS, toolPath, type ToolMeta } from './tools'
 import zh from '../i18n/locales/zh.json'
+import depsIndex from './deps/index.json'
 
 /**
  * 静态页面的单一事实来源
@@ -90,6 +91,36 @@ function toolToPage(tool: ToolMeta): StaticPage {
   }
 }
 
+/**
+ * 依赖雷达的每包页面。数量由数据决定（当前 156 个），不可能手写进本数组，
+ * 因此这里是 spec §9 说的「页面清单由数据驱动」。
+ *
+ * 描述文案遵守 spec §4.3：区分「最新版不受影响」与「无已知漏洞」，
+ * 绝不把前者写成「安全」。
+ */
+function depsPackagePages(): StaticPage[] {
+  return depsIndex.packages.map((pkg) => {
+    const license = pkg.licenses.join(' · ') || '未知'
+    let desc: string
+    if (pkg.latestAffected) {
+      desc = `${pkg.name} ${pkg.latest} 存在尚未修复的已知漏洞，受影响版本区间与公告见页面。许可证 ${license}。`
+    } else if (pkg.vulnerabilityCount > 0) {
+      desc = `${pkg.name} ${pkg.latest} 不受已知漏洞影响；历史上共有 ${pkg.vulnerabilityCount} 条漏洞记录，受影响区间见页面。许可证 ${license}。`
+    } else {
+      desc = `${pkg.name} ${pkg.latest} 没有已知漏洞记录。许可证 ${license}。`
+    }
+    return {
+      dir: `tools/dependency-radar/${pkg.system}/${pkg.slug}`,
+      title: `${pkg.name} ${pkg.latest} · 漏洞与许可证`,
+      desc,
+      path: pkg.path,
+      changefreq: 'weekly',
+      priority: '0.5',
+      emitShell: true,
+    }
+  })
+}
+
 export const STATIC_PAGES: StaticPage[] = [
   {
     dir: '',
@@ -175,6 +206,8 @@ export const STATIC_PAGES: StaticPage[] = [
   },
   // 已上线的工具页：每个工具一个独立 URL，是工具线长尾 SEO 的落点
   ...LIVE_TOOLS.map(toolToPage),
+  // 依赖雷达的包页：数据驱动，当前 156 个
+  ...depsPackagePages(),
 ]
 
 /**

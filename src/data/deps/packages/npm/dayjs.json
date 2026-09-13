@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "dayjs",
+  "slug": "dayjs",
+  "path": "/tools/dependency-radar/npm/dayjs/",
+  "latest": "1.11.23",
+  "publishedAt": "2026-08-17T11:52:35Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 136,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://day.js.org",
+  "repo": "https://github.com/iamkun/dayjs.git"
+}

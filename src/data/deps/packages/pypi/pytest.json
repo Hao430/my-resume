@@ -1,0 +1,48 @@
+{
+  "system": "pypi",
+  "name": "pytest",
+  "slug": "pytest",
+  "path": "/tools/dependency-radar/pypi/pytest/",
+  "latest": "9.1.1",
+  "publishedAt": "2026-06-19T10:58:31Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 192,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-6w46-j5rx-g56g",
+      "aliases": [
+        "CVE-2025-71176"
+      ],
+      "summary": "pytest has vulnerable tmpdir handling",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1845",
+      "aliases": [
+        "CVE-2025-71176"
+      ],
+      "summary": "pytest has vulnerable tmpdir handling",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.3"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://docs.pytest.org/en/latest/",
+  "repo": "https://github.com/pytest-dev/pytest"
+}

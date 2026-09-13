@@ -1,0 +1,66 @@
+{
+  "system": "npm",
+  "name": "body-parser",
+  "slug": "body-parser",
+  "path": "/tools/dependency-radar/npm/body-parser/",
+  "latest": "2.3.0",
+  "publishedAt": "2026-06-15T10:46:12Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 85,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-qwcr-r2fm-qrc7",
+      "aliases": [
+        "CVE-2024-45590"
+      ],
+      "summary": "body-parser vulnerable to denial of service when url encoding is enabled",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.20.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v422-hmwv-36x6",
+      "aliases": [
+        "CVE-2026-12590"
+      ],
+      "summary": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.20.6"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wqch-xfxh-vrr4",
+      "aliases": [
+        "CVE-2025-13466"
+      ],
+      "summary": "body-parser is vulnerable to denial of service when url encoding is used",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2.0",
+          "fixed": "2.2.1"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/expressjs/body-parser#readme",
+  "repo": "https://github.com/expressjs/body-parser.git"
+}

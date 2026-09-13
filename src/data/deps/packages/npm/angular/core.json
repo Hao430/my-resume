@@ -1,0 +1,362 @@
+{
+  "system": "npm",
+  "name": "@angular/core",
+  "slug": "angular/core",
+  "path": "/tools/dependency-radar/npm/angular/core/",
+  "latest": "22.1.6",
+  "publishedAt": "2026-09-09T20:15:04Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 1109,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-692r-grfm-v8x7",
+      "aliases": [
+        "CVE-2026-52725"
+      ],
+      "summary": "@angular/core: Angular Template and Dynamic Component Namespace Bypass leading to Cross-Site Scripting (XSS)",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.15"
+        },
+        {
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.0-rc.2"
+        },
+        {
+          "introduced": "19.0.0-next.0",
+          "fixed": "19.2.23"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "18.2.14"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.22"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c75v-2vq8-878f",
+      "aliases": [
+        "CVE-2021-4231"
+      ],
+      "summary": "Angular vulnerable to Cross-site Scripting",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "11.0.0",
+          "fixed": "11.0.5"
+        },
+        {
+          "introduced": "11.1.0-next.0",
+          "fixed": "11.1.0-next.3"
+        },
+        {
+          "introduced": "0",
+          "fixed": "10.2.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f3m7-gqxr-g87x",
+      "aliases": [
+        "CVE-2026-50557"
+      ],
+      "summary": "Angular: Template and Attribute Namespace Sanitization Bypass (XSS)",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.15"
+        },
+        {
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.0-rc.2"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.22"
+        },
+        {
+          "introduced": "19.0.0-next.0",
+          "fixed": "19.2.22"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "18.2.14"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.15"
+        },
+        {
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.0-rc.2"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.22"
+        },
+        {
+          "introduced": "19.0.0-next.0",
+          "fixed": "19.2.22"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "18.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g93w-mfhg-p222",
+      "aliases": [
+        "CVE-2026-32635"
+      ],
+      "summary": "Angular vulnerable to XSS in i18n attribute bindings",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.0-next.3"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.4"
+        },
+        {
+          "introduced": "20.0.0-next.0.0.0",
+          "fixed": "20.3.18"
+        },
+        {
+          "introduced": "19.0.0-next.0",
+          "fixed": "19.2.20"
+        },
+        {
+          "introduced": "17.0.0-next.0",
+          "lastAffected": "18.2.14"
+        },
+        {
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.0-next.3"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.4"
+        },
+        {
+          "introduced": "20.0.0-next.0.0.0",
+          "fixed": "20.3.18"
+        },
+        {
+          "introduced": "19.0.0-next.0",
+          "fixed": "19.2.20"
+        },
+        {
+          "introduced": "17.0.0-next.0",
+          "lastAffected": "18.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hh8m-fm6v-7cvg",
+      "aliases": [
+        "CVE-2026-88057"
+      ],
+      "summary": "Angular: Sanitization bypass via directive host bindings on concrete host elements in @angular/core and @angular/compiler",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "22.0.0",
+          "fixed": "22.1.0"
+        },
+        {
+          "introduced": "22.0.0",
+          "fixed": "22.1.0"
+        },
+        {
+          "introduced": "21.0.0",
+          "fixed": "21.2.20"
+        },
+        {
+          "introduced": "21.0.0",
+          "fixed": "21.2.20"
+        },
+        {
+          "introduced": "20.0.0",
+          "fixed": "20.3.28"
+        },
+        {
+          "introduced": "20.0.0",
+          "fixed": "20.3.28"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "19.2.25"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "19.2.25"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jj27-h5hq-8x99",
+      "aliases": [
+        "CVE-2026-69151"
+      ],
+      "summary": "Angular i18n: Cross-Site Scripting (XSS) via event-handler attributes",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.1"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.19"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.27"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "19.2.25"
+        },
+        {
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.1"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.19"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.27"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "19.2.25"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jrmj-c5cx-3cw6",
+      "aliases": [
+        "CVE-2026-22610"
+      ],
+      "summary": "Angular has XSS Vulnerability via Unsanitized SVG Script Attributes",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "21.1.0-next.0",
+          "fixed": "21.1.0-rc.0"
+        },
+        {
+          "introduced": "21.1.0-next.0",
+          "fixed": "21.1.0-rc.0"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.0.7"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.0.7"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.16"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.16"
+        },
+        {
+          "introduced": "19.0.0-next.0",
+          "fixed": "19.2.18"
+        },
+        {
+          "introduced": "19.0.0-next.0",
+          "fixed": "19.2.18"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "18.2.14"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "18.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-prjf-86w9-mfqv",
+      "aliases": [
+        "CVE-2026-27970"
+      ],
+      "summary": "Angular i18n vulnerable to Cross-Site Scripting",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "21.2.0-next.0",
+          "fixed": "21.2.0"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.1.6"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.17"
+        },
+        {
+          "introduced": "19.0.0-next.0",
+          "fixed": "19.2.19"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "18.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rgjc-h3x7-9mwg",
+      "aliases": [
+        "CVE-2026-54267"
+      ],
+      "summary": "Angular Client Hydration DOM Clobbering & Response-Cache Poisoning",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "22.0.0-next.0",
+          "fixed": "22.0.1"
+        },
+        {
+          "introduced": "21.0.0-next.0",
+          "fixed": "21.2.17"
+        },
+        {
+          "introduced": "20.0.0-next.0",
+          "fixed": "20.3.25"
+        },
+        {
+          "introduced": "0",
+          "lastAffected": "19.2.25"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/angular/angular#readme",
+  "repo": "https://github.com/angular/angular.git"
+}

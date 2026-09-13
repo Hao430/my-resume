@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "cors",
+  "slug": "cors",
+  "path": "/tools/dependency-radar/npm/cors/",
+  "latest": "2.8.6",
+  "publishedAt": "2026-01-22T14:41:30Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 35,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/expressjs/cors#readme",
+  "repo": "https://github.com/expressjs/cors.git"
+}

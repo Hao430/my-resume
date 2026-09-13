@@ -1,0 +1,90 @@
+{
+  "system": "npm",
+  "name": "follow-redirects",
+  "slug": "follow-redirects",
+  "path": "/tools/dependency-radar/npm/follow-redirects/",
+  "latest": "1.16.0",
+  "publishedAt": "2026-04-13T11:03:45Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 71,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-74fj-2j2h-c42q",
+      "aliases": [
+        "CVE-2022-0155"
+      ],
+      "summary": "Exposure of sensitive information in follow-redirects",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.14.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cxjh-pqwp-8mfp",
+      "aliases": [
+        "CVE-2024-28849"
+      ],
+      "summary": "follow-redirects' Proxy-Authorization header kept across hosts",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.15.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jchw-25xp-jwwc",
+      "aliases": [
+        "CVE-2023-26159"
+      ],
+      "summary": "Follow Redirects improperly handles URLs in the url.parse() function",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.15.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pw2r-vq6v-hr8c",
+      "aliases": [
+        "CVE-2022-0536"
+      ],
+      "summary": "Exposure of Sensitive Information to an Unauthorized Actor in follow-redirects",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.14.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r4q5-vmmm-2653",
+      "aliases": [
+        "CVE-2026-40895"
+      ],
+      "summary": "follow-redirects leaks Custom Authentication Headers to Cross-Domain Redirect Targets",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.16.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/follow-redirects/follow-redirects",
+  "repo": "ssh://git@github.com/follow-redirects/follow-redirects.git"
+}

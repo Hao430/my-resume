@@ -1,0 +1,501 @@
+{
+  "system": "pypi",
+  "name": "tornado",
+  "slug": "tornado",
+  "path": "/tools/dependency-radar/pypi/tornado/",
+  "latest": "6.5.8",
+  "publishedAt": "2026-08-07T02:12:31Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 84,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-3x9g-8vmp-wqvf",
+      "aliases": [
+        "CVE-2026-49853"
+      ],
+      "summary": "Tornado: Authorization header forwarded across cross-origin redirects in SimpleAsyncHTTPClient",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-753j-mpmx-qq6g",
+      "aliases": [],
+      "summary": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') in tornado",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.4.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-78cv-mqj4-43f7",
+      "aliases": [
+        "CVE-2026-35536"
+      ],
+      "summary": "Tornado has incomplete validation of cookie attributes",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7cx3-6m66-7c5m",
+      "aliases": [
+        "CVE-2025-47287"
+      ],
+      "summary": "Tornado vulnerable to excessive logging caused by malformed multipart form data",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8423-8fgw-73vq",
+      "aliases": [],
+      "summary": "tornado: multipart split() creates huge temp list before max_parts check -> memory amplification DoS (httputil.py:34)",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8vpw-mgpf-mpvv",
+      "aliases": [
+        "CVE-2014-9720"
+      ],
+      "summary": "Tornado XSRF cookie allows side-channel attack against TLS (BREACH attack)",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8w49-h785-mj3c",
+      "aliases": [
+        "CVE-2024-52804"
+      ],
+      "summary": "Tornado has an HTTP cookie parsing DoS vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.4.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c98p-7wgm-6p64",
+      "aliases": [
+        "CVE-2025-67725"
+      ],
+      "summary": "Tornado: Quadratic DoS via Repeated Header Coalescing",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cx3h-4qpv-8hc9",
+      "aliases": [
+        "CVE-2026-49854"
+      ],
+      "summary": "Tornado has out-of-bounds memory access via C extension",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f7fv-v9rh-prvc",
+      "aliases": [
+        "CVE-2012-2374"
+      ],
+      "summary": "Tornado CRLF injection vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.2.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fqwm-6jpj-5wxc",
+      "aliases": [
+        "CVE-2026-35536"
+      ],
+      "summary": "Tornado has cookie attribute injection via .RequestHandler.set_cookie",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hj3f-6gcp-jg8j",
+      "aliases": [
+        "CVE-2023-28370"
+      ],
+      "summary": "Open redirect in Tornado",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.3.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jhmp-mqwm-3gq8",
+      "aliases": [
+        "CVE-2025-67726"
+      ],
+      "summary": "Tornado: Quadratic DoS via Crafted Multipart Parameters",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mgf9-4vpg-hj56",
+      "aliases": [
+        "CVE-2026-49855"
+      ],
+      "summary": "tornado AsyncHTTPClient accumulates decompressed chunks without size limit (gzip bomb)",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mpf4-983q-p7j4",
+      "aliases": [
+        "CVE-2026-82397"
+      ],
+      "summary": "Tornado: Urlencoded body parsing omits max_num_fields, so one request can stall the event loop",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pr2v-jx2c-wg9f",
+      "aliases": [
+        "CVE-2025-67724"
+      ],
+      "summary": "Tornado vulnerable to Header Injection and XSS via reason argument",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pw6j-qg29-8w7f",
+      "aliases": [],
+      "summary": "Tornado: CurlAsyncHTTPClient leaks per-request credentials on handle reuse",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qjxf-f2mg-c6mc",
+      "aliases": [
+        "CVE-2026-31958"
+      ],
+      "summary": "Tornado is vulnerable to DoS due to too many multipart parts",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qppv-j76h-2rpx",
+      "aliases": [],
+      "summary": "Tornado vulnerable to HTTP request smuggling via improper parsing of `Content-Length` fields and chunk lengths",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.3.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w235-7p84-xx57",
+      "aliases": [],
+      "summary": "Tornado has a CRLF injection in CurlAsyncHTTPClient headers",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.4.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wwv5-g3v4-889x",
+      "aliases": [],
+      "summary": "Tornado: Incomplete fix for CVE-2026-35536: cookie attribute injection re-opened via the legacy case-insensitive `**kwargs` path in `set_cookie`",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.5.5",
+          "fixed": "6.5.8"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2012-5",
+      "aliases": [
+        "CVE-2012-2374"
+      ],
+      "summary": "PYSEC-2012-5",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.2.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-213",
+      "aliases": [
+        "CVE-2014-9720"
+      ],
+      "summary": "PYSEC-2020-213",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1c36307463b1e8affae100bf9386948e6c1b2308"
+        },
+        {
+          "introduced": "0",
+          "fixed": "3.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-75",
+      "aliases": [
+        "CVE-2023-28370"
+      ],
+      "summary": "PYSEC-2023-75",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.3.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-265",
+      "aliases": [
+        "CVE-2025-67724"
+      ],
+      "summary": "PYSEC-2025-265",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-266",
+      "aliases": [
+        "CVE-2025-67725"
+      ],
+      "summary": "PYSEC-2025-266",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-267",
+      "aliases": [
+        "CVE-2025-67726"
+      ],
+      "summary": "PYSEC-2025-267",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-140",
+      "aliases": [
+        "CVE-2026-31958"
+      ],
+      "summary": "PYSEC-2026-140",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1974",
+      "aliases": [
+        "CVE-2025-47287"
+      ],
+      "summary": "Tornado vulnerable to excessive logging caused by malformed multipart form data",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1975",
+      "aliases": [
+        "CVE-2024-52804"
+      ],
+      "summary": "Tornado has an HTTP cookie parsing DoS vulnerability",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.4.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2287",
+      "aliases": [
+        "CVE-2026-35536"
+      ],
+      "summary": "PYSEC-2026-2287",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3387",
+      "aliases": [
+        "CVE-2026-49853"
+      ],
+      "summary": "Tornado: Authorization header forwarded across cross-origin redirects in SimpleAsyncHTTPClient",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3388",
+      "aliases": [
+        "CVE-2026-49854"
+      ],
+      "summary": "Tornado has out-of-bounds memory access via C extension",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3389",
+      "aliases": [
+        "CVE-2026-49855"
+      ],
+      "summary": "tornado AsyncHTTPClient accumulates decompressed chunks without size limit (gzip bomb)",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3928",
+      "aliases": [
+        "CVE-2026-82397"
+      ],
+      "summary": "Tornado: Urlencoded body parsing omits max_num_fields, so one request can stall the event loop",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.5.8"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/tornadoweb/tornado"
+}

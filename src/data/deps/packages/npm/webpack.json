@@ -1,0 +1,76 @@
+{
+  "system": "npm",
+  "name": "webpack",
+  "slug": "webpack",
+  "path": "/tools/dependency-radar/npm/webpack/",
+  "latest": "5.110.3",
+  "publishedAt": "2026-09-01T20:02:13Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 887,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-38r7-794h-5758",
+      "aliases": [
+        "CVE-2025-68157"
+      ],
+      "summary": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects → SSRF + cache persistence",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "5.49.0",
+          "fixed": "5.104.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4vvj-4cpr-p986",
+      "aliases": [
+        "CVE-2024-43788"
+      ],
+      "summary": "Webpack's AutoPublicPathRuntimeModule has a DOM Clobbering Gadget that leads to XSS",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.0.0-alpha.0",
+          "fixed": "5.94.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8fgc-7cc6-rx7x",
+      "aliases": [
+        "CVE-2025-68458"
+      ],
+      "summary": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "5.49.0",
+          "fixed": "5.104.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hc6q-2mpp-qw7j",
+      "aliases": [
+        "CVE-2023-28154"
+      ],
+      "summary": "Cross-realm object access in Webpack 5",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.76.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/webpack/webpack",
+  "repo": "https://github.com/webpack/webpack.git"
+}

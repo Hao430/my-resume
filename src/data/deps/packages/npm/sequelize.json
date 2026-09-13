@@ -1,0 +1,292 @@
+{
+  "system": "npm",
+  "name": "sequelize",
+  "slug": "sequelize",
+  "path": "/tools/dependency-radar/npm/sequelize/",
+  "latest": "6.37.8",
+  "publishedAt": "2026-03-07T18:44:43Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 627,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-2598-2f59-rmhq",
+      "aliases": [
+        "CVE-2019-10749"
+      ],
+      "summary": "SQL Injection in sequelize",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.35.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2777-2vq8-c4v4",
+      "aliases": [
+        "CVE-2019-11069"
+      ],
+      "summary": "SQL Injection in sequelize",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2v7q-2xqx-f4q5",
+      "aliases": [
+        "CVE-2016-10553"
+      ],
+      "summary": "Potential SQL Injection in sequelize",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5v9h-q3gj-c32x",
+      "aliases": [
+        "CVE-2016-1000225"
+      ],
+      "summary": "SQL Injection via GeoJSON in sequelize",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "3.4.0",
+          "fixed": "3.23.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6457-6jrx-69cr",
+      "aliases": [
+        "CVE-2026-30951"
+      ],
+      "summary": "Sequelize v6 Vulnerable to SQL Injection via JSON Column Cast Type",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "6.0.0-beta.1",
+          "fixed": "6.37.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8c25-f3mj-v6h8",
+      "aliases": [
+        "CVE-2023-22580"
+      ],
+      "summary": "Sequelize information disclosure vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.28.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "7.0.0-alpha.20"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-98pq-pmw9-4gpm",
+      "aliases": [
+        "CVE-2016-10550"
+      ],
+      "summary": "SQL Injection in sequelize",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.17.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9c2p-jw8p-f84v",
+      "aliases": [
+        "CVE-2016-10556"
+      ],
+      "summary": "SQL Injection in sequelize",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.20.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f598-mfpv-gmfx",
+      "aliases": [
+        "CVE-2023-22578"
+      ],
+      "summary": "Sequelize - Default support for “raw attributes” when using parentheses",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.0.0-alpha.20"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.29.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fw4p-36j9-rrj3",
+      "aliases": [],
+      "summary": "Denial of Service in sequelize",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.44.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j9xp-92vc-559j",
+      "aliases": [
+        "CVE-2019-10748"
+      ],
+      "summary": "SQL Injection in sequelize",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.35.1"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.44.3"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.8.11"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m9jw-237r-gvfv",
+      "aliases": [
+        "CVE-2019-10752"
+      ],
+      "summary": "SQL Injection in sequelize",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.44.3"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.15.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v8fg-2rw7-q452",
+      "aliases": [
+        "CVE-2026-69240"
+      ],
+      "summary": "Sequelize: SQL Injection (Oracle DB)",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.37.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vqfx-gj96-3w95",
+      "aliases": [
+        "CVE-2023-22579"
+      ],
+      "summary": "Unsafe fall-through in getWhereConditions",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.28.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "7.0.0-alpha.20"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wfp9-vr4j-f49j",
+      "aliases": [],
+      "summary": "NoSQL Injection in sequelize",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.12.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wrh9-cjv3-2hpw",
+      "aliases": [
+        "CVE-2023-25813"
+      ],
+      "summary": "Sequelize vulnerable to SQL Injection via replacements",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.19.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x2jc-pwfj-h9p3",
+      "aliases": [
+        "CVE-2016-10554"
+      ],
+      "summary": "SQL Injection in sequelize",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.7.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xqg8-cv3h-xppv",
+      "aliases": [
+        "CVE-2015-1369"
+      ],
+      "summary": "SQL Injection in sequelize",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.0.0-rc8"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://sequelize.org/",
+  "repo": "https://github.com/sequelize/sequelize.git"
+}

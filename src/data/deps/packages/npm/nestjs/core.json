@@ -1,0 +1,48 @@
+{
+  "system": "npm",
+  "name": "@nestjs/core",
+  "slug": "nestjs/core",
+  "path": "/tools/dependency-radar/npm/nestjs/core/",
+  "latest": "12.0.1",
+  "publishedAt": "2026-08-27T07:29:12Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 460,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-36xv-jgw5-4q75",
+      "aliases": [
+        "CVE-2026-35515"
+      ],
+      "summary": "@nestjs/core Improperly Neutralizes Special Elements in Output Used by a Downstream Component ('Injection')",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "11.1.18"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4jpv-8r57-pv7j",
+      "aliases": [
+        "CVE-2023-26108"
+      ],
+      "summary": "@nestjs/core vulnerable to Information Exposure via StreamableFile pipe",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.5"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://nestjs.com",
+  "repo": "https://github.com/nestjs/nest.git"
+}

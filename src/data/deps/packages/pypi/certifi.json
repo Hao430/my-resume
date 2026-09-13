@@ -1,0 +1,107 @@
+{
+  "system": "pypi",
+  "name": "certifi",
+  "slug": "certifi",
+  "path": "/tools/dependency-radar/pypi/certifi/",
+  "latest": "2026.7.22",
+  "publishedAt": "2026-07-22T03:35:11Z",
+  "licenses": [
+    "MPL-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 75,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-248v-346w-9cwc",
+      "aliases": [
+        "CVE-2024-39689"
+      ],
+      "summary": "Certifi removes GLOBALTRUST root certificate",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "2021.5.30",
+          "fixed": "2024.7.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-43fp-rhv2-5gv8",
+      "aliases": [
+        "CVE-2022-23491"
+      ],
+      "summary": "Certifi removing TrustCor root certificate",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2017.11.05",
+          "fixed": "2022.12.07"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xqr8-7jwr-rhp7",
+      "aliases": [
+        "CVE-2023-37920"
+      ],
+      "summary": "Removal of e-Tugra root certificate",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2015.4.28",
+          "fixed": "2023.7.22"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-42986",
+      "aliases": [
+        "CVE-2022-23491"
+      ],
+      "summary": "PYSEC-2022-42986",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2017.11.5",
+          "fixed": "2022.12.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-135",
+      "aliases": [
+        "CVE-2023-37920"
+      ],
+      "summary": "PYSEC-2023-135",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2015.4.28",
+          "fixed": "2023.7.22"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-230",
+      "aliases": [
+        "CVE-2024-39689"
+      ],
+      "summary": "PYSEC-2024-230",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "bd8153872e9c6fc98f4023df9c2deaffea2fa463"
+        },
+        {
+          "introduced": "2021.5.30",
+          "fixed": "2024.7.4"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/certifi/python-certifi"
+}

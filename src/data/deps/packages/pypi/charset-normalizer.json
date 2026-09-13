@@ -1,0 +1,18 @@
+{
+  "system": "pypi",
+  "name": "charset-normalizer",
+  "slug": "charset-normalizer",
+  "path": "/tools/dependency-radar/pypi/charset-normalizer/",
+  "latest": "3.5.1",
+  "publishedAt": "2026-08-15T08:18:18Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 65,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/jawah/charset_normalizer"
+}

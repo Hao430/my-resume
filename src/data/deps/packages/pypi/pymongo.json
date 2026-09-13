@@ -1,0 +1,80 @@
+{
+  "system": "pypi",
+  "name": "pymongo",
+  "slug": "pymongo",
+  "path": "/tools/dependency-radar/pypi/pymongo/",
+  "latest": "4.18.1",
+  "publishedAt": "2026-09-10T14:56:25Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 1695,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-m87m-mmvp-v9qm",
+      "aliases": [
+        "CVE-2024-5629"
+      ],
+      "summary": "PyMongo Out-of-bounds Read in the bson module",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.6.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x33v-f3gp-gw2c",
+      "aliases": [
+        "CVE-2013-2132"
+      ],
+      "summary": "Use of NullPointerException Catch to Detect NULL Pointer Dereference in Pymongo",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.5.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-30",
+      "aliases": [
+        "CVE-2013-2132"
+      ],
+      "summary": "PYSEC-2013-30",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "a060c15ef87e0f0e72974c7c0e57fe811bbd06a2"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.5.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1826",
+      "aliases": [
+        "CVE-2024-5629"
+      ],
+      "summary": "PyMongo Out-of-bounds Read in the bson module",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.6.3"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://www.mongodb.org",
+  "repo": "https://github.com/mongodb/mongo-python-driver"
+}

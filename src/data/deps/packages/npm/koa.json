@@ -1,0 +1,118 @@
+{
+  "system": "npm",
+  "name": "koa",
+  "slug": "koa",
+  "path": "/tools/dependency-radar/npm/koa/",
+  "latest": "3.2.1",
+  "publishedAt": "2026-05-21T07:25:34Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 125,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-593f-38f6-jp5m",
+      "aliases": [
+        "CVE-2025-25200"
+      ],
+      "summary": "Inefficient Regular Expression Complexity in koa",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.15.4"
+        },
+        {
+          "introduced": "3.0.0-alpha.0",
+          "fixed": "3.0.0-alpha.3"
+        },
+        {
+          "introduced": "1.0.0",
+          "fixed": "1.7.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.21.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7gcc-r8m5-44qm",
+      "aliases": [
+        "CVE-2026-27959"
+      ],
+      "summary": "Koa has Host Header Injection via ctx.hostname",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.1.2"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.16.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g8mr-fgfg-5qpc",
+      "aliases": [
+        "CVE-2025-62595"
+      ],
+      "summary": "Koa Vulnerable to Open Redirect via Trailing Double-Slash (//) in back Redirect Logic",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "3.0.1",
+          "fixed": "3.0.3"
+        },
+        {
+          "introduced": "2.16.2",
+          "fixed": "2.16.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jgmv-j7ww-jx2x",
+      "aliases": [
+        "CVE-2025-8129"
+      ],
+      "summary": "Koa Open Redirect via Referrer Header (User-Controlled)",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.16.2"
+        },
+        {
+          "introduced": "3.0.0-alpha.0",
+          "fixed": "3.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x2rg-q646-7m2v",
+      "aliases": [
+        "CVE-2025-32379"
+      ],
+      "summary": "Koajs vulnerable to Cross-Site Scripting (XSS) at ctx.redirect() function",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.16.1"
+        },
+        {
+          "introduced": "3.0.0-alpha.1",
+          "fixed": "3.0.0-alpha.5"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://koajs.com",
+  "repo": "https://github.com/koajs/koa.git"
+}

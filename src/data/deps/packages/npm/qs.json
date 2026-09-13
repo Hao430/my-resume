@@ -1,0 +1,190 @@
+{
+  "system": "npm",
+  "name": "qs",
+  "slug": "qs",
+  "path": "/tools/dependency-radar/npm/qs/",
+  "latest": "6.16.0",
+  "publishedAt": "2026-08-29T23:50:15Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 150,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-4mjr-xmp4-gh2g",
+      "aliases": [
+        "CVE-2026-82417"
+      ],
+      "summary": "qs: Denial of Service via Attacker Controlled isBuffer",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2.5",
+          "fixed": "6.16.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6rw7-vpxm-498p",
+      "aliases": [
+        "CVE-2025-15284"
+      ],
+      "summary": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.14.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f9cm-p3w6-xvr3",
+      "aliases": [
+        "CVE-2014-10064"
+      ],
+      "summary": "Denial-of-Service Extended Event Loop Blocking in qs",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gqgv-6jq5-jjj9",
+      "aliases": [
+        "CVE-2017-1000048"
+      ],
+      "summary": "Prototype Pollution Protection Bypass in qs",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.0.4"
+        },
+        {
+          "introduced": "6.1.0",
+          "fixed": "6.1.2"
+        },
+        {
+          "introduced": "6.2.0",
+          "fixed": "6.2.3"
+        },
+        {
+          "introduced": "6.3.0",
+          "fixed": "6.3.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hrpp-h998-j3pp",
+      "aliases": [
+        "CVE-2022-24999"
+      ],
+      "summary": "qs vulnerable to Prototype Pollution",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "6.10.0",
+          "fixed": "6.10.3"
+        },
+        {
+          "introduced": "6.9.0",
+          "fixed": "6.9.7"
+        },
+        {
+          "introduced": "6.8.0",
+          "fixed": "6.8.3"
+        },
+        {
+          "introduced": "6.7.0",
+          "fixed": "6.7.3"
+        },
+        {
+          "introduced": "6.6.0",
+          "fixed": "6.6.1"
+        },
+        {
+          "introduced": "6.5.0",
+          "fixed": "6.5.3"
+        },
+        {
+          "introduced": "6.4.0",
+          "fixed": "6.4.1"
+        },
+        {
+          "introduced": "6.3.0",
+          "fixed": "6.3.3"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jjv7-qpx3-h62q",
+      "aliases": [
+        "CVE-2014-7191"
+      ],
+      "summary": "Denial-of-Service Memory Exhaustion in qs",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q8mj-m7cp-5q26",
+      "aliases": [
+        "CVE-2026-8723"
+      ],
+      "summary": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "6.11.1",
+          "fixed": "6.15.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w7fw-mjwx-w883",
+      "aliases": [
+        "CVE-2026-2391"
+      ],
+      "summary": "qs's arrayLimit bypass in comma parsing allows denial of service",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.7.0",
+          "fixed": "6.14.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x5fp-wj9c-mxmx",
+      "aliases": [
+        "CVE-2026-82562"
+      ],
+      "summary": "qs array-limit bypass via bracket-key comma parsing",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "6.14.2",
+          "fixed": "6.16.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/ljharb/qs",
+  "repo": "https://github.com/ljharb/qs.git"
+}

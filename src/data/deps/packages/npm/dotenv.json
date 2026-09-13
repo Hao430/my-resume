@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "dotenv",
+  "slug": "dotenv",
+  "path": "/tools/dependency-radar/npm/dotenv/",
+  "latest": "17.4.2",
+  "publishedAt": "2026-04-12T16:41:11Z",
+  "licenses": [
+    "BSD-2-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 104,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/motdotla/dotenv#readme",
+  "repo": "git://github.com/motdotla/dotenv.git"
+}

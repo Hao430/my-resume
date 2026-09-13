@@ -1,0 +1,6592 @@
+{
+  "system": "pypi",
+  "name": "django",
+  "slug": "django",
+  "path": "/tools/dependency-radar/pypi/django/",
+  "latest": "6.1.1",
+  "publishedAt": "2026-09-02T17:20:39Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 435,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-2655-q453-22f9",
+      "aliases": [
+        "CVE-2012-4520"
+      ],
+      "summary": "Django Allows Arbitrary URL Generation",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.4"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-296w-6qhq-gf92",
+      "aliases": [
+        "CVE-2014-0481"
+      ],
+      "summary": "Django denial of service via file upload naming",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.14"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.9"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2f9x-5v75-3qv4",
+      "aliases": [
+        "CVE-2018-7537"
+      ],
+      "summary": "Django Denial-of-service possibility in truncatechars_html and truncatewords_html template filters",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "2.0",
+          "fixed": "2.0.3"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.11"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.19"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2gwj-7jmv-h26r",
+      "aliases": [
+        "CVE-2022-28346"
+      ],
+      "summary": "SQL Injection in Django",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.28"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.13"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2hrw-hx67-34x6",
+      "aliases": [
+        "CVE-2023-24580"
+      ],
+      "summary": "Resource exhaustion in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.18"
+        },
+        {
+          "introduced": "4.1a1",
+          "fixed": "4.1.7"
+        },
+        {
+          "introduced": "4.0a1",
+          "fixed": "4.0.10"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2m34-jcjv-45xf",
+      "aliases": [
+        "CVE-2020-13596"
+      ],
+      "summary": "XSS in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.13"
+        },
+        {
+          "introduced": "3.0a1",
+          "fixed": "3.0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2mcm-79hx-8fxw",
+      "aliases": [
+        "CVE-2025-13473"
+      ],
+      "summary": "Django has Observable Timing Discrepancy",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.0a1",
+          "fixed": "6.0.2"
+        },
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.28"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-337x-4q8g-prc5",
+      "aliases": [
+        "CVE-2019-3498"
+      ],
+      "summary": "Improper Input Validation in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.11a1",
+          "fixed": "1.11.18"
+        },
+        {
+          "introduced": "2.0a1",
+          "fixed": "2.0.10"
+        },
+        {
+          "introduced": "2.1a1",
+          "fixed": "2.1.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-33mw-q7rj-mjwj",
+      "aliases": [
+        "CVE-2025-14550"
+      ],
+      "summary": "Django has Inefficient Algorithmic Complexity",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.0a1",
+          "fixed": "6.0.2"
+        },
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.28"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-37hp-765x-j95x",
+      "aliases": [
+        "CVE-2017-7233"
+      ],
+      "summary": "Django open redirect and possible XSS attack via user-supplied numeric redirect URLs",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.10a1",
+          "fixed": "1.10.7"
+        },
+        {
+          "introduced": "1.9a1",
+          "fixed": "1.9.13"
+        },
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8.18"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3f2c-jm6v-cr35",
+      "aliases": [
+        "CVE-2016-9014"
+      ],
+      "summary": "Django DNS Rebinding Vulnerability",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8.16"
+        },
+        {
+          "introduced": "1.9a1",
+          "fixed": "1.9.11"
+        },
+        {
+          "introduced": "1.10a1",
+          "fixed": "1.10.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3gh2-xw74-jmcw",
+      "aliases": [
+        "CVE-2020-9402"
+      ],
+      "summary": "SQL injection in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.29"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.11"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3h9f-r86x-qvjx",
+      "aliases": [
+        "CVE-2026-48588"
+      ],
+      "summary": "Django: cache middleware may expose private responses when unrelated request cookies are present",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.16"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3jqw-crqj-w8qw",
+      "aliases": [
+        "CVE-2011-4137"
+      ],
+      "summary": "Denial of service in django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-46x4-9jmv-jc8p",
+      "aliases": [
+        "CVE-2016-2048"
+      ],
+      "summary": "Django Access Restrictions Bypass",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4894-5vqc-6r2r",
+      "aliases": [
+        "CVE-2013-4249"
+      ],
+      "summary": "Django cross-site scripting (XSS) vulnerability in the AdminURLFieldWidget widget",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4c42-4rxm-x6qf",
+      "aliases": [
+        "CVE-2013-1443"
+      ],
+      "summary": "Django Denial of Service Vulnerability in the authentication framework",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.8"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4rrr-2h4v-f3j9",
+      "aliases": [
+        "CVE-2026-1285"
+      ],
+      "summary": "Django has Inefficient Algorithmic Complexity",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.0a1",
+          "fixed": "6.0.2"
+        },
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.28"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-53qw-q765-4fww",
+      "aliases": [
+        "CVE-2021-45115"
+      ],
+      "summary": "Denial-of-service in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.26"
+        },
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.11"
+        },
+        {
+          "introduced": "4.0a1",
+          "fixed": "4.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-54qj-48vx-cr9f",
+      "aliases": [
+        "CVE-2008-2302"
+      ],
+      "summary": "Django Cross-site scripting (XSS) vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0.91",
+          "fixed": "0.91.2"
+        },
+        {
+          "introduced": "0.95",
+          "fixed": "0.95.3"
+        },
+        {
+          "introduced": "0.96",
+          "fixed": "0.96.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-59w8-4wm2-4xw8",
+      "aliases": [
+        "CVE-2012-3443"
+      ],
+      "summary": "Django Image Field Vulnerable to Image Decompression Bombs",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3.2"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5h2q-4hrp-v9rr",
+      "aliases": [
+        "CVE-2012-3444"
+      ],
+      "summary": "Django vulnerable to Improper Restriction of Operations within the Bounds of a Memory Buffer",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3.2"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5hg3-6c2f-f3wr",
+      "aliases": [
+        "CVE-2018-14574"
+      ],
+      "summary": "Django open redirect",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.0",
+          "fixed": "2.0.8"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.15"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5hgc-2vfp-mqvc",
+      "aliases": [
+        "CVE-2024-45230"
+      ],
+      "summary": "Django vulnerable to denial-of-service attack via the urlize() and urlizetrunc() template filters",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.1"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.9"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.16"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5hrc-gvxj-w55p",
+      "aliases": [
+        "CVE-2026-6907"
+      ],
+      "summary": "Django Uses Cache Containing Sensitive Information",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.5"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5j2h-h5hg-3wf8",
+      "aliases": [
+        "CVE-2011-0696"
+      ],
+      "summary": "Cross-site request forgery in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.1",
+          "fixed": "1.1.4"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5mf9-h53q-7mhq",
+      "aliases": [
+        "CVE-2026-33033"
+      ],
+      "summary": "Django has potential DoS via MultiPartParser through crafted multipart uploads",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-625g-gx8c-xcmg",
+      "aliases": [
+        "CVE-2014-0482"
+      ],
+      "summary": "Django Middleware Enables Session Hijacking",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.14"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.9"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.6"
+        },
+        {
+          "introduced": "1.7a1",
+          "fixed": "1.7c3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6426-9fv3-65x8",
+      "aliases": [
+        "CVE-2026-1312"
+      ],
+      "summary": "Django has an SQL Injection issue",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "6.0a1",
+          "fixed": "6.0.2"
+        },
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.28"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6565-fg86-6jcx",
+      "aliases": [
+        "CVE-2015-2241"
+      ],
+      "summary": "Django Cross-site Scripting Vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.7.6"
+        },
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8b2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-68w8-qjq3-2gfm",
+      "aliases": [
+        "CVE-2021-33203"
+      ],
+      "summary": "Path Traversal in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.2.24"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.1.12"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6c3j-c64m-qhgq",
+      "aliases": [
+        "CVE-2019-11358"
+      ],
+      "summary": "XSS in jQuery as used in Drupal, Backdrop CMS, and other products",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.1.4",
+          "fixed": "3.4.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.3.4"
+        },
+        {
+          "introduced": "1.1.4",
+          "fixed": "3.4.0"
+        },
+        {
+          "introduced": "2.0a1",
+          "fixed": "2.1.9"
+        },
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.2"
+        },
+        {
+          "introduced": "1.1.4",
+          "fixed": "3.4.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.19.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6c7v-2f49-8h26",
+      "aliases": [
+        "CVE-2019-12781"
+      ],
+      "summary": "Django Incorrect HTTP detection with reverse-proxy connecting via HTTPS",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.10"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.3"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.22"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6cw3-g6wv-c2xv",
+      "aliases": [
+        "CVE-2022-23833"
+      ],
+      "summary": "Infinite Loop in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.27"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.12"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6g95-x6cj-mg4v",
+      "aliases": [
+        "CVE-2015-0222"
+      ],
+      "summary": "Django database denial-of-service with ModelMultipleChoiceField",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.10"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6mx3-3vqg-hpp2",
+      "aliases": [
+        "CVE-2018-16984"
+      ],
+      "summary": "Django allows unprivileged users to read the password hashes of arbitrary accounts",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6r97-cj55-9hrq",
+      "aliases": [
+        "CVE-2019-14234"
+      ],
+      "summary": "SQL Injection in Django",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "1.11a1",
+          "fixed": "1.11.23"
+        },
+        {
+          "introduced": "2.1a1",
+          "fixed": "2.1.11"
+        },
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6w2r-r2m5-xq5w",
+      "aliases": [
+        "CVE-2025-57833"
+      ],
+      "summary": "Django is subject to SQL injection through its column aliases",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.2.24"
+        },
+        {
+          "introduced": "5.0a1",
+          "fixed": "5.1.12"
+        },
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6wcr-wcqm-3mfh",
+      "aliases": [
+        "CVE-2015-8213"
+      ],
+      "summary": "Django settings leak in date template filter",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.11"
+        },
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8.7"
+        },
+        {
+          "introduced": "1.9a1",
+          "fixed": "1.9rc2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6wgp-fwfm-mxp3",
+      "aliases": [
+        "CVE-2015-3982"
+      ],
+      "summary": "Django allows user sessions hijacking via an empty string in the session key",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-78vx-ggch-wghm",
+      "aliases": [
+        "CVE-2012-3442"
+      ],
+      "summary": "Django Allows Redirect via Data URL",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3.2"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-795c-9xpc-xw6g",
+      "aliases": [
+        "CVE-2024-41990"
+      ],
+      "summary": "Django vulnerable to a denial-of-service attack",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.8"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.15"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7fq8-4pv5-5w5c",
+      "aliases": [
+        "CVE-2015-2317"
+      ],
+      "summary": "Django cross-site scripting (XSS) attack via user-supplied redirect URLs",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.20"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.6.11"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.7"
+        },
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8c1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7g9h-c88w-r7h2",
+      "aliases": [
+        "CVE-2011-0698"
+      ],
+      "summary": "Directory traversal in Django",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "1.1",
+          "fixed": "1.1.4"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7h2m-m8vj-598h",
+      "aliases": [
+        "CVE-2026-35192"
+      ],
+      "summary": "Django Uses Persistent Cookies Containing Sensitive Information",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.5"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7h4p-27mh-hmrw",
+      "aliases": [
+        "CVE-2023-41164"
+      ],
+      "summary": "Django Denial of service vulnerability in django.utils.encoding.uri_to_iri",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.21"
+        },
+        {
+          "introduced": "4.1",
+          "fixed": "4.1.11"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7qfw-j7hp-v45g",
+      "aliases": [
+        "CVE-2015-0219"
+      ],
+      "summary": "Django WSGI Header Spoofing Vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.18"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.10"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7rp2-fm2h-wchj",
+      "aliases": [
+        "CVE-2019-12308"
+      ],
+      "summary": "Django Cross-site Scripting in AdminURLFieldWidget",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.11a1",
+          "fixed": "1.11.21"
+        },
+        {
+          "introduced": "2.1a1",
+          "fixed": "2.1.9"
+        },
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7wph-fc4w-wqp2",
+      "aliases": [
+        "CVE-2010-4535"
+      ],
+      "summary": "Improper date handling in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.3"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7xr5-9hcq-chf9",
+      "aliases": [
+        "CVE-2025-48432"
+      ],
+      "summary": "Django Improper Output Neutralization for Logs vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.2"
+        },
+        {
+          "introduced": "5.0a1",
+          "fixed": "5.1.10"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.2.22"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8498-2h75-472j",
+      "aliases": [
+        "CVE-2024-53907"
+      ],
+      "summary": "Django denial-of-service in django.utils.html.strip_tags()",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.1.0",
+          "fixed": "5.1.4"
+        },
+        {
+          "introduced": "4.2.0",
+          "fixed": "4.2.17"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.0.10"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.4"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.10"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.17"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-89hj-xfx5-7q66",
+      "aliases": [
+        "CVE-2014-0473"
+      ],
+      "summary": "Django Reuses Cached CSRF Token",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.11"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.6"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8c5j-9r9f-c6w8",
+      "aliases": [
+        "CVE-2021-45116"
+      ],
+      "summary": "Information disclosure in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.26"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.11"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8cjm-8mp7-r2xf",
+      "aliases": [
+        "CVE-2026-8404"
+      ],
+      "summary": "Django: UpdateCacheMiddleware may disclose cached responses due to case-sensitive Cache-Control handling",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8j24-cjrq-gr2m",
+      "aliases": [
+        "CVE-2025-32873"
+      ],
+      "summary": "Django has a denial-of-service possibility in strip_tags()",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.21"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.9"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8m3r-rv5g-fcpq",
+      "aliases": [
+        "CVE-2011-0697"
+      ],
+      "summary": "Cross-site scripting in django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.1",
+          "fixed": "1.1.4"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8p8v-wh79-9r56",
+      "aliases": [
+        "CVE-2026-25673"
+      ],
+      "summary": "Django vulnerable to Uncontrolled Resource Consumption",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.3"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.12"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.29"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8qcx-xf44-272x",
+      "aliases": [
+        "CVE-2026-53878"
+      ],
+      "summary": "Django: DomainNameValidator permits newline characters that may enable HTTP header injection",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.16"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8x94-hmjh-97hq",
+      "aliases": [
+        "CVE-2022-36359"
+      ],
+      "summary": "Django vulnerable to Reflected File Download attack",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.2.15"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-923m-gv2p-w5qp",
+      "aliases": [
+        "CVE-2026-48587"
+      ],
+      "summary": "Django: has_vary_header may expose cached responses when Vary values contain whitespace",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-933h-hp56-hf7m",
+      "aliases": [
+        "CVE-2026-33034"
+      ],
+      "summary": "Django: SGI requests with a missing or understated `Content-Length` header could bypass the `DATA_UPLOAD_MAX_MEMORY_SIZE` limit",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-95rw-fx8r-36v6",
+      "aliases": [
+        "CVE-2022-22818"
+      ],
+      "summary": "Cross-site Scripting in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.27"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.12"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9cwg-mhxf-hh59",
+      "aliases": [
+        "CVE-2013-6044"
+      ],
+      "summary": "Django cross-site scripting (XSS) vulnerability via is_safe_url function",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.6"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9jmf-237g-qf46",
+      "aliases": [
+        "CVE-2024-39330"
+      ],
+      "summary": "Django Path Traversal vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.7"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9r8w-6x8c-6jr9",
+      "aliases": [
+        "CVE-2017-12794"
+      ],
+      "summary": "Django vulnerable to XSS on 500 pages",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.10a1",
+          "fixed": "1.10.8"
+        },
+        {
+          "introduced": "1.11a1",
+          "fixed": "1.11.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9v8h-57gv-qch6",
+      "aliases": [
+        "CVE-2007-5712"
+      ],
+      "summary": "Django vulnerable to Denial of Service via i18n middleware component",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0.96.0",
+          "fixed": "0.96.1"
+        },
+        {
+          "introduced": "0.95",
+          "fixed": "0.95.2"
+        },
+        {
+          "introduced": "0.91.0",
+          "fixed": "0.91.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9xg7-gg9m-rmq9",
+      "aliases": [
+        "CVE-2009-2659"
+      ],
+      "summary": "Django Admin Media Handler Vulnerable to Directory Traversal",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0.96.0",
+          "fixed": "0.96.4"
+        },
+        {
+          "introduced": "1.0",
+          "fixed": "1.0.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c4qh-4vgv-qc6g",
+      "aliases": [
+        "CVE-2019-14232"
+      ],
+      "summary": "Django Denial-of-service in django.utils.text.Truncator",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.11a1",
+          "fixed": "1.11.23"
+        },
+        {
+          "introduced": "2.1a1",
+          "fixed": "2.1.11"
+        },
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c8c8-9472-w52h",
+      "aliases": [
+        "CVE-2016-6186"
+      ],
+      "summary": "Django Cross-site scripting Vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.8.14"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.8"
+        },
+        {
+          "introduced": "1.10a1",
+          "fixed": "1.10rc1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cqf7-ff9h-7967",
+      "aliases": [
+        "CVE-2015-5145"
+      ],
+      "summary": "Django ReDoS in validators.URLValidator",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-crhf-3pfg-w68w",
+      "aliases": [
+        "CVE-2026-53877"
+      ],
+      "summary": "Django: GDALRaster may over-read heap memory when constructed from bytes",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.16"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-crhm-qpjc-cm64",
+      "aliases": [
+        "CVE-2016-7401"
+      ],
+      "summary": "Django CSRF Protection Bypass",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.8.15"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.10"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f6f8-9mx6-9mx2",
+      "aliases": [
+        "CVE-2024-39614"
+      ],
+      "summary": "Django vulnerable to Denial of Service",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.7"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f7cm-ccfp-3q4r",
+      "aliases": [
+        "CVE-2014-0480"
+      ],
+      "summary": "Django Incorrectly Validates URLs",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.14"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.9"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fp6p-5xvw-m74f",
+      "aliases": [
+        "CVE-2016-2513"
+      ],
+      "summary": "Django User Enumeration Vulnerability",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.8.10"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fr28-569j-53c4",
+      "aliases": [
+        "CVE-2020-24584"
+      ],
+      "summary": "Django Incorrect Default Permissions",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.16"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.10"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-frmv-pr5f-9mcr",
+      "aliases": [
+        "CVE-2025-64459"
+      ],
+      "summary": "Django vulnerable to SQL injection via _connector keyword argument in QuerySet and Q objects.",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.8"
+        },
+        {
+          "introduced": "5.0a1",
+          "fixed": "5.1.14"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.2.26"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fvgf-6h6h-3322",
+      "aliases": [
+        "CVE-2021-3281"
+      ],
+      "summary": "Django Directory Traversal via archive.extract",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.18"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.6"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.12"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fwr5-q9rx-294f",
+      "aliases": [
+        "CVE-2010-4534"
+      ],
+      "summary": "Improper query string handling in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.3"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fxpg-gg9g-76gj",
+      "aliases": [
+        "CVE-2010-3082"
+      ],
+      "summary": "Cross-site scripting in django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g8xg-jgj6-49r3",
+      "aliases": [
+        "CVE-2013-0306"
+      ],
+      "summary": "Django is vulnerable to Denial of Service attack in formset",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.6"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gv98-g628-m9x5",
+      "aliases": [
+        "CVE-2015-0220"
+      ],
+      "summary": "Django Cross-site Scripting Vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.18"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.10"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gvg8-93h5-g6qq",
+      "aliases": [
+        "CVE-2026-1287"
+      ],
+      "summary": "Django has an SQL Injection issue",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "6.0a1",
+          "fixed": "6.0.2"
+        },
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.28"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h4hv-m4h4-mhwg",
+      "aliases": [
+        "CVE-2017-7234"
+      ],
+      "summary": "Django open redirect",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.10",
+          "fixed": "1.10.7"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.13"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.18"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h582-2pch-3xv3",
+      "aliases": [
+        "CVE-2015-5143"
+      ],
+      "summary": "Django Denial-of-service by filling session store",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.21"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.7.9"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h5jv-4p7w-64jg",
+      "aliases": [
+        "CVE-2019-14233"
+      ],
+      "summary": "Django Denial-of-service in strip_tags()",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.11a1",
+          "fixed": "1.11.23"
+        },
+        {
+          "introduced": "2.1a1",
+          "fixed": "2.1.11"
+        },
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h7pc-vwp9-298g",
+      "aliases": [
+        "CVE-2026-6873"
+      ],
+      "summary": "Django: signed cookies are vulnerable to salt namespace collisions",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h8gc-pgj2-vjm3",
+      "aliases": [
+        "CVE-2023-43665"
+      ],
+      "summary": "Django Denial-of-service in django.utils.text.Truncator",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.22"
+        },
+        {
+          "introduced": "4.1a1",
+          "fixed": "4.1.12"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h95j-h2rv-qrg4",
+      "aliases": [
+        "CVE-2011-4140"
+      ],
+      "summary": "Django Cross-Site Request Forgery vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "lastAffected": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "lastAffected": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hmr4-m2h5-33qx",
+      "aliases": [
+        "CVE-2020-7471"
+      ],
+      "summary": "SQL injection in Django",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.11.28"
+        },
+        {
+          "introduced": "2.0",
+          "fixed": "2.2.10"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hpr9-3m2g-3j9p",
+      "aliases": [
+        "CVE-2025-59681"
+      ],
+      "summary": "Django vulnerable to SQL injection in column aliases",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.25"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.13"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hvmf-r92r-27hr",
+      "aliases": [
+        "CVE-2019-19118"
+      ],
+      "summary": "Django allows unintended model editing",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.15"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j3j3-jrfh-cm2w",
+      "aliases": [
+        "CVE-2015-2316"
+      ],
+      "summary": "Django Denial-of-service possibility with strip_tags",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.11"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.7"
+        },
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8c1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jh3w-4vvf-mjgr",
+      "aliases": [
+        "CVE-2023-36053"
+      ],
+      "summary": "Django has regular expression denial of service vulnerability in EmailValidator/URLValidator",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.20"
+        },
+        {
+          "introduced": "4.0a1",
+          "fixed": "4.1.10"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jh75-99hh-qvx9",
+      "aliases": [
+        "CVE-2024-41989"
+      ],
+      "summary": "Django memory consumption vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.8"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.15"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jhjg-w2cp-5j44",
+      "aliases": [
+        "CVE-2015-0221"
+      ],
+      "summary": "Django DoS in django.views.static.serve",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.18"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.10"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jrh2-hc4r-7jwx",
+      "aliases": [
+        "CVE-2021-45452"
+      ],
+      "summary": "Directory-traversal in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.26"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.11"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m6gj-h9gm-gw44",
+      "aliases": [
+        "CVE-2020-24583"
+      ],
+      "summary": "Django Incorrect Default Permissions",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.16"
+        },
+        {
+          "introduced": "3.0a1",
+          "fixed": "3.0.10"
+        },
+        {
+          "introduced": "3.1a1",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m9g8-fxxm-xg86",
+      "aliases": [
+        "CVE-2024-53908"
+      ],
+      "summary": "Django SQL injection in HasKey(lhs, rhs) on Oracle",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.0.10"
+        },
+        {
+          "introduced": "5.1.0",
+          "fixed": "5.1.4"
+        },
+        {
+          "introduced": "4.2.0",
+          "fixed": "4.2.17"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.4"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.10"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.17"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mjgh-79qc-68w3",
+      "aliases": [
+        "CVE-2026-25674"
+      ],
+      "summary": "Django has a Race Condition vulnerability",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.3"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.12"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.29"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mm6v-q8q9-pgcf",
+      "aliases": [
+        "CVE-2026-7666"
+      ],
+      "summary": "Django fails to prevent reuse of a partially-initialized connection after a failed `STARTTLS` handshake",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mmwr-2jhp-mc7j",
+      "aliases": [
+        "CVE-2026-4292"
+      ],
+      "summary": "Django vulnerable to privilege abuse in ModelAdmin.list_editable",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mv8g-fhh6-6267",
+      "aliases": [
+        "CVE-2016-9013"
+      ],
+      "summary": "Django user with hardcoded password created when running tests on Oracle",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "1.10a1",
+          "fixed": "1.10.3"
+        },
+        {
+          "introduced": "1.9a1",
+          "fixed": "1.9.11"
+        },
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8.16"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mvfq-ggxm-9mc5",
+      "aliases": [
+        "CVE-2026-3902"
+      ],
+      "summary": "Django vulnerable to ASGI header spoofing via underscore/hyphen conflation",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mwm9-4648-f68q",
+      "aliases": [
+        "CVE-2026-1207"
+      ],
+      "summary": "Django has an SQL Injection issue",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "6.0a1",
+          "fixed": "6.0.2"
+        },
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.28"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mwv2-398h-v489",
+      "aliases": [
+        "CVE-2007-0405"
+      ],
+      "summary": "Django Improper Access Control",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0.95",
+          "fixed": "1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p3fp-8748-vqfq",
+      "aliases": [
+        "CVE-2025-26699"
+      ],
+      "summary": "Django vulnerable to Allocation of Resources Without Limits or Throttling",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.20"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.13"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p64x-8rxx-wf6q",
+      "aliases": [
+        "CVE-2022-34265"
+      ],
+      "summary": "Django `Trunc()` and `Extract()` database functions vulnerable to SQL Injection",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.14"
+        },
+        {
+          "introduced": "4.0a1",
+          "fixed": "4.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p6m5-h7pp-v2x5",
+      "aliases": [
+        "CVE-2009-3695"
+      ],
+      "summary": "Django Regex Algorithmic Complexity Causes Denial of Service",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.0",
+          "fixed": "1.0.4"
+        },
+        {
+          "introduced": "1.1",
+          "fixed": "1.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p99v-5w3c-jqq9",
+      "aliases": [
+        "CVE-2021-33571"
+      ],
+      "summary": "Django Access Control Bypass possibly leading to SSRF, RFI, and LFI attacks",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.24"
+        },
+        {
+          "introduced": "3.0a1",
+          "fixed": "3.1.12"
+        },
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pgxh-wfw4-jx2v",
+      "aliases": [
+        "CVE-2015-5963"
+      ],
+      "summary": "Django denial of service via empty session record creation",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.4"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.10"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.22"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pv4p-cwwg-4rph",
+      "aliases": [
+        "CVE-2024-42005"
+      ],
+      "summary": "Django SQL injection vulnerability",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.8"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.15"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pw27-w7w4-9qc7",
+      "aliases": [
+        "CVE-2016-2512"
+      ],
+      "summary": "Django XSS Vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.8.10"
+        },
+        {
+          "introduced": "1.9a1",
+          "fixed": "1.9.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pwjp-ccjc-ghwg",
+      "aliases": [
+        "CVE-2026-4277"
+      ],
+      "summary": "Django vulnerable to privilege abuse in GenericInlineModelAdmin",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q2jf-h9jm-m7p4",
+      "aliases": [
+        "CVE-2023-23969"
+      ],
+      "summary": "Django contains Uncontrolled Resource Consumption via cached header",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.17"
+        },
+        {
+          "introduced": "4.0a1",
+          "fixed": "4.0.9"
+        },
+        {
+          "introduced": "4.1a1",
+          "fixed": "4.1.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q5qw-4364-5hhm",
+      "aliases": [
+        "CVE-2015-5144"
+      ],
+      "summary": "Django Vulnerable to HTTP Response Splitting Attack",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.21"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.7.9"
+        },
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q7q2-qf2q-rw3w",
+      "aliases": [
+        "CVE-2014-1418"
+      ],
+      "summary": "Django Vulnerable to Cache Poisoning",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.13"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.8"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.5"
+        },
+        {
+          "introduced": "1.7a1",
+          "fixed": "1.7b4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q95w-c7qg-hrff",
+      "aliases": [
+        "CVE-2025-59682"
+      ],
+      "summary": "Django vulnerable to partial directory traversal via archives",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.25"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.13"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qc99-g3wm-hgxr",
+      "aliases": [
+        "CVE-2007-0404"
+      ],
+      "summary": "Django Arbitrary Code Execution",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0.95",
+          "fixed": "1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qcgg-j2x8-h9g8",
+      "aliases": [
+        "CVE-2024-56374"
+      ],
+      "summary": "Django has a potential denial-of-service vulnerability in IPv6 validation",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.5"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.11"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.18"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.5"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.11"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.18"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qg2p-9jwr-mmqf",
+      "aliases": [
+        "CVE-2024-38875"
+      ],
+      "summary": "Django vulnerable to Denial of Service",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.14"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qm57-vhq3-3fwf",
+      "aliases": [
+        "CVE-2021-32052"
+      ],
+      "summary": "Header injection possible in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.22"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.10"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qmf9-6jqf-j8fq",
+      "aliases": [
+        "CVE-2023-46695"
+      ],
+      "summary": "Django potential denial of service vulnerability in UsernameField on Windows",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.23"
+        },
+        {
+          "introduced": "4.1a1",
+          "fixed": "4.1.13"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qpc8-7fxc-cm4p",
+      "aliases": [
+        "CVE-2026-35193"
+      ],
+      "summary": "Django: UpdateCacheMiddleware may disclose private cached responses by omitting Authorization from Vary",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "5.2.0",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qrh7-x6fp-c2mp",
+      "aliases": [
+        "CVE-2013-1664"
+      ],
+      "summary": "XML Entity Expansion (XEE) in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.3.0",
+          "fixed": "1.3.6"
+        },
+        {
+          "introduced": "1.4.0",
+          "fixed": "1.4.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qrw5-5h28-6cmg",
+      "aliases": [
+        "CVE-2022-41323"
+      ],
+      "summary": "Django denial-of-service vulnerability in internationalized URLs",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.16"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.8"
+        },
+        {
+          "introduced": "4.1",
+          "fixed": "4.1.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qw25-v68c-qjf3",
+      "aliases": [
+        "CVE-2025-64458"
+      ],
+      "summary": "Django has a denial-of-service vulnerability in HttpResponseRedirect and HttpResponsePermanentRedirect on Windows",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.8"
+        },
+        {
+          "introduced": "5.0a1",
+          "fixed": "5.1.14"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.2.26"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r28v-mw67-m5p9",
+      "aliases": [
+        "CVE-2018-7536"
+      ],
+      "summary": "Django denial-of-service possibility in urlize and urlizetrunc template filters",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.0a1",
+          "fixed": "2.0.3"
+        },
+        {
+          "introduced": "1.11a1",
+          "fixed": "1.11.11"
+        },
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8.19"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r3xc-prgr-mg9p",
+      "aliases": [
+        "CVE-2023-31047"
+      ],
+      "summary": "Django bypasses validation when using one form field to upload multiple files",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.19"
+        },
+        {
+          "introduced": "4.0a1",
+          "fixed": "4.1.9"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r5cj-wv24-92p5",
+      "aliases": [
+        "CVE-2008-3909"
+      ],
+      "summary": "Django cross-site request forgery (CSRF) vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0.91.0",
+          "fixed": "0.91.3"
+        },
+        {
+          "introduced": "0.95.0",
+          "fixed": "0.95.4"
+        },
+        {
+          "introduced": "0.96.0",
+          "fixed": "0.96.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r7w6-p47g-vj53",
+      "aliases": [
+        "CVE-2013-0305"
+      ],
+      "summary": "Django Data leakage via admin history log",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.6"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r836-hh6v-rg5g",
+      "aliases": [
+        "CVE-2024-41991"
+      ],
+      "summary": "Django vulnerable to denial-of-service attack",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.8"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.15"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rf4j-j272-fj86",
+      "aliases": [
+        "CVE-2018-6188"
+      ],
+      "summary": "Django vulnerable to information leakage in AuthenticationForm",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.0a1",
+          "fixed": "2.0.2"
+        },
+        {
+          "introduced": "1.11.8",
+          "fixed": "1.11.10"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rm2j-x595-q9cj",
+      "aliases": [
+        "CVE-2011-4139"
+      ],
+      "summary": "Django Vulnerable to Cache Poisoning",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rqw2-ghq9-44m7",
+      "aliases": [
+        "CVE-2025-13372"
+      ],
+      "summary": "Django is vulnerable to SQL injection in column aliases",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.9"
+        },
+        {
+          "introduced": "5.1a1",
+          "fixed": "5.1.15"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.27"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rrqc-c2jx-6jgv",
+      "aliases": [
+        "CVE-2024-45231"
+      ],
+      "summary": "Django allows enumeration of user e-mail addresses",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.1"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.9"
+        },
+        {
+          "introduced": "0",
+          "fixed": "4.2.16"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rvq6-mrpv-m6rm",
+      "aliases": [
+        "CVE-2014-0472"
+      ],
+      "summary": "Code Injection in Django",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.11"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.6"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rw75-m7gp-92m3",
+      "aliases": [
+        "CVE-2014-0483"
+      ],
+      "summary": "Django data leakage via querystring manipulation in admin",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.14"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.9"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.6"
+        },
+        {
+          "introduced": "1.7a1",
+          "fixed": "1.7c3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rxjp-mfm9-w4wr",
+      "aliases": [
+        "CVE-2021-31542"
+      ],
+      "summary": "Path Traversal in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.21"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.1.9"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v6rh-hp5x-86rv",
+      "aliases": [
+        "CVE-2021-44420"
+      ],
+      "summary": "Potential bypass of an upstream access control based on URL paths in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.25"
+        },
+        {
+          "introduced": "3.0a1",
+          "fixed": "3.1.14"
+        },
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.10"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v9qg-3j8p-r63v",
+      "aliases": [
+        "CVE-2019-14235"
+      ],
+      "summary": "Uncontrolled Recursion in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.11a1",
+          "fixed": "1.11.23"
+        },
+        {
+          "introduced": "2.1a1",
+          "fixed": "2.1.11"
+        },
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vfq6-hq5r-27r6",
+      "aliases": [
+        "CVE-2019-19844"
+      ],
+      "summary": "Django Potential account hijack via password reset form",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.11.27"
+        },
+        {
+          "introduced": "2.0",
+          "fixed": "2.2.9"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vjjp-9r83-22rc",
+      "aliases": [
+        "CVE-2013-4315"
+      ],
+      "summary": "Django Directory Traversal via ssi template tag",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.7"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vm8q-m57g-pff3",
+      "aliases": [
+        "CVE-2024-27351"
+      ],
+      "summary": "Regular expression denial-of-service in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.25"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.11"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vq3h-3q7v-9prw",
+      "aliases": [
+        "CVE-2014-3730"
+      ],
+      "summary": "Django Allows Open Redirects",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.13"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.8"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.5"
+        },
+        {
+          "introduced": "1.7a1",
+          "fixed": "1.7b4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vrcr-9hj9-jcg6",
+      "aliases": [
+        "CVE-2025-64460"
+      ],
+      "summary": "Django is vulnerable to DoS via XML serializer text extraction",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.2a1",
+          "fixed": "5.2.9"
+        },
+        {
+          "introduced": "5.1a1",
+          "fixed": "5.1.15"
+        },
+        {
+          "introduced": "4.2a1",
+          "fixed": "4.2.27"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w24h-v9qh-8gxj",
+      "aliases": [
+        "CVE-2022-28347"
+      ],
+      "summary": "SQL Injection in Django",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.28"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.13"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w26r-rmm8-9c29",
+      "aliases": [
+        "CVE-2026-5766"
+      ],
+      "summary": "Django has an Improper Handling of Length Parameter Inconsistency",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.5"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wh4h-v3f2-r2pp",
+      "aliases": [
+        "CVE-2019-6975"
+      ],
+      "summary": "Uncontrolled Memory Consumption in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.19"
+        },
+        {
+          "introduced": "2.0",
+          "fixed": "2.0.11"
+        },
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wpjr-j57x-wxfw",
+      "aliases": [
+        "CVE-2020-13254"
+      ],
+      "summary": "Data leakage via cache key collision in Django",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.13"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.7"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wqfg-m96j-85vm",
+      "aliases": [
+        "CVE-2025-27556"
+      ],
+      "summary": "Django Potential Denial of Service (DoS) on Windows",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.14"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wqjj-hx84-v449",
+      "aliases": [
+        "CVE-2014-0474"
+      ],
+      "summary": "Django Vulnerable to MySQL Injection",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.11"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.6"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wxg3-mfph-qg9w",
+      "aliases": [
+        "CVE-2011-4138"
+      ],
+      "summary": "Django Might Allow CSRF Requests via URL Verification",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x38m-486c-2wr9",
+      "aliases": [
+        "CVE-2015-5964"
+      ],
+      "summary": "Denial-of-service possibility in logout() view by filling session store",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.10"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.22"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x64m-686f-fmm3",
+      "aliases": [
+        "CVE-2013-1665"
+      ],
+      "summary": "XML External Entity (XXE) in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "1.3.0",
+          "fixed": "1.3.6"
+        },
+        {
+          "introduced": "1.4.0",
+          "fixed": "1.4.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x7q2-wr7g-xqmf",
+      "aliases": [
+        "CVE-2024-39329"
+      ],
+      "summary": "Django vulnerable to user enumeration attack",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.7"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.14"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x88j-93vc-wpmp",
+      "aliases": [
+        "CVE-2011-4136"
+      ],
+      "summary": "Session manipulation in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xgxc-v2qg-chmh",
+      "aliases": [
+        "CVE-2021-28658"
+      ],
+      "summary": "Directory Traversal in Django",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.20"
+        },
+        {
+          "introduced": "3.0a1",
+          "fixed": "3.0.14"
+        },
+        {
+          "introduced": "3.1a1",
+          "fixed": "3.1.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xpfp-f569-q3p2",
+      "aliases": [
+        "CVE-2021-35042"
+      ],
+      "summary": "SQL Injection in Django",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "3.2a1",
+          "fixed": "3.2.5"
+        },
+        {
+          "introduced": "3.0a1",
+          "fixed": "3.1.13"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xxj9-f6rv-m3x4",
+      "aliases": [
+        "CVE-2024-24680"
+      ],
+      "summary": "Django denial-of-service attack in the intcomma template filter",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.24"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.10"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2007-1",
+      "aliases": [
+        "CVE-2007-5712"
+      ],
+      "summary": "PYSEC-2007-1",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2008-1",
+      "aliases": [
+        "CVE-2008-2302"
+      ],
+      "summary": "PYSEC-2008-1",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2008-2",
+      "aliases": [
+        "CVE-2008-3909"
+      ],
+      "summary": "PYSEC-2008-2",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2009-3",
+      "aliases": [
+        "CVE-2009-2659"
+      ],
+      "summary": "PYSEC-2009-3",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2009-4",
+      "aliases": [
+        "CVE-2009-3695"
+      ],
+      "summary": "PYSEC-2009-4",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.0",
+          "fixed": "1.0.4"
+        },
+        {
+          "introduced": "1.1",
+          "fixed": "1.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2010-12",
+      "aliases": [
+        "CVE-2010-3082"
+      ],
+      "summary": "PYSEC-2010-12",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-1",
+      "aliases": [
+        "CVE-2011-4136"
+      ],
+      "summary": "PYSEC-2011-1",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-10",
+      "aliases": [
+        "CVE-2011-0696"
+      ],
+      "summary": "PYSEC-2011-10",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.1",
+          "fixed": "1.1.4"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-11",
+      "aliases": [
+        "CVE-2011-0697"
+      ],
+      "summary": "PYSEC-2011-11",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.1",
+          "fixed": "1.1.4"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-12",
+      "aliases": [
+        "CVE-2011-0698"
+      ],
+      "summary": "PYSEC-2011-12",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.1",
+          "fixed": "1.1.4"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-2",
+      "aliases": [
+        "CVE-2011-4137"
+      ],
+      "summary": "PYSEC-2011-2",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-3",
+      "aliases": [
+        "CVE-2011-4138"
+      ],
+      "summary": "PYSEC-2011-3",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-4",
+      "aliases": [
+        "CVE-2011-4139"
+      ],
+      "summary": "PYSEC-2011-4",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-5",
+      "aliases": [
+        "CVE-2011-4140"
+      ],
+      "summary": "PYSEC-2011-5",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.2.7"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-8",
+      "aliases": [
+        "CVE-2010-4534"
+      ],
+      "summary": "PYSEC-2011-8",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.3"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-9",
+      "aliases": [
+        "CVE-2010-4535"
+      ],
+      "summary": "PYSEC-2011-9",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.1.3"
+        },
+        {
+          "introduced": "1.2",
+          "fixed": "1.2.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2012-2",
+      "aliases": [
+        "CVE-2012-3442"
+      ],
+      "summary": "PYSEC-2012-2",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3.2"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2012-3",
+      "aliases": [
+        "CVE-2012-3443"
+      ],
+      "summary": "PYSEC-2012-3",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3.2"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2012-4",
+      "aliases": [
+        "CVE-2012-3444"
+      ],
+      "summary": "PYSEC-2012-4",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.3.2"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2012-7",
+      "aliases": [
+        "CVE-2012-4520"
+      ],
+      "summary": "PYSEC-2012-7",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9305c0e12d43c4df999c3301a1f0c742264a657e"
+        },
+        {
+          "fixed": "b45c377f8f488955e0c7069cad3f3dd21910b071"
+        },
+        {
+          "fixed": "92d3430f12171f16f566c9050c40feefb830a4a3"
+        },
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.4"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-16",
+      "aliases": [
+        "CVE-2013-0305"
+      ],
+      "summary": "PYSEC-2013-16",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.6"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-17",
+      "aliases": [
+        "CVE-2013-0306"
+      ],
+      "summary": "PYSEC-2013-17",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.3",
+          "fixed": "1.3.6"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-18",
+      "aliases": [
+        "CVE-2013-1443"
+      ],
+      "summary": "PYSEC-2013-18",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.8"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-19",
+      "aliases": [
+        "CVE-2013-4249"
+      ],
+      "summary": "PYSEC-2013-19",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "90363e388c61874add3f3557ee654a996ec75d78"
+        },
+        {
+          "fixed": "cbe6d5568f4f5053ed7228ca3c3d0cce77cf9560"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-20",
+      "aliases": [
+        "CVE-2013-4315"
+      ],
+      "summary": "PYSEC-2013-20",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.7"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2013-21",
+      "aliases": [
+        "CVE-2013-6044"
+      ],
+      "summary": "PYSEC-2013-21",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "ec67af0bd609c412b76eaa4cc89968a2a8e5ad6a"
+        },
+        {
+          "fixed": "ae3535169af804352517b7fea94a42a1c9c4b762"
+        },
+        {
+          "fixed": "1a274ccd6bc1afbdac80344c9b6e5810c1162b5f"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.6"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-1",
+      "aliases": [
+        "CVE-2014-0472"
+      ],
+      "summary": "PYSEC-2014-1",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.11"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.6"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-19",
+      "aliases": [
+        "CVE-2014-1418"
+      ],
+      "summary": "PYSEC-2014-19",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.13"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.8"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.5"
+        },
+        {
+          "introduced": "1.7a0",
+          "fixed": "1.7b4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-2",
+      "aliases": [
+        "CVE-2014-0473"
+      ],
+      "summary": "PYSEC-2014-2",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.11"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.6"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-20",
+      "aliases": [
+        "CVE-2014-3730"
+      ],
+      "summary": "PYSEC-2014-20",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.13"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.8"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.5"
+        },
+        {
+          "introduced": "1.7a0",
+          "fixed": "1.7b4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-3",
+      "aliases": [
+        "CVE-2014-0474"
+      ],
+      "summary": "PYSEC-2014-3",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.11"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.6"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-4",
+      "aliases": [
+        "CVE-2014-0480"
+      ],
+      "summary": "PYSEC-2014-4",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.14"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.9"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-5",
+      "aliases": [
+        "CVE-2014-0481"
+      ],
+      "summary": "PYSEC-2014-5",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.14"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.9"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-6",
+      "aliases": [
+        "CVE-2014-0482"
+      ],
+      "summary": "PYSEC-2014-6",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.14"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.9"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-7",
+      "aliases": [
+        "CVE-2014-0483"
+      ],
+      "summary": "PYSEC-2014-7",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2b31342cdf14fc20e07c43d258f1e7334ad664a6"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.4.14"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.5.9"
+        },
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-10",
+      "aliases": [
+        "CVE-2015-5144"
+      ],
+      "summary": "PYSEC-2015-10",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.21"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.7.9"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-11",
+      "aliases": [
+        "CVE-2015-8213"
+      ],
+      "summary": "PYSEC-2015-11",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "316bc3fc9437c5960c24baceb93c73f1939711e4"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.7.11"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.7"
+        },
+        {
+          "introduced": "1.9a0",
+          "fixed": "1.9rc2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-18",
+      "aliases": [
+        "CVE-2015-2316"
+      ],
+      "summary": "PYSEC-2015-18",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.6",
+          "fixed": "1.6.11"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.7"
+        },
+        {
+          "introduced": "1.8a0",
+          "fixed": "1.8c1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-19",
+      "aliases": [
+        "CVE-2015-3982"
+      ],
+      "summary": "PYSEC-2015-19",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-20",
+      "aliases": [
+        "CVE-2015-5143"
+      ],
+      "summary": "PYSEC-2015-20",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.21"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.7.9"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-21",
+      "aliases": [
+        "CVE-2015-5145"
+      ],
+      "summary": "PYSEC-2015-21",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-22",
+      "aliases": [
+        "CVE-2015-5963"
+      ],
+      "summary": "PYSEC-2015-22",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.4"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.10"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.22"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-23",
+      "aliases": [
+        "CVE-2015-5964"
+      ],
+      "summary": "PYSEC-2015-23",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.10"
+        },
+        {
+          "introduced": "1.4",
+          "fixed": "1.4.22"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-4",
+      "aliases": [
+        "CVE-2015-0219"
+      ],
+      "summary": "PYSEC-2015-4",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.18"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.6.10"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-5",
+      "aliases": [
+        "CVE-2015-0220"
+      ],
+      "summary": "PYSEC-2015-5",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.18"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.6.10"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-6",
+      "aliases": [
+        "CVE-2015-0221"
+      ],
+      "summary": "PYSEC-2015-6",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.18"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.6.10"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-7",
+      "aliases": [
+        "CVE-2015-0222"
+      ],
+      "summary": "PYSEC-2015-7",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.18"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.6.10"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-8",
+      "aliases": [
+        "CVE-2015-2241"
+      ],
+      "summary": "PYSEC-2015-8",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.7.6"
+        },
+        {
+          "introduced": "1.8a1",
+          "fixed": "1.8b2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-9",
+      "aliases": [
+        "CVE-2015-2317"
+      ],
+      "summary": "PYSEC-2015-9",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.4.20"
+        },
+        {
+          "introduced": "1.5",
+          "fixed": "1.6.11"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.7"
+        },
+        {
+          "introduced": "1.8a0",
+          "fixed": "1.8c1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-14",
+      "aliases": [
+        "CVE-2016-2048"
+      ],
+      "summary": "PYSEC-2016-14",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-15",
+      "aliases": [
+        "CVE-2016-2512"
+      ],
+      "summary": "PYSEC-2016-15",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "c5544d289233f501917e25970c03ed444abbd4f0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.8.10"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-16",
+      "aliases": [
+        "CVE-2016-2513"
+      ],
+      "summary": "PYSEC-2016-16",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "67b46ba7016da2d259c1ecc7d666d11f5e1cfaab"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.8.10"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-17",
+      "aliases": [
+        "CVE-2016-9013"
+      ],
+      "summary": "PYSEC-2016-17",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.16"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.11"
+        },
+        {
+          "introduced": "1.10",
+          "fixed": "1.10.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-18",
+      "aliases": [
+        "CVE-2016-9014"
+      ],
+      "summary": "PYSEC-2016-18",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.8.16"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.11"
+        },
+        {
+          "introduced": "1.10",
+          "fixed": "1.10.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-2",
+      "aliases": [
+        "CVE-2016-6186"
+      ],
+      "summary": "PYSEC-2016-2",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "d03bf6fe4e9bf5b07de62c1a271c4b41a7d3d158"
+        },
+        {
+          "fixed": "f68e5a99164867ab0e071a936470958ed867479d"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.8.14"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.8"
+        },
+        {
+          "introduced": "1.10a0",
+          "fixed": "1.10rc1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-3",
+      "aliases": [
+        "CVE-2016-7401"
+      ],
+      "summary": "PYSEC-2016-3",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.8.15"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.10"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2017-10",
+      "aliases": [
+        "CVE-2017-7234"
+      ],
+      "summary": "PYSEC-2017-10",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.10",
+          "fixed": "1.10.7"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.13"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.18"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2017-44",
+      "aliases": [
+        "CVE-2017-12794"
+      ],
+      "summary": "PYSEC-2017-44",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.10",
+          "fixed": "1.10.8"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2017-9",
+      "aliases": [
+        "CVE-2017-7233"
+      ],
+      "summary": "PYSEC-2017-9",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.10",
+          "fixed": "1.10.7"
+        },
+        {
+          "introduced": "1.9",
+          "fixed": "1.9.13"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.18"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-2",
+      "aliases": [
+        "CVE-2018-14574"
+      ],
+      "summary": "PYSEC-2018-2",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.0",
+          "fixed": "2.0.8"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.15"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-3",
+      "aliases": [
+        "CVE-2018-16984"
+      ],
+      "summary": "PYSEC-2018-3",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-4",
+      "aliases": [
+        "CVE-2018-6188"
+      ],
+      "summary": "PYSEC-2018-4",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.0",
+          "fixed": "2.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-5",
+      "aliases": [
+        "CVE-2018-7536"
+      ],
+      "summary": "PYSEC-2018-5",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.19"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.11"
+        },
+        {
+          "introduced": "2.0",
+          "fixed": "2.0.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-6",
+      "aliases": [
+        "CVE-2018-7537"
+      ],
+      "summary": "PYSEC-2018-6",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.19"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.11"
+        },
+        {
+          "introduced": "2.0",
+          "fixed": "2.0.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-10",
+      "aliases": [
+        "CVE-2019-12781"
+      ],
+      "summary": "PYSEC-2019-10",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.10"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.3"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.22"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-11",
+      "aliases": [
+        "CVE-2019-14232"
+      ],
+      "summary": "PYSEC-2019-11",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.23"
+        },
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.11"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-12",
+      "aliases": [
+        "CVE-2019-14233"
+      ],
+      "summary": "PYSEC-2019-12",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.11"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.4"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.23"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-13",
+      "aliases": [
+        "CVE-2019-14234"
+      ],
+      "summary": "PYSEC-2019-13",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.11"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.23"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-14",
+      "aliases": [
+        "CVE-2019-14235"
+      ],
+      "summary": "PYSEC-2019-14",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.4"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.23"
+        },
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.11"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-15",
+      "aliases": [
+        "CVE-2019-19118"
+      ],
+      "summary": "PYSEC-2019-15",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.15"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.8"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-16",
+      "aliases": [
+        "CVE-2019-19844"
+      ],
+      "summary": "PYSEC-2019-16",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.11.27"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.9"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-17",
+      "aliases": [
+        "CVE-2019-3498"
+      ],
+      "summary": "PYSEC-2019-17",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.18"
+        },
+        {
+          "introduced": "2.0",
+          "fixed": "2.0.10"
+        },
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-18",
+      "aliases": [
+        "CVE-2019-6975"
+      ],
+      "summary": "PYSEC-2019-18",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.19"
+        },
+        {
+          "introduced": "2.0",
+          "fixed": "2.0.12"
+        },
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-79",
+      "aliases": [
+        "CVE-2019-12308"
+      ],
+      "summary": "PYSEC-2019-79",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.1.9"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.21"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-31",
+      "aliases": [
+        "CVE-2020-13254"
+      ],
+      "summary": "PYSEC-2020-31",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.13"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-32",
+      "aliases": [
+        "CVE-2020-13596"
+      ],
+      "summary": "PYSEC-2020-32",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.13"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-33",
+      "aliases": [
+        "CVE-2020-24583"
+      ],
+      "summary": "PYSEC-2020-33",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.16"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.10"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-34",
+      "aliases": [
+        "CVE-2020-24584"
+      ],
+      "summary": "PYSEC-2020-34",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.16"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.10"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-35",
+      "aliases": [
+        "CVE-2020-7471"
+      ],
+      "summary": "PYSEC-2020-35",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "eb31d845323618d688ad429479c6dda973056136"
+        },
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.28"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.10"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-36",
+      "aliases": [
+        "CVE-2020-9402"
+      ],
+      "summary": "PYSEC-2020-36",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.11",
+          "fixed": "1.11.29"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.11"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-109",
+      "aliases": [
+        "CVE-2021-35042"
+      ],
+      "summary": "PYSEC-2021-109",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.13"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-439",
+      "aliases": [
+        "CVE-2021-44420"
+      ],
+      "summary": "PYSEC-2021-439",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.25"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.14"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.10"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-6",
+      "aliases": [
+        "CVE-2021-28658"
+      ],
+      "summary": "PYSEC-2021-6",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.20"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.14"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.8"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-7",
+      "aliases": [
+        "CVE-2021-31542"
+      ],
+      "summary": "PYSEC-2021-7",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.21"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.9"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-8",
+      "aliases": [
+        "CVE-2021-32052"
+      ],
+      "summary": "PYSEC-2021-8",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.22"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.10"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-9",
+      "aliases": [
+        "CVE-2021-3281"
+      ],
+      "summary": "PYSEC-2021-9",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.18"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.0.12"
+        },
+        {
+          "introduced": "3.1",
+          "fixed": "3.1.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-98",
+      "aliases": [
+        "CVE-2021-33203"
+      ],
+      "summary": "PYSEC-2021-98",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.2.24"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.1.12"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-99",
+      "aliases": [
+        "CVE-2021-33571"
+      ],
+      "summary": "PYSEC-2021-99",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.24"
+        },
+        {
+          "introduced": "3.0",
+          "fixed": "3.1.12"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-1",
+      "aliases": [
+        "CVE-2021-45115"
+      ],
+      "summary": "PYSEC-2022-1",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.26"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.11"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-19",
+      "aliases": [
+        "CVE-2022-22818"
+      ],
+      "summary": "PYSEC-2022-19",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.27"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.12"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-190",
+      "aliases": [
+        "CVE-2022-28346"
+      ],
+      "summary": "PYSEC-2022-190",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.4"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.13"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.28"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-191",
+      "aliases": [
+        "CVE-2022-28347"
+      ],
+      "summary": "PYSEC-2022-191",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.4"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.13"
+        },
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.28"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-2",
+      "aliases": [
+        "CVE-2021-45116"
+      ],
+      "summary": "PYSEC-2022-2",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.26"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.11"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-20",
+      "aliases": [
+        "CVE-2022-23833"
+      ],
+      "summary": "PYSEC-2022-20",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.27"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.12"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-213",
+      "aliases": [
+        "CVE-2022-34265"
+      ],
+      "summary": "PYSEC-2022-213",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.14"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-245",
+      "aliases": [
+        "CVE-2022-36359"
+      ],
+      "summary": "PYSEC-2022-245",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.15"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-3",
+      "aliases": [
+        "CVE-2021-45452"
+      ],
+      "summary": "PYSEC-2022-3",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.2",
+          "fixed": "2.2.26"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.11"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-304",
+      "aliases": [
+        "CVE-2022-41323"
+      ],
+      "summary": "PYSEC-2022-304",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5b6b257fa7ec37ff27965358800c67e2dd11c924"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.16"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.8"
+        },
+        {
+          "introduced": "4.1",
+          "fixed": "4.1.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-100",
+      "aliases": [
+        "CVE-2023-36053"
+      ],
+      "summary": "PYSEC-2023-100",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.3"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.1.10"
+        },
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.20"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-12",
+      "aliases": [
+        "CVE-2023-23969"
+      ],
+      "summary": "PYSEC-2023-12",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.17"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.9"
+        },
+        {
+          "introduced": "4.1",
+          "fixed": "4.1.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-13",
+      "aliases": [
+        "CVE-2023-24580"
+      ],
+      "summary": "PYSEC-2023-13",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.18"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.0.10"
+        },
+        {
+          "introduced": "4.1",
+          "fixed": "4.1.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-222",
+      "aliases": [
+        "CVE-2023-46695"
+      ],
+      "summary": "PYSEC-2023-222",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.23"
+        },
+        {
+          "introduced": "4.1",
+          "fixed": "4.1.13"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-225",
+      "aliases": [
+        "CVE-2023-41164"
+      ],
+      "summary": "PYSEC-2023-225",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.21"
+        },
+        {
+          "introduced": "4.1",
+          "fixed": "4.1.11"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-226",
+      "aliases": [
+        "CVE-2023-43665"
+      ],
+      "summary": "PYSEC-2023-226",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.22"
+        },
+        {
+          "introduced": "4.1",
+          "fixed": "4.1.12"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-61",
+      "aliases": [
+        "CVE-2023-31047"
+      ],
+      "summary": "PYSEC-2023-61",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.19"
+        },
+        {
+          "introduced": "4.0",
+          "fixed": "4.1.9"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-102",
+      "aliases": [
+        "CVE-2024-45230"
+      ],
+      "summary": "PYSEC-2024-102",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.1"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.9"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.16"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-156",
+      "aliases": [
+        "CVE-2024-53907"
+      ],
+      "summary": "PYSEC-2024-156",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.4"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.10"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.17"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-157",
+      "aliases": [
+        "CVE-2024-53908"
+      ],
+      "summary": "PYSEC-2024-157",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.4"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.10"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.17"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-28",
+      "aliases": [
+        "CVE-2024-24680"
+      ],
+      "summary": "PYSEC-2024-28",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.24"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.10"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-47",
+      "aliases": [
+        "CVE-2024-27351"
+      ],
+      "summary": "PYSEC-2024-47",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "3.2",
+          "fixed": "3.2.25"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.11"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-56",
+      "aliases": [
+        "CVE-2024-38875"
+      ],
+      "summary": "PYSEC-2024-56",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.14"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-57",
+      "aliases": [
+        "CVE-2024-39329"
+      ],
+      "summary": "PYSEC-2024-57",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.7"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.14"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-58",
+      "aliases": [
+        "CVE-2024-39330"
+      ],
+      "summary": "PYSEC-2024-58",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.7"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.14"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-59",
+      "aliases": [
+        "CVE-2024-39614"
+      ],
+      "summary": "PYSEC-2024-59",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.7"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.14"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-67",
+      "aliases": [
+        "CVE-2024-41989"
+      ],
+      "summary": "PYSEC-2024-67",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.8"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.15"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-68",
+      "aliases": [
+        "CVE-2024-41990"
+      ],
+      "summary": "PYSEC-2024-68",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.8"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.15"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-69",
+      "aliases": [
+        "CVE-2024-41991"
+      ],
+      "summary": "PYSEC-2024-69",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.8"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.15"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-70",
+      "aliases": [
+        "CVE-2024-42005"
+      ],
+      "summary": "PYSEC-2024-70",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.8"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.15"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-1",
+      "aliases": [
+        "CVE-2024-56374"
+      ],
+      "summary": "PYSEC-2025-1",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.5"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.11"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.18"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-104",
+      "aliases": [
+        "CVE-2025-13372"
+      ],
+      "summary": "PYSEC-2025-104",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.27"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.15"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.9"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-105",
+      "aliases": [
+        "CVE-2025-57833"
+      ],
+      "summary": "PYSEC-2025-105",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.24"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.12"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-106",
+      "aliases": [
+        "CVE-2025-59681"
+      ],
+      "summary": "PYSEC-2025-106",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.25"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.13"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-107",
+      "aliases": [
+        "CVE-2025-64458"
+      ],
+      "summary": "PYSEC-2025-107",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.26"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.14"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.8"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-108",
+      "aliases": [
+        "CVE-2025-64459"
+      ],
+      "summary": "PYSEC-2025-108",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.26"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.14"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.8"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-109",
+      "aliases": [
+        "CVE-2025-64460"
+      ],
+      "summary": "PYSEC-2025-109",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.27"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.15"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.9"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-13",
+      "aliases": [
+        "CVE-2025-26699"
+      ],
+      "summary": "PYSEC-2025-13",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.7"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.13"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.20"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-14",
+      "aliases": [
+        "CVE-2025-27556"
+      ],
+      "summary": "PYSEC-2025-14",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.8"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.14"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-37",
+      "aliases": [
+        "CVE-2025-32873"
+      ],
+      "summary": "PYSEC-2025-37",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.21"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.9"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-47",
+      "aliases": [
+        "CVE-2025-48432"
+      ],
+      "summary": "PYSEC-2025-47",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.2"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.10"
+        },
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.22"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1296",
+      "aliases": [
+        "CVE-2025-59682"
+      ],
+      "summary": "Django vulnerable to partial directory traversal via archives",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.25"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.13"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1297",
+      "aliases": [
+        "CVE-2024-45231"
+      ],
+      "summary": "Django allows enumeration of user e-mail addresses",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.2.16"
+        },
+        {
+          "introduced": "5.0",
+          "fixed": "5.0.9"
+        },
+        {
+          "introduced": "5.1",
+          "fixed": "5.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-197",
+      "aliases": [
+        "CVE-2026-35193"
+      ],
+      "summary": "PYSEC-2026-197",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-198",
+      "aliases": [
+        "CVE-2026-48587"
+      ],
+      "summary": "PYSEC-2026-198",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-199",
+      "aliases": [
+        "CVE-2026-6873"
+      ],
+      "summary": "PYSEC-2026-199",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-200",
+      "aliases": [
+        "CVE-2026-7666"
+      ],
+      "summary": "PYSEC-2026-200",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-201",
+      "aliases": [
+        "CVE-2026-8404"
+      ],
+      "summary": "PYSEC-2026-201",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.15"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.6"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2090",
+      "aliases": [
+        "CVE-2026-48588"
+      ],
+      "summary": "PYSEC-2026-2090",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.16"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2091",
+      "aliases": [
+        "CVE-2026-53877"
+      ],
+      "summary": "PYSEC-2026-2091",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.16"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2092",
+      "aliases": [
+        "CVE-2026-53878"
+      ],
+      "summary": "PYSEC-2026-2092",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.16"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2448",
+      "aliases": [
+        "CVE-2026-25673"
+      ],
+      "summary": "Django vulnerable to Uncontrolled Resource Consumption",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.29"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.12"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2449",
+      "aliases": [
+        "CVE-2026-25674"
+      ],
+      "summary": "Django has a Race Condition vulnerability",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.29"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.12"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3717",
+      "aliases": [
+        "CVE-2026-15830"
+      ],
+      "summary": "PYSEC-2026-3717",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.17"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.8"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-42",
+      "aliases": [
+        "CVE-2025-13473"
+      ],
+      "summary": "PYSEC-2026-42",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.28"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-43",
+      "aliases": [
+        "CVE-2025-14550"
+      ],
+      "summary": "PYSEC-2026-43",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.28"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-44",
+      "aliases": [
+        "CVE-2026-1207"
+      ],
+      "summary": "PYSEC-2026-44",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.28"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-45",
+      "aliases": [
+        "CVE-2026-1285"
+      ],
+      "summary": "PYSEC-2026-45",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.28"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-46",
+      "aliases": [
+        "CVE-2026-1287"
+      ],
+      "summary": "PYSEC-2026-46",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.28"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-47",
+      "aliases": [
+        "CVE-2026-1312"
+      ],
+      "summary": "PYSEC-2026-47",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.28"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.11"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-48",
+      "aliases": [
+        "CVE-2026-33033"
+      ],
+      "summary": "PYSEC-2026-48",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-49",
+      "aliases": [
+        "CVE-2026-33034"
+      ],
+      "summary": "PYSEC-2026-49",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-50",
+      "aliases": [
+        "CVE-2026-35192"
+      ],
+      "summary": "PYSEC-2026-50",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.14"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-51",
+      "aliases": [
+        "CVE-2026-3902"
+      ],
+      "summary": "PYSEC-2026-51",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-52",
+      "aliases": [
+        "CVE-2026-4277"
+      ],
+      "summary": "PYSEC-2026-52",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-53",
+      "aliases": [
+        "CVE-2026-4292"
+      ],
+      "summary": "PYSEC-2026-53",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2",
+          "fixed": "4.2.30"
+        },
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.13"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-54",
+      "aliases": [
+        "CVE-2026-5766"
+      ],
+      "summary": "PYSEC-2026-54",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.14"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-55",
+      "aliases": [
+        "CVE-2026-6907"
+      ],
+      "summary": "PYSEC-2026-55",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2",
+          "fixed": "5.2.14"
+        },
+        {
+          "introduced": "6.0",
+          "fixed": "6.0.5"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-628",
+      "aliases": [
+        "CVE-2019-11358"
+      ],
+      "summary": "XSS in jQuery as used in Drupal, Backdrop CMS, and other products",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.0a1",
+          "fixed": "2.1.9"
+        },
+        {
+          "introduced": "2.2a1",
+          "fixed": "2.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-629",
+      "aliases": [
+        "CVE-2007-0405"
+      ],
+      "summary": "Django Improper Access Control",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0.95",
+          "fixed": "1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-630",
+      "aliases": [
+        "CVE-2007-0404"
+      ],
+      "summary": "Django Arbitrary Code Execution",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0.95",
+          "fixed": "1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-801",
+      "aliases": [
+        "CVE-2013-1664"
+      ],
+      "summary": "XML Entity Expansion (XEE) in Django",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.3.0",
+          "fixed": "1.3.6"
+        },
+        {
+          "introduced": "1.4.0",
+          "fixed": "1.4.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-802",
+      "aliases": [
+        "CVE-2013-1665"
+      ],
+      "summary": "XML External Entity (XXE) in Django",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "1.3.0",
+          "fixed": "1.3.6"
+        },
+        {
+          "introduced": "1.4.0",
+          "fixed": "1.4.4"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://www.djangoproject.com/",
+  "repo": "https://github.com/django/django"
+}

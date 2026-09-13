@@ -1,0 +1,64 @@
+{
+  "system": "npm",
+  "name": "rollup",
+  "slug": "rollup",
+  "path": "/tools/dependency-radar/npm/rollup/",
+  "latest": "4.63.2",
+  "publishedAt": "2026-09-12T06:40:09Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 945,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-gcx4-mw62-g8wm",
+      "aliases": [
+        "CVE-2024-47068"
+      ],
+      "summary": "DOM Clobbering Gadget found in rollup bundled scripts that leads to XSS",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.29.5"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.22.4"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.79.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mw96-cpmx-2vgc",
+      "aliases": [
+        "CVE-2026-27606"
+      ],
+      "summary": "Rollup 4 has Arbitrary File Write via Path Traversal",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.80.0"
+        },
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.30.0"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.59.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://rollupjs.org/",
+  "repo": "https://github.com/rollup/rollup.git"
+}

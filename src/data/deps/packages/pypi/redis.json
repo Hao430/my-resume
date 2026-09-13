@@ -1,0 +1,100 @@
+{
+  "system": "pypi",
+  "name": "redis",
+  "slug": "redis",
+  "path": "/tools/dependency-radar/pypi/redis/",
+  "latest": "8.1.0",
+  "publishedAt": "2026-07-30T08:50:58Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 169,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-24wv-mv5m-xv4h",
+      "aliases": [
+        "CVE-2023-28858"
+      ],
+      "summary": "redis-py Race Condition vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "4.4.0",
+          "fixed": "4.4.3"
+        },
+        {
+          "introduced": "4.5.0",
+          "fixed": "4.5.3"
+        },
+        {
+          "introduced": "4.2.0",
+          "fixed": "4.3.6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8fww-64cx-x8p5",
+      "aliases": [
+        "CVE-2023-28859"
+      ],
+      "summary": "redis-py Race Condition due to incomplete fix",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "4.5.0",
+          "fixed": "4.5.4"
+        },
+        {
+          "introduced": "4.2.0",
+          "fixed": "4.4.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-45",
+      "aliases": [
+        "CVE-2023-28858"
+      ],
+      "summary": "PYSEC-2023-45",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2.0",
+          "fixed": "4.3.6"
+        },
+        {
+          "introduced": "4.4.0",
+          "fixed": "4.4.3"
+        },
+        {
+          "introduced": "4.5.0",
+          "fixed": "4.5.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-46",
+      "aliases": [
+        "CVE-2023-28859"
+      ],
+      "summary": "PYSEC-2023-46",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2.0",
+          "fixed": "4.4.4"
+        },
+        {
+          "introduced": "4.5.0",
+          "fixed": "4.5.4"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/redis/redis-py",
+  "repo": "https://github.com/redis/redis-py"
+}

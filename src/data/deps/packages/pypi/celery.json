@@ -1,0 +1,91 @@
+{
+  "system": "pypi",
+  "name": "celery",
+  "slug": "celery",
+  "path": "/tools/dependency-radar/pypi/celery/",
+  "latest": "5.6.3",
+  "publishedAt": "2026-03-26T12:14:49Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 224,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-q4xr-rc97-m4xx",
+      "aliases": [
+        "CVE-2021-23727"
+      ],
+      "summary": "OS Command Injection in celery",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rpc6-h455-3rx5",
+      "aliases": [
+        "CVE-2011-4356"
+      ],
+      "summary": "Celery local privilege escalation vulnerability",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.1.0",
+          "fixed": "2.2.8"
+        },
+        {
+          "introduced": "2.3.0",
+          "fixed": "2.3.4"
+        },
+        {
+          "introduced": "2.4.0",
+          "fixed": "2.4.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2011-17",
+      "aliases": [
+        "CVE-2011-4356"
+      ],
+      "summary": "PYSEC-2011-17",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.1",
+          "fixed": "2.2.8"
+        },
+        {
+          "introduced": "2.3",
+          "fixed": "2.3.4"
+        },
+        {
+          "introduced": "2.4",
+          "fixed": "2.4.4"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-858",
+      "aliases": [
+        "CVE-2021-23727"
+      ],
+      "summary": "PYSEC-2021-858",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5.2.2"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/celery/celery"
+}

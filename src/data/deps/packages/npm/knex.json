@@ -1,0 +1,48 @@
+{
+  "system": "npm",
+  "name": "knex",
+  "slug": "knex",
+  "path": "/tools/dependency-radar/npm/knex/",
+  "latest": "3.3.0",
+  "publishedAt": "2026-06-26T14:56:43Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 264,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-4jv9-3563-23j3",
+      "aliases": [
+        "CVE-2016-20018"
+      ],
+      "summary": "Knex.js has a limited SQL injection vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.4.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-58v4-qwx5-7f59",
+      "aliases": [
+        "CVE-2019-10757"
+      ],
+      "summary": "SQL Injection in knex",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.19.5"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://knexjs.org/",
+  "repo": "git://github.com/knex/knex.git"
+}

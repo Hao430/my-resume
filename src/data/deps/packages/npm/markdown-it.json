@@ -1,0 +1,76 @@
+{
+  "system": "npm",
+  "name": "markdown-it",
+  "slug": "markdown-it",
+  "path": "/tools/dependency-radar/npm/markdown-it/",
+  "latest": "15.0.2",
+  "publishedAt": "2026-09-11T04:04:18Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 87,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-38c4-r59v-3vqw",
+      "aliases": [
+        "CVE-2026-2327"
+      ],
+      "summary": "markdown-it is has a Regular Expression Denial of Service (ReDoS)",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "13.0.0",
+          "fixed": "14.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6v5v-wf23-fmfq",
+      "aliases": [
+        "CVE-2026-48988"
+      ],
+      "summary": "markdown-it: Quadratic complexity DoS in smartquotes rule via replaceAt string operations",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "14.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6vfc-qv3f-vr6c",
+      "aliases": [
+        "CVE-2022-21670"
+      ],
+      "summary": "Uncontrolled Resource Consumption in markdown-it",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j5p7-jf4q-742q",
+      "aliases": [
+        "CVE-2015-10005"
+      ],
+      "summary": "markdown-it vulnerable to Inefficient Regular Expression Complexity",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.0.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/markdown-it/markdown-it#readme",
+  "repo": "https://github.com/markdown-it/markdown-it.git"
+}

@@ -1,0 +1,38 @@
+{
+  "system": "npm",
+  "name": "glob",
+  "slug": "glob",
+  "path": "/tools/dependency-radar/npm/glob/",
+  "latest": "13.0.6",
+  "publishedAt": "2026-02-19T17:26:33Z",
+  "licenses": [
+    "BlueOak-1.0.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 168,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-5j98-mcp5-4vw2",
+      "aliases": [
+        "CVE-2025-64756"
+      ],
+      "summary": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "11.0.0",
+          "fixed": "11.1.0"
+        },
+        {
+          "introduced": "10.2.0",
+          "fixed": "10.5.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/isaacs/node-glob#readme",
+  "repo": "ssh://git@github.com/isaacs/node-glob.git"
+}

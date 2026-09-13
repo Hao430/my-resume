@@ -1,0 +1,18 @@
+{
+  "system": "pypi",
+  "name": "flake8",
+  "slug": "flake8",
+  "path": "/tools/dependency-radar/pypi/flake8/",
+  "latest": "7.3.0",
+  "publishedAt": "2025-06-20T19:31:34Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 94,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/pycqa/flake8"
+}

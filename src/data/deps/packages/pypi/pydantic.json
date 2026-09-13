@@ -1,0 +1,104 @@
+{
+  "system": "pypi",
+  "name": "pydantic",
+  "slug": "pydantic",
+  "path": "/tools/dependency-radar/pypi/pydantic/",
+  "latest": "2.13.5",
+  "publishedAt": "2026-08-28T14:03:59Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 206,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-5jqp-qgf6-3pvh",
+      "aliases": [
+        "CVE-2021-29510"
+      ],
+      "summary": "Use of \"infinity\" as an input to datetime and date fields causes infinite loop in pydantic",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.6.2"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.2"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mr82-8j83-vxmv",
+      "aliases": [
+        "CVE-2024-3772"
+      ],
+      "summary": "Pydantic regular expression denial of service",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.4.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.10.13"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-47",
+      "aliases": [
+        "CVE-2021-29510"
+      ],
+      "summary": "PYSEC-2021-47",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7e83fdd2563ffac081db7ecdf1affa65ef38c468"
+        },
+        {
+          "introduced": "0",
+          "fixed": "1.6.2"
+        },
+        {
+          "introduced": "1.7",
+          "fixed": "1.7.4"
+        },
+        {
+          "introduced": "1.8",
+          "fixed": "1.8.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1812",
+      "aliases": [
+        "CVE-2024-3772"
+      ],
+      "summary": "Pydantic regular expression denial of service",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.10.13"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.4.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/pydantic/pydantic",
+  "repo": "https://github.com/pydantic/pydantic"
+}

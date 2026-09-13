@@ -1,0 +1,210 @@
+{
+  "system": "npm",
+  "name": "multer",
+  "slug": "multer",
+  "path": "/tools/dependency-radar/npm/multer/",
+  "latest": "2.3.0",
+  "publishedAt": "2026-08-28T19:15:50Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 56,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-3p4h-7m6x-2hcm",
+      "aliases": [
+        "CVE-2026-5038"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via incomplete cleanup of aborted uploads",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "2.0.0-alpha.1",
+          "fixed": "2.2.0"
+        },
+        {
+          "introduced": "3.0.0-alpha.1",
+          "fixed": "3.0.0-alpha.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-44fp-w29j-9vj5",
+      "aliases": [
+        "CVE-2025-47935"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via memory leaks from unclosed streams",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4pg4-qvpc-4q3h",
+      "aliases": [
+        "CVE-2025-47944"
+      ],
+      "summary": "Multer vulnerable to Denial of Service from maliciously crafted requests",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.4.4-lts.1",
+          "fixed": "2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-535w-7cp7-47q4",
+      "aliases": [
+        "CVE-2026-82333"
+      ],
+      "summary": "multer vulnerable to Denial of Service via oversized array index in field names",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5528-5vmv-3xc2",
+      "aliases": [
+        "CVE-2026-3520"
+      ],
+      "summary": "Multer Vulnerable to Denial of Service via Uncontrolled Recursion",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-72gw-mp4g-v24j",
+      "aliases": [
+        "CVE-2026-5079"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via deeply nested field names",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.0.0",
+          "fixed": "2.2.0"
+        },
+        {
+          "introduced": "3.0.0-alpha.1",
+          "fixed": "3.0.0-alpha.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fjgf-rc76-4x9p",
+      "aliases": [
+        "CVE-2025-7338"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via unhandled exception from malformed request",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.4.4-lts.1",
+          "fixed": "2.0.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g5hg-p3ph-g8qg",
+      "aliases": [
+        "CVE-2025-48997"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via unhandled exception",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "1.4.4-lts.1",
+          "fixed": "2.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qfvm-cv95-jqjf",
+      "aliases": [
+        "CVE-2026-77037"
+      ],
+      "summary": "multer vulnerable to Denial of Service via file descriptor leak on aborted uploads",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.2.0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qvfw-j98x-7q72",
+      "aliases": [
+        "CVE-2026-77063"
+      ],
+      "summary": "multer vulnerable to file size limit bypass via async fileFilter race condition",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v52c-386h-88mc",
+      "aliases": [
+        "CVE-2026-2359"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via resource exhaustion",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wc9g-mqfw-jrwm",
+      "aliases": [
+        "CVE-2026-77078"
+      ],
+      "summary": "multer vulnerable to Denial of Service via crafted multipart field names",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xf7r-hgr6-v32p",
+      "aliases": [
+        "CVE-2026-3304"
+      ],
+      "summary": "Multer vulnerable to Denial of Service via incomplete cleanup",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.1.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/expressjs/multer#readme",
+  "repo": "https://github.com/expressjs/multer.git"
+}

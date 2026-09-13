@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "helmet",
+  "slug": "helmet",
+  "path": "/tools/dependency-radar/npm/helmet/",
+  "latest": "8.3.0",
+  "publishedAt": "2026-07-12T01:20:06Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 135,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://helmet.js.org/",
+  "repo": "git://github.com/helmetjs/helmet.git"
+}

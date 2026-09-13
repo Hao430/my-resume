@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "typescript",
+  "slug": "typescript",
+  "path": "/tools/dependency-radar/npm/typescript/",
+  "latest": "7.0.2",
+  "publishedAt": "2026-07-08T15:55:18Z",
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 3823,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://www.typescriptlang.org/",
+  "repo": "https://github.com/microsoft/TypeScript.git"
+}

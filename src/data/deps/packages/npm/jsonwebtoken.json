@@ -1,0 +1,76 @@
+{
+  "system": "npm",
+  "name": "jsonwebtoken",
+  "slug": "jsonwebtoken",
+  "path": "/tools/dependency-radar/npm/jsonwebtoken/",
+  "latest": "9.0.3",
+  "publishedAt": "2025-12-04T10:27:57Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 82,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-8cf7-32gw-wr33",
+      "aliases": [
+        "CVE-2022-23539"
+      ],
+      "summary": "jsonwebtoken unrestricted key type could lead to legacy keys usage",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c7hr-j4mj-j2w6",
+      "aliases": [
+        "CVE-2015-9235"
+      ],
+      "summary": "Verification Bypass in jsonwebtoken",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hjrf-2m68-5959",
+      "aliases": [
+        "CVE-2022-23541"
+      ],
+      "summary": "jsonwebtoken's insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qwph-4952-7xr6",
+      "aliases": [
+        "CVE-2022-23540"
+      ],
+      "summary": "jsonwebtoken vulnerable to signature validation bypass due to insecure default algorithm in jwt.verify()",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/auth0/node-jsonwebtoken#readme",
+  "repo": "https://github.com/auth0/node-jsonwebtoken.git"
+}

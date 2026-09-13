@@ -1,0 +1,18 @@
+{
+  "system": "pypi",
+  "name": "pytz",
+  "slug": "pytz",
+  "path": "/tools/dependency-radar/pypi/pytz/",
+  "latest": "2026.3.0.post1",
+  "publishedAt": "2026-07-25T15:12:05Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 541,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/stub42/pytz.git"
+}

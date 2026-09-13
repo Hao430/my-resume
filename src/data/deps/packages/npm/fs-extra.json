@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "fs-extra",
+  "slug": "fs-extra",
+  "path": "/tools/dependency-radar/npm/fs-extra/",
+  "latest": "11.4.0",
+  "publishedAt": "2026-07-23T19:52:08Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 104,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/jprichardson/node-fs-extra",
+  "repo": "https://github.com/jprichardson/node-fs-extra.git"
+}

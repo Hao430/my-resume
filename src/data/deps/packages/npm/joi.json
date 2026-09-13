@@ -1,0 +1,78 @@
+{
+  "system": "npm",
+  "name": "joi",
+  "slug": "joi",
+  "path": "/tools/dependency-radar/npm/joi/",
+  "latest": "18.2.9",
+  "publishedAt": "2026-09-11T13:31:30Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 259,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-6w3j-5fw6-r9vr",
+      "aliases": [
+        "CVE-2026-84368"
+      ],
+      "summary": "joi: Prototype pollution via a `__proto__` language key in custom messages",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "17.2.0",
+          "fixed": "17.13.6"
+        },
+        {
+          "introduced": "16.0.0",
+          "lastAffected": "17.1.1"
+        },
+        {
+          "introduced": "18.0.0",
+          "fixed": "18.2.5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gg4h-3hg2-grpc",
+      "aliases": [
+        "CVE-2026-84367"
+      ],
+      "summary": "joi: object().rename() with a template target can set the validated object's prototype",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "16.0.0",
+          "fixed": "17.13.5"
+        },
+        {
+          "introduced": "18.0.0",
+          "fixed": "18.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q7cg-457f-vx79",
+      "aliases": [
+        "CVE-2026-48038"
+      ],
+      "summary": "joi has an uncaught RangeError on deeply nested input through recursive `link()` schemas",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "18.0.0",
+          "fixed": "18.2.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "17.13.4"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/hapijs/joi#readme",
+  "repo": "git://github.com/hapijs/joi.git"
+}

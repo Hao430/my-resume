@@ -1,0 +1,48 @@
+{
+  "system": "npm",
+  "name": "underscore",
+  "slug": "underscore",
+  "path": "/tools/dependency-radar/npm/underscore/",
+  "latest": "1.13.8",
+  "publishedAt": "2026-02-19T11:42:14Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 55,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-cf4h-3jhx-xvhq",
+      "aliases": [
+        "CVE-2021-23358"
+      ],
+      "summary": "Arbitrary Code Execution in underscore",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "1.3.2",
+          "fixed": "1.12.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qpx9-hpmf-5gmw",
+      "aliases": [
+        "CVE-2026-27601"
+      ],
+      "summary": "Underscore has unlimited recursion in _.flatten and _.isEqual, potential for DoS attack",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1.13.8"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://underscorejs.org",
+  "repo": "git://github.com/jashkenas/underscore.git"
+}

@@ -1,0 +1,74 @@
+{
+  "system": "npm",
+  "name": "pg",
+  "slug": "pg",
+  "path": "/tools/dependency-radar/npm/pg/",
+  "latest": "8.23.0",
+  "publishedAt": "2026-08-08T19:27:05Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 249,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-wc9v-mj63-m9g5",
+      "aliases": [
+        "CVE-2017-16082"
+      ],
+      "summary": "Remote Code Execution in pg",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.11.2"
+        },
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.6.4"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.5.7"
+        },
+        {
+          "introduced": "5.0.0",
+          "fixed": "5.2.1"
+        },
+        {
+          "introduced": "6.0.0",
+          "fixed": "6.0.5"
+        },
+        {
+          "introduced": "6.1.0",
+          "fixed": "6.1.6"
+        },
+        {
+          "introduced": "6.2.0",
+          "fixed": "6.2.5"
+        },
+        {
+          "introduced": "6.3.0",
+          "fixed": "6.3.3"
+        },
+        {
+          "introduced": "6.4.0",
+          "fixed": "6.4.2"
+        },
+        {
+          "introduced": "7.0.0",
+          "fixed": "7.0.2"
+        },
+        {
+          "introduced": "7.1.0",
+          "fixed": "7.1.2"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/brianc/node-postgres",
+  "repo": "git://github.com/brianc/node-postgres.git"
+}

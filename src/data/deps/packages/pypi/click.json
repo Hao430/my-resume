@@ -1,0 +1,33 @@
+{
+  "system": "pypi",
+  "name": "click",
+  "slug": "click",
+  "path": "/tools/dependency-radar/pypi/click/",
+  "latest": "8.5.0",
+  "publishedAt": "2026-08-26T13:33:12Z",
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 65,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "PYSEC-2026-2132",
+      "aliases": [
+        "CVE-2026-7246"
+      ],
+      "summary": "PYSEC-2026-2132",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.3.3"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "repo": "https://github.com/pallets/click"
+}

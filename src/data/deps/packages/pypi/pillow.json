@@ -1,0 +1,2312 @@
+{
+  "system": "pypi",
+  "name": "pillow",
+  "slug": "pillow",
+  "path": "/tools/dependency-radar/pypi/pillow/",
+  "latest": "12.3.0",
+  "publishedAt": "2026-07-01T11:55:03Z",
+  "licenses": [
+    "MIT-CMU"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 946,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-3c5c-7235-994j",
+      "aliases": [
+        "CVE-2016-2533"
+      ],
+      "summary": "Pillow buffer overflow in ImagingPcdDecode",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3f63-hfp8-52jq",
+      "aliases": [
+        "CVE-2023-50447"
+      ],
+      "summary": "Arbitrary Code Execution in Pillow",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "10.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3wvg-mj6g-m9cv",
+      "aliases": [
+        "CVE-2021-27922"
+      ],
+      "summary": "Pillow Uncontrolled Resource Consumption",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3xv8-3j54-hgrp",
+      "aliases": [
+        "CVE-2020-10378"
+      ],
+      "summary": "Out-of-bounds read in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-43fq-w8qq-v88h",
+      "aliases": [
+        "CVE-2020-11538"
+      ],
+      "summary": "Out-of-bounds read in Pillow",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-44wm-f244-xhp3",
+      "aliases": [
+        "CVE-2024-28219"
+      ],
+      "summary": "Pillow buffer overflow vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "10.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-45hq-cxwh-f6vc",
+      "aliases": [
+        "CVE-2026-55379"
+      ],
+      "summary": "Pillow `BdfFontFile`: `Image.new()` called without `_decompression_bomb_check()` — bomb protection bypass via font loading",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4fx9-vc88-q2xc",
+      "aliases": [],
+      "summary": "Infinite loop in Pillow",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4x4j-2g7c-83w6",
+      "aliases": [
+        "CVE-2026-55798"
+      ],
+      "summary": "Pillow: WindowsViewer.get_command() OS command injection via unescaped shell path",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-57h3-9rgr-c24m",
+      "aliases": [
+        "CVE-2021-25289"
+      ],
+      "summary": "Out of bounds write in Pillow",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5gm3-px64-rw72",
+      "aliases": [
+        "CVE-2019-19911"
+      ],
+      "summary": "Uncontrolled Resource Consumption in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5x94-69rx-g8h2",
+      "aliases": [
+        "CVE-2026-54060"
+      ],
+      "summary": "Pillow: `FontFile.compile()`: `Image.new()` called without `_decompression_bomb_check()`",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5xmw-vc9v-4wf2",
+      "aliases": [
+        "CVE-2026-42309"
+      ],
+      "summary": "Pillow has a heap buffer overflow with nested list coordinates",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "11.2.1",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-62p4-gmf7-7g93",
+      "aliases": [
+        "CVE-2026-54058"
+      ],
+      "summary": "Pillow: Out-of-bounds read via attacker-controlled row stride on Pillow's mmap path (McIdas AREA files)",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6r8x-57c9-28j4",
+      "aliases": [
+        "CVE-2026-59199"
+      ],
+      "summary": "Pillow: Heap out-of-bounds write `Image.paste()` / `Image.crop()` via signed coordinate overflow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7534-mm45-c74v",
+      "aliases": [
+        "CVE-2021-34552"
+      ],
+      "summary": "Buffer Overflow in Pillow",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-77gc-v2xv-rvvh",
+      "aliases": [
+        "CVE-2021-25287"
+      ],
+      "summary": "Out-of-bounds Read in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.4.0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7r7m-5h27-29hp",
+      "aliases": [
+        "CVE-2021-28676"
+      ],
+      "summary": "Potential infinite loop in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8843-m7mw-mxqm",
+      "aliases": [
+        "CVE-2020-10379"
+      ],
+      "summary": "Buffer overflow in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8ghj-p4vj-mr35",
+      "aliases": [
+        "CVE-2023-44271"
+      ],
+      "summary": "Pillow Denial of Service vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "10.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8m9x-pxwq-j236",
+      "aliases": [
+        "CVE-2014-3007"
+      ],
+      "summary": "Pillow command injection",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.5.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8v84-f9pq-wr9x",
+      "aliases": [
+        "CVE-2026-54059"
+      ],
+      "summary": "Pillow `PcfFontFile._load_bitmaps()`: `Image.frombytes()` called without `_decompression_bomb_check()` — bomb protection bypass via PCF font loading",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8vj2-vxx3-667w",
+      "aliases": [
+        "CVE-2022-22817"
+      ],
+      "summary": "Arbitrary expression injection in Pillow",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8xjq-8fcg-g5hw",
+      "aliases": [
+        "CVE-2021-25290"
+      ],
+      "summary": "Out-of-bounds Write in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8xjv-v9xq-m5h9",
+      "aliases": [
+        "CVE-2016-0775"
+      ],
+      "summary": "Pillow Buffer overflow in ImagingFliDecode",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-95q3-8gr9-gm8w",
+      "aliases": [
+        "CVE-2021-27923"
+      ],
+      "summary": "Pillow Denial of Service by Uncontrolled Resource Consumption",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-98vv-pw6r-q6q4",
+      "aliases": [
+        "CVE-2021-23437"
+      ],
+      "summary": "Uncontrolled Resource Consumption in pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "5.2.0",
+          "fixed": "8.3.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9hw9-ch79-4vh6",
+      "aliases": [
+        "CVE-2026-59205"
+      ],
+      "summary": "Pillow: Controlled heap out-of-bounds write in Pillow `ImageCmsTransform.apply()` via output mode mismatch",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9hx2-hgq2-2g4f",
+      "aliases": [
+        "CVE-2021-25292"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in Pillow",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.1.0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9j59-75qj-795w",
+      "aliases": [
+        "CVE-2022-24303"
+      ],
+      "summary": "Path traversal in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cfh3-3jmp-rvhc",
+      "aliases": [
+        "CVE-2026-25990"
+      ],
+      "summary": "Pillow affected by out-of-bounds write when loading PSD images",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "10.3.0",
+          "fixed": "12.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cfmr-38g9-f2h7",
+      "aliases": [
+        "CVE-2014-3589"
+      ],
+      "summary": "Pillow denial of service via Crafted Block Size",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.2"
+        },
+        {
+          "introduced": "2.5",
+          "fixed": "2.5.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cqhg-xjhh-p8hf",
+      "aliases": [
+        "CVE-2020-10177"
+      ],
+      "summary": "Out-of-bounds reads in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f4w8-cv6p-x6r5",
+      "aliases": [
+        "CVE-2021-27921"
+      ],
+      "summary": "Pillow Denial of Service by Uncontrolled Resource Consumption",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f5g8-5qq7-938w",
+      "aliases": [
+        "CVE-2020-35653"
+      ],
+      "summary": "Pillow Out-of-bounds Read",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fj7v-r99m-22gq",
+      "aliases": [
+        "CVE-2026-59198"
+      ],
+      "summary": "Pillow TGA RLE encoder can serialize up to ~57 KB of adjacent heap data into generated images",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.2.0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g6rj-rv7j-xwp4",
+      "aliases": [
+        "CVE-2021-28675"
+      ],
+      "summary": "Pillow denial of service",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h5rf-vgqx-wjv2",
+      "aliases": [
+        "CVE-2014-9601"
+      ],
+      "summary": "Pillow denial of service via PNG bomb",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.7.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hf64-x4gq-p99h",
+      "aliases": [
+        "CVE-2020-35655"
+      ],
+      "summary": "Pillow Out-of-bounds Read",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "4.3.0",
+          "fixed": "8.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hggx-3h72-49ww",
+      "aliases": [
+        "CVE-2016-0740"
+      ],
+      "summary": "Pillow Buffer overflow in ImagingLibTiffDecode",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hj69-c76v-86wr",
+      "aliases": [
+        "CVE-2020-5313"
+      ],
+      "summary": "Out-of-bounds Read in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hjfx-8p6c-g7gx",
+      "aliases": [
+        "CVE-2021-28678"
+      ],
+      "summary": "Insufficient Verification of Data Authenticity in Pillow",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "5.1.0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hr8g-f6r6-mr22",
+      "aliases": [
+        "CVE-2022-30595"
+      ],
+      "summary": "Buffer over-flow in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "9.1.0",
+          "fixed": "9.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hvr8-466p-75rh",
+      "aliases": [
+        "CVE-2016-4009"
+      ],
+      "summary": "Pillow Integer overflow in ImagingResampleHorizontal",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j6f7-g425-4gmx",
+      "aliases": [
+        "CVE-2014-3598"
+      ],
+      "summary": "Pillow is vulnerable to Denial of Service (DOS) in the Jpeg2KImagePlugin",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.5.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j7hp-h8jx-5ppr",
+      "aliases": [
+        "CVE-2023-4863",
+        "CVE-2023-5129"
+      ],
+      "summary": "libwebp: OOB write in BuildHuffmanTable",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "0.1.8"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.9.3"
+        },
+        {
+          "introduced": "22.0.0",
+          "fixed": "22.3.24"
+        },
+        {
+          "introduced": "24.0.0",
+          "fixed": "24.8.3"
+        },
+        {
+          "introduced": "25.0.0",
+          "fixed": "25.8.1"
+        },
+        {
+          "introduced": "26.0.0",
+          "fixed": "26.2.1"
+        },
+        {
+          "introduced": "27.0.0-beta.1",
+          "fixed": "27.0.0-beta.2"
+        },
+        {
+          "introduced": "2.0.0",
+          "fixed": "2.88.6"
+        },
+        {
+          "introduced": "1.1.2",
+          "fixed": "1.4.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "10.0.1"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.2.6"
+        },
+        {
+          "introduced": "0",
+          "fixed": "13.3.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "13.3.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "13.3.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "13.3.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "13.3.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "13.3.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "0.0.0-20250406010349-76805d5a8860"
+        },
+        {
+          "introduced": "0.0.0",
+          "fixed": "1.1.2-0.20250406010349-76805d5a8860"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j7mj-748x-7p78",
+      "aliases": [
+        "CVE-2019-16865"
+      ],
+      "summary": "DOS attack in Pillow when processing specially crafted image files",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jgpv-4h4c-xhw3",
+      "aliases": [],
+      "summary": "Uncontrolled Resource Consumption in pillow",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jjj6-mw9f-p565",
+      "aliases": [
+        "CVE-2026-59200"
+      ],
+      "summary": "Pillow: Decompression Bomb DoS via PdfParser.PdfStream.decode()",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "5.1.0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m2vv-5vj5-2hm7",
+      "aliases": [
+        "CVE-2022-45198"
+      ],
+      "summary": "Pillow vulnerable to Data Amplification attack.",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mvg9-xffr-p774",
+      "aliases": [
+        "CVE-2021-25291"
+      ],
+      "summary": "Out of bounds read in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p43w-g3c5-g5mq",
+      "aliases": [
+        "CVE-2021-25293"
+      ],
+      "summary": "Out of bounds read in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "4.3.0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p49h-hjvm-jg3h",
+      "aliases": [
+        "CVE-2020-5312"
+      ],
+      "summary": "PCX P mode buffer overflow in Pillow",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pg7v-jwj7-p798",
+      "aliases": [
+        "CVE-2026-59203"
+      ],
+      "summary": "Pillow EpsImagePlugin negative %%BeginBinary byte count causes infinite loop denial of service",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "12.0.0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-phj9-mv4w-65pm",
+      "aliases": [
+        "CVE-2026-55380"
+      ],
+      "summary": "Pillow `GdImageFile._open()`: image dimensions accepted without `_decompression_bomb_check()`",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pw3c-h7wp-cvhx",
+      "aliases": [
+        "CVE-2022-22815"
+      ],
+      "summary": "Improper Initialization in Pillow",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pwv6-vv43-88gr",
+      "aliases": [
+        "CVE-2026-42311"
+      ],
+      "summary": "Pillow has an OOB Write with Invalid PSD Tile Extents (Integer Overflow)",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "10.3.0",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q4mp-jvh2-76fj",
+      "aliases": [
+        "CVE-2022-45199"
+      ],
+      "summary": "Pillow subject to DoS via SAMPLESPERPIXEL tag",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "9.2.0",
+          "fixed": "9.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q5hq-fp76-qmrc",
+      "aliases": [
+        "CVE-2021-28677"
+      ],
+      "summary": "Uncontrolled Resource Consumption in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r73j-pqj5-w3x7",
+      "aliases": [
+        "CVE-2026-42310"
+      ],
+      "summary": "Pillow has a PDF Parsing Trailer Infinite Loop (DoS)",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "4.2.0",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r7rm-8j6h-r933",
+      "aliases": [
+        "CVE-2020-5311"
+      ],
+      "summary": "Buffer Copy without Checking Size of Input in Pillow",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r854-96gq-rfg3",
+      "aliases": [
+        "CVE-2014-1933"
+      ],
+      "summary": "Pillow Temporary file name leakage",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rwr3-c2q8-gm56",
+      "aliases": [
+        "CVE-2016-9189"
+      ],
+      "summary": "Pillow Integer overflow in Map.c",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.3.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rwv7-3v45-hg29",
+      "aliases": [
+        "CVE-2021-25288"
+      ],
+      "summary": "Pillow Out-of-bounds Read vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.4.0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v9pc-9mvp-x87g",
+      "aliases": [
+        "CVE-2016-3076"
+      ],
+      "summary": "Pillow Buffer overflow in Jpeg2KEncode.c",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "2.5.0",
+          "fixed": "3.1.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vcqg-3p29-xw73",
+      "aliases": [
+        "CVE-2020-5310"
+      ],
+      "summary": "Integer overflow in Pillow",
+      "severity": "CRITICAL",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vj42-xq3r-hr3r",
+      "aliases": [
+        "CVE-2020-10994"
+      ],
+      "summary": "Out-of-bounds reads in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vjc4-5qp5-m44j",
+      "aliases": [
+        "CVE-2026-59204"
+      ],
+      "summary": "Pillow JPEG2000 tiled decode retains a growing scratch buffer and can be used for denial of service",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "8.2.0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vqcj-wrf2-7v73",
+      "aliases": [
+        "CVE-2020-35654"
+      ],
+      "summary": "Pillow Out-of-bounds Write",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w4vg-rf63-f3j3",
+      "aliases": [
+        "CVE-2016-9190"
+      ],
+      "summary": "Arbitrary code using \"crafted image file\" approach affecting Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.3.2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-whj4-6x5x-4v2j",
+      "aliases": [
+        "CVE-2026-40192"
+      ],
+      "summary": "FITS GZIP decompression bomb in Pillow",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "10.3.0",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wjx4-4jcj-g98j",
+      "aliases": [
+        "CVE-2026-42308"
+      ],
+      "summary": "Pillow has an integer overflow when processing fonts",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x895-2wrm-hvp7",
+      "aliases": [
+        "CVE-2014-1932"
+      ],
+      "summary": "PIL and Pillow Vulnerable to Symlink Attack on Tmpfiles",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.3.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xg8h-j46f-w952",
+      "aliases": [
+        "CVE-2025-48379"
+      ],
+      "summary": "Pillow vulnerability can cause write buffer overflow on BCn encoding",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "11.2.0",
+          "fixed": "11.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xj96-63gp-2gmr",
+      "aliases": [
+        "CVE-2026-59197"
+      ],
+      "summary": "Pillow: Heap out-of-bounds write in `ImageFilter.RankFilter` via integer overflow in `ImagingExpand`",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xrcv-f9gm-v42c",
+      "aliases": [
+        "CVE-2022-22816"
+      ],
+      "summary": "Out-of-bounds Read in Pillow",
+      "severity": "MODERATE",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "OSV-2022-1074",
+      "aliases": [],
+      "summary": "Invalid-free in _dealloc",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "bb2016794f1f9bf9e4726727080e1beb789823fb",
+          "fixed": "f7363c1091c70356d92e56abfca6b65bef9e7b26"
+        }
+      ]
+    },
+    {
+      "id": "OSV-2022-715",
+      "aliases": [],
+      "summary": "Segv on unknown address in jpeg_read_scanlines",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "c58d2817bc891c26e6b8098b8909c0eb2e7ce61b",
+          "fixed": "9887544fafcd13cc8afcfa0c6d0f2e6facc1a8b8"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-10",
+      "aliases": [
+        "CVE-2014-3589"
+      ],
+      "summary": "PYSEC-2014-10",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "205e056f8f9b06ed7b925cf8aa0874bc4aaf8a7d"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.3.2"
+        },
+        {
+          "introduced": "2.5",
+          "fixed": "2.5.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-22",
+      "aliases": [
+        "CVE-2014-1932"
+      ],
+      "summary": "PYSEC-2014-22",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4e9f367dfd3f04c8f5d23f7f759ec12782e10ee7"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.3.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-23",
+      "aliases": [
+        "CVE-2014-1933"
+      ],
+      "summary": "PYSEC-2014-23",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4e9f367dfd3f04c8f5d23f7f759ec12782e10ee7"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.3.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2014-87",
+      "aliases": [
+        "CVE-2014-3007"
+      ],
+      "summary": "PYSEC-2014-87",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.5.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-15",
+      "aliases": [
+        "CVE-2014-3598"
+      ],
+      "summary": "PYSEC-2015-15",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.5.3"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2015-16",
+      "aliases": [
+        "CVE-2014-9601"
+      ],
+      "summary": "PYSEC-2015-16",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.7.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-19",
+      "aliases": [
+        "CVE-2016-2533"
+      ],
+      "summary": "PYSEC-2016-19",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "5bdf54b5a76b54fb00bd05f2d733e0a4173eefc9"
+        },
+        {
+          "fixed": "ae453aa18b66af54e7ff716f4ccb33adca60afd4"
+        },
+        {
+          "introduced": "0",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-5",
+      "aliases": [
+        "CVE-2016-0740"
+      ],
+      "summary": "PYSEC-2016-5",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6dcbf5bd96b717c58d7b642949da8d323099928e"
+        },
+        {
+          "introduced": "0",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-6",
+      "aliases": [
+        "CVE-2016-0775"
+      ],
+      "summary": "PYSEC-2016-6",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "893a40850c2d5da41537958e40569c029a6e127b"
+        },
+        {
+          "introduced": "0",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-7",
+      "aliases": [
+        "CVE-2016-4009"
+      ],
+      "summary": "PYSEC-2016-7",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4e0d9b0b9740d258ade40cce248c93777362ac1e"
+        },
+        {
+          "introduced": "0",
+          "fixed": "3.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-8",
+      "aliases": [
+        "CVE-2016-9189"
+      ],
+      "summary": "PYSEC-2016-8",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.3.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2016-9",
+      "aliases": [
+        "CVE-2016-9190"
+      ],
+      "summary": "PYSEC-2016-9",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "3.3.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2017-92",
+      "aliases": [
+        "CVE-2016-3076"
+      ],
+      "summary": "PYSEC-2017-92",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "2.5.0",
+          "fixed": "3.1.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2019-110",
+      "aliases": [
+        "CVE-2019-16865"
+      ],
+      "summary": "PYSEC-2019-110",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-172",
+      "aliases": [
+        "CVE-2019-19911"
+      ],
+      "summary": "PYSEC-2020-172",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-76",
+      "aliases": [
+        "CVE-2020-10177"
+      ],
+      "summary": "PYSEC-2020-76",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-77",
+      "aliases": [
+        "CVE-2020-10378"
+      ],
+      "summary": "PYSEC-2020-77",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "6a83e4324738bb0452fbe8074a995b1c73f08de7"
+        },
+        {
+          "introduced": "0",
+          "fixed": "7.1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-78",
+      "aliases": [
+        "CVE-2020-10379"
+      ],
+      "summary": "PYSEC-2020-78",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "46f4a349b88915787fea3fb91348bb1665831bbb"
+        },
+        {
+          "introduced": "0",
+          "fixed": "7.1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-79",
+      "aliases": [
+        "CVE-2020-10994"
+      ],
+      "summary": "PYSEC-2020-79",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-80",
+      "aliases": [
+        "CVE-2020-11538"
+      ],
+      "summary": "PYSEC-2020-80",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "7.1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-81",
+      "aliases": [
+        "CVE-2020-5310"
+      ],
+      "summary": "PYSEC-2020-81",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "4e2def2539ec13e53a82e06c4b3daf00454100c4"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-82",
+      "aliases": [
+        "CVE-2020-5311"
+      ],
+      "summary": "PYSEC-2020-82",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "a79b65c47c7dc6fe623aadf09aa6192fc54548f3"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-83",
+      "aliases": [
+        "CVE-2020-5312"
+      ],
+      "summary": "PYSEC-2020-83",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "93b22b846e0269ee9594ff71a72bec02d2bea8fd"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2020-84",
+      "aliases": [
+        "CVE-2020-5313"
+      ],
+      "summary": "PYSEC-2020-84",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "a09acd0decd8a87ccce939d5ff65dab59e7d365b"
+        },
+        {
+          "introduced": "0",
+          "fixed": "6.2.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-137",
+      "aliases": [
+        "CVE-2021-25287"
+      ],
+      "summary": "PYSEC-2021-137",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-138",
+      "aliases": [
+        "CVE-2021-25288"
+      ],
+      "summary": "PYSEC-2021-138",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-139",
+      "aliases": [
+        "CVE-2021-28675"
+      ],
+      "summary": "PYSEC-2021-139",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-317",
+      "aliases": [
+        "CVE-2021-23437"
+      ],
+      "summary": "PYSEC-2021-317",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9e08eb8f78fdfd2f476e1b20b7cf38683754866b"
+        },
+        {
+          "introduced": "0",
+          "fixed": "8.3.2"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-331",
+      "aliases": [
+        "CVE-2021-34552"
+      ],
+      "summary": "PYSEC-2021-331",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-35",
+      "aliases": [
+        "CVE-2021-25289"
+      ],
+      "summary": "PYSEC-2021-35",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-36",
+      "aliases": [
+        "CVE-2021-25290"
+      ],
+      "summary": "PYSEC-2021-36",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-37",
+      "aliases": [
+        "CVE-2021-25291"
+      ],
+      "summary": "PYSEC-2021-37",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-38",
+      "aliases": [
+        "CVE-2021-25292"
+      ],
+      "summary": "PYSEC-2021-38",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-39",
+      "aliases": [
+        "CVE-2021-25293"
+      ],
+      "summary": "PYSEC-2021-39",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-40",
+      "aliases": [
+        "CVE-2021-27921"
+      ],
+      "summary": "PYSEC-2021-40",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-41",
+      "aliases": [
+        "CVE-2021-27922"
+      ],
+      "summary": "PYSEC-2021-41",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-42",
+      "aliases": [
+        "CVE-2021-27923"
+      ],
+      "summary": "PYSEC-2021-42",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-69",
+      "aliases": [
+        "CVE-2020-35653"
+      ],
+      "summary": "PYSEC-2021-69",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-70",
+      "aliases": [
+        "CVE-2020-35654"
+      ],
+      "summary": "PYSEC-2021-70",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-71",
+      "aliases": [
+        "CVE-2020-35655"
+      ],
+      "summary": "PYSEC-2021-71",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.3.0",
+          "fixed": "8.1.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-92",
+      "aliases": [
+        "CVE-2021-28676"
+      ],
+      "summary": "PYSEC-2021-92",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-93",
+      "aliases": [
+        "CVE-2021-28677"
+      ],
+      "summary": "PYSEC-2021-93",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-94",
+      "aliases": [
+        "CVE-2021-28678"
+      ],
+      "summary": "PYSEC-2021-94",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "8.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-10",
+      "aliases": [
+        "CVE-2022-22817"
+      ],
+      "summary": "PYSEC-2022-10",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-168",
+      "aliases": [
+        "CVE-2022-24303"
+      ],
+      "summary": "PYSEC-2022-168",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-42979",
+      "aliases": [
+        "CVE-2022-45198"
+      ],
+      "summary": "PYSEC-2022-42979",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "11918eac0628ec8ac0812670d9838361ead2d6a4"
+        },
+        {
+          "introduced": "0",
+          "fixed": "9.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-42980",
+      "aliases": [
+        "CVE-2022-45199"
+      ],
+      "summary": "PYSEC-2022-42980",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2444cddab2f83f28687c7c20871574acbb6dbcf3"
+        },
+        {
+          "introduced": "9.2.0",
+          "fixed": "9.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-43145",
+      "aliases": [
+        "CVE-2022-30595"
+      ],
+      "summary": "PYSEC-2022-43145",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "9.1.0",
+          "fixed": "9.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-8",
+      "aliases": [
+        "CVE-2022-22815"
+      ],
+      "summary": "PYSEC-2022-8",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-9",
+      "aliases": [
+        "CVE-2022-22816"
+      ],
+      "summary": "PYSEC-2022-9",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-175",
+      "aliases": [],
+      "summary": "PYSEC-2023-175",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "10.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-227",
+      "aliases": [
+        "CVE-2023-44271"
+      ],
+      "summary": "PYSEC-2023-227",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "1fe1bb49c452b0318cad12ea9d97c3bef188e9a7"
+        },
+        {
+          "introduced": "0",
+          "fixed": "10.0.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2025-61",
+      "aliases": [
+        "CVE-2025-48379"
+      ],
+      "summary": "PYSEC-2025-61",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "89f1f4626a2aaf5f3d5ca6437f41def2998fbe09"
+        },
+        {
+          "fixed": "ef98b3510e3e4f14b547762764813d7e5ca3c5a4"
+        },
+        {
+          "introduced": "11.2.0",
+          "fixed": "11.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-165",
+      "aliases": [
+        "CVE-2026-42308"
+      ],
+      "summary": "PYSEC-2026-165",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1793",
+      "aliases": [
+        "CVE-2024-28219"
+      ],
+      "summary": "Pillow buffer overflow vulnerability",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "10.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-1794",
+      "aliases": [
+        "CVE-2023-4863",
+        "CVE-2023-5129"
+      ],
+      "summary": "libwebp: OOB write in BuildHuffmanTable",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "10.0.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2249",
+      "aliases": [
+        "CVE-2026-25990"
+      ],
+      "summary": "PYSEC-2026-2249",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "10.3.0",
+          "fixed": "12.1.1"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2250",
+      "aliases": [
+        "CVE-2026-40192"
+      ],
+      "summary": "PYSEC-2026-2250",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "10.3.0",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2251",
+      "aliases": [
+        "CVE-2026-42309"
+      ],
+      "summary": "PYSEC-2026-2251",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "11.2.1",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2252",
+      "aliases": [
+        "CVE-2026-42311"
+      ],
+      "summary": "PYSEC-2026-2252",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "10.3.0",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2253",
+      "aliases": [
+        "CVE-2026-54059"
+      ],
+      "summary": "PYSEC-2026-2253",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2254",
+      "aliases": [
+        "CVE-2026-54060"
+      ],
+      "summary": "PYSEC-2026-2254",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2255",
+      "aliases": [
+        "CVE-2026-55379"
+      ],
+      "summary": "PYSEC-2026-2255",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2256",
+      "aliases": [
+        "CVE-2026-55380"
+      ],
+      "summary": "PYSEC-2026-2256",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2257",
+      "aliases": [
+        "CVE-2026-55798"
+      ],
+      "summary": "PYSEC-2026-2257",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-2874",
+      "aliases": [
+        "CVE-2026-42310"
+      ],
+      "summary": "Pillow has a PDF Parsing Trailer Infinite Loop (DoS)",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "4.2.0",
+          "fixed": "12.2.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3451",
+      "aliases": [
+        "CVE-2026-59199"
+      ],
+      "summary": "PYSEC-2026-3451",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3452",
+      "aliases": [
+        "CVE-2026-59203"
+      ],
+      "summary": "PYSEC-2026-3452",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "12.0.0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3453",
+      "aliases": [
+        "CVE-2026-59205"
+      ],
+      "summary": "PYSEC-2026-3453",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3454",
+      "aliases": [
+        "CVE-2026-59197"
+      ],
+      "summary": "PYSEC-2026-3454",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3493",
+      "aliases": [
+        "CVE-2026-54058"
+      ],
+      "summary": "Pillow: Out-of-bounds read via attacker-controlled row stride on Pillow's mmap path (McIdas AREA files)",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3494",
+      "aliases": [
+        "CVE-2026-59198"
+      ],
+      "summary": "Pillow TGA RLE encoder can serialize up to ~57 KB of adjacent heap data into generated images",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.2.0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3495",
+      "aliases": [
+        "CVE-2026-59200"
+      ],
+      "summary": "Pillow: Decompression Bomb DoS via PdfParser.PdfStream.decode()",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "5.1.0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-3496",
+      "aliases": [
+        "CVE-2026-59204"
+      ],
+      "summary": "Pillow JPEG2000 tiled decode retains a growing scratch buffer and can be used for denial of service",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "8.2.0",
+          "fixed": "12.3.0"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2026-457",
+      "aliases": [
+        "CVE-2023-50447"
+      ],
+      "summary": "Arbitrary Code Execution in Pillow",
+      "severity": null,
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "10.2.0"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://python-pillow.github.io",
+  "repo": "https://github.com/python-pillow/Pillow"
+}

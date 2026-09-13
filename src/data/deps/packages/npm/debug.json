@@ -1,0 +1,87 @@
+{
+  "system": "npm",
+  "name": "debug",
+  "slug": "debug",
+  "path": "/tools/dependency-radar/npm/debug/",
+  "latest": "4.4.3",
+  "publishedAt": "2025-09-13T17:25:19Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 77,
+  "latestAffected": false,
+  "vulnerabilities": [
+    {
+      "id": "GHSA-4x49-vf9v-38px",
+      "aliases": [
+        "CVE-2025-59144"
+      ],
+      "summary": "debug@4.4.2 contains malware after npm account takeover",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "4.4.2",
+          "fixed": "4.4.3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9vvw-cc9w-f27h",
+      "aliases": [
+        "CVE-2017-20165"
+      ],
+      "summary": "debug Inefficient Regular Expression Complexity vulnerability",
+      "severity": "HIGH",
+      "ranges": [
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.1.0"
+        },
+        {
+          "introduced": "0",
+          "fixed": "2.6.9"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gxpj-cx7g-858c",
+      "aliases": [
+        "CVE-2017-16137"
+      ],
+      "summary": "Regular Expression Denial of Service in debug",
+      "severity": "LOW",
+      "ranges": [
+        {
+          "introduced": "0",
+          "fixed": "2.6.9"
+        },
+        {
+          "introduced": "3.0.0",
+          "fixed": "3.1.0"
+        },
+        {
+          "introduced": "3.2.0",
+          "fixed": "3.2.7"
+        },
+        {
+          "introduced": "4.0.0",
+          "fixed": "4.3.1"
+        }
+      ]
+    },
+    {
+      "id": "MAL-2025-46974",
+      "aliases": [
+        "CVE-2025-59144"
+      ],
+      "summary": "Malicious code in debug (npm)",
+      "severity": null,
+      "ranges": []
+    }
+  ],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/debug-js/debug#readme",
+  "repo": "git://github.com/debug-js/debug.git"
+}

@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "classnames",
+  "slug": "classnames",
+  "path": "/tools/dependency-radar/npm/classnames/",
+  "latest": "2.5.1",
+  "publishedAt": "2023-12-29T15:55:16Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 30,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/JedWatson/classnames#readme",
+  "repo": "https://github.com/JedWatson/classnames.git"
+}

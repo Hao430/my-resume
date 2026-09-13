@@ -1,0 +1,19 @@
+{
+  "system": "npm",
+  "name": "inquirer",
+  "slug": "inquirer",
+  "path": "/tools/dependency-radar/npm/inquirer/",
+  "latest": "14.2.2",
+  "publishedAt": "2026-09-07T17:58:32Z",
+  "licenses": [
+    "MIT"
+  ],
+  "deprecated": false,
+  "deprecatedReason": "",
+  "versionCount": 240,
+  "latestAffected": false,
+  "vulnerabilities": [],
+  "fetchedAt": "2026-09-13",
+  "homepage": "https://github.com/SBoudrias/Inquirer.js/blob/main/packages/inquirer/README.md",
+  "repo": "https://github.com/SBoudrias/Inquirer.js.git"
+}
