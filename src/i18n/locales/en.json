@@ -288,7 +288,18 @@
       "colWithout": "No cache",
       "colWith": "Cached",
       "growthHint": "Without caching the per-turn cost keeps rising: the whole history is resent every turn, so the total grows faster than linearly.",
-      "disclaimer": "Pricing snapshot as of {date} ({model}). Models and prices change, and cache multipliers can be adjusted — check the official pricing page. This is an estimate; the API's usage field is what you are actually billed for."
+      "disclaimer": "Pricing snapshot as of {date} ({model}). Models and prices change, and cache multipliers can be adjusted — check the official pricing page. This is an estimate; the API's usage field is what you are actually billed for.",
+      "tokensTitle": "Token breakdown",
+      "colCategory": "Category",
+      "colTokens": "Tokens",
+      "colRate": "Rate / 1M",
+      "colSubtotal": "Subtotal",
+      "rowCacheRead": "Cache hit (read)",
+      "rowCacheWrite": "Cache write (miss, stored)",
+      "rowUncached": "Miss, not cached",
+      "rowOutput": "Output",
+      "total": "Total",
+      "tokensHint": "Matches the fields the API returns in usage so you can compare line by line: cache_read_input_tokens / cache_creation_input_tokens / input_tokens / output_tokens. The four subtotals add up to the total."
     }
   },
   "footer": {

@@ -4,6 +4,7 @@ import {
   PRICING_AS_OF,
   computeCost,
   findModel,
+  summarize,
   turnInputTokens,
   type UsageShape,
 } from '../utils/agent-cost'
@@ -156,6 +157,74 @@ describe('缓存的两个静默失效条件（本工具区别于简单计算器�
     expect(result.cacheInactiveReasons).toEqual(
       expect.arrayContaining(['prefix-too-short', 'ttl-expired']),
     )
+  })
+})
+
+describe('token 明细（按 API 的 usage 口径，spec §4.6）', () => {
+  it('缓存生效时：命中 + 写入，未命中且未缓存为 0', () => {
+    const s = summarize(computeCost(OPUS, USAGE, 'ttl5m'), OPUS)
+    // read: 0 + 2500 + 3500 = 6000 ; write: 2500 + 1000 + 1000 = 4500
+    expect(s.cacheReadTokens).toBe(6000)
+    expect(s.cacheWriteTokens).toBe(4500)
+    expect(s.uncachedInputTokens).toBe(0)
+    expect(s.outputTokens).toBe(1500)
+  })
+
+  it('缓存未生效时：全部输入落进「未命中且未缓存」，这是「以为省了其实没省」的数字形状', () => {
+    const s = summarize(computeCost(OPUS, USAGE, 'off'), OPUS)
+    expect(s.cacheReadTokens).toBe(0)
+    expect(s.cacheWriteTokens).toBe(0)
+    expect(s.uncachedInputTokens).toBe(2500 + 3500 + 4500)
+    expect(s.outputTokens).toBe(1500)
+  })
+
+  it('四类小计之和等于总价（否则明细只是装饰）', () => {
+    for (const mode of ['off', 'ttl5m', 'ttl1h'] as const) {
+      const breakdown = computeCost(OPUS, USAGE, mode)
+      const s = summarize(breakdown, OPUS)
+      const summed = s.costs.cacheRead + s.costs.cacheWrite + s.costs.uncachedInput + s.costs.output
+      expect(summed, mode).toBeCloseTo(breakdown.totalCost, 10)
+      expect(s.totalCost, mode).toBeCloseTo(breakdown.totalCost, 10)
+    }
+  })
+
+  it('各类单价与倍率一致：读取 0.1×、写入 1.25×、未命中全额、输出全额', () => {
+    const s = summarize(computeCost(OPUS, USAGE, 'ttl5m'), OPUS)
+    expect(s.rates.cacheRead).toBeCloseTo(5e-6 * 0.1, 12)
+    expect(s.rates.cacheWrite).toBeCloseTo(5e-6 * 1.25, 12)
+    expect(s.rates.uncachedInput).toBeCloseTo(5e-6, 12)
+    expect(s.rates.output).toBeCloseTo(25e-6, 12)
+  })
+
+  it('1 小时 TTL 的写入单价翻倍（2× 而非 1.25×）', () => {
+    const five = summarize(computeCost(OPUS, USAGE, 'ttl5m'), OPUS)
+    const hour = summarize(computeCost(OPUS, USAGE, 'ttl1h'), OPUS)
+    expect(hour.rates.cacheWrite / five.rates.cacheWrite).toBeCloseTo(2 / 1.25, 10)
+    expect(hour.totalCost).toBeGreaterThan(five.totalCost)
+  })
+
+  it('Fable 5.1 的读取单价是输入价的 0.025 而非 0.1', () => {
+    const fable = findModel('claude-fable-5-1')
+    if (!fable) throw new Error('价格表缺少 claude-fable-5-1')
+    const s = summarize(computeCost(fable, USAGE, 'ttl5m'), fable)
+    expect(s.rates.cacheRead).toBeCloseTo(fable.inputPerMTok * 0.025 / 1_000_000, 12)
+  })
+})
+
+describe('价格表的模型覆盖（spec §4.7）', () => {
+  it('覆盖多代模型，含最低可缓存长度各不相同的几代', () => {
+    expect(MODEL_PRICING.length).toBeGreaterThanOrEqual(9)
+    const minimums = new Set(MODEL_PRICING.map((m) => m.minCacheablePrefix))
+    // 512 / 1024 / 2048 / 4096 都应有代表，跨代对比才是本工具的价值点
+    for (const wanted of [512, 1024, 2048, 4096]) {
+      expect(minimums.has(wanted), `缺少最低可缓存长度为 ${wanted} 的模型`).toBe(true)
+    }
+  })
+
+  it('模型 id 唯一，且都能被 findModel 找到', () => {
+    const ids = MODEL_PRICING.map((m) => m.id)
+    expect(new Set(ids).size).toBe(ids.length)
+    for (const id of ids) expect(findModel(id)?.id).toBe(id)
   })
 })
 

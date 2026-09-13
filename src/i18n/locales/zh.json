@@ -288,7 +288,18 @@
       "colWithout": "不缓存",
       "colWith": "开缓存",
       "growthHint": "不缓存时每轮成本递增：历史每轮都要重发一次，所以总成本随轮数非线性增长。",
-      "disclaimer": "价格表快照于 {date}（{model}）。模型与价格会变，缓存倍率也可能调整——请以官方定价页为准。结果是估算，实际账单以 API 返回的 usage 字段为准。"
+      "disclaimer": "价格表快照于 {date}（{model}）。模型与价格会变，缓存倍率也可能调整——请以官方定价页为准。结果是估算，实际账单以 API 返回的 usage 字段为准。",
+      "tokensTitle": "token 明细",
+      "colCategory": "类别",
+      "colTokens": "tokens",
+      "colRate": "单价 / 1M",
+      "colSubtotal": "小计",
+      "rowCacheRead": "缓存命中（读取）",
+      "rowCacheWrite": "缓存写入（未命中但已缓存）",
+      "rowUncached": "未命中且未缓存",
+      "rowOutput": "输出",
+      "total": "合计",
+      "tokensHint": "口径与 API 返回的 usage 字段一致，可直接对照：cache_read_input_tokens / cache_creation_input_tokens / input_tokens / output_tokens。四类小计之和即为总价。"
     }
   },
   "footer": {

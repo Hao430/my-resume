@@ -106,6 +106,41 @@ export const MODEL_PRICING: ModelPricing[] = [
     cacheWriteMultiplier: 1.25,
     cacheWriteMultiplier1h: 2,
   },
+  // 以下三代价格相同但**最低可缓存长度各不相同**（2048 / 4096），
+  // 保留它们是为了让跨代对比可见——同样长度的前缀在有的模型上能缓存、有的不能
+  {
+    id: 'claude-fable-5',
+    label: 'Claude Fable 5',
+    inputPerMTok: 10,
+    outputPerMTok: 50,
+    contextWindow: 1_000_000,
+    minCacheablePrefix: 512,
+    cacheReadMultiplier: 0.1,
+    cacheWriteMultiplier: 1.25,
+    cacheWriteMultiplier1h: 2,
+  },
+  {
+    id: 'claude-opus-4-7',
+    label: 'Claude Opus 4.7',
+    inputPerMTok: 5,
+    outputPerMTok: 25,
+    contextWindow: 1_000_000,
+    minCacheablePrefix: 2048,
+    cacheReadMultiplier: 0.1,
+    cacheWriteMultiplier: 1.25,
+    cacheWriteMultiplier1h: 2,
+  },
+  {
+    id: 'claude-opus-4-6',
+    label: 'Claude Opus 4.6',
+    inputPerMTok: 5,
+    outputPerMTok: 25,
+    contextWindow: 1_000_000,
+    minCacheablePrefix: 4096,
+    cacheReadMultiplier: 0.1,
+    cacheWriteMultiplier: 1.25,
+    cacheWriteMultiplier1h: 2,
+  },
 ]
 
 export function findModel(id: string): ModelPricing | undefined {
@@ -232,4 +267,77 @@ export function computeCost(
   }
 
   return { cacheMode, cacheEffective: effective, cacheInactiveReasons: reasons, totalCost, turns }
+}
+
+/* ---------------- token 明细（按 API 的 usage 口径） ---------------- */
+
+/**
+ * 四类 token 的计费拆分，口径与 API 返回的 `usage` 字段一一对应，
+ * 便于读者把本工具的估算与实际账单逐个对照。
+ */
+export interface TokenBreakdown {
+  /** 对应 `usage.cache_read_input_tokens` */
+  cacheReadTokens: number
+  /** 对应 `usage.cache_creation_input_tokens`（未命中但要写进缓存） */
+  cacheWriteTokens: number
+  /** 对应 `usage.input_tokens`（未命中且未缓存，按全额计） */
+  uncachedInputTokens: number
+  /** 对应 `usage.output_tokens` */
+  outputTokens: number
+  /** 每 token 的实际单价，随模型与 TTL 变 */
+  rates: { cacheRead: number; cacheWrite: number; uncachedInput: number; output: number }
+  costs: { cacheRead: number; cacheWrite: number; uncachedInput: number; output: number }
+  totalCost: number
+}
+
+/**
+ * 把逐轮成本汇总成按类别拆分的 token 明细。
+ *
+ * **四类小计之和必须等于 `computeCost` 的总价**——这是测试守着的核心不变量，
+ * 否则明细就只是装饰。
+ *
+ * 缓存未生效时（前缀过短 / TTL 过期），`uncachedInputTokens` 会吃掉全部输入，
+ * 命中与写入均为 0。那正是「开了缓存却一分没省」在数字上的形状。
+ */
+export function summarize(breakdown: CostBreakdown, pricing: ModelPricing): TokenBreakdown {
+  const inRate = pricing.inputPerMTok / 1_000_000
+  const outRate = pricing.outputPerMTok / 1_000_000
+  const writeMultiplier =
+    breakdown.cacheMode === 'ttl1h'
+      ? pricing.cacheWriteMultiplier1h
+      : pricing.cacheWriteMultiplier
+
+  let cacheReadTokens = 0
+  let cacheWriteTokens = 0
+  let uncachedInputTokens = 0
+  let outputTokens = 0
+  for (const turn of breakdown.turns) {
+    cacheReadTokens += turn.readTokens
+    cacheWriteTokens += turn.writeTokens
+    uncachedInputTokens += turn.freshTokens
+    outputTokens += turn.outputTokens
+  }
+
+  const rates = {
+    cacheRead: inRate * pricing.cacheReadMultiplier,
+    cacheWrite: inRate * writeMultiplier,
+    uncachedInput: inRate,
+    output: outRate,
+  }
+  const costs = {
+    cacheRead: cacheReadTokens * rates.cacheRead,
+    cacheWrite: cacheWriteTokens * rates.cacheWrite,
+    uncachedInput: uncachedInputTokens * rates.uncachedInput,
+    output: outputTokens * rates.output,
+  }
+
+  return {
+    cacheReadTokens,
+    cacheWriteTokens,
+    uncachedInputTokens,
+    outputTokens,
+    rates,
+    costs,
+    totalCost: costs.cacheRead + costs.cacheWrite + costs.uncachedInput + costs.output,
+  }
 }

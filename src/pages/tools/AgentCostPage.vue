@@ -6,6 +6,7 @@ import {
   PRICING_AS_OF,
   computeCost,
   findModel,
+  summarize,
   type CacheMode,
   type UsageShape,
 } from '../../utils/agent-cost'
@@ -77,8 +78,51 @@ const sampledTurns = computed(() => {
   return [...picked.values()].sort((a, b) => a.turn - b.turn)
 })
 
+/**
+ * token 明细按 API 的 usage 口径拆分，让读者能与实际账单逐个对照。
+ * 四类小计之和恒等于总价（由单测守着）。
+ */
+const summary = computed(() => summarize(cached.value, pricing.value))
+
+const tokenRows = computed(() => {
+  const s = summary.value
+  return [
+    {
+      key: 'cacheRead',
+      labelKey: 'rowCacheRead',
+      tokens: s.cacheReadTokens,
+      rate: s.rates.cacheRead,
+      cost: s.costs.cacheRead,
+    },
+    {
+      key: 'cacheWrite',
+      labelKey: 'rowCacheWrite',
+      tokens: s.cacheWriteTokens,
+      rate: s.rates.cacheWrite,
+      cost: s.costs.cacheWrite,
+    },
+    {
+      key: 'uncached',
+      labelKey: 'rowUncached',
+      tokens: s.uncachedInputTokens,
+      rate: s.rates.uncachedInput,
+      cost: s.costs.uncachedInput,
+    },
+    {
+      key: 'output',
+      labelKey: 'rowOutput',
+      tokens: s.outputTokens,
+      rate: s.rates.output,
+      cost: s.costs.output,
+    },
+  ]
+})
+
 const money = (value: number) => `$${value.toFixed(4)}`
 const money5 = (value: number) => `$${value.toFixed(5)}`
+/** 单价按每 1M token 展示，与定价页口径一致 */
+const ratePerMillion = (rate: number) => `$${(rate * 1_000_000).toFixed(4)}`
+const count = (value: number) => value.toLocaleString('en-US')
 </script>
 
 <template>
@@ -196,6 +240,38 @@ const money5 = (value: number) => `$${value.toFixed(5)}`
         </div>
       </section>
 
+      <!-- token 明细：口径与 API 的 usage 字段一致，便于与实际账单对照 -->
+      <section class="card panel">
+        <div class="panel__head">
+          <h2 class="panel__title">{{ t('tools.cost.tokensTitle') }}</h2>
+        </div>
+        <table class="breakdown token-table">
+          <thead>
+            <tr>
+              <th>{{ t('tools.cost.colCategory') }}</th>
+              <th>{{ t('tools.cost.colTokens') }}</th>
+              <th>{{ t('tools.cost.colRate') }}</th>
+              <th>{{ t('tools.cost.colSubtotal') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in tokenRows" :key="row.key" :class="{ 'is-zero': row.tokens === 0 }">
+              <td>{{ t(`tools.cost.${row.labelKey}`) }}</td>
+              <td class="mono">{{ count(row.tokens) }}</td>
+              <td class="mono">{{ ratePerMillion(row.rate) }}</td>
+              <td class="mono">{{ money5(row.cost) }}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">{{ t('tools.cost.total') }}</td>
+              <td class="mono">{{ money(summary.totalCost) }}</td>
+            </tr>
+          </tfoot>
+        </table>
+        <p class="hint">{{ t('tools.cost.tokensHint') }}</p>
+      </section>
+
       <!-- 逐轮明细 -->
       <section class="card panel">
         <div class="panel__head">
@@ -204,7 +280,7 @@ const money5 = (value: number) => `$${value.toFixed(5)}`
             {{ t('tools.cost.turnsShown', { shown: sampledTurns.length, total: usage.turns }) }}
           </span>
         </div>
-        <table class="breakdown">
+        <table class="breakdown turn-table">
           <thead>
             <tr>
               <th>{{ t('tools.cost.colTurn') }}</th>
@@ -437,6 +513,17 @@ const money5 = (value: number) => `$${value.toFixed(5)}`
   font-size: var(--text-xs);
   font-weight: var(--font-regular, 400);
   color: var(--color-text-tertiary);
+}
+
+.token-table tbody tr.is-zero td {
+  color: var(--color-text-faint, var(--color-text-tertiary));
+}
+
+.token-table tfoot td {
+  border-bottom: none;
+  border-top: 1px solid var(--color-ink-border, var(--hairline));
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
 }
 
 .hint,

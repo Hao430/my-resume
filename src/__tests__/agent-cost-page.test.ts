@@ -103,11 +103,90 @@ describe('静默失效必须直说，且不得展示虚假收益', () => {
   })
 })
 
+describe('token 明细（按 usage 口径，spec §4.6）', () => {
+  /** 明细表的四行依次是：缓存命中 / 缓存写入 / 未命中且未缓存 / 输出 */
+  function tokenRow(wrapper: ReturnType<typeof mount>, index: number) {
+    const row = wrapper.findAll('.token-table tbody tr')[index]
+    if (!row) throw new Error(`缺少第 ${index} 行明细`)
+    const cells = row.findAll('td')
+    return {
+      label: cells[0]?.text() ?? '',
+      tokens: Number((cells[1]?.text() ?? '0').replace(/,/g, '')),
+      subtotal: cells[3]?.text() ?? '',
+    }
+  }
+
+  it('列出四类并给出合计行', async () => {
+    resetDom()
+    const { wrapper } = await mountPage()
+    expect(wrapper.findAll('.token-table tbody tr')).toHaveLength(4)
+    expect(wrapper.find('.token-table tfoot').exists()).toBe(true)
+  })
+
+  it('明细的合计与页面顶部的「开缓存总价」一致', async () => {
+    resetDom()
+    const { wrapper } = await mountPage()
+    const headline = wrapper.findAll('.result__value')[1]?.text()
+    const footer = wrapper.find('.token-table tfoot td:last-child').text()
+    expect(footer).toBe(headline)
+  })
+
+  it('缓存生效时命中与写入都大于 0，未命中且未缓存为 0', async () => {
+    resetDom()
+    const { wrapper } = await mountPage()
+    expect(tokenRow(wrapper, 0).tokens).toBeGreaterThan(0) // 命中
+    expect(tokenRow(wrapper, 1).tokens).toBeGreaterThan(0) // 写入
+    expect(tokenRow(wrapper, 2).tokens).toBe(0) // 未命中且未缓存
+    expect(tokenRow(wrapper, 3).tokens).toBeGreaterThan(0) // 输出
+  })
+
+  it('缓存关闭时全部输入落进「未命中且未缓存」——这是「以为省了其实没省」的形状', async () => {
+    resetDom()
+    const { wrapper } = await mountPage()
+    await wrapper.findAll('.mode input')[0]?.setValue(true)
+    expect(tokenRow(wrapper, 0).tokens).toBe(0)
+    expect(tokenRow(wrapper, 1).tokens).toBe(0)
+    expect(tokenRow(wrapper, 2).tokens).toBeGreaterThan(0)
+  })
+
+  it('缓存静默失效时同样全部落在「未命中且未缓存」', async () => {
+    resetDom()
+    const { wrapper } = await mountPage()
+    // Haiku 4.5 的最低可缓存长度 4096 > 默认前缀 2000
+    await wrapper.find('select').setValue('claude-haiku-4-5')
+    expect(tokenRow(wrapper, 0).tokens).toBe(0)
+    expect(tokenRow(wrapper, 1).tokens).toBe(0)
+    expect(tokenRow(wrapper, 2).tokens).toBeGreaterThan(0)
+    wrapper.unmount()
+  })
+
+  it('四类小计之和等于合计（分项不是装饰）', async () => {
+    resetDom()
+    const { wrapper } = await mountPage()
+    const parts = [0, 1, 2, 3].map((i) => Number(tokenRow(wrapper, i).subtotal.replace('$', '')))
+    const total = Number(
+      wrapper.find('.token-table tfoot td:last-child').text().replace('$', ''),
+    )
+    // 展示值各自四舍五入到 5 位，故容许末位误差
+    expect(parts.reduce((a, b) => a + b, 0)).toBeCloseTo(total, 3)
+  })
+
+  it('换模型会更新各类单价', async () => {
+    resetDom()
+    const { wrapper } = await mountPage()
+    const before = wrapper.findAll('.token-table tbody tr')[0]?.findAll('td')[2]?.text()
+    await wrapper.find('select').setValue('claude-haiku-4-5')
+    const after = wrapper.findAll('.token-table tbody tr')[0]?.findAll('td')[2]?.text()
+    expect(after).not.toBe(before)
+    wrapper.unmount()
+  })
+})
+
 describe('逐轮明细', () => {
   it('展示轮次与两种模式下的成本', async () => {
     resetDom()
     const { wrapper } = await mountPage()
-    const rows = wrapper.findAll('.breakdown tbody tr')
+    const rows = wrapper.findAll('.turn-table tbody tr')
     expect(rows.length).toBeGreaterThan(0)
     expect(rows[0]?.findAll('td')).toHaveLength(3)
     wrapper.unmount()
@@ -117,7 +196,7 @@ describe('逐轮明细', () => {
     resetDom()
     const { wrapper } = await mountPage()
     await numberInput(wrapper, 0).setValue(200)
-    const rows = wrapper.findAll('.breakdown tbody tr')
+    const rows = wrapper.findAll('.turn-table tbody tr')
     expect(rows.length).toBeLessThanOrEqual(8)
     expect(rows.length).toBeGreaterThan(0)
     wrapper.unmount()
