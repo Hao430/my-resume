@@ -11,7 +11,10 @@ const loc = computed(() => (locale.value.startsWith('en') ? 'en' : 'zh'))
 const site = loc.value === 'en' ? SITE_NAME_EN : SITE_NAME_ZH
 const mailHref = `mailto:${SITE_EMAIL}?subject=${encodeURIComponent(t('services.mailSubject'))}`
 
-/* Services 页结构化数据：ProfessionalService */
+/* Services 页结构化数据：ProfessionalService
+   2026-09-13：服务线暂停，**不再声明服务套餐/offer/价格**——标记必须与页面可见内容一致。
+   这里的 id（services-ld）与 src/data/site-pages.ts 的 SERVICES_JSON_LD 相同，
+   后者是预渲染外壳里的版本、这里是运行时覆盖版，两处必须成对修改。 */
 const serviceJsonLd = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -20,11 +23,6 @@ const serviceJsonLd = computed(() => ({
   url: 'https://hao430.cn/services/',
   email: SITE_EMAIL,
   areaServed: 'Worldwide',
-  serviceType: [
-    'Technical Consulting',
-    'AI Coding Workflow Advisory',
-    'Full-Stack System Architecture',
-  ],
 }))
 
 watchEffect(() => {

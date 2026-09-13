@@ -36,42 +36,23 @@ export interface StaticPage {
   faq?: FaqEntry[]
 }
 
+/**
+ * 服务页结构化数据。
+ *
+ * 2026-09-13：服务线暂停（页面文案为「旧版服务模块已暂停接待」），因此这里**不再声明任何
+ * 服务套餐、OfferCatalog 或价格**——结构化数据必须代表页面上可见的内容，标记页面上并不存在
+ * 的套餐就是虚假标记（Google 结构化数据政策；也是本站 2026-09-13 SEO 巡检的未修项之一）。
+ * 恢复服务时再补 OfferCatalog，并同步改 `ServicesPage.vue` 里同名 id 的运行时版本
+ * （两处 id 都是 `services-ld`，运行时那份会覆盖这里这份，必须成对改）。
+ */
 const SERVICES_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'AI 编码服务 · AI Coding Services',
-  description:
-    'AI coding workflow optimization and AI-generated code security audit & remediation — diagnose first, quote after. / 面向团队的 AI 编码落地服务，先诊断后报价。',
+  name: zh.services.title,
+  description: zh.services.subtitle,
   url: `${SITE_URL}/services/`,
   email: SITE_EMAIL,
   areaServed: 'Worldwide',
-  serviceType: ['AI coding workflow optimization', 'AI-generated code security audit'],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'AI coding services / AI 编码服务',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'AI Coding Workflow Optimization / AI 编码工作流优化',
-          description:
-            'Assess Cursor / Claude Code / agent workflows, surface efficiency leaks, deliver an actionable optimization plan.',
-        },
-        priceSpecification: { '@type': 'PriceSpecification', minPrice: 500, maxPrice: 2000, priceCurrency: 'USD' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'AI-Generated Code Security Audit & Remediation / AI 生成代码安全审计与修复',
-          description:
-            'Audit AI/agent-generated code, deliver a prioritized risk report, remediate on request. Relevant to CRA disclosure duties.',
-        },
-        priceSpecification: { '@type': 'PriceSpecification', minPrice: 3000, priceCurrency: 'USD' },
-      },
-    ],
-  },
 }
 
 /**
@@ -152,7 +133,7 @@ export const STATIC_PAGES: StaticPage[] = [
   {
     dir: 'services',
     title: 'AI 编码服务',
-    desc: 'AI coding workflow optimization and AI-generated code security audit & remediation — diagnose first, quote after.',
+    desc: '顾问咨询与技术服务体系正在重新规划，旧版固定服务套餐已暂停；当前开放邮件直联与定制讨论。Service offerings are under restructuring — direct inquiry by email remains open.',
     path: '/services/',
     changefreq: 'monthly',
     priority: '0.7',

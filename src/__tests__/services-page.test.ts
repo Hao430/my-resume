@@ -58,6 +58,21 @@ describe('ServicesPage（服务落地页）', () => {
     wrapper.unmount()
   })
 
+  it('SEO：结构化数据不再声明服务套餐（2026-09-13 服务线暂停）', async () => {
+    resetDom()
+    const { composer } = await mountServices('zh')
+    const el = document.head.querySelector('script[type="application/ld+json"][id="services-ld"]')
+    expect(el).not.toBeNull()
+    const data = JSON.parse(el!.textContent || '{}')
+    expect(data['@type']).toBe('ProfessionalService')
+    // 标记必须与页面可见内容一致：页面已写明旧版套餐暂停，就不允许再出现套餐/报价
+    expect(data).not.toHaveProperty('hasOfferCatalog')
+    expect(data).not.toHaveProperty('offers')
+    expect(data).not.toHaveProperty('priceSpecification')
+    expect(data).not.toHaveProperty('serviceType')
+    expect(data.description).toBe(composer.t('services.subtitle'))
+  })
+
   it('SEO：写入页面 title 与 canonical（带尾斜杠）', async () => {
     resetDom()
     const { wrapper, composer } = await mountServices('zh')
