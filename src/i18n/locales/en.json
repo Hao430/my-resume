@@ -189,10 +189,6 @@
     "statusWip": "In Development",
     "statusPlanned": "Planned",
     "items": {
-      "agentContext": {
-        "title": "Context Window & Token Budget Calculator",
-        "desc": "Token budgets for multi-turn and multi-tool calls, context-window usage and overflow warnings, with model cost and VRAM comparison."
-      },
       "codeSecurityChecker": {
         "title": "Dependency Vulnerability & License Check",
         "desc": "Paste a package.json or requirements.txt to look up vulnerabilities, licenses and fixed versions, with CRA compliance notes and Markdown export."
@@ -200,6 +196,10 @@
       "markdownCleaner": {
         "title": "AI Output Cleaner · Markdown Toolbox",
         "desc": "Strip Markdown formatting, emoji and stray blank lines, normalise punctuation, and convert between HTML and Markdown — ready to paste into Word, Notion or email."
+      },
+      "agentCost": {
+        "title": "Agent Loop Cost Calculator",
+        "desc": "Work out what a multi-turn agent loop costs, how much prompt caching saves, when it breaks even, and the two conditions that silently disable caching."
       }
     },
     "cleaner": {
@@ -259,6 +259,36 @@
       "severityUnknown": "Unknown",
       "pkgTruncated": "Showing the top {shown}, ordered by severity.",
       "pkgViewAll": "See all {count} on OSV"
+    },
+    "cost": {
+      "pageSubtitle": "What a multi-turn agent loop costs, and what prompt caching really saves",
+      "offlineBadge": "100% local",
+      "offlineNote": "Everything runs in your browser — no network, nothing uploaded.",
+      "inputsLabel": "Loop parameters",
+      "model": "Model",
+      "turns": "Turns",
+      "prefixTokens": "Prefix tokens (system + tool definitions)",
+      "inputPerTurn": "New input tokens per turn",
+      "outputPerTurn": "Output tokens per turn",
+      "secondsPerTurn": "Seconds per turn",
+      "usageHint": "Enter the real numbers from the API's usage field, or your own estimate. This tool does not parse text or guess token counts.",
+      "cacheMode": "Prompt caching",
+      "mode_off": "Off",
+      "mode_ttl5m": "On · 5-minute TTL",
+      "mode_ttl1h": "On · 1-hour TTL",
+      "withoutCache": "Total without caching",
+      "withCache": "Total with caching",
+      "saved": "Saved by caching",
+      "breakEven": "Caching only pays off from turn {turn}. Turn 1 is always more expensive — you pay the write premium with nothing cached to read yet.",
+      "warnPrefixTooShort": "Your prefix of {prefix} tokens is below this model's minimum cacheable length of {minimum}, so caching will not take effect — the switch above does nothing.",
+      "warnTtlExpired": "At {seconds} seconds per turn the cache expires before the next turn. The TTL runs from the start of the request, so generation time counts against it.",
+      "breakdown": "Cost per turn",
+      "turnsShown": "Showing {shown} of {total} turns",
+      "colTurn": "Turn",
+      "colWithout": "No cache",
+      "colWith": "Cached",
+      "growthHint": "Without caching the per-turn cost keeps rising: the whole history is resent every turn, so the total grows faster than linearly.",
+      "disclaimer": "Pricing snapshot as of {date} ({model}). Models and prices change, and cache multipliers can be adjusted — check the official pricing page. This is an estimate; the API's usage field is what you are actually billed for."
     }
   },
   "footer": {
@@ -293,7 +323,8 @@
     "dependencyRadar": "Dependency Vulnerability & License Radar",
     "dependencyPackage": "Dependency Vulnerability Details",
     "services": "AI Coding Services",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "agentCost": "Agent Loop Cost Calculator"
   },
   "brand": {
     "name": "Hao Zhang",

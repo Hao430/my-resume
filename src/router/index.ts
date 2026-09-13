@@ -45,6 +45,12 @@ const routes = [
     meta: { titleKey: 'seo.toolMarkdownCleaner' },
   },
   {
+    path: '/tools/agent-cost',
+    name: 'tool-agent-cost',
+    component: () => import('../pages/tools/AgentCostPage.vue'),
+    meta: { titleKey: 'seo.agentCost' },
+  },
+  {
     path: '/tools/dependency-radar',
     name: 'tool-dependency-radar',
     component: () => import('../pages/tools/DependencyRadarPage.vue'),

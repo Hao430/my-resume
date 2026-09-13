@@ -189,10 +189,6 @@
     "statusWip": "实验构建中",
     "statusPlanned": "规划中",
     "items": {
-      "agentContext": {
-        "title": "上下文窗口与 Token 预算计算器",
-        "desc": "多轮对话与多工具调用的 token 预算、上下文窗口占用与超限预警，附模型成本与显存需求对比。"
-      },
       "codeSecurityChecker": {
         "title": "依赖漏洞与许可证检查",
         "desc": "贴入 package.json 或 requirements.txt，在线查漏洞、许可证与修复版本，附 CRA 合规关注点，可导出 Markdown。"
@@ -200,6 +196,10 @@
       "markdownCleaner": {
         "title": "AI 输出清理器 · Markdown 工具箱",
         "desc": "一键去除 Markdown 格式、emoji 与多余空行，规范中英标点全半角，适配公众号 / 知乎 / Word 直贴，并支持 HTML 与 Markdown 互转。"
+      },
+      "agentCost": {
+        "title": "Agent 循环成本计算器",
+        "desc": "算一个多轮 agent 循环的总花费、提示缓存能省多少、几轮回本，并指出会让缓存静默失效的两个条件。"
       }
     },
     "cleaner": {
@@ -259,6 +259,36 @@
       "severityUnknown": "未知",
       "pkgTruncated": "此处显示按严重度排序的前 {shown} 条。",
       "pkgViewAll": "在 OSV 查看全部 {count} 条"
+    },
+    "cost": {
+      "pageSubtitle": "多轮 agent 循环的成本，与提示缓存的真实收益",
+      "offlineBadge": "纯本地",
+      "offlineNote": "全部在浏览器内计算，不联网、不上传。",
+      "inputsLabel": "循环参数",
+      "model": "模型",
+      "turns": "轮数",
+      "prefixTokens": "前缀 tokens（system + 工具定义）",
+      "inputPerTurn": "每轮新增输入 tokens",
+      "outputPerTurn": "每轮输出 tokens",
+      "secondsPerTurn": "每轮耗时（秒）",
+      "usageHint": "token 数请填 API 返回的 usage 里的真实值，或你自己的估算。本工具不解析文本、不猜 token。",
+      "cacheMode": "提示缓存",
+      "mode_off": "不开启",
+      "mode_ttl5m": "开启 · 5 分钟 TTL",
+      "mode_ttl1h": "开启 · 1 小时 TTL",
+      "withoutCache": "不缓存总价",
+      "withCache": "开缓存总价",
+      "saved": "缓存省下",
+      "breakEven": "第 {turn} 轮起，开缓存才开始划算——第 1 轮必然更贵，因为付了写入溢价却还没有东西可读。",
+      "warnPrefixTooShort": "前缀 {prefix} tokens 低于该模型的最低可缓存长度 {minimum}，缓存不会生效——上面的开关实际没起作用。",
+      "warnTtlExpired": "每轮耗时 {seconds} 秒超过 TTL，缓存会在下一轮之前过期。TTL 从请求开始计时，生成时间也计入。",
+      "breakdown": "逐轮成本",
+      "turnsShown": "显示 {shown} / {total} 轮",
+      "colTurn": "轮次",
+      "colWithout": "不缓存",
+      "colWith": "开缓存",
+      "growthHint": "不缓存时每轮成本递增：历史每轮都要重发一次，所以总成本随轮数非线性增长。",
+      "disclaimer": "价格表快照于 {date}（{model}）。模型与价格会变，缓存倍率也可能调整——请以官方定价页为准。结果是估算，实际账单以 API 返回的 usage 字段为准。"
     }
   },
   "footer": {
@@ -293,7 +323,8 @@
     "dependencyRadar": "依赖漏洞与许可证雷达",
     "dependencyPackage": "依赖漏洞详情",
     "services": "AI 编码服务",
-    "privacy": "隐私政策"
+    "privacy": "隐私政策",
+    "agentCost": "Agent 循环成本计算器"
   },
   "brand": {
     "name": "张豪",

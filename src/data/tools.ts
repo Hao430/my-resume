@@ -11,7 +11,7 @@
  */
 
 /** 与 src/i18n/locales/*.json 的 tools.items.<key> 一一对应 */
-export type ToolI18nKey = 'markdownCleaner' | 'agentContext' | 'codeSecurityChecker'
+export type ToolI18nKey = 'markdownCleaner' | 'agentCost' | 'codeSecurityChecker'
 
 export interface ToolMeta {
   /** URL 片段：页面地址为 /tools/<slug>/ */
@@ -29,10 +29,12 @@ export const TOOLS: ToolMeta[] = [
     status: 'active',
   },
   {
-    slug: 'agent-context',
-    i18nKey: 'agentContext',
-    tags: ['Context Window', 'Token Budget', 'AI Coding'],
-    status: 'wip',
+    // 口径是「成本」不是「预算」：用户已否掉预算模拟（抽象、无输出），
+    // 改为回答一个具体的钱数。见 docs/specs/agent-cost-calculator.md
+    slug: 'agent-cost',
+    i18nKey: 'agentCost',
+    tags: ['Cost', 'Prompt Caching', 'Agent'],
+    status: 'active',
   },
   {
     // slug 必须与 src/utils/deps.ts 的 DEPENDENCY_RADAR_SLUG 一致：
