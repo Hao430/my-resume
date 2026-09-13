@@ -98,13 +98,31 @@ content/posts/harness-development-paradigm.en.md     # 英文正文
 |------|--------|------|
 | `dist/feed.xml`、`dist/feed-en.xml` | `build/static-site.ts` | RSS 2.0，全文 `content:encoded`，Feedly / Inoreader 等可直接订阅 |
 | `dist/sitemap.xml` | 同上 | 主页面 + 每篇文章，`lastmod` 取 frontmatter 日期 |
-| `dist/llms.txt` | 同上 | 供 ChatGPT / Claude / Perplexity 等检索入口引用的站点摘要 |
+| `dist/llms.txt` | 同上 | 站点级 Markdown 索引，给不执行 JS、也不吃 RSS 的代理系统读（定位见下） |
 | `public/og/<slug>.png` | 同上（本机有时） | 英文文章的专属分享图；构建环境没有 librsvg 时用仓库里已提交的这张 |
 | `dist/blog/<slug>/index.html` | 同上 | 每篇文章独立 head（title / canonical / OG / Twitter / JSON-LD BlogPosting），不执行 JS 的抓取器也能拿到摘要 |
 | `dist/robots.txt` | 同上 | 指向 sitemap（`public/robots.txt` 只是开发期占位，构建时会被覆盖） |
 | ~~`public/sitemap.xml`~~ | — | 已删除：sitemap 只由构建生成，避免仓库里留一份过期的和线上打架 |
 
 静态页外壳（`/about/`、`/blog/`、`/privacy/`、`/services/`、`/slides/`、`/tools/`）也会一并预渲染 head。
+
+### `/llms.txt` 的定位（2026-09-13 复核）
+
+保留这个文件，但**它不是搜索可见性杠杆**。Google Search Central 的生成式 AI 优化指南原文：
+
+> You don't need to create new machine readable files, AI text files, markup, or Markdown to appear in
+> Google Search (including its generative AI capabilities), as Google Search itself doesn't use them.
+> … Doing so will neither harm nor help your site's visibility or rankings in Google Search,
+> as Google Search ignores them.
+
+（Google 官方文档，页面最后更新 2026-07-10；Gary Illyes 2025-07 亦确认 Google 无支持计划。
+第三方实测同向：Ahrefs 13.7 万站研究显示 97% 的 llms.txt 在 2026-05 零请求。）
+
+那为什么还留着：本站正文由 SPA 渲染，**不执行 JS 的抓取器拿不到正文**——
+全文只有 RSS 的 `content:encoded` 与这份站点级索引两条通路。所以它的作用对象是
+"不执行 JS、也不订阅 RSS 的代理系统"，与能不能被 AI 引用无关。
+**不要**再把它写成"AI 检索引用入口"，也不要为 AI 去做全文版/拆块改写（官方同样列为可忽略项）。
+重估触发器与完整证据见 7J8E3S 工作区 `projects/hao430cn-llms-txt-review.md`。
 
 解析逻辑只有一份：`src/utils/markdown.ts` + `src/utils/post-catalog.ts`，
 浏览器端（`src/stores/blog.ts`）与构建脚本共用，避免「站内 4 篇、RSS 3 篇」的漂移。

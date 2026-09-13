@@ -427,7 +427,10 @@ function briefHtml(source: string, brief: Brief): string {
   return `${snippet}\n${source}`
 }
 
-/* ---------------- llms.txt（供 ChatGPT / Claude / Perplexity 等检索引用） ---------------- */
+/* ---------------- llms.txt ----------------
+   站点级 Markdown 索引：给不执行 JS、也不吃 RSS 的代理系统（含 AI 编码代理读文档的场景）一份可读入口。
+   注意：Google Search 明确忽略 llms.txt（Google AI 优化指南，2026-07 版：「as Google Search ignores them」），
+   它不是排名或引用杠杆，别按 SEO 收益来卖它。定位复核见 7J8E3S 工作区 projects/hao430cn-llms-txt-review.md。 */
 
 function buildLlms(catalog: BlogPost[], briefs: Brief[]): string {
   const posts = listForLocale(catalog, 'en').filter((p) => !p.externalUrl)

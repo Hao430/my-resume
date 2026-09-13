@@ -93,6 +93,9 @@ scripts/        new-post.mjs、fonts-download.mjs、submit-indexnow.mjs
     注意 `listHtml()` 只写 head 外壳，正文仍由 SPA 渲染。
     **正文级 SEO 已于 2026-09-12 决定不做**：Googlebot 渲染 JS 能拿到全部内容，
     非 JS 的 AI 爬虫有 RSS 全文（`content:encoded`）与 `llms.txt` 两条路径。
+    但 `llms.txt` **不是 Google 的引用杠杆**：Google 官方 AI 优化指南（2026-07 版）原文称
+    该文件"既无益也无害，因为 Google Search 忽略它们"。它的作用是给不吃 RSS 的代理系统一份
+    可读索引，别按 SEO 收益来汇报（2026-09-13 复核，见 7J8E3S 工作区 llms-txt-review）。
     已知代价：走 HTML 且不执行 JS 的爬虫读不到文章正文。
     若日后要补，首选在 `<body>` 注入 `<noscript>` 块（源码对爬虫可见、JS 用户零闪烁），
     而不是注入 `#app`（预渲染文本与 SPA 渲染结果不同，用户会看到一次切换闪烁）。
