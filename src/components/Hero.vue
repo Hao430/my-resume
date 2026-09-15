@@ -28,6 +28,8 @@ const tags = [
         <p class="eyebrow hero__eyebrow animate-fadeInUp">{{ t('hero.greeting') || 'Consultant · Researcher · Maker' }}</p>
         <h1 class="hero__title animate-fadeInUp delay-100">
           <span class="hero__title-mark">{{ t('hero.titleAccent') }}</span>{{ t('hero.titleRest') }}
+          <!-- h1 里必须带姓名与定位，光有字号「墨砚斋」对 SEO/GEO 等于没有标题 -->
+          <span class="hero__title-descriptor">{{ t('hero.titleDescriptor') }}</span>
         </h1>
         <p class="hero__subtitle animate-fadeInUp delay-200">
           {{ t('hero.subtitle') }}<span class="hero__cursor" aria-hidden="true">|</span>
@@ -162,6 +164,17 @@ const tags = [
   height: 0.06em;
   background: linear-gradient(90deg, var(--color-vermilion), transparent);
   opacity: 0.55;
+}
+
+/* 同一个 h1 里的描述行：字号从属于主标题，但要能独立被读懂 */
+.hero__title-descriptor {
+  display: block;
+  margin-top: var(--space-4);
+  font-size: clamp(0.98rem, 2.2vw, 1.18rem);
+  font-weight: var(--font-medium);
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  color: var(--color-text-secondary);
 }
 
 .hero__subtitle {

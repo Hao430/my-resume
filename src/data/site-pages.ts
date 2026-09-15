@@ -104,9 +104,18 @@ function depsPackagePages(): StaticPage[] {
 
 export const STATIC_PAGES: StaticPage[] = [
   {
+    /**
+     * 首页。emitShell 仍为 false（index.html 本身就是外壳，不需要另生成目录），
+     * 但 title / desc 不是摆设——build/static-site.ts 会据此**重写 dist/index.html**：
+     *   title → `${title} | ${SITE_NAME_ZH}`，与运行时 applyDocumentTitle() 的结果逐字一致。
+     *
+     * 2026-09-15：原首页 title 只有「张豪 | 技术人文空间」11 字，被 SEO/GEO 审计判为
+     * 「标题太短」（站内其他页都是 `页面名 | 站点名`，只有首页漏了前半段）。
+     * 这里补上定位文案，拼出来 34 字，明显高于「过短」阈值。
+     */
     dir: '',
-    title: '张豪 · 技术人文空间',
-    desc: SITE_DESCRIPTION_ZH,
+    title: '技术顾问 · 独立研究者 · 全栈造物者',
+    desc: `${SITE_DESCRIPTION_ZH}Hao Zhang: Technical Consultant, Independent Researcher & Full-Stack Maker.`,
     path: '/',
     changefreq: 'weekly',
     priority: '1.0',
@@ -115,7 +124,7 @@ export const STATIC_PAGES: StaticPage[] = [
   {
     dir: 'about',
     title: '关于我',
-    desc: `${SITE_DESCRIPTION_ZH}。Full-stack developer based in Guiyang, building AI-era tooling.`,
+    desc: `${SITE_DESCRIPTION_ZH}Full-stack developer based in Guiyang, building AI-era tooling.`,
     path: '/about/',
     changefreq: 'monthly',
     priority: '0.8',
@@ -124,7 +133,7 @@ export const STATIC_PAGES: StaticPage[] = [
   {
     dir: 'blog',
     title: '博客',
-    desc: `${SITE_DESCRIPTION_ZH}。Personal blog of Hao Zhang — AI-era engineering, product notes. English feed: /feed-en.xml`,
+    desc: `${SITE_DESCRIPTION_ZH}Personal blog of Hao Zhang — AI-era engineering, product notes. English feed: /feed-en.xml`,
     path: '/blog/',
     changefreq: 'weekly',
     priority: '0.9',

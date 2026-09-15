@@ -184,6 +184,44 @@ function appendHead(html: string, snippet: string): string {
   return html.replace(/<\/head>/i, `    ${snippet}\n  </head>`)
 }
 
+/* ---------------- 非 JS 抓取器兜底（h1 / SEO · GEO） ---------------- */
+
+/** 兜底导航：不执行 JS 的抓取器只能靠这几个链接摸到站点结构 */
+const FALLBACK_NAV: ReadonlyArray<{ href: string; label: string }> = [
+  { href: `${SITE_URL}/blog/`, label: '博客 / Blog' },
+  { href: `${SITE_URL}/tools/`, label: '工坊与小工具 / Tools' },
+  { href: `${SITE_URL}/about/`, label: '关于 / About' },
+]
+
+/**
+ * 在 #app 之后注入 <noscript> 兜底块（真实 h1 + 摘要 + 主要入口）
+ * ------------------------------------------------------------
+ * 本站正文与各级标题全部由 SPA 在浏览器里渲染，不执行 JS 的抓取器只看得到空的
+ * <div id="app">，于是 SEO/GEO 审计稳定报「缺少 h1 标记」（2026-09-15 巡检）。
+ * noscript 对 JS 用户完全不渲染（零闪烁），而按 HTML 解析的抓取器能读到里面的
+ * h1 与链接；跑 JS 渲染的工具则会读到 Vue 输出的真实 h1——两条路都不漏。
+ *
+ * 为什么不把兜底文本直接写进 #app：预渲染结果与 SPA 渲染结果不同，用户会先看到
+ * 兜底文本再被替换，闪一下（CLAUDE.md 硬性规则 14 已否决这条路线）。
+ *
+ * 注入点找不到时**直接抛错**：这是硬需求，静默失败会让线上继续缺 h1，
+ * 和 2026-09-12「可发现性资产被删却无报错」是同一类事故。
+ */
+function injectNoScriptFallback(html: string, h1: string, summary: string): string {
+  const links = FALLBACK_NAV.map(
+    (item) => `<li><a href="${item.href}">${escapeXml(item.label)}</a></li>`,
+  ).join('')
+  const block = `<noscript>
+      <h1>${escapeXml(h1)}</h1>
+      <p>${escapeXml(summary)}</p>
+      <ul>${links}</ul>
+    </noscript>`
+  if (!/<div id="app"><\/div>/i.test(html)) {
+    throw new Error('预渲染外壳里找不到 <div id="app"></div>，无法注入 noscript h1 兜底')
+  }
+  return html.replace(/<div id="app"><\/div>/i, (match) => `${match}\n    ${block}`)
+}
+
 /* ---------------- 数据装载 ---------------- */
 
 async function loadCatalog(root: string): Promise<BlogPost[]> {
@@ -396,7 +434,8 @@ function postHtml(shell: string, post: LocalizedPost, customImage?: string): str
     publisher: { '@type': 'Person', name: AUTHOR, url: SITE_URL },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   })
-  return appendHead(html, `<script type="application/ld+json" id="article-ld">${jsonLd}</script>`)
+  html = appendHead(html, `<script type="application/ld+json" id="article-ld">${jsonLd}</script>`)
+  return injectNoScriptFallback(html, post.title, post.description)
 }
 
 function listHtml(shell: string, title: string, description: string, url: string): string {
@@ -409,7 +448,7 @@ function listHtml(shell: string, title: string, description: string, url: string
   html = upsertMeta(html, 'property', 'og:type', 'website')
   html = upsertMeta(html, 'name', 'twitter:title', title)
   html = upsertMeta(html, 'name', 'twitter:description', description)
-  return html
+  return injectNoScriptFallback(html, title, description)
 }
 
 function briefHtml(source: string, brief: Brief): string {
@@ -585,6 +624,24 @@ Crawl-delay: 1
             await fs.writeFile(path.join(dir, 'index.html'), html, 'utf-8')
           }),
         )
+      }
+
+      /* 2b. 首页自己。statics 里 '/' 的 emitShell 是 false（外壳就是 index.html 本身），
+       *     但它的 title / desc 仍然要生效：走同一个 listHtml()，静态 title 才与运行时
+       *     applyDocumentTitle() 拼出的 `${seo.home} | ${SITE_NAME_ZH}` 逐字相同。
+       *     2026-09-15 前这里没接上，首页 title 只有品牌名 11 字，被审计判「标题太短」。
+       *     注意必须用最开始读到的那份 shell 作为输入——此时 dist/index.html 还没被改过。 */
+      const home = STATIC_PAGES.find((page) => page.dir === '')
+      if (home) {
+        const homeTitle = `${home.title} | ${SITE_NAME_ZH}`
+        let homeHtml = listHtml(shell, home.title, home.desc, `${SITE_URL}${home.path}`)
+        // 首页的分享卡片要带品牌名，而 listHtml 的 og:title 只放页面名（其余页面沿用该约定）
+        homeHtml = upsertMeta(homeHtml, 'property', 'og:title', homeTitle)
+        homeHtml = upsertMeta(homeHtml, 'name', 'twitter:title', homeTitle)
+        writes.push(fs.writeFile(path.join(outDir, 'index.html'), homeHtml, 'utf-8'))
+      } else {
+        // 兜底导航/h1 依赖站点根条目存在；缺了就抛错而不是静默少一个 h1
+        throw new Error('site-pages.ts 里找不到 dir 为空串的首页条目')
       }
 
       /* 3. 每篇文章独立 head（用作者原文语言，保证 title / og:locale 与正文一致） */

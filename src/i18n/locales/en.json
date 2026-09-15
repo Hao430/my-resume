@@ -11,12 +11,13 @@
   },
   "hero": {
     "subtitle": "Ink carries the way, code puts it into practice",
-    "description": "Technical Consultant · Independent Researcher · Full-Stack Maker",
+    "description": "Exploring AI-era workflow re-engineering, engineering intelligence, and hands-on building",
     "aboutMe": "About & Narrative",
     "readBlog": "Research & Writing",
     "scrollDown": "Scroll Down",
     "titleAccent": "H",
     "titleRest": "ao430",
+    "titleDescriptor": "Hao Zhang · Technical Consultant & Maker",
     "services": "Consulting & Services",
     "greeting": "Consultant · Researcher · Maker",
     "stackLabel": "Capabilities"
@@ -323,7 +324,7 @@
     "notFound": "Slide not found"
   },
   "seo": {
-    "home": "Home",
+    "home": "Technical Consultant & Full-Stack Maker",
     "about": "About",
     "blog": "Blog",
     "post": "Post",

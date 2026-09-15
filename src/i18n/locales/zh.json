@@ -11,12 +11,13 @@
   },
   "hero": {
     "subtitle": "以墨载道，以技行事",
-    "description": "技术顾问 · 独立研究者 · 全栈造物者",
+    "description": "探索 AI 时代的工作流重塑、工程智能与实战造物",
     "aboutMe": "关于与叙事",
     "readBlog": "研究与文章",
     "scrollDown": "向下滚动",
     "titleAccent": "墨",
     "titleRest": "砚斋",
+    "titleDescriptor": "张豪 · 技术顾问 · 全栈造物者",
     "services": "顾问与服务",
     "greeting": "顾问 · 研究 · 造物",
     "stackLabel": "能力谱系"
@@ -323,7 +324,7 @@
     "notFound": "演示文稿不存在"
   },
   "seo": {
-    "home": "首页",
+    "home": "技术顾问 · 独立研究者 · 全栈造物者",
     "about": "关于我",
     "blog": "博客",
     "post": "文章",

@@ -91,14 +91,23 @@ scripts/        new-post.mjs、fonts-download.mjs、submit-indexnow.mjs
     zh.json 与 en.json 加键。**文案一律走 i18n，勿在组件里硬编码中文**——英文站会原样
     显示中文（ToolsPage 曾经如此，见 `src/__tests__/tools-page.test.ts`）。
     注意 `listHtml()` 只写 head 外壳，正文仍由 SPA 渲染。
-    **正文级 SEO 已于 2026-09-12 决定不做**：Googlebot 渲染 JS 能拿到全部内容，
+     **正文全文仍不进 HTML**：Googlebot 渲染 JS 能拿到全部内容，
     非 JS 的 AI 爬虫有 RSS 全文（`content:encoded`）与 `llms.txt` 两条路径。
     但 `llms.txt` **不是 Google 的引用杠杆**：Google 官方 AI 优化指南（2026-07 版）原文称
     该文件"既无益也无害，因为 Google Search 忽略它们"。它的作用是给不吃 RSS 的代理系统一份
     可读索引，别按 SEO 收益来汇报（2026-09-13 复核，见 7J8E3S 工作区 llms-txt-review）。
     已知代价：走 HTML 且不执行 JS 的爬虫读不到文章正文。
-    若日后要补，首选在 `<body>` 注入 `<noscript>` 块（源码对爬虫可见、JS 用户零闪烁），
-    而不是注入 `#app`（预渲染文本与 SPA 渲染结果不同，用户会看到一次切换闪烁）。
+    **2026-09-15 补充：h1 与摘要的兜底已经做了**——`build/static-site.ts` 的
+    `injectNoScriptFallback()` 会给首页、每个静态页外壳与每篇文章的 `<body>` 注入一段
+    `<noscript>`（真实 `<h1>` + 摘要 + 三个主要入口）。起因是 SEO/GEO 审计报
+    「缺少 h1 标记」「标题太短」：本站 h1 全由 Vue 渲染，静态 HTML 里一个都没有。
+    注入点找不到时该函数**直接抛错**，别改成静默跳过。要验就 `grep -rl '<h1>' dist --include=index.html`，
+    数量应等于 `find dist -name index.html | wc -l`。
+    正文全文若要补，仍按同一路线走 `<noscript>`，不要注入 `#app`
+    （预渲染文本与 SPA 渲染结果不同，用户会看到一次切换闪烁）。
+    首页 `<title>` 现在由 `site-pages.ts` 里 `dir: ''` 那条驱动（`emitShell` 仍是 false，
+    因为外壳就是 `index.html` 自己），静态串与运行时 `applyDocumentTitle()` 拼出的
+    `${seo.home} | ${SITE_NAME_ZH}` 必须逐字一致。
 15. **开发工具必须先立 spec、再写测试、最后写实现**（2026-09-12 要求）。
     spec 落在 `docs/specs/<slug>.md`，须写清：目标场景、逐条规则与**反例**、非目标、
     已知限制、验收标准。写完 spec 再写断言这些规则的测试，最后写实现让测试变绿。
