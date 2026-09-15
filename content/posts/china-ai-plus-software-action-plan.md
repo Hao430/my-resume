@@ -1,10 +1,10 @@
 ---
 title: 工信部给中国软件业定了时间表：2 万家、100 个标杆、5 个开源项目，意味着什么
 title_en: China Put a Deadline on Software's AI Rewrite
-description: 工信部 9 月 11 日印发《“人工智能+软件”专项行动实施方案》，给出到 2028 年的四条硬指标。但真正值得读的不是数字，而是它的着力点：改造软件公司自己的生产方式，而不是让软件公司去做 AI 产品。文中给出被多数解读漏掉的五条线索，以及“第一笔钱从哪个口子出”的可核查入口。
+description: 工信部 9 月 2 日印发《“人工智能+软件”专项行动实施方案》（工信部信发〔2026〕209 号，9 月 11 日对外发布），给出到 2028 年的四条硬指标。但真正值得读的不是数字，而是它的着力点：改造软件公司自己的生产方式，而不是让软件公司去做 AI 产品。文中给出被多数解读漏掉的五条线索，以及“第一笔钱从哪个口子出”的可核查入口。
 description_en: China's industry ministry published an action plan for "AI plus software" with four countable targets for 2028. The interesting part is not the numbers — it is that the plan rewrites how software companies produce software, rather than asking them to build AI products. Here are five clauses most summaries skipped, and the actual funding channel.
 date: 2026-09-14
-updated: 2026-09-14
+updated: 2026-09-15
 tags: [中国政策, 智能编程, 智能体, 软件工程]
 tags_en: [China Policy, AI Coding, AI Agents, Software Engineering]
 lang: both
