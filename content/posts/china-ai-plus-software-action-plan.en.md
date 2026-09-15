@@ -2,7 +2,7 @@
 title: China Put a Deadline on Software's AI Rewrite
 title_zh: 工信部给中国软件业定了时间表：2 万家、100 个标杆、5 个开源项目，意味着什么
 description: China's industry ministry published an "AI plus software" action plan with four countable targets for 2028. The interesting part is not the numbers — it is that the plan rewrites how software companies build software, not what they sell. Five clauses that most summaries skipped, plus the actual channel where the money starts.
-description_zh: 工信部 9 月 11 日印发《“人工智能+软件”专项行动实施方案》。真正值得读的不是数字，而是它的着力点：改造软件公司自己的生产方式。本文给出被多数解读漏掉的五条线索，以及“第一笔钱从哪个口子出”的可核查入口。
+description_zh: 工信部 9 月 2 日印发《“人工智能+软件”专项行动实施方案》（工信部信发〔2026〕209 号），9 月 11 日对外发布。真正值得读的不是数字，而是它的着力点：改造软件公司自己的生产方式。本文给出被多数解读漏掉的五条线索，以及“第一笔钱从哪个口子出”的可核查入口。
 date: 2026-09-14
 updated: 2026-09-14
 tags: [China Policy, AI Coding, AI Agents, Software Engineering]
@@ -11,7 +11,7 @@ lang: both
 draft: false
 ---
 
-On September 11, 2026, China's Ministry of Industry and Information Technology (MIIT) issued an action plan for "AI + software" — the software-industry sibling of the eight-ministry "AI + manufacturing" plan from January ([full text via Beijing News](https://www.bjnews.com.cn/detail/1789085225129692.html), [China Science and Technology Network](https://www.stdaily.com/web/gdxw/2026-09/11/content_579258.html)).
+On September 2, 2026, China's Ministry of Industry and Information Technology (MIIT) issued an action plan for "AI + software" (工信部信发〔2026〕209号); September 11 was the day it reached the public through MIIT's official feed and press coverage. It is the software-industry sibling of the eight-ministry "AI + manufacturing" plan from January ([full text via Beijing News](https://www.bjnews.com.cn/detail/1789085225129692.html), [China Science and Technology Network](https://www.stdaily.com/web/gdxw/2026-09/11/content_579258.html)).
 
 The press picked up four numbers, all of which do appear in the same paragraph:
 
@@ -63,13 +63,15 @@ This is the question I left myself after publishing my own review of the plan, a
 
 **The General Office's notice on a special programme for cultivating AI application service providers (工信厅科函〔2026〕414号, signed August 27; [original MIIT link](https://www.miit.gov.cn/jgsj/kjs/wjfb/art/2026/art_331b6f1d28ad410aa9df711acf42dbfe.html), [full text via a provincial association](https://www.ssia.org.cn/page63?article_id=2908)).** It gives countable, checkable mechanics:
 
-- **A provider registry**: more than **2,000** providers nationally by end-2026; no fewer than **3,000** by end-2027; provinces hosting national AI pilot zones must list at least **100** local providers by end-2027; **local authorities must submit their lists by 1 December 2026**.
+- **A provider registry**: more than **2,000** providers nationally by end-2026; no fewer than **3,000** by end-2027; provinces hosting national AI pilot zones must list at least **100** local providers by end-2027; **local industry authorities must report their registry information to MIIT by 1 December 2026** (an internal reporting deadline for provincial bureaus, **not a deadline for enterprises to apply**).
 - **Service teams**: at least **10** "AI application service teams" per region, each led by one provider with at least two upstream or downstream partners.
 - **Procurement**: pilot "**first purchase, first use**" and **risk compensation** models, with explicit encouragement to buy more large-model, **agent** and **token** services.
 - **People**: explicit encouragement for providers to build **forward-deployed engineer (FDE) teams stationed at customer sites**.
 - **Tools**: use "compute vouchers" and similar policy instruments to cut costs, and optimise intelligent coding tools to improve supply capacity.
 
-Read the two documents together and the path is plain. **If your customer is a Chinese software company, the effective entry point is not knocking on doors — it is getting into the registry, forming a service team, and filing through your local industry bureau before December 1.** "FDE teams stationed at customer sites" is very nearly the intermediate layer I had hypothesised would be needed — except now it has an official name.
+Read the two documents together and the most easily misread part is that date. **1 December is not a deadline for enterprises to apply.** It is the internal deadline by which provincial bureaus report their registry to MIIT; enterprises are registered by their local authorities (摸排入档), and there is no public application channel for individuals — the notice defines providers as "**enterprises or institutions**", which leaves individuals and tiny teams out of the pool (local registration ties matter too). The path this opens is real for large enterprises, state-owned firms and integrators with local ties; it is not directly open to a solo founder.
+
+What is genuinely worth recording is "**forward-deployed engineer (FDE) teams stationed at customer sites**" — the official name for the layer of people who understand both business and agent deployment, and a position this policy will keep manufacturing demand for. **But the barrier is the entity and its qualifications, not the technology.**
 
 ## The capital side answered the other half
 
@@ -82,7 +84,7 @@ The structure matters more than the amount: **zero coupon** (investors forgo int
 The most common error when reading policy is mistaking a target for a budget:
 
 1. **"Coverage of 20,000 enterprises" is not "funding for 20,000 enterprises."** Coverage is a diffusion metric; the 100 technical-transformation projects are the project metric — and that is where fiscal and policy resources actually land. The two differ by two orders of magnitude. Do not blend them.
-2. **Compute vouchers generally buy compute, not services.** Details are provincial and no unified text is public yet. They most likely cannot be spent on third-party services, and their real value to a software firm depends on whether it is already running models at scale.
+2. **Compute vouchers are not a general-purpose voucher.** Beijing, Chongqing and Hunan all cap them at compute resources, compute services and model services (including domestic-model adaptation), and explicitly exclude storage, network and security; official interpretation adds that they are meant to subsidise the cost of procuring self-developed coding tools and calling self-developed large-model coding services — **they reimburse tool and model-call fees, not consulting or accompaniment fees.** Their real value to a software firm still depends on whether it is already running models at scale.
 3. **The maturity standard is only mandated, not written.** The gate does not exist yet. Whoever starts organising their evidence now — code quality, R&D economics, records of AI usage — skips a hurdle in the 2027 bidding season.
 
 One more thing that is not a limit but is worth remembering: **the ROI of technical transformation depends on your customer mix.** For a firm living on custom projects, AI efficiency gains do not automatically improve gross margin — if you still quote in person-days, the efficiency lands in the quote. Technology and business model have to move together, which is presumably why Section 5 of the plan is devoted to service models.
@@ -90,7 +92,7 @@ One more thing that is not a limit but is worth remembering: **the ROI of techni
 ## If you are one of these people, do this now
 
 - **Engineers and tech leads:** treat AI-generated-code review and agent behavioural traceability as 2027 compliance prerequisites, not as this year's productivity purchase. The plan names both.
-- **Small teams and service providers:** find your province's (or city bureau's) notice on the provider registry and service teams. **December 1 is a hard deadline.** The bar to get listed is usually lower than the bar to win a contract.
+- **Small teams and service providers:** the registry path assumes you are an **enterprise or institution with a local tie** — providers are registered (入档) by local authorities, not self-applied — so first check whether your entity qualifies at all. For those who do, the competition bar is usually lower than the bar to win a contract.
 - **Skill and tool builders:** the skills library is a new distribution channel; prepare for listing review at the same time.
 - **Readers outside China:** the spillover is not "another Chinese industrial policy". It is **the cost curve of Chinese software services**. The same intelligent coding tools plus cheaper engineering hours show up first in custom-development and outsourcing quotes.
 
@@ -104,4 +106,4 @@ The runway is drawn. The remaining question is individual: where in the named, c
 
 ---
 
-**Sources and verification notes.** I cross-checked the plan text across three independent reproductions ([NetEase/China Energy Network](https://www.163.com/dy/article/L6HQ77V505567I2C.html), [Beijing News](https://www.bjnews.com.cn/detail/1789085225129692.html), [China Science and Technology Network](https://www.stdaily.com/web/gdxw/2026-09/11/content_579258.html)); all 21 quotations can be verified in any of them. One correction to my own earlier notes: the widely circulated line "the service model shifts from selling product licences to delivering business value" is **not** in the plan text (the actual wording is "guide software enterprises to transform into AI application service providers and strengthen continuous service and value delivery capability"). I do not use it. The provider-cultivation notice is reproduced in full by a provincial software association and carries the MIIT source link and document number 〔2026〕414. Zhipu's financing figures are as reported from the company announcement (eCompany/Sina Finance); **nothing here is investment advice**. The "China API prices rising while Western inference prices deflate" divergence remains unverified. The plan's own document number and exact issue date do not appear in public reproductions; I cite it as reported on September 11, 2026.
+**Sources and verification notes.** I cross-checked the plan text across three independent reproductions ([NetEase/China Energy Network](https://www.163.com/dy/article/L6HQ77V505567I2C.html), [Beijing News](https://www.bjnews.com.cn/detail/1789085225129692.html), [China Science and Technology Network](https://www.stdaily.com/web/gdxw/2026-09/11/content_579258.html)); all 21 quotations can be verified in any of them. One correction to my own earlier notes: the widely circulated line "the service model shifts from selling product licences to delivering business value" is **not** in the plan text (the actual wording is "guide software enterprises to transform into AI application service providers and strengthen continuous service and value delivery capability"). I do not use it. The provider-cultivation notice is reproduced in full by a provincial software association and carries the MIIT source link and document number 〔2026〕414. Zhipu's financing figures are as reported from the company announcement (eCompany/Sina Finance); **nothing here is investment advice**. The "China API prices rising while Western inference prices deflate" divergence remains unverified. This article was revised on publication day (2026-09-14) on two points: the plan's issue date was first written as September 11 but is actually **September 2, 2026** (September 11 was MIIT's public-release and press day), with document number **工信部信发〔2026〕209号** (carried in the full-text reproductions, cross-checkable); and 1 December 2026 was first written as an enterprise application deadline but is in fact the internal reporting deadline for provincial authorities, with providers defined as "enterprises or institutions". The same pass added the boundary on compute vouchers (they cover compute/model services and adaptation, not storage/network/security, and not consulting or accompaniment fees).
