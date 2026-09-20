@@ -6,13 +6,13 @@ date: 2026-09-20
 tags: [AI, 大模型, 模型评测, AI行业观察]
 tags_en: [AI, LLM, Model Evaluation, AI Industry]
 lang: both
-cover: /images/jev/cover-3705c4.webp
+cover: /images/jev/cover-3705c4.png
 draft: false
 ---
 
 上周有家做 AI 内容的媒体，叫 [Every](https://every.to/)。它把编辑部写过的 27 篇文章翻出来，另外找了 10 篇一眼 AI 味的稿子，丢给一个新模型。它要干的是一件日常的事，帮你认出哪些文字是 AI 写的。
 
-![左边一个字一个字吐出的长对话气泡，右边一排同时亮起的判断节点](/images/jev/cover-3705c4.webp)
+![左边一个字一个字吐出的长对话气泡，右边一排同时亮起的判断节点](/images/jev/cover-3705c4.png)
 
 21 个问题，37 篇，777 个判断，一次跑完。零点七秒，前后花不到半美分。原文在这儿：[Mini-Vibe Check](https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds)。
 

@@ -9,7 +9,7 @@ draft: false
 
 Last week Every, an AI-focused publication, dug up 27 articles its own editors had written, added 10 pieces crafted to read obviously machine-made, and fed the whole pile to a new model. The task was mundane: say which of these a human wrote.
 
-![Left, a long speech bubble emitting one token at a time; right, a row of judgment nodes lighting up at once](/images/jev/cover-3705c4.webp)
+![Left, a long speech bubble emitting one token at a time; right, a row of judgment nodes lighting up at once](/images/jev/cover-3705c4.png)
 
 21 questions, 37 documents, 777 judgments, all in one pass. Seven-tenths of a second, less than half a cent. ([Every's write-up](https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds))
 
