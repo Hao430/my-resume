@@ -73,6 +73,20 @@ describe('ServicesPage（服务落地页）', () => {
     expect(data.description).toBe(composer.t('services.subtitle'))
   })
 
+  it('自研产品外链卡片：枝想指向 kg.hao430.cn（新窗口打开）', async () => {
+    resetDom()
+    const { wrapper, composer } = await mountServices('zh')
+    const card = wrapper.find('a.product-card')
+    expect(card.exists()).toBe(true)
+    expect(card.attributes('href')).toBe('https://kg.hao430.cn/')
+    expect(card.attributes('target')).toBe('_blank')
+    expect(card.attributes('rel')).toContain('noopener')
+    expect(card.find('.product-card__title').text()).toBe(composer.t('services.productTitle'))
+    expect(card.find('.product-card__desc').text()).toBe(composer.t('services.productDesc'))
+    expect(card.text()).toContain('kg.hao430.cn')
+    wrapper.unmount()
+  })
+
   it('SEO：写入页面 title 与 canonical（带尾斜杠）', async () => {
     resetDom()
     const { wrapper, composer } = await mountServices('zh')

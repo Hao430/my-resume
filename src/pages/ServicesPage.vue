@@ -79,8 +79,23 @@ watchEffect(() => {
         </p>
       </section>
 
+      <!-- 自研产品外链：枝想（kg.hao430.cn） -->
+      <a
+        href="https://kg.hao430.cn/"
+        target="_blank"
+        rel="noopener"
+        class="card product-card animate-fadeInUp delay-200"
+      >
+        <div class="product-card__head">
+          <span class="product-card__sub mono">{{ t('services.productEyebrow') }}</span>
+          <span class="product-card__domain mono">kg.hao430.cn ↗</span>
+        </div>
+        <h2 class="product-card__title">{{ t('services.productTitle') }}</h2>
+        <p class="product-card__desc">{{ t('services.productDesc') }}</p>
+      </a>
+
       <!-- 站内关联 -->
-      <section class="related-nav animate-fadeInUp delay-200">
+      <section class="related-nav animate-fadeInUp delay-300">
         <router-link to="/blog" class="card related-card">
           <span class="related-card__sub mono">Read & Research</span>
           <h3 class="related-card__title">{{ t('nav.blog') }}</h3>
@@ -237,6 +252,53 @@ watchEffect(() => {
 }
 
 .related-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+/* 自研产品外链卡片：枝想 */
+.product-card {
+  display: block;
+  padding: var(--space-6) var(--space-8);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--color-vermilion);
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.product-card__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.product-card__sub {
+  font-size: var(--text-xs);
+  color: var(--color-vermilion);
+  letter-spacing: 0.05em;
+}
+
+.product-card__domain {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}
+
+.product-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin: 0 0 var(--space-2);
+  color: var(--color-text);
+}
+
+.product-card__desc {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
