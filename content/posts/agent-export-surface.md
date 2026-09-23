@@ -10,7 +10,7 @@ cover: /images/agent-export-surface/cover-76a89a.png
 draft: false
 ---
 
-9 月 22 日，研究者 Peter James 公开了对 Meta 智能体 Muse 的取证。他让 Muse 把一些文件归档，发到 Google Drive，对话就这一句。回来的不是归档，是整台会话机的根文件系统。压缩包 2.7GB，解开 6.8GB，里面有 SSH 私钥文件、113 条子代理的工作轨迹、约 68 个技能目录，还有一批没公开的内部连接器线索。他把取证过程写成博客（[原文](https://mouse.dev/blog/muse-runtime-export/)），在 Hacker News 上拿了 292 分。Meta 的赏金系统把这份报告判为 Not Applicable，不适用。
+9 月 22 日，研究者 Peter James 公开了对 Meta 智能体 Muse 的取证。他让 Muse 把一些文件归档，发到 Google Drive，对话就这一句。Muse 交回来的是整台会话机的根文件系统。压缩包 2.7GB，解开 6.8GB，里面有 SSH 私钥文件、113 条子代理的工作轨迹、约 68 个技能目录，还有一批没公开的内部连接器线索。他把取证过程写成博客（[原文](https://mouse.dev/blog/muse-runtime-export/)），在 Hacker News 上拿了 292 分。Meta 的赏金系统把这份报告判为 Not Applicable，不适用。
 
 ## Muse 是什么
 
